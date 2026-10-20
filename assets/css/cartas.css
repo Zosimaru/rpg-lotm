@@ -461,4 +461,14 @@
     font-size: 5.5pt;
     letter-spacing: 0;
   }
+.nota-bsb {
+  grid-column: 1 / -1;
+  margin: 4px 0;
+  padding: 6px;
+  border: 1px solid #000;
+  color: #000;
+  background: #fff;
+  font-size: 12px;
 }
+
+
