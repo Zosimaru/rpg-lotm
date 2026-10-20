@@ -1,4 +1,5 @@
 
+
 /* ========================================
    GRADE DAS CARTAS
 ======================================== */
@@ -24,10 +25,12 @@
   gap: 9px;
 
   box-sizing: border-box;
-  background: #17191d;
-  color: #f3e7cc;
 
-  border: 2px solid #a88a50;
+  /* Papiro claro e texto preto */
+  background: #E8D9B5;
+  color: #000000;
+
+  border: 2px solid #000000;
   border-radius: 10px;
 }
 
@@ -45,7 +48,7 @@
   gap: 8px;
 
   padding-bottom: 6px;
-  border-bottom: 1px solid #55472f;
+  border-bottom: 1px solid #000000;
 }
 
 /* Losango da Sequência */
@@ -69,7 +72,7 @@
   width: 34px;
   height: 34px;
 
-  border: 2px solid #d9bc7a;
+  border: 2px solid #000000;
   transform: rotate(45deg);
   border-radius: 2px;
 }
@@ -78,7 +81,7 @@
   position: relative;
   z-index: 1;
 
-  color: #f1d18a;
+  color: #000000;
   font-size: 11px;
   font-weight: bold;
   white-space: nowrap;
@@ -94,7 +97,7 @@
   text-align: center;
   text-transform: uppercase;
 
-  color: #d9bc7a;
+  color: #000000;
   font-size: 15px;
   line-height: 1.25;
   letter-spacing: 0.6px;
@@ -113,17 +116,18 @@
   flex-direction: column;
   align-items: center;
 
-  border: 1px solid #a88a50;
+  border: 1px solid #000000;
   border-radius: 5px;
 }
 
 .carta-custo span {
-  color: #d9bc7a;
+  color: #000000;
   font-size: 8px;
   text-transform: uppercase;
 }
 
 .carta-custo strong {
+  color: #000000;
   font-size: 17px;
   line-height: 1.1;
 }
@@ -183,20 +187,23 @@
   justify-content: center;
   gap: 4px;
 
-  background: #22252a;
-  border: 1px solid #55472f;
+  /* Sem preenchimento escuro */
+  background: transparent;
+  color: #000000;
+
+  border: 1px solid #000000;
   border-radius: 5px;
 }
 
 .especificacao-titulo {
-  color: #b8b3a9;
+  color: #000000;
   font-size: 9px;
   line-height: 1.2;
   text-transform: uppercase;
 }
 
 .especificacao-valor {
-  color: #f3e7cc;
+  color: #000000;
   font-size: 12px;
   line-height: 1.3;
   overflow-wrap: anywhere;
@@ -211,8 +218,11 @@
   min-height: 150px;
   padding: 10px;
 
-  background: #1b1d20;
-  border: 1px solid #55472f;
+  /* Mantém o fundo de papiro */
+  background: transparent;
+  color: #000000;
+
+  border: 1px solid #000000;
   border-radius: 6px;
 
   overflow-wrap: anywhere;
@@ -221,7 +231,7 @@
 .carta-descricao p {
   margin: 0;
 
-  color: #d5d0c5;
+  color: #000000;
   font-size: 13px;
   line-height: 1.5;
 }
@@ -240,19 +250,25 @@
   justify-content: space-between;
   gap: 8px;
 
-  border-top: 1px solid #55472f;
-  color: #d9bc7a;
+  border-top: 1px solid #000000;
+  color: #000000;
 }
 
 .carta-caminho {
   min-width: 0;
   text-align: right;
 
+  color: #000000;
   font-size: 10px;
   line-height: 1.3;
   text-transform: uppercase;
   letter-spacing: 0.4px;
   overflow-wrap: anywhere;
+}
+
+/* Alinha o primeiro item do rodapé à esquerda */
+.carta-rodape .carta-caminho:first-child {
+  text-align: left;
 }
 
 /* ========================================
@@ -300,7 +316,11 @@
     gap: 1.5mm;
 
     box-sizing: border-box;
-    border: 0.4mm solid #a88a50;
+
+    background: #E8D9B5;
+    color: #000000;
+
+    border: 0.4mm solid #000000;
     border-radius: 2mm;
 
     break-inside: avoid;
@@ -314,24 +334,28 @@
     min-height: 8mm;
     gap: 1mm;
     padding-bottom: 1mm;
+    border-bottom-color: #000000;
   }
 
   .carta-numero {
-    width: 10mm;
-    height: 10mm;
+    width: 11mm;
+    height: 11mm;
   }
 
   .carta-numero::before {
-    width: 6mm;
-    height: 6mm;
+    width: 8mm;
+    height: 8mm;
+    border-color: #000000;
     border-width: 0.4mm;
   }
 
   .carta-numero span {
-    font-size: 5.5pt;
+    color: #000000;
+    font-size: 5pt;
   }
 
   .carta-sequencia {
+    color: #000000;
     font-size: 8pt;
     letter-spacing: 0;
   }
@@ -339,13 +363,16 @@
   .carta-custo {
     min-width: 9mm;
     padding: 0.5mm;
+    border-color: #000000;
   }
 
   .carta-custo span {
+    color: #000000;
     font-size: 5pt;
   }
 
   .carta-custo strong {
+    color: #000000;
     font-size: 9pt;
   }
 
@@ -371,13 +398,20 @@
     min-height: 0;
     padding: 1mm;
     gap: 0.5mm;
+
+    background: transparent;
+    color: #000000;
+
+    border-color: #000000;
   }
 
   .especificacao-titulo {
+    color: #000000;
     font-size: 5pt;
   }
 
   .especificacao-valor {
+    color: #000000;
     font-size: 6.5pt;
     line-height: 1.15;
   }
@@ -385,10 +419,16 @@
   .carta-descricao {
     min-height: 0;
     padding: 2mm;
+
+    background: transparent;
+    color: #000000;
+
+    border-color: #000000;
     overflow-wrap: anywhere;
   }
 
   .carta-descricao p {
+    color: #000000;
     font-size: 7.5pt;
     line-height: 1.25;
   }
@@ -397,10 +437,15 @@
     min-height: 6mm;
     padding-top: 1mm;
     gap: 1mm;
+
+    border-top-color: #000000;
+    color: #000000;
   }
 
   .carta-caminho {
+    color: #000000;
     font-size: 5.5pt;
     letter-spacing: 0;
   }
 }
+
