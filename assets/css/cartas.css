@@ -1,14 +1,19 @@
 
-/* GRADE DAS QUATRO CARTAS */
+/* ========================================
+   GRADE DAS CARTAS
+======================================== */
+
 .grade-cartas {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
-  width: 100%;
   max-width: 640px;
 }
 
-/* ESTRUTURA DA CARTA */
+/* ========================================
+   ESTRUTURA PRINCIPAL DA CARTA
+======================================== */
+
 .carta-poder {
   min-width: 0;
   min-height: 490px;
@@ -21,36 +26,88 @@
   box-sizing: border-box;
   background: #17191d;
   color: #f3e7cc;
+
   border: 2px solid #a88a50;
   border-radius: 10px;
 }
 
-/* CABEÇALHO COMPACTO */
+/* ========================================
+   CABEÇALHO
+   Seq. 9 | Nome do poder | Energia
+======================================== */
+
 .carta-cabecalho {
-  min-height: 36px;
+  min-height: 48px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 6px;
+  gap: 8px;
+
   padding-bottom: 6px;
   border-bottom: 1px solid #55472f;
 }
 
-.carta-sequencia {
-  flex: 1;
-  margin: 0;
-  text-align: center;
-  text-transform: uppercase;
-  color: #d9bc7a;
-  font-size: 15px;
-  letter-spacing: 1px;
+/* Losango da Sequência */
+
+.carta-numero {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
 }
 
-/* CUSTO DE ENERGIA */
+.carta-numero::before {
+  content: "";
+  position: absolute;
+
+  width: 34px;
+  height: 34px;
+
+  border: 2px solid #d9bc7a;
+  transform: rotate(45deg);
+  border-radius: 2px;
+}
+
+.carta-numero span {
+  position: relative;
+  z-index: 1;
+
+  color: #f1d18a;
+  font-size: 11px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* Nome do poder */
+
+.carta-sequencia {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #d9bc7a;
+  font-size: 15px;
+  line-height: 1.25;
+  letter-spacing: 0.6px;
+
+  overflow-wrap: anywhere;
+}
+
+/* Custo de energia */
+
 .carta-custo {
   flex-shrink: 0;
   min-width: 48px;
-  padding: 3px 6px;
+  padding: 4px 6px;
 
   display: flex;
   flex-direction: column;
@@ -71,39 +128,60 @@
   line-height: 1.1;
 }
 
-/* SÍMBOLO CENTRAL */
+/* ========================================
+   ÁREA CENTRAL
+   Imagem à esquerda, atributos à direita
+======================================== */
+
+.carta-conteudo {
+  display: grid;
+  grid-template-columns: 42% minmax(0, 1fr);
+  gap: 8px;
+  align-items: stretch;
+}
+
+/* Imagem */
+
 .carta-simbolo {
-  height: 112px;
-  flex-shrink: 0;
+  min-width: 0;
+  min-height: 0;
 
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 3px;
+  justify-content: center;
+
+  padding: 4px;
 }
 
 .carta-simbolo img {
-  width: 100px;
-  height: 100px;
+  display: block;
+  width: 100%;
+  max-width: 125px;
+  max-height: 150px;
+
   object-fit: contain;
 }
 
-/* ESPECIFICAÇÕES */
+/* Coluna dos atributos */
+
 .carta-especificacoes {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
   gap: 6px;
 }
 
 .especificacao {
+  flex: 1;
   min-width: 0;
   min-height: 48px;
-  padding: 6px 7px;
+  padding: 7px;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 3px;
+  gap: 4px;
 
   background: #22252a;
   border: 1px solid #55472f;
@@ -113,44 +191,46 @@
 .especificacao-titulo {
   color: #b8b3a9;
   font-size: 9px;
+  line-height: 1.2;
   text-transform: uppercase;
 }
 
 .especificacao-valor {
   color: #f3e7cc;
   font-size: 12px;
-  line-height: 1.25;
+  line-height: 1.3;
   overflow-wrap: anywhere;
 }
 
-/* DESCRIÇÃO DO PODER */
+/* ========================================
+   DESCRIÇÃO
+======================================== */
+
 .carta-descricao {
   flex: 1;
-  min-height: 130px;
+  min-height: 150px;
   padding: 10px;
 
   background: #1b1d20;
   border: 1px solid #55472f;
   border-radius: 6px;
-}
 
-.carta-descricao h3 {
-  margin: 0 0 8px;
-  text-align: center;
-  color: #d9bc7a;
-  font-size: 15px;
-  text-transform: uppercase;
-  line-height: 1.3;
+  overflow-wrap: anywhere;
 }
 
 .carta-descricao p {
   margin: 0;
+
   color: #d5d0c5;
   font-size: 13px;
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
-/* RODAPÉ */
+/* ========================================
+   RODAPÉ
+   Sequência à esquerda | Caminho à direita
+======================================== */
+
 .carta-rodape {
   min-height: 30px;
   padding-top: 6px;
@@ -164,26 +244,163 @@
   color: #d9bc7a;
 }
 
-.carta-numero {
-  flex-shrink: 0;
-  padding: 5px 7px;
-  border: 1px solid #55472f;
-  border-radius: 5px;
-  font-size: 10px;
-  white-space: nowrap;
-  text-transform: uppercase;
-}
-
 .carta-caminho {
+  min-width: 0;
   text-align: right;
+
   font-size: 10px;
+  line-height: 1.3;
   text-transform: uppercase;
   letter-spacing: 0.4px;
+  overflow-wrap: anywhere;
 }
 
-/* TELAS ESTREITAS */
+/* ========================================
+   TELAS ESTREITAS
+======================================== */
+
 @media (max-width: 620px) {
   .grade-cartas {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ========================================
+   IMPRESSÃO: CARTAS DE 63 x 88 mm
+======================================== */
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 8mm;
+  }
+
+  /* Esconde tudo, exceto a grade das cartas */
+  body > :not(.grade-cartas) {
+    display: none !important;
+  }
+
+  .grade-cartas {
+    display: grid !important;
+    grid-template-columns: repeat(3, 63mm);
+    column-gap: 2mm;
+    row-gap: 3mm;
+
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .carta-poder {
+    width: 63mm;
+    height: 88mm;
+    min-height: 0;
+    padding: 3mm;
+    gap: 1.5mm;
+
+    box-sizing: border-box;
+    border: 0.4mm solid #a88a50;
+    border-radius: 2mm;
+
+    break-inside: avoid;
+    page-break-inside: avoid;
+
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .carta-cabecalho {
+    min-height: 8mm;
+    gap: 1mm;
+    padding-bottom: 1mm;
+  }
+
+  .carta-numero {
+    width: 10mm;
+    height: 10mm;
+  }
+
+  .carta-numero::before {
+    width: 6mm;
+    height: 6mm;
+    border-width: 0.4mm;
+  }
+
+  .carta-numero span {
+    font-size: 5.5pt;
+  }
+
+  .carta-sequencia {
+    font-size: 8pt;
+    letter-spacing: 0;
+  }
+
+  .carta-custo {
+    min-width: 9mm;
+    padding: 0.5mm;
+  }
+
+  .carta-custo span {
+    font-size: 5pt;
+  }
+
+  .carta-custo strong {
+    font-size: 9pt;
+  }
+
+  .carta-conteudo {
+    grid-template-columns: 40% minmax(0, 1fr);
+    gap: 1.5mm;
+  }
+
+  .carta-simbolo {
+    padding: 0;
+  }
+
+  .carta-simbolo img {
+    max-width: 100%;
+    max-height: 34mm;
+  }
+
+  .carta-especificacoes {
+    gap: 1mm;
+  }
+
+  .especificacao {
+    min-height: 0;
+    padding: 1mm;
+    gap: 0.5mm;
+  }
+
+  .especificacao-titulo {
+    font-size: 5pt;
+  }
+
+  .especificacao-valor {
+    font-size: 6.5pt;
+    line-height: 1.15;
+  }
+
+  .carta-descricao {
+    min-height: 0;
+    padding: 2mm;
+    overflow-wrap: anywhere;
+  }
+
+  .carta-descricao p {
+    font-size: 7.5pt;
+    line-height: 1.25;
+  }
+
+  .carta-rodape {
+    min-height: 6mm;
+    padding-top: 1mm;
+    gap: 1mm;
+  }
+
+  .carta-caminho {
+    font-size: 5.5pt;
+    letter-spacing: 0;
   }
 }
