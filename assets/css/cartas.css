@@ -7,29 +7,36 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
-  max-width: 640px;
+
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 8px;
+
+  box-sizing: border-box;
 }
 
 /* ========================================
-   ESTRUTURA PRINCIPAL DA CARTA
+   ESTRUTURA PRINCIPAL
 ======================================== */
 
 .carta-poder {
+  width: 100%;
   min-width: 0;
-  min-height: 490px;
+  min-height: 470px;
   padding: 12px;
 
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 10px;
 
   box-sizing: border-box;
 
   background: #FFFFFF;
   color: #000000;
 
-  border: 2px solid #000000;
-  border-radius: 10px;
+  border: 1.5px solid #000000;
+  border-radius: 8px;
 }
 
 /* ========================================
@@ -37,96 +44,102 @@
 ======================================== */
 
 .carta-cabecalho {
-  min-height: 48px;
-
-  display: flex;
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 64px;
   align-items: center;
-  justify-content: space-between;
-  gap: 8px;
+  gap: 6px;
 
-  padding-bottom: 6px;
+  min-width: 0;
+  padding-bottom: 8px;
+
   border-bottom: 1px solid #000000;
 }
 
-/* Losango da Sequência */
+/* Número da Sequência */
 
 .carta-numero {
-  flex-shrink: 0;
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   position: relative;
+  flex-shrink: 0;
+
+  color: #000000;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .carta-numero::before {
   content: "";
   position: absolute;
 
-  width: 34px;
-  height: 34px;
+  width: 30px;
+  height: 30px;
 
-  border: 2px solid #000000;
+  border: 1.5px solid #000000;
+  border-radius: 1px;
+
   transform: rotate(45deg);
-  border-radius: 2px;
 }
 
 .carta-numero span {
   position: relative;
   z-index: 1;
-
-  color: #000000;
-  font-size: 11px;
-  font-weight: bold;
-  white-space: nowrap;
 }
 
 /* Nome do poder */
 
 .carta-sequencia {
-  flex: 1;
   min-width: 0;
   margin: 0;
 
+  color: #000000;
   text-align: center;
   text-transform: uppercase;
 
-  color: #000000;
-  font-size: 15px;
+  font-size: 13px;
+  font-weight: 700;
   line-height: 1.25;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.3px;
 
   overflow-wrap: anywhere;
 }
 
-/* Custo de energia */
+/* Custo */
 
 .carta-custo {
-  flex-shrink: 0;
-  min-width: 48px;
-  padding: 4px 6px;
+  min-width: 0;
+  min-height: 34px;
+  padding: 5px 4px;
 
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
 
   border: 1px solid #000000;
-  border-radius: 5px;
+  border-radius: 4px;
+
+  color: #000000;
+  text-align: center;
+  font-size: 10px;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
 }
 
 .carta-custo span {
-  color: #000000;
   font-size: 8px;
   text-transform: uppercase;
 }
 
 .carta-custo strong {
-  color: #000000;
-  font-size: 17px;
-  line-height: 1.1;
+  font-size: 14px;
 }
 
 /* ========================================
@@ -135,19 +148,20 @@
 
 .carta-conteudo {
   display: grid;
-  grid-template-columns: 42% minmax(0, 1fr);
-  gap: 8px;
-  align-items: stretch;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: start;
+  gap: 10px;
+
+  min-width: 0;
 }
 
 /* ========================================
-   IMAGEM DA CARTA
-   Classe confirmada no HTML: carta-imagem
+   IMAGEM
 ======================================== */
 
 .carta-imagem {
   width: 100%;
-  height: 90px;
+  height: 145px;
   min-width: 0;
   min-height: 0;
 
@@ -155,26 +169,26 @@
   align-items: center;
   justify-content: center;
 
-  padding: 0;
-  overflow: hidden;
+  padding: 4px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .carta-imagem img {
   display: block;
 
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
 
-  max-width: 90px;
-  max-height: 90px;
+  max-width: 100%;
+  max-height: 100%;
 
   object-fit: contain;
   object-position: center;
 }
 
 /* ========================================
-   COLUNA DOS ATRIBUTOS
+   ATRIBUTOS
 ======================================== */
 
 .carta-especificacoes {
@@ -186,10 +200,9 @@
 }
 
 .especificacao {
-  flex: 1;
   min-width: 0;
-  min-height: 48px;
-  padding: 7px;
+  min-height: 0;
+  padding: 8px;
 
   display: flex;
   flex-direction: column;
@@ -202,30 +215,37 @@
   color: #000000;
 
   border: 1px solid #000000;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
+.especificacao strong,
 .especificacao-titulo {
   color: #000000;
+
   font-size: 9px;
-  line-height: 1.2;
+  font-weight: 700;
+  line-height: 1.25;
   text-transform: uppercase;
 }
 
+.especificacao span,
 .especificacao-valor {
   color: #000000;
-  font-size: 12px;
-  line-height: 1.3;
+
+  font-size: 11px;
+  line-height: 1.35;
+
   overflow-wrap: anywhere;
 }
 
 /* ========================================
-   DESCRIÇÃO
+   DESCRIÇÃO DO PODER
 ======================================== */
 
 .carta-descricao {
   flex: 1;
-  min-height: 150px;
+  min-width: 0;
+  min-height: 120px;
   padding: 10px;
 
   box-sizing: border-box;
@@ -234,7 +254,7 @@
   color: #000000;
 
   border: 1px solid #000000;
-  border-radius: 6px;
+  border-radius: 5px;
 
   overflow-wrap: anywhere;
 }
@@ -243,8 +263,18 @@
   margin: 0;
 
   color: #000000;
-  font-size: 13px;
-  line-height: 1.5;
+
+  font-size: 12px;
+  line-height: 1.45;
+  text-align: left;
+}
+
+.carta-descricao p + p {
+  margin-top: 6px;
+}
+
+.carta-descricao strong {
+  font-weight: 700;
 }
 
 /* ========================================
@@ -252,8 +282,9 @@
 ======================================== */
 
 .carta-rodape {
-  min-height: 30px;
-  padding-top: 6px;
+  min-width: 0;
+  min-height: 24px;
+  padding-top: 7px;
 
   display: flex;
   align-items: center;
@@ -266,18 +297,17 @@
 
 .carta-caminho {
   min-width: 0;
-  text-align: right;
+  margin: 0;
 
   color: #000000;
-  font-size: 10px;
+
+  font-size: 9px;
   line-height: 1.3;
   text-transform: uppercase;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.2px;
 
   overflow-wrap: anywhere;
 }
-
-/* Primeiro item à esquerda; segundo à direita */
 
 .carta-rodape .carta-caminho:first-child {
   text-align: left;
@@ -295,29 +325,40 @@
   grid-column: 1 / -1;
 
   margin: 4px 0;
-  padding: 6px;
+  padding: 7px;
 
   box-sizing: border-box;
 
   border: 1px solid #000000;
-  color: #000000;
   background: #FFFFFF;
+  color: #000000;
 
-  font-size: 12px;
+  font-size: 11px;
+  line-height: 1.4;
 }
 
 /* ========================================
    TELAS ESTREITAS
 ======================================== */
 
-@media (max-width: 620px) {
+@media screen and (max-width: 620px) {
   .grade-cartas {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 360px;
+  }
+
+  .carta-poder {
+    min-height: 0;
+  }
+
+  .carta-conteudo {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
   }
 }
 
 /* ========================================
-   IMPRESSÃO: CARTAS DE 63 x 88 mm
+   IMPRESSÃO
+   Cartas de 63 x 88 mm
 ======================================== */
 
 @media print {
@@ -326,7 +367,14 @@
     margin: 8mm;
   }
 
-  /* Esconde os demais elementos da página */
+  html,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #FFFFFF !important;
+  }
+
+  /* Oculta o conteúdo que não pertence às cartas */
 
   body * {
     visibility: hidden !important;
@@ -337,36 +385,45 @@
     visibility: visible !important;
   }
 
+  /* Três cartas por linha */
+
   .grade-cartas {
     display: grid !important;
-    grid-template-columns: repeat(3, 63mm);
+    grid-template-columns: repeat(3, 63mm) !important;
     column-gap: 2mm;
     row-gap: 3mm;
 
-    width: auto;
+    width: max-content;
     max-width: none;
     margin: 0;
     padding: 0;
 
     position: absolute;
-    left: 0;
     top: 0;
+    left: 0;
   }
+
+  /* Dimensões físicas da carta */
 
   .carta-poder {
     width: 63mm;
     height: 88mm;
+    min-width: 0;
     min-height: 0;
-    padding: 3mm;
+
+    padding: 2.5mm;
     gap: 1.5mm;
+
+    display: flex;
+    flex-direction: column;
 
     box-sizing: border-box;
 
     background: #FFFFFF;
     color: #000000;
 
-    border: 0.4mm solid #000000;
-    border-radius: 2mm;
+    border: 0.35mm solid #000000;
+    border-radius: 1.5mm;
 
     break-inside: avoid;
     page-break-inside: avoid;
@@ -375,65 +432,60 @@
     print-color-adjust: exact;
   }
 
-  /* Cabeçalho */
+  /* Cabeçalho de impressão */
 
   .carta-cabecalho {
-    min-height: 8mm;
+    grid-template-columns: 9mm minmax(0, 1fr) 13mm;
     gap: 1mm;
-    padding-bottom: 1mm;
 
-    border-bottom-color: #000000;
+    padding-bottom: 1.2mm;
   }
 
   .carta-numero {
-    width: 11mm;
-    height: 11mm;
+    width: 9mm;
+    height: 9mm;
+    font-size: 5.5pt;
   }
 
   .carta-numero::before {
-    width: 8mm;
-    height: 8mm;
-
-    border-color: #000000;
-    border-width: 0.4mm;
-  }
-
-  .carta-numero span {
-    color: #000000;
-    font-size: 5pt;
+    width: 6.5mm;
+    height: 6.5mm;
+    border-width: 0.3mm;
   }
 
   .carta-sequencia {
-    color: #000000;
-    font-size: 8pt;
+    font-size: 7.5pt;
+    line-height: 1.15;
     letter-spacing: 0;
   }
 
   .carta-custo {
-    min-width: 9mm;
+    min-height: 7mm;
     padding: 0.5mm;
 
-    border-color: #000000;
+    font-size: 5.5pt;
+    line-height: 1.15;
+
+    border-width: 0.25mm;
   }
 
   .carta-custo span {
-    color: #000000;
-    font-size: 5pt;
+    font-size: 4.5pt;
   }
 
   .carta-custo strong {
-    color: #000000;
-    font-size: 9pt;
+    font-size: 7pt;
   }
 
   /* Área central */
 
   .carta-conteudo {
-    grid-template-columns: 40% minmax(0, 1fr);
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    align-items: start;
     gap: 1.5mm;
   }
 
-  /* Imagem limitada na impressão */
+  /* Imagem limitada e proporcional */
 
   .carta-imagem {
     width: 100%;
@@ -443,17 +495,16 @@
 
     padding: 0;
     overflow: hidden;
-    box-sizing: border-box;
   }
 
   .carta-imagem img {
     display: block;
 
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
 
-    max-width: 25mm;
-    max-height: 25mm;
+    max-width: 100%;
+    max-height: 100%;
 
     object-fit: contain;
     object-position: center;
@@ -467,59 +518,56 @@
 
   .especificacao {
     min-height: 0;
-    padding: 1mm;
-    gap: 0.5mm;
+    padding: 1.2mm;
+    gap: 0.6mm;
 
-    background: #FFFFFF;
-    color: #000000;
-
-    border-color: #000000;
+    border-width: 0.25mm;
+    border-radius: 1mm;
   }
 
+  .especificacao strong,
   .especificacao-titulo {
-    color: #000000;
     font-size: 5pt;
+    line-height: 1.15;
   }
 
+  .especificacao span,
   .especificacao-valor {
-    color: #000000;
-    font-size: 6.5pt;
-    line-height: 1.15;
+    font-size: 6pt;
+    line-height: 1.2;
   }
 
   /* Descrição */
 
   .carta-descricao {
+    flex: 1;
     min-height: 0;
-    padding: 2mm;
+    padding: 1.8mm;
 
-    background: #FFFFFF;
-    color: #000000;
-
-    border-color: #000000;
-    overflow-wrap: anywhere;
+    border-width: 0.25mm;
+    border-radius: 1mm;
   }
 
   .carta-descricao p {
-    color: #000000;
-    font-size: 7.5pt;
+    font-size: 7pt;
     line-height: 1.25;
+  }
+
+  .carta-descricao p + p {
+    margin-top: 1mm;
   }
 
   /* Rodapé */
 
   .carta-rodape {
-    min-height: 6mm;
+    min-height: 4mm;
     padding-top: 1mm;
     gap: 1mm;
-
-    border-top-color: #000000;
-    color: #000000;
   }
 
   .carta-caminho {
-    color: #000000;
-    font-size: 5.5pt;
+    font-size: 5pt;
+    line-height: 1.15;
     letter-spacing: 0;
   }
 
@@ -529,10 +577,8 @@
     margin: 1mm 0;
     padding: 1mm;
 
-    border-color: #000000;
-    color: #000000;
-    background: #FFFFFF;
-
-    font-size: 6pt;
+    border-width: 0.25mm;
+    font-size: 5.5pt;
+    line-height: 1.2;
   }
 }
