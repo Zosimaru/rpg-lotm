@@ -140,7 +140,7 @@
   align-items: stretch;
 }
 
-/* Imagem */
+/* Área da imagem */
 
 .carta-simbolo {
   min-width: 0;
@@ -151,15 +151,22 @@
   justify-content: center;
 
   padding: 4px;
+  overflow: hidden;
 }
+
+/* Imagem ajustada automaticamente */
 
 .carta-simbolo img {
   display: block;
+
   width: 100%;
-  max-width: 125px;
-  max-height: 150px;
+  height: auto;
+
+  max-width: 100%;
+  max-height: 120px;
 
   object-fit: contain;
+  object-position: center;
 }
 
 /* Coluna dos atributos */
@@ -182,6 +189,8 @@
   flex-direction: column;
   justify-content: center;
   gap: 4px;
+
+  box-sizing: border-box;
 
   background: #FFFFFF;
   color: #000000;
@@ -212,6 +221,8 @@
   flex: 1;
   min-height: 150px;
   padding: 10px;
+
+  box-sizing: border-box;
 
   background: #FFFFFF;
   color: #000000;
@@ -270,6 +281,25 @@
 }
 
 /* ========================================
+   NOTA SOBRE O BSB
+======================================== */
+
+.nota-bsb {
+  grid-column: 1 / -1;
+
+  margin: 4px 0;
+  padding: 6px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #000000;
+  color: #000000;
+  background: #FFFFFF;
+
+  font-size: 12px;
+}
+
+/* ========================================
    TELAS ESTREITAS
 ======================================== */
 
@@ -289,10 +319,7 @@
     margin: 8mm;
   }
 
-  /*
-     Esconde os demais elementos da página,
-     mantendo visíveis as cartas e seus filhos.
-  */
+  /* Esconde os demais elementos da página */
 
   body * {
     visibility: hidden !important;
@@ -340,6 +367,8 @@
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
+
+  /* Cabeçalho */
 
   .carta-cabecalho {
     min-height: 8mm;
@@ -390,18 +419,31 @@
     font-size: 9pt;
   }
 
+  /* Imagem e atributos */
+
   .carta-conteudo {
     grid-template-columns: 40% minmax(0, 1fr);
     gap: 1.5mm;
   }
 
   .carta-simbolo {
+    min-width: 0;
+    min-height: 0;
     padding: 0;
+    overflow: hidden;
   }
 
   .carta-simbolo img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
     max-width: 100%;
-    max-height: 34mm;
+    max-height: 28mm;
+
+    object-fit: contain;
+    object-position: center;
   }
 
   .carta-especificacoes {
@@ -430,6 +472,8 @@
     line-height: 1.15;
   }
 
+  /* Descrição */
+
   .carta-descricao {
     min-height: 0;
     padding: 2mm;
@@ -447,6 +491,8 @@
     line-height: 1.25;
   }
 
+  /* Rodapé */
+
   .carta-rodape {
     min-height: 6mm;
     padding-top: 1mm;
@@ -461,20 +507,18 @@
     font-size: 5.5pt;
     letter-spacing: 0;
   }
-.nota-bsb {
-  grid-column: 1 / -1;
-  margin: 4px 0;
-  padding: 6px;
-  border: 1px solid #000;
-  color: #000;
-  background: #fff;
-  font-size: 12px;
-}
-.carta-imagem {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  max-width: 100%;
-  max-height: 100%;
+
+  /* Nota BSB */
+
+  .nota-bsb {
+    margin: 1mm 0;
+    padding: 1mm;
+
+    border-color: #000000;
+    color: #000000;
+    background: #FFFFFF;
+
+    font-size: 6pt;
+  }
 }
 
