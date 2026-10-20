@@ -11,7 +11,7 @@ Sistema de RPG de mesa fan-made baseado em **Lord of the Mysteries** (*Senhor do
 
 ## Site (GitHub Pages)
 
-https://lochesystem.github.io/rpg-lotm/
+https://zosimaru.github.io/rpg-lotm/
 
 ## Continuidade (agentes / colaboradores)
 
@@ -26,3 +26,7 @@ Para regenerar páginas HTML a partir dos `.md` (guia, tutorial, continuidade): 
 ## Licença
 
 Conteúdo derivado da obra de Cuttlefish That Loves Diving. Uso fan, sem fins comerciais.
+
+Projeto feito a partir do projeto original do LocheSystem
+Segue link original:
+https://lochesystem.github.io/rpg-lotm
