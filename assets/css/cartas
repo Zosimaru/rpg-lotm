@@ -1,0 +1,188 @@
+
+/* GRADE DAS QUATRO CARTAS */
+.grade-cartas {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 640px;
+}
+
+/* ESTRUTURA DA CARTA */
+.carta-poder {
+  min-width: 0;
+  min-height: 490px;
+  padding: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+
+  box-sizing: border-box;
+  background: #17191d;
+  color: #f3e7cc;
+  border: 2px solid #a88a50;
+  border-radius: 10px;
+}
+
+/* CABEÇALHO COMPACTO */
+.carta-cabecalho {
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #55472f;
+}
+
+.carta-sequencia {
+  flex: 1;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: #d9bc7a;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+/* CUSTO DE ENERGIA */
+.carta-custo {
+  flex-shrink: 0;
+  min-width: 48px;
+  padding: 3px 6px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 1px solid #a88a50;
+  border-radius: 5px;
+}
+
+.carta-custo span {
+  color: #d9bc7a;
+  font-size: 8px;
+  text-transform: uppercase;
+}
+
+.carta-custo strong {
+  font-size: 17px;
+  line-height: 1.1;
+}
+
+/* SÍMBOLO CENTRAL */
+.carta-simbolo {
+  height: 112px;
+  flex-shrink: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+}
+
+.carta-simbolo img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+/* ESPECIFICAÇÕES */
+.carta-especificacoes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.especificacao {
+  min-width: 0;
+  min-height: 48px;
+  padding: 6px 7px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+
+  background: #22252a;
+  border: 1px solid #55472f;
+  border-radius: 5px;
+}
+
+.especificacao-titulo {
+  color: #b8b3a9;
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.especificacao-valor {
+  color: #f3e7cc;
+  font-size: 12px;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+/* DESCRIÇÃO DO PODER */
+.carta-descricao {
+  flex: 1;
+  min-height: 130px;
+  padding: 10px;
+
+  background: #1b1d20;
+  border: 1px solid #55472f;
+  border-radius: 6px;
+}
+
+.carta-descricao h3 {
+  margin: 0 0 8px;
+  text-align: center;
+  color: #d9bc7a;
+  font-size: 15px;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.carta-descricao p {
+  margin: 0;
+  color: #d5d0c5;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+/* RODAPÉ */
+.carta-rodape {
+  min-height: 30px;
+  padding-top: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+
+  border-top: 1px solid #55472f;
+  color: #d9bc7a;
+}
+
+.carta-numero {
+  flex-shrink: 0;
+  padding: 5px 7px;
+  border: 1px solid #55472f;
+  border-radius: 5px;
+  font-size: 10px;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.carta-caminho {
+  text-align: right;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+/* TELAS ESTREITAS */
+@media (max-width: 620px) {
+  .grade-cartas {
+    grid-template-columns: 1fr;
+  }
+}
