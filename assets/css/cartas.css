@@ -140,9 +140,12 @@
   align-items: stretch;
 }
 
-/* Área reservada para a imagem */
+/* ========================================
+   IMAGEM DA CARTA
+   Classe confirmada no HTML: carta-imagem
+======================================== */
 
-.carta-simbolo {
+.carta-imagem {
   width: 100%;
   height: 90px;
   min-width: 0;
@@ -157,9 +160,7 @@
   box-sizing: border-box;
 }
 
-/* Imagem limitada e proporcional */
-
-.carta-simbolo img {
+.carta-imagem img {
   display: block;
 
   width: auto;
@@ -172,7 +173,9 @@
   object-position: center;
 }
 
-/* Coluna dos atributos */
+/* ========================================
+   COLUNA DOS ATRIBUTOS
+======================================== */
 
 .carta-especificacoes {
   min-width: 0;
@@ -270,6 +273,7 @@
   line-height: 1.3;
   text-transform: uppercase;
   letter-spacing: 0.4px;
+
   overflow-wrap: anywhere;
 }
 
@@ -422,14 +426,16 @@
     font-size: 9pt;
   }
 
-  /* Imagem e atributos na impressão */
+  /* Área central */
 
   .carta-conteudo {
     grid-template-columns: 40% minmax(0, 1fr);
     gap: 1.5mm;
   }
 
-  .carta-simbolo {
+  /* Imagem limitada na impressão */
+
+  .carta-imagem {
     width: 100%;
     height: 25mm;
     min-width: 0;
@@ -440,7 +446,7 @@
     box-sizing: border-box;
   }
 
-  .carta-simbolo img {
+  .carta-imagem img {
     display: block;
 
     width: auto;
@@ -452,6 +458,8 @@
     object-fit: contain;
     object-position: center;
   }
+
+  /* Atributos */
 
   .carta-especificacoes {
     gap: 1mm;
@@ -515,7 +523,7 @@
     letter-spacing: 0;
   }
 
-  /* Nota BSB na impressão */
+  /* Nota BSB */
 
   .nota-bsb {
     margin: 1mm 0;
