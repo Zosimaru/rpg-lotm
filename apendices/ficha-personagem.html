@@ -533,6 +533,68 @@
     font-family: "Segoe UI", sans-serif;
   }
 }
+
+/* --- Daggerheart-inspired health & armor tracks --- */
+.track-row {
+  display: flex;
+  align-items: center;
+  gap: 3pt;
+  flex-wrap: wrap;
+  padding: 3pt 4pt;
+  border-bottom: 1px dotted #ccc;
+}
+.track-label {
+  font-size: 7.5pt;
+  font-weight: 700;
+  min-width: 48pt;
+}
+.track-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2pt;
+  align-items: center;
+}
+.track-slot {
+  width: 12pt;
+  height: 12pt;
+  border: 1.2px solid #1a1a1a;
+  display: inline-block;
+}
+.track-slot.armor-slot {
+  border-radius: 2pt;
+}
+.threshold-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4pt;
+  padding: 3pt 4pt;
+}
+.threshold-cell {
+  border: 1px solid #777;
+  text-align: center;
+  padding: 2pt;
+  min-height: 27pt;
+}
+.threshold-name {
+  display: block;
+  font-size: 6pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #555;
+}
+.threshold-value {
+  display: block;
+  font-size: 9pt;
+  font-weight: 700;
+  min-height: 12pt;
+}
+.track-note {
+  font-size: 6pt;
+  color: #666;
+  line-height: 1.3;
+  padding: 2pt 4pt;
+}
+
 </style>
 </head>
 <body>
@@ -611,17 +673,17 @@
       <div>
         <div class="attr-category">Físicos</div>
         <div class="attr-row">
-          <span class="attr-name">Força <span style="font-size:6pt;color:#888;">FOR</span></span>
+          <span class="attr-name">Força <span style="font-size:6pt;color:#888;">STR</span></span>
           <span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
           <span class="attr-mod"></span>
         </div>
         <div class="attr-row">
-          <span class="attr-name">Destreza <span style="font-size:6pt;color:#888;">DES</span></span>
+          <span class="attr-name">Destreza <span style="font-size:6pt;color:#888;">DEX</span></span>
           <span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
           <span class="attr-mod"></span>
         </div>
         <div class="attr-row">
-          <span class="attr-name">Vigor <span style="font-size:6pt;color:#888;">VIG</span></span>
+          <span class="attr-name">Vigor <span style="font-size:6pt;color:#888;">STA</span></span>
           <span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
           <span class="attr-mod"></span>
         </div>
@@ -631,7 +693,7 @@
       <div>
         <div class="attr-category">Sociais</div>
         <div class="attr-row">
-          <span class="attr-name">Carisma <span style="font-size:6pt;color:#888;">CAR</span></span>
+          <span class="attr-name">Carisma <span style="font-size:6pt;color:#888;">CHA</span></span>
           <span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
           <span class="attr-mod"></span>
         </div>
@@ -641,7 +703,7 @@
           <span class="attr-mod"></span>
         </div>
         <div class="attr-row">
-          <span class="attr-name">Presença <span style="font-size:6pt;color:#888;">PRE</span></span>
+          <span class="attr-name">Aparência <span style="font-size:6pt;color:#888;">APP</span></span>
           <span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
           <span class="attr-mod"></span>
         </div>
@@ -651,17 +713,17 @@
       <div>
         <div class="attr-category">Mentais</div>
         <div class="attr-row">
-          <span class="attr-name">Inteligência <span style="font-size:6pt;color:#888;">INT</span></span>
-          <span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
-          <span class="attr-mod"></span>
-        </div>
-        <div class="attr-row">   
-          <span class="attr-name">Raciocínio <span style="font-size:6pt;color:#888;">RAC</span></span>
+          <span class="attr-name">Percepção <span style="font-size:6pt;color:#888;">PER</span></span>
           <span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
           <span class="attr-mod"></span>
         </div>
         <div class="attr-row">
-          <span class="attr-name">Determinação <span style="font-size:6pt;color:#888;">DET</span></span>
+          <span class="attr-name">Inteligência <span style="font-size:6pt;color:#888;">INT</span></span>
+          <span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
+          <span class="attr-mod"></span>
+        </div>
+        <div class="attr-row">
+          <span class="attr-name">Determinação <span style="font-size:6pt;color:#888;">RES</span></span>
           <span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
           <span class="attr-mod"></span>
         </div>
@@ -672,44 +734,32 @@
 
   <!-- ---- SKILLS ---- -->
   <div class="s-box">
-    <div class="s-box-title">Perícias <span style="font-weight:400;color:#888;font-size:7pt;"> &#9679;Mod = Valor &minus; 2</span></div>
+    <div class="s-box-title">Perícias <span style="font-weight:400;color:#888;font-size:7pt;"> (Skills) — &#9679; valor 0&ndash;5 (vazio = 0) &middot; caixa V = valor &middot; Mod = V &minus; 2</span></div>
     <div class="grid-3 skill-cols">
 
       <!-- Combat Skills -->
       <div>
-        <div class="attr-category">Físico</div>
+        <div class="attr-category">Combate</div>
         <div class="skill-row">
-          <span class="skill-name">Luta</span>
-          <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
-          <span class="skill-val"></span>
-          <span class="skill-mod"></span>
-        </div>
-        <div class="skill-row">
-          <span class="skill-name">Armas de Fogo</span>
+          <span class="skill-name">Luta <span style="font-size:6pt;color:#888;">Melee</span></span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
-          <span class="skill-name">Furtividade</span>
+          <span class="skill-name">Armas de Fogo <span style="font-size:6pt;color:#888;">Firearms</span></span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
-          <span class="skill-name">Atletismo</span>
+          <span class="skill-name">Esquiva <span style="font-size:6pt;color:#888;">Dodge</span></span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
-       <div class="skill-row">
-          <span class="skill-name">Prestidigitação</span>
-          <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
-          <span class="skill-val"></span>
-          <span class="skill-mod"></span>
-        </div>
-      <div class="skill-row">
-          <span class="skill-name">Direção</span>
+        <div class="skill-row">
+          <span class="skill-name">Atletismo <span style="font-size:6pt;color:#888;">Athletics</span></span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
@@ -720,37 +770,43 @@
       <div>
         <div class="attr-category">Social</div>
         <div class="skill-row">
-          <span class="skill-name">Lábia</span>
+          <span class="skill-name">Persuasão <span style="font-size:6pt;color:#888;">Persuasion</span></span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
-          <span class="skill-name">Intimidação</span>
+          <span class="skill-name">Intimid. <span style="font-size:5.5pt;color:#888;">Intim.</span></span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
-          <span class="skill-name">Performance</span></span>
+          <span class="skill-name">Etiqueta <span style="font-size:6pt;color:#888;">Etiquette</span></span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
-          <span class="skill-name">Etiqueta</span></span>
+          <span class="skill-name">Dissimul. <span style="font-size:5.5pt;color:#888;">Subt.</span></span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
-          <span class="skill-name">Intuição</span></span>
+          <span class="skill-name">Liderança <span style="font-size:6pt;color:#888;">Leadership</span></span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
-          <span class="skill-name">Sagacidade Urbana</span></span>
+          <span class="skill-name">Empatia <span style="font-size:6pt;color:#888;">Empathy</span></span>
+          <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val"></span>
+          <span class="skill-mod"></span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Manha <span style="font-size:6pt;color:#888;">Streetwise</span></span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
@@ -761,43 +817,55 @@
       <div>
         <div class="attr-category">Conhecimento</div>
         <div class="skill-row">
-          <span class="skill-name">Investigação</span></span>
+          <span class="skill-name">Investig. <span style="font-size:5.5pt;color:#888;">Invest.</span></span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
-          <span class="skill-name">Ocultismo</span></span>
+          <span class="skill-name">Ocultismo <span style="font-size:6pt;color:#888;">Occultism</span></span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
-          <span class="skill-name">Percep. Esperitual</span></span>
+          <span class="skill-name">Perc.Esp. <span style="font-size:5.5pt;color:#888;">Spirit.</span></span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
-          <span class="skill-name">Medicina</span></span>
+          <span class="skill-name">Medicina <span style="font-size:6pt;color:#888;">Medicine</span></span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
-          <span class="skill-name">Ciências</span></span>
+          <span class="skill-name">Ciências <span style="font-size:6pt;color:#888;">Sciences</span></span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
-          <span class="skill-name">História</span></span>
+          <span class="skill-name">História <span style="font-size:6pt;color:#888;">History</span></span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
-          <span class="skill-name">Sobrevivência</span></span>
+          <span class="skill-name">Adivinh. <span style="font-size:5.5pt;color:#888;">Divin.</span></span>
+          <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val"></span>
+          <span class="skill-mod"></span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Ritualismo <span style="font-size:6pt;color:#888;">Ritualism</span></span>
+          <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val"></span>
+          <span class="skill-mod"></span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Sobreviv. <span style="font-size:5.5pt;color:#888;">Surv.</span></span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
@@ -812,16 +880,21 @@
 
     <!-- Derived Stats -->
     <div class="s-box">
-      <div class="s-box-title">Estatísticas Derivadas</div>
+      <div class="s-box-title">Estatísticas Derivadas — Vida &amp; Limiares</div>
 
-      <div class="stat-row">
-        <span class="stat-label-box">HP</span>
-        <span class="stat-boxes">
-          <span class="stat-box"></span>
-          <span class="stat-slash">/</span>
-          <span class="stat-box"></span>
+      <div class="track-row">
+        <span class="track-label">Vida (PV)</span>
+        <span class="track-slots" aria-label="12 espaços de vida">
+          <span class="track-slot"></span><span class="track-slot"></span><span class="track-slot"></span><span class="track-slot"></span><span class="track-slot"></span><span class="track-slot"></span><span class="track-slot"></span><span class="track-slot"></span><span class="track-slot"></span><span class="track-slot"></span><span class="track-slot"></span><span class="track-slot"></span>
         </span>
       </div>
+      <div class="track-note">Marque 1, 2 ou 3 espaços conforme o limiar atingido. Proposta inicial: 6 espaços disponíveis; amplie conforme os avanços, até 12.</div>
+      <div class="threshold-row">
+        <div class="threshold-cell"><span class="threshold-name">Dano Menor</span><span class="threshold-value">abaixo de Maior</span></div>
+        <div class="threshold-cell"><span class="threshold-name">Dano Maior</span><span class="threshold-value"></span></div>
+        <div class="threshold-cell"><span class="threshold-name">Dano Severo</span><span class="threshold-value"></span></div>
+      </div>
+      <div class="track-note">Anote os valores numéricos dos limiares na seção de armadura/equipamento. Menor = 1 PV; Maior = 2 PV; Severo = 3 PV.</div>
 
       <div class="stat-row">
         <span class="stat-label-box">Espiritualidade</span>
@@ -890,10 +963,13 @@
         <div class="s-box-title" style="font-size:7pt;">Fórmulas Rápidas <span style="font-weight:400;color:#666;">(Cap. 3 — todos os Caminhos)</span></div>
         <div style="font-size:6.5pt; color:#555; line-height:1.55;">
           <strong>Mod. atributo/perícia</strong> = valor − 2<br>
-          <strong>PV</strong> = 8 + Mod. Vigor + bônus de Sequência (Seq.9 +0; 8 +2; 7 +4; 6 +6; 5 +8)<br>
+          <strong>PV</strong> = espaços de Vida disponíveis (proposta: 6 iniciais; máximo 12)<br>
           <strong>Espiritualidade máx.</strong> = valor Percepção + valor Determinação (não use Mod. aqui)<br>
           <strong>Lucidez</strong> = 5 + Mod. Determinação (máx. 10) · atual anotada acima<br>
-          <strong>Defesa</strong> = 10 + Mod. Des + bônus de armadura<br>
+          <strong>Defesa</strong> = 10 + Mod. Des (armadura reduz a gravidade do dano, não aumenta a Defesa)<br>
+          <strong>Nível equivalente</strong> = 10 − Sequência (Seq. 9 = nível 1; Seq. 0 = nível 10)<br>
+          <strong>Limiar Maior/Severo</strong> = limiares-base da armadura + nível equivalente<br>
+          <strong>Sem armadura</strong> = Maior: nível; Severo: 2 × nível<br>
           <strong>Iniciativa</strong> = <span class="dice" style="font-family:inherit;font-size:inherit;">d20</span> + Mod. Des + Mod. Per (por combate)<br>
           <strong>Movimento</strong> = 9 m (humano; terreno difícil dobra o custo)
         </div>
@@ -1064,9 +1140,23 @@
           <span class="field-line"></span>
         </div>
         <div class="field">
-          <span class="field-label" style="min-width:50pt;">Def. Bônus</span>
-          <span class="field-line" style="max-width:30pt;"></span>
+          <span class="field-label" style="min-width:50pt;">Limiar-base</span>
+          <span class="field-line"></span>
+          <span style="font-size:6.5pt;color:#777;margin-left:3pt;">Maior / Severo</span>
         </div>
+        <div class="field">
+          <span class="field-label" style="min-width:50pt;">Armadura</span>
+          <span style="font-size:7pt;margin-right:3pt;">Score:</span>
+          <span class="field-line" style="max-width:24pt;"></span>
+          <span style="font-size:7pt;margin:0 3pt;">(máx. 12)</span>
+        </div>
+        <div class="track-row" style="padding-left:0;">
+          <span class="track-label" style="min-width:50pt;">Espaços</span>
+          <span class="track-slots" aria-label="12 espaços de armadura">
+            <span class="track-slot armor-slot"></span><span class="track-slot armor-slot"></span><span class="track-slot armor-slot"></span><span class="track-slot armor-slot"></span><span class="track-slot armor-slot"></span><span class="track-slot armor-slot"></span><span class="track-slot armor-slot"></span><span class="track-slot armor-slot"></span><span class="track-slot armor-slot"></span><span class="track-slot armor-slot"></span><span class="track-slot armor-slot"></span><span class="track-slot armor-slot"></span>
+          </span>
+        </div>
+        <div class="track-note">Marque 1 espaço para reduzir o dano em uma categoria: Severo → Maior → Menor → nenhum dano. Ao trocar de armadura, preserve os espaços já marcados na peça.</div>
       </div>
     </div>
 
