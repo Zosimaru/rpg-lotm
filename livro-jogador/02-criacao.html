@@ -49,6 +49,7 @@
     <li>Calcule os <strong>Pontos de Vida</strong> (PV).</li>
     <li>Determine a <strong>Lucidez</strong>.</li>
     <li>Anote o <strong>Equipamento Inicial</strong>.</li>
+    <li>Calcule <strong>Defesa, Blindagem e Limiares de Dano</strong>.</li>
     <li>Defina os <strong>Detalhes Finais</strong>.</li>
   </ol>
 </div>
@@ -279,7 +280,7 @@
   <p>
     <strong>Mentais — 7 pontos adicionais:</strong> Inteligência 4 (+3), Raciocínio 3 (+2), Determinação 3 (+2).<br>
     <strong>Sociais — 5 pontos adicionais:</strong> Carisma 2 (+1), Manipulação 3 (+2), Presença 3 (+2).<br>
-    <strong>Físicos — 3 pontos adicionais:</strong> Força 1 (+0), Destreza 3 (+2), Vigor 2 (+1).
+    <strong>Físicos — 3 pontos adicionais:</strong> Força 1 (+0), Destreza 3 (+2), Vigor 2 (+0).
   </p>
   <p>
     Os valores finais somam 24 pontos, incluindo os nove pontos básicos.
@@ -308,7 +309,7 @@
 
 <h3>Grupo Corporal</h3>
 <table>
-  <thead><tr><th>Perícia</th><th>Atributo associado</th><th>Descrição</th></tr></thead>
+  <thead><tr><th>Perícia</th><th>Abordagem recomendada</th><th>Descrição</th></tr></thead>
   <tbody>
     <tr><td><strong>Acrobacia</strong></td><td>Destreza</td><td>Equilíbrio, cambalhotas, saltos controlados e manobras corporais.</td></tr>
     <tr><td><strong>Armas Brancas</strong></td><td>Força ou Destreza</td><td>Uso de facas, espadas, bastões e outras armas de combate corpo a corpo.</td></tr>
@@ -323,7 +324,7 @@
 
 <h3>Grupo Interação</h3>
 <table>
-  <thead><tr><th>Perícia</th><th>Atributo associado</th><th>Descrição</th></tr></thead>
+  <thead><tr><th>Perícia</th><th>Abordagem recomendada</th><th>Descrição</th></tr></thead>
   <tbody>
     <tr><td><strong>Empatia</strong></td><td>Raciocínio ou Presença</td><td>Interpretar emoções, perceber mudanças de comportamento e compreender motivações.</td></tr>
     <tr><td><strong>Etiqueta</strong></td><td>Inteligência ou Presença</td><td>Protocolo, comportamento em sociedade e adequação a ambientes formais.</td></tr>
@@ -337,7 +338,7 @@
 
 <h3>Grupo Conhecimento</h3>
 <table>
-  <thead><tr><th>Perícia</th><th>Atributo associado</th><th>Descrição</th></tr></thead>
+  <thead><tr><th>Perícia</th><th>Abordagem recomendada</th><th>Descrição</th></tr></thead>
   <tbody>
     <tr><td><strong>Ciências</strong></td><td>Inteligência ou Raciocínio</td><td>Química, física, biologia, engenharia e métodos científicos.</td></tr>
     <tr><td><strong>Estrutura Religiosa</strong></td><td>Inteligência</td><td>Organização das Igrejas, hierarquias, doutrinas, instituições, ritos e relações religiosas.</td></tr>
@@ -481,31 +482,32 @@
 
 <div class="box box-rule">
   <div class="box-title">Fórmula de PV</div>
-  <p style="text-align:center; font-size:1.2em;"><strong>PV = 8 + Modificador de Vigor + Bônus de Sequência</strong></p>
+  <p style="text-align:center; font-size:1.2em;"><strong>PV = 3 + Pontos de Vigor + (10 − Sequência)</strong></p>
   <p class="box-note">
-    O modificador de Atributo é calculado por <strong>Valor do Atributo − 2</strong>.
-    Essa regra é uma mecânica do RPG, não uma medida literal da resistência de
-    personagens no cânone.
+    Nesta fórmula, utiliza-se diretamente o valor de Vigor do personagem, sem
+    calcular modificador. O bônus de progressão corresponde a 10 menos o número
+    da Sequência.
   </p>
   <table>
     <thead><tr><th>Sequência</th><th>Bônus de PV</th></tr></thead>
     <tbody>
-      <tr><td>9</td><td>+0</td></tr>
+      <tr><td>9</td><td>+1</td></tr>
       <tr><td>8</td><td>+2</td></tr>
-      <tr><td>7</td><td>+4</td></tr>
-      <tr><td>6</td><td>+6</td></tr>
-      <tr><td>5</td><td>+8</td></tr>
-      <tr><td>4</td><td>+10</td></tr>
-      <tr><td>3</td><td>+12</td></tr>
-      <tr><td>2</td><td>+14</td></tr>
-      <tr><td>1</td><td>+16</td></tr>
-      <tr><td>0</td><td>+18</td></tr>
+      <tr><td>7</td><td>+3</td></tr>
+      <tr><td>6</td><td>+4</td></tr>
+      <tr><td>5</td><td>+5</td></tr>
+      <tr><td>4</td><td>+6</td></tr>
+      <tr><td>3</td><td>+7</td></tr>
+      <tr><td>2</td><td>+8</td></tr>
+      <tr><td>1</td><td>+9</td></tr>
+      <tr><td>0</td><td>+10</td></tr>
     </tbody>
   </table>
   <p>
-    Na criação, todos estão na Sequência 9 e recebem bônus de Sequência igual a 0.
-    Um personagem com Vigor 3 possui modificador +1 e começa com
-    <strong>8 + 1 + 0 = 9 PV</strong>.
+    Exemplo: um personagem com Vigor 2 na Sequência 8 possui
+    <strong>3 + 2 + (10 − 8) = 7 PV</strong>.
+    Na criação, um personagem com Vigor 2 na Sequência 9 começa com
+    <strong>3 + 2 + (10 − 9) = 6 PV</strong>.
   </p>
 </div>
 
@@ -522,9 +524,9 @@
 
 <div class="box box-rule">
   <div class="box-title">Lucidez Inicial</div>
-  <p style="text-align:center; font-size:1.15em;"><strong>Lucidez = 5 + Modificador de Determinação</strong></p>
+  <p style="text-align:center; font-size:1.15em;"><strong>Lucidez = 5 + Mod.(DET)</strong></p>
   <p>
-    O modificador é calculado por <strong>Valor de Determinação − 2</strong>.
+    A abreviação <strong>Mod.(DET)</strong> representa o modificador do atributo Determinação, calculado por <strong>DET − 2</strong>.
     Como os Atributos iniciais variam de 1 a 4, a Lucidez inicial normalmente
     varia de 4 a 7.
   </p>
@@ -581,9 +583,186 @@
   </p>
 </div>
 
+
 <div class="separator"></div>
 
-<h2>Passo 9 — Detalhes Finais</h2>
+<h2>Passo 9 — Defesa, Blindagem e Limiar de Dano</h2>
+
+<p>
+  Este passo reúne os valores utilizados para determinar a dificuldade de atingir
+  o personagem e a gravidade dos ferimentos que ele pode sofrer. Registre na ficha
+  sua Defesa, os recursos de Blindagem disponíveis e os Limiares de Dano
+  correspondentes à sua Sequência.
+</p>
+
+<h3>Defesa</h3>
+
+<p>
+  A Defesa representa a capacidade do personagem de evitar golpes, proteger-se
+  e dificultar que um adversário o atinja. Seu cálculo padrão considera a Destreza.
+  Equipamentos, habilidades Beyonder ou outras fontes também podem fornecer
+  fórmulas alternativas de Defesa.
+</p>
+
+<div class="box box-rule">
+  <div class="box-title">Cálculo padrão da Defesa</div>
+  <p style="text-align:center; font-size:1.15em;">
+    <strong>Defesa = 10 + Mod.(DES)</strong>
+  </p>
+  <p>
+    <strong>Mod.(DES)</strong> é o modificador de Destreza, calculado por
+    <strong>DES − 2</strong>.
+  </p>
+  <p>
+    <strong>Escolha de fórmula:</strong> se mais de uma fonte oferecer uma forma
+    de calcular a Defesa — por exemplo, a regra padrão, um equipamento ou uma
+    habilidade Beyonder —, o jogador deve escolher qual fórmula utilizar. As
+    fórmulas alternativas não se acumulam e seus resultados não devem ser somados.
+    Modificadores ou bônus que não substituam a fórmula continuam sendo aplicados
+    somente quando a própria regra que os concede determinar isso.
+  </p>
+  <p>
+    <strong>Exemplo:</strong> um personagem com Destreza 3 possui modificador
+    +1. Utilizando a fórmula padrão, sua Defesa é
+    <strong>10 + 1 = 11</strong>, independentemente de sua Sequência.
+  </p>
+</div>
+
+<h3>Blindagem</h3>
+
+<p>
+  <strong>Blindagem</strong> é um recurso de proteção utilizado para reduzir a
+  categoria de dano de um ataque recebido. Ela pode ser concedida por armaduras,
+  poderes Beyonder ou outras fontes. A Blindagem não é um equipamento por si só:
+  é um recurso fornecido por algo que concede proteção.
+</p>
+
+<p>
+  <strong>Armadura</strong>, por sua vez, é um equipamento. Quando uma armadura
+  concede proteção, sua descrição deve informar duas características: a
+  <strong>quantidade de pontos de Blindagem</strong> concedida e o
+  <strong>nível de Limiar de Dano</strong> que ela proporciona. Esses valores
+  representam aspectos diferentes da proteção e devem ser registrados
+  separadamente na ficha. Outras fontes podem conceder Blindagem ou modificar
+  os Limiares de Dano, desde que isso esteja indicado em sua descrição.
+</p>
+
+<p>
+  Não existe cálculo nem valor inicial de Blindagem durante a criação do
+  personagem. O personagem só recebe Blindagem ou níveis adicionais de proteção
+  quando uma armadura, poder Beyonder ou outra fonte conceder expressamente esse
+  benefício. Consulte a descrição do equipamento ou efeito para determinar os
+  valores recebidos.
+</p>
+
+<div class="box box-rule">
+  <div class="box-title">Redução de dano pela Blindagem</div>
+  <p>
+    A Blindagem é utilizada para reduzir a categoria do dano recebido, seguindo
+    esta ordem:
+  </p>
+  <table>
+    <thead>
+      <tr><th>Categoria original</th><th>Após a redução</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Dano Severo</td><td><strong>Dano Maior</strong></td></tr>
+      <tr><td>Dano Maior</td><td><strong>Dano Menor</strong></td></tr>
+      <tr><td>Dano Menor</td><td><strong>Nenhum dano</strong></td></tr>
+    </tbody>
+  </table>
+  <p>
+    <strong>Limite por ataque:</strong> independentemente da quantidade total de
+    Blindagem que o personagem possua, só é possível utilizar <strong>1 ponto de
+    Blindagem por ataque sofrido</strong>. Portanto, um único ataque pode ter sua
+    categoria de dano reduzida em, no máximo, um nível por meio da Blindagem.
+    Pontos adicionais de Blindagem não permitem reduzir o mesmo ataque várias vezes.
+  </p>
+  <p>
+    A fonte que concede a Blindagem determina como seus pontos são obtidos,
+    recuperados ou utilizados. Este limite não altera outras condições específicas
+    descritas pelo equipamento, poder Beyonder ou outra fonte.
+  </p>
+</div>
+
+<h3>Limiares de Dano</h3>
+
+<p>
+  Os Limiares de Dano determinam quando um ferimento passa de uma categoria para
+  outra. A ficha apresenta três categorias: <strong>Dano Menor</strong>,
+  <strong>Dano Maior</strong> e <strong>Dano Severo</strong>. Ao resolver um
+  ferimento, marque a quantidade de Pontos de Vida indicada pela categoria:
+  1 PV para Dano Menor, 2 PV para Dano Maior e 3 PV para Dano Severo.
+</p>
+
+<div class="box box-rule">
+  <div class="box-title">Limiares sem Armadura</div>
+  <p>
+    Quando o personagem não estiver utilizando uma armadura que modifique seus
+    Limiares de Dano, utilize os valores naturais determinados por sua Sequência:
+  </p>
+  <table>
+    <thead>
+      <tr><th>Progressão</th><th>Fórmula</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Dano Menor para Dano Maior</td>
+        <td><strong>2 + (10 − Sequência)</strong></td>
+      </tr>
+      <tr>
+        <td>Dano Maior para Dano Severo</td>
+        <td><strong>4 + 2 × (10 − Sequência)</strong></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    <strong>Exemplo — Sequência 9:</strong> o limiar de Menor para Maior é
+    <strong>2 + (10 − 9) = 3</strong>; o limiar de Maior para Severo é
+    <strong>4 + 2 × (10 − 9) = 6</strong>.
+  </p>
+  <p>
+    <strong>Exemplo — Sequência 8:</strong> os limiares naturais são
+    <strong>4</strong> e <strong>8</strong>, respectivamente. Uma armadura pode
+    conceder um nível de Limiar de Dano diferente; nesse caso, utilize a regra
+    indicada na descrição do equipamento.
+  </p>
+</div>
+
+<div class="box box-example">
+  <div class="box-title">Exemplo de preenchimento</div>
+  <p>
+    Um personagem na Sequência 8, com Destreza 2, sem armadura e sem pontos de
+    Blindagem provenientes de outras fontes, registra:
+  </p>
+  <ul>
+    <li><strong>Defesa:</strong> 10 + (2 − 2) = <strong>10</strong>.</li>
+    <li><strong>Armadura:</strong> nenhuma.</li>
+    <li><strong>Blindagem:</strong> 0 pontos.</li>
+    <li><strong>Limiar de Menor para Maior:</strong> 2 + (10 − 8) = <strong>4</strong>.</li>
+    <li><strong>Limiar de Maior para Severo:</strong> 4 + 2 × (10 − 8) = <strong>8</strong>.</li>
+  </ul>
+</div>
+
+<p>
+  O deslocamento básico de um personagem é de <strong>9 metros</strong>, salvo
+  se uma habilidade, condição ou equipamento alterar esse valor.
+</p>
+
+<div class="box box-warning">
+  <div class="box-title">Atenção</div>
+  <p>
+    A criação do personagem não concede armadura nem pontos de Blindagem iniciais.
+    Antes de aplicar uma redução de dano, verifique se o personagem possui pontos
+    de Blindagem disponíveis. Se estiver usando uma armadura, consulte também o
+    nível de Limiar de Dano informado na descrição do equipamento. Lembre-se de
+    que só é possível utilizar 1 ponto de Blindagem por ataque sofrido.
+  </p>
+</div>
+
+<div class="separator"></div>
+
+<h2>Passo 10 — Detalhes Finais</h2>
 
 <p>
   Com as escolhas mecânicas concluídas, defina os elementos que darão identidade
@@ -664,10 +843,10 @@
   </p>
 
   <h4>Passo 6 — Pontos de Vida</h4>
-  <p>PV = 8 + modificador de Vigor (2 − 2 = 0) + bônus da Sequência 9 (0) = <strong>8 PV</strong>.</p>
+  <p>PV = 3 + Vigor 2 + (10 − 9) = <strong>6 PV</strong>.</p>
 
   <h4>Passo 7 — Lucidez</h4>
-  <p>Lucidez = 5 + modificador de Determinação (2 − 2 = 0) = <strong>5</strong>.</p>
+  <p>Lucidez = 5 + Mod.(DET) = 5 + (2 − 2) = <strong>5</strong>.</p>
 
   <h4>Passo 8 — Equipamento</h4>
   <ul>
@@ -683,7 +862,17 @@
     esse equipamento, deverá justificar sua aquisição e obter a aprovação do Mestre.
   </p>
 
-  <h4>Passo 9 — Detalhes Finais</h4>
+  <h4>Passo 9 — Defesa, Blindagem e Limiar de Dano</h4>
+  <ul>
+    <li><strong>Defesa:</strong> 10 + Mod.(DES) = 10 + (2 − 2) = <strong>10</strong>.</li>
+    <li><strong>Armadura:</strong> nenhuma.</li>
+    <li><strong>Blindagem:</strong> 0 pontos.</li>
+    <li><strong>Limiar de Menor para Maior:</strong> 2 + (10 − 9) = <strong>3</strong>.</li>
+    <li><strong>Limiar de Maior para Severo:</strong> 4 + 2 × (10 − 9) = <strong>6</strong>.</li>
+    <li><strong>Deslocamento:</strong> 9 metros.</li>
+  </ul>
+
+  <h4>Passo 10 — Detalhes Finais</h4>
   <ul>
     <li><strong>Nome:</strong> Edmund Harker.</li>
     <li><strong>Idade:</strong> 34 anos.</li>
