@@ -45,6 +45,17 @@
   </p>
 </div>
 
+<div class="box box-rule">
+  <div class="box-title">Resumo das Seções</div>
+  <ul>
+    <li><a href="#atributos"><strong>Atributos:</strong> escalas, categorias, dimensões e modificadores.</a></li>
+    <li><a href="#pericias"><strong>Perícias:</strong> grupos, distribuição, aplicações e especializações.</a></li>
+    <li><a href="#sistema-testes"><strong>Sistema de Testes:</strong> rolagens 2d10, Classes de Dificuldade, resultados críticos, Vantagem, Desvantagem e testes disputados.</a></li>
+    <li><a href="#estatisticas-derivadas"><strong>Estatísticas Derivadas:</strong> Pontos de Vida, Espiritualidade, Iniciativa, Defesa, Salvaguardas, Lucidez, Blindagem e Limiares de Dano.</a></li>
+    <li><a href="#resumo"><strong>Resumo Rápido de Referência:</strong> consulta concentrada das principais fórmulas e regras.</a></li>
+  </ul>
+</div>
+
 <div class="separator"></div>
 
 <h2 id="atributos">Atributos</h2>
@@ -89,6 +100,34 @@
 </div>
 
 <h3 id="categorias-atributos">Categorias de Atributos</h3>
+<div class="box box-note">
+  <div class="box-title">As três dimensões dos Atributos</div>
+  <p>
+    Em cada categoria, os três Atributos representam dimensões complementares:
+    <strong>Potência</strong>, <strong>Refinamento</strong> e <strong>Resistência</strong>.
+    Essa divisão ajuda a compreender não apenas o quanto o personagem consegue produzir
+    em determinada área, mas também como direciona sua capacidade e por quanto tempo
+    consegue sustentá-la diante de esforço ou pressão.
+  </p>
+  <table>
+    <thead><tr><th>Dimensão</th><th>Físicos</th><th>Sociais</th><th>Mentais</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Potência</strong></td><td>Força (FOR)</td><td>Carisma (CAR)</td><td>Inteligência (INT)</td></tr>
+      <tr><td><strong>Refinamento</strong></td><td>Destreza (DES)</td><td>Manipulação (MAN)</td><td>Raciocínio (RAC)</td></tr>
+      <tr><td><strong>Resistência</strong></td><td>Vigor (VIG)</td><td>Autocontrole (ACO)</td><td>Determinação (DET)</td></tr>
+    </tbody>
+  </table>
+  <ul>
+    <li><strong>Potência:</strong> representa a capacidade central de produzir efeito naquela categoria — aplicar força e esforço físico, causar impacto e mobilizar pessoas por meio da expressão social, ou reunir e utilizar conhecimento e capacidade intelectual.</li>
+    <li><strong>Refinamento:</strong> representa a precisão e o direcionamento dessa capacidade — coordenar movimentos, conduzir interações com técnica e estratégia, ou analisar informações e construir conclusões.</li>
+    <li><strong>Resistência:</strong> representa a capacidade de sustentar o desempenho e suportar pressões — resistir ao desgaste corporal, manter a compostura diante de tensões emocionais e sociais, ou preservar a vontade diante de pressões mentais.</li>
+  </ul>
+  <p>
+    Essas dimensões não indicam que um Atributo seja superior aos demais. Elas descrevem
+    maneiras diferentes e complementares de expressar a capacidade física, social ou mental
+    do personagem. A escolha deve acompanhar a abordagem utilizada na ação.
+  </p>
+</div>
 <table>
   <thead><tr><th>Categoria</th><th>Atributo</th><th>Sigla</th><th>Função principal</th></tr></thead>
   <tbody>
@@ -622,52 +661,6 @@
   </tbody>
 </table>
 
-<h3 id="probabilidades">Probabilidades de sucesso</h3>
-<p>
-  A soma de 2d10 produz uma distribuição em que os resultados intermediários são
-  mais frequentes. As tabelas abaixo mostram a probabilidade exata de alcançar cada
-  CD para personagens com bônus total de +3 ou +4. Os percentuais foram calculados
-  considerando todas as combinações possíveis dos dados; não incluem efeitos
-  especiais de poderes ou outros bônus além do valor indicado.
-</p>
-
-<h4>Personagem com bônus total +3</h4>
-<table>
-  <thead><tr><th>CD</th><th>2d10 normal</th><th>Com Vantagem</th><th>Com Desvantagem</th></tr></thead>
-  <tbody>
-    <tr><td>5</td><td>100%</td><td>100%</td><td>100%</td></tr>
-    <tr><td>8</td><td>94%</td><td>98,9%</td><td>85,1%</td></tr>
-    <tr><td>10</td><td>85%</td><td>95,8%</td><td>67,3%</td></tr>
-    <tr><td>13</td><td>64%</td><td>84,6%</td><td>37,8%</td></tr>
-    <tr><td>15</td><td>45%</td><td>71%</td><td>21,5%</td></tr>
-    <tr><td>18</td><td>21%</td><td>42,6%</td><td>6,9%</td></tr>
-    <tr><td>20</td><td>10%</td><td>23,3%</td><td>2,3%</td></tr>
-  </tbody>
-</table>
-
-<h4>Personagem com bônus total +4</h4>
-<table>
-  <thead><tr><th>CD</th><th>2d10 normal</th><th>Com Vantagem</th><th>Com Desvantagem</th></tr></thead>
-  <tbody>
-    <tr><td>5</td><td>100%</td><td>100%</td><td>100%</td></tr>
-    <tr><td>8</td><td>97%</td><td>99,6%</td><td>92,1%</td></tr>
-    <tr><td>10</td><td>90%</td><td>97,7%</td><td>76,7%</td></tr>
-    <tr><td>13</td><td>72%</td><td>89,4%</td><td>47,4%</td></tr>
-    <tr><td>15</td><td>55%</td><td>78,5%</td><td>29%</td></tr>
-    <tr><td>18</td><td>28%</td><td>52,6%</td><td>10,6%</td></tr>
-    <tr><td>20</td><td>15%</td><td>32,7%</td><td>4,2%</td></tr>
-  </tbody>
-</table>
-<div class="box box-note">
-  <div class="box-title">Como interpretar a linha CD 20+</div>
-  <p>
-    A linha CD 20 das tabelas representa exatamente uma dificuldade 20. A indicação
-    <strong>20+</strong> abrange qualquer CD igual ou superior a 20; portanto, para
-    uma CD acima de 20, a chance de sucesso será menor e deve ser calculada de acordo
-    com o valor específico estabelecido pelo Mestre.
-  </p>
-</div>
-
 <h3 id="criticos">Resultados críticos</h3>
 <p>
   Os resultados críticos são identificados pelos <strong>valores naturais dos dois
@@ -725,34 +718,22 @@
 <h4>Críticos com Vantagem e Desvantagem</h4>
 <p>
   Quando houver Vantagem ou Desvantagem, observe apenas os dois dados que permaneceram
-  após o descarte:
+  após o descarte. A identificação do crítico segue a mesma regra da rolagem normal:
 </p>
 <ul>
-  <li><strong>Com Vantagem:</strong> os dois maiores dados são utilizados. Se ambos forem 10 e o total alcançar a CD, há Acerto Crítico. Se ambos forem 1 e o total não alcançar a CD, há Falha Crítica.</li>
-  <li><strong>Com Desvantagem:</strong> os dois menores dados são utilizados. Se ambos forem 10 e o total alcançar a CD, há Acerto Crítico. Se ambos forem 1 e o total não alcançar a CD, há Falha Crítica.</li>
-  <li><strong>Rolagem normal:</strong> os dois dados rolados são utilizados e avaliados da mesma maneira.</li>
+  <li><strong>Com Vantagem:</strong> utilize os dois maiores dados. Se ambos forem 10 e o total alcançar a CD, há Acerto Crítico. Se ambos forem 1 e o total não alcançar a CD, há Falha Crítica.</li>
+  <li><strong>Com Desvantagem:</strong> utilize os dois menores dados. Se ambos forem 10 e o total alcançar a CD, há Acerto Crítico. Se ambos forem 1 e o total não alcançar a CD, há Falha Crítica.</li>
+  <li><strong>Rolagem normal:</strong> utilize os dois dados rolados e avalie o par da mesma maneira.</li>
 </ul>
-<table>
-  <thead><tr><th>Condição</th><th>Par 10 + 10 utilizado</th><th>Par 1 + 1 utilizado</th></tr></thead>
-  <tbody>
-    <tr><td>Normal (2d10)</td><td>1%</td><td>1%</td></tr>
-    <tr><td>Vantagem (3d10, descarta o menor)</td><td>2,8%</td><td>0,1%</td></tr>
-    <tr><td>Desvantagem (3d10, descarta o maior)</td><td>0,1%</td><td>2,8%</td></tr>
-  </tbody>
-</table>
-<p>
-  Os percentuais indicam a probabilidade de os dois dados utilizados formarem cada
-  par natural, antes da verificação da CD. Para que exista um Acerto Crítico ou uma
-  Falha Crítica, o resultado final também precisa cumprir a condição de sucesso ou
-  fracasso descrita acima. Por isso, a probabilidade efetiva de um crítico depende
-  da CD e do bônus total do personagem.
-</p>
-<p>
-  A Vantagem aumenta a possibilidade de obter o par 10 + 10; a Desvantagem aumenta
-  a possibilidade de obter o par 1 + 1. Os pares opostos ainda podem ocorrer quando
-  os três dados mostram o mesmo valor: três resultados 1 com Vantagem ou três
-  resultados 10 com Desvantagem.
-</p>
+<div class="box box-note">
+  <div class="box-title">Atenção ao descarte</div>
+  <p>
+    A regra considera somente os dois dados que permanecem depois do descarte. Portanto,
+    se os três dados mostrarem 1 em uma rolagem com Vantagem, os dois dados utilizados
+    formarão 1 + 1; se os três mostrarem 10 em uma rolagem com Desvantagem, os dois dados
+    utilizados formarão 10 + 10. A condição de alcançar ou não a CD continua sendo aplicada.
+  </p>
+</div>
 
 <h4>Críticos nos três pilares</h4>
 <table>
@@ -893,15 +874,19 @@
     <tbody>
       <tr><td>9</td><td>+1</td></tr><tr><td>8</td><td>+2</td></tr>
       <tr><td>7</td><td>+3</td></tr><tr><td>6</td><td>+4</td></tr>
-      <tr><td>5</td><td>+5</td></tr><tr><td>4</td><td>+6</td></tr>
-      <tr><td>3</td><td>+7</td></tr><tr><td>2</td><td>+8</td></tr>
-      <tr><td>1</td><td>+9</td></tr><tr><td>0</td><td>+10</td></tr>
+      <tr><td>5</td><td>+5</td></tr>
     </tbody>
   </table>
+  <p class="box-note">
+    Este livro apresenta a progressão dos personagens da Sequência 9 até a
+    <strong>Sequência 5</strong>, que é o estágio mais alto abordado neste volume.
+    Por isso, a tabela e os exemplos de progressão deste capítulo terminam na Sequência 5.
+  </p>
   <p>
     <strong>Exemplo:</strong> um personagem com Pontos.(VIG) = 2 na Sequência 8 possui
     3 + 2 + (10 − 8) = <strong>7 PV</strong>. Na Sequência 9, com o mesmo Vigor, possui
-    3 + 2 + (10 − 9) = <strong>6 PV</strong>.
+    3 + 2 + (10 − 9) = <strong>6 PV</strong>. Ao alcançar a Sequência 5,
+    com o mesmo Vigor, terá 3 + 2 + (10 − 5) = <strong>10 PV</strong>.
   </p>
 </div>
 <div class="box box-note">
@@ -1121,7 +1106,9 @@
   <p>
     Os Limiares de Dano determinam a progressão entre as três categorias de ferimento.
     Sem uma armadura que modifique esses valores, utilize os limiares naturais da
-    Sequência do personagem:
+    Sequência do personagem. Neste livro, a progressão considerada vai da Sequência 9
+    até a <strong>Sequência 5</strong>; não são apresentados valores de Sequências acima
+    desse estágio.
   </p>
   <table>
     <thead><tr><th>Sequência</th><th>Menor → Maior</th><th>Maior → Severo</th></tr></thead>
@@ -1131,11 +1118,6 @@
       <tr><td>7</td><td>5</td><td>10</td></tr>
       <tr><td>6</td><td>6</td><td>12</td></tr>
       <tr><td>5</td><td>7</td><td>14</td></tr>
-      <tr><td>4</td><td>8</td><td>16</td></tr>
-      <tr><td>3</td><td>9</td><td>18</td></tr>
-      <tr><td>2</td><td>10</td><td>20</td></tr>
-      <tr><td>1</td><td>11</td><td>22</td></tr>
-      <tr><td>0</td><td>12</td><td>24</td></tr>
     </tbody>
   </table>
   <p>
@@ -1221,3 +1203,4 @@
 
 </body>
 </html>
+
