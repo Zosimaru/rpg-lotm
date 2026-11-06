@@ -866,198 +866,78 @@
 <div class="separator"></div>
 
 <h2 id="passo-10-defesa-blindagem-limiares">Passo 10 — Defesa, Blindagem e Limiares de Dano</h2>
-
 <p>
-  Este passo reúne os valores utilizados para determinar a dificuldade de atingir
-  o personagem e a gravidade dos ferimentos que ele pode sofrer. Registre na ficha
-  sua Defesa, os recursos de Blindagem disponíveis e os Limiares de Dano
-  correspondentes à sua Sequência.
+  Neste passo, calcule e registre a Defesa e os Limiares de Dano correspondentes
+  à Sequência do personagem. A Blindagem inicial depende de uma fonte que a conceda;
+  a criação não fornece armadura nem pontos de Blindagem.
 </p>
 
 <h3>Defesa</h3>
-
 <p>
-  A Defesa representa a capacidade do personagem de evitar golpes, proteger-se
-  e dificultar que um adversário o atinja. Seu cálculo padrão considera a Destreza.
-  Equipamentos, habilidades Beyonder ou outras fontes também podem fornecer
-  fórmulas alternativas de Defesa.
+  A Defesa indica o valor que um adversário precisa alcançar em um teste de ataque
+  para atingir o personagem. Utilize a fórmula padrão abaixo, salvo se uma regra
+  específica conceder uma fórmula alternativa.
 </p>
-
 <div class="box box-rule">
-  <div class="box-title">Cálculo padrão da Defesa</div>
-  <p style="text-align:center; font-size:1.15em;">
-    <strong>Defesa = 10 + Mod.(DES)</strong>
-  </p>
+  <div class="box-title">Cálculo da Defesa</div>
+  <p style="text-align:center; font-size:1.15em;"><strong>Defesa = 10 + Mod.(DES)</strong></p>
   <p>
-    <strong>Mod.(DES)</strong> é o modificador de Destreza, calculado por
-    <strong>Pontos.(DES) − 2</strong>.
-  </p>
-  <p>
-    <strong>Escolha de fórmula:</strong> se mais de uma fonte oferecer uma forma
-    de calcular a Defesa — por exemplo, a regra padrão, um equipamento ou uma
-    habilidade Beyonder —, o jogador deve escolher qual fórmula utilizar. As
-    fórmulas alternativas não se acumulam e seus resultados não devem ser somados.
-    Modificadores ou bônus que não substituam a fórmula continuam sendo aplicados
-    somente quando a própria regra que os concede determinar isso.
-  </p>
-  <p>
-    <strong>Exemplo:</strong> um personagem com <strong>Pontos.(DES) = 3</strong> possui modificador
-    +1. Utilizando a fórmula padrão, sua Defesa é
-    <strong>10 + 1 = 11</strong>, independentemente de sua Sequência.
+    O modificador é calculado por <strong>Mod.(DES) = Pontos.(DES) − 2</strong>.
+    Se mais de uma fonte oferecer uma fórmula de Defesa, escolha apenas uma;
+    fórmulas alternativas não se somam.
   </p>
 </div>
 
 <h3>Blindagem</h3>
-
 <p>
-  <strong>Blindagem</strong> é um recurso de proteção utilizado para reduzir a
-  categoria de dano de um ataque recebido. Ela pode ser concedida por armaduras,
-  poderes Beyonder ou outras fontes. A Blindagem não é um equipamento por si só:
-  é um recurso fornecido por algo que concede proteção.
+  Não existe valor inicial de Blindagem na criação. Registre <strong>0/</strong>
+  na ficha, a menos que alguma regra específica da campanha conceda esse recurso.
+  A quantidade de Blindagem e suas condições de uso são determinadas pela fonte
+  que a concede. As regras para gastar Blindagem durante conflitos estão no
+  <strong>Capítulo 3 — Atributos, Proficiências e Sistema de Testes</strong>.
 </p>
-
-<p>
-  <strong>Armadura</strong>, por sua vez, é um equipamento. Quando uma armadura
-  concede proteção, sua descrição deve informar duas características: a
-  <strong>quantidade de pontos de Blindagem</strong> concedida e o
-  <strong>nível de Limiar de Dano</strong> que ela proporciona. Esses valores
-  representam aspectos diferentes da proteção e devem ser registrados
-  separadamente na ficha. Outras fontes podem conceder Blindagem ou modificar
-  os Limiares de Dano, desde que isso esteja indicado em sua descrição.
-</p>
-
-<p>
-  Não existe cálculo nem valor inicial de Blindagem durante a criação do
-  personagem. O personagem só recebe Blindagem ou níveis adicionais de proteção
-  quando uma armadura, poder Beyonder ou outra fonte conceder expressamente esse
-  benefício. Consulte a descrição do equipamento ou efeito para determinar os
-  valores recebidos.
-</p>
-
-<div class="box box-note">
-  <div class="box-title">Registro da Blindagem na ficha</div>
-  <p>
-    Quando uma armadura, poder Beyonder ou outra fonte conceder Blindagem, conte
-    os quadrados destinados à Blindagem na ficha e registre a quantidade total
-    seguida de uma barra (/). Por exemplo, se a fonte conceder 3 pontos de
-    Blindagem, escreva <strong>3/</strong> imediatamente após o espaço ou número
-    indicado para a Blindagem. Os quadrados representam a quantidade disponível;
-    marque-os quando gastar Blindagem para reduzir o dano de um ataque.
-  </p>
-  <p>
-    Mesmo que possua vários quadrados de Blindagem, o personagem só pode utilizar
-    <strong>1 ponto por ataque sofrido</strong>.
-  </p>
-</div>
-
-
-<div class="box box-rule">
-  <div class="box-title">Redução de dano pela Blindagem</div>
-  <p>
-    A Blindagem é utilizada para reduzir a categoria do dano recebido, seguindo
-    esta ordem:
-  </p>
-  <table>
-    <thead>
-      <tr><th>Categoria original</th><th>Após a redução</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>Dano Severo</td><td><strong>Dano Maior</strong></td></tr>
-      <tr><td>Dano Maior</td><td><strong>Dano Menor</strong></td></tr>
-      <tr><td>Dano Menor</td><td><strong>Nenhum dano</strong></td></tr>
-    </tbody>
-  </table>
-  <p>
-    <strong>Limite por ataque:</strong> independentemente da quantidade total de
-    Blindagem que o personagem possua, só é possível utilizar <strong>1 ponto de
-    Blindagem por ataque sofrido</strong>. Portanto, um único ataque pode ter sua
-    categoria de dano reduzida em, no máximo, um nível por meio da Blindagem.
-    Pontos adicionais de Blindagem não permitem reduzir o mesmo ataque várias vezes.
-  </p>
-  <p>
-    A fonte que concede a Blindagem determina como seus pontos são obtidos,
-    recuperados ou utilizados. Este limite não altera outras condições específicas
-    descritas pelo equipamento, poder Beyonder ou outra fonte.
-  </p>
-</div>
 
 <h3>Limiares de Dano</h3>
-
 <p>
-  Os Limiares de Dano determinam quando um ferimento passa de uma categoria para
-  outra. A ficha apresenta três categorias: <strong>Dano Menor</strong>,
-  <strong>Dano Maior</strong> e <strong>Dano Severo</strong>. Ao resolver um
-  ferimento, marque a quantidade de Pontos de Vida indicada pela categoria:
-  1 PV para Dano Menor, 2 PV para Dano Maior e 3 PV para Dano Severo.
+  Os Limiares de Dano dependem da Sequência e devem ser registrados na ficha.
+  Utilize os valores naturais abaixo quando nenhuma armadura ou efeito alterar
+  esses limites.
 </p>
-
 <div class="box box-rule">
-  <div class="box-title">Limiares sem Armadura</div>
-  <p>
-    Quando o personagem não estiver utilizando uma armadura que modifique seus
-    Limiares de Dano, utilize os valores naturais determinados por sua Sequência:
-  </p>
-  <p>
-    Os valores naturais são calculados pelas fórmulas abaixo. O primeiro limiar
-    indica a passagem de Dano Menor para Dano Maior; o segundo indica a passagem
-    de Dano Maior para Dano Severo.
-  </p>
-  <ul>
-    <li><strong>Menor para Maior:</strong> 2 + (10 − Sequência).</li>
-    <li><strong>Maior para Severo:</strong> 4 + 2 × (10 − Sequência).</li>
-  </ul>
-  <p><strong>Referência rápida — Limiares naturais sem Armadura:</strong></p>
+  <div class="box-title">Limiares naturais por Sequência</div>
   <table>
-    <thead>
-      <tr><th>Sequência</th><th>Menor → Maior</th><th>Maior → Severo</th></tr>
-    </thead>
+    <thead><tr><th>Sequência</th><th>Menor → Maior</th><th>Maior → Severo</th></tr></thead>
     <tbody>
       <tr><td>9</td><td>3</td><td>6</td></tr>
       <tr><td>8</td><td>4</td><td>8</td></tr>
       <tr><td>7</td><td>5</td><td>10</td></tr>
       <tr><td>6</td><td>6</td><td>12</td></tr>
-      <tr><td><strong>5</strong></td><td><strong>7</strong></td><td><strong>14</strong></td></tr>
+      <tr><td>5</td><td>7</td><td>14</td></tr>
     </tbody>
   </table>
-  <p>
-    Uma armadura pode modificar os Limiares de Dano. Quando isso ocorrer, utilize
-    os valores e as instruções apresentados na descrição do equipamento. Este livro
-    apresenta a progressão somente até a <strong>Sequência 5</strong>.
+  <p class="box-note">
+    As fórmulas naturais são: <strong>Menor para Maior = 2 + (10 − Sequência)</strong>;
+    <strong>Maior para Severo = 4 + 2 × (10 − Sequência)</strong>. Se uma armadura
+    ou outro efeito alterar os limiares, registre os valores indicados por essa fonte.
   </p>
 </div>
-
 <div class="box box-example">
   <div class="box-title">Exemplo de preenchimento</div>
-  <p>
-    Um personagem na Sequência 8, com <strong>Pontos.(DES) = 2</strong>, sem armadura e sem pontos de
-    Blindagem provenientes de outras fontes, registra:
-  </p>
+  <p>Um personagem na Sequência 8, com <strong>Pontos.(DES) = 2</strong>, sem armadura e sem uma fonte de Blindagem, registra:</p>
   <ul>
     <li><strong>Defesa:</strong> 10 + (2 − 2) = <strong>10</strong>.</li>
     <li><strong>Armadura:</strong> nenhuma.</li>
-    <li><strong>Blindagem:</strong> 0 pontos.</li>
-    <li><strong>Limiar de Menor para Maior:</strong> 2 + (10 − 8) = <strong>4</strong>.</li>
-    <li><strong>Limiar de Maior para Severo:</strong> 4 + 2 × (10 − 8) = <strong>8</strong>.</li>
+    <li><strong>Blindagem:</strong> <strong>0/</strong>.</li>
+    <li><strong>Limiar Menor → Maior:</strong> <strong>4</strong>.</li>
+    <li><strong>Limiar Maior → Severo:</strong> <strong>8</strong>.</li>
   </ul>
+  <p>O funcionamento desses valores e a aplicação da Blindagem durante os conflitos são explicados no Capítulo 3.</p>
 </div>
-
 <p>
   O deslocamento básico de um personagem é de <strong>9 metros</strong>, salvo
-  se uma habilidade, condição ou equipamento alterar esse valor.
+  quando uma habilidade, condição ou equipamento alterar esse valor.
 </p>
-
-<div class="box box-warning">
-  <div class="box-title">Atenção</div>
-  <p>
-    A criação do personagem não concede armadura nem pontos de Blindagem iniciais.
-    Antes de aplicar uma redução de dano, verifique se o personagem possui pontos
-    de Blindagem disponíveis. Se estiver usando uma armadura, consulte também o
-    nível de Limiar de Dano informado na descrição do equipamento.
-  </p>
-</div>
-
 <div class="separator"></div>
-
 <h2 id="passo-11-detalhes-finais">Passo 11 — Detalhes Finais</h2>
 
 <p>
@@ -1244,3 +1124,4 @@
 
 </body>
 </html>
+  
