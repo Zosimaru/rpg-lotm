@@ -54,7 +54,7 @@
     <li><a href="#atributos"><strong>Atributos:</strong> escalas, categorias, dimensões e modificadores.</a></li>
     <li><a href="#pericias"><strong>Proficiências:</strong> Talentos, Perícias e Conhecimentos, distribuição, aplicações e especializações.</a></li>
     <li><a href="#sistema-testes"><strong>Sistema de Testes:</strong> rolagens 2d10, Classes de Dificuldade, resultados críticos, Vantagem, Desvantagem e testes disputados.</a></li>
-    <li><a href="#estatisticas-derivadas"><strong>Estatísticas Derivadas:</strong> Pontos de Vida, Espiritualidade, Iniciativa, Defesa, Salvaguardas, Lucidez, Blindagem e Limiares de Dano.</a></li>
+    <li><a href="#estatisticas-derivadas"><strong>Estatísticas Derivadas:</strong> Pontos de Vida, Espiritualidade, Defesa, Salvaguardas, Lucidez, Blindagem e Limiares de Dano.</a></li>
     <li><a href="#resumo"><strong>Resumo Rápido de Referência:</strong> consulta concentrada das principais fórmulas e regras.</a></li>
   </ul>
 </div>
@@ -127,32 +127,6 @@
   <p>
     Nenhuma dimensão é superior às demais. O Atributo utilizado depende da forma
     como o personagem descreve a ação.
-  </p>
-</div>
-  <p>
-    Em cada categoria, os três Atributos representam dimensões complementares:
-    <strong>Potência</strong>, <strong>Refinamento</strong> e <strong>Resistência</strong>.
-    Essa divisão ajuda a compreender não apenas o quanto o personagem consegue produzir
-    em determinada área, mas também como direciona sua capacidade e por quanto tempo
-    consegue sustentá-la diante de esforço ou pressão.
-  </p>
-  <table>
-    <thead><tr><th>Dimensão</th><th>Físicos</th><th>Sociais</th><th>Mentais</th></tr></thead>
-    <tbody>
-      <tr><td><strong>Potência</strong></td><td>Força (FOR)</td><td>Carisma (CAR)</td><td>Inteligência (INT)</td></tr>
-      <tr><td><strong>Refinamento</strong></td><td>Destreza (DES)</td><td>Manipulação (MAN)</td><td>Raciocínio (RAC)</td></tr>
-      <tr><td><strong>Resistência</strong></td><td>Vigor (VIG)</td><td>Autocontrole (ACO)</td><td>Determinação (DET)</td></tr>
-    </tbody>
-  </table>
-  <ul>
-    <li><strong>Potência:</strong> representa a capacidade central de produzir efeito naquela categoria — aplicar força e esforço físico, causar impacto e mobilizar pessoas por meio da expressão social, ou reunir e utilizar conhecimento e capacidade intelectual.</li>
-    <li><strong>Refinamento:</strong> representa a precisão e o direcionamento dessa capacidade — coordenar movimentos, conduzir interações com técnica e estratégia, ou analisar informações e construir conclusões.</li>
-    <li><strong>Resistência:</strong> representa a capacidade de sustentar o desempenho e suportar pressões — resistir ao desgaste corporal, manter a compostura diante de tensões emocionais e sociais, ou preservar a vontade diante de pressões mentais.</li>
-  </ul>
-  <p>
-    Essas dimensões não indicam que um Atributo seja superior aos demais. Elas descrevem
-    maneiras diferentes e complementares de expressar a capacidade física, social ou mental
-    do personagem. A escolha deve acompanhar a abordagem utilizada na ação.
   </p>
 </div>
 <table>
@@ -677,12 +651,12 @@
   <p>
     Edmund Harker tenta identificar uma adulteração em um contrato. O Mestre escolhe
     Raciocínio + Investigação e determina CD 15. Edmund possui <strong>Pontos.(RAC) = 4</strong>,
-    portanto Mod.(RAC) é +2; sua Proficiência Investigação tem 3 pontos, portanto
-    Mod.(Investigação) é +1. Seu bônus total é +3. Ele rola 2d10 e obtém
+    portanto Mod.(RAC) é +2. Sua Proficiência Investigação tem 2 pontos, portanto
+    Mod.(Investigação) é +0. Seu bônus total é +2. Ele rola 2d10 e obtém
     <strong>7 e 8</strong>, cuja soma é 15.
   </p>
   <p>
-    Total: 15 + 2 + 1 = <strong>18</strong>. Como 18 é igual ou superior à CD 15,
+    Total: 15 + 2 + 0 = <strong>17</strong>. Como 17 é igual ou superior à CD 15,
     Edmund identifica a adulteração.
   </p>
 </div>
@@ -807,8 +781,9 @@
   <div class="box-title">Exemplo: teste disputado</div>
   <p>
     Edmund tenta sustentar uma história falsa diante de um investigador. Edmund rola
-    2d10 e obtém 5 e 7, totalizando 12 nos dados. Com Mod.(MAN) +1 e
-    Mod.(Subterfúgio) +0, seu resultado final é <strong>13</strong>. O investigador
+    2d10 e obtém 5 e 7, totalizando 12 nos dados. Como possui Pontos.(MAN) = 4,
+    seu Mod.(MAN) é +2; sua Proficiência Subterfúgio tem 1 ponto, portanto
+    Mod.(Subterfúgio) é −1. Seu resultado final é <strong>13</strong>. O investigador
     tenta perceber a mentira com Empatia e Raciocínio: rola 2d10 e obtém 4 e 7,
     totalizando 11 nos dados. Com Mod.(RAC) +1 e Mod.(Empatia) +0, seu resultado final
     é <strong>12</strong>. Edmund vence o teste disputado. Se os totais fossem iguais,
@@ -1017,12 +992,15 @@
     a parte do custo que não pôde pagar.
   </p>
   <p>
-    Para cada utilização nessa condição, realiza um teste de resistência espiritual:
-    role <strong>2d10 + Mod.(ACO) + Mod.(DET)</strong> contra uma Classe de Dificuldade
-    igual a <strong>8 + o total acumulado de Espiritualidade excedente</strong>. Some
-    ao excedente anterior a parcela não paga pelo novo poder antes de calcular a CD.
-    Assim, quanto mais o personagem força sua Espiritualidade além do limite, mais
-    difícil se torna suportar o esforço.
+    O poder é manifestado e seus efeitos são resolvidos normalmente. <strong>Somente
+    depois de resolver o poder</strong>, o personagem deve realizar um teste de Lucidez
+    para suportar o desgaste: role <strong>2d10 + Mod.(ACO) + Mod.(DET)</strong> contra
+    uma Classe de Dificuldade igual a <strong>8 + o total acumulado de Espiritualidade
+    excedente</strong>. Some ao excedente anterior a parcela não paga pelo poder recém
+    utilizado antes de calcular a CD. Esse teste específico utiliza a soma de
+    Mod.(ACO) e Mod.(DET), não o modificador da Salvaguarda Espírito. Assim, quanto
+    mais o personagem força sua Espiritualidade além do limite, mais difícil se torna
+    suportar o esforço.
   </p>
   <p>
     <strong>Exemplo:</strong> um personagem com 0 pontos de Espiritualidade força um
@@ -1037,11 +1015,12 @@
     um poder de custo 3, apenas 2 pontos serão acrescentados ao excedente acumulado.
   </p>
   <p>
-    Esse teste mede o desgaste de forçar a própria essência espiritual, não substitui
-    os testes ou condições normais do poder. <strong>Em caso de falha, o personagem
-    perde 1 ponto de Lucidez.</strong> O excedente acumulado é mantido enquanto ele
-    continuar utilizando poderes sem recuperar Espiritualidade; ao recuperar pontos,
-    uma nova contagem de excedente começa a partir de zero.
+    O teste de Lucidez não determina se o poder funciona nem reduz seus efeitos:
+    ele já foi resolvido antes da rolagem. <strong>Em caso de falha, o personagem
+    perde 1 ponto de Lucidez</strong>; em caso de sucesso, não sofre essa perda.
+    O excedente acumulado é mantido enquanto ele continuar utilizando poderes sem
+    recuperar Espiritualidade. Qualquer recuperação de Espiritualidade encerra a
+    contagem, e uma nova sequência de uso forçado começa com excedente zero.
   </p>
 </div>
 
@@ -1080,30 +1059,6 @@
   </p>
 </div>
 
-<h3 id="iniciativa">Iniciativa</h3>
-<p>
-  A Iniciativa determina a ordem em que os participantes agem quando o tempo é
-  decisivo, especialmente no início de um confronto. Ela combina rapidez de reação
-  e capacidade de avaliar o que está acontecendo.
-</p>
-<div class="box box-rule">
-  <div class="box-title">Cálculo da Iniciativa</div>
-  <p style="text-align:center; font-size:1.15em;"><strong>Iniciativa = 2d10 + Mod.(DES) + Mod.(RAC)</strong></p>
-  <p>
-    Nesta revisão, Raciocínio substitui o antigo atributo Percepção na fórmula de
-    Iniciativa, pois a ficha atual não possui mais Percepção como Atributo. Em caso
-    de empate, vence quem tiver mais Pontos.(DES); persistindo o empate, os participantes
-    agem simultaneamente ou o Mestre define a ordem conforme a situação.
-  </p>
-</div>
-<div class="box box-example">
-  <div class="box-title">Exemplo: Iniciativa</div>
-  <p>
-    Um personagem possui Pontos.(DES) = 3 (Mod. +1) e Pontos.(RAC) = 4 (Mod. +2).
-    Ao obter 7 e 4 nos dois dados, a soma é 11; seu total de Iniciativa é 11 + 1 + 2 = <strong>14</strong>.
-  </p>
-</div>
-
 <h3 id="defesa">Defesa</h3>
 <p>
   A Defesa representa a dificuldade de atingir o personagem. Em um ataque, o
@@ -1126,6 +1081,65 @@
     e Defesa 11 pela fórmula padrão.
   </p>
 </div>
+
+<h3 id="salvaguardas">Salvaguardas</h3>
+<p>
+  As Salvaguardas são utilizadas quando um efeito ameaça diretamente a integridade
+  do personagem e exige que ele resista à consequência. A natureza do perigo determina
+  qual das três Salvaguardas será testada: Corpo, Mente ou Espírito.
+</p>
+<div class="box box-rule">
+  <div class="box-title">Cálculo dos modificadores de Salvaguarda</div>
+  <p>
+    Diferentemente dos modificadores comuns de Atributo, as Salvaguardas utilizam
+    a média dos <strong>Pontos</strong> dos dois Atributos indicados, arredondada
+    para baixo:
+  </p>
+  <ul>
+    <li><strong>Corpo:</strong> Mod.(Corpo) = ⌊(Pontos.(FOR) + Pontos.(VIG)) ÷ 2⌋.</li>
+    <li><strong>Mente:</strong> Mod.(Mente) = ⌊(Pontos.(INT) + Pontos.(ACO)) ÷ 2⌋.</li>
+    <li><strong>Espírito:</strong> Mod.(Espírito) = ⌊(Pontos.(ACO) + Pontos.(DET)) ÷ 2⌋.</li>
+  </ul>
+  <p>
+    Use os valores registrados na ficha; não subtraia 2 antes de calcular a média.
+    A operação entre colchetes representa o arredondamento para baixo.
+  </p>
+</div>
+<h4>Quando utilizar cada Salvaguarda</h4>
+<ul>
+  <li><strong>Corpo:</strong> resistir a venenos, doenças, alterações físicas, condições corporais e efeitos que ameacem diretamente a integridade física.</li>
+  <li><strong>Mente:</strong> resistir a medo sobrenatural, confusão, invasões mentais, manipulação de memórias e influências que afetem pensamento ou percepção.</li>
+  <li><strong>Espírito:</strong> resistir a invasões espirituais, possessão, corrupção espiritual e influências sobrenaturais que atuem diretamente sobre a essência do personagem.</li>
+</ul>
+<p>
+  Quando uma regra exigir uma Salvaguarda, o Mestre indica qual delas corresponde
+  ao efeito e define a CD. O personagem rola <strong>2d10 + o modificador da
+  Salvaguarda indicada</strong> e compara o resultado à CD. Não se soma uma
+  Proficiência ao teste, salvo quando uma regra específica determinar o contrário.
+</p>
+<div class="box box-example">
+  <div class="box-title">Exemplo — Salvaguardas de Edmund Harker</div>
+  <p>
+    Edmund possui Pontos.(FOR) = 2, Pontos.(VIG) = 2, Pontos.(INT) = 4,
+    Pontos.(ACO) = 2 e Pontos.(DET) = 2. Seus modificadores são:
+  </p>
+  <ul>
+    <li><strong>Corpo:</strong> ⌊(2 + 2) ÷ 2⌋ = <strong>+2</strong>.</li>
+    <li><strong>Mente:</strong> ⌊(4 + 2) ÷ 2⌋ = <strong>+3</strong>.</li>
+    <li><strong>Espírito:</strong> ⌊(2 + 2) ÷ 2⌋ = <strong>+2</strong>.</li>
+  </ul>
+  <p>
+    Se precisar resistir a um veneno com CD 13, por exemplo, Edmund realiza
+    2d10 + 2 pela Salvaguarda Corpo. Se o efeito exigir resistência a uma influência
+    mental, utiliza 2d10 + 3 pela Salvaguarda Mente.
+  </p>
+</div>
+<p>
+  As Salvaguardas não substituem a Lucidez. Uma regra pode exigir um teste de
+  Salvaguarda para resistir a um efeito e, separadamente, determinar perda de
+  Lucidez como consequência. A perda ou recuperação de Lucidez ocorre apenas
+  quando uma regra indicar expressamente.
+</p>
 
 <h3 id="blindagem-limiares">Blindagem, armaduras e Limiares de Dano</h3>
 <p>
@@ -1275,9 +1289,8 @@
   <div class="stat-line"><span class="stat-label">PV:</span><span>3 + Pontos.(VIG) + (10 − Sequência)</span></div>
   <div class="stat-line"><span class="stat-label">Espiritualidade:</span><span>Pontos.(ACO) + Pontos.(DET) + Pontos.(VIG) + 2 × (10 − Sequência); uso excedente: teste 2d10 + Mod.(ACO) + Mod.(DET) contra CD 8 + excedente acumulado</span></div>
   <div class="stat-line"><span class="stat-label">Recuperação da Espiritualidade:</span><span>8 horas: recuperação total, 1 vez a cada 24 horas; 1 hora: 1d10 + (10 − Sequência), até 2 vezes por dia</span></div>
-  <div class="stat-line"><span class="stat-label">Iniciativa:</span><span>2d10 + Mod.(DES) + Mod.(RAC)</span></div>
   <div class="stat-line"><span class="stat-label">Defesa:</span><span>10 + Mod.(DES); fórmulas alternativas são escolhidas, não somadas</span></div>
-  <div class="stat-line"><span class="stat-label">Salvaguardas:</span><span>Média arredondada para baixo dos modificadores dos dois Atributos indicados</span></div>
+  <div class="stat-line"><span class="stat-label">Salvaguardas:</span><span>Corpo = ⌊(FOR + VIG) ÷ 2⌋; Mente = ⌊(INT + ACO) ÷ 2⌋; Espírito = ⌊(ACO + DET) ÷ 2⌋, usando Pontos</span></div>
   <div class="stat-line"><span class="stat-label">Lucidez inicial:</span><span>7 para todos os personagens</span></div>
   <div class="stat-line"><span class="stat-label">Limiar Menor → Maior:</span><span>2 + (10 − Sequência), sem armadura</span></div>
   <div class="stat-line"><span class="stat-label">Limiar Maior → Severo:</span><span>4 + 2 × (10 − Sequência), sem armadura</span></div>
@@ -1285,17 +1298,7 @@
   <div class="stat-line"><span class="stat-label">Deslocamento básico:</span><span>9 metros</span></div>
 </div>
 
-<div class="box box-warning">
-  <div class="box-title">Pontos que exigem validação em jogo</div>
-  <p>
-    A substituição de Percepção por Raciocínio na Iniciativa e a combinação
-    de Atributos da Salvaguarda de Espírito foram propostas para manter a coerência
-    após a atualização da ficha. Recomenda-se testá-las em sessões e confirmar seus
-    efeitos antes de tratá-las como regras definitivas. As regras específicas de
-    armaduras e seus níveis de Limiar também devem ser detalhadas no capítulo de
-    Equipamentos.
-  </p>
-</div>
+
 
 <div class="box box-lore">
   <div class="box-title">Orientação ao Mestre</div>
