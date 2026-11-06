@@ -67,29 +67,56 @@
 .field {
   display: flex;
   align-items: baseline;
-  margin-bottom: 3pt;
+  margin-bottom: 6pt;
 }
 
 .field-label {
-  font-size: 7.5pt;
+  font-size: 8pt;
   font-weight: 700;
   text-transform: uppercase;
   color: #444;
   white-space: nowrap;
-  min-width: 60pt;
+  min-width: 0;
 }
 
 .field-line {
   flex: 1;
   border-bottom: 1px solid #999;
-  min-height: 12pt;
-  margin-left: 4pt;
+  min-height: 10pt;
+  margin-left: 3pt;
 }
 
 /* --- Grid layouts ------- */
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 5pt; }
+/* Aumenta a área de Estatísticas Derivadas sem mover a escala de dano. */
+.derived-stats-layout {
+  grid-template-columns: 1.16fr 0.84fr;
+}
+
 .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5pt; }
+.header-main-grid { grid-template-columns: 1fr 1fr; }
 .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 4pt; }
+.header-info-grid {
+  display: grid;
+  grid-template-columns: 15fr 10fr 10fr 10fr 20fr 35fr;
+  gap: 5pt;
+}
+.header-info-grid .field {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 0;
+}
+.header-info-grid .field-label {
+  min-width: 0;
+  font-size: 7pt;
+}
+.header-info-grid .field-line {
+  min-height: 12pt;
+  margin-left: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
 
 /* --- Attribute grid ------ */
 .attr-category {
@@ -141,11 +168,63 @@
   text-align: center;
   font-size: 8pt;
   font-weight: 700;
+  flex: 0 0 22pt;
 }
 
-/* --- Skill list ---------- */
+.attr-bonus {
+  width: 12pt;
+  height: 14pt;
+  border: 1px solid #1a1a1a;
+  flex: 0 0 12pt;
+  margin: 0 3pt;
+}
+
+.attr-values-heading {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  gap: 6pt;
+  font-size: 6pt;
+  line-height: 1;
+  font-weight: 700;
+  color: #555;
+  padding: 0 4pt 2pt 0;
+}
+
+.attr-values-heading .bonus-label {
+  width: 12pt;
+  text-align: center;
+}
+
+.attr-values-heading .total-label {
+  width: 22pt;
+  text-align: center;
+}
+
+
+.skill-values-heading {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  gap: 6pt;
+  font-size: 6pt;
+  line-height: 1;
+  font-weight: 700;
+  color: #555;
+  padding: 0 4pt 2pt 0;
+}
+.skill-values-heading .bonus-label {
+  width: 12pt;
+  text-align: center;
+}
+.skill-values-heading .total-label {
+  width: 22pt;
+  text-align: center;
+}
+
+/* --- Skill list: same dimensions and alignment as Attributes --- */
 .skill-cols {
-  gap: 3pt;
+  gap: 5pt;
 }
 
 .skill-cols > div {
@@ -155,35 +234,35 @@
 
 .skill-row {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 1.5pt 0;
-  border-bottom: 1px dotted #ddd;
+  padding: 2pt 4pt;
+  border-bottom: 1px dotted #ccc;
   min-width: 0;
-  gap: 1pt;
 }
 
 .skill-name {
-  font-size: 6.5pt;
-  flex: 1 1 0;
+  font-size: 8pt;
+  font-weight: 600;
+  flex: 1;
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  line-height: 1.2;
 }
 
 .skill-dots {
   display: flex;
+  gap: 2pt;
+  margin: 0 6pt;
   flex-shrink: 0;
-  gap: 1pt;
-  margin-right: 1pt;
 }
 
 .skill-dot {
-  width: 6pt;
-  height: 6pt;
+  width: 9pt;
+  height: 9pt;
   border-radius: 50%;
-  border: 1px solid #1a1a1a;
+  border: 1.2px solid #1a1a1a;
   background: transparent;
   flex-shrink: 0;
 }
@@ -193,24 +272,23 @@
 }
 
 .skill-val {
-  width: 10pt;
-  height: 11pt;
-  border: 1px solid #999;
+  width: 12pt;
+  height: 14pt;
+  border: 1px solid #1a1a1a;
   text-align: center;
-  font-size: 6pt;
-  font-weight: 600;
-  color: #444;
-  flex-shrink: 0;
+  font-size: 8pt;
+  font-weight: 700;
+  flex: 0 0 12pt;
 }
 
 .skill-mod {
-  width: 15pt;
-  height: 11pt;
+  width: 22pt;
+  height: 14pt;
   border: 1px solid #1a1a1a;
   text-align: center;
-  font-size: 6.5pt;
+  font-size: 8pt;
   font-weight: 700;
-  flex-shrink: 0;
+  flex: 0 0 22pt;
 }
 
 /* --- Derived stats ------- */
@@ -533,6 +611,1168 @@
     font-family: "Segoe UI", sans-serif;
   }
 }
+
+
+.dh-armor-defense-row {
+  display: flex;
+  align-items: center;
+  gap: 5pt;
+}
+.dh-armor-defense-row > .dh-track-row {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.defense-entry {
+  gap: 4pt;
+}
+.shield-symbol {
+  display: inline-block;
+  width: 29pt;
+  height: 33pt;
+  color: #1a1a1a;
+  vertical-align: middle;
+  overflow: visible;
+}
+.dh-defense-compact {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 2pt 3pt;
+  border: 1px solid #bbb;
+  gap: 3pt;
+}
+.dh-defense-compact .stat-label-box { min-width: auto; }
+
+/* --- Vida, limiares de dano e armadura (adaptação Daggerheart) --- */
+.dh-track-row {
+  display: flex;
+  align-items: center;
+  gap: 3pt;
+  flex-wrap: wrap;
+  padding: 3pt 4pt;
+  border-bottom: 1px dotted #ccc;
+}
+.dh-track-label {
+  font-size: 7.5pt;
+  font-weight: 700;
+  min-width: 48pt;
+}
+.dh-track-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2pt;
+  align-items: center;
+}
+/* Seção de dano refeita com a geometria visual da v43, em HTML/CSS editável. */
+.dh-damage-scale {
+  width: 100%;
+  height: 69px;
+  min-height: 69px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #555;
+  background: #fff;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 5.9% 54.9% 7.8% 29.4% 2%;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.dh-damage-top-space {
+  grid-row: 1;
+}
+.dh-damage-arrows {
+  grid-row: 2;
+  position: relative;
+  display: grid;
+  grid-template-columns: 84fr 20fr 100fr 20fr 84fr;
+  width: 100%;
+  height: 100%;
+  align-items: stretch;
+}
+.dh-damage-arrow {
+  height: 100%;
+  min-width: 0;
+  background: #777;
+  box-sizing: border-box;
+}
+.dh-damage-arrow-minor {
+  grid-column: 1;
+  clip-path: polygon(0 0, 76.2% 0, 100% 50%, 76.2% 100%, 0 100%);
+  border-radius: 2pt 0 0 2pt;
+}
+.dh-damage-arrow-major {
+  grid-column: 3;
+  clip-path: polygon(0 0, 80% 0, 100% 50%, 80% 100%, 0 100%, 20% 50%);
+}
+.dh-damage-arrow-severe {
+  grid-column: 5;
+  clip-path: polygon(0 0, 96.4% 0, 100% 10.7%, 100% 89.3%, 96.4% 100%, 0 100%, 23.8% 50%);
+  border-radius: 0 2pt 2pt 0;
+}
+.dh-damage-labels {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  pointer-events: none;
+}
+.dh-damage-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 7.5pt;
+  font-weight: 700;
+  line-height: 1.12;
+  text-align: center;
+}
+.dh-damage-heading span {
+  display: block;
+}
+.dh-damage-after-space {
+  grid-row: 3;
+}
+.dh-damage-captions {
+  grid-row: 4;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid #777;
+  align-items: center;
+}
+.dh-damage-caption {
+  min-width: 0;
+  color: #555;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 6.5pt;
+  line-height: 1.05;
+  font-weight: 400;
+  text-align: center;
+}
+.dh-damage-bottom-space {
+  grid-row: 5;
+}
+
+.dh-slot {
+  width: 11pt;
+  height: 11pt;
+  border: 1.2px solid #1a1a1a;
+  display: inline-block;
+}
+.dh-slot.armor-slot { border-radius: 2pt; }
+/* Caixa ampliada para registrar o total de Vida/Armadura */
+.dh-slot.dh-total-slot {
+  width: 29pt;
+  height: 19pt;
+  box-sizing: border-box;
+  flex: 0 0 29pt;
+}
+.dh-fill-bar, .dh-armor-fill-bar {
+  display: block;
+  width: calc(100% - 8pt);
+  height: 10pt;
+  border: 1px solid #1a1a1a;
+  margin: 3pt 4pt 4pt;
+  box-sizing: border-box;
+}
+
+/* --- Page 1 print balance: enlarged spacing, same A4 sheet --- */
+#page1 {
+  font-size: 9.5pt;
+  line-height: 1.35;
+}
+#page1 .sheet-title {
+  font-size: 17pt;
+  padding-bottom: 5pt;
+  margin-bottom: 7pt;
+}
+#page1 .sheet-subtitle {
+  font-size: 8.5pt;
+  margin-bottom: 9pt;
+}
+#page1 .s-box {
+  padding: 5pt 7pt;
+  margin-bottom: 6pt;
+}
+#page1 .s-box-title {
+  font-size: 8.5pt;
+  padding-bottom: 3pt;
+  margin-bottom: 5pt;
+}
+#page1 .attr-row,
+#page1 .skill-row,
+#page1 .stat-row,
+#page1 .save-row {
+  padding-top: 6pt;
+  padding-bottom: 6pt;
+}
+#page1 .attr-dots,
+#page1 .skill-dots {
+  gap: 2.3pt;
+}
+#page1 .dot,
+#page1 .skill-dot {
+  width: 9.5pt;
+  height: 9.5pt;
+}
+
+
+/* --- Atributos e Perícias: ampliação equilibrada e padronizada --- */
+#page1 .attr-name,
+#page1 .skill-name {
+  font-size: 8.3pt;
+  font-weight: 600;
+}
+
+#page1 .skill-cols > div,
+#page1 .grid-3 > div {
+  min-width: 0;
+}
+
+#page1 .skill-name {
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#page1 .attr-dots,
+#page1 .skill-dots {
+  display: flex;
+  align-items: center;
+  gap: 1.8pt;
+  margin: 0 3pt;
+  flex: 0 0 auto;
+}
+
+/* Todas as bolinhas: mesmo diâmetro, borda e espaçamento. */
+#page1 .dot,
+#page1 .skill-dot {
+  display: inline-block;
+  width: 10pt;
+  height: 10pt;
+  min-width: 10pt;
+  min-height: 10pt;
+  box-sizing: border-box;
+  border: 1.2px solid #1a1a1a;
+  border-radius: 50%;
+  background: transparent;
+  flex: 0 0 10pt;
+}
+
+/* Campos Bônus com as mesmas dimensões em Atributos e Perícias. */
+#page1 .attr-bonus,
+#page1 .skill-val {
+  display: inline-block;
+  width: 14pt;
+  height: 16pt;
+  min-width: 14pt;
+  min-height: 16pt;
+  box-sizing: border-box;
+  border: 1px solid #1a1a1a;
+  flex: 0 0 14pt;
+  margin: 0 2pt;
+}
+
+/* Campos Total com as mesmas dimensões em Atributos e Perícias. */
+#page1 .attr-mod,
+#page1 .skill-mod {
+  display: inline-block;
+  width: 24pt;
+  height: 16pt;
+  min-width: 24pt;
+  min-height: 16pt;
+  box-sizing: border-box;
+  border: 1px solid #1a1a1a;
+  flex: 0 0 24pt;
+  font-size: 8.3pt;
+  text-align: center;
+}
+
+#page1 .attr-values-heading,
+#page1 .skill-values-heading {
+  font-size: 6.5pt;
+  line-height: 1.1;
+}
+
+/* Compensa a ampliação das caixas para manter a primeira página A4. */
+#page1 .attr-row,
+#page1 .skill-row {
+  padding-top: 4pt;
+  padding-bottom: 4pt;
+}
+
+
+/* Corrige a largura mínima automática das três colunas de perícias. */
+#page1 .skill-cols {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 5pt;
+  width: 100%;
+}
+#page1 .skill-cols > div {
+  min-width: 0;
+  max-width: 100%;
+}
+#page1 .skill-row {
+  min-width: 0;
+  width: 100%;
+}
+#page1 .skill-name {
+  min-width: 0;
+  flex: 1 1 0;
+  font-size: 8.1pt;
+}
+#page1 .bonus-label {
+  width: 14pt;
+  min-width: 14pt;
+  text-align: center;
+}
+#page1 .total-label {
+  width: 24pt;
+  min-width: 24pt;
+  text-align: center;
+}
+#page1 .attr-values-heading,
+#page1 .skill-values-heading {
+  gap: 5pt;
+}
+
+
+/* Ajuste fino: preserva a área dos nomes sem diminuir a legibilidade dos campos. */
+#page1 .attr-dots,
+#page1 .skill-dots {
+  gap: 1.2pt;
+  margin: 0 1pt;
+}
+#page1 .dot,
+#page1 .skill-dot {
+  width: 9.8pt;
+  height: 9.8pt;
+  min-width: 9.8pt;
+  min-height: 9.8pt;
+  flex: 0 0 9.8pt;
+}
+#page1 .attr-bonus,
+#page1 .skill-val {
+  width: 13.5pt;
+  height: 16pt;
+  min-width: 13.5pt;
+  min-height: 16pt;
+  flex: 0 0 13.5pt;
+  margin: 0 1pt;
+}
+#page1 .attr-mod,
+#page1 .skill-mod {
+  width: 23.5pt;
+  height: 16pt;
+  min-width: 23.5pt;
+  min-height: 16pt;
+  flex: 0 0 23.5pt;
+  font-size: 8.3pt;
+}
+#page1 .bonus-label {
+  width: 13.5pt;
+  min-width: 13.5pt;
+}
+#page1 .total-label {
+  width: 23.5pt;
+  min-width: 23.5pt;
+}
+#page1 .attr-name,
+#page1 .skill-name {
+  font-size: 8.3pt;
+}
+#page1 .attr-category {
+  font-size: 7.4pt;
+}
+#page1 .attr-values-heading,
+#page1 .skill-values-heading {
+  gap: 5pt;
+  font-size: 6.7pt;
+}
+
+
+/* Padronização final das linhas de Atributos e Perícias. */
+#page1 .skill-cols {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 5pt;
+}
+#page1 .skill-cols > div,
+#page1 .grid-3 > div {
+  min-width: 0;
+}
+#page1 .attr-row,
+#page1 .skill-row {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  padding-top: 4pt;
+  padding-bottom: 4pt;
+}
+#page1 .attr-name,
+#page1 .skill-name {
+  flex: 1 1 0;
+  min-width: 0;
+  font-size: 8.2pt;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#page1 .attr-dots,
+#page1 .skill-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.8pt;
+  margin: 0 1pt;
+  flex: 0 0 auto;
+}
+#page1 .dot,
+#page1 .skill-dot {
+  display: inline-block;
+  width: 9pt;
+  height: 9pt;
+  min-width: 9pt;
+  min-height: 9pt;
+  flex: 0 0 9pt;
+  box-sizing: border-box;
+  border: 1.2px solid #1a1a1a;
+  border-radius: 50%;
+  background: transparent;
+}
+#page1 .attr-bonus,
+#page1 .skill-val {
+  display: inline-block;
+  width: 13pt;
+  height: 16pt;
+  min-width: 13pt;
+  min-height: 16pt;
+  flex: 0 0 13pt;
+  box-sizing: border-box;
+  margin: 0 1pt;
+  border: 1px solid #1a1a1a;
+}
+#page1 .attr-mod,
+#page1 .skill-mod {
+  display: inline-block;
+  width: 23pt;
+  height: 16pt;
+  min-width: 23pt;
+  min-height: 16pt;
+  flex: 0 0 23pt;
+  box-sizing: border-box;
+  font-size: 8.3pt;
+  text-align: center;
+  border: 1px solid #1a1a1a;
+}
+#page1 .attr-values-heading,
+#page1 .skill-values-heading {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  gap: 5pt;
+  font-size: 6.7pt;
+  line-height: 1.1;
+}
+#page1 .bonus-label {
+  width: 13pt;
+  min-width: 13pt;
+  text-align: center;
+}
+#page1 .total-label {
+  width: 23pt;
+  min-width: 23pt;
+  text-align: center;
+}
+
+
+/* Permite que nomes longos de perícias quebrem em duas linhas sem serem cortados. */
+#page1 .skill-name {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  line-height: 1.08;
+  overflow-wrap: normal;
+  word-break: normal;
+  padding-right: 2pt;
+}
+
+
+.stat-unit-note {
+  color: #999;
+  font-size: 7pt;
+  font-weight: 400;
+  margin-left: 2pt;
+  white-space: nowrap;
+}
+
+
+/* --- Página 3: grade exclusiva com 20 Poderes Beyonder --- */
+.powers-page {
+  page-break-before: always;
+}
+.powers-page-box {
+  margin-bottom: 0;
+  padding: 4pt 6pt;
+}
+.powers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(10, 72pt);
+  grid-auto-flow: row;
+  gap: 4pt;
+}
+.powers-grid > .power-block {
+  height: 72pt;
+  min-height: 72pt;
+  padding: 4pt;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.powers-grid .power-title-row {
+  flex: 0 0 auto;
+}
+.powers-grid .power-meta-row {
+  flex: 0 0 auto;
+}
+.powers-grid .power-effect {
+  flex: 1 1 auto;
+  min-height: 30pt;
+  border-bottom: 1px dotted #ddd;
+}
+
+
+/* Perícias ampliadas: 23 habilidades distribuídas em três colunas. */
+#page1 .skill-cols {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 5pt;
+  width: 100%;
+}
+#page1 .skill-column {
+  min-width: 0;
+  max-width: 100%;
+}
+#page1 .skill-row {
+  width: 100%;
+  min-width: 0;
+  padding-top: 1pt;
+  padding-bottom: 1pt;
+  align-items: center;
+}
+#page1 .skill-name {
+  flex: 1 1 0;
+  min-width: 0;
+  font-size: 8pt;
+  font-weight: 600;
+  line-height: 1.05;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+#page1 .skill-dots {
+  gap: 1.2pt;
+  margin: 0 1pt;
+  flex: 0 0 auto;
+}
+#page1 .skill-dot {
+  width: 9.8pt;
+  height: 9.8pt;
+  min-width: 9.8pt;
+  min-height: 9.8pt;
+  flex: 0 0 9.8pt;
+  box-sizing: border-box;
+  border: 1.2px solid #1a1a1a;
+  border-radius: 50%;
+}
+#page1 .skill-val {
+  width: 13.5pt;
+  height: 16pt;
+  min-width: 13.5pt;
+  flex: 0 0 13.5pt;
+  margin: 0 1pt;
+}
+#page1 .skill-mod {
+  width: 23.5pt;
+  height: 16pt;
+  min-width: 23.5pt;
+  flex: 0 0 23.5pt;
+  font-size: 8.3pt;
+}
+#page1 .skill-values-heading {
+  gap: 5pt;
+  font-size: 6.5pt;
+}
+#page1 .bonus-label {
+  width: 13.5pt;
+  min-width: 13.5pt;
+}
+#page1 .total-label {
+  width: 23.5pt;
+  min-width: 23.5pt;
+}
+
+
+/* --- Armas ampliadas: cabeçalho fixo + três registros espaçosos --- */
+.weapons-wide-box {
+  width: 100%;
+  margin-bottom: 5pt;
+}
+.weapon-table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.weapon-table-head,
+.weapon-entry {
+  display: grid;
+  grid-template-columns: 2fr 0.85fr 1fr 2fr;
+  column-gap: 7pt;
+  width: 100%;
+  align-items: stretch;
+}
+.weapon-table-head {
+  min-height: 16pt;
+  align-items: center;
+  padding: 1pt 4pt 3pt;
+  border-bottom: 1px solid #777;
+  color: #222;
+  font-size: 7.5pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.weapon-entry {
+  min-height: 33pt;
+  padding: 2pt 4pt 0;
+}
+.weapon-entry-cell {
+  min-width: 0;
+  min-height: 29pt;
+  border-bottom: 1px solid #aaa;
+}
+.equipment-details {
+  align-items: stretch;
+}
+.armor-details-box {
+  min-width: 0;
+}
+.armor-equipment-field {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 2pt;
+  margin-bottom: 3pt;
+}
+.armor-equipment-field .armor-field-line {
+  display: block;
+  width: 100%;
+  min-height: 14pt;
+  border-bottom: 1px solid #999;
+}
+.armor-field-title {
+  color: #222;
+  font-size: 7pt;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.armor-field-line {
+  display: block;
+  flex: 1 1 auto;
+  min-width: 12pt;
+  min-height: 13pt;
+  border-bottom: 1px solid #999;
+}
+.armor-values-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  margin-top: 3pt;
+  align-items: start;
+}
+.armor-value-field {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2pt;
+}
+.armor-value-field .armor-field-title {
+  white-space: nowrap;
+}
+.armor-value-input-row {
+  display: flex;
+  align-items: center;
+  gap: 3pt;
+  min-width: 0;
+}
+.armor-value-line {
+  display: block;
+  flex: 1 1 auto;
+  min-width: 10pt;
+  height: 15pt;
+  border: 0;
+  border-bottom: 1px solid #222;
+}
+.armor-value-unit {
+  color: #444;
+  font-size: 6.5pt;
+  white-space: nowrap;
+}
+
+
+/* Limiar-base: dois valores separados por barra para Maior e Severo. */
+.armor-threshold-field {
+  display: flex;
+  flex-direction: column;
+  gap: 2pt;
+  margin-bottom: 3pt;
+}
+.armor-threshold-field > .armor-field-title {
+  font-size: 7pt;
+  font-weight: 700;
+  color: #222;
+}
+.armor-threshold-inputs {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 5pt;
+  align-items: end;
+}
+.armor-threshold-line {
+  display: block;
+  height: 15pt;
+  min-width: 12pt;
+  border-bottom: 1px solid #222;
+}
+.armor-threshold-separator {
+  font-size: 8pt;
+  line-height: 15pt;
+  color: #222;
+  text-align: center;
+}
+.armor-threshold-captions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13pt;
+  margin: 0 9pt;
+  color: #777;
+  font-size: 6pt;
+  text-align: center;
+  line-height: 1;
+}
+
+
+/* --- Conexões: campos verticais e área ampliada de observações --- */
+.connections-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7pt;
+  align-items: stretch;
+}
+.connection-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 2pt 3pt 3pt;
+  border: 1px solid #d0d0d0;
+}
+.conn-slot {
+  display: flex;
+  flex-direction: column;
+  gap: 4pt;
+  padding: 2pt 0 4pt;
+  border-bottom: 1px dotted #ccc;
+}
+.conn-slot .conn-field {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1pt;
+  margin-bottom: 1pt;
+}
+.conn-field .field-label {
+  min-width: 0 !important;
+  font-size: 6.5pt !important;
+}
+.conn-field .field-line {
+  display: block;
+  width: 100%;
+  min-height: 13pt;
+  margin-left: 0;
+  border-bottom: 1px solid #999;
+}
+.conn-observation {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4pt;
+}
+.conn-observation-title {
+  margin-bottom: 1pt;
+  color: #666;
+  font-size: 6.2pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.conn-observation-line {
+  min-height: 13pt;
+  border-bottom: 1px dotted #ccc;
+}
+
+
+/* --- Especializações: quadro compacto de largura total --- */
+#page1 .specializations-box {
+  width: 100%;
+  padding: 3pt 6pt 4pt;
+  margin-bottom: 5pt;
+  page-break-inside: avoid;
+}
+#page1 .specializations-box .s-box-title {
+  margin-bottom: 2pt;
+}
+#page1 .specializations-entry {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: end;
+  column-gap: 5pt;
+  width: 100%;
+  min-height: 13pt;
+}
+#page1 .specialization-write-line {
+  display: block;
+  min-width: 0;
+  height: 12pt;
+  border-bottom: 1px solid #999;
+}
+#page1 .specialization-separator {
+  color: #666;
+  font-size: 8pt;
+  line-height: 12pt;
+  text-align: center;
+}
+
+
+/* Espiritualidade em destaque: símbolo de chama e realce discreto. */
+#page1 .spirituality-row {
+  min-height: 24pt;
+  padding: 2pt 6pt;
+  margin: 2pt 1pt;
+  border: 1px solid #b7b7b7;
+  border-left: 3px solid #777;
+  border-radius: 2pt;
+  background: #f8f8f8;
+  position: relative;
+  z-index: 1;
+}
+#page1 .spirituality-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5pt;
+  font-size: 9pt;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #333;
+}
+#page1 .spirituality-flame {
+  display: inline-block;
+  width: 12pt;
+  height: 15pt;
+  flex: 0 0 12pt;
+  overflow: visible;
+}
+#page1 .spirituality-row .stat-box {
+  width: 29pt;
+  height: 17pt;
+}
+
+
+/* Campos de Espiritualidade em forma de chama, preservando espaço para escrita. */
+#page1 .spirituality-values {
+  display: flex;
+  align-items: center;
+  gap: 3pt;
+}
+#page1 .spirituality-value {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 19pt;
+  height: 22pt;
+  flex: 0 0 19pt;
+}
+#page1 .spirituality-value svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+#page1 .spirituality-value-write {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 7pt;
+  height: 6pt;
+  margin-top: 7pt;
+  border-bottom: 0.7px solid #777;
+}
+#page1 .spirituality-row .stat-boxes {
+  gap: 3pt;
+}
+
+
+/* Espiritualidade: total permanente em chama e linha para anotar valores atuais. */
+#page1 .spirituality-row {
+  display: flex;
+  align-items: center;
+  gap: 7pt;
+  min-height: 34pt;
+  padding: 3pt 6pt;
+  margin: 2pt 1pt;
+  border: 1px solid #b7b7b7;
+  border-left: 3px solid #777;
+  border-radius: 2pt;
+  background: #f8f8f8;
+  box-sizing: border-box;
+}
+#page1 .spirituality-label {
+  flex: 0 0 auto;
+  font-size: 9pt;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #333;
+  white-space: nowrap;
+}
+#page1 .spirituality-total-group {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 3pt;
+}
+#page1 .spirituality-sub-label {
+  color: #555;
+  font-size: 7pt;
+  font-weight: 700;
+  white-space: nowrap;
+}
+#page1 .spirituality-total-flame {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 27pt;
+  height: 31pt;
+  flex: 0 0 27pt;
+}
+#page1 .spirituality-total-flame svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+#page1 .spirituality-total-flame svg path {
+  fill: #fff;
+  stroke: #555;
+  stroke-width: 1.4;
+  stroke-linejoin: round;
+}
+#page1 .spirituality-total-write {
+  position: relative;
+  z-index: 1;
+  width: 15pt;
+  height: 12pt;
+  margin-top: 7pt;
+  border-bottom: 0.8px solid #777;
+  box-sizing: border-box;
+}
+#page1 .spirituality-current {
+  display: flex;
+  align-items: center;
+  gap: 4pt;
+  flex: 1 1 auto;
+  min-width: 35pt;
+}
+#page1 .spirituality-current-line {
+  display: block;
+  flex: 1 1 auto;
+  min-width: 20pt;
+  height: 16pt;
+  border-bottom: 1px solid #888;
+}
+
+
+/* Compacta discretamente a seção para preservar a distribuição em três páginas A4. */
+#page1 .spirituality-row {
+  min-height: 28pt;
+  padding: 1pt 5pt;
+  margin: 1pt 1pt;
+  gap: 5pt;
+}
+#page1 .spirituality-total-flame {
+  width: 24pt;
+  height: 27pt;
+  flex-basis: 24pt;
+}
+#page1 .spirituality-total-write {
+  width: 14pt;
+  height: 10pt;
+  margin-top: 6pt;
+}
+#page1 .spirituality-current-line {
+  height: 12pt;
+}
+#page1 > .s-box {
+  margin-bottom: 3.5pt;
+}
+
+
+#page1 .spirituality-total-flame svg path {
+  fill: #ffffff !important;
+  stroke: #444444 !important;
+  stroke-width: 1.7 !important;
+}
+#page1 .spirituality-total-flame {
+  transform: translateY(-1pt);
+}
+#page1 .spirituality-total-write {
+  position: absolute;
+  left: 50%;
+  top: 10pt;
+  transform: translateX(-50%);
+  display: block;
+  width: 14pt;
+  height: 10pt;
+  margin: 0;
+  border: 0;
+  background: transparent;
+}
+
+
+/* Alinhamento final do campo Total: SVG no fluxo e área de escrita central. */
+#page1 .spirituality-total-group {
+  display: flex;
+  align-items: center;
+  height: 28pt;
+  line-height: 1;
+}
+#page1 .spirituality-total-flame {
+  position: relative;
+  display: block;
+  width: 24pt;
+  height: 27pt;
+  flex: 0 0 24pt;
+  line-height: 0;
+  overflow: visible;
+  transform: none;
+}
+#page1 .spirituality-total-flame svg {
+  position: static !important;
+  display: block;
+  width: 24pt;
+  height: 27pt;
+  margin: 0;
+  overflow: visible;
+}
+#page1 .spirituality-total-flame svg path {
+  fill: #ffffff !important;
+  stroke: #444444 !important;
+  stroke-width: 1.7 !important;
+  stroke-linejoin: round;
+}
+#page1 .spirituality-total-write {
+  position: absolute;
+  left: 50%;
+  top: 10pt;
+  transform: translateX(-50%);
+  display: block;
+  width: 14pt;
+  height: 8pt;
+  margin: 0;
+  border: 0;
+  background: transparent;
+}
+
+
+/* Aumenta a chama de Total para permitir escrever um valor de dois algarismos. */
+#page1 .spirituality-row {
+  min-height: 35pt;
+}
+#page1 .spirituality-total-group {
+  height: 34pt;
+}
+#page1 .spirituality-total-flame {
+  width: 29pt;
+  height: 33pt;
+  flex-basis: 29pt;
+}
+#page1 .spirituality-total-flame svg {
+  width: 29pt;
+  height: 33pt;
+}
+#page1 .spirituality-total-write {
+  top: 12pt;
+  width: 17pt;
+  height: 10pt;
+}
+
+
+/* Campo Total de Espiritualidade: caixa simples para preenchimento manual. */
+#page1 .spirituality-total-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 4pt;
+  height: auto;
+  flex: 0 0 auto;
+}
+#page1 .spirituality-total-box {
+  display: inline-block;
+  width: 27pt;
+  height: 18pt;
+  flex: 0 0 27pt;
+  box-sizing: border-box;
+  border: 1px solid #333;
+  background: #fff;
+}
+#page1 .spirituality-row {
+  min-height: 27pt;
+  padding: 2pt 5pt;
+  gap: 6pt;
+}
+
+
+/* Trilha de Lucidez na página 2: dez espaços individuais. */
+.lucidez-track-box {
+  margin-bottom: 5pt;
+  padding: 4pt 6pt 5pt;
+  page-break-inside: avoid;
+}
+.lucidez-track {
+  display: flex;
+  align-items: center;
+  gap: 3pt;
+  min-height: 16pt;
+  padding: 1pt 2pt;
+}
+.lucidez-cell {
+  display: block;
+  width: 14pt;
+  height: 14pt;
+  flex: 0 0 14pt;
+  border: 1px solid #222;
+  background: #fff;
+}
+
 </style>
 </head>
 <body>
@@ -542,10 +1782,13 @@
   <strong>Instruções:</strong> Use <kbd>Ctrl+P</kbd> (ou <kbd>Cmd+P</kbd>) para imprimir esta ficha.
   Configure para A4, margens mínimas, e ative &quot;Gráficos de fundo&quot; para melhor resultado.
   A ficha ocupa 2 páginas (frente e verso).
-  <strong>Fórmulas canônicas</strong> (= Capítulo 3 — Atributos &amp; Perícias): modificador de atributo/perícia é <strong>Valor − 2</strong>;
-  PV = 8 + Mod. Vigor + bônus de Sequência; Espiritualidade = soma dos <em>valores</em> de Percepção + Determinação;
-  Lucidez inicial = 5 + Mod. Determinação (teto 10); Defesa = 10 + Mod. Destreza + armadura;
-  salvaguardas: anote o <strong>Mod. médio</strong> (média dos dois Mod. de atributo, arredondamento para baixo) e use <strong>ND = 10 + Mod.</strong> quando a regra comparar com a salvaguarda do alvo.
+  <strong>Fórmulas da ficha</strong>: modificador de atributo/perícia é <strong>Valor − 2</strong>;
+  PV = 3 + Pontos. (VIG) + (10 - Seq.) (+1 na Seq. 9; +2 na Seq. 8; ...);
+  Espiritualidade = Caminho + Mod. (DET) + Mod. (ACO); Lucidez inicial = 7;
+  Defesa = 10 + Mod. (DES) ou Cálculo do Equipamento;
+  Limiar Maior/Severo = Limiar-base da armadura + (10 - Seq.);
+  sem armadura: Menor &gt; Maior = 2 + (10 - Seq.); Maior &gt; Severo = 4 + (10 - Seq.);
+  Movimento = 9 m; salvaguardas: Corpo = ⌊(Pontos.(FOR) + Pontos.(VIG)) ÷ 2⌋; Mente = ⌊(Pontos.(INT) + Pontos.(ACO)) ÷ 2⌋; Espírito = ⌊(Pontos.(ACO) + Pontos.(DET)) ÷ 2⌋. Arredonde para baixo e use <strong>ND = 10 + Mod.</strong> quando a regra comparar com a salvaguarda do alvo.
 </div>
 
 <!-- ================================================================ -->
@@ -558,23 +1801,13 @@
 
   <!-- ---- HEADER INFO ---- -->
   <div class="s-box">
-    <div class="grid-3">
+    <div class="header-info-grid">
       <div class="field">
         <span class="field-label">Personagem</span>
         <span class="field-line"></span>
       </div>
       <div class="field">
         <span class="field-label">Jogador</span>
-        <span class="field-line"></span>
-      </div>
-      <div class="field">
-        <span class="field-label">Campanha</span>
-        <span class="field-line"></span>
-      </div>
-    </div>
-    <div class="grid-4">
-      <div class="field">
-        <span class="field-label">Conceito</span>
         <span class="field-line"></span>
       </div>
       <div class="field">
@@ -586,84 +1819,90 @@
         <span class="field-line"></span>
       </div>
       <div class="field">
-        <span class="field-label">Seq.</span>
+        <span class="field-label">Sequência</span>
         <span class="field-line"></span>
       </div>
-    </div>
-    <div class="field" style="max-width: 50%;">
-      <span class="field-label">Digestão</span>
-      <span class="digest-bar">
-        <span class="digest-cell"></span><span class="digest-cell"></span><span class="digest-cell"></span>
-        <span class="digest-cell"></span><span class="digest-cell"></span><span class="digest-cell"></span>
-        <span class="digest-cell"></span><span class="digest-cell"></span><span class="digest-cell"></span>
-        <span class="digest-cell"></span>
-        <span class="digest-pct">( ___ %)</span>
-      </span>
+      <div class="field">
+        <span class="field-label">Conceito</span>
+        <span class="field-line"></span>
+      </div>
     </div>
   </div>
 
   <!-- ---- ATTRIBUTES ---- -->
   <div class="s-box">
-    <div class="s-box-title">Atributos <span style="font-weight:400;color:#888;font-size:7pt;"> (Attributes)</span></div>
+    <div class="s-box-title">Atributos </div>
     <div class="grid-3">
 
       <!-- Physical -->
       <div>
         <div class="attr-category">Físicos</div>
+        <div class="attr-values-heading"><span class="bonus-label">Bônus</span><span class="total-label">Total</span></div>
         <div class="attr-row">
           <span class="attr-name">Força <span style="font-size:6pt;color:#888;">FOR</span></span>
           <span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
-          <span class="attr-mod"></span>
+          <span class="attr-bonus" title="Bônus"></span>
+          <span class="attr-mod" title="Total"></span>
         </div>
         <div class="attr-row">
           <span class="attr-name">Destreza <span style="font-size:6pt;color:#888;">DES</span></span>
           <span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
-          <span class="attr-mod"></span>
+          <span class="attr-bonus" title="Bônus"></span>
+          <span class="attr-mod" title="Total"></span>
         </div>
         <div class="attr-row">
           <span class="attr-name">Vigor <span style="font-size:6pt;color:#888;">VIG</span></span>
           <span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
-          <span class="attr-mod"></span>
+          <span class="attr-bonus" title="Bônus"></span>
+          <span class="attr-mod" title="Total"></span>
         </div>
       </div>
 
       <!-- Social -->
       <div>
         <div class="attr-category">Sociais</div>
+        <div class="attr-values-heading"><span class="bonus-label">Bônus</span><span class="total-label">Total</span></div>
         <div class="attr-row">
           <span class="attr-name">Carisma <span style="font-size:6pt;color:#888;">CAR</span></span>
           <span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
-          <span class="attr-mod"></span>
+          <span class="attr-bonus" title="Bônus"></span>
+          <span class="attr-mod" title="Total"></span>
         </div>
         <div class="attr-row">
           <span class="attr-name">Manipulação <span style="font-size:6pt;color:#888;">MAN</span></span>
           <span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
-          <span class="attr-mod"></span>
+          <span class="attr-bonus" title="Bônus"></span>
+          <span class="attr-mod" title="Total"></span>
         </div>
         <div class="attr-row">
-          <span class="attr-name">Presença <span style="font-size:6pt;color:#888;">PRE</span></span>
+          <span class="attr-name">Autocontrole <span style="font-size:6pt;color:#888;">ACO</span></span>
           <span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
-          <span class="attr-mod"></span>
+          <span class="attr-bonus" title="Bônus"></span>
+          <span class="attr-mod" title="Total"></span>
         </div>
       </div>
 
       <!-- Mental -->
       <div>
         <div class="attr-category">Mentais</div>
+        <div class="attr-values-heading"><span class="bonus-label">Bônus</span><span class="total-label">Total</span></div>
         <div class="attr-row">
           <span class="attr-name">Inteligência <span style="font-size:6pt;color:#888;">INT</span></span>
           <span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
-          <span class="attr-mod"></span>
+          <span class="attr-bonus" title="Bônus"></span>
+          <span class="attr-mod" title="Total"></span>
         </div>
         <div class="attr-row">   
           <span class="attr-name">Raciocínio <span style="font-size:6pt;color:#888;">RAC</span></span>
           <span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
-          <span class="attr-mod"></span>
+          <span class="attr-bonus" title="Bônus"></span>
+          <span class="attr-mod" title="Total"></span>
         </div>
         <div class="attr-row">
           <span class="attr-name">Determinação <span style="font-size:6pt;color:#888;">DET</span></span>
           <span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
-          <span class="attr-mod"></span>
+          <span class="attr-bonus" title="Bônus"></span>
+          <span class="attr-mod" title="Total"></span>
         </div>
       </div>
 
@@ -672,20 +1911,25 @@
 
   <!-- ---- SKILLS ---- -->
   <div class="s-box">
-    <div class="s-box-title">Perícias <span style="font-weight:400;color:#888;font-size:7pt;"> &#9679;Mod = Valor &minus; 2</span></div>
+    <div class="s-box-title">Proficiências <span style="font-weight:400;color:#888;font-size:7pt;"> &#9679;Mod = Valor &minus; 2</span></div>
     <div class="grid-3 skill-cols">
-
-      <!-- Combat Skills -->
-      <div>
-        <div class="attr-category">Físico</div>
+      <div class="skill-column">
+        <div class="attr-category">Talentos</div>
+        <div class="skill-values-heading"><span class="bonus-label">Bônus</span><span class="total-label">Total</span></div>
         <div class="skill-row">
-          <span class="skill-name">Luta</span>
+          <span class="skill-name">Acrobacia</span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
-          <span class="skill-name">Armas de Fogo</span>
+          <span class="skill-name">Atletismo</span>
+          <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val"></span>
+          <span class="skill-mod"></span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Empatia</span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
@@ -697,192 +1941,246 @@
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
-          <span class="skill-name">Atletismo</span>
-          <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
-          <span class="skill-val"></span>
-          <span class="skill-mod"></span>
-        </div>
-       <div class="skill-row">
-          <span class="skill-name">Prestidigitação</span>
-          <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
-          <span class="skill-val"></span>
-          <span class="skill-mod"></span>
-        </div>
-      <div class="skill-row">
-          <span class="skill-name">Direção</span>
-          <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
-          <span class="skill-val"></span>
-          <span class="skill-mod"></span>
-        </div>
-      </div>
-
-      <!-- Social Skills -->
-      <div>
-        <div class="attr-category">Social</div>
-        <div class="skill-row">
-          <span class="skill-name">Lábia</span>
-          <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
-          <span class="skill-val"></span>
-          <span class="skill-mod"></span>
-        </div>
-        <div class="skill-row">
           <span class="skill-name">Intimidação</span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
-          <span class="skill-name">Performance</span></span>
+          <span class="skill-name">Luta</span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
-          <span class="skill-name">Etiqueta</span></span>
+          <span class="skill-name">Performance</span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
-          <span class="skill-name">Intuição</span></span>
-          <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
-          <span class="skill-val"></span>
-          <span class="skill-mod"></span>
-        </div>
-        <div class="skill-row">
-          <span class="skill-name">Sagacidade Urbana</span></span>
+          <span class="skill-name">Persuasão</span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
       </div>
-
-      <!-- Knowledge Skills -->
-      <div>
-        <div class="attr-category">Conhecimento</div>
+      <div class="skill-column">
+        <div class="attr-category">Perícias</div>
+        <div class="skill-values-heading"><span class="bonus-label">Bônus</span><span class="total-label">Total</span></div>
         <div class="skill-row">
-          <span class="skill-name">Investigação</span></span>
+          <span class="skill-name">Armas Brancas</span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
-          <span class="skill-name">Ocultismo</span></span>
+          <span class="skill-name">Armas de Fogo</span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
-          <span class="skill-name">Percep. Esperitual</span></span>
+          <span class="skill-name">Condução</span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
-          <span class="skill-name">Medicina</span></span>
+          <span class="skill-name">Etiqueta</span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
-          <span class="skill-name">Ciências</span></span>
+          <span class="skill-name">Investigação</span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
-          <span class="skill-name">História</span></span>
+          <span class="skill-name">Prestidigitação</span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
-          <span class="skill-name">Sobrevivência</span></span>
+          <span class="skill-name">Subterfúgio</span>
+          <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val"></span>
+          <span class="skill-mod"></span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Sobrevivência</span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
       </div>
+      <div class="skill-column">
+        <div class="attr-category">Conhecimentos</div>
+        <div class="skill-values-heading"><span class="bonus-label">Bônus</span><span class="total-label">Total</span></div>
+        <div class="skill-row">
+          <span class="skill-name">Ciências</span>
+          <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val"></span>
+          <span class="skill-mod"></span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">História</span>
+          <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val"></span>
+          <span class="skill-mod"></span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Medicina</span>
+          <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val"></span>
+          <span class="skill-mod"></span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Natureza</span>
+          <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val"></span>
+          <span class="skill-mod"></span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Navegação</span>
+          <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val"></span>
+          <span class="skill-mod"></span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Ocultismo</span>
+          <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val"></span>
+          <span class="skill-mod"></span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Submundo</span>
+          <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val"></span>
+          <span class="skill-mod"></span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Teologia</span>
+          <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
+          <span class="skill-val"></span>
+          <span class="skill-mod"></span>
+        </div>
+      </div>
+    </div>
+  </div>
 
+<!-- ---- SPECIALIZATIONS ---- -->
+  <div class="s-box specializations-box">
+    <div class="s-box-title">Especializações</div>
+    <div class="specializations-entry">
+      <span class="specialization-write-line"></span>
+      <span class="specialization-separator">;</span>
+      <span class="specialization-write-line"></span>
+      <span class="specialization-separator">;</span>
+      <span class="specialization-write-line"></span>
+      <span class="specialization-separator">;</span>
+      <span class="specialization-write-line"></span>
     </div>
   </div>
 
   <!-- ---- DERIVED STATS + SAVES ---- -->
-  <div class="grid-2">
+  <div class="grid-2 derived-stats-layout">
 
     <!-- Derived Stats -->
     <div class="s-box">
       <div class="s-box-title">Estatísticas Derivadas</div>
 
-      <div class="stat-row">
-        <span class="stat-label-box">HP</span>
-        <span class="stat-boxes">
-          <span class="stat-box"></span>
-          <span class="stat-slash">/</span>
-          <span class="stat-box"></span>
+      <div class="dh-track-row">
+        <span class="dh-track-label">Vida (PV)</span>
+        <span class="dh-track-slots" aria-label="19 espaços de vida"><span class="dh-slot dh-total-slot" title="Total de Vida"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span></span></span>
+      </div>
+      <div class="dh-armor-defense-row">
+        <div class="dh-track-row" aria-label="Espaços de Armadura">
+          <span class="dh-track-label">Blindagem</span>
+          <span class="dh-track-slots"><span class="dh-slot dh-total-slot" title="Total de Armadura"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span></span>
+        </div>
+        <div class="stat-row dh-defense-compact">
+          <span class="stat-label-box">Defesa</span>
+          <span class="stat-boxes defense-entry">
+            <svg class="shield-symbol" viewBox="0 0 100 112" role="img" aria-label="Campo para preencher Defesa" xmlns="http://www.w3.org/2000/svg">
+              <path d="M50 4 94 20v31c0 26-17 44-44 57C23 95 6 77 6 51V20L50 4Z" fill="white" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div class="dh-damage-scale" role="group" aria-label="Limiares de dano">
+        <div class="dh-damage-top-space"></div>
+        <div class="dh-damage-arrows">
+          <div class="dh-damage-arrow dh-damage-arrow-minor" aria-label="Dano Menor"></div>
+          <div class="dh-damage-arrow dh-damage-arrow-major" aria-label="Dano Maior"></div>
+          <div class="dh-damage-arrow dh-damage-arrow-severe" aria-label="Dano Severo"></div>
+
+          <div class="dh-damage-labels">
+            <div class="dh-damage-heading">
+              <span>DANO</span>
+              <span>MENOR</span>
+            </div>
+            <div class="dh-damage-heading">
+              <span>DANO</span>
+              <span>MAIOR</span>
+            </div>
+            <div class="dh-damage-heading">
+              <span>DANO</span>
+              <span>SEVERO</span>
+            </div>
+          </div>
+        </div>
+        <div class="dh-damage-after-space"></div>
+        <div class="dh-damage-captions">
+          <div class="dh-damage-caption">Marque 1 PV</div>
+          <div class="dh-damage-caption">Marque 2 PV</div>
+          <div class="dh-damage-caption">Marque 3 PV</div>
+        </div>
+        <div class="dh-damage-bottom-space"></div>
+      </div>
+
+      <div class="stat-row spirituality-row">
+        <span class="spirituality-label">Espiritualidade</span>
+        <span class="spirituality-total-group">
+          <span class="spirituality-sub-label">Total</span>
+          <span class="spirituality-total-box" aria-label="Valor total de Espiritualidade"></span>
+        </span>
+        <span class="spirituality-current">
+          <span class="spirituality-sub-label">Atual:</span>
+          <span class="spirituality-current-line"></span>
         </span>
       </div>
 
-      <div class="stat-row">
-        <span class="stat-label-box">Espiritualidade</span>
+<div class="stat-row">
+        <span class="stat-label-box">Movimento <span class="stat-unit-note">(Em metros)</span></span>
         <span class="stat-boxes">
           <span class="stat-box"></span>
-          <span class="stat-slash">/</span>
-          <span class="stat-box"></span>
-        </span>
-      </div>
-
-      <div class="stat-row">
-        <span class="stat-label-box">Lucidez</span>
-        <span class="stat-boxes">
-          <span class="stat-box"></span>
-          <span class="stat-slash">/</span>
-          <span class="stat-box"></span>
-        </span>
-      </div>
-
-      <div class="stat-row">
-        <span class="stat-label-box">Defesa</span>
-        <span class="stat-boxes">
-          <span class="stat-box"></span>
-        </span>
-      </div>
-
-      <div class="stat-row">
-        <span class="stat-label-box">Iniciativa</span>
-        <span class="stat-boxes">
-          <span class="stat-box"></span>
-        </span>
-      </div>
-
-      <div class="stat-row">
-        <span class="stat-label-box">Movimento</span>
-        <span class="stat-boxes">
-          <span class="stat-box"></span>
-          <span style="font-size:7pt;color:#888;margin-left:2pt;">m</span>
         </span>
       </div>
     </div>
 
     <!-- Saves -->
     <div class="s-box">
-      <div class="s-box-title">Salvaguardas <span style="font-weight:400;color:#888;font-size:7pt;"> (Saves)</span></div>
+      <div class="s-box-title">Salvaguardas </div>
 
       <div class="save-row">
         <span class="save-name">Corpo</span>
-        <span class="save-formula">Mod. = ⌊(For+Vig)÷2⌋ · d20+Mod. ≥ CD · ND 10+Mod.</span>
+        <span class="save-formula">Mod. = ⌊(Pontos.(FOR) + Pontos.(VIG)) ÷ 2⌋</span>
         <span class="save-box"></span>
       </div>
 
       <div class="save-row">
         <span class="save-name">Mente</span>
-        <span class="save-formula">Mod. = ⌊(Int+Det)÷2⌋ · d20+Mod. ≥ CD · ND 10+Mod.</span>
+        <span class="save-formula">Mod. = ⌊(Pontos.(INT) + Pontos.(ACO)) ÷ 2⌋</span>
         <span class="save-box"></span>
       </div>
 
       <div class="save-row">
         <span class="save-name">Espírito</span>
-        <span class="save-formula">Mod. = ⌊(Per+Car)÷2⌋ · d20+Mod. ≥ CD · ND 10+Mod.</span>
+        <span class="save-formula">Mod. = ⌊(Pontos.(ACO) + Pontos.(DET)) ÷ 2⌋</span>
         <span class="save-box"></span>
       </div>
 
@@ -890,21 +2188,31 @@
         <div class="s-box-title" style="font-size:7pt;">Fórmulas Rápidas <span style="font-weight:400;color:#666;">(Cap. 3 — todos os Caminhos)</span></div>
         <div style="font-size:6.5pt; color:#555; line-height:1.55;">
           <strong>Mod. atributo/perícia</strong> = valor − 2<br>
-          <strong>PV</strong> = 8 + Mod. Vigor + bônus de Sequência (Seq.9 +0; 8 +2; 7 +4; 6 +6; 5 +8)<br>
-          <strong>Espiritualidade máx.</strong> = valor Percepção + valor Determinação (não use Mod. aqui)<br>
-          <strong>Lucidez</strong> = 5 + Mod. Determinação (máx. 10) · atual anotada acima<br>
-          <strong>Defesa</strong> = 10 + Mod. Des + bônus de armadura<br>
-          <strong>Iniciativa</strong> = <span class="dice" style="font-family:inherit;font-size:inherit;">d20</span> + Mod. Des + Mod. Per (por combate)<br>
-          <strong>Movimento</strong> = 9 m (humano; terreno difícil dobra o custo)
+          <strong>PV</strong> = 3 + Pontos. (VIG) + (10 - Seq.) (+1 na Seq. 9; +2 na Seq. 8; ...)<br>
+          <strong>Espiritualidade</strong> = Caminho + Mod. (DET) + Mod. (ACO)<br>
+          <strong>Lucidez inicial</strong> = 7<br>
+          <strong>Defesa</strong> = 10 + Mod. (DES) ou Cálculo do Equipamento<br>
+          <strong>Limiar Maior/Severo</strong> = Limiar-base da armadura + (10 - Seq.)<br>
+          <strong>Sem armadura</strong> = Menor &gt; Maior: 2 + (10 - Seq.); Maior &gt; Severo: 4 + (10 - Seq.)<br>
+          <strong>Movimento</strong> = 9 m
         </div>
       </div>
     </div>
 
   </div>
 
-  <!-- ---- ACTING METHOD ---- -->
+</div><!-- end page 1 -->
+
+<!-- ================================================================ -->
+<!-- PAGE 2 — BACK                                                     -->
+<!-- ================================================================ -->
+<div class="sheet sheet-page-break" id="page2">
+
+  <div class="sheet-title" style="font-size:12pt;margin-bottom:5pt;">Senhor dos Mistérios — Equipamento &amp; Notas</div>
+
+    <!-- ---- ACTING METHOD ---- -->
   <div class="s-box">
-    <div class="s-box-title">Método de Atuação <span style="font-weight:400;color:#888;font-size:7pt;"> (Acting Method)</span></div>
+    <div class="s-box-title">Método de Atuação </div>
     <div class="field">
       <span class="field-label">Princípio</span>
       <span class="field-line"></span>
@@ -921,158 +2229,90 @@
     </div>
   </div>
 
-</div><!-- end page 1 -->
 
-<!-- ================================================================ -->
-<!-- PAGE 2 — BACK                                                     -->
-<!-- ================================================================ -->
-<div class="sheet sheet-page-break" id="page2">
-
-  <div class="sheet-title" style="font-size:12pt;margin-bottom:5pt;">Senhor dos Mistérios — Poderes, Equipamento &amp; Notas</div>
-
-  <!-- ---- BEYONDER POWERS ---- -->
-  <div class="s-box">
-    <div class="s-box-title">Poderes <em>Beyonder</em> <span style="font-weight:400;color:#888;font-size:7pt;"> (Beyonder Powers)</span></div>
-
-    <div class="grid-2 power-cols">
-      <!-- Power 1 -->
-      <div class="power-block">
-        <div class="power-title-row">
-          <span class="power-lbl">Nome</span>
-          <span class="power-name power-fill"></span>
-          <span class="power-lbl">Custo</span>
-          <span class="power-cost power-fill"></span>
-        </div>
-        <div class="power-meta-row">
-          <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
-          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
-          <div class="power-meta"><span class="power-lbl">Duração</span><span class="power-meta-val power-fill"></span></div>
-        </div>
-        <div class="power-effect"></div>
-      </div>
-
-      <!-- Power 2 -->
-      <div class="power-block">
-        <div class="power-title-row">
-          <span class="power-lbl">Nome</span>
-          <span class="power-name power-fill"></span>
-          <span class="power-lbl">Custo</span>
-          <span class="power-cost power-fill"></span>
-        </div>
-        <div class="power-meta-row">
-          <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
-          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
-          <div class="power-meta"><span class="power-lbl">Duração</span><span class="power-meta-val power-fill"></span></div>
-        </div>
-        <div class="power-effect"></div>
-      </div>
-
-      <!-- Power 3 -->
-      <div class="power-block">
-        <div class="power-title-row">
-          <span class="power-lbl">Nome</span>
-          <span class="power-name power-fill"></span>
-          <span class="power-lbl">Custo</span>
-          <span class="power-cost power-fill"></span>
-        </div>
-        <div class="power-meta-row">
-          <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
-          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
-          <div class="power-meta"><span class="power-lbl">Duração</span><span class="power-meta-val power-fill"></span></div>
-        </div>
-        <div class="power-effect"></div>
-      </div>
-
-      <!-- Power 4 -->
-      <div class="power-block">
-        <div class="power-title-row">
-          <span class="power-lbl">Nome</span>
-          <span class="power-name power-fill"></span>
-          <span class="power-lbl">Custo</span>
-          <span class="power-cost power-fill"></span>
-        </div>
-        <div class="power-meta-row">
-          <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
-          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
-          <div class="power-meta"><span class="power-lbl">Duração</span><span class="power-meta-val power-fill"></span></div>
-        </div>
-        <div class="power-effect"></div>
-      </div>
-
-      <!-- Power 5 -->
-      <div class="power-block">
-        <div class="power-title-row">
-          <span class="power-lbl">Nome</span>
-          <span class="power-name power-fill"></span>
-          <span class="power-lbl">Custo</span>
-          <span class="power-cost power-fill"></span>
-        </div>
-        <div class="power-meta-row">
-          <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
-          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
-          <div class="power-meta"><span class="power-lbl">Duração</span><span class="power-meta-val power-fill"></span></div>
-        </div>
-        <div class="power-effect"></div>
-      </div>
-
-      <!-- Power 6 -->
-      <div class="power-block">
-        <div class="power-title-row">
-          <span class="power-lbl">Nome</span>
-          <span class="power-name power-fill"></span>
-          <span class="power-lbl">Custo</span>
-          <span class="power-cost power-fill"></span>
-        </div>
-        <div class="power-meta-row">
-          <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
-          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
-          <div class="power-meta"><span class="power-lbl">Duração</span><span class="power-meta-val power-fill"></span></div>
-        </div>
-        <div class="power-effect"></div>
-      </div>
+  <!-- ---- LUCIDEZ ---- -->
+  <div class="s-box lucidez-track-box">
+    <div class="s-box-title">Lucidez</div>
+    <div class="lucidez-track" aria-label="Trilha de Lucidez com dez espaços">
+      <span class="lucidez-cell"></span>
+      <span class="lucidez-cell"></span>
+      <span class="lucidez-cell"></span>
+      <span class="lucidez-cell"></span>
+      <span class="lucidez-cell"></span>
+      <span class="lucidez-cell"></span>
+      <span class="lucidez-cell"></span>
+      <span class="lucidez-cell"></span>
+      <span class="lucidez-cell"></span>
+      <span class="lucidez-cell"></span>
     </div>
   </div>
 
   <!-- ---- EQUIPMENT ---- -->
-  <div class="grid-2">
 
-    <!-- Weapons -->
-    <div class="s-box">
-      <div class="s-box-title">Armas <span style="font-weight:400;color:#888;font-size:7pt;"> (Weapons)</span></div>
-      <div class="weapon-slot">
-        <div><span class="ws-label">Arma</span><span class="ws-line"></span></div>
-        <div><span class="ws-label">Dano</span><span class="ws-line"></span></div>
-        <div><span class="ws-label">Alcance</span><span class="ws-line"></span></div>
-        <div><span class="ws-label">Propriedades</span><span class="ws-line"></span></div>
+  <!-- Weapons: tabela ampliada, com títulos fixos e espaço para preenchimento -->
+  <div class="s-box weapons-wide-box">
+    <div class="s-box-title">Armas </div>
+    <div class="weapon-table">
+      <div class="weapon-table-head">
+        <div>Arma</div>
+        <div>Dano</div>
+        <div>Alcance</div>
+        <div>Propriedades</div>
       </div>
-      <div class="weapon-slot">
-        <div><span class="ws-label">Arma</span><span class="ws-line"></span></div>
-        <div><span class="ws-label">Dano</span><span class="ws-line"></span></div>
-        <div><span class="ws-label">Alcance</span><span class="ws-line"></span></div>
-        <div><span class="ws-label">Propriedades</span><span class="ws-line"></span></div>
+      <div class="weapon-entry">
+        <div class="weapon-entry-cell"></div>
+        <div class="weapon-entry-cell"></div>
+        <div class="weapon-entry-cell"></div>
+        <div class="weapon-entry-cell"></div>
       </div>
-      <div class="weapon-slot">
-        <div><span class="ws-label">Arma</span><span class="ws-line"></span></div>
-        <div><span class="ws-label">Dano</span><span class="ws-line"></span></div>
-        <div><span class="ws-label">Alcance</span><span class="ws-line"></span></div>
-        <div><span class="ws-label">Propriedades</span><span class="ws-line"></span></div>
+      <div class="weapon-entry">
+        <div class="weapon-entry-cell"></div>
+        <div class="weapon-entry-cell"></div>
+        <div class="weapon-entry-cell"></div>
+        <div class="weapon-entry-cell"></div>
       </div>
+      <div class="weapon-entry">
+        <div class="weapon-entry-cell"></div>
+        <div class="weapon-entry-cell"></div>
+        <div class="weapon-entry-cell"></div>
+        <div class="weapon-entry-cell"></div>
+      </div>
+    </div>
+  </div>
 
-      <div style="margin-top:4pt;">
-        <div class="field">
-          <span class="field-label" style="min-width:50pt;">Armadura</span>
-          <span class="field-line"></span>
+  <!-- Armor data and general items -->
+  <div class="grid-2 equipment-details">
+    <div class="s-box armor-details-box">
+      <div class="s-box-title">Armadura e Blindagem</div>
+      <div class="armor-equipment-field">
+        <span class="armor-field-title">Armadura</span>
+        <span class="armor-field-line"></span>
+      </div>
+      <div class="armor-threshold-field">
+        <span class="armor-field-title">Limiar-base</span>
+        <div class="armor-threshold-inputs">
+          <span class="armor-threshold-line" aria-label="Limiar Maior"></span>
+          <span class="armor-threshold-separator">/</span>
+          <span class="armor-threshold-line" aria-label="Limiar Severo"></span>
         </div>
-        <div class="field">
-          <span class="field-label" style="min-width:50pt;">Def. Bônus</span>
-          <span class="field-line" style="max-width:30pt;"></span>
+        <div class="armor-threshold-captions">
+          <span>Maior</span>
+          <span>Severo</span>
         </div>
+      </div>
+      <div class="armor-values-grid">
+        <div class="armor-value-field">
+          <span class="armor-field-title">Blindagem</span>
+          <span class="armor-value-input-row">
+            <span class="armor-value-line"></span>
+          </span>
+        </div>
+
       </div>
     </div>
 
-    <!-- General Items -->
     <div class="s-box">
-      <div class="s-box-title">Itens Gerais <span style="font-weight:400;color:#888;font-size:7pt;"> (General Items)</span></div>
+      <div class="s-box-title">Itens Gerais </div>
       <div class="item-lines">
         <div class="item-line"></div><div class="item-line"></div>
         <div class="item-line"></div><div class="item-line"></div>
@@ -1086,12 +2326,11 @@
         <span style="font-size:7pt;color:#888;margin-left:3pt;">£ / s / p</span>
       </div>
     </div>
-
   </div>
 
-  <!-- ---- SEALED ARTIFACTS ---- -->
+    <!-- ---- SEALED ARTIFACTS ---- -->
   <div class="s-box">
-    <div class="s-box-title">Artefatos Selados <span style="font-weight:400;color:#888;font-size:7pt;"> (Sealed Artifacts)</span></div>
+    <div class="s-box-title">Artefatos Selados </div>
     <div class="grid-2">
       <div class="artifact-block">
         <div class="artifact-header">Artefato 1 — Grau: ___</div>
@@ -1109,44 +2348,79 @@
   </div>
 
   <!-- ---- CONNECTIONS ---- -->
-  <div class="s-box">
-    <div class="s-box-title">Conexões <span style="font-weight:400;color:#888;font-size:7pt;"> (NPC Connections)</span></div>
-    <div class="grid-3">
-      <div>
+  <div class="s-box connections-box">
+    <div class="s-box-title">Conexões </div>
+    <div class="grid-3 connections-grid">
+      <div class="connection-card">
         <div class="conn-slot">
-          <div class="field"><span class="field-label" style="min-width:30pt;font-size:6.5pt;">Nome</span><span class="field-line"></span></div>
-          <div class="field"><span class="field-label" style="min-width:30pt;font-size:6.5pt;">Relação</span><span class="field-line"></span></div>
+          <div class="field conn-field">
+            <span class="field-label">Nome</span>
+            <span class="field-line"></span>
+          </div>
+          <div class="field conn-field">
+            <span class="field-label">Relação</span>
+            <span class="field-line"></span>
+          </div>
         </div>
-        <div style="font-size:7pt;min-height:14pt;border-bottom:1px dotted #ccc;"></div>
+        <div class="conn-observation">
+          <div class="conn-observation-title">Observações</div>
+          <div class="conn-observation-line"></div>
+          <div class="conn-observation-line"></div>
+          <div class="conn-observation-line"></div>
+        </div>
       </div>
-      <div>
+
+      <div class="connection-card">
         <div class="conn-slot">
-          <div class="field"><span class="field-label" style="min-width:30pt;font-size:6.5pt;">Nome</span><span class="field-line"></span></div>
-          <div class="field"><span class="field-label" style="min-width:30pt;font-size:6.5pt;">Relação</span><span class="field-line"></span></div>
+          <div class="field conn-field">
+            <span class="field-label">Nome</span>
+            <span class="field-line"></span>
+          </div>
+          <div class="field conn-field">
+            <span class="field-label">Relação</span>
+            <span class="field-line"></span>
+          </div>
         </div>
-        <div style="font-size:7pt;min-height:14pt;border-bottom:1px dotted #ccc;"></div>
+        <div class="conn-observation">
+          <div class="conn-observation-title">Observações</div>
+          <div class="conn-observation-line"></div>
+          <div class="conn-observation-line"></div>
+          <div class="conn-observation-line"></div>
+        </div>
       </div>
-      <div>
+
+      <div class="connection-card">
         <div class="conn-slot">
-          <div class="field"><span class="field-label" style="min-width:30pt;font-size:6.5pt;">Nome</span><span class="field-line"></span></div>
-          <div class="field"><span class="field-label" style="min-width:30pt;font-size:6.5pt;">Relação</span><span class="field-line"></span></div>
+          <div class="field conn-field">
+            <span class="field-label">Nome</span>
+            <span class="field-line"></span>
+          </div>
+          <div class="field conn-field">
+            <span class="field-label">Relação</span>
+            <span class="field-line"></span>
+          </div>
         </div>
-        <div style="font-size:7pt;min-height:14pt;border-bottom:1px dotted #ccc;"></div>
+        <div class="conn-observation">
+          <div class="conn-observation-title">Observações</div>
+          <div class="conn-observation-line"></div>
+          <div class="conn-observation-line"></div>
+          <div class="conn-observation-line"></div>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- ---- BACKSTORY + NOTES ---- -->
+    <!-- ---- BACKSTORY + NOTES ---- -->
   <div class="grid-2">
     <div class="s-box">
-      <div class="s-box-title">História <span style="font-weight:400;color:#888;font-size:7pt;"> (Backstory)</span></div>
+      <div class="s-box-title">História </div>
       <div class="notes-lines">
         <div class="n-line"></div><div class="n-line"></div><div class="n-line"></div>
         <div class="n-line"></div><div class="n-line"></div><div class="n-line"></div>
       </div>
     </div>
     <div class="s-box">
-      <div class="s-box-title">Notas <span style="font-weight:400;color:#888;font-size:7pt;"> (Notes)</span></div>
+      <div class="s-box-title">Notas </div>
       <div class="notes-lines">
         <div class="n-line"></div><div class="n-line"></div><div class="n-line"></div>
         <div class="n-line"></div><div class="n-line"></div><div class="n-line"></div>
@@ -1155,6 +2429,335 @@
   </div>
 
 </div><!-- end page 2 -->
+
+  <!-- ---- BEYONDER POWERS: PAGE 3 ---- -->
+  <div class="sheet sheet-page-break powers-page" id="page3">
+    <div class="s-box powers-page-box">
+      <div class="s-box-title">Poderes <em>Beyonder</em> </div>
+      <div class="grid-2 power-cols powers-grid">
+      <!-- Poder Beyonder 1 -->
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name power-fill"></span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost power-fill"></span>
+        </div>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Duração</span><span class="power-meta-val power-fill"></span></div>
+        </div>
+        <div class="power-effect"></div>
+      </div>
+
+      <!-- Poder Beyonder 2 -->
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name power-fill"></span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost power-fill"></span>
+        </div>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Duração</span><span class="power-meta-val power-fill"></span></div>
+        </div>
+        <div class="power-effect"></div>
+      </div>
+
+      <!-- Poder Beyonder 3 -->
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name power-fill"></span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost power-fill"></span>
+        </div>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Duração</span><span class="power-meta-val power-fill"></span></div>
+        </div>
+        <div class="power-effect"></div>
+      </div>
+
+      <!-- Poder Beyonder 4 -->
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name power-fill"></span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost power-fill"></span>
+        </div>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Duração</span><span class="power-meta-val power-fill"></span></div>
+        </div>
+        <div class="power-effect"></div>
+      </div>
+
+      <!-- Poder Beyonder 5 -->
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name power-fill"></span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost power-fill"></span>
+        </div>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Duração</span><span class="power-meta-val power-fill"></span></div>
+        </div>
+        <div class="power-effect"></div>
+      </div>
+
+      <!-- Poder Beyonder 6 -->
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name power-fill"></span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost power-fill"></span>
+        </div>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Duração</span><span class="power-meta-val power-fill"></span></div>
+        </div>
+        <div class="power-effect"></div>
+      </div>
+
+      <!-- Poder Beyonder 7 -->
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name power-fill"></span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost power-fill"></span>
+        </div>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Duração</span><span class="power-meta-val power-fill"></span></div>
+        </div>
+        <div class="power-effect"></div>
+      </div>
+
+      <!-- Poder Beyonder 8 -->
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name power-fill"></span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost power-fill"></span>
+        </div>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Duração</span><span class="power-meta-val power-fill"></span></div>
+        </div>
+        <div class="power-effect"></div>
+      </div>
+
+      <!-- Poder Beyonder 9 -->
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name power-fill"></span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost power-fill"></span>
+        </div>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Duração</span><span class="power-meta-val power-fill"></span></div>
+        </div>
+        <div class="power-effect"></div>
+      </div>
+
+      <!-- Poder Beyonder 10 -->
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name power-fill"></span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost power-fill"></span>
+        </div>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Duração</span><span class="power-meta-val power-fill"></span></div>
+        </div>
+        <div class="power-effect"></div>
+      </div>
+
+      <!-- Poder Beyonder 11 -->
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name power-fill"></span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost power-fill"></span>
+        </div>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Duração</span><span class="power-meta-val power-fill"></span></div>
+        </div>
+        <div class="power-effect"></div>
+      </div>
+
+      <!-- Poder Beyonder 12 -->
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name power-fill"></span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost power-fill"></span>
+        </div>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Duração</span><span class="power-meta-val power-fill"></span></div>
+        </div>
+        <div class="power-effect"></div>
+      </div>
+
+      <!-- Poder Beyonder 13 -->
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name power-fill"></span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost power-fill"></span>
+        </div>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Duração</span><span class="power-meta-val power-fill"></span></div>
+        </div>
+        <div class="power-effect"></div>
+      </div>
+
+      <!-- Poder Beyonder 14 -->
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name power-fill"></span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost power-fill"></span>
+        </div>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Duração</span><span class="power-meta-val power-fill"></span></div>
+        </div>
+        <div class="power-effect"></div>
+      </div>
+
+      <!-- Poder Beyonder 15 -->
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name power-fill"></span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost power-fill"></span>
+        </div>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Duração</span><span class="power-meta-val power-fill"></span></div>
+        </div>
+        <div class="power-effect"></div>
+      </div>
+
+      <!-- Poder Beyonder 16 -->
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name power-fill"></span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost power-fill"></span>
+        </div>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Duração</span><span class="power-meta-val power-fill"></span></div>
+        </div>
+        <div class="power-effect"></div>
+      </div>
+
+      <!-- Poder Beyonder 17 -->
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name power-fill"></span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost power-fill"></span>
+        </div>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Duração</span><span class="power-meta-val power-fill"></span></div>
+        </div>
+        <div class="power-effect"></div>
+      </div>
+
+      <!-- Poder Beyonder 18 -->
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name power-fill"></span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost power-fill"></span>
+        </div>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Duração</span><span class="power-meta-val power-fill"></span></div>
+        </div>
+        <div class="power-effect"></div>
+      </div>
+
+      <!-- Poder Beyonder 19 -->
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name power-fill"></span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost power-fill"></span>
+        </div>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Duração</span><span class="power-meta-val power-fill"></span></div>
+        </div>
+        <div class="power-effect"></div>
+      </div>
+
+      <!-- Poder Beyonder 20 -->
+      <div class="power-block">
+        <div class="power-title-row">
+          <span class="power-lbl">Nome</span>
+          <span class="power-name power-fill"></span>
+          <span class="power-lbl">Custo</span>
+          <span class="power-cost power-fill"></span>
+        </div>
+        <div class="power-meta-row">
+          <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Alcance</span><span class="power-meta-val power-fill"></span></div>
+          <div class="power-meta"><span class="power-lbl">Duração</span><span class="power-meta-val power-fill"></span></div>
+        </div>
+        <div class="power-effect"></div>
+      </div>
+      </div>
+    </div>
+  </div>
+
 
 <nav class="book-nav no-print">
   <a href="../index.html">&larr; Início</a>
