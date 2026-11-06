@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cap. 3 — Atributos, Perícias e Sistema de Testes · Senhor dos Mistérios RPG</title>
+<title>Cap. 3 — Atributos, Proficiências e Sistema de Testes · Senhor dos Mistérios RPG</title>
 <link rel="stylesheet" href="../assets/css/common.css">
 <link rel="stylesheet" href="../assets/css/print.css">
 </head>
 <body>
 
-<h1>Capítulo 3 — Atributos, Perícias e Sistema de Testes</h1>
+<h1>Capítulo 3 — Atributos, Proficiências e Sistema de Testes</h1>
 
 <blockquote>
   "As capacidades de uma pessoa não se revelam apenas pelo que ela sabe, mas também
@@ -20,9 +20,10 @@
 
 <p>
   Este capítulo explica como utilizar os <strong>Atributos</strong> e as
-  <strong>Perícias</strong> da ficha, como resolver testes e como calcular as
+  <strong>Proficiências</strong> da ficha, como resolver testes e como calcular as
   estatísticas derivadas do personagem. As regras seguem a estrutura de criação
-  apresentada no Capítulo 2: nove Atributos, 25 Perícias e testes com
+  apresentada no Capítulo 2: nove Atributos e <strong>24 Proficiências</strong>,
+  divididas em oito Talentos, oito Perícias e oito Conhecimentos, além de testes com
   <span class="dice">2d10</span>, bônus totais e Classe de Dificuldade (CD).
 </p>
 
@@ -36,12 +37,14 @@
 <div class="box box-note">
   <div class="box-title">Compatibilidade com a ficha</div>
   <p>
-    Este capítulo utiliza somente os nove Atributos e as 25 Perícias oficiais da
-    ficha atual. Percepção e Aparência não são mais Atributos; Esquiva, Dissimulação,
-    Manha, Liderança, Adivinhação e Ritualismo não aparecem como Perícias independentes
-    na lista atual. Quando uma ação antes associada a um desses termos surgir em jogo,
-    o Mestre deverá utilizar a Perícia atual cuja descrição corresponda à abordagem
-    realizada.
+    A ficha atual possui nove Atributos e 24 Proficiências: Acrobacia, Atletismo,
+    Empatia, Furtividade, Intimidação, Luta, Performance, Persuasão, Armas Brancas,
+    Armas de Fogo, Condução, Etiqueta, Investigação, Prestidigitação, Sobrevivência,
+    Subterfúgio, Ciências, História, Medicina, Natureza, Navegação, Ocultismo,
+    Submundo e Teologia. Elas estão divididas nos grupos Talentos, Perícias e
+    Conhecimentos. Quando uma ação não corresponder diretamente a uma descrição,
+    o Mestre escolhe a Proficiência mais próxima da abordagem apresentada pelo jogador;
+    não é necessário criar uma Proficiência nova para cada atividade específica.
   </p>
 </div>
 
@@ -49,7 +52,7 @@
   <div class="box-title">Resumo das Seções</div>
   <ul>
     <li><a href="#atributos"><strong>Atributos:</strong> escalas, categorias, dimensões e modificadores.</a></li>
-    <li><a href="#pericias"><strong>Perícias:</strong> grupos, distribuição, aplicações e especializações.</a></li>
+    <li><a href="#pericias"><strong>Proficiências:</strong> Talentos, Perícias e Conhecimentos, distribuição, aplicações e especializações.</a></li>
     <li><a href="#sistema-testes"><strong>Sistema de Testes:</strong> rolagens 2d10, Classes de Dificuldade, resultados críticos, Vantagem, Desvantagem e testes disputados.</a></li>
     <li><a href="#estatisticas-derivadas"><strong>Estatísticas Derivadas:</strong> Pontos de Vida, Espiritualidade, Iniciativa, Defesa, Salvaguardas, Lucidez, Blindagem e Limiares de Dano.</a></li>
     <li><a href="#resumo"><strong>Resumo Rápido de Referência:</strong> consulta concentrada das principais fórmulas e regras.</a></li>
@@ -102,6 +105,30 @@
 <h3 id="categorias-atributos">Categorias de Atributos</h3>
 <div class="box box-note">
   <div class="box-title">As três dimensões dos Atributos</div>
+  <p>
+    Os Atributos também são organizados pelas dimensões <strong>Potência</strong>,
+    <strong>Refinamento</strong> e <strong>Resistência</strong>. Elas indicam,
+    respectivamente, impacto, precisão e capacidade de sustentar uma ação em cada
+    categoria.
+  </p>
+  <table>
+    <thead><tr><th>Dimensão</th><th>Físicos</th><th>Sociais</th><th>Mentais</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Potência</strong></td><td>Força (FOR)</td><td>Carisma (CAR)</td><td>Inteligência (INT)</td></tr>
+      <tr><td><strong>Refinamento</strong></td><td>Destreza (DES)</td><td>Manipulação (MAN)</td><td>Raciocínio (RAC)</td></tr>
+      <tr><td><strong>Resistência</strong></td><td>Vigor (VIG)</td><td>Autocontrole (ACO)</td><td>Determinação (DET)</td></tr>
+    </tbody>
+  </table>
+  <ul>
+    <li><strong>Potência:</strong> o impacto que o personagem consegue produzir — força física, influência social ou capacidade intelectual.</li>
+    <li><strong>Refinamento:</strong> a precisão e o controle com que age — coordenação, técnica social ou análise.</li>
+    <li><strong>Resistência:</strong> a capacidade de manter o desempenho sob esforço, pressão ou influência.</li>
+  </ul>
+  <p>
+    Nenhuma dimensão é superior às demais. O Atributo utilizado depende da forma
+    como o personagem descreve a ação.
+  </p>
+</div>
   <p>
     Em cada categoria, os três Atributos representam dimensões complementares:
     <strong>Potência</strong>, <strong>Refinamento</strong> e <strong>Resistência</strong>.
@@ -258,20 +285,23 @@
 
 <div class="separator"></div>
 
-<h2 id="pericias">Perícias</h2>
+<h2 id="pericias">Proficiências</h2>
 
 <p>
-  As Perícias representam treinamento, prática e experiência adquirida. Elas indicam
-  o quanto o personagem domina uma atividade específica. A ficha atual possui
-  <strong>25 Perícias</strong>, organizadas em três grupos: <strong>Corporal</strong>,
-  <strong>Interação</strong> e <strong>Conhecimento</strong>.
+  As Proficiências representam aptidões, treinamento e conhecimentos desenvolvidos
+  pelo personagem. Elas indicam o domínio que ele possui sobre atividades práticas,
+  capacidades pessoais e áreas de estudo. A ficha reúne <strong>24 Proficiências</strong>,
+  organizadas em três grupos de oito: <strong>Talentos</strong>, <strong>Perícias</strong>
+  e <strong>Conhecimentos</strong>.
 </p>
 
-<h3 id="escala-pericias">Escala de Perícias</h3>
+<h3 id="escala-pericias">Escala de Proficiências</h3>
 <table>
-  <thead><tr><th>Pontos</th><th>Nível</th><th>Modificador</th><th>Descrição</th></tr></thead>
+  <thead>
+    <tr><th>Pontos</th><th>Nível</th><th>Modificador</th><th>Descrição</th></tr>
+  </thead>
   <tbody>
-    <tr><td>0</td><td>Não treinado</td><td>−2</td><td>Não possui treinamento ou experiência relevante.</td></tr>
+    <tr><td>0</td><td>Não treinado</td><td>−2</td><td>Não possui treinamento ou experiência relevante naquela área.</td></tr>
     <tr><td>1</td><td>Iniciante</td><td>−1</td><td>Conhece fundamentos e consegue realizar tarefas simples.</td></tr>
     <tr><td>2</td><td>Praticante</td><td>+0</td><td>Possui prática funcional e consegue executar atividades comuns.</td></tr>
     <tr><td>3</td><td>Proficiente</td><td>+1</td><td>Tem experiência consistente e realiza tarefas exigentes.</td></tr>
@@ -281,297 +311,307 @@
 </table>
 
 <div class="box box-rule">
-  <div class="box-title">Cálculo do Modificador de Perícia</div>
-  <p style="text-align:center; font-size:1.15em;"><strong>Mod.(Perícia) = Pontos da Perícia − 2</strong></p>
+  <div class="box-title">Cálculo do Modificador de Proficiência</div>
+  <p style="text-align:center;"><strong>Mod.(Proficiência) = Valor da Proficiência − 2</strong></p>
   <p>
-    Uma Perícia com 0 ponto possui modificador −2; com 1 ponto, −1; com 2 pontos,
-    +0; com 3 pontos, +1; com 4 pontos, +2; e com 5 pontos, +3. Portanto, ter 0
-    ponto não significa que o personagem não possa tentar nenhuma ação: significa
-    que ele não possui treinamento e aplica o modificador correspondente quando
-    a tentativa for possível.
+    O valor registrado pelos círculos da ficha é convertido em modificador para os
+    testes: 0 ponto corresponde a −2; 1 a −1; 2 a +0; 3 a +1; 4 a +2; e 5 a +3.
+    A coluna Bônus da ficha registra esse modificador. O campo Total é utilizado
+    para somar o modificador da Proficiência ao modificador do Atributo escolhido
+    para a ação e a outros bônus aplicáveis. Como a abordagem pode variar, esse
+    total pode mudar conforme a ação realizada.
+  </p>
+  <p>
+    Ter 0 ponto não significa que o personagem não possa tentar nenhuma ação:
+    significa que não possui treinamento e aplica o modificador −2 quando a tentativa
+    for possível. Em tarefas que exigem qualificação específica, o Mestre pode
+    considerar a tentativa inviável ou aplicar uma penalidade adicional de −2,
+    quando a falta de preparo justificar essa dificuldade. Essa penalidade adicional
+    não é automática.
   </p>
 </div>
 
 <h3 id="grupos-pericias">Grupos e distribuição na criação</h3>
 <p>
-  Na criação do personagem, os pontos de Perícia são distribuídos no modelo
+  Na criação do personagem, os pontos de Proficiência são distribuídos no modelo
   <strong>13 / 9 / 5</strong>: 13 pontos no grupo primário, 9 no secundário e 5 no
-  terciário. As Perícias começam em 0, e nenhuma pode receber mais de 3 pontos durante
-  a distribuição inicial. Depois da distribuição, aplicam-se os dois pontos concedidos
-  pelo Antecedente: um na Perícia fixa e outro em uma Perícia diferente escolhida pelo
-  jogador. Cada Perícia pode chegar a 4 por meio desses pontos de Antecedente, mas não
-  ultrapassar esse limite durante a criação.
+  terciário. O jogador escolhe a ordem entre <strong>Talentos</strong>,
+  <strong>Perícias</strong> e <strong>Conhecimentos</strong>. Todas as Proficiências
+  começam em 0, e nenhuma pode receber mais de 3 pontos durante a distribuição inicial.
+  Depois, aplicam-se os dois pontos do Antecedente: +1 na Proficiência fixa e +1 em
+  outra Proficiência diferente, escolhida pelo jogador. Cada uma pode chegar a 4 por
+  meio desses pontos, mas não ultrapassar esse limite durante a criação.
 </p>
 
-<div class="box box-note">
-  <div class="box-title">Perícia em 0 e atividades especializadas</div>
-  <p>
-    Uma Perícia em 0 ainda pode ser utilizada em tarefas comuns quando o personagem
-    tem condições de tentar a ação. Em atividades que exigem treinamento específico,
-    o Mestre pode considerar a tentativa inviável sem a qualificação necessária. Se
-    a atividade ainda puder ser tentada sem treinamento, o Mestre pode aplicar uma
-    penalidade adicional de −2 quando a falta de preparo justificar essa dificuldade.
-    A Perícia em 0 já possui Mod.(Perícia) −2; a penalidade adicional não é automática.
-  </p>
-</div>
-
-<h3 id="pericias-corporal">Grupo Corporal</h3>
+<h3 id="pericias-talentos">Grupo de Talentos</h3>
 <p>
-  O grupo Corporal reúne técnicas de movimento, esforço físico, combate e coordenação.
-  As abordagens apresentadas são recomendações: o atributo efetivamente utilizado
-  depende de como o personagem descreve a ação e do aspecto que o Mestre considera
-  decisivo.
+  Talentos representam aptidões e capacidades demonstradas na ação, no corpo e na
+  interação com outras pessoas. Incluem coordenação, esforço físico, percepção social,
+  expressão e influência.
 </p>
+
 <h4 id="acrobacia">Acrobacia</h4>
-<p>Abrange equilíbrio, cambalhotas, saltos controlados e manobras que exigem coordenação corporal.</p>
+<p>Representa equilíbrio, coordenação e controle corporal em movimentos complexos ou em superfícies difíceis.</p>
 <ul>
-  <li><strong>Aplicações:</strong> Atravessar superfícies estreitas, amortecer uma queda, passar por obstáculos, executar saltos precisos ou realizar movimentos acrobáticos.</li>
-  <li><strong>Abordagem recomendada:</strong> Destreza. Destreza é a abordagem recomendada, pois a perícia depende de coordenação e controle dos movimentos.</li>
-  <li><strong>Exemplo:</strong> Durante uma perseguição, o personagem salta sobre um vão entre dois telhados. O Mestre pede Destreza + Acrobacia.</li>
-</ul>
-
-<h4 id="armas-brancas">Armas Brancas</h4>
-<p>Representa o treinamento no uso de armas brancas, tanto de combate próximo quanto de disparo manual. Abrange facas, espadas, bastões e outras armas utilizadas a curta distância, além de arco e flecha e equipamentos semelhantes que lançam projéteis por força mecânica ou física do próprio usuário. Neste sistema, o uso de arco e flecha também é resolvido com a perícia Armas Brancas, e não com Armas de Fogo.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Atacar com facas, espadas, bastões ou outras armas de combate próximo; aparar um golpe quando a regra permitir; desarmar um oponente; manejar uma arma em espaço apertado; preparar, mirar e disparar com arco e flecha.</li>
-  <li><strong>Abordagem recomendada:</strong> Força ou Destreza. Força pode ser usada para golpes potentes ou para tensionar arcos que exigem maior força física; Destreza é indicada para movimentos precisos, manuseio técnico, mira e disparos com arco.</li>
-  <li><strong>Exemplo — combate próximo:</strong> Um personagem tenta atingir um adversário com uma espada. O Mestre escolhe Força ou Destreza conforme a forma do ataque e pede Armas Brancas.</li>
-  <li><strong>Exemplo — combate à distância:</strong> De um ponto elevado, o personagem prepara o arco e dispara uma flecha contra um cultista que atravessa o pátio. O teste utiliza Destreza + Armas Brancas, comparado à Defesa do alvo e considerando distância, cobertura e visibilidade.</li>
-</ul>
-
-<h4 id="armas-de-fogo">Armas de Fogo</h4>
-<p>Representa o treinamento para manusear, apontar e disparar pistolas, revólveres, rifles e outras armas de fogo.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Realizar disparos, controlar a mira, recarregar sob pressão, manusear armamentos e avaliar o funcionamento básico de uma arma.</li>
-  <li><strong>Abordagem recomendada:</strong> Destreza. Destreza é a abordagem recomendada para pontaria, precisão e manuseio.</li>
-  <li><strong>Exemplo:</strong> Um personagem dispara contra um alvo que tenta escapar. O teste é Destreza + Armas de Fogo contra a Defesa do alvo, com possíveis modificadores de distância e cobertura.</li>
+  <li><strong>Aplicações:</strong> Saltar entre superfícies, atravessar locais estreitos, realizar cambalhotas, manter o equilíbrio ou executar manobras corporais.</li>
+  <li><strong>Abordagem recomendada:</strong> Destreza, pela coordenação e precisão dos movimentos.</li>
+  <li><strong>Exemplo:</strong> Um personagem tenta atravessar uma viga estreita sobre um beco. O Mestre pede Destreza + Acrobacia.</li>
 </ul>
 
 <h4 id="atletismo">Atletismo</h4>
-<p>Abrange esforço físico atlético e resistência em atividades corporais, incluindo corrida, escalada, natação, saltos e travessias exigentes.</p>
+<p>Abrange esforço físico atlético e resistência em atividades corporais, como corrida, escalada, natação, saltos e travessias exigentes.</p>
 <ul>
   <li><strong>Aplicações:</strong> Correr, escalar, nadar, saltar, carregar alguém durante uma fuga ou manter esforço físico prolongado.</li>
-  <li><strong>Abordagem recomendada:</strong> Força ou Vigor. Força é indicada para esforço explosivo, escaladas ou saltos que exigem potência; Vigor, para esforço prolongado e resistência física.</li>
+  <li><strong>Abordagem recomendada:</strong> Força ou Vigor. Força representa esforço explosivo; Vigor, resistência e esforço prolongado.</li>
   <li><strong>Exemplo:</strong> O personagem precisa nadar contra a correnteza até a margem. O Mestre pode pedir Vigor + Atletismo.</li>
 </ul>
 
+<h4 id="empatia">Empatia</h4>
+<p>É a capacidade de compreender estados emocionais, interpretar reações e perceber o que uma pessoa sente ou tenta esconder. Não revela automaticamente a verdade nem permite ler pensamentos.</p>
+<ul>
+  <li><strong>Aplicações:</strong> Reconhecer medo, perceber desconforto, compreender motivações e avaliar o estado emocional de uma testemunha.</li>
+  <li><strong>Abordagem recomendada:</strong> Raciocínio ou Autocontrole. Raciocínio analisa sinais e padrões; Autocontrole mantém a neutralidade emocional durante a observação.</li>
+  <li><strong>Exemplo:</strong> Uma testemunha afirma não conhecer a vítima, mas demonstra inquietação ao ouvir seu nome. O Mestre pede Raciocínio + Empatia.</li>
+</ul>
+
 <h4 id="furtividade">Furtividade</h4>
-<p>É a capacidade de ocultar a própria presença e deslocar-se sem chamar atenção. Inclui controlar ruídos, aproveitar cobertura e escolher o momento adequado para se mover.</p>
+<p>É a capacidade de ocultar a própria presença e deslocar-se sem chamar atenção, controlando ruídos e aproveitando cobertura e oportunidade.</p>
 <ul>
   <li><strong>Aplicações:</strong> Esgueirar-se, esconder-se, aproximar-se sem ser notado, atravessar uma área vigiada e evitar deixar sinais evidentes da própria passagem.</li>
-  <li><strong>Abordagem recomendada:</strong> Destreza. Destreza é a abordagem recomendada, pois envolve controle corporal e precisão dos movimentos.</li>
+  <li><strong>Abordagem recomendada:</strong> Destreza, pelo controle corporal e precisão dos movimentos.</li>
   <li><strong>Exemplo:</strong> Um personagem atravessa o corredor de uma mansão enquanto os guardas estão próximos. O Mestre pede Destreza + Furtividade.</li>
+</ul>
+
+<h4 id="intimidacao">Intimidação</h4>
+<p>É a capacidade de provocar receio, impor limites e coagir por meio de ameaças, postura ou demonstração de poder. Não precisa envolver violência física.</p>
+<ul>
+  <li><strong>Aplicações:</strong> Afastar curiosos, pressionar um suspeito, impor autoridade, ameaçar um adversário ou interromper uma ação pela demonstração de firmeza.</li>
+  <li><strong>Abordagem recomendada:</strong> Autocontrole ou Força. Autocontrole sustenta uma ameaça fria e deliberada; Força demonstra superioridade física.</li>
+  <li><strong>Exemplo:</strong> Um personagem encurrala um informante e exige respostas. O Mestre escolhe Autocontrole ou Força conforme a abordagem.</li>
 </ul>
 
 <h4 id="luta">Luta</h4>
 <p>Representa o combate desarmado e técnicas corporais de confronto, incluindo socos, chutes, agarramentos, quedas e imobilizações.</p>
 <ul>
   <li><strong>Aplicações:</strong> Atacar sem armas, agarrar, derrubar, imobilizar, escapar de uma contenção física ou dominar alguém em combate corporal.</li>
-  <li><strong>Abordagem recomendada:</strong> Força ou Destreza. Força pode representar golpes potentes e domínio físico; Destreza, técnicas precisas, movimentos rápidos e controle corporal.</li>
+  <li><strong>Abordagem recomendada:</strong> Força ou Destreza. Força representa potência; Destreza, precisão e técnica.</li>
   <li><strong>Exemplo:</strong> Um personagem tenta derrubar um agressor e imobilizá-lo no chão. O Mestre escolhe Força ou Destreza conforme a técnica utilizada.</li>
 </ul>
 
-<h4 id="pilotagem">Pilotagem</h4>
-<p>Representa a capacidade de conduzir e controlar veículos, embarcações ou montarias. A familiaridade com um tipo específico de condução pode exigir uma especialização ou justificativa narrativa.</p>
+<h4 id="performance">Performance</h4>
+<p>Abrange a capacidade de entreter, emocionar ou prender a atenção de uma plateia por meio de apresentações como música, teatro, dança e oratória.</p>
 <ul>
-  <li><strong>Aplicações:</strong> Conduzir uma carruagem em alta velocidade, manobrar uma embarcação, controlar uma montaria assustada ou evitar obstáculos durante o deslocamento.</li>
-  <li><strong>Abordagem recomendada:</strong> Destreza ou Raciocínio. Destreza é indicada para manobras e controle fino; Raciocínio, para antecipar rotas, interpretar condições e tomar decisões de condução.</li>
-  <li><strong>Exemplo:</strong> Um marinheiro tenta conduzir uma embarcação por um canal estreito durante uma tempestade. O Mestre escolhe a abordagem adequada e pede Pilotagem.</li>
+  <li><strong>Aplicações:</strong> Cantar, tocar um instrumento, atuar, declamar, realizar uma apresentação pública ou manter a atenção de uma plateia.</li>
+  <li><strong>Abordagem recomendada:</strong> Carisma ou Autocontrole. Carisma cria conexão com o público; Autocontrole permite apresentações que exigem precisão e disciplina.</li>
+  <li><strong>Exemplo:</strong> Uma artista tenta manter a atenção de um salão enquanto transmite uma mensagem disfarçada em sua apresentação. O Mestre pede Carisma ou Autocontrole + Performance.</li>
 </ul>
 
-<h4 id="prestidigitacao">Prestidigitação</h4>
-<p>É a habilidade de realizar movimentos manuais discretos, rápidos e precisos. Inclui truques de mãos, manipulação de pequenos objetos e técnicas de ilusionismo manual.</p>
+<h4 id="persuasao">Persuasão</h4>
+<p>É a capacidade de convencer alguém por meio de argumentos, apelos, negociação ou influência verbal, seja de forma franca ou calculada.</p>
 <ul>
-  <li><strong>Aplicações:</strong> Esconder um objeto na mão, retirar discretamente algo de um bolso, executar truques de cartas, manipular pequenos mecanismos ou trocar objetos sem ser percebido.</li>
-  <li><strong>Abordagem recomendada:</strong> Destreza. Destreza é a abordagem recomendada, pois a perícia depende de precisão e coordenação manual.</li>
-  <li><strong>Exemplo:</strong> Durante uma conversa, o personagem tenta retirar uma chave do bolso de alguém sem chamar atenção. O Mestre pede Destreza + Prestidigitação.</li>
+  <li><strong>Aplicações:</strong> Negociar, convencer, pedir apoio, apresentar argumentos, obter cooperação ou levar alguém a reconsiderar uma decisão.</li>
+  <li><strong>Abordagem recomendada:</strong> Carisma ou Manipulação. Carisma sustenta apelos sinceros; Manipulação conduz argumentos estratégicos.</li>
+  <li><strong>Exemplo:</strong> O personagem tenta convencer um comerciante a fornecer informações em troca de um favor. O Mestre escolhe Carisma ou Manipulação + Persuasão.</li>
 </ul>
 
-<h3 id="pericias-interacao">Grupo Interação</h3>
+<h3 id="pericias-grupo">Grupo de Perícias</h3>
 <p>
-  O grupo Interação reúne habilidades de relacionamento, influência, leitura social
-  e atuação em ambientes humanos. A escolha do Atributo deve refletir se o personagem
-  está criando confiança, conduzindo uma conversa, impondo autoridade ou interpretando
-  o comportamento de alguém.
+  Perícias representam treinamento aplicado a técnicas e atividades específicas. Seu uso
+  envolve prática, método ou familiaridade com ferramentas, procedimentos e situações
+  concretas.
 </p>
-<h4 id="empatia">Empatia</h4>
-<p>É a capacidade de compreender estados emocionais, interpretar reações e perceber o que uma pessoa sente ou tenta esconder. Não revela automaticamente a verdade nem permite ler pensamentos.</p>
+
+<h4 id="armas-brancas">Armas Brancas</h4>
+<p>Abrange o manejo de armas de combate próximo e de armas tradicionais de disparo manual que não utilizam mecanismos de fogo, como espadas, facas, lanças, bastões, arcos e bestas.</p>
 <ul>
-  <li><strong>Aplicações:</strong> Reconhecer medo, perceber desconforto, compreender motivações, avaliar o estado emocional de uma testemunha ou identificar contradições comportamentais.</li>
-  <li><strong>Abordagem recomendada:</strong> Raciocínio ou Autocontrole. Raciocínio é indicado para analisar sinais e padrões; Autocontrole, para manter a neutralidade emocional, controlar reações pessoais e observar sem se deixar influenciar pela situação.</li>
-  <li><strong>Exemplo:</strong> Uma testemunha afirma não conhecer a vítima, mas demonstra inquietação ao ouvir seu nome. O Mestre pede Raciocínio + Empatia.</li>
+  <li><strong>Aplicações:</strong> Atacar com armas brancas, aparar um golpe quando a regra permitir, desarmar um oponente, manejar uma arma em espaço apertado ou preparar, mirar e disparar com arco ou besta.</li>
+  <li><strong>Abordagem recomendada:</strong> Força ou Destreza. Força representa golpes potentes e armas que exigem esforço; Destreza representa precisão, técnica, coordenação e mira.</li>
+  <li><strong>Exemplo:</strong> Um personagem tenta atingir um adversário com uma espada ou disparar uma flecha contra um alvo distante. O Mestre escolhe Força ou Destreza conforme a abordagem.</li>
+</ul>
+
+<h4 id="armas-de-fogo">Armas de Fogo</h4>
+<p>Representa o treinamento no uso de pistolas, rifles e outras armas de fogo, incluindo segurança, recarga, mira e disparo.</p>
+<ul>
+  <li><strong>Aplicações:</strong> Carregar, recarregar, manter, apontar e disparar uma arma de fogo, além de reconhecer seus procedimentos básicos de manuseio.</li>
+  <li><strong>Abordagem recomendada:</strong> Destreza, pela coordenação e precisão necessárias.</li>
+  <li><strong>Exemplo:</strong> Um investigador dispara contra um cultista que tenta escapar por um corredor. O Mestre pede Destreza + Armas de Fogo.</li>
+</ul>
+
+<h4 id="conducao">Condução</h4>
+<p>É a capacidade de conduzir e manobrar meios de transporte, controlando velocidade, direção e resposta do veículo às condições do percurso.</p>
+<ul>
+  <li><strong>Aplicações:</strong> Guiar carruagens, carroças, bicicletas e automóveis, realizar manobras, controlar um veículo em terreno difícil ou conduzir sob pressão.</li>
+  <li><strong>Abordagem recomendada:</strong> Destreza ou Raciocínio. Destreza controla movimentos e manobras; Raciocínio avalia o percurso, o funcionamento do veículo e as decisões de condução.</li>
+  <li><strong>Exemplo:</strong> Um personagem tenta conduzir uma carruagem em alta velocidade por ruas estreitas de Backlund sem perder o controle. O Mestre pede Destreza + Condução.</li>
 </ul>
 
 <h4 id="etiqueta">Etiqueta</h4>
 <p>Abrange o conhecimento e a aplicação de normas sociais, protocolos, costumes e códigos de conduta de diferentes grupos e instituições.</p>
 <ul>
   <li><strong>Aplicações:</strong> Comportar-se em eventos formais, reconhecer hierarquias, evitar gafes, compreender protocolos e adaptar-se a ambientes sociais específicos.</li>
-  <li><strong>Abordagem recomendada:</strong> Inteligência ou Autocontrole. Inteligência é indicada para recordar regras e protocolos; Autocontrole, para manter a compostura e seguir o protocolo mesmo sob pressão ou provocação.</li>
+  <li><strong>Abordagem recomendada:</strong> Inteligência ou Autocontrole. Inteligência recorda regras e protocolos; Autocontrole mantém a compostura sob pressão.</li>
   <li><strong>Exemplo:</strong> Convidado a um jantar aristocrático, o personagem precisa saber como se dirigir ao anfitrião e seguir o protocolo. O Mestre pede Inteligência + Etiqueta.</li>
 </ul>
 
-<h4 id="intimidacao">Intimidação</h4>
-<p>É a capacidade de provocar receio, impor limites e coagir por meio de ameaças, postura ou demonstração de poder. A intimidação não precisa envolver violência física.</p>
+<h4 id="investigacao">Investigação</h4>
+<p>É a capacidade de examinar evidências, localizar informações e reconstruir acontecimentos a partir de pistas. Envolve observação dirigida, pesquisa e dedução.</p>
 <ul>
-  <li><strong>Aplicações:</strong> Afastar curiosos, pressionar um suspeito, impor autoridade, ameaçar um adversário ou interromper uma ação pela demonstração de firmeza.</li>
-  <li><strong>Abordagem recomendada:</strong> Autocontrole ou Força. Autocontrole é indicado para formular uma ameaça fria, deliberada e sem perder a compostura; Força, para uma ameaça baseada em superioridade física demonstrada.</li>
-  <li><strong>Exemplo:</strong> Um personagem encurrala um informante e exige respostas. O Mestre escolhe Autocontrole ou Força conforme a abordagem.</li>
+  <li><strong>Aplicações:</strong> Examinar uma cena, encontrar evidências, comparar depoimentos, pesquisar registros, reconstruir eventos ou identificar inconsistências.</li>
+  <li><strong>Abordagem recomendada:</strong> Raciocínio ou Inteligência. Raciocínio conecta pistas e deduz o que ocorreu; Inteligência pesquisa arquivos e aplica conhecimentos específicos.</li>
+  <li><strong>Exemplo:</strong> Ao examinar um escritório revirado, o personagem compara a posição dos objetos e tenta descobrir o que foi procurado. O Mestre pede Raciocínio + Investigação.</li>
 </ul>
 
-<h4 id="performance">Performance</h4>
-<p>Abrange a capacidade de entreter, emocionar ou prender a atenção de uma plateia por meio de apresentações. Pode envolver música, teatro, dança, oratória ou outras formas de expressão.</p>
+<h4 id="prestidigitacao">Prestidigitação</h4>
+<p>É a habilidade de realizar movimentos manuais discretos, rápidos e precisos. Abrange truques de mãos, manipulação e ocultação de pequenos objetos, carteirismo e furtos discretos; não se limita a apresentações de palco.</p>
 <ul>
-  <li><strong>Aplicações:</strong> Cantar, tocar um instrumento, atuar, declamar, realizar uma apresentação pública ou manter a atenção de uma plateia.</li>
-  <li><strong>Abordagem recomendada:</strong> Carisma ou Autocontrole. Carisma é indicado para criar conexão e envolver o público; Autocontrole, para uma apresentação que exige precisão, disciplina e domínio das próprias reações.</li>
-  <li><strong>Exemplo:</strong> Uma artista tenta manter a atenção de um salão enquanto transmite uma mensagem disfarçada em sua apresentação. O Mestre pede Carisma ou Autocontrole + Performance.</li>
+  <li><strong>Aplicações:</strong> Esconder um objeto na mão, retirar discretamente algo de um bolso, executar truques de cartas, manipular pequenos mecanismos ou trocar objetos sem ser percebido.</li>
+  <li><strong>Abordagem recomendada:</strong> Destreza, pela precisão e coordenação manual.</li>
+  <li><strong>Exemplo:</strong> Durante uma conversa, o personagem tenta retirar uma chave do bolso de alguém sem chamar atenção. O Mestre pede Destreza + Prestidigitação.</li>
 </ul>
 
-<h4 id="persuasao">Persuasão</h4>
-<p>É a capacidade de convencer alguém por meio de argumentos, apelos, negociação ou influência verbal. Pode ser franca e baseada em confiança ou calculada e estratégica.</p>
+<h4 id="sobrevivencia">Sobrevivência</h4>
+<p>Abrange conhecimentos e técnicas para permanecer vivo em ambientes hostis, encontrar recursos, orientar-se, rastrear e preparar abrigo. Também pode ser aplicada a áreas urbanas degradadas ou isoladas.</p>
 <ul>
-  <li><strong>Aplicações:</strong> Negociar, convencer, pedir apoio, apresentar argumentos, obter cooperação ou levar alguém a reconsiderar uma decisão.</li>
-  <li><strong>Abordagem recomendada:</strong> Carisma ou Manipulação. Carisma é indicado para apelos sinceros e construção de confiança; Manipulação, para argumentos estratégicos e influência calculada.</li>
-  <li><strong>Exemplo:</strong> O personagem tenta convencer um comerciante a fornecer informações em troca de um favor. O Mestre escolhe Carisma ou Manipulação + Persuasão.</li>
-</ul>
-
-<h4 id="sagacidade-urbana">Sagacidade Urbana</h4>
-<p>Representa o conhecimento prático das ruas e a capacidade de compreender redes informais, códigos, perigos e oportunidades do ambiente urbano.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Encontrar contatos, reconhecer códigos locais, identificar territórios de gangues, obter informações no submundo e perceber quando uma situação de rua é suspeita.</li>
-  <li><strong>Abordagem recomendada:</strong> Raciocínio ou Manipulação. Raciocínio é indicado para interpretar sinais e avaliar a situação; Manipulação, para lidar com contatos e conduzir negociações informais.</li>
-  <li><strong>Exemplo:</strong> Ao chegar a um bairro desconhecido, o personagem tenta descobrir quem controla a região e onde pode obter informações. O Mestre pede Raciocínio + Sagacidade Urbana.</li>
+  <li><strong>Aplicações:</strong> Encontrar água e alimento, orientar-se, rastrear, reconhecer perigos, montar abrigo e planejar a travessia de uma região difícil.</li>
+  <li><strong>Abordagem recomendada:</strong> Raciocínio ou Vigor. Raciocínio auxilia na orientação e no planejamento; Vigor, na resistência às exigências físicas.</li>
+  <li><strong>Exemplo:</strong> Perdido em uma floresta, o personagem procura água e um local seguro para passar a noite. O Mestre pede Raciocínio + Sobrevivência.</li>
 </ul>
 
 <h4 id="subterfugio">Subterfúgio</h4>
 <p>É a capacidade de enganar, ocultar intenções e sustentar versões falsas dos acontecimentos. Abrange mentiras, blefes, disfarces narrativos e criação de álibis.</p>
 <ul>
   <li><strong>Aplicações:</strong> Mentir, esconder intenções, sustentar um álibi, blefar, omitir informações de modo convincente ou manter uma história falsa sob questionamento.</li>
-  <li><strong>Abordagem recomendada:</strong> Manipulação. Manipulação é a abordagem recomendada, pois a perícia depende de conduzir a percepção alheia e controlar a informação apresentada.</li>
+  <li><strong>Abordagem recomendada:</strong> Manipulação, para conduzir a percepção alheia e controlar a informação apresentada.</li>
   <li><strong>Exemplo:</strong> Interrogado por um oficial, o personagem tenta sustentar uma versão falsa de onde esteve na noite anterior. O Mestre pede Manipulação + Subterfúgio.</li>
 </ul>
 
-<h3 id="pericias-conhecimento">Grupo Conhecimento</h3>
+<h3 id="conhecimentos">Grupo de Conhecimentos</h3>
 <p>
-  O grupo Conhecimento reúne formação, saberes técnicos, análise e interpretação de
-  fenômenos mundanos ou sobrenaturais. Ter uma Perícia elevada representa experiência
-  naquela área, mas não concede automaticamente recursos, poderes ou informações que
-  estejam fora do alcance do personagem.
+  Conhecimentos reúnem formação, saberes técnicos, análise e interpretação de fenômenos
+  mundanos ou sobrenaturais. No mundo Beyonder, conhecer um símbolo ou uma tradição não
+  significa compreender todos os segredos que ela oculta. Ter uma Proficiência elevada
+  representa experiência naquela área, mas não concede automaticamente recursos, poderes
+  ou informações fora do alcance do personagem.
 </p>
-<h4 id="ciencias">Ciências</h4>
-<p>Abrange o conhecimento e a aplicação de disciplinas científicas, como química, física, biologia, matemática e engenharia, de acordo com o desenvolvimento tecnológico do cenário.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Analisar substâncias, compreender mecanismos, interpretar resultados de experimentos, identificar propriedades de materiais ou resolver problemas técnicos.</li>
-  <li><strong>Abordagem recomendada:</strong> Inteligência ou Raciocínio. Inteligência é indicada para aplicar conhecimento estudado; Raciocínio, para analisar dados novos e resolver problemas por dedução.</li>
-  <li><strong>Exemplo:</strong> O personagem encontra um pó desconhecido e tenta identificar suas propriedades por meio de observação e testes simples. O Mestre pede Inteligência ou Raciocínio + Ciências.</li>
-</ul>
 
-<h4 id="estrutura-religiosa">Estrutura Religiosa</h4>
-<p>Representa o conhecimento sobre a organização das Igrejas e de outras instituições religiosas: hierarquias, funções, doutrinas, ritos, departamentos e relações institucionais.</p>
+<h4 id="ciencias">Ciências</h4>
+<p>Abrange disciplinas científicas como química, física, biologia, matemática e engenharia, conforme o desenvolvimento tecnológico do cenário.</p>
 <ul>
-  <li><strong>Aplicações:</strong> Identificar a autoridade de um clérigo, compreender a hierarquia de uma Igreja, reconhecer procedimentos religiosos e saber a quem recorrer dentro de uma instituição.</li>
-  <li><strong>Abordagem recomendada:</strong> Inteligência. Inteligência é a abordagem recomendada, pois envolve conhecimento institucional, doutrinário e organizacional.</li>
-  <li><strong>Exemplo:</strong> O personagem encontra um documento e tenta identificar qual departamento de uma Igreja o emitiu e a quem ele deveria ser encaminhado. O Mestre pede Inteligência + Estrutura Religiosa.</li>
+  <li><strong>Aplicações:</strong> Analisar substâncias, compreender mecanismos, interpretar experimentos, identificar propriedades de materiais ou resolver problemas técnicos.</li>
+  <li><strong>Abordagem recomendada:</strong> Inteligência ou Raciocínio. Inteligência aplica conhecimento estudado; Raciocínio analisa dados novos e resolve problemas por dedução.</li>
+  <li><strong>Exemplo:</strong> O personagem encontra um pó desconhecido e tenta identificar suas propriedades por meio de observação e testes simples. O Mestre pede Inteligência ou Raciocínio + Ciências.</li>
 </ul>
 
 <h4 id="historia">História</h4>
 <p>Abrange o conhecimento de acontecimentos, períodos, personagens, culturas e processos históricos. Pode incluir história política, religiosa, social, familiar e regional.</p>
 <ul>
   <li><strong>Aplicações:</strong> Recordar eventos, reconhecer símbolos de uma época, compreender a origem de uma tradição ou relacionar um acontecimento a seu contexto histórico.</li>
-  <li><strong>Abordagem recomendada:</strong> Inteligência. Inteligência é a abordagem recomendada, pois a perícia depende principalmente de conhecimento acumulado e memória.</li>
+  <li><strong>Abordagem recomendada:</strong> Inteligência, por depender principalmente de conhecimento acumulado e memória.</li>
   <li><strong>Exemplo:</strong> Ao encontrar o brasão de uma família extinta, o personagem tenta recordar sua origem e seu papel em conflitos antigos. O Mestre pede Inteligência + História.</li>
 </ul>
 
-<h4 id="investigacao">Investigação</h4>
-<p>É a capacidade de examinar evidências, localizar informações e reconstruir acontecimentos a partir de pistas. Envolve observação dirigida, pesquisa e dedução.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Examinar uma cena, encontrar evidências, comparar depoimentos, pesquisar registros, reconstruir uma sequência de eventos ou identificar inconsistências.</li>
-  <li><strong>Abordagem recomendada:</strong> Raciocínio ou Inteligência. Raciocínio é indicado para conectar pistas e deduzir o que ocorreu; Inteligência, para pesquisar arquivos e aplicar conhecimentos específicos.</li>
-  <li><strong>Exemplo:</strong> Ao examinar um escritório revirado, o personagem compara a posição dos objetos e tenta descobrir o que foi procurado. O Mestre pede Raciocínio + Investigação.</li>
-</ul>
-
 <h4 id="medicina">Medicina</h4>
-<p>Abrange conhecimentos sobre anatomia, doenças, ferimentos, diagnóstico, tratamento e procedimentos médicos. A perícia representa a formação e a prática necessárias para cuidar de pacientes.</p>
+<p>Abrange conhecimentos sobre anatomia, doenças, ferimentos, diagnóstico, tratamento e procedimentos médicos. Representa a formação e a prática necessárias para cuidar de pacientes.</p>
 <ul>
   <li><strong>Aplicações:</strong> Prestar primeiros socorros, diagnosticar sintomas, tratar ferimentos, reconhecer envenenamentos, realizar procedimentos e examinar cadáveres.</li>
-  <li><strong>Abordagem recomendada:</strong> Inteligência ou Raciocínio. Inteligência é indicada para aplicar conhecimento médico conhecido; Raciocínio, para interpretar sintomas e chegar a um diagnóstico a partir de sinais incompletos.</li>
+  <li><strong>Abordagem recomendada:</strong> Inteligência ou Raciocínio. Inteligência aplica conhecimento médico conhecido; Raciocínio interpreta sintomas e chega a diagnósticos com sinais incompletos.</li>
   <li><strong>Exemplo:</strong> O personagem examina uma vítima com sintomas incomuns e tenta descobrir se foi envenenada. O Mestre pede Raciocínio + Medicina.</li>
 </ul>
 
 <h4 id="natureza">Natureza</h4>
-<p>Representa o conhecimento sobre o mundo natural, incluindo fauna, flora, ecossistemas, habitats, ciclos climáticos, comportamento animal e características de ambientes naturais. Diferentemente de Sobrevivência, que se concentra em técnicas práticas para permanecer vivo e se orientar, Natureza trata principalmente da compreensão e identificação dos elementos naturais.</p>
+<p>Representa o conhecimento sobre o mundo natural, incluindo fauna, flora, ecossistemas, habitats, ciclos climáticos, comportamento animal e características de ambientes naturais. Diferentemente de Sobrevivência, concentra-se na compreensão e identificação dos elementos naturais.</p>
 <ul>
-  <li><strong>Aplicações:</strong> Identificar espécies de plantas e animais, reconhecer plantas venenosas ou medicinais, interpretar sinais de comportamento animal, compreender ecossistemas, reconhecer fenômenos naturais e avaliar como o clima ou o terreno afetam uma região.</li>
-  <li><strong>Abordagem recomendada:</strong> Inteligência ou Raciocínio. Inteligência é indicada para recordar conhecimentos sobre espécies e fenômenos naturais; Raciocínio, para interpretar sinais do ambiente e tirar conclusões a partir deles.</li>
+  <li><strong>Aplicações:</strong> Identificar espécies de plantas e animais, reconhecer plantas venenosas ou medicinais, interpretar sinais de comportamento animal, compreender ecossistemas e avaliar como clima e terreno afetam uma região.</li>
+  <li><strong>Abordagem recomendada:</strong> Inteligência ou Raciocínio. Inteligência recorda conhecimentos sobre espécies e fenômenos; Raciocínio interpreta sinais do ambiente.</li>
   <li><strong>Exemplo:</strong> O personagem encontra pegadas incomuns na margem de um rio e tenta identificar o animal, seus hábitos e a direção provável de seu deslocamento. O Mestre pede Raciocínio + Natureza.</li>
+</ul>
+
+<h4 id="navegacao">Navegação</h4>
+<p>Representa a capacidade de orientar-se e traçar rotas em terra e no mar, interpretando mapas, cartas náuticas, bússolas, astros, correntes e referências geográficas. Concentra-se em determinar a posição e planejar o percurso, não no controle direto do veículo.</p>
+<ul>
+  <li><strong>Aplicações:</strong> Traçar uma rota marítima, localizar-se em uma região desconhecida, interpretar uma carta náutica, calcular um percurso por referências naturais ou evitar áreas perigosas.</li>
+  <li><strong>Abordagem recomendada:</strong> Inteligência ou Raciocínio. Inteligência aplica conhecimentos de mapas, cartas e instrumentos; Raciocínio interpreta sinais e corrige a rota diante de circunstâncias inesperadas.</li>
+  <li><strong>Exemplo:</strong> Durante uma viagem pelos Cinco Mares, a tripulação perde de vista a costa em meio à neblina. O personagem consulta a carta náutica, a bússola e a posição das estrelas para determinar o rumo. O Mestre pede Inteligência ou Raciocínio + Navegação.</li>
 </ul>
 
 <h4 id="ocultismo">Ocultismo</h4>
 <p>Representa o conhecimento teórico sobre tradições esotéricas, símbolos, entidades, fenômenos sobrenaturais, artefatos e conceitos ocultos. Não concede, por si só, a capacidade de executar poderes ou rituais.</p>
 <ul>
   <li><strong>Aplicações:</strong> Reconhecer símbolos, recordar relatos sobre entidades, identificar conceitos Beyonder conhecidos ou compreender a origem provável de um fenômeno oculto.</li>
-  <li><strong>Abordagem recomendada:</strong> Inteligência. Inteligência é a abordagem recomendada para recordar e interpretar conhecimento ocultista.</li>
+  <li><strong>Abordagem recomendada:</strong> Inteligência, para recordar e interpretar conhecimento ocultista.</li>
   <li><strong>Exemplo:</strong> O personagem encontra um símbolo ritualístico e tenta reconhecer sua tradição e significado. O Mestre pede Inteligência + Ocultismo.</li>
 </ul>
 
-<h4 id="oficio">Ofício</h4>
-<p>Representa a prática de uma atividade manual, artesanal ou técnica que exige domínio de ferramentas, materiais e procedimentos próprios. A Perícia abrange a execução concreta de um trabalho e a experiência necessária para fabricar, ajustar, conservar ou reparar objetos. O jogador deve definir com o Mestre qual ofício o personagem conhece, como carpintaria, ferraria, alfaiataria, impressão, serralheria ou relojoaria.</p>
+<h4 id="submundo">Submundo</h4>
+<p>Representa o conhecimento das redes informais e criminosas: gangues, contrabandistas, informantes, mercados clandestinos, códigos de rua e áreas perigosas. Permite reconhecer quem controla uma região, como obter informações e como circular entre pessoas que vivem à margem da lei.</p>
 <ul>
-  <li><strong>Aplicações:</strong> Fabricar ou reparar objetos, trabalhar materiais específicos, utilizar ferramentas de um ofício, avaliar a qualidade de uma peça, realizar ajustes técnicos e reconhecer defeitos de fabricação.</li>
-  <li><strong>Abordagem recomendada:</strong> Destreza ou Inteligência. Destreza é indicada para trabalhos que exigem precisão manual e execução cuidadosa; Inteligência, para planejar a construção, compreender projetos ou diagnosticar problemas técnicos.</li>
-  <li><strong>Exemplo:</strong> O personagem encontra um relógio de bolso danificado e tenta identificar a peça defeituosa e consertar o mecanismo com as ferramentas disponíveis. O Mestre pede Inteligência ou Destreza + Ofício, conforme o aspecto principal da tarefa.</li>
+  <li><strong>Aplicações:</strong> Encontrar contatos, reconhecer códigos locais, identificar territórios de gangues, localizar mercados clandestinos e perceber relações entre grupos criminosos.</li>
+  <li><strong>Abordagem recomendada:</strong> Raciocínio ou Manipulação. Raciocínio interpreta sinais e relações; Manipulação facilita o contato e a negociação com informantes.</li>
+  <li><strong>Exemplo:</strong> Ao chegar a um bairro desconhecido, o personagem tenta descobrir quem controla a região e onde pode obter informações. O Mestre pede Raciocínio + Submundo.</li>
 </ul>
 
-<h4 id="percepcao-espiritual">Percepção Espiritual</h4>
-<p>É a capacidade de perceber, reconhecer e interpretar manifestações do mundo espiritual e sinais sobrenaturais que não são detectados pelos sentidos comuns. É uma Perícia, não um Atributo.</p>
+<h4 id="teologia">Teologia</h4>
+<p>Representa o conhecimento das religiões e de suas instituições, não apenas das divindades ou crenças. Abrange doutrinas, textos sagrados, símbolos, ritos e tradições, mas também a estrutura interna das Igrejas e de outras organizações religiosas: lideranças, hierarquias clericais, ordens, funções, jurisdições, templos, relações com autoridades e influência na vida social e política. No cenário de Lord of the Mysteries, inclui as Igrejas Ortodoxas e as práticas religiosas conhecidas pelo personagem, mas não revela automaticamente os segredos sobrenaturais ocultos por trás de uma fé.</p>
 <ul>
-  <li><strong>Aplicações:</strong> Perceber presença espiritual, identificar resíduos de poder Beyonder, notar uma anomalia espiritual ou reconhecer que um local foi afetado por uma manifestação sobrenatural.</li>
-  <li><strong>Abordagem recomendada:</strong> Raciocínio ou Determinação. Raciocínio é indicado para interpretar sinais e resíduos; Determinação, para manter o foco e perceber manifestações que exigem concentração ou resistência mental.</li>
-  <li><strong>Exemplo:</strong> Ao entrar em um quarto, o personagem tenta perceber se há uma presença espiritual oculta. O Mestre pede Raciocínio ou Determinação + Percepção Espiritual.</li>
-</ul>
-
-<h4 id="sobrevivencia">Sobrevivência</h4>
-<p>Abrange conhecimentos e técnicas para permanecer vivo em ambientes hostis, encontrar recursos, orientar-se, rastrear e preparar abrigo. Também pode se aplicar à sobrevivência em áreas urbanas degradadas ou isoladas.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Encontrar água e alimento, orientar-se, rastrear, reconhecer perigos naturais, montar abrigo e planejar a travessia de uma região difícil.</li>
-  <li><strong>Abordagem recomendada:</strong> Raciocínio ou Vigor. Raciocínio é indicado para orientação, planejamento e interpretação do ambiente; Vigor, para suportar as exigências físicas de uma jornada ou condição extrema.</li>
-  <li><strong>Exemplo:</strong> Perdido em uma floresta, o personagem procura água e um local seguro para passar a noite. O Mestre pede Raciocínio + Sobrevivência.</li>
+  <li><strong>Aplicações:</strong> Identificar a qual Igreja pertence um símbolo ou templo, reconhecer a função de seus clérigos, compreender hierarquias e jurisdições, distinguir ritos e doutrinas, conhecer ordens religiosas e identificar a influência de uma Igreja sobre autoridades e comunidades.</li>
+  <li><strong>Abordagem recomendada:</strong> Inteligência, para recordar e interpretar conhecimentos religiosos, doutrinários e institucionais.</li>
+  <li><strong>Exemplo:</strong> Ao encontrar documentos de uma paróquia em Backlund, o personagem tenta descobrir a qual Igreja ela pertence, a que autoridade clerical responde e quais ritos seguem seus membros. O Mestre pede Inteligência + Teologia.</li>
 </ul>
 
 <h3 id="especializacoes">Especializações</h3>
 <p>
   Uma especialização representa um <strong>campo específico de conhecimento, técnica,
-  prática ou experiência</strong> desenvolvido pelo personagem. Ela não é uma Perícia
-  separada, não recebe pontos próprios e não fica vinculada a uma única Perícia ou
-  categoria de teste. Uma especialização pode contribuir para diferentes ações, desde
-  que o jogador explique como aquele conhecimento é relevante para a situação.
+  prática ou experiência</strong> desenvolvido pelo personagem. Ela não é uma
+  Proficiência separada, não recebe pontos próprios e não fica vinculada a uma única
+  Proficiência ou categoria de teste: pode contribuir para ações diferentes quando sua
+  aplicação for direta e claramente demonstrável.
 </p>
 <p>
   Cada personagem recebe <strong>uma especialização inicial durante a criação</strong>.
-  O jogador deve discutir sua escolha com o Mestre, definindo um campo coerente com sua
-  história, ocupação, experiências e capacidades. Especializações adicionais serão
-  concedidas pelo Mestre ao longo da campanha como reconhecimento de grandes feitos
-  ou momentos memoráveis vividos pelo personagem.
+  O jogador deve discuti-la com o Mestre para definir um campo coerente com sua história,
+  ocupação e experiências. Especializações adicionais podem ser concedidas pelo Mestre
+  após grandes feitos ou momentos memoráveis da campanha.
 </p>
-<div class="box box-example">
-  <div class="box-title">Exemplo: especialização transversal</div>
+<div class="box box-note">
+  <div class="box-title">A especialização deve ser específica</div>
   <p>
-    Um personagem possui a especialização <strong>Cirurgia</strong>. Ela pode contribuir
-    em um teste de Medicina para realizar um procedimento, em Investigação para analisar
-    um ferimento e até em Intimidação se ele utilizar seu conhecimento anatômico para
-    demonstrar a gravidade de uma ameaça. Em cada situação, o teste continua utilizando
-    o Atributo e a Perícia adequados à abordagem descrita; Cirurgia acrescenta +1 somente
-    quando o conhecimento cirúrgico tiver relação clara com a ação.
+    A especialização precisa identificar uma área delimitada de conhecimento,
+    técnica ou prática. Termos amplos como <strong>Medicina</strong>,
+    <strong>Investigação</strong>, <strong>Conhecimento Oculto</strong> ou
+    <strong>Combate</strong> não são específicos o bastante. Prefira campos como
+    <strong>Cirurgia de Campo</strong>, <strong>Toxicologia</strong>,
+    <strong>Documentoscopia</strong>, <strong>Cartografia Costeira</strong>,
+    <strong>Falsificação de Documentos</strong>, <strong>História da Nobreza</strong>
+    ou <strong>Rituais de Proteção</strong>.
+  </p>
+  <p>
+    Uma especialização não concede bônus por uma associação vaga com a situação,
+    nem muda a natureza fundamental da ação. O jogador deve explicar qual parte
+    daquele conhecimento ou técnica está sendo aplicada; o Mestre decide se a
+    justificativa é suficiente.
+  </p>
+</div>
+<div class="box box-example">
+  <div class="box-title">Exemplo de aplicação em diferentes testes</div>
+  <p>
+    Um personagem com a especialização <strong>Cirurgia de Campo</strong> pode
+    receber o bônus ao realizar um procedimento, avaliar um ferimento ou identificar
+    a causa provável de uma lesão. Também pode usá-la em um teste de Intimidação
+    quando descrever com precisão as consequências anatômicas de um ferimento para
+    pressionar alguém. Nesse caso, o teste continua usando o Atributo e a Proficiência
+    adequados à abordagem; a especialização acrescenta +1 porque sua técnica participa
+    diretamente da ação. Ela não concederia o bônus, por exemplo, em uma negociação
+    sem qualquer relação com anatomia ou tratamento de ferimentos.
   </p>
 </div>
 <ul>
-  <li><strong>Exemplos de especialização:</strong> Cirurgia, Investigação Forense, Documentoscopia, Falsificação, Cartografia, Navegação Costeira, História da Nobreza e Truques de Cartas.</li>
-  <li>Quando a especialização contribuir de maneira clara e relevante para a ação, ela concede <strong>+1 ao teste</strong>, independentemente da Perícia utilizada.</li>
-  <li>O jogador deve explicar a relação entre a especialização e a ação; o Mestre decide se o bônus se aplica.</li>
-  <li>O bônus de especialização não se acumula com o bônus de outra especialização no mesmo teste.</li>
-  <li>A especialização não aumenta permanentemente uma Perícia, não substitui o treinamento exigido e não permite realizar uma atividade que o personagem não teria condições de executar.</li>
+  <li><strong>Outros exemplos:</strong> Investigação Forense, Toxicologia, Documentoscopia, Cartografia Costeira, Navegação Astronômica, História da Nobreza e Rituais de Proteção.</li>
+  <li>Quando a especialização contribuir de maneira clara e direta para a ação, ela concede <strong>+1</strong> ao teste, independentemente da Proficiência utilizada.</li>
+  <li>O jogador deve demonstrar como o campo específico da especialização participa da ação. Uma relação apenas temática ou vagamente relacionada não é suficiente.</li>
+  <li>O Mestre tem a decisão final sobre a pertinência da aplicação. A especialização não altera a natureza fundamental da ação nem substitui requisitos necessários para realizá-la.</li>
+  <li>O bônus de especialização não se acumula com outro bônus de especialização no mesmo teste.</li>
+  <li>Uma especialização não substitui a Proficiência ou o Atributo exigido, não garante sucesso e não permite realizar uma atividade que o personagem não teria condições de executar normalmente.</li>
 </ul>
-
-<div class="separator"></div>
 
 <h2 id="sistema-testes">Sistema de Testes</h2>
 
@@ -591,19 +631,19 @@
   </p>
   <p>
     O bônus total normalmente reúne <strong>Mod.(Atributo)</strong>,
-    <strong>Mod.(Perícia)</strong>, o bônus de uma especialização relevante e
+    <strong>Mod.(Proficiência)</strong>, o bônus de uma especialização relevante e
     quaisquer outros modificadores concedidos expressamente por uma regra,
     equipamento ou habilidade.
   </p>
   <p style="text-align:center; font-size:1.1em;">
-    <strong>2d10 + Mod.(Atributo) + Mod.(Perícia) + bônus aplicáveis ≥ CD</strong>
+    <strong>2d10 + Mod.(Atributo) + Mod.(Proficiência) + bônus aplicáveis ≥ CD</strong>
   </p>
   <p>
-    O Mestre escolhe o Atributo e a Perícia que melhor representam a abordagem
+    O Mestre escolhe o Atributo e a Proficiência que melhor representam a abordagem
     descrita pelo jogador. A coluna <strong>Abordagem recomendada</strong> das tabelas
     orienta essa escolha, mas não é uma associação obrigatória. Quando a ação depende
     somente de uma capacidade geral, pode ser solicitado um teste puro de Atributo,
-    sem Perícia. Não se soma mais de um Atributo ou mais de uma Perícia ao mesmo teste,
+    sem Proficiência. Não se soma mais de um Atributo ou mais de uma Proficiência ao mesmo teste,
     salvo se uma regra específica determinar o contrário.
   </p>
   <p>
@@ -622,9 +662,9 @@
 <h3 id="resolucao-teste">Como resolver um teste</h3>
 <ol>
   <li><strong>Declare a intenção:</strong> o jogador explica o que deseja alcançar e como pretende agir.</li>
-  <li><strong>Defina a abordagem:</strong> o Mestre escolhe o Atributo e a Perícia adequados à descrição.</li>
+  <li><strong>Defina a abordagem:</strong> o Mestre escolhe o Atributo e a Proficiência adequados à descrição.</li>
   <li><strong>Estabeleça a dificuldade:</strong> o Mestre determina uma CD ou define quem fará o teste oposto.</li>
-  <li><strong>Calcule o bônus total:</strong> some Mod.(Atributo), Mod.(Perícia) e os bônus que realmente se aplicarem.</li>
+  <li><strong>Calcule o bônus total:</strong> some Mod.(Atributo), Mod.(Proficiência) e os bônus que realmente se aplicarem.</li>
   <li><strong>Determine a condição:</strong> verifique se o teste é normal, tem Vantagem ou tem Desvantagem. Se houver fontes das duas condições, elas se anulam.</li>
   <li><strong>Role os dados:</strong> faça 2d10 normalmente; com Vantagem ou Desvantagem, role 3d10 e descarte um dado conforme a regra correspondente.</li>
   <li><strong>Some e compare:</strong> some os dois dados utilizados, acrescente o bônus total e compare o resultado à CD ou ao total do oponente.</li>
@@ -637,7 +677,7 @@
   <p>
     Edmund Harker tenta identificar uma adulteração em um contrato. O Mestre escolhe
     Raciocínio + Investigação e determina CD 15. Edmund possui <strong>Pontos.(RAC) = 4</strong>,
-    portanto Mod.(RAC) é +2; sua Perícia Investigação tem 3 pontos, portanto
+    portanto Mod.(RAC) é +2; sua Proficiência Investigação tem 3 pontos, portanto
     Mod.(Investigação) é +1. Seu bônus total é +3. Ele rola 2d10 e obtém
     <strong>7 e 8</strong>, cuja soma é 15.
   </p>
@@ -780,7 +820,7 @@
 <p>
   O Mestre pode conceder Vantagem ou impor Desvantagem quando as circunstâncias
   favorecem ou prejudicam significativamente a tentativa. A condição altera os
-  dados rolados, mas não muda os modificadores de Atributo, Perícia ou outros bônus
+  dados rolados, mas não muda os modificadores de Atributo, Proficiência ou outros bônus
   do personagem.
 </p>
 <ul>
@@ -902,33 +942,95 @@
 
 <h3 id="espiritualidade">Espiritualidade</h3>
 <p>
-  Espiritualidade representa a reserva de energia mística utilizada para alimentar
-  rituais e poderes Beyonder. É consumida quando o personagem ativa habilidades que
-  exigem esse recurso. Os custos específicos devem estar descritos nos poderes,
-  rituais ou regras do Caminho correspondente.
+  A Espiritualidade representa a capacidade do personagem de canalizar sua própria
+  essência espiritual. No sistema, ela funciona como uma reserva utilizada para
+  sustentar manifestações sobrenaturais, incluindo poderes Beyonder, feitiços e
+  determinados procedimentos ritualísticos. Sua quantidade máxima considera o
+  domínio das próprias reações, a força de vontade e a resistência do corpo diante
+  das exigências do mundo sobrenatural.
 </p>
 <div class="box box-rule">
-  <div class="box-title">Cálculo proposto para Espiritualidade</div>
-  <p style="text-align:center; font-size:1.15em;"><strong>Espiritualidade = Pontos.(RAC) + Pontos.(DET)</strong></p>
-  <p>
-    A fórmula antiga utilizava Percepção, Atributo que não faz parte da ficha atual.
-    Nesta revisão, Raciocínio ocupa esse lugar por representar a interpretação e a
-    análise de sinais, enquanto Determinação representa a capacidade de sustentar a
-    conexão e o foco mental. A fórmula utiliza os pontos dos Atributos, não seus
-    modificadores.
+  <div class="box-title">Cálculo da Espiritualidade Máxima</div>
+  <p style="text-align:center; font-size:1.15em;">
+    <strong>Espiritualidade Máxima = Pontos.(ACO) + Pontos.(DET) + Pontos.(VIG) + 2 × (10 − Sequência)</strong>
   </p>
   <p>
-    <strong>Exemplo:</strong> Pontos.(RAC) = 3 e Pontos.(DET) = 4 resultam em
-    <strong>7 pontos de Espiritualidade</strong>.
+    Utilize os valores de Pontos.(ACO), Pontos.(DET) e Pontos.(VIG), não os
+    modificadores. O bônus de Sequência é cumulativo: cada avanço acrescenta
+    2 pontos à capacidade máxima de Espiritualidade.
+  </p>
+  <table>
+    <thead><tr><th>Sequência</th><th>Bônus de Espiritualidade</th></tr></thead>
+    <tbody>
+      <tr><td>9</td><td>+2</td></tr>
+      <tr><td>8</td><td>+4</td></tr>
+      <tr><td>7</td><td>+6</td></tr>
+      <tr><td>6</td><td>+8</td></tr>
+      <tr><td>5</td><td>+10</td></tr>
+    </tbody>
+  </table>
+  <p>
+    <strong>Exemplo:</strong> um personagem com Pontos.(ACO) = 2, Pontos.(DET) = 2
+    e Pontos.(VIG) = 2 possui 8 pontos de Espiritualidade na Sequência 9
+    (2 + 2 + 2 + 2). Ao alcançar a Sequência 8, mantendo os mesmos Atributos,
+    sua Espiritualidade máxima passa a 10 pontos (2 + 2 + 2 + 4). Na Sequência 5,
+    terá 16 pontos (2 + 2 + 2 + 10).
   </p>
 </div>
-<div class="box box-warning">
-  <div class="box-title">Ponto de validação do sistema</div>
+<div class="box box-note">
+  <div class="box-title">Registro na ficha</div>
   <p>
-    A fórmula acima é uma adaptação proposta para substituir a antiga combinação
-    Percepção + Determinação. Ela deve ser testada e confirmada junto às regras de
-    poderes e rituais antes de ser considerada definitiva. As regras de recuperação
-    e os custos por habilidade não são definidos por esta fórmula.
+    Registre a Espiritualidade no formato <strong>Atual/Máxima</strong>. O valor máximo
+    corresponde à capacidade total do personagem; o valor atual diminui quando ele
+    utiliza efeitos que consomem Espiritualidade. Na criação, os valores atual e máximo
+    começam iguais.
+  </p>
+</div>
+
+<h4>Utilização da Espiritualidade</h4>
+<p>
+  A Espiritualidade é consumida quando uma habilidade, feitiço ou ritual indicar
+  expressamente um custo. O custo deve constar na descrição do efeito ou nas regras
+  específicas que o apresentam. Nem toda capacidade sobrenatural precisa consumir
+  Espiritualidade: efeitos passivos ou habilidades sem custo indicado não gastam
+  pontos por padrão.
+</p>
+<ul>
+  <li><strong>Poderes Beyonder:</strong> representam as capacidades concedidas pela poção e pelo Caminho. Quando um poder exigir Espiritualidade, sua descrição informa o custo e as condições de ativação.</li>
+  <li><strong>Feitiços:</strong> são efeitos místicos que o personagem aprendeu a executar por meio de conhecimento, instrução ou fórmulas específicas. Possuir Espiritualidade não concede, por si só, conhecimento de feitiços.</li>
+  <li><strong>Magia ritualística:</strong> pode exigir Espiritualidade para conduzir, sustentar ou completar o procedimento, mas também pode depender de preparação, símbolos, fórmulas, ingredientes, local apropriado ou auxílio de uma entidade. Gastar pontos não substitui esses requisitos.</li>
+</ul>
+<p>
+  A Espiritualidade disponível limita o uso dos efeitos que dependem dela. O personagem
+  não pode ativar uma habilidade cujo custo seja superior ao valor atual de sua reserva.
+  Custos contínuos ou adicionais só existem quando a descrição do efeito os determinar.
+</p>
+
+<h4>Recuperação da Espiritualidade</h4>
+<p>
+  A recuperação depende das regras, habilidades, itens ou condições que expressamente
+  permitam restaurar esse recurso. Não se deve presumir que uma pausa breve, a meditação
+  ou o simples encerramento de uma cena restaure Espiritualidade automaticamente.
+  Quando uma regra de recuperação for aplicada, o valor atual não pode ultrapassar
+  a Espiritualidade máxima do personagem.
+</p>
+
+<div class="box box-lore">
+  <div class="box-title">Espiritualidade e práticas místicas</div>
+  <p>
+    A Espiritualidade é a força utilizada pelo personagem, não um substituto para o
+    conhecimento necessário à prática sobrenatural. Um Beyonder pode possuir uma
+    reserva elevada e ainda desconhecer os símbolos, fórmulas, materiais ou condições
+    necessários para executar determinado ritual. Da mesma forma, um ritual pode buscar
+    auxílio de uma existência externa; nesse caso, a relação estabelecida, os requisitos
+    e os riscos envolvidos fazem parte do procedimento e não são anulados pelo gasto de
+    Espiritualidade.
+  </p>
+  <p>
+    Essa distinção é importante no universo de <em>Senhor dos Mistérios</em>: conhecer
+    uma fórmula não significa compreender plenamente aquilo com que ela estabelece
+    contato. O Mestre deve considerar o conhecimento do personagem, a preparação e as
+    possíveis consequências, além do custo numérico indicado.
   </p>
 </div>
 
@@ -1153,8 +1255,8 @@
 <div class="stat-block">
   <h4>Fórmulas e regras principais</h4>
   <div class="stat-line"><span class="stat-label">Modificador de Atributo:</span><span>Mod.(ATR) = Pontos.(ATR) − 2</span></div>
-  <div class="stat-line"><span class="stat-label">Modificador de Perícia:</span><span>Mod.(Perícia) = Pontos da Perícia − 2</span></div>
-  <div class="stat-line"><span class="stat-label">Teste:</span><span>2d10 + Mod.(Atributo) + Mod.(Perícia) + bônus aplicáveis ≥ CD</span></div>
+  <div class="stat-line"><span class="stat-label">Modificador de Proficiência:</span><span>Mod.(Proficiência) = Pontos da Proficiência − 2</span></div>
+  <div class="stat-line"><span class="stat-label">Teste:</span><span>2d10 + Mod.(Atributo) + Mod.(Proficiência) + bônus aplicáveis ≥ CD</span></div>
   <div class="stat-line"><span class="stat-label">Especialização:</span><span>+1 ao teste quando relevante; não acumula com outra especialização</span></div>
   <div class="stat-line"><span class="stat-label">Vantagem:</span><span>3d10; descarte o menor e some os dois maiores</span></div>
   <div class="stat-line"><span class="stat-label">Desvantagem:</span><span>3d10; descarte o maior e some os dois menores</span></div>
@@ -1162,7 +1264,7 @@
   <div class="stat-line"><span class="stat-label">Acerto Crítico:</span><span>dois dados utilizados mostram 10 e o total alcança a CD</span></div>
   <div class="stat-line"><span class="stat-label">Falha Crítica:</span><span>dois dados utilizados mostram 1 e o total fica abaixo da CD</span></div>
   <div class="stat-line"><span class="stat-label">PV:</span><span>3 + Pontos.(VIG) + (10 − Sequência)</span></div>
-  <div class="stat-line"><span class="stat-label">Espiritualidade:</span><span>Pontos.(RAC) + Pontos.(DET) — fórmula proposta nesta revisão</span></div>
+  <div class="stat-line"><span class="stat-label">Espiritualidade:</span><span>Pontos.(ACO) + Pontos.(DET) + Pontos.(VIG) + 2 × (10 − Sequência)</span></div>
   <div class="stat-line"><span class="stat-label">Iniciativa:</span><span>2d10 + Mod.(DES) + Mod.(RAC)</span></div>
   <div class="stat-line"><span class="stat-label">Defesa:</span><span>10 + Mod.(DES); fórmulas alternativas são escolhidas, não somadas</span></div>
   <div class="stat-line"><span class="stat-label">Salvaguardas:</span><span>Média arredondada para baixo dos modificadores dos dois Atributos indicados</span></div>
@@ -1176,12 +1278,12 @@
 <div class="box box-warning">
   <div class="box-title">Pontos que exigem validação em jogo</div>
   <p>
-    A fórmula de Espiritualidade, a substituição de Percepção por Raciocínio na
-    Iniciativa e a nova combinação de Atributos da Salvaguarda de Espírito foram
-    propostas para manter a coerência após a atualização da ficha. Recomenda-se
-    testá-las em sessões e confirmar seus efeitos antes de tratá-las como regras
-    definitivas. As regras específicas de armaduras e seus níveis de Limiar também
-    devem ser detalhadas no capítulo de Equipamentos.
+    A substituição de Percepção por Raciocínio na Iniciativa e a combinação
+    de Atributos da Salvaguarda de Espírito foram propostas para manter a coerência
+    após a atualização da ficha. Recomenda-se testá-las em sessões e confirmar seus
+    efeitos antes de tratá-las como regras definitivas. As regras específicas de
+    armaduras e seus níveis de Limiar também devem ser detalhadas no capítulo de
+    Equipamentos.
   </p>
 </div>
 
@@ -1203,4 +1305,3 @@
 
 </body>
 </html>
-
