@@ -609,7 +609,7 @@
   <li>Quando a especialização contribuir de maneira clara e direta para a ação, ela concede <strong>+1</strong> ao teste, independentemente da Proficiência utilizada.</li>
   <li>O jogador deve demonstrar como o campo específico da especialização participa da ação. Uma relação apenas temática ou vagamente relacionada não é suficiente.</li>
   <li>O Mestre tem a decisão final sobre a pertinência da aplicação. A especialização não altera a natureza fundamental da ação nem substitui requisitos necessários para realizá-la.</li>
-  <li>O bônus de especialização não se acumula com outro bônus de especialização no mesmo teste.</li>
+  <li>Bônus de especializações diferentes podem se acumular quando cada uma contribuir de forma direta e comprovável para a mesma ação; cada especialização pertinente acrescenta +1 ao teste.</li>
   <li>Uma especialização não substitui a Proficiência ou o Atributo exigido, não garante sucesso e não permite realizar uma atividade que o personagem não teria condições de executar normalmente.</li>
 </ul>
 
@@ -647,10 +647,10 @@
     salvo se uma regra específica determinar o contrário.
   </p>
   <p>
-    Se uma especialização for diretamente relevante, acrescente seu +1 ao bônus total.
-    O bônus de especialização não se acumula com o de outra especialização no mesmo
-    teste. Outros modificadores só são aplicados quando uma regra, equipamento ou
-    habilidade os conceder expressamente.
+    Cada especialização diretamente relevante acrescenta +1 ao bônus total. Bônus de
+    especializações diferentes podem se acumular quando cada campo específico
+    participar de forma direta e comprovável da mesma ação. Outros modificadores só
+    são aplicados quando uma regra, equipamento ou habilidade os conceder expressamente.
   </p>
   <p>
     Os dois dados são somados: a rolagem normal pode produzir resultados entre 2 e 20,
@@ -1001,18 +1001,64 @@
   <li><strong>Magia ritualística:</strong> pode exigir Espiritualidade para conduzir, sustentar ou completar o procedimento, mas também pode depender de preparação, símbolos, fórmulas, ingredientes, local apropriado ou auxílio de uma entidade. Gastar pontos não substitui esses requisitos.</li>
 </ul>
 <p>
-  A Espiritualidade disponível limita o uso dos efeitos que dependem dela. O personagem
-  não pode ativar uma habilidade cujo custo seja superior ao valor atual de sua reserva.
-  Custos contínuos ou adicionais só existem quando a descrição do efeito os determinar.
+  Normalmente, o personagem não pode ativar um efeito cujo custo seja superior à
+  Espiritualidade atual. Entretanto, é possível forçar a manifestação de um poder
+  mesmo sem possuir pontos suficientes, assumindo o risco de prejudicar a própria
+  Lucidez. Essa possibilidade não elimina outros requisitos de ativação nem substitui
+  eventuais testes exigidos pela habilidade.
 </p>
+
+<div class="box box-warning">
+  <div class="box-title">Forçar poderes sem Espiritualidade suficiente</div>
+  <p>
+    Quando o personagem utiliza um poder Beyonder sem possuir Espiritualidade suficiente
+    para pagar seu custo, ele pode ainda assim forçar sua manifestação. Nesse caso,
+    gasta toda a Espiritualidade que ainda possuir e contabiliza como <strong>excedente</strong>
+    a parte do custo que não pôde pagar.
+  </p>
+  <p>
+    Para cada utilização nessa condição, realiza um teste de resistência espiritual:
+    role <strong>2d10 + Mod.(ACO) + Mod.(DET)</strong> contra uma Classe de Dificuldade
+    igual a <strong>8 + o total acumulado de Espiritualidade excedente</strong>. Some
+    ao excedente anterior a parcela não paga pelo novo poder antes de calcular a CD.
+    Assim, quanto mais o personagem força sua Espiritualidade além do limite, mais
+    difícil se torna suportar o esforço.
+  </p>
+  <p>
+    <strong>Exemplo:</strong> um personagem com 0 pontos de Espiritualidade força um
+    poder que custa 3 pontos. Seu excedente acumulado passa a 3, portanto o teste é
+    realizado contra <strong>CD 11</strong> (8 + 3). Se, em seguida, utilizar outro
+    poder que custa 2 pontos sem recuperar Espiritualidade, o excedente acumulado
+    passa a 5 e o próximo teste será contra <strong>CD 13</strong> (8 + 3 + 2).
+  </p>
+  <p>
+    Se o personagem ainda possuir parte do custo, apenas a parcela que ultrapassar
+    sua reserva será considerada excedente. Por exemplo, se possuir 1 ponto e utilizar
+    um poder de custo 3, apenas 2 pontos serão acrescentados ao excedente acumulado.
+  </p>
+  <p>
+    Esse teste mede o desgaste de forçar a própria essência espiritual, não substitui
+    os testes ou condições normais do poder. <strong>Em caso de falha, o personagem
+    perde 1 ponto de Lucidez.</strong> O excedente acumulado é mantido enquanto ele
+    continuar utilizando poderes sem recuperar Espiritualidade; ao recuperar pontos,
+    uma nova contagem de excedente começa a partir de zero.
+  </p>
+</div>
 
 <h4>Recuperação da Espiritualidade</h4>
 <p>
-  A recuperação depende das regras, habilidades, itens ou condições que expressamente
-  permitam restaurar esse recurso. Não se deve presumir que uma pausa breve, a meditação
-  ou o simples encerramento de uma cena restaure Espiritualidade automaticamente.
-  Quando uma regra de recuperação for aplicada, o valor atual não pode ultrapassar
-  a Espiritualidade máxima do personagem.
+  A Espiritualidade pode ser recuperada por meio de descanso. Existem duas formas
+  de recuperação, cada uma com seu próprio limite de utilização:
+</p>
+<ul>
+  <li><strong>Descanso completo:</strong> após 8 horas de descanso, o personagem recupera toda a Espiritualidade, até seu valor máximo. Essa recuperação pode ser realizada <strong>uma vez a cada período de 24 horas</strong>.</li>
+  <li><strong>Descanso breve:</strong> após 1 hora de descanso, o personagem recupera <strong>1d10 + (10 − Sequência)</strong> pontos de Espiritualidade, sem ultrapassar seu valor máximo. Essa recuperação pode ser realizada <strong>até duas vezes por dia</strong>.</li>
+</ul>
+<p>
+  Os pontos recuperados não podem elevar a reserva acima da Espiritualidade máxima
+  do personagem. A recuperação também encerra o excedente acumulado por uso forçado;
+  caso volte a utilizar um poder sem possuir pontos suficientes, uma nova contagem
+  será iniciada.
 </p>
 
 <div class="box box-lore">
@@ -1060,157 +1106,80 @@
 
 <h3 id="defesa">Defesa</h3>
 <p>
-  A Defesa representa a dificuldade de atingir o personagem. O atacante precisa
-  igualar ou superar esse valor em seu teste de ataque. A Defesa padrão considera
-  a Destreza e não recebe automaticamente um bônus por uso de armadura.
+  A Defesa representa a dificuldade de atingir o personagem. Em um ataque, o
+  atacante realiza o teste indicado pela ação; o ataque acerta quando o resultado
+  final iguala ou supera a Defesa do alvo. A Defesa padrão considera a Destreza e
+  não recebe automaticamente um bônus por uso de armadura.
 </p>
 <div class="box box-rule">
   <div class="box-title">Cálculo padrão da Defesa</div>
   <p style="text-align:center; font-size:1.15em;"><strong>Defesa = 10 + Mod.(DES)</strong></p>
   <p>
-    Mod.(DES) é calculado por Pontos.(DES) − 2. Se mais de uma fonte oferecer uma
-    fórmula de Defesa — por exemplo, a fórmula padrão, um equipamento ou uma habilidade
-    Beyonder —, o jogador escolhe qual fórmula utilizar. <strong>As fórmulas não se
-    somam</strong> e seus resultados não são combinados. Um equipamento pode conceder
-    uma fórmula alternativa ou um bônus específico, mas isso deve estar indicado em
-    sua descrição.
+    O modificador é calculado por <strong>Mod.(DES) = Pontos.(DES) − 2</strong>.
+    Se mais de uma fonte oferecer uma fórmula de Defesa — como a regra padrão,
+    um equipamento ou uma habilidade Beyonder —, o jogador escolhe qual fórmula
+    utilizar. <strong>As fórmulas não se somam</strong>. Bônus que não substituam
+    a fórmula só são aplicados quando a regra que os concede permitir isso.
   </p>
   <p>
-    <strong>Exemplo:</strong> Pontos.(DES) = 3 resulta em Mod.(DES) +1; pela fórmula
-    padrão, a Defesa é <strong>10 + 1 = 11</strong>.
+    <strong>Exemplo:</strong> com Pontos.(DES) = 3, o personagem possui Mod.(DES) +1
+    e Defesa 11 pela fórmula padrão.
   </p>
 </div>
-
-<h3 id="salvaguardas">Salvaguardas</h3>
-<p>
-  Salvaguardas são testes realizados para resistir a efeitos que ameaçam o corpo,
-  a mente ou o espírito. Cada tipo utiliza a média dos modificadores de dois Atributos,
-  arredondada para baixo. O Mestre escolhe a Salvaguarda de acordo com a natureza
-  predominante do efeito.
-</p>
-<table>
-  <thead><tr><th>Salvaguarda</th><th>Atributos utilizados</th><th>Modificador</th><th>Exemplos de resistência</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Corpo</strong></td><td>Força + Vigor</td><td>(Mod.(FOR) + Mod.(VIG)) ÷ 2, arredondado para baixo</td><td>Venenos, doenças, fadiga extrema e efeitos que alteram ou debilitam o corpo.</td></tr>
-    <tr><td><strong>Mente</strong></td><td>Inteligência + Determinação</td><td>(Mod.(INT) + Mod.(DET)) ÷ 2, arredondado para baixo</td><td>Controle mental, ilusões, confusão e intrusões sobre pensamentos.</td></tr>
-    <tr><td><strong>Espírito</strong></td><td>Autocontrole + Determinação</td><td>(Mod.(ACO) + Mod.(DET)) ÷ 2, arredondado para baixo</td><td>Medo sobrenatural, possessão, corrupção espiritual e ataques dirigidos à identidade do personagem.</td></tr>
-  </tbody>
-</table>
-<div class="box box-note">
-  <div class="box-title">Adaptação da Salvaguarda de Espírito</div>
-  <p>
-    A antiga combinação utilizava Percepção e Carisma, mas Percepção foi removida
-    da ficha. Nesta revisão, a combinação proposta é Autocontrole + Determinação:
-    Autocontrole representa a capacidade de regular as próprias reações e preservar a compostura diante de influências externas;
-    Determinação representa a resistência da vontade. Essa associação deve ser
-    validada em jogo junto às demais Salvaguardas.
-  </p>
-</div>
-<div class="box box-example">
-  <div class="box-title">Exemplo: Salvaguarda de Espírito</div>
-  <p>
-    Uma entidade tenta possuir um personagem. Ele possui Pontos.(ACO) = 3
-    (Mod. +1) e Pontos.(DET) = 2 (Mod. +0). Seu modificador de Salvaguarda de Espírito
-    é (1 + 0) ÷ 2 = 0, arredondado para baixo. Contra CD 15, ele rola 2d10 + 0.
-  </p>
-</div>
-<div class="box box-rule">
-  <div class="box-title">Salvaguarda passiva</div>
-  <p>
-    Quando uma habilidade determinar que o atacante deve superar a resistência do alvo
-    sem pedir uma rolagem defensiva, utilize a dificuldade passiva correspondente:
-  </p>
-  <p style="text-align:center; font-size:1.1em;"><strong>ND da Salvaguarda = 10 + Modificador da Salvaguarda</strong></p>
-  <p>
-    O modificador da Salvaguarda é a média arredondada para baixo dos dois modificadores
-    de Atributo indicados na tabela. Essa dificuldade passiva é distinta da Defesa:
-    cada uma resiste a tipos diferentes de ações e efeitos.
-  </p>
-</div>
-
-<h3 id="lucidez">Lucidez</h3>
-<p>
-  Lucidez representa a estabilidade mental e a capacidade do personagem de manter
-  sua percepção da realidade diante de experiências sobrenaturais. Pode ser afetada
-  por horrores incompreensíveis, traumas, influências mentais e outras situações
-  determinadas pelas regras do cenário.
-</p>
-<div class="box box-rule">
-  <div class="box-title">Lucidez inicial</div>
-  <p style="text-align:center; font-size:1.15em;"><strong>Lucidez inicial = 7</strong></p>
-  <p>
-    Todos os personagens começam com <strong>7 pontos de Lucidez</strong>,
-    independentemente dos valores de seus Atributos. Não é necessário realizar
-    qualquer cálculo na criação do personagem.
-  </p>
-</div>
-<div class="box box-warning">
-  <div class="box-title">Perda e recuperação de Lucidez</div>
-  <p>
-    As regras de perda, recuperação, condições críticas e consequências da Lucidez
-    estão no Livro do Mestre — Loucura &amp; Lucidez. A criação de personagem não
-    define, por si só, quando um ponto é perdido ou recuperado.
-  </p>
-</div>
-<p>
-  A Lucidez é uma mecânica própria do RPG, inspirada nos temas de corrupção,
-  influência sobrenatural e perda de controle presentes em <em>Senhor dos Mistérios</em>.
-  Ela não deve ser interpretada como uma medida literal ou universal da sanidade de
-  todos os personagens do cânone.
-</p>
 
 <h3 id="blindagem-limiares">Blindagem, armaduras e Limiares de Dano</h3>
 <p>
-  A <strong>Armadura</strong> é um equipamento. A <strong>Blindagem</strong> é um recurso
-  de proteção que pode ser concedido por uma armadura, por poderes Beyonder ou por outras
-  fontes. Esses termos não são intercambiáveis: uma armadura pode conceder pontos de
-  Blindagem e estabelecer Limiares de Dano próprios, enquanto uma fonte diferente pode
-  conceder Blindagem sem ser uma armadura.
+  <strong>Armadura</strong> é um equipamento. <strong>Blindagem</strong> é um recurso
+  de proteção que pode ser concedido por uma armadura, por poderes Beyonder ou por
+  outras fontes. Uma armadura pode conceder pontos de Blindagem e modificar os
+  Limiares de Dano; uma fonte diferente também pode conceder Blindagem sem ser
+  uma armadura.
 </p>
 <p>
-  A descrição de cada armadura deve indicar separadamente a quantidade de pontos de
-  Blindagem concedida e o nível ou os valores de Limiar de Dano que ela proporciona.
-  Não existe cálculo inicial de Blindagem. O personagem só recebe esse recurso quando
-  uma armadura, poder Beyonder ou outra fonte o conceder expressamente.
+  A descrição de cada armadura deve informar separadamente a quantidade de pontos
+  de Blindagem concedida e os valores ou a regra de alteração dos Limiares de Dano.
+  Não existe cálculo inicial de Blindagem: o personagem só recebe esse recurso
+  quando uma fonte o concede expressamente. O uso de armadura também não altera
+  automaticamente a Defesa.
 </p>
 <div class="box box-note">
   <div class="box-title">Registro da Blindagem na ficha</div>
   <p>
-    Quando receber Blindagem, conte os quadrados destinados a esse recurso e registre
-    a quantidade total seguida de uma barra (/). Por exemplo, uma fonte que conceda
-    3 pontos deve ser registrada como <strong>3/</strong>. Marque os quadrados conforme
-    gastar pontos de Blindagem para reduzir danos, respeitando o limite por ataque.
+    Ao receber Blindagem, conte os quadrados destinados ao recurso e registre a
+    quantidade total seguida de uma barra (/). Por exemplo, uma fonte que conceda
+    3 pontos deve ser registrada como <strong>3/</strong>. Marque os quadrados
+    gastos quando utilizar a Blindagem. A fonte que concede o recurso determina
+    eventuais condições especiais de obtenção ou recuperação.
   </p>
 </div>
+
 <div class="box box-rule">
-  <div class="box-title">Redução de dano pela Blindagem</div>
+  <div class="box-title">Como determinar a categoria de dano</div>
   <p>
-    Ao sofrer um ataque, o personagem pode gastar <strong>1 ponto de Blindagem</strong>
-    para reduzir a categoria do dano recebido em um nível:
+    Os Limiares de Dano definem a categoria de um ferimento de acordo com o valor
+    de dano causado pelo ataque. Primeiro, determine o valor de dano conforme a
+    habilidade, arma ou efeito utilizado. Depois, compare esse valor com os dois
+    limiares do personagem:
   </p>
-  <table>
-    <thead><tr><th>Dano recebido</th><th>Após gastar 1 ponto de Blindagem</th></tr></thead>
-    <tbody>
-      <tr><td>Dano Severo</td><td>Dano Maior</td></tr>
-      <tr><td>Dano Maior</td><td>Dano Menor</td></tr>
-      <tr><td>Dano Menor</td><td>Nenhum dano</td></tr>
-    </tbody>
-  </table>
+  <ul>
+    <li><strong>Dano Menor:</strong> valor inferior ao primeiro limiar.</li>
+    <li><strong>Dano Maior:</strong> valor igual ou superior ao primeiro limiar, mas inferior ao segundo.</li>
+    <li><strong>Dano Severo:</strong> valor igual ou superior ao segundo limiar.</li>
+  </ul>
   <p>
-    Independentemente da quantidade total de Blindagem que possua, o personagem só
-    pode utilizar <strong>1 ponto por ataque sofrido</strong>. Portanto, não pode gastar
-    vários pontos para reduzir o mesmo ataque em mais de um nível. A fonte que concede
-    Blindagem determina eventuais condições especiais de obtenção ou recuperação.
+    O primeiro limiar determina quando o dano passa de Menor para Maior; o segundo
+    determina quando passa de Maior para Severo. Utilize sempre os limiares atuais
+    do personagem, considerando eventuais alterações fornecidas por armaduras ou
+    outros efeitos.
   </p>
 </div>
+
 <div class="box box-rule">
-  <div class="box-title">Limiares de Dano sem Armadura</div>
+  <div class="box-title">Limiares naturais de Dano sem Armadura</div>
   <p>
-    Os Limiares de Dano determinam a progressão entre as três categorias de ferimento.
-    Sem uma armadura que modifique esses valores, utilize os limiares naturais da
-    Sequência do personagem. Neste livro, a progressão considerada vai da Sequência 9
-    até a <strong>Sequência 5</strong>; não são apresentados valores de Sequências acima
-    desse estágio.
+    Na ausência de uma armadura ou efeito que modifique os valores, utilize os
+    limiares naturais determinados pela Sequência. Neste livro, a progressão
+    apresentada vai da Sequência 9 até a <strong>Sequência 5</strong>.
   </p>
   <table>
     <thead><tr><th>Sequência</th><th>Menor → Maior</th><th>Maior → Severo</th></tr></thead>
@@ -1223,32 +1192,72 @@
     </tbody>
   </table>
   <p>
-    <strong>Menor para Maior:</strong> 2 + (10 − Sequência).<br>
+    <strong>Menor para Maior:</strong> 2 + (10 − Sequência).<br/>
     <strong>Maior para Severo:</strong> 4 + 2 × (10 − Sequência).
   </p>
   <p>
-    Quando uma armadura modificar os Limiares de Dano, utilize os valores ou o nível
-    de proteção indicados em sua descrição. Não acrescente um bônus genérico de armadura
+    Quando uma armadura modificar os Limiares de Dano, utilize os valores ou a
+    regra indicados em sua descrição. Não acrescente um bônus genérico de armadura
     aos limiares: o equipamento deve especificar como sua proteção altera os valores.
   </p>
 </div>
+
 <div class="box box-note">
   <div class="box-title">Categorias de ferimento e marcação de PV</div>
+  <p>Depois de determinar a categoria do dano, marque os Pontos de Vida correspondentes:</p>
   <table>
     <thead><tr><th>Categoria</th><th>PV marcados</th></tr></thead>
-    <tbody><tr><td>Dano Menor</td><td>1 PV</td></tr><tr><td>Dano Maior</td><td>2 PV</td></tr><tr><td>Dano Severo</td><td>3 PV</td></tr></tbody>
+    <tbody>
+      <tr><td>Dano Menor</td><td>1 PV</td></tr>
+      <tr><td>Dano Maior</td><td>2 PV</td></tr>
+      <tr><td>Dano Severo</td><td>3 PV</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="box box-rule">
+  <div class="box-title">Como utilizar a Blindagem</div>
+  <p>
+    Depois de identificar a categoria do dano recebido, o personagem pode gastar
+    <strong>1 ponto de Blindagem</strong> para reduzir essa categoria em um nível,
+    antes de marcar os PV. A redução segue esta ordem:
+  </p>
+  <table>
+    <thead><tr><th>Dano recebido</th><th>Após gastar 1 ponto de Blindagem</th></tr></thead>
+    <tbody>
+      <tr><td>Dano Severo</td><td>Dano Maior</td></tr>
+      <tr><td>Dano Maior</td><td>Dano Menor</td></tr>
+      <tr><td>Dano Menor</td><td>Nenhum dano</td></tr>
+    </tbody>
   </table>
   <p>
-    Ao resolver um ferimento, marque os quadrados de PV correspondentes à categoria
-    de dano. A Blindagem pode reduzir a categoria antes que os PV sejam marcados,
-    desde que o personagem possua um ponto disponível e escolha utilizá-lo.
+    O limite é de <strong>1 ponto de Blindagem por ataque sofrido</strong>,
+    independentemente da quantidade total que o personagem possua. Não é possível
+    gastar vários pontos para reduzir o mesmo ataque em mais de um nível. Se o dano
+    for reduzido a Nenhum dano, nenhum PV é marcado por aquele ataque.
   </p>
 </div>
+
+<div class="box box-example">
+  <div class="box-title">Exemplo — Sequência 8</div>
+  <p>
+    Um personagem na Sequência 8, sem armadura que modifique seus limiares, possui
+    Menor → Maior igual a <strong>4</strong> e Maior → Severo igual a <strong>8</strong>.
+    Assim, um ataque que cause 3 pontos de dano provoca Dano Menor; com 5 pontos,
+    provoca Dano Maior; com 8 pontos, provoca Dano Severo.
+  </p>
+  <p>
+    Se o personagem receber 5 pontos de dano, o resultado será Dano Maior, que
+    normalmente marcaria 2 PV. Caso gaste 1 ponto de Blindagem, o ferimento cai
+    para Dano Menor e ele marca apenas 1 PV. Se sofrer Dano Menor e gastar 1 ponto,
+    o dano é reduzido a Nenhum dano e não marca PV.
+  </p>
+</div>
+
 <p>
   O deslocamento básico de um personagem é de <strong>9 metros</strong>, salvo quando
   uma habilidade, condição ou equipamento alterar esse valor.
 </p>
-
 <div class="separator"></div>
 
 <h2 id="resumo">Resumo Rápido de Referência</h2>
@@ -1257,14 +1266,15 @@
   <div class="stat-line"><span class="stat-label">Modificador de Atributo:</span><span>Mod.(ATR) = Pontos.(ATR) − 2</span></div>
   <div class="stat-line"><span class="stat-label">Modificador de Proficiência:</span><span>Mod.(Proficiência) = Pontos da Proficiência − 2</span></div>
   <div class="stat-line"><span class="stat-label">Teste:</span><span>2d10 + Mod.(Atributo) + Mod.(Proficiência) + bônus aplicáveis ≥ CD</span></div>
-  <div class="stat-line"><span class="stat-label">Especialização:</span><span>+1 ao teste quando relevante; não acumula com outra especialização</span></div>
+  <div class="stat-line"><span class="stat-label">Especialização:</span><span>+1 por especialização pertinente; bônus de especializações diferentes podem se acumular</span></div>
   <div class="stat-line"><span class="stat-label">Vantagem:</span><span>3d10; descarte o menor e some os dois maiores</span></div>
   <div class="stat-line"><span class="stat-label">Desvantagem:</span><span>3d10; descarte o maior e some os dois menores</span></div>
   <div class="stat-line"><span class="stat-label">Anulação:</span><span>uma Vantagem cancela uma Desvantagem; fontes não acumulam</span></div>
   <div class="stat-line"><span class="stat-label">Acerto Crítico:</span><span>dois dados utilizados mostram 10 e o total alcança a CD</span></div>
   <div class="stat-line"><span class="stat-label">Falha Crítica:</span><span>dois dados utilizados mostram 1 e o total fica abaixo da CD</span></div>
   <div class="stat-line"><span class="stat-label">PV:</span><span>3 + Pontos.(VIG) + (10 − Sequência)</span></div>
-  <div class="stat-line"><span class="stat-label">Espiritualidade:</span><span>Pontos.(ACO) + Pontos.(DET) + Pontos.(VIG) + 2 × (10 − Sequência)</span></div>
+  <div class="stat-line"><span class="stat-label">Espiritualidade:</span><span>Pontos.(ACO) + Pontos.(DET) + Pontos.(VIG) + 2 × (10 − Sequência); uso excedente: teste 2d10 + Mod.(ACO) + Mod.(DET) contra CD 8 + excedente acumulado</span></div>
+  <div class="stat-line"><span class="stat-label">Recuperação da Espiritualidade:</span><span>8 horas: recuperação total, 1 vez a cada 24 horas; 1 hora: 1d10 + (10 − Sequência), até 2 vezes por dia</span></div>
   <div class="stat-line"><span class="stat-label">Iniciativa:</span><span>2d10 + Mod.(DES) + Mod.(RAC)</span></div>
   <div class="stat-line"><span class="stat-label">Defesa:</span><span>10 + Mod.(DES); fórmulas alternativas são escolhidas, não somadas</span></div>
   <div class="stat-line"><span class="stat-label">Salvaguardas:</span><span>Média arredondada para baixo dos modificadores dos dois Atributos indicados</span></div>
