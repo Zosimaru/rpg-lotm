@@ -217,11 +217,10 @@
 </div>
 
 <p>
-  Os marcos correspondem a percentuais do total exigido para a digestão atual. Se uma Falha
-  no Teste de Consumo elevar a exigência para 150 Pontos de Digestão, os marcos continuam
-  sendo calculados proporcionalmente a esse novo total, arredondando para cima quando
-  necessário. Atingir um marco não concede Pontos de Digestão por si só, mas permite avançar
-  na Sintonia.
+  Os marcos correspondem a percentuais do total de <strong>100 Pontos de Digestão</strong>
+  exigidos para a poção atual. Assim, as oportunidades de Sintonia ocorrem sempre ao alcançar
+  25, 50, 75 e 100 pontos. Atingir um marco não concede Pontos de Digestão por si só, mas
+  permite avançar na Sintonia.
 </p>
 
 <h3 id="sintonia">Sintonia das Sequências</h3>
@@ -276,15 +275,6 @@
   Sequência. Cada marco permite escolher um poder por Sequência alcançada; não se escolhe
   mais de um poder da mesma Sequência no mesmo marco.
 </p>
-
-<div class="box box-note">
-  <div class="box-title">Sintonia e digestão incompleta</div>
-  <p>
-    Se a poção for mal digerida e a exigência passar de 100 para 150 Pontos de Digestão,
-    os marcos de Sintonia também são calculados sobre o novo total. Assim, as oportunidades
-    de Sintonia ocorrem em 25%, 50%, 75% e 100% dos 150 pontos exigidos.
-  </p>
-</div>
 
 <div class="box box-example">
   <div class="box-title">Exemplo de Digestão e Foco de Atuação</div>
@@ -644,8 +634,8 @@
   <p><strong>Resultados:</strong></p>
   <ul>
     <li><strong>Sucesso:</strong> o personagem assimila a poção e avança para a nova Sequência. A digestão da nova poção começa em 0/100.</li>
-    <li><strong>Falha:</strong> a poção é mal digerida. O personagem ainda avança, mas a nova Característica permanece parcialmente assimilada e ele perde <strong>3 pontos de Lucidez</strong>. Para completar a digestão dessa Sequência, precisará acumular <strong>150 Pontos de Digestão</strong> em vez de 100.</li>
-    <li><strong>Falha Crítica:</strong> aplica as consequências de uma Falha — incluindo a perda de <strong>3 pontos de Lucidez</strong> e a exigência de <strong>150 Pontos de Digestão</strong> — e provoca também uma crise relacionada à influência da Característica. O Mestre deve aplicar o procedimento de crise e perda de controle previsto no capítulo dedicado à Lucidez. A perda fixa de 3 pontos por má digestão é aplicada uma única vez por consumo.</li>
+    <li><strong>Falha:</strong> a poção é mal digerida. O personagem ainda avança, mas a nova Característica permanece parcialmente assimilada e ele perde <strong>3 pontos de Lucidez</strong>. A digestão continua exigindo os mesmos <strong>100 Pontos de Digestão</strong>.</li>
+    <li><strong>Falha Crítica:</strong> aplica as consequências de uma Falha — incluindo a perda de <strong>3 pontos de Lucidez</strong> — e provoca também uma crise relacionada à influência da Característica. O Mestre deve aplicar o procedimento de crise e perda de controle previsto no capítulo dedicado à Lucidez. A perda fixa de 3 pontos por má digestão é aplicada uma única vez por consumo.</li>
   </ul>
   <p class="box-note">
     A Falha Crítica segue a regra geral do sistema: os dois dados selecionados mostram
@@ -655,9 +645,9 @@
 
 <p>
   A digestão da nova Sequência é registrada separadamente da anterior. Os pontos acumulados
-  na Sequência concluída não são transferidos. Se o consumo resultar em falha, os 150 pontos
-  representam a exigência total daquela digestão incompleta; o personagem começa em 0 e
-  deve alcançar esse total antes de considerar a nova poção plenamente assimilada.
+  na Sequência concluída não são transferidos. Mesmo quando ocorre má digestão, o personagem
+  começa em 0 e precisa acumular os mesmos 100 Pontos de Digestão para considerar a nova
+  poção plenamente assimilada.
 </p>
 
 <div class="separator"></div>
@@ -743,7 +733,7 @@
       </tr>
       <tr>
         <td><strong>XP de Proficiências</strong></td>
-        <td>Adquirir aumentos de +1 em uma Proficiência.</td>
+        <td>Adquirir aumentos de +1 em duas Proficiências distintas pertencentes ao mesmo grupo.</td>
       </tr>
     </tbody>
   </table>
@@ -752,17 +742,20 @@
 <h3>Como funcionam os aumentos</h3>
 
 <p>
-  Cada aprimoramento adquirido aumenta em <strong>+1</strong> o valor do Atributo ou da
-  Proficiência escolhido. O custo de um aumento será fixo: deverá ser o mesmo para qualquer
-  Atributo ou Proficiência e não aumentará conforme o valor atual da característica. Assim,
-  melhorar um Atributo de 2 para 3 terá o mesmo custo que melhorá-lo de 4 para 5; o mesmo
-  princípio será aplicado às Proficiências.
+  A conversão é direta: <strong>1 XP de Atributos aumenta em +1 Ponto um Atributo</strong>,
+  enquanto <strong>1 XP de Proficiências aumenta em +1 ponto duas Proficiências distintas
+  do mesmo grupo</strong>. Assim, com 1 XP de Proficiências, o jogador escolhe duas Proficiências
+  do grupo Talentos, Perícias ou Conhecimentos e aumenta cada uma em 1 ponto. As duas
+  Proficiências escolhidas devem pertencer ao mesmo grupo.
+  O custo não aumenta conforme o valor atual: elevar um Atributo de 2 para 3 custa o mesmo
+  que elevá-lo de 4 para 5; da mesma forma, cada XP de Proficiências sempre aumenta duas
+  Proficiências em 1 ponto cada, respeitados os limites individuais.
 </p>
 
 <p>
   O XP de Atributos não pode comprar aumentos de Proficiências, e o XP de Proficiências
-  não pode comprar aumentos de Atributos. Cada aumento é comprado individualmente, usando
-  a reserva correspondente.
+  não pode comprar aumentos de Atributos. Cada personagem decide como utilizar suas próprias
+  reservas, respeitando a finalidade de cada uma.
 </p>
 
 <h3>Separação entre XP e progressão por Sequência</h3>
@@ -775,20 +768,20 @@
   outra.
 </p>
 
+<h3>Concessão de XP</h3>
+
 <div class="box box-note">
-  <div class="box-title">Parâmetros ainda em discussão</div>
+  <div class="box-title">Critério de concessão</div>
   <p>
-    A estrutura acima registra as decisões já estabelecidas para a progressão por XP. Dois
-    parâmetros ainda precisam ser definidos antes de esta regra ser considerada final:
+    A concessão de XP e a quantidade distribuída ficam a critério do Mestre, conforme o
+    ritmo e os acontecimentos da campanha. O XP pode ser concedido em ocasiões relevantes,
+    como o encerramento de um arco narrativo, uma grande descoberta, a conclusão de um
+    objetivo importante, uma virada significativa na história ou outro momento memorável.
   </p>
-  <ul>
-    <li><strong>Valor do custo:</strong> quantos XP de sua reserva são necessários para cada aumento de +1. O custo de 5 XP por aumento foi levantado como possibilidade, mas ainda não foi aprovado.</li>
-    <li><strong>Concessão de XP:</strong> em quais situações e em que quantidade o personagem recebe XP de Atributos e XP de Proficiências.</li>
-  </ul>
   <p>
-    Também deverão ser definidos o momento em que o XP pode ser gasto e os limites máximos
-    de Atributos durante a progressão, sem alterar os limites já estabelecidos para a criação
-    de personagem até que essas decisões sejam concluídas.
+    Não é necessário conceder XP ao final de toda sessão. Cabe ao Mestre avaliar quando
+    um acontecimento representa uma oportunidade adequada de desenvolvimento para os
+    personagens.
   </p>
 </div>
 
@@ -803,10 +796,11 @@
     <li>Cada Sequência exige 100 Pontos de Digestão. Os pontos são concedidos por atuação coerente, atuação decisiva, marcos narrativos e atividades de intervalo, sem recompensar duas vezes a mesma ação.</li>
     <li>Os marcos de 25%, 50%, 75% e 100% também permitem Sintonizar um poder de cada Sequência já alcançada. Cada Sequência possui quatro poderes; ao completar os quatro marcos, todos os poderes das Sequências alcançadas estarão Sintonizados. As tabelas apresentam Essência e Expressão para as Sequências 9 a 5.</li>
     <li>O personagem precisa concluir a digestão, obter a fórmula e os ingredientes e cumprir os requisitos de avanço antes de consumir a próxima poção.</li>
-    <li>O Teste de Consumo usa 2d10 + Mod.(DET), com CD definida pela Sequência-alvo. Uma Falha ou Falha Crítica representa má digestão e causa perda de 3 pontos de Lucidez; ambas exigem 150 Pontos de Digestão para assimilar completamente a nova poção. A Falha Crítica também aciona as regras de crise e perda de controle.</li>
+    <li>O Teste de Consumo usa 2d10 + Mod.(DET), com CD definida pela Sequência-alvo. Uma Falha ou Falha Crítica representa má digestão e causa perda de 3 pontos de Lucidez, mas não altera a exigência de 100 Pontos de Digestão. A Falha Crítica também aciona as regras de crise e perda de controle.</li>
     <li>Fórmulas e ingredientes são raros; sua obtenção deve alimentar a investigação, as relações com facções e as aventuras da campanha.</li>
-    <li>A progressão por XP utiliza duas reservas independentes: XP de Atributos, para aumentos de +1 em Atributos, e XP de Proficiências, para aumentos de +1 em Proficiências.</li>
-    <li>O custo de cada aumento é fixo e igual para Atributos e Proficiências, independentemente do valor atual; o número de XP por aumento e a forma de concessão ainda estão em discussão.</li>
+    <li>A progressão por XP utiliza duas reservas independentes: XP de Atributos, para aumentar um Atributo em +1, e XP de Proficiências, para aumentar duas Proficiências distintas do mesmo grupo em +1 cada.</li>
+    <li>1 XP de Atributos aumenta um Atributo em +1 Ponto. 1 XP de Proficiências aumenta duas Proficiências distintas do mesmo grupo (Talentos, Perícias ou Conhecimentos) em +1 ponto cada.</li>
+    <li>A concessão de XP e a quantidade distribuída ficam a critério do Mestre, podendo ocorrer em marcos relevantes, como o fim de um arco narrativo, uma grande descoberta ou outro momento memorável da campanha.</li>
     <li>XP e Pontos de Digestão não podem ser convertidos nem substituem um ao outro.</li>
   </ul>
   <p><a href="#topo">Voltar ao início do capítulo ↑</a></p>
