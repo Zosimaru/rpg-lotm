@@ -1,7 +1,6 @@
 # Senhor dos Mistérios — RPG de Mesa
 
-Sistema de RPG de mesa fan-made baseado em **Lord of the Mysteries** (*Senhor dos Mistérios*), com regras híbridas inspiradas em Vampiro: A Máscara e D&D (d20).
-
+Sistema de RPG de mesa fan-made baseado em **Lord of the Mysteries** (*Senhor dos Mistérios*).
 ## Conteúdo
 
 - **Livro do Jogador** — regras, 22 Caminhos, Sequências 9–5, combate, misticismo
