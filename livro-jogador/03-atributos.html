@@ -54,7 +54,7 @@
     <li><a href="#atributos"><strong>Atributos:</strong> escalas, categorias, dimensões e modificadores.</a></li>
     <li><a href="#pericias"><strong>Proficiências:</strong> Talentos, Perícias e Conhecimentos, distribuição, aplicações e especializações.</a></li>
     <li><a href="#sistema-testes"><strong>Sistema de Testes:</strong> rolagens 2d10, Classes de Dificuldade, resultados críticos, Vantagem, Desvantagem e testes disputados.</a></li>
-    <li><a href="#estatisticas-derivadas"><strong>Estatísticas Derivadas:</strong> Pontos de Vida, Espiritualidade, Defesa, Salvaguardas, Lucidez, Blindagem e Limiares de Dano.</a></li>
+    <li><a href="#estatisticas-derivadas"><strong>Estatísticas Derivadas:</strong> Pontos de Vida, Espiritualidade, Defesa, Lucidez, Blindagem e Limiares de Dano.</a></li>
     <li><a href="#resumo"><strong>Resumo Rápido de Referência:</strong> consulta concentrada das principais fórmulas e regras.</a></li>
   </ul>
 </div>
@@ -931,36 +931,29 @@
   A Espiritualidade representa a capacidade do personagem de canalizar sua própria
   essência espiritual. No sistema, ela funciona como uma reserva utilizada para
   sustentar manifestações sobrenaturais, incluindo poderes Beyonder, feitiços e
-  determinados procedimentos ritualísticos. Sua quantidade máxima considera o
-  domínio das próprias reações, a força de vontade e a resistência do corpo diante
-  das exigências do mundo sobrenatural.
+  determinados procedimentos ritualísticos. Sua quantidade máxima parte do valor
+  espiritual oferecido pelo Caminho na Sequência atual e aumenta com a Digestão de
+  poções ou por outras fontes específicas.
 </p>
 <div class="box box-rule">
   <div class="box-title">Cálculo da Espiritualidade Máxima</div>
   <p style="text-align:center; font-size:1.15em;">
-    <strong>Espiritualidade Máxima = Pontos.(ACO) + Pontos.(DET) + Pontos.(VIG) + 2 × (10 − Sequência)</strong>
+    <strong>Espiritualidade Máxima = Valor-base do Caminho/Sequência + Bônus de Digestão de Poção + Outros Bônus</strong>
   </p>
   <p>
-    Utilize os valores de Pontos.(ACO), Pontos.(DET) e Pontos.(VIG), não os
-    modificadores. O bônus de Sequência é cumulativo: cada avanço acrescenta
-    2 pontos à capacidade máxima de Espiritualidade.
+    O <strong>Valor-base do Caminho/Sequência</strong> é a quantidade de Espiritualidade
+    oferecida pelo Caminho na Sequência atual do personagem. O <strong>Bônus de Digestão
+    de Poção</strong> é permanente: cada vez que o personagem alcança 50% de Digestão de
+    uma poção, sua Espiritualidade máxima aumenta em +2. Esse bônus é cumulativo entre as
+    poções. <strong>Outros Bônus</strong> podem vir de fontes específicas, como Artefatos
+    Selados ou aprimoramentos concedidos por poderes Beyonder.
   </p>
-  <table>
-    <thead><tr><th>Sequência</th><th>Bônus de Espiritualidade</th></tr></thead>
-    <tbody>
-      <tr><td>9</td><td>+2</td></tr>
-      <tr><td>8</td><td>+4</td></tr>
-      <tr><td>7</td><td>+6</td></tr>
-      <tr><td>6</td><td>+8</td></tr>
-      <tr><td>5</td><td>+10</td></tr>
-    </tbody>
-  </table>
   <p>
-    <strong>Exemplo:</strong> um personagem com Pontos.(ACO) = 2, Pontos.(DET) = 2
-    e Pontos.(VIG) = 2 possui 8 pontos de Espiritualidade na Sequência 9
-    (2 + 2 + 2 + 2). Ao alcançar a Sequência 8, mantendo os mesmos Atributos,
-    sua Espiritualidade máxima passa a 10 pontos (2 + 2 + 2 + 4). Na Sequência 5,
-    terá 16 pontos (2 + 2 + 2 + 10).
+    <strong>Exemplo:</strong> um personagem do Caminho do Eremita, na Sequência 9
+    (Investigador de Mistérios), possui <strong>10 pontos de Espiritualidade-base</strong>.
+    Ao alcançar 50% de Digestão da poção da Sequência 9, recebe +2 permanentes; ao alcançar
+    50% da poção da Sequência 8, recebe outros +2, totalizando +4 de Bônus de Digestão.
+    Sem outras fontes, sua Espiritualidade máxima passa de 10 para 12 e, depois, para 14.
   </p>
 </div>
 <div class="box box-note">
@@ -969,7 +962,8 @@
     Registre a Espiritualidade no formato <strong>Atual/Máxima</strong>. O valor máximo
     corresponde à capacidade total do personagem; o valor atual diminui quando ele
     utiliza efeitos que consomem Espiritualidade. Na criação, os valores atual e máximo
-    começam iguais.
+    começam iguais ao valor-base do Caminho na Sequência 9, acrescido de eventuais Outros
+    Bônus. A tabela completa de valores-base por Caminho e Sequência ainda deverá ser definida.
   </p>
 </div>
 
@@ -1005,13 +999,12 @@
   <p>
     O poder é manifestado e seus efeitos são resolvidos normalmente. <strong>Somente
     depois de resolver o poder</strong>, o personagem deve realizar um teste de Lucidez
-    para suportar o desgaste: role <strong>2d10 + Mod.(ACO) + Mod.(DET)</strong> contra
-    uma Classe de Dificuldade igual a <strong>8 + o total acumulado de Espiritualidade
+    para suportar o desgaste: role <strong>2d10 + bônus total das Âncoras ativas + modificador
+    de circunstância</strong> contra uma Classe de Dificuldade igual a
+    <strong>8 + o total acumulado de Espiritualidade
     excedente</strong>. Some ao excedente anterior a parcela não paga pelo poder recém
-    utilizado antes de calcular a CD. Esse teste específico utiliza a soma de
-    Mod.(ACO) e Mod.(DET), não o modificador da Salvaguarda Espírito. Assim, quanto
-    mais o personagem força sua Espiritualidade além do limite, mais difícil se torna
-    suportar o esforço.
+    utilizado antes de calcular a CD. Quanto mais o personagem força sua Espiritualidade
+    além do limite, mais difícil se torna suportar o esforço.
   </p>
   <p>
     <strong>Exemplo:</strong> um personagem com 0 pontos de Espiritualidade força um
@@ -1070,6 +1063,122 @@
   </p>
 </div>
 
+<h3 id="lucidez-ancoras">Lucidez, Âncoras e perda de controle</h3>
+<p>
+  A <strong>Lucidez</strong> mede a capacidade do personagem de preservar sua percepção,
+  identidade e autonomia diante de influências sobrenaturais. Todos os personagens começam
+  com <strong>7 pontos</strong>. A escala vai de 0 a 10, e a Lucidez nunca pode ultrapassar 10
+  nem ficar abaixo de 0.
+</p>
+
+<div class="box box-rule">
+  <div class="box-title">Teste de Lucidez</div>
+  <p style="text-align:center; font-size:1.15em;"><strong>2d10 + Âncoras + Bônus de Circunstância</strong></p>
+  <p>
+    Quando uma regra ou efeito exigir um teste de Lucidez, some os dois dados, o bônus de
+    todas as Âncoras ativas do personagem e o modificador de circunstância indicado pelo
+    Mestre. Compare o resultado à CD definida pelo efeito ou pela situação. Na ausência de
+    uma CD específica, utilize a tabela geral de Classes de Dificuldade deste capítulo.
+    Nenhum Atributo ou Proficiência é somado ao teste.
+  </p>
+</div>
+
+<h4>Âncoras</h4>
+<p>
+  Âncoras são vínculos, referências e convicções que ajudam o personagem a preservar sua
+  identidade diante do sobrenatural. <strong>Cada Âncora ativa concede +1 nos testes de
+  Lucidez.</strong> Elas podem vir de quatro fontes:
+</p>
+<table>
+  <thead><tr><th>Fonte</th><th>Como funciona</th><th>Bônus</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>Relacionamentos</strong></td>
+      <td>Relações fortes o bastante para estabilizar o personagem. Na criação, os três relacionamentos significativos escolhidos representam Âncoras. Durante a campanha, outros vínculos podem se tornar Âncoras quando o Mestre e o jogador concordarem que a relação alcançou essa importância.</td>
+      <td>+1 por relacionamento-Âncora</td>
+    </tr>
+    <tr>
+      <td><strong>Identidade</strong></td>
+      <td>O Conceito do personagem representa a noção que ele tem de si mesmo. A Âncora permanece ativa enquanto suas escolhas e sua conduta mantiverem coerência com esse Conceito.</td>
+      <td>+1</td>
+    </tr>
+    <tr>
+      <td><strong>Reconhecimento</strong></td>
+      <td>A primeira Especialização representa uma competência pela qual o personagem se reconhece e é reconhecido. A Âncora permanece ativa enquanto ele mantiver uma relação coerente com essa experiência.</td>
+      <td>+1</td>
+    </tr>
+    <tr>
+      <td><strong>Fé</strong></td>
+      <td>A partir da Sequência 4, um Beyonder pode começar a reunir fé em torno de seu nome. Nas Sequências angelicais, esse tipo de Âncora torna-se praticamente obrigatório para evitar a perda de controle. Por pertencer à progressão avançada, essa fonte não possui regras detalhadas neste livro.</td>
+      <td>Sem valor definido neste volume</td>
+    </tr>
+  </tbody>
+</table>
+<p>
+  Na criação, os três relacionamentos fornecem +3, o Conceito fornece +1 e a primeira
+  Especialização fornece +1: o personagem começa, portanto, com <strong>cinco bônus de
+  Âncora</strong>. Âncoras adicionais podem ser conquistadas durante a campanha, conforme
+  os vínculos se desenvolvam. Uma relação casual, uma especialização posterior ou uma
+  referência sem significado pessoal não concede bônus automaticamente.
+</p>
+
+<h4>Bônus de circunstância</h4>
+<p>
+  A situação pode facilitar ou dificultar um teste de Lucidez. O Mestre escolhe um único
+  modificador final que represente o conjunto das circunstâncias relevantes; fatores que
+  descrevem a mesma vantagem ou ameaça não devem ser somados repetidamente.
+</p>
+<table>
+  <thead><tr><th>Modificador</th><th>Exemplos de circunstância</th></tr></thead>
+  <tbody>
+    <tr><td><strong>+2</strong></td><td>Preparação cuidadosa para uma meditação ou consumo de poção, em local protegido, silencioso e livre de interrupções.</td></tr>
+    <tr><td><strong>+1</strong></td><td>Ambiente familiar e seguro, rotina de concentração conhecida ou apoio tranquilizador que não esteja sendo contabilizado como uma Âncora adicional.</td></tr>
+    <tr><td><strong>0</strong></td><td>Situação comum, sem pressão ou auxílio relevante.</td></tr>
+    <tr><td><strong>−1</strong></td><td>Fadiga, desconforto, pressa ou distrações moderadas durante o teste.</td></tr>
+    <tr><td><strong>−2</strong></td><td>Exposição recente a um fenômeno aterrador, pressão mental direta ou ambiente saturado por influência sobrenatural perturbadora.</td></tr>
+    <tr><td><strong>−3</strong></td><td>Uma entidade muito poderosa interfere diretamente no personagem, ou uma influência sobrenatural intensa tenta romper sua identidade durante o teste.</td></tr>
+  </tbody>
+</table>
+<p class="box-note">
+  Os valores da tabela são referências para o Mestre, não modificadores automáticos por
+  nome de situação. A preparação só concede bônus quando realmente ajuda o personagem a
+  manter o controle; a presença de uma entidade só impõe penalidade quando ela interfere
+  de maneira relevante no teste.
+</p>
+
+<h4>Estados de Lucidez</h4>
+<p>
+  A quantidade atual de Lucidez indica o estado em que o personagem se encontra. Os efeitos
+  abaixo representam consequências mecânicas e narrativas, mas não determinam sua moralidade
+  nem retiram sua autonomia de decisão. As penalidades se aplicam apenas a ações diretamente
+  afetadas pelo estado mental descrito; não são penalidades universais para todos os testes.
+</p>
+<table>
+  <thead><tr><th>Lucidez</th><th>Estado</th><th>Impacto mecânico</th><th>Manifestação narrativa</th></tr></thead>
+  <tbody>
+    <tr><td>10–9</td><td><strong>Lucidez Plena</strong></td><td>Sem penalidades.</td><td>Percepção estável, clareza e boa capacidade de reconhecer influências externas.</td></tr>
+    <tr><td>8–7</td><td><strong>Lúcido</strong></td><td>Sem penalidades.</td><td>Estado funcional e estável, embora experiências sobrenaturais ainda possam causar tensão.</td></tr>
+    <tr><td>6–5</td><td><strong>Inquietação</strong></td><td>−1 em testes de ação que exijam concentração ou calma quando realizados sob pressão semelhante à que abalou o personagem.</td><td>Agitação, sono perturbado, irritabilidade ou dificuldade de afastar pensamentos incômodos.</td></tr>
+    <tr><td>4</td><td><strong>Perturbado</strong></td><td>−2 em testes de ação que dependam de concentração, percepção confiável ou avaliação serena da situação.</td><td>Pensamentos intrusivos, confusão e dificuldade para separar preocupações de ameaças reais.</td></tr>
+    <tr><td>3</td><td><strong>Paranoico</strong></td><td>−2 em testes sociais que dependam de confiança ou cooperação e em testes para interpretar sinais ambíguos com neutralidade.</td><td>Desconfiança acentuada e tendência a interpretar gestos ou acontecimentos ambíguos como ameaças. O jogador decide como o personagem reage.</td></tr>
+    <tr><td>2</td><td><strong>Descontrolado</strong></td><td>−2 em testes que exijam concentração, controle preciso ou decisões ponderadas sob pressão.</td><td>Agitação intensa, impulsos defensivos e dificuldade para conter reações. O Mestre pode apresentar esses impulsos, mas o jogador decide como agir.</td></tr>
+    <tr><td>1</td><td><strong>Ruptura Mental</strong></td><td>−3 em testes que dependam de memória confiável, concentração ou percepção estável.</td><td>Distúrbios sensoriais, lapsos e percepções fragmentadas. O Mestre pode descrever essas distorções, sem decidir pelo jogador o que seu personagem fará.</td></tr>
+    <tr><td>0</td><td><strong>Perda de Controle</strong></td><td>Ao chegar a 0, o personagem sofre uma crise imediata e não pode ativar intencionalmente poderes Beyonder ou feitiços enquanto permanecer nesse valor.</td><td>O Mestre descreve uma reação involuntária breve e ligada à causa da crise, como congelar, recuar, fugir ou manifestar um poder sem controle. Esse episódio não concede ao Mestre controle permanente do personagem: passada a reação imediata, o jogador volta a decidir suas ações. O personagem pode voltar a utilizar poderes quando recuperar pelo menos 1 ponto de Lucidez.</td></tr>
+  </tbody>
+</table>
+<p>
+  Quando a Lucidez diminui, aplique apenas o estado correspondente ao valor atual; as
+  penalidades de faixas anteriores não se acumulam. A perda de Lucidez nunca obriga o
+  personagem a trair aliados, cometer atos específicos ou abandonar seus objetivos. Em 0,
+  a perda de controle limita-se à crise imediata descrita acima e à restrição de uso de
+  poderes enquanto o personagem permanecer nesse valor.
+</p>
+<p>
+  A Lucidez não se recupera automaticamente com descanso comum. Uma regra, poder, item ou
+  marco de progressão deve indicar expressamente quando ela é restaurada. Neste sistema,
+  a conclusão da Digestão de uma poção concede +1 ponto de Lucidez, respeitando o máximo de 10.
+</p>
+
 <h3 id="defesa">Defesa</h3>
 <p>
   A Defesa representa a dificuldade de atingir o personagem. Em um ataque, o
@@ -1092,65 +1201,6 @@
     e Defesa 11 pela fórmula padrão.
   </p>
 </div>
-
-<h3 id="salvaguardas">Salvaguardas</h3>
-<p>
-  As Salvaguardas são utilizadas quando um efeito ameaça diretamente a integridade
-  do personagem e exige que ele resista à consequência. A natureza do perigo determina
-  qual das três Salvaguardas será testada: Corpo, Mente ou Espírito.
-</p>
-<div class="box box-rule">
-  <div class="box-title">Cálculo dos modificadores de Salvaguarda</div>
-  <p>
-    Diferentemente dos modificadores comuns de Atributo, as Salvaguardas utilizam
-    a média dos <strong>Pontos</strong> dos dois Atributos indicados, arredondada
-    para baixo:
-  </p>
-  <ul>
-    <li><strong>Corpo:</strong> Mod.(Corpo) = ⌊(Pontos.(FOR) + Pontos.(VIG)) ÷ 2⌋.</li>
-    <li><strong>Mente:</strong> Mod.(Mente) = ⌊(Pontos.(INT) + Pontos.(ACO)) ÷ 2⌋.</li>
-    <li><strong>Espírito:</strong> Mod.(Espírito) = ⌊(Pontos.(ACO) + Pontos.(DET)) ÷ 2⌋.</li>
-  </ul>
-  <p>
-    Use os valores registrados na ficha; não subtraia 2 antes de calcular a média.
-    A operação entre colchetes representa o arredondamento para baixo.
-  </p>
-</div>
-<h4>Quando utilizar cada Salvaguarda</h4>
-<ul>
-  <li><strong>Corpo:</strong> resistir a venenos, doenças, alterações físicas, condições corporais e efeitos que ameacem diretamente a integridade física.</li>
-  <li><strong>Mente:</strong> resistir a medo sobrenatural, confusão, invasões mentais, manipulação de memórias e influências que afetem pensamento ou percepção.</li>
-  <li><strong>Espírito:</strong> resistir a invasões espirituais, possessão, corrupção espiritual e influências sobrenaturais que atuem diretamente sobre a essência do personagem.</li>
-</ul>
-<p>
-  Quando uma regra exigir uma Salvaguarda, o Mestre indica qual delas corresponde
-  ao efeito e define a CD. O personagem rola <strong>2d10 + o modificador da
-  Salvaguarda indicada</strong> e compara o resultado à CD. Não se soma uma
-  Proficiência ao teste, salvo quando uma regra específica determinar o contrário.
-</p>
-<div class="box box-example">
-  <div class="box-title">Exemplo — Salvaguardas de Edmund Harker</div>
-  <p>
-    Edmund possui Pontos.(FOR) = 2, Pontos.(VIG) = 2, Pontos.(INT) = 4,
-    Pontos.(ACO) = 2 e Pontos.(DET) = 2. Seus modificadores são:
-  </p>
-  <ul>
-    <li><strong>Corpo:</strong> ⌊(2 + 2) ÷ 2⌋ = <strong>+2</strong>.</li>
-    <li><strong>Mente:</strong> ⌊(4 + 2) ÷ 2⌋ = <strong>+3</strong>.</li>
-    <li><strong>Espírito:</strong> ⌊(2 + 2) ÷ 2⌋ = <strong>+2</strong>.</li>
-  </ul>
-  <p>
-    Se precisar resistir a um veneno com CD 13, por exemplo, Edmund realiza
-    2d10 + 2 pela Salvaguarda Corpo. Se o efeito exigir resistência a uma influência
-    mental, utiliza 2d10 + 3 pela Salvaguarda Mente.
-  </p>
-</div>
-<p>
-  As Salvaguardas não substituem a Lucidez. Uma regra pode exigir um teste de
-  Salvaguarda para resistir a um efeito e, separadamente, determinar perda de
-  Lucidez como consequência. A perda ou recuperação de Lucidez ocorre apenas
-  quando uma regra indicar expressamente.
-</p>
 
 <h3 id="blindagem-limiares">Blindagem, armaduras e Limiares de Dano</h3>
 <p>
@@ -1298,11 +1348,11 @@
   <div class="stat-line"><span class="stat-label">Acerto Crítico:</span><span>dois dados utilizados mostram 10 e o total alcança a CD</span></div>
   <div class="stat-line"><span class="stat-label">Falha Crítica:</span><span>dois dados utilizados mostram 1 e o total fica abaixo da CD</span></div>
   <div class="stat-line"><span class="stat-label">PV:</span><span>3 + Pontos.(VIG) + (10 − Sequência)</span></div>
-  <div class="stat-line"><span class="stat-label">Espiritualidade:</span><span>Pontos.(ACO) + Pontos.(DET) + Pontos.(VIG) + 2 × (10 − Sequência); uso excedente: teste 2d10 + Mod.(ACO) + Mod.(DET) contra CD 8 + excedente acumulado</span></div>
+  <div class="stat-line"><span class="stat-label">Espiritualidade máxima:</span><span>Valor-base do Caminho/Sequência + Bônus de Digestão de Poção (+2 permanente a cada 50% de uma poção) + outros bônus</span></div>
+  <div class="stat-line"><span class="stat-label">Teste de Lucidez:</span><span>2d10 + bônus total das Âncoras ativas + modificador de circunstância; uso excedente de Espiritualidade: CD 8 + excedente acumulado</span></div>
   <div class="stat-line"><span class="stat-label">Recuperação da Espiritualidade:</span><span>8 horas: recuperação total, 1 vez a cada 24 horas; 1 hora: 1d10 + (10 − Sequência), até 2 vezes por dia</span></div>
   <div class="stat-line"><span class="stat-label">Defesa:</span><span>10 + Mod.(DES); fórmulas alternativas são escolhidas, não somadas</span></div>
-  <div class="stat-line"><span class="stat-label">Salvaguardas:</span><span>Corpo = ⌊(FOR + VIG) ÷ 2⌋; Mente = ⌊(INT + ACO) ÷ 2⌋; Espírito = ⌊(ACO + DET) ÷ 2⌋, usando Pontos</span></div>
-  <div class="stat-line"><span class="stat-label">Lucidez inicial:</span><span>7 para todos os personagens</span></div>
+  <div class="stat-line"><span class="stat-label">Lucidez:</span><span>inicial 7, máximo 10, mínimo 0; cada Âncora ativa concede +1 em testes de Lucidez</span></div>
   <div class="stat-line"><span class="stat-label">Limiar Menor → Maior:</span><span>2 + (10 − Sequência), sem armadura</span></div>
   <div class="stat-line"><span class="stat-label">Limiar Maior → Severo:</span><span>4 + 2 × (10 − Sequência), sem armadura</span></div>
   <div class="stat-line"><span class="stat-label">Blindagem:</span><span>1 ponto reduz o dano em um nível; máximo de 1 ponto por ataque</span></div>
