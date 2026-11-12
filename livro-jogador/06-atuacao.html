@@ -3,1378 +3,864 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cap. 3 — Atributos, Proficiências e Sistema de Testes · Senhor dos Mistérios RPG</title>
+<title>Capítulo 6 — Progressão no RPG | Senhor dos Mistérios RPG</title>
 <link rel="stylesheet" href="../assets/css/common.css">
 <link rel="stylesheet" href="../assets/css/print.css">
 </head>
 <body>
 
-<h1>Capítulo 3 — Atributos, Proficiências e Sistema de Testes</h1>
+<h1 id="topo">Capítulo 6 — Progressão no RPG</h1>
 
 <blockquote>
-  "As capacidades de uma pessoa não se revelam apenas pelo que ela sabe, mas também
-  pela maneira como age, reage e interpreta o mundo ao seu redor. No caminho para o
-  desconhecido, cada talento pode ser uma ferramenta — e cada limitação, um risco."
-  <span class="cite">— Anotação de um investigador</span>
+  "A essência da Sequência se revela nas escolhas, não na repetição de gestos."
+  <span class="cite">— Princípio do Método de Atuação</span>
 </blockquote>
 
 <p>
-  Este capítulo explica como utilizar os <strong>Atributos</strong> e as
-  <strong>Proficiências</strong> da ficha, como resolver testes e como calcular as
-  estatísticas derivadas do personagem. As regras seguem a estrutura de criação
-  apresentada no Capítulo 2: nove Atributos e <strong>24 Proficiências</strong>,
-  divididas em oito Talentos, oito Perícias e oito Conhecimentos, além de testes com
-  <span class="dice">2d10</span>, bônus totais e Classe de Dificuldade (CD).
+  A progressão de um personagem neste RPG acontece por dois sistemas independentes. A
+  <strong>progressão por Sequência</strong> representa o desenvolvimento sobrenatural de um
+  Beyonder, por meio do Método de Atuação, da digestão da poção e do consumo da próxima
+  fórmula. A <strong>progressão por Experiência (XP)</strong> representa o aprimoramento de
+  suas capacidades, permitindo desenvolver Atributos e Proficiências.
 </p>
 
 <p>
-  Os valores registrados na ficha representam os pontos do personagem. Nos testes,
-  esses pontos são convertidos em modificadores. É importante distinguir o valor
-  de pontos do modificador: <strong>Pontos.(DES) = 3</strong>, por exemplo,
-  corresponde a <strong>Mod.(DES) = +1</strong>.
+  Este capítulo reúne as regras dessas duas formas de progressão. Embora ambas acompanhem
+  o desenvolvimento do personagem, seus recursos não se misturam: Pontos de Digestão são
+  usados exclusivamente para assimilar Características Beyonder, enquanto XP é destinado
+  ao aprimoramento de Atributos e Proficiências.
 </p>
 
-<div class="box box-note">
-  <div class="box-title">Compatibilidade com a ficha</div>
-  <p>
-    A ficha atual possui nove Atributos e 24 Proficiências: Acrobacia, Atletismo,
-    Empatia, Furtividade, Intimidação, Luta, Performance, Persuasão, Armas Brancas,
-    Armas de Fogo, Condução, Etiqueta, Investigação, Prestidigitação, Sobrevivência,
-    Subterfúgio, Ciências, História, Medicina, Natureza, Navegação, Ocultismo,
-    Submundo e Teologia. Elas estão divididas nos grupos Talentos, Perícias e
-    Conhecimentos. Quando uma ação não corresponder diretamente a uma descrição,
-    o Mestre escolhe a Proficiência mais próxima da abordagem apresentada pelo jogador;
-    não é necessário criar uma Proficiência nova para cada atividade específica.
-  </p>
-</div>
-
 <div class="box box-rule">
-  <div class="box-title">Resumo das Seções</div>
-  <ul>
-    <li><a href="#atributos"><strong>Atributos:</strong> escalas, categorias, dimensões e modificadores.</a></li>
-    <li><a href="#pericias"><strong>Proficiências:</strong> Talentos, Perícias e Conhecimentos, distribuição, aplicações e especializações.</a></li>
-    <li><a href="#sistema-testes"><strong>Sistema de Testes:</strong> rolagens 2d10, Classes de Dificuldade, resultados críticos, Vantagem, Desvantagem e testes disputados.</a></li>
-    <li><a href="#estatisticas-derivadas"><strong>Estatísticas Derivadas:</strong> Pontos de Vida, Espiritualidade, Defesa, Lucidez, Blindagem e Limiares de Dano.</a></li>
-    <li><a href="#resumo"><strong>Resumo Rápido de Referência:</strong> consulta concentrada das principais fórmulas e regras.</a></li>
-  </ul>
+  <div class="box-title">Resumo do Capítulo</div>
+  <ol>
+    <li><a href="#metodo">O que é o Método de Atuação?</a></li>
+    <li><a href="#ator-e-papel">O ator e o papel</a></li>
+    <li><a href="#digestao">Pontos de Digestão</a>
+      <ul>
+        <li><a href="#foco-atuacao">Foco de Atuação</a></li>
+        <li><a href="#marcos-digestao">Marcos de Digestão</a></li>
+        <li><a href="#espiritualidade-progressao">Espiritualidade e progressão</a></li>
+        <li><a href="#sintonia">Sintonia da Sequência</a></li>
+      </ul>
+    </li>
+    <li><a href="#principios">Princípios de Atuação por Caminho</a></li>
+    <li><a href="#avanco">Avanço e consumo da próxima poção</a></li>
+    <li><a href="#formulas">Fórmulas e ingredientes</a></li>
+    <li><a href="#xp">Progressão por Experiência (XP)</a></li>
+    <li><a href="#resumo-final">Resumo de referência</a></li>
+  </ol>
 </div>
 
 <div class="separator"></div>
 
-<h2 id="atributos">Atributos</h2>
+<h2 id="metodo">O que é o Método de Atuação?</h2>
 
 <p>
-  Os Atributos representam as capacidades fundamentais do personagem. A ficha possui
-  <strong>nove Atributos</strong>, organizados em três categorias: <strong>Físicos</strong>,
-  <strong>Sociais</strong> e <strong>Mentais</strong>. Cada Atributo possui uma escala
-  de 1 a 5 pontos. Durante a criação, os personagens começam com 1 ponto em cada
-  Atributo e podem alcançar 4 pontos; o valor 5 fica reservado à progressão, conforme
-  as regras de evolução.
+  Uma poção concede ao personagem uma <strong>Característica Beyonder</strong> e as
+  capacidades sobrenaturais de sua Sequência. Entretanto, consumir a poção não significa
+  que sua Característica tenha sido completamente assimilada. Ela carrega um resquício
+  de impressão mental ligado à origem primordial das Características Beyonder; essa
+  influência pode se tornar perigosa quando o indivíduo não consegue manter o domínio
+  sobre si mesmo.
 </p>
 
-<h3 id="escala-atributos">Escala de Atributos</h3>
-<table>
-  <thead><tr><th>Pontos</th><th>Representação</th><th>Nível</th><th>Modificador</th><th>Referência</th></tr></thead>
-  <tbody>
-    <tr><td>1</td><td><span class="dots"><span class="dot-filled"></span><span class="dot-empty"></span><span class="dot-empty"></span><span class="dot-empty"></span><span class="dot-empty"></span></span></td><td>Limitado</td><td>−1</td><td>Capacidade abaixo da média naquela área, sem significar incapacidade.</td></tr>
-    <tr><td>2</td><td><span class="dots"><span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-empty"></span><span class="dot-empty"></span><span class="dot-empty"></span></span></td><td>Mediano</td><td>+0</td><td>Capacidade comum e funcional para uma pessoa adulta.</td></tr>
-    <tr><td>3</td><td><span class="dots"><span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-empty"></span><span class="dot-empty"></span></span></td><td>Bom</td><td>+1</td><td>Acima da média; indica aptidão ou experiência consistente.</td></tr>
-    <tr><td>4</td><td><span class="dots"><span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-empty"></span></span></td><td>Excepcional</td><td>+2</td><td>Capacidade rara, notável mesmo entre pessoas experientes.</td></tr>
-    <tr><td>5</td><td><span class="dots"><span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-filled"></span></span></td><td>Extraordinário</td><td>+3</td><td>Limite máximo da escala humana representada pelo sistema, salvo efeitos sobrenaturais.</td></tr>
-  </tbody>
-</table>
+<p>
+  O Método de Atuação consiste em compreender o significado do nome da Sequência e
+  expressar sua essência por meio de escolhas, atitudes e experiências. Não basta repetir
+  gestos associados ao título: um personagem precisa compreender o que significa ser um
+  Vidente, um Caçador, um Advogado ou qualquer outro papel, levando em conta as situações
+  que enfrenta e as consequências de suas decisões.
+</p>
 
-<div class="box box-rule">
-  <div class="box-title">Cálculo do Modificador de Atributo</div>
-  <p style="text-align:center; font-size:1.15em;"><strong>Mod.(Atributo) = Pontos.(Atributo) − 2</strong></p>
+<p>
+  A atuação acelera a digestão da poção. À medida que a Característica é assimilada,
+  o personagem se torna mais estável e reduz os riscos de perder o controle ao consumir
+  uma poção de Sequência superior. O Método de Atuação não substitui o estudo dos poderes,
+  a preparação para o avanço ou os cuidados necessários diante do sobrenatural.
+</p>
+
+<div class="box box-lore">
+  <div class="box-title">Compreender a essência, não imitar um estereótipo</div>
   <p>
-    A notação <strong>Pontos.(ATR)</strong> indica a quantidade de pontos registrada
-    no Atributo indicado. A notação <strong>Mod.(ATR)</strong> indica o modificador
-    utilizado nos testes. Assim, Pontos.(FOR) 1 resulta em Mod.(FOR) −1; Pontos.(FOR)
-    2 resulta em Mod.(FOR) +0; Pontos.(FOR) 3 resulta em Mod.(FOR) +1; Pontos.(FOR)
-    4 resulta em Mod.(FOR) +2; e Pontos.(FOR) 5 resulta em Mod.(FOR) +3.
-  </p>
-  <p>
-    O modificador, e não a quantidade bruta de pontos, é somado à rolagem de teste.
-    Algumas estatísticas derivadas utilizam diretamente Pontos.(ATR); nesses casos,
-    o texto da regra indicará expressamente que devem ser usados os pontos, e não o
-    modificador.
+    Um Vidente não precisa ser tímido, um Guerreiro não precisa procurar duelos e um
+    Insone não é obrigado a permanecer literalmente sem dormir. O nome indica uma essência
+    a ser compreendida. O jogador deve encontrar formas próprias e coerentes de expressá-la
+    durante a campanha.
   </p>
 </div>
 
-<h3 id="categorias-atributos">Categorias de Atributos</h3>
-<div class="box box-note">
-  <div class="box-title">As três dimensões dos Atributos</div>
-  <p>
-    Os Atributos também são organizados pelas dimensões <strong>Potência</strong>,
-    <strong>Refinamento</strong> e <strong>Resistência</strong>. Elas indicam,
-    respectivamente, impacto, precisão e capacidade de sustentar uma ação em cada
-    categoria.
-  </p>
+<h2 id="ator-e-papel">O ator e o papel</h2>
+
+<p>
+  A atuação exige envolvimento e compreensão dos princípios da Sequência. O personagem
+  interpreta situações, avalia possibilidades e toma decisões a partir da essência da poção,
+  encontrando maneiras próprias de expressá-la sem depender de comportamentos padronizados.
+</p>
+
+<p>
+  Personagens de um mesmo Caminho podem expressar a mesma essência de maneiras diferentes.
+  Dois Videntes podem ter temperamentos opostos; dois Advogados podem defender objetivos
+  morais distintos. Ambos podem compreender os princípios de suas Sequências. O que importa
+  para a digestão é a relação entre a conduta, as decisões e a essência da poção, não a
+  reprodução de uma personalidade única ou de um comportamento obrigatório.
+</p>
+
+<p>
+  Para avaliar uma atuação, considere duas perguntas: <strong>o que a Sequência representa</strong>
+  e <strong>como o personagem expressou esse princípio</strong>. As diretrizes por Caminho
+  seguem essa estrutura, mas não esgotam as possibilidades de interpretação.
+</p>
+
+<h3>Interpretações distintas</h3>
+
+<p>
+  Uma mesma essência pode ser expressa por caminhos construtivos, pragmáticos ou sombrios.
+  Um Caçador pode rastrear uma criatura para proteger uma comunidade ou para cumprir um
+  contrato; um Advogado pode explorar uma brecha para libertar alguém ou para conquistar
+  vantagem política. A moralidade da escolha, isoladamente, não determina a digestão.
+  O Mestre deve avaliar a compreensão demonstrada, a relevância da decisão e sua relação
+  com o princípio da Sequência, sem confundir essa avaliação com a aprovação moral do
+  objetivo do personagem.
+</p>
+
+<ul>
+  <li><strong>Interpretação construtiva:</strong> expressa a essência da Sequência de maneira compatível com proteção, cooperação, disciplina ou outros objetivos não destrutivos.</li>
+  <li><strong>Interpretação sombria:</strong> expressa a mesma essência por meio de manipulação, exploração, conflito ou interesses egoístas.</li>
+</ul>
+
+<p>
+  Nenhuma dessas abordagens concede pontos automaticamente. O Mestre avalia se a ação
+  realmente expressou o princípio da Sequência. As consequências sociais e morais das
+  escolhas são resolvidas pela narrativa e pelas regras pertinentes, não por uma penalidade
+  automática por escolher uma interpretação sombria.
+</p>
+
+<div class="separator"></div>
+
+<h2 id="digestao">Pontos de Digestão</h2>
+
+<p>
+  Para este RPG, cada Sequência exige <strong>100 Pontos de Digestão</strong> para ser
+  completamente assimilada. Esse valor representa o progresso do personagem na compreensão
+  e incorporação da essência da poção. Os Pontos de Digestão não são XP e não podem ser
+  usados para aumentar Atributos ou Proficiências.
+</p>
+
+<h3 id="foco-atuacao">Foco de Atuação</h3>
+
+<p>
+  No início de cada sessão, o jogador pode declarar <strong>um Foco de Atuação</strong>:
+  uma intenção concreta de explorar um aspecto da essência de sua Sequência durante aquela
+  sessão. O Foco ajuda o jogador a pensar em oportunidades de interpretação e ajuda o Mestre
+  a reconhecer quando uma decisão realmente expressa o princípio da poção.
+</p>
+
+<div class="box box-example">
+  <div class="box-title">Exemplos de Foco de Atuação</div>
+  <p><strong>Vidente:</strong> observar sinais e padrões antes de tomar uma decisão importante, usando a adivinhação como orientação, não como certeza.</p>
+  <p><strong>Caçador:</strong> estudar o alvo e o terreno antes de agir, preparando uma abordagem em vez de depender apenas da força.</p>
+  <p><strong>Advogado:</strong> compreender as regras de uma situação e encontrar uma interpretação ou brecha que altere o resultado.</p>
+</div>
+
+<p>
+  O Foco não é uma missão obrigatória, não precisa ser cumprido literalmente e não concede
+  Pontos de Digestão por ter sido declarado. A história pode tomar outro rumo; nesse caso,
+  o jogador pode ajustar sua intenção ou simplesmente deixar o Foco de lado. Os pontos são
+  concedidos apenas pelas ações e decisões que efetivamente acontecerem em jogo.
+</p>
+
+<div class="box box-rule">
+  <div class="box-title">Como receber Pontos de Digestão</div>
   <table>
-    <thead><tr><th>Dimensão</th><th>Físicos</th><th>Sociais</th><th>Mentais</th></tr></thead>
+    <thead><tr><th>Fonte</th><th>Pontos</th><th>Quando conceder</th></tr></thead>
     <tbody>
-      <tr><td><strong>Potência</strong></td><td>Força (FOR)</td><td>Carisma (CAR)</td><td>Inteligência (INT)</td></tr>
-      <tr><td><strong>Refinamento</strong></td><td>Destreza (DES)</td><td>Manipulação (MAN)</td><td>Raciocínio (RAC)</td></tr>
-      <tr><td><strong>Resistência</strong></td><td>Vigor (VIG)</td><td>Autocontrole (ACO)</td><td>Determinação (DET)</td></tr>
-    </tbody>
-  </table>
-  <ul>
-    <li><strong>Potência:</strong> o impacto que o personagem consegue produzir — força física, influência social ou capacidade intelectual.</li>
-    <li><strong>Refinamento:</strong> a precisão e o controle com que age — coordenação, técnica social ou análise.</li>
-    <li><strong>Resistência:</strong> a capacidade de manter o desempenho sob esforço, pressão ou influência.</li>
-  </ul>
-  <p>
-    Nenhuma dimensão é superior às demais. O Atributo utilizado depende da forma
-    como o personagem descreve a ação.
-  </p>
-</div>
-<table>
-  <thead><tr><th>Categoria</th><th>Atributo</th><th>Sigla</th><th>Função principal</th></tr></thead>
-  <tbody>
-    <tr><td rowspan="3"><strong>Físicos</strong></td><td>Força</td><td>FOR</td><td>Potência muscular e esforço físico.</td></tr>
-    <tr><td>Destreza</td><td>DES</td><td>Coordenação, reflexos e precisão.</td></tr>
-    <tr><td>Vigor</td><td>VIG</td><td>Resistência corporal e saúde.</td></tr>
-    <tr><td rowspan="3"><strong>Sociais</strong></td><td>Carisma</td><td>CAR</td><td>Conexão, simpatia e inspiração.</td></tr>
-    <tr><td>Manipulação</td><td>MAN</td><td>Influência calculada e condução de interações.</td></tr>
-    <tr><td>Autocontrole</td><td>ACO</td><td>Regulação de impulsos, emoções e reações; compostura e equilíbrio sob pressão.</td></tr>
-    <tr><td rowspan="3"><strong>Mentais</strong></td><td>Inteligência</td><td>INT</td><td>Memória, conhecimento e aprendizagem.</td></tr>
-    <tr><td>Raciocínio</td><td>RAC</td><td>Análise, dedução e solução de problemas.</td></tr>
-    <tr><td>Determinação</td><td>DET</td><td>Força de vontade e resistência mental.</td></tr>
-  </tbody>
-</table>
-
-<h3 id="atributos-fisicos">Atributos Físicos</h3>
-<p>
-  Os Atributos Físicos representam os recursos corporais do personagem: potência,
-  coordenação e resistência. Eles são utilizados quando o resultado depende das
-  condições físicas ou do controle dos movimentos.
-</p>
-<h4 id="forca">Força <span class="attr-code">FOR</span></h4>
-<p>Força representa a potência muscular e a capacidade de aplicar esforço corporal. Ela determina o quanto o personagem consegue erguer, empurrar, arrastar, quebrar ou conter pela força física.</p>
-<ul>
-  <li><strong>Aplicações comuns:</strong> Empurrar uma porta emperrada, levantar alguém ferido, segurar uma criatura, realizar um golpe baseado em potência ou ameaçar alguém pela força física.</li>
-  <li><strong>Abordagem:</strong> Quando a dificuldade está em vencer uma resistência física, romper algo ou dominar um oponente pela força.</li>
-  <li><strong>Exemplo:</strong> Um personagem tenta erguer uma viga caída para liberar a passagem. O Mestre pede um teste de Força (CD 13). Com Pontos.(FOR) = 3, seu Mod.(FOR) é +1; o teste será 2d10 + 1.</li>
-</ul>
-
-<h4 id="destreza">Destreza <span class="attr-code">DES</span></h4>
-<p>Destreza reúne coordenação motora, precisão, reflexos, equilíbrio e controle dos movimentos. Não representa apenas rapidez: também expressa a capacidade de executar movimentos delicados ou exatos.</p>
-<ul>
-  <li><strong>Aplicações comuns:</strong> Disparar uma arma, realizar movimentos manuais precisos, manter o equilíbrio, executar uma manobra acrobática, mover-se silenciosamente ou reagir rapidamente a um perigo.</li>
-  <li><strong>Abordagem:</strong> Quando a ação depende principalmente de precisão, coordenação, velocidade de movimento ou controle corporal.</li>
-  <li><strong>Exemplo:</strong> Durante uma fuga, uma personagem atravessa uma cornija estreita. O Mestre pede um teste de Destreza + Acrobacia (CD 13).</li>
-</ul>
-
-<h4 id="vigor">Vigor <span class="attr-code">VIG</span></h4>
-<p>Vigor representa resistência orgânica, saúde, fôlego e capacidade de suportar esforço, dor, doença, venenos e condições físicas adversas. Também é utilizado no cálculo dos Pontos de Vida.</p>
-<ul>
-  <li><strong>Aplicações comuns:</strong> Resistir a venenos e doenças, suportar longas marchas, permanecer ativo apesar da exaustão, atravessar condições climáticas extremas ou suportar esforço físico prolongado.</li>
-  <li><strong>Abordagem:</strong> Quando o desafio consiste em resistir, aguentar ou continuar agindo apesar do desgaste corporal.</li>
-  <li><strong>Exemplo:</strong> Depois de uma longa marcha sob chuva e frio, o personagem tenta continuar sem descansar. O Mestre pede um teste de Vigor (CD 10).</li>
-</ul>
-
-<h3 id="atributos-sociais">Atributos Sociais</h3>
-<p>
-  Os Atributos Sociais representam maneiras diferentes de se relacionar e exercer
-  influência sobre outras pessoas. Carisma, Manipulação e Autocontrole não são equivalentes:
-  cada um descreve uma abordagem própria.
-</p>
-<h4 id="carisma">Carisma <span class="attr-code">CAR</span></h4>
-<p>Carisma expressa a facilidade com que o personagem estabelece vínculos, transmite simpatia, inspira confiança e mobiliza outras pessoas. Não exige beleza nem imponência: está ligado à conexão que ele consegue criar com os demais.</p>
-<ul>
-  <li><strong>Aplicações comuns:</strong> Inspirar aliados, conquistar confiança, estabelecer relações, acalmar alguém, fazer um discurso envolvente ou convencer por meio de sinceridade e empatia social.</li>
-  <li><strong>Abordagem:</strong> Quando o personagem depende de simpatia, confiança, empatia social ou capacidade de inspirar.</li>
-  <li><strong>Exemplo:</strong> Uma investigadora tenta tranquilizar uma testemunha assustada e convencê-la a contar o que viu. O Mestre pode pedir Carisma + Persuasão.</li>
-</ul>
-
-<h4 id="manipulacao">Manipulação <span class="attr-code">MAN</span></h4>
-<p>Manipulação representa a habilidade de conduzir uma interação de maneira calculada, influenciar decisões, ocultar intenções e direcionar a percepção de outra pessoa. Pode envolver mentira, negociação estratégica ou pressão psicológica sutil.</p>
-<ul>
-  <li><strong>Aplicações comuns:</strong> Blefar, mentir, desviar suspeitas, negociar de forma estratégica, induzir alguém a revelar informações ou sustentar uma história falsa.</li>
-  <li><strong>Abordagem:</strong> Quando a ação depende de conduzir a conversa, explorar interesses, ocultar a própria intenção ou influenciar alguém por meios calculados.</li>
-  <li><strong>Exemplo:</strong> Um personagem inventa uma justificativa para entrar em um local restrito. O Mestre pede Manipulação + Subterfúgio.</li>
-</ul>
-
-<h4 id="auto-controle">Autocontrole <span class="attr-code">ACO</span></h4>
-<p>Autocontrole mede a capacidade de regular impulsos, emoções e reações. Representa a compostura, a disciplina emocional e a habilidade de agir com equilíbrio mesmo diante de provocações, medo, pressão social ou situações perturbadoras. Não significa ausência de emoções ou força de vontade ilimitada; representa o domínio que o personagem exerce sobre as próprias respostas imediatas.</p>
-<ul>
-  <li><strong>Aplicações comuns:</strong> Controlar impulsos, manter a calma sob pressão, conter reações emocionais, resistir a provocações, preservar a compostura diante do medo e agir com disciplina em situações tensas.</li>
-  <li><strong>Abordagem:</strong> Quando a ação depende de regular as próprias emoções e reações, manter a compostura ou impedir que uma pressão externa interfira no comportamento.</li>
-  <li><strong>Exemplo:</strong> Um investigador é provocado por um suspeito durante um interrogatório, mas precisa manter a calma e não revelar sua irritação. O Mestre pode pedir Autocontrole + Intimidação para sustentar uma ameaça fria e deliberada.</li>
-</ul>
-
-<div class="box box-note">
-  <div class="box-title">Carisma, Manipulação e Autocontrole</div>
-  <p>
-    <strong>Carisma</strong> estabelece conexão e confiança; <strong>Manipulação</strong>
-    conduz a interação de forma calculada, ocultando ou direcionando intenções; e
-    <strong>Autocontrole</strong> regula as próprias emoções e reações, permitindo agir com compostura sob pressão. O Mestre deve
-    escolher o Atributo de acordo com a maneira como o jogador descreve a ação, não
-    apenas pelo resultado que deseja alcançar.
-  </p>
-</div>
-
-<h3 id="atributos-mentais">Atributos Mentais</h3>
-<p>
-  Os Atributos Mentais representam aquilo que o personagem sabe, a forma como interpreta
-  informações e sua capacidade de manter o controle. Inteligência, Raciocínio e
-  Determinação cumprem funções distintas e não devem ser tratados como sinônimos.
-</p>
-<h4 id="inteligencia">Inteligência <span class="attr-code">INT</span></h4>
-<p>Inteligência representa conhecimento adquirido, memória, aprendizagem e compreensão de informações. Está relacionada ao que o personagem estudou, recorda ou consegue compreender por meio de conhecimento formal.</p>
-<ul>
-  <li><strong>Aplicações comuns:</strong> Recordar fatos, compreender textos técnicos, conhecer doutrinas, reconhecer informações estudadas, aprender idiomas ou aplicar conhecimento acadêmico.</li>
-  <li><strong>Abordagem:</strong> Quando o desafio depende principalmente de lembrar, compreender ou aplicar informações e conhecimentos adquiridos.</li>
-  <li><strong>Exemplo:</strong> Diante de um tratado antigo, o personagem tenta recordar o significado de um símbolo que estudou. O Mestre pode pedir Inteligência + Ocultismo.</li>
-</ul>
-
-<h4 id="raciocinio">Raciocínio <span class="attr-code">RAC</span></h4>
-<p>Raciocínio representa a capacidade de analisar informações, estabelecer conexões, interpretar indícios e solucionar problemas. Diferentemente de Inteligência, que abrange o conhecimento acumulado, Raciocínio trata da análise e do uso lógico das informações disponíveis.</p>
-<ul>
-  <li><strong>Aplicações comuns:</strong> Deduzir relações entre pistas, perceber padrões, avaliar uma situação rapidamente, interpretar comportamentos, resolver problemas e planejar uma sequência de ações.</li>
-  <li><strong>Abordagem:</strong> Quando o personagem precisa conectar informações, tirar conclusões ou analisar circunstâncias que não conhece previamente.</li>
-  <li><strong>Exemplo:</strong> Ao examinar uma sala revirada, o personagem tenta reconstruir a sequência dos acontecimentos a partir das pistas. O Mestre pode pedir Raciocínio + Investigação.</li>
-</ul>
-
-<h4 id="determinacao">Determinação <span class="attr-code">DET</span></h4>
-<p>Determinação representa força de vontade, disciplina, concentração e resistência a pressões mentais ou sobrenaturais. É a capacidade de manter o propósito e não ceder facilmente diante do medo, da dor psicológica ou de influências externas.</p>
-<ul>
-  <li><strong>Aplicações comuns:</strong> Resistir a intimidação, medo sobrenatural e controle mental; manter a concentração; suportar pressão psicológica; continuar uma tarefa apesar de distrações ou tentações.</li>
-  <li><strong>Abordagem:</strong> Quando o personagem precisa manter o controle, resistir a uma influência ou sustentar a própria vontade diante de uma pressão.</li>
-  <li><strong>Exemplo:</strong> Diante de uma manifestação aterradora, o personagem tenta não entrar em pânico. O Mestre pede um teste de Determinação.</li>
-</ul>
-
-<div class="box box-note">
-  <div class="box-title">Inteligência, Raciocínio e Determinação</div>
-  <p>
-    <strong>Inteligência</strong> mede principalmente o conhecimento adquirido, a memória
-    e a compreensão de informações. <strong>Raciocínio</strong> mede a capacidade de
-    analisar dados, conectar pistas e chegar a conclusões. <strong>Determinação</strong>
-    mede a força de vontade e a resistência a pressões. Por exemplo: lembrar o conteúdo
-    de um livro pode exigir Inteligência; deduzir quem esteve em uma sala pode exigir
-    Raciocínio; resistir a uma influência mental exige Determinação.
-  </p>
-</div>
-
-<div class="separator"></div>
-
-<h2 id="pericias">Proficiências</h2>
-
-<p>
-  As Proficiências representam aptidões, treinamento e conhecimentos desenvolvidos
-  pelo personagem. Elas indicam o domínio que ele possui sobre atividades práticas,
-  capacidades pessoais e áreas de estudo. A ficha reúne <strong>24 Proficiências</strong>,
-  organizadas em três grupos de oito: <strong>Talentos</strong>, <strong>Perícias</strong>
-  e <strong>Conhecimentos</strong>.
-</p>
-
-<h3 id="escala-pericias">Escala de Proficiências</h3>
-<table>
-  <thead>
-    <tr><th>Pontos</th><th>Nível</th><th>Modificador</th><th>Descrição</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>0</td><td>Não treinado</td><td>−2</td><td>Não possui treinamento ou experiência relevante naquela área.</td></tr>
-    <tr><td>1</td><td>Iniciante</td><td>−1</td><td>Conhece fundamentos e consegue realizar tarefas simples.</td></tr>
-    <tr><td>2</td><td>Praticante</td><td>+0</td><td>Possui prática funcional e consegue executar atividades comuns.</td></tr>
-    <tr><td>3</td><td>Proficiente</td><td>+1</td><td>Tem experiência consistente e realiza tarefas exigentes.</td></tr>
-    <tr><td>4</td><td>Especialista</td><td>+2</td><td>Domina a área e está entre os profissionais experientes.</td></tr>
-    <tr><td>5</td><td>Mestre</td><td>+3</td><td>Possui domínio excepcional da área.</td></tr>
-  </tbody>
-</table>
-
-<div class="box box-rule">
-  <div class="box-title">Cálculo do Modificador de Proficiência</div>
-  <p style="text-align:center;"><strong>Mod.(Proficiência) = Valor da Proficiência − 2</strong></p>
-  <p>
-    O valor registrado pelos círculos da ficha é convertido em modificador para os
-    testes: 0 ponto corresponde a −2; 1 a −1; 2 a +0; 3 a +1; 4 a +2; e 5 a +3.
-    A coluna Bônus da ficha registra esse modificador. O campo Total é utilizado
-    para somar o modificador da Proficiência ao modificador do Atributo escolhido
-    para a ação e a outros bônus aplicáveis. Como a abordagem pode variar, esse
-    total pode mudar conforme a ação realizada.
-  </p>
-  <p>
-    Ter 0 ponto não significa que o personagem não possa tentar nenhuma ação:
-    significa que não possui treinamento e aplica o modificador −2 quando a tentativa
-    for possível. Em tarefas que exigem qualificação específica, o Mestre pode
-    considerar a tentativa inviável ou aplicar uma penalidade adicional de −2,
-    quando a falta de preparo justificar essa dificuldade. Essa penalidade adicional
-    não é automática.
-  </p>
-</div>
-
-<h3 id="grupos-pericias">Grupos e distribuição na criação</h3>
-<p>
-  Na criação do personagem, os pontos de Proficiência são distribuídos no modelo
-  <strong>13 / 9 / 5</strong>: 13 pontos no grupo primário, 9 no secundário e 5 no
-  terciário. O jogador escolhe a ordem entre <strong>Talentos</strong>,
-  <strong>Perícias</strong> e <strong>Conhecimentos</strong>. Todas as Proficiências
-  começam em 0, e nenhuma pode receber mais de 3 pontos durante a distribuição inicial.
-  Depois, aplicam-se os dois pontos do Antecedente: +1 na Proficiência fixa e +1 em
-  outra Proficiência diferente, escolhida pelo jogador. Cada uma pode chegar a 4 por
-  meio desses pontos, mas não ultrapassar esse limite durante a criação.
-</p>
-
-<h3 id="pericias-talentos">Grupo de Talentos</h3>
-<p>
-  Talentos representam aptidões e capacidades demonstradas na ação, no corpo e na
-  interação com outras pessoas. Incluem coordenação, esforço físico, percepção social,
-  expressão e influência.
-</p>
-
-<h4 id="acrobacia">Acrobacia</h4>
-<p>Representa equilíbrio, coordenação e controle corporal em movimentos complexos ou em superfícies difíceis.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Saltar entre superfícies, atravessar locais estreitos, realizar cambalhotas, manter o equilíbrio ou executar manobras corporais.</li>
-  <li><strong>Abordagem recomendada:</strong> Destreza, pela coordenação e precisão dos movimentos.</li>
-  <li><strong>Exemplo:</strong> Um personagem tenta atravessar uma viga estreita sobre um beco. O Mestre pede Destreza + Acrobacia.</li>
-</ul>
-
-<h4 id="atletismo">Atletismo</h4>
-<p>Abrange esforço físico atlético e resistência em atividades corporais, como corrida, escalada, natação, saltos e travessias exigentes.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Correr, escalar, nadar, saltar, carregar alguém durante uma fuga ou manter esforço físico prolongado.</li>
-  <li><strong>Abordagem recomendada:</strong> Força ou Vigor. Força representa esforço explosivo; Vigor, resistência e esforço prolongado.</li>
-  <li><strong>Exemplo:</strong> O personagem precisa nadar contra a correnteza até a margem. O Mestre pode pedir Vigor + Atletismo.</li>
-</ul>
-
-<h4 id="empatia">Empatia</h4>
-<p>É a capacidade de compreender estados emocionais, interpretar reações e perceber o que uma pessoa sente ou tenta esconder. Não revela automaticamente a verdade nem permite ler pensamentos.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Reconhecer medo, perceber desconforto, compreender motivações e avaliar o estado emocional de uma testemunha.</li>
-  <li><strong>Abordagem recomendada:</strong> Raciocínio ou Autocontrole. Raciocínio analisa sinais e padrões; Autocontrole mantém a neutralidade emocional durante a observação.</li>
-  <li><strong>Exemplo:</strong> Uma testemunha afirma não conhecer a vítima, mas demonstra inquietação ao ouvir seu nome. O Mestre pede Raciocínio + Empatia.</li>
-</ul>
-
-<h4 id="furtividade">Furtividade</h4>
-<p>É a capacidade de ocultar a própria presença e deslocar-se sem chamar atenção, controlando ruídos e aproveitando cobertura e oportunidade.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Esgueirar-se, esconder-se, aproximar-se sem ser notado, atravessar uma área vigiada e evitar deixar sinais evidentes da própria passagem.</li>
-  <li><strong>Abordagem recomendada:</strong> Destreza, pelo controle corporal e precisão dos movimentos.</li>
-  <li><strong>Exemplo:</strong> Um personagem atravessa o corredor de uma mansão enquanto os guardas estão próximos. O Mestre pede Destreza + Furtividade.</li>
-</ul>
-
-<h4 id="intimidacao">Intimidação</h4>
-<p>É a capacidade de provocar receio, impor limites e coagir por meio de ameaças, postura ou demonstração de poder. Não precisa envolver violência física.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Afastar curiosos, pressionar um suspeito, impor autoridade, ameaçar um adversário ou interromper uma ação pela demonstração de firmeza.</li>
-  <li><strong>Abordagem recomendada:</strong> Autocontrole ou Força. Autocontrole sustenta uma ameaça fria e deliberada; Força demonstra superioridade física.</li>
-  <li><strong>Exemplo:</strong> Um personagem encurrala um informante e exige respostas. O Mestre escolhe Autocontrole ou Força conforme a abordagem.</li>
-</ul>
-
-<h4 id="luta">Luta</h4>
-<p>Representa o combate desarmado e técnicas corporais de confronto, incluindo socos, chutes, agarramentos, quedas e imobilizações.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Atacar sem armas, agarrar, derrubar, imobilizar, escapar de uma contenção física ou dominar alguém em combate corporal.</li>
-  <li><strong>Abordagem recomendada:</strong> Força ou Destreza. Força representa potência; Destreza, precisão e técnica.</li>
-  <li><strong>Exemplo:</strong> Um personagem tenta derrubar um agressor e imobilizá-lo no chão. O Mestre escolhe Força ou Destreza conforme a técnica utilizada.</li>
-</ul>
-
-<h4 id="performance">Performance</h4>
-<p>Abrange a capacidade de entreter, emocionar ou prender a atenção de uma plateia por meio de apresentações como música, teatro, dança e oratória.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Cantar, tocar um instrumento, atuar, declamar, realizar uma apresentação pública ou manter a atenção de uma plateia.</li>
-  <li><strong>Abordagem recomendada:</strong> Carisma ou Autocontrole. Carisma cria conexão com o público; Autocontrole permite apresentações que exigem precisão e disciplina.</li>
-  <li><strong>Exemplo:</strong> Uma artista tenta manter a atenção de um salão enquanto transmite uma mensagem disfarçada em sua apresentação. O Mestre pede Carisma ou Autocontrole + Performance.</li>
-</ul>
-
-<h4 id="persuasao">Persuasão</h4>
-<p>É a capacidade de convencer alguém por meio de argumentos, apelos, negociação ou influência verbal, seja de forma franca ou calculada.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Negociar, convencer, pedir apoio, apresentar argumentos, obter cooperação ou levar alguém a reconsiderar uma decisão.</li>
-  <li><strong>Abordagem recomendada:</strong> Carisma ou Manipulação. Carisma sustenta apelos sinceros; Manipulação conduz argumentos estratégicos.</li>
-  <li><strong>Exemplo:</strong> O personagem tenta convencer um comerciante a fornecer informações em troca de um favor. O Mestre escolhe Carisma ou Manipulação + Persuasão.</li>
-</ul>
-
-<h3 id="pericias-grupo">Grupo de Perícias</h3>
-<p>
-  Perícias representam treinamento aplicado a técnicas e atividades específicas. Seu uso
-  envolve prática, método ou familiaridade com ferramentas, procedimentos e situações
-  concretas.
-</p>
-
-<h4 id="armas-brancas">Armas Brancas</h4>
-<p>Abrange o manejo de armas de combate próximo e de armas tradicionais de disparo manual que não utilizam mecanismos de fogo, como espadas, facas, lanças, bastões, arcos e bestas.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Atacar com armas brancas, aparar um golpe quando a regra permitir, desarmar um oponente, manejar uma arma em espaço apertado ou preparar, mirar e disparar com arco ou besta.</li>
-  <li><strong>Abordagem recomendada:</strong> Força ou Destreza. Força representa golpes potentes e armas que exigem esforço; Destreza representa precisão, técnica, coordenação e mira.</li>
-  <li><strong>Exemplo:</strong> Um personagem tenta atingir um adversário com uma espada ou disparar uma flecha contra um alvo distante. O Mestre escolhe Força ou Destreza conforme a abordagem.</li>
-</ul>
-
-<h4 id="armas-de-fogo">Armas de Fogo</h4>
-<p>Representa o treinamento no uso de pistolas, rifles e outras armas de fogo, incluindo segurança, recarga, mira e disparo.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Carregar, recarregar, manter, apontar e disparar uma arma de fogo, além de reconhecer seus procedimentos básicos de manuseio.</li>
-  <li><strong>Abordagem recomendada:</strong> Destreza, pela coordenação e precisão necessárias.</li>
-  <li><strong>Exemplo:</strong> Um investigador dispara contra um cultista que tenta escapar por um corredor. O Mestre pede Destreza + Armas de Fogo.</li>
-</ul>
-
-<h4 id="conducao">Condução</h4>
-<p>É a capacidade de conduzir e manobrar meios de transporte, controlando velocidade, direção e resposta do veículo às condições do percurso.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Guiar carruagens, carroças, bicicletas e automóveis, realizar manobras, controlar um veículo em terreno difícil ou conduzir sob pressão.</li>
-  <li><strong>Abordagem recomendada:</strong> Destreza ou Raciocínio. Destreza controla movimentos e manobras; Raciocínio avalia o percurso, o funcionamento do veículo e as decisões de condução.</li>
-  <li><strong>Exemplo:</strong> Um personagem tenta conduzir uma carruagem em alta velocidade por ruas estreitas de Backlund sem perder o controle. O Mestre pede Destreza + Condução.</li>
-</ul>
-
-<h4 id="etiqueta">Etiqueta</h4>
-<p>Abrange o conhecimento e a aplicação de normas sociais, protocolos, costumes e códigos de conduta de diferentes grupos e instituições.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Comportar-se em eventos formais, reconhecer hierarquias, evitar gafes, compreender protocolos e adaptar-se a ambientes sociais específicos.</li>
-  <li><strong>Abordagem recomendada:</strong> Inteligência ou Autocontrole. Inteligência recorda regras e protocolos; Autocontrole mantém a compostura sob pressão.</li>
-  <li><strong>Exemplo:</strong> Convidado a um jantar aristocrático, o personagem precisa saber como se dirigir ao anfitrião e seguir o protocolo. O Mestre pede Inteligência + Etiqueta.</li>
-</ul>
-
-<h4 id="investigacao">Investigação</h4>
-<p>É a capacidade de examinar evidências, localizar informações e reconstruir acontecimentos a partir de pistas. Envolve observação dirigida, pesquisa e dedução.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Examinar uma cena, encontrar evidências, comparar depoimentos, pesquisar registros, reconstruir eventos ou identificar inconsistências.</li>
-  <li><strong>Abordagem recomendada:</strong> Raciocínio ou Inteligência. Raciocínio conecta pistas e deduz o que ocorreu; Inteligência pesquisa arquivos e aplica conhecimentos específicos.</li>
-  <li><strong>Exemplo:</strong> Ao examinar um escritório revirado, o personagem compara a posição dos objetos e tenta descobrir o que foi procurado. O Mestre pede Raciocínio + Investigação.</li>
-</ul>
-
-<h4 id="prestidigitacao">Prestidigitação</h4>
-<p>É a habilidade de realizar movimentos manuais discretos, rápidos e precisos. Abrange truques de mãos, manipulação e ocultação de pequenos objetos, carteirismo e furtos discretos; não se limita a apresentações de palco.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Esconder um objeto na mão, retirar discretamente algo de um bolso, executar truques de cartas, manipular pequenos mecanismos ou trocar objetos sem ser percebido.</li>
-  <li><strong>Abordagem recomendada:</strong> Destreza, pela precisão e coordenação manual.</li>
-  <li><strong>Exemplo:</strong> Durante uma conversa, o personagem tenta retirar uma chave do bolso de alguém sem chamar atenção. O Mestre pede Destreza + Prestidigitação.</li>
-</ul>
-
-<h4 id="sobrevivencia">Sobrevivência</h4>
-<p>Abrange conhecimentos e técnicas para permanecer vivo em ambientes hostis, encontrar recursos, orientar-se, rastrear e preparar abrigo. Também pode ser aplicada a áreas urbanas degradadas ou isoladas.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Encontrar água e alimento, orientar-se, rastrear, reconhecer perigos, montar abrigo e planejar a travessia de uma região difícil.</li>
-  <li><strong>Abordagem recomendada:</strong> Raciocínio ou Vigor. Raciocínio auxilia na orientação e no planejamento; Vigor, na resistência às exigências físicas.</li>
-  <li><strong>Exemplo:</strong> Perdido em uma floresta, o personagem procura água e um local seguro para passar a noite. O Mestre pede Raciocínio + Sobrevivência.</li>
-</ul>
-
-<h4 id="subterfugio">Subterfúgio</h4>
-<p>É a capacidade de enganar, ocultar intenções e sustentar versões falsas dos acontecimentos. Abrange mentiras, blefes, disfarces narrativos e criação de álibis.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Mentir, esconder intenções, sustentar um álibi, blefar, omitir informações de modo convincente ou manter uma história falsa sob questionamento.</li>
-  <li><strong>Abordagem recomendada:</strong> Manipulação, para conduzir a percepção alheia e controlar a informação apresentada.</li>
-  <li><strong>Exemplo:</strong> Interrogado por um oficial, o personagem tenta sustentar uma versão falsa de onde esteve na noite anterior. O Mestre pede Manipulação + Subterfúgio.</li>
-</ul>
-
-<h3 id="conhecimentos">Grupo de Conhecimentos</h3>
-<p>
-  Conhecimentos reúnem formação, saberes técnicos, análise e interpretação de fenômenos
-  mundanos ou sobrenaturais. No mundo Beyonder, conhecer um símbolo ou uma tradição não
-  significa compreender todos os segredos que ela oculta. Ter uma Proficiência elevada
-  representa experiência naquela área, mas não concede automaticamente recursos, poderes
-  ou informações fora do alcance do personagem.
-</p>
-
-<h4 id="ciencias">Ciências</h4>
-<p>Abrange disciplinas científicas como química, física, biologia, matemática e engenharia, conforme o desenvolvimento tecnológico do cenário.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Analisar substâncias, compreender mecanismos, interpretar experimentos, identificar propriedades de materiais ou resolver problemas técnicos.</li>
-  <li><strong>Abordagem recomendada:</strong> Inteligência ou Raciocínio. Inteligência aplica conhecimento estudado; Raciocínio analisa dados novos e resolve problemas por dedução.</li>
-  <li><strong>Exemplo:</strong> O personagem encontra um pó desconhecido e tenta identificar suas propriedades por meio de observação e testes simples. O Mestre pede Inteligência ou Raciocínio + Ciências.</li>
-</ul>
-
-<h4 id="historia">História</h4>
-<p>Abrange o conhecimento de acontecimentos, períodos, personagens, culturas e processos históricos. Pode incluir história política, religiosa, social, familiar e regional.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Recordar eventos, reconhecer símbolos de uma época, compreender a origem de uma tradição ou relacionar um acontecimento a seu contexto histórico.</li>
-  <li><strong>Abordagem recomendada:</strong> Inteligência, por depender principalmente de conhecimento acumulado e memória.</li>
-  <li><strong>Exemplo:</strong> Ao encontrar o brasão de uma família extinta, o personagem tenta recordar sua origem e seu papel em conflitos antigos. O Mestre pede Inteligência + História.</li>
-</ul>
-
-<h4 id="medicina">Medicina</h4>
-<p>Abrange conhecimentos sobre anatomia, doenças, ferimentos, diagnóstico, tratamento e procedimentos médicos. Representa a formação e a prática necessárias para cuidar de pacientes.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Prestar primeiros socorros, diagnosticar sintomas, tratar ferimentos, reconhecer envenenamentos, realizar procedimentos e examinar cadáveres.</li>
-  <li><strong>Abordagem recomendada:</strong> Inteligência ou Raciocínio. Inteligência aplica conhecimento médico conhecido; Raciocínio interpreta sintomas e chega a diagnósticos com sinais incompletos.</li>
-  <li><strong>Exemplo:</strong> O personagem examina uma vítima com sintomas incomuns e tenta descobrir se foi envenenada. O Mestre pede Raciocínio + Medicina.</li>
-</ul>
-
-<h4 id="natureza">Natureza</h4>
-<p>Representa o conhecimento sobre o mundo natural, incluindo fauna, flora, ecossistemas, habitats, ciclos climáticos, comportamento animal e características de ambientes naturais. Diferentemente de Sobrevivência, concentra-se na compreensão e identificação dos elementos naturais.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Identificar espécies de plantas e animais, reconhecer plantas venenosas ou medicinais, interpretar sinais de comportamento animal, compreender ecossistemas e avaliar como clima e terreno afetam uma região.</li>
-  <li><strong>Abordagem recomendada:</strong> Inteligência ou Raciocínio. Inteligência recorda conhecimentos sobre espécies e fenômenos; Raciocínio interpreta sinais do ambiente.</li>
-  <li><strong>Exemplo:</strong> O personagem encontra pegadas incomuns na margem de um rio e tenta identificar o animal, seus hábitos e a direção provável de seu deslocamento. O Mestre pede Raciocínio + Natureza.</li>
-</ul>
-
-<h4 id="navegacao">Navegação</h4>
-<p>Representa a capacidade de orientar-se e traçar rotas em terra e no mar, interpretando mapas, cartas náuticas, bússolas, astros, correntes e referências geográficas. Concentra-se em determinar a posição e planejar o percurso, não no controle direto do veículo.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Traçar uma rota marítima, localizar-se em uma região desconhecida, interpretar uma carta náutica, calcular um percurso por referências naturais ou evitar áreas perigosas.</li>
-  <li><strong>Abordagem recomendada:</strong> Inteligência ou Raciocínio. Inteligência aplica conhecimentos de mapas, cartas e instrumentos; Raciocínio interpreta sinais e corrige a rota diante de circunstâncias inesperadas.</li>
-  <li><strong>Exemplo:</strong> Durante uma viagem pelos Cinco Mares, a tripulação perde de vista a costa em meio à neblina. O personagem consulta a carta náutica, a bússola e a posição das estrelas para determinar o rumo. O Mestre pede Inteligência ou Raciocínio + Navegação.</li>
-</ul>
-
-<h4 id="ocultismo">Ocultismo</h4>
-<p>Representa o conhecimento teórico sobre tradições esotéricas, símbolos, entidades, fenômenos sobrenaturais, artefatos e conceitos ocultos. Não concede, por si só, a capacidade de executar poderes ou rituais.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Reconhecer símbolos, recordar relatos sobre entidades, identificar conceitos Beyonder conhecidos ou compreender a origem provável de um fenômeno oculto.</li>
-  <li><strong>Abordagem recomendada:</strong> Inteligência, para recordar e interpretar conhecimento ocultista.</li>
-  <li><strong>Exemplo:</strong> O personagem encontra um símbolo ritualístico e tenta reconhecer sua tradição e significado. O Mestre pede Inteligência + Ocultismo.</li>
-</ul>
-
-<h4 id="submundo">Submundo</h4>
-<p>Representa o conhecimento das redes informais e criminosas: gangues, contrabandistas, informantes, mercados clandestinos, códigos de rua e áreas perigosas. Permite reconhecer quem controla uma região, como obter informações e como circular entre pessoas que vivem à margem da lei.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Encontrar contatos, reconhecer códigos locais, identificar territórios de gangues, localizar mercados clandestinos e perceber relações entre grupos criminosos.</li>
-  <li><strong>Abordagem recomendada:</strong> Raciocínio ou Manipulação. Raciocínio interpreta sinais e relações; Manipulação facilita o contato e a negociação com informantes.</li>
-  <li><strong>Exemplo:</strong> Ao chegar a um bairro desconhecido, o personagem tenta descobrir quem controla a região e onde pode obter informações. O Mestre pede Raciocínio + Submundo.</li>
-</ul>
-
-<h4 id="teologia">Teologia</h4>
-<p>Representa o conhecimento das religiões e de suas instituições, não apenas das divindades ou crenças. Abrange doutrinas, textos sagrados, símbolos, ritos e tradições, mas também a estrutura interna das Igrejas e de outras organizações religiosas: lideranças, hierarquias clericais, ordens, funções, jurisdições, templos, relações com autoridades e influência na vida social e política. No cenário de Lord of the Mysteries, inclui as Igrejas Ortodoxas e as práticas religiosas conhecidas pelo personagem, mas não revela automaticamente os segredos sobrenaturais ocultos por trás de uma fé.</p>
-<ul>
-  <li><strong>Aplicações:</strong> Identificar a qual Igreja pertence um símbolo ou templo, reconhecer a função de seus clérigos, compreender hierarquias e jurisdições, distinguir ritos e doutrinas, conhecer ordens religiosas e identificar a influência de uma Igreja sobre autoridades e comunidades.</li>
-  <li><strong>Abordagem recomendada:</strong> Inteligência, para recordar e interpretar conhecimentos religiosos, doutrinários e institucionais.</li>
-  <li><strong>Exemplo:</strong> Ao encontrar documentos de uma paróquia em Backlund, o personagem tenta descobrir a qual Igreja ela pertence, a que autoridade clerical responde e quais ritos seguem seus membros. O Mestre pede Inteligência + Teologia.</li>
-</ul>
-
-<h3 id="especializacoes">Especializações</h3>
-<p>
-  Uma especialização representa um <strong>campo específico de conhecimento, técnica,
-  prática ou experiência</strong> desenvolvido pelo personagem. Ela não é uma
-  Proficiência separada, não recebe pontos próprios e não fica vinculada a uma única
-  Proficiência ou categoria de teste: pode contribuir para ações diferentes quando sua
-  aplicação for direta e claramente demonstrável.
-</p>
-<p>
-  Cada personagem recebe <strong>uma especialização inicial durante a criação</strong>.
-  O jogador deve discuti-la com o Mestre para definir um campo coerente com sua história,
-  ocupação e experiências. Especializações adicionais podem ser concedidas pelo Mestre
-  após grandes feitos ou momentos memoráveis da campanha.
-</p>
-<div class="box box-note">
-  <div class="box-title">A especialização deve ser específica</div>
-  <p>
-    A especialização precisa identificar uma área delimitada de conhecimento,
-    técnica ou prática. Termos amplos como <strong>Medicina</strong>,
-    <strong>Investigação</strong>, <strong>Conhecimento Oculto</strong> ou
-    <strong>Combate</strong> não são específicos o bastante. Prefira campos como
-    <strong>Cirurgia de Campo</strong>, <strong>Toxicologia</strong>,
-    <strong>Documentoscopia</strong>, <strong>Cartografia Costeira</strong>,
-    <strong>Falsificação de Documentos</strong>, <strong>História da Nobreza</strong>
-    ou <strong>Rituais de Proteção</strong>.
-  </p>
-  <p>
-    O bônus da especialização não se aplica por uma associação vaga com a situação
-    nem muda a natureza fundamental da ação. O jogador deve explicar qual parte
-    daquele conhecimento ou técnica está sendo aplicada; o Mestre decide se a
-    justificativa é suficiente.
-  </p>
-</div>
-<div class="box box-example">
-  <div class="box-title">Exemplo de aplicação em diferentes testes</div>
-  <p>
-    Um personagem com a especialização <strong>Cirurgia de Campo</strong> recebe
-    +1 ao realizar um procedimento, avaliar um ferimento ou identificar a causa provável
-    de uma lesão. Também pode receber esse bônus em um teste de Intimidação quando
-    descreve com precisão as consequências anatômicas de um ferimento para pressionar
-    alguém. Nesse caso, o teste continua usando o Atributo e a Proficiência adequados
-    à abordagem; a Especialização concede +1 porque sua técnica participa diretamente
-    da ação. Ela não se aplicaria, por exemplo, em uma negociação sem qualquer relação
-    com anatomia ou tratamento de ferimentos.
-  </p>
-</div>
-<ul>
-  <li><strong>Outros exemplos:</strong> Investigação Forense, Toxicologia, Documentoscopia, Cartografia Costeira, Navegação Astronômica, História da Nobreza e Rituais de Proteção.</li>
-  <li>Quando a especialização contribuir de maneira clara e direta para a ação, ela concede <strong>+1 ao resultado do teste</strong>, independentemente da Proficiência utilizada.</li>
-  <li>O jogador deve demonstrar como o campo específico da especialização participa da ação. Uma relação apenas temática ou vagamente relacionada não é suficiente.</li>
-  <li>O Mestre tem a decisão final sobre a pertinência da aplicação. A especialização não altera a natureza fundamental da ação nem substitui requisitos necessários para realizá-la.</li>
-  <li>Bônus de especializações diferentes podem se acumular quando cada uma contribuir de forma direta e comprovável para a mesma ação; cada especialização pertinente acrescenta +1 ao resultado.</li>
-  <li>Uma especialização não substitui a Proficiência ou o Atributo exigido, não garante sucesso e não permite realizar uma atividade que o personagem não teria condições de executar normalmente.</li>
-</ul>
-
-<h2 id="sistema-testes">Sistema de Testes</h2>
-
-<p>
-  Um teste é realizado quando o resultado de uma ação é incerto e o fracasso pode
-  produzir consequências relevantes. O jogador rola <span class="dice">2d10</span>,
-  soma os resultados dos dois dados e acrescenta o bônus total do personagem.
-  O resultado é comparado à Classe de Dificuldade (CD) ou, em uma oposição direta,
-  ao total obtido por outro participante.
-</p>
-
-<h3 id="teste-basico">Teste básico</h3>
-<div class="box box-rule">
-  <div class="box-title">Fórmula do Teste</div>
-  <p style="text-align:center; font-size:1.2em;">
-    <strong>Resultado = soma dos dois dados selecionados + bônus total do personagem</strong>
-  </p>
-  <p>
-    O bônus total reúne <strong>Mod.(Atributo)</strong>,
-    <strong>Mod.(Proficiência)</strong> e quaisquer outros modificadores numéricos
-    concedidos expressamente por uma regra, equipamento ou habilidade. Cada
-    especialização diretamente pertinente acrescenta <strong>+1 ao resultado final</strong>;
-    especializações diferentes podem somar seus bônus quando todas contribuírem
-    concretamente para a mesma ação.
-  </p>
-  <p style="text-align:center; font-size:1.1em;">
-    <strong>Dois dados selecionados + Mod.(Atributo) + Mod.(Proficiência) + bônus aplicáveis ≥ CD</strong>
-  </p>
-  <p>
-    O Mestre escolhe o Atributo e a Proficiência que melhor representam a abordagem
-    descrita pelo jogador. A coluna <strong>Abordagem recomendada</strong> das tabelas
-    orienta essa escolha, mas não é uma associação obrigatória. Quando a ação depende
-    somente de uma capacidade geral, pode ser solicitado um teste puro de Atributo,
-    sem Proficiência. Não se soma mais de um Atributo ou mais de uma Proficiência ao mesmo teste,
-    salvo se uma regra específica determinar o contrário.
-  </p>
-  <p>
-    Cada especialização diretamente relevante acrescenta +1 ao resultado do teste.
-    Os bônus de especializações diferentes podem se acumular quando cada campo específico
-    participar de forma direta e comprovável da mesma ação. Esses bônus numéricos são
-    aplicados depois da rolagem e não contam como fontes de Vantagem ou Desvantagem.
-    As fontes de Vantagem e Desvantagem continuam sendo contabilizadas separadamente,
-    conforme as regras desta seção.
-  </p>
-  <p>
-    Os dois dados são somados: a rolagem normal pode produzir resultados entre 2 e 20,
-    antes da adição dos bônus. Diferentemente de um único dado, os valores centrais
-    aparecem com maior frequência do que os extremos.
-  </p>
-</div>
-
-<h3 id="resolucao-teste">Como resolver um teste</h3>
-<ol>
-  <li><strong>Declare a intenção:</strong> o jogador explica o que deseja alcançar e como pretende agir.</li>
-  <li><strong>Defina a abordagem:</strong> o Mestre escolhe o Atributo e a Proficiência adequados à descrição.</li>
-  <li><strong>Estabeleça a dificuldade:</strong> o Mestre determina uma CD ou define quem fará o teste oposto.</li>
-  <li><strong>Calcule o bônus total:</strong> some Mod.(Atributo), Mod.(Proficiência) e os bônus que realmente se aplicarem.</li>
-  <li><strong>Compare as fontes:</strong> cada fonte de Vantagem cancela uma fonte de Desvantagem. Depois dos cancelamentos, verifique qual tipo ainda predomina. Fontes excedentes do mesmo tipo não se acumulam.</li>
-  <li><strong>Role os dados:</strong> sem predominância, role 2d10 normalmente. Se restar Vantagem, role 3d10 e mantenha os dois maiores; se restar Desvantagem, role 3d10 e mantenha os dois menores. Independentemente da quantidade de fontes excedentes, apenas um dado adicional é utilizado.</li>
-  <li><strong>Some e compare:</strong> some os dois dados utilizados, acrescente o bônus total e compare o resultado à CD ou ao total do oponente.</li>
-  <li><strong>Verifique um possível crítico:</strong> observe os dois dados utilizados e confira também se o resultado final alcançou ou não a CD.</li>
-  <li><strong>Interprete o resultado:</strong> descreva o sucesso, a falha e, quando houver, o efeito crítico ou a complicação adicional.</li>
-</ol>
-
-<div class="box box-example">
-  <div class="box-title">Exemplo: teste básico</div>
-  <p>
-    Edmund Harker tenta identificar uma adulteração em um contrato. O Mestre escolhe
-    Raciocínio + Investigação e determina CD 15. Edmund possui <strong>Pontos.(RAC) = 4</strong>,
-    portanto Mod.(RAC) é +2. Sua Proficiência Investigação tem 2 pontos, portanto
-    Mod.(Investigação) é +0. Seu bônus total é +2. Ele rola 2d10 e obtém
-    <strong>7 e 8</strong>, cuja soma é 15.
-  </p>
-  <p>
-    Total: 15 + 2 + 0 = <strong>17</strong>. Como 17 é igual ou superior à CD 15,
-    Edmund identifica a adulteração.
-  </p>
-</div>
-
-<h3 id="tabela-cd">Tabela de Classe de Dificuldade</h3>
-<table>
-  <thead><tr><th>CD</th><th>Dificuldade</th><th>Descrição</th></tr></thead>
-  <tbody>
-    <tr><td>5</td><td>Trivial</td><td>Tão fácil que só falha em circunstâncias verdadeiramente extraordinárias.</td></tr>
-    <tr><td>8</td><td>Fácil</td><td>Desafiador para leigos, rotineiro para quem possui treinamento.</td></tr>
-    <tr><td>10</td><td>Moderado</td><td>Requer competência; um profissional teria boas chances de sucesso.</td></tr>
-    <tr><td>13</td><td>Difícil</td><td>Exige habilidade real; falhas são comuns mesmo entre competentes.</td></tr>
-    <tr><td>15</td><td>Muito Difícil</td><td>Apenas especialistas têm chance razoável. Amadores quase certamente falham.</td></tr>
-    <tr><td>18</td><td>Quase Impossível</td><td>Exige maestria excepcional combinada com uma boa dose de sorte.</td></tr>
-    <tr><td>20+</td><td>Lendário</td><td>Feitos que entram para a história. Quase sobre-humano; exige poderes Beyonder ou circunstâncias excepcionais.</td></tr>
-  </tbody>
-</table>
-
-<h3 id="criticos">Resultados críticos</h3>
-<p>
-  Os resultados críticos são identificados pelos <strong>valores naturais dos dois
-  dados selecionados para compor o resultado final</strong>. Quando houver Vantagem,
-  utilizam-se os dois maiores resultados dos 3d10; quando houver Desvantagem, os dois
-  menores. Se as fontes se anularem, utilizam-se os dois dados da rolagem normal de 2d10.
-  Os bônus do personagem não alteram os valores naturais, mas determinam se o resultado
-  final alcança ou não a CD.
-</p>
-
-<h4 id="acerto-critico">Acerto Crítico — 10 + 10</h4>
-<p>
-  O Acerto Crítico ocorre quando os dois dados utilizados mostram <strong>10</strong>
-  e o resultado final, incluindo o bônus total do personagem, é igual ou superior
-  à CD. O personagem obtém o sucesso normal e também um benefício adicional
-  significativo, proporcional à ação e às circunstâncias. O benefício pode ser
-  dano adicional, uma abertura na defesa, uma descoberta extra ou uma oportunidade
-  social relevante, conforme o pilar envolvido.
-</p>
-<p>
-  Se os dois dados utilizados mostrarem 10, mas o resultado final não alcançar a CD,
-  o teste será uma falha comum, não um Acerto Crítico.
-</p>
-<div class="box box-example">
-  <div class="box-title">Exemplo: Acerto Crítico</div>
-  <p>
-    Uma personagem tenta convencer um comerciante a revelar quem comprou um ingrediente
-    raro. Ela possui bônus total +3, rola 10 e 10 e alcança 23 contra CD 15.
-    Como os dois dados utilizados mostram 10 e o total supera a CD, ela obtém um
-    <strong>Acerto Crítico</strong>: o comerciante revela a informação e ainda recorda
-    um detalhe útil sobre o comprador, oferecendo uma nova pista à investigação.
-  </p>
-</div>
-
-<h4 id="falha-critica">Falha Crítica — 1 + 1</h4>
-<p>
-  A Falha Crítica ocorre quando os dois dados utilizados mostram <strong>1</strong>
-  e o resultado final, incluindo o bônus total do personagem, fica abaixo da CD.
-  Além de não alcançar o objetivo, o personagem sofre uma complicação adicional
-  relevante, proporcional à ação. A complicação pode envolver exposição, perda de
-  recursos, dano a uma ferramenta, desequilíbrio ou agravamento da situação.
-</p>
-<p>
-  Se os dois dados utilizados mostrarem 1, mas o resultado final alcançar a CD,
-  o teste será um sucesso comum, não uma Falha Crítica.
-</p>
-<div class="box box-example">
-  <div class="box-title">Exemplo: Falha Crítica</div>
-  <p>
-    Um personagem tenta abrir discretamente uma fechadura, possui bônus total +3 e
-    rola 1 e 1. Seu resultado final é 5 contra CD 13. Como os dois dados utilizados
-    mostram 1 e o total não alcança a CD, ocorre uma <strong>Falha Crítica</strong>:
-    a gazua se quebra dentro do mecanismo e o ruído alerta uma pessoa no cômodo ao lado.
-  </p>
-</div>
-
-<h4>Críticos com Vantagem e Desvantagem</h4>
-<p>
-  A presença de Vantagem ou Desvantagem altera quais dados são selecionados, mas não
-  modifica os critérios de crítico. Com Vantagem, utilize os dois maiores resultados
-  dos 3d10; com Desvantagem, os dois menores. Quando as fontes se anularem, utilize os
-  dois dados da rolagem normal. O crítico é verificado sempre a partir desse par final.
-</p>
-<div class="box box-note">
-  <div class="box-title">Atenção à seleção dos dados</div>
-  <p>
-    Apenas os dois dados selecionados entram no cálculo e na identificação de críticos.
-    Mesmo que existam várias fontes excedentes de Vantagem ou Desvantagem, a rolagem
-    recebe no máximo um dado adicional: 3d10, mantendo os dois maiores ou os dois menores.
-    Um crítico só ocorre se o par selecionado atender aos critérios de 10 + 10 ou 1 + 1,
-    além da condição de alcançar ou não a CD.
-  </p>
-</div>
-
-<h4>Críticos nos três pilares</h4>
-<table>
-  <thead><tr><th>Pilar</th><th>Acerto Crítico</th><th>Falha Crítica</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Combate</strong></td><td>Dano adicional, abertura na defesa ou condição especial, se compatível com a ação.</td><td>Perda de equilíbrio, exposição ou abertura na defesa.</td></tr>
-    <tr><td><strong>Exploração</strong></td><td>Descoberta adicional, informação relevante ou economia de recursos.</td><td>Acidente, perda de recursos ou exposição a perigo.</td></tr>
-    <tr><td><strong>Interação</strong></td><td>Concessão adicional, informação importante ou oportunidade social.</td><td>Revelação indesejada, comprometimento da posição ou desconfiança.</td></tr>
-  </tbody>
-</table>
-<p>
-  Os efeitos acima são referências, não consequências obrigatórias. O Mestre deve
-  escolher um benefício ou uma complicação que faça sentido para a ação, para o
-  contexto e para o impacto que o resultado pode produzir na história.
-</p>
-<p>
-  Os resultados críticos são aplicados a testes contra uma CD. Em testes disputados,
-  não existe uma CD fixa; portanto, os pares naturais não geram automaticamente
-  Acerto Crítico ou Falha Crítica. Nesses casos, compare os totais normalmente,
-  salvo se uma habilidade ou regra específica determinar outro efeito.
-</p>
-
-<h3 id="testes-disputados">Testes disputados</h3>
-<p>
-  Quando dois participantes se opõem diretamente — por exemplo, um tenta enganar e o
-  outro tenta perceber a mentira — cada um realiza seu teste a partir da rolagem-base de
-  2d10, aplicando as fontes de Vantagem e Desvantagem que se justificarem para sua própria
-  abordagem. Cada participante soma os dois dados selecionados ao respectivo bônus total.
-  O maior resultado vence. Em caso de empate, prevalece
-  o defensor: quem está resistindo, reagindo ou tentando manter a situação como está.
-</p>
-<div class="box box-example">
-  <div class="box-title">Exemplo: teste disputado</div>
-  <p>
-    Edmund tenta sustentar uma história falsa diante de um investigador. Edmund rola
-    2d10 e obtém 5 e 7, totalizando 12 nos dados. Como possui Pontos.(MAN) = 4,
-    seu Mod.(MAN) é +2; sua Proficiência Subterfúgio tem 1 ponto, portanto
-    Mod.(Subterfúgio) é −1. Seu resultado final é <strong>13</strong>. O investigador
-    tenta perceber a mentira com Empatia e Raciocínio: rola 2d10 e obtém 4 e 7,
-    totalizando 11 nos dados. Com Mod.(RAC) +1 e Mod.(Empatia) +0, seu resultado final
-    é <strong>12</strong>. Edmund vence o teste disputado. Se os totais fossem iguais,
-    o investigador, como defensor, prevaleceria.
-  </p>
-</div>
-
-<h3 id="vantagem-desvantagem">Vantagem e Desvantagem</h3>
-<p>
-  O Mestre pode conceder fontes de Vantagem ou impor fontes de Desvantagem quando as
-  circunstâncias favorecem ou prejudicam significativamente a tentativa. As fontes são
-  consideradas para determinar se o teste será realizado com Vantagem, Desvantagem ou
-  sem nenhuma delas. Elas não modificam os bônus de Atributo, Proficiência ou outros
-  modificadores numéricos do personagem.
-</p>
-<div class="box box-rule">
-  <div class="box-title">Como resolver fontes de Vantagem e Desvantagem</div>
-  <p>
-    Cada fonte de Vantagem cancela uma fonte de Desvantagem. Depois de cancelar os pares,
-    observe qual tipo ainda possui fontes restantes. Independentemente de quantas fontes
-    excedentes existam, <strong>apenas uma condição é aplicada</strong>: Vantagem ou Desvantagem.
-    Fontes do mesmo tipo não concedem dados adicionais cumulativos.
-  </p>
-  <ul>
-    <li><strong>Vantagem predominante:</strong> role <strong>3d10</strong> e some os dois maiores resultados.</li>
-    <li><strong>Desvantagem predominante:</strong> role <strong>3d10</strong> e some os dois menores resultados.</li>
-    <li><strong>Fontes equilibradas ou ausentes:</strong> role normalmente <strong>2d10</strong>.</li>
-  </ul>
-</div>
-<div class="box box-example">
-  <div class="box-title">Exemplo: três fontes de Vantagem e uma de Desvantagem</div>
-  <p>
-    Uma personagem possui três fontes de Vantagem — preparação prévia, auxílio eficaz
-    e uma posição favorável —, mas sofre uma fonte de Desvantagem por estar ferida.
-    Uma fonte de cada tipo se cancela. Embora ainda restem duas fontes de Vantagem,
-    elas não se acumulam: a personagem recebe apenas <strong>Vantagem</strong>, rola
-    <strong>3d10</strong> e mantém os dois maiores resultados. Se obtiver 2, 7 e 9,
-    utiliza 7 + 9 = 16. Com bônus total +2, alcança <strong>18</strong> contra CD 13.
-  </p>
-</div>
-<div class="box box-example">
-  <div class="box-title">Exemplo: Desvantagem predominante</div>
-  <p>
-    Em outra tentativa, uma personagem possui uma fonte de Vantagem, mas sofre três
-    fontes de Desvantagem. Uma fonte de cada tipo se cancela e ainda restam duas fontes
-    de Desvantagem. Como fontes excedentes não se acumulam, ela recebe apenas
-    <strong>Desvantagem</strong>: rola <strong>3d10</strong> e mantém os dois menores.
-    Se obtiver 2, 7 e 9, utiliza 2 + 7 = 9. Com bônus total +2, alcança
-    <strong>11</strong> contra CD 13 e falha.
-  </p>
-</div>
-
-<h3 id="testes-grupo">Testes em grupo</h3>
-<p>
-  Quando todos os integrantes precisam realizar a mesma tarefa em conjunto, o Mestre
-  pode pedir um teste em grupo. Cada participante realiza seu próprio teste a partir da
-  rolagem-base de 2d10, aplicando Vantagem ou Desvantagem conforme as fontes presentes
-  em sua própria situação. Fontes opostas se cancelam, e apenas uma condição pode afetar
-  a rolagem de cada participante.
-  O grupo é bem-sucedido quando <strong>mais da metade</strong> dos participantes
-  obtém sucesso. Em grupos com número par de participantes, metade exata não é suficiente.
-</p>
-<div class="box box-example">
-  <div class="box-title">Exemplo: teste em grupo</div>
-  <p>
-    Quatro investigadores tentam atravessar silenciosamente um armazém vigiado. Cada
-    um realiza Destreza + Furtividade contra CD 13, com bônus total +2:
-  </p>
-  <ul>
-    <li>Personagem A: 8 + 7 + 2 = <strong>17</strong> — sucesso.</li>
-    <li>Personagem B: 4 + 3 + 2 = <strong>9</strong> — falha.</li>
-    <li>Personagem C: 6 + 5 + 2 = <strong>13</strong> — sucesso.</li>
-    <li>Personagem D: 5 + 6 + 2 = <strong>13</strong> — sucesso.</li>
-  </ul>
-  <p>
-    Três dos quatro personagens obtêm sucesso. O grupo consegue atravessar o armazém;
-    o personagem B é puxado para trás de uma pilha de caixas pelos companheiros antes
-    de ser visto.
-  </p>
-</div>
-
-<div class="separator"></div>
-
-<h2 id="estatisticas-derivadas">Estatísticas Derivadas</h2>
-<p>
-  Estatísticas derivadas são valores calculados a partir dos Atributos, da Sequência
-  ou de regras específicas. Elas devem ser registradas nos campos correspondentes da
-  ficha e atualizadas quando uma regra alterar os valores utilizados no cálculo.
-</p>
-
-<h3 id="pontos-vida">Pontos de Vida (PV)</h3>
-<p>
-  Os Pontos de Vida representam a capacidade do personagem de suportar ferimentos
-  físicos e continuar agindo. A fórmula utiliza diretamente os pontos de Vigor e a
-  Sequência atual do personagem. Quando os PV chegam a 0, o personagem fica
-  <strong>Incapacitado</strong>; valores abaixo de 0 representam risco de morte,
-  conforme as regras de combate e ferimentos.
-</p>
-<div class="box box-rule">
-  <div class="box-title">Cálculo dos Pontos de Vida</div>
-  <p style="text-align:center; font-size:1.2em;"><strong>PV = 3 + Pontos.(VIG) + (10 − Sequência)</strong></p>
-  <p>
-    Nesta fórmula, use <strong>Pontos.(VIG)</strong>, e não Mod.(VIG). O termo
-    (10 − Sequência) representa o acréscimo correspondente à Sequência do personagem.
-  </p>
-  <table>
-    <thead><tr><th>Sequência</th><th>Acréscimo</th></tr></thead>
-    <tbody>
-      <tr><td>9</td><td>+1</td></tr><tr><td>8</td><td>+2</td></tr>
-      <tr><td>7</td><td>+3</td></tr><tr><td>6</td><td>+4</td></tr>
-      <tr><td>5</td><td>+5</td></tr>
+      <tr><td><strong>Atuação coerente</strong></td><td>5</td><td>Quando o personagem expressa de forma clara a essência de sua Sequência em uma cena relevante. Concedida no máximo uma vez por sessão.</td></tr>
+      <tr><td><strong>Atuação decisiva</strong></td><td>10</td><td>Quando uma escolha alinhada à Sequência altera significativamente a cena ou envolve risco, custo ou consequência importante. Substitui os 5 pontos de atuação coerente naquela sessão.</td></tr>
+      <tr><td><strong>Marco narrativo</strong></td><td>15 a 20</td><td>Quando o personagem conclui um arco ou enfrenta uma situação excepcional que representa profundamente a essência da Sequência.</td></tr>
+      <tr><td><strong>Atividade de intervalo</strong></td><td>5 por semana</td><td>Quando o personagem dedica uma semana completa a uma atividade concreta e coerente com sua Sequência, definida com o Mestre.</td></tr>
     </tbody>
   </table>
   <p class="box-note">
-    Este livro apresenta a progressão dos personagens da Sequência 9 até a
-    <strong>Sequência 5</strong>, que é o estágio mais alto abordado neste volume.
-    Por isso, a tabela e os exemplos de progressão deste capítulo terminam na Sequência 5.
-  </p>
-  <p>
-    <strong>Exemplo:</strong> um personagem com Pontos.(VIG) = 2 na Sequência 8 possui
-    3 + 2 + (10 − 8) = <strong>7 PV</strong>. Na Sequência 9, com o mesmo Vigor, possui
-    3 + 2 + (10 − 9) = <strong>6 PV</strong>. Ao alcançar a Sequência 5,
-    com o mesmo Vigor, terá 3 + 2 + (10 − 5) = <strong>10 PV</strong>.
-  </p>
-</div>
-<div class="box box-note">
-  <div class="box-title">Registro dos PV na ficha</div>
-  <p>
-    Depois de calcular seus PV, conte os quadrados destinados à Vida na ficha e registre
-    a quantidade total seguida de uma barra (/). Por exemplo, se o personagem possui
-    7 quadrados, escreva <strong>7/</strong> imediatamente após o espaço ou número
-    indicado. Os quadrados representam a capacidade total; marque-os conforme receber
-    dano, de acordo com as regras de combate.
+    A contagem de uma poção nunca ultrapassa <strong>100/100 Pontos de Digestão</strong>.
+    Se uma recompensa fizer o personagem ultrapassar esse limite, a contagem é encerrada
+    em 100/100 e os pontos excedentes são perdidos; eles não são transferidos para a poção
+    da próxima Sequência. Uma mesma ação ou acontecimento não pode ser recompensado por
+    mais de uma categoria.
   </p>
 </div>
 
-<h3 id="espiritualidade">Espiritualidade</h3>
 <p>
-  A Espiritualidade representa a capacidade do personagem de canalizar sua própria
-  essência espiritual. No sistema, ela funciona como uma reserva utilizada para
-  sustentar manifestações sobrenaturais, incluindo poderes Beyonder, feitiços e
-  determinados procedimentos ritualísticos. Sua quantidade máxima parte do valor
-  espiritual oferecido pelo Caminho na Sequência atual e aumenta com a Digestão de
-  poções ou por outras fontes específicas.
-</p>
-<div class="box box-rule">
-  <div class="box-title">Cálculo da Espiritualidade Máxima</div>
-  <p style="text-align:center; font-size:1.15em;">
-    <strong>Espiritualidade Máxima = Valor-base do Caminho/Sequência + Bônus de Digestão de Poção + Outros Bônus</strong>
-  </p>
-  <p>
-    O <strong>Valor-base do Caminho/Sequência</strong> é a quantidade de Espiritualidade
-    oferecida pelo Caminho na Sequência atual do personagem. O <strong>Bônus de Digestão
-    de Poção</strong> é permanente: cada vez que o personagem alcança 50% de Digestão de
-    uma poção, sua Espiritualidade máxima aumenta em +2. Esse bônus é cumulativo entre as
-    poções. <strong>Outros Bônus</strong> podem vir de fontes específicas, como Artefatos
-    Selados ou aprimoramentos concedidos por poderes Beyonder.
-  </p>
-  <p>
-    <strong>Exemplo:</strong> um personagem do Caminho do Eremita, na Sequência 9
-    (Investigador de Mistérios), possui <strong>10 pontos de Espiritualidade-base</strong>.
-    Ao alcançar 50% de Digestão da poção da Sequência 9, recebe +2 permanentes; ao alcançar
-    50% da poção da Sequência 8, recebe outros +2, totalizando +4 de Bônus de Digestão.
-    Sem outras fontes, sua Espiritualidade máxima passa de 10 para 12 e, depois, para 14.
-  </p>
-</div>
-<div class="box box-note">
-  <div class="box-title">Registro na ficha</div>
-  <p>
-    Registre a Espiritualidade no formato <strong>Atual/Máxima</strong>. O valor máximo
-    corresponde à capacidade total do personagem; o valor atual diminui quando ele
-    utiliza efeitos que consomem Espiritualidade. Na criação, os valores atual e máximo
-    começam iguais ao valor-base do Caminho na Sequência 9, acrescido de eventuais Outros
-    Bônus. A tabela completa de valores-base por Caminho e Sequência ainda deverá ser definida.
-  </p>
-</div>
-
-<h4>Utilização da Espiritualidade</h4>
-<p>
-  A Espiritualidade é consumida quando uma habilidade, feitiço ou ritual indicar
-  expressamente um custo. O custo deve constar na descrição do efeito ou nas regras
-  específicas que o apresentam. Nem toda capacidade sobrenatural precisa consumir
-  Espiritualidade: efeitos passivos ou habilidades sem custo indicado não gastam
-  pontos por padrão.
-</p>
-<ul>
-  <li><strong>Poderes Beyonder:</strong> representam as capacidades concedidas pela poção e pelo Caminho. Quando um poder exigir Espiritualidade, sua descrição informa o custo e as condições de ativação.</li>
-  <li><strong>Feitiços:</strong> são efeitos místicos que o personagem aprendeu a executar por meio de conhecimento, instrução ou fórmulas específicas. Possuir Espiritualidade não concede, por si só, conhecimento de feitiços.</li>
-  <li><strong>Magia ritualística:</strong> pode exigir Espiritualidade para conduzir, sustentar ou completar o procedimento, mas também pode depender de preparação, símbolos, fórmulas, ingredientes, local apropriado ou auxílio de uma entidade. Gastar pontos não substitui esses requisitos.</li>
-</ul>
-<p>
-  Normalmente, o personagem não pode ativar um efeito cujo custo seja superior à
-  Espiritualidade atual. Entretanto, é possível forçar a manifestação de um poder
-  mesmo sem possuir pontos suficientes, assumindo o risco de prejudicar a própria
-  Lucidez. Essa possibilidade não elimina outros requisitos de ativação nem substitui
-  eventuais testes exigidos pela habilidade.
+  O Mestre concede os pontos considerando a relevância da atuação, e não apenas a quantidade
+  de vezes que o jogador repete uma ação. Uma interpretação não precisa ser bem-sucedida
+  para contribuir com a digestão: uma decisão coerente com a essência da Sequência pode
+  ser significativa mesmo quando produz consequências desfavoráveis.
 </p>
 
-<div class="box box-warning">
-  <div class="box-title">Forçar poderes sem Espiritualidade suficiente</div>
-  <p>
-    Quando o personagem utiliza um poder Beyonder sem possuir Espiritualidade suficiente
-    para pagar seu custo, ele pode ainda assim forçar sua manifestação. Nesse caso,
-    gasta toda a Espiritualidade que ainda possuir e contabiliza como <strong>excedente</strong>
-    a parte do custo que não pôde pagar.
-  </p>
-  <p>
-    O poder é manifestado e seus efeitos são resolvidos normalmente. <strong>Somente
-    depois de resolver o poder</strong>, o personagem deve realizar um teste de Lucidez
-    para suportar o desgaste: role <strong>2d10 + bônus total das Âncoras ativas + modificador
-    de circunstância</strong> contra uma Classe de Dificuldade igual a
-    <strong>8 + o total acumulado de Espiritualidade
-    excedente</strong>. Some ao excedente anterior a parcela não paga pelo poder recém
-    utilizado antes de calcular a CD. Quanto mais o personagem força sua Espiritualidade
-    além do limite, mais difícil se torna suportar o esforço.
-  </p>
-  <p>
-    <strong>Exemplo:</strong> um personagem com 0 pontos de Espiritualidade força um
-    poder que custa 3 pontos. Seu excedente acumulado passa a 3, portanto o teste é
-    realizado contra <strong>CD 11</strong> (8 + 3). Se, em seguida, utilizar outro
-    poder que custa 2 pontos sem recuperar Espiritualidade, o excedente acumulado
-    passa a 5 e o próximo teste será contra <strong>CD 13</strong> (8 + 3 + 2).
-  </p>
-  <p>
-    Se o personagem ainda possuir parte do custo, apenas a parcela que ultrapassar
-    sua reserva será considerada excedente. Por exemplo, se possuir 1 ponto e utilizar
-    um poder de custo 3, apenas 2 pontos serão acrescentados ao excedente acumulado.
-  </p>
-  <p>
-    O teste de Lucidez não determina se o poder funciona nem reduz seus efeitos:
-    ele já foi resolvido antes da rolagem. <strong>Em caso de falha, o personagem
-    perde 1 ponto de Lucidez</strong>; em caso de sucesso, não sofre essa perda.
-    O excedente acumulado é mantido enquanto ele continuar utilizando poderes sem
-    recuperar Espiritualidade. Qualquer recuperação de Espiritualidade encerra a
-    contagem, e uma nova sequência de uso forçado começa com excedente zero.
-  </p>
-</div>
+<h3 id="marcos-digestao">Marcos de Digestão</h3>
 
-<h4>Recuperação da Espiritualidade</h4>
 <p>
-  A Espiritualidade pode ser recuperada por meio de descanso. Existem duas formas
-  de recuperação, cada uma com seu próprio limite de utilização:
-</p>
-<ul>
-  <li><strong>Descanso completo:</strong> após 8 horas de descanso, o personagem recupera toda a Espiritualidade, até seu valor máximo. Essa recuperação pode ser realizada <strong>uma vez a cada período de 24 horas</strong>.</li>
-  <li><strong>Descanso breve:</strong> após 1 hora de descanso, o personagem recupera <strong>1d10 + (10 − Sequência)</strong> pontos de Espiritualidade, sem ultrapassar seu valor máximo. Essa recuperação pode ser realizada <strong>até duas vezes por dia</strong>.</li>
-</ul>
-<p>
-  Os pontos recuperados não podem elevar a reserva acima da Espiritualidade máxima
-  do personagem. A recuperação também encerra o excedente acumulado por uso forçado;
-  caso volte a utilizar um poder sem possuir pontos suficientes, uma nova contagem
-  será iniciada.
-</p>
-
-<div class="box box-lore">
-  <div class="box-title">Espiritualidade e práticas místicas</div>
-  <p>
-    A Espiritualidade é a força utilizada pelo personagem, não um substituto para o
-    conhecimento necessário à prática sobrenatural. Um Beyonder pode possuir uma
-    reserva elevada e ainda desconhecer os símbolos, fórmulas, materiais ou condições
-    necessários para executar determinado ritual. Da mesma forma, um ritual pode buscar
-    auxílio de uma existência externa; nesse caso, a relação estabelecida, os requisitos
-    e os riscos envolvidos fazem parte do procedimento e não são anulados pelo gasto de
-    Espiritualidade.
-  </p>
-  <p>
-    Essa distinção é importante no universo de <em>Senhor dos Mistérios</em>: conhecer
-    uma fórmula não significa compreender plenamente aquilo com que ela estabelece
-    contato. O Mestre deve considerar o conhecimento do personagem, a preparação e as
-    possíveis consequências, além do custo numérico indicado.
-  </p>
-</div>
-
-<h3 id="lucidez-ancoras">Lucidez, Âncoras e perda de controle</h3>
-<p>
-  A <strong>Lucidez</strong> mede a capacidade do personagem de preservar sua percepção,
-  identidade e autonomia diante de influências sobrenaturais. Todos os personagens começam
-  com <strong>7 pontos</strong>. A escala vai de 0 a 10, e a Lucidez nunca pode ultrapassar 10
-  nem ficar abaixo de 0.
+  Os marcos abaixo representam etapas da assimilação e concedem benefícios específicos.
+  A cada marco, o personagem pode desenvolver o domínio de seus poderes, ampliar sua
+  Espiritualidade ou recuperar parte de sua Lucidez.
 </p>
 
 <div class="box box-rule">
-  <div class="box-title">Teste de Lucidez</div>
-  <p style="text-align:center; font-size:1.15em;"><strong>2d10 + Âncoras + Bônus de Circunstância</strong></p>
-  <p>
-    Quando uma regra ou efeito exigir um teste de Lucidez, some os dois dados, o bônus de
-    todas as Âncoras ativas do personagem e o modificador de circunstância indicado pelo
-    Mestre. Compare o resultado à CD definida pelo efeito ou pela situação. Na ausência de
-    uma CD específica, utilize a tabela geral de Classes de Dificuldade deste capítulo.
-    Nenhum Atributo ou Proficiência é somado ao teste.
-  </p>
+  <div class="box-title">Etapas da assimilação</div>
+  <table>
+    <thead><tr><th>Progresso</th><th>Marco</th><th>O que representa</th><th>Recompensa</th></tr></thead>
+    <tbody>
+      <tr><td>25%</td><td><strong>Primeiro contato</strong></td><td>O personagem começa a reconhecer o princípio da Sequência e percebe como ele se manifesta em suas experiências.</td><td>Sintoniza um poder da Sequência atual, à sua escolha.</td></tr>
+      <tr><td>50%</td><td><strong>Compreensão</strong></td><td>O personagem já consegue aplicar o princípio em mais de um contexto e começa a reconhecer seus limites.</td><td>Aumenta permanentemente a <strong>Espiritualidade máxima em +2 pontos</strong>.</td></tr>
+      <tr><td>75%</td><td><strong>Incorporação</strong></td><td>O princípio passa a influenciar naturalmente suas decisões, sem exigir imitação deliberada ou repetição mecânica.</td><td>Sintoniza um segundo poder da Sequência atual, diferente do primeiro.</td></tr>
+      <tr><td>100%</td><td><strong>Digestão completa</strong></td><td>A Característica da Sequência foi assimilada, permitindo que o personagem cumpra os demais requisitos para avançar.</td><td>Recupera <strong>1 ponto de Lucidez</strong>, sem ultrapassar o máximo de 10.</td></tr>
+    </tbody>
+  </table>
 </div>
 
-<h4>Âncoras</h4>
 <p>
-  Âncoras são vínculos, referências e convicções que ajudam o personagem a preservar sua
-  identidade diante do sobrenatural. <strong>Cada Âncora ativa concede +1 nos testes de
-  Lucidez.</strong> Elas podem vir de quatro fontes:
-</p>
-<table>
-  <thead><tr><th>Fonte</th><th>Como funciona</th><th>Bônus</th></tr></thead>
-  <tbody>
-    <tr>
-      <td><strong>Relacionamentos</strong></td>
-      <td>Relações fortes o bastante para estabilizar o personagem. Na criação, os três relacionamentos significativos escolhidos representam Âncoras. Durante a campanha, outros vínculos podem se tornar Âncoras quando o Mestre e o jogador concordarem que a relação alcançou essa importância.</td>
-      <td>+1 por relacionamento-Âncora</td>
-    </tr>
-    <tr>
-      <td><strong>Identidade</strong></td>
-      <td>O Conceito do personagem representa a noção que ele tem de si mesmo. A Âncora permanece ativa enquanto suas escolhas e sua conduta mantiverem coerência com esse Conceito.</td>
-      <td>+1</td>
-    </tr>
-    <tr>
-      <td><strong>Reconhecimento</strong></td>
-      <td>A primeira Especialização representa uma competência pela qual o personagem se reconhece e é reconhecido. A Âncora permanece ativa enquanto ele mantiver uma relação coerente com essa experiência.</td>
-      <td>+1</td>
-    </tr>
-    <tr>
-      <td><strong>Fé</strong></td>
-      <td>A partir da Sequência 4, um Beyonder pode começar a reunir fé em torno de seu nome. Nas Sequências angelicais, esse tipo de Âncora torna-se praticamente obrigatório para evitar a perda de controle. Por pertencer à progressão avançada, essa fonte não possui regras detalhadas neste livro.</td>
-      <td>Sem valor definido neste volume</td>
-    </tr>
-  </tbody>
-</table>
-<p>
-  Na criação, os três relacionamentos fornecem +3, o Conceito fornece +1 e a primeira
-  Especialização fornece +1: o personagem começa, portanto, com <strong>cinco bônus de
-  Âncora</strong>. Âncoras adicionais podem ser conquistadas durante a campanha, conforme
-  os vínculos se desenvolvam. Uma relação casual, uma especialização posterior ou uma
-  referência sem significado pessoal não concede bônus automaticamente.
+  Os marcos correspondem a percentuais do total de <strong>100 Pontos de Digestão</strong>
+  exigidos para a poção atual. Cada marco concede a recompensa indicada na tabela, além
+  de representar uma etapa da assimilação. Essas recompensas não concedem Pontos de
+  Digestão adicionais.
 </p>
 
-<h4>Bônus de circunstância</h4>
+<h3 id="espiritualidade-progressao">Espiritualidade e progressão</h3>
 <p>
-  A situação pode facilitar ou dificultar um teste de Lucidez. O Mestre escolhe um único
-  modificador final que represente o conjunto das circunstâncias relevantes; fatores que
-  descrevem a mesma vantagem ou ameaça não devem ser somados repetidamente.
-</p>
-<table>
-  <thead><tr><th>Modificador</th><th>Exemplos de circunstância</th></tr></thead>
-  <tbody>
-    <tr><td><strong>+2</strong></td><td>Preparação cuidadosa para uma meditação ou consumo de poção, em local protegido, silencioso e livre de interrupções.</td></tr>
-    <tr><td><strong>+1</strong></td><td>Ambiente familiar e seguro, rotina de concentração conhecida ou apoio tranquilizador que não esteja sendo contabilizado como uma Âncora adicional.</td></tr>
-    <tr><td><strong>0</strong></td><td>Situação comum, sem pressão ou auxílio relevante.</td></tr>
-    <tr><td><strong>−1</strong></td><td>Fadiga, desconforto, pressa ou distrações moderadas durante o teste.</td></tr>
-    <tr><td><strong>−2</strong></td><td>Exposição recente a um fenômeno aterrador, pressão mental direta ou ambiente saturado por influência sobrenatural perturbadora.</td></tr>
-    <tr><td><strong>−3</strong></td><td>Uma entidade muito poderosa interfere diretamente no personagem, ou uma influência sobrenatural intensa tenta romper sua identidade durante o teste.</td></tr>
-  </tbody>
-</table>
-<p class="box-note">
-  Os valores da tabela são referências para o Mestre, não modificadores automáticos por
-  nome de situação. A preparação só concede bônus quando realmente ajuda o personagem a
-  manter o controle; a presença de uma entidade só impõe penalidade quando ela interfere
-  de maneira relevante no teste.
-</p>
-
-<h4>Estados de Lucidez</h4>
-<p>
-  A quantidade atual de Lucidez indica o estado em que o personagem se encontra. Os efeitos
-  abaixo representam consequências mecânicas e narrativas, mas não determinam sua moralidade
-  nem retiram sua autonomia de decisão. As penalidades se aplicam apenas a ações diretamente
-  afetadas pelo estado mental descrito; não são penalidades universais para todos os testes.
-</p>
-<table>
-  <thead><tr><th>Lucidez</th><th>Estado</th><th>Impacto mecânico</th><th>Manifestação narrativa</th></tr></thead>
-  <tbody>
-    <tr><td>10–9</td><td><strong>Lucidez Plena</strong></td><td>Sem penalidades.</td><td>Percepção estável, clareza e boa capacidade de reconhecer influências externas.</td></tr>
-    <tr><td>8–7</td><td><strong>Lúcido</strong></td><td>Sem penalidades.</td><td>Estado funcional e estável, embora experiências sobrenaturais ainda possam causar tensão.</td></tr>
-    <tr><td>6–5</td><td><strong>Inquietação</strong></td><td>−1 em testes de ação que exijam concentração ou calma quando realizados sob pressão semelhante à que abalou o personagem.</td><td>Agitação, sono perturbado, irritabilidade ou dificuldade de afastar pensamentos incômodos.</td></tr>
-    <tr><td>4</td><td><strong>Perturbado</strong></td><td>−2 em testes de ação que dependam de concentração, percepção confiável ou avaliação serena da situação.</td><td>Pensamentos intrusivos, confusão e dificuldade para separar preocupações de ameaças reais.</td></tr>
-    <tr><td>3</td><td><strong>Paranoico</strong></td><td>−2 em testes sociais que dependam de confiança ou cooperação e em testes para interpretar sinais ambíguos com neutralidade.</td><td>Desconfiança acentuada e tendência a interpretar gestos ou acontecimentos ambíguos como ameaças. O jogador decide como o personagem reage.</td></tr>
-    <tr><td>2</td><td><strong>Descontrolado</strong></td><td>−2 em testes que exijam concentração, controle preciso ou decisões ponderadas sob pressão.</td><td>Agitação intensa, impulsos defensivos e dificuldade para conter reações. O Mestre pode apresentar esses impulsos, mas o jogador decide como agir.</td></tr>
-    <tr><td>1</td><td><strong>Ruptura Mental</strong></td><td>−3 em testes que dependam de memória confiável, concentração ou percepção estável.</td><td>Distúrbios sensoriais, lapsos e percepções fragmentadas. O Mestre pode descrever essas distorções, sem decidir pelo jogador o que seu personagem fará.</td></tr>
-    <tr><td>0</td><td><strong>Perda de Controle</strong></td><td>Ao chegar a 0, o personagem sofre uma crise imediata e não pode ativar intencionalmente poderes Beyonder ou feitiços enquanto permanecer nesse valor.</td><td>O Mestre descreve uma reação involuntária breve e ligada à causa da crise, como congelar, recuar, fugir ou manifestar um poder sem controle. Esse episódio não concede ao Mestre controle permanente do personagem: passada a reação imediata, o jogador volta a decidir suas ações. O personagem pode voltar a utilizar poderes quando recuperar pelo menos 1 ponto de Lucidez.</td></tr>
-  </tbody>
-</table>
-<p>
-  Quando a Lucidez diminui, aplique apenas o estado correspondente ao valor atual; as
-  penalidades de faixas anteriores não se acumulam. A perda de Lucidez nunca obriga o
-  personagem a trair aliados, cometer atos específicos ou abandonar seus objetivos. Em 0,
-  a perda de controle limita-se à crise imediata descrita acima e à restrição de uso de
-  poderes enquanto o personagem permanecer nesse valor.
-</p>
-<p>
-  A Lucidez não se recupera automaticamente com descanso comum. Uma regra, poder, item ou
-  marco de progressão deve indicar expressamente quando ela é restaurada. Neste sistema,
-  a conclusão da Digestão de uma poção concede +1 ponto de Lucidez, respeitando o máximo de 10.
-</p>
-
-<h3 id="defesa">Defesa</h3>
-<p>
-  A Defesa representa a dificuldade de atingir o personagem. Em um ataque, o
-  atacante realiza o teste indicado pela ação; o ataque acerta quando o resultado
-  final iguala ou supera a Defesa do alvo. A Defesa padrão considera a Destreza e
-  não recebe automaticamente um bônus por uso de armadura.
+  A Espiritualidade máxima não é calculada pelos Atributos nem por um valor fixo do
+  Caminho. Ela é formada pela soma dos pontos concedidos ao alcançar cada Sequência,
+  dos bônus permanentes obtidos pela Digestão das poções.
 </p>
 <div class="box box-rule">
-  <div class="box-title">Cálculo padrão da Defesa</div>
-  <p style="text-align:center; font-size:1.15em;"><strong>Defesa = 10 + Mod.(DES)</strong></p>
-  <p>
-    O modificador é calculado por <strong>Mod.(DES) = Pontos.(DES) − 2</strong>.
-    Se mais de uma fonte oferecer uma fórmula de Defesa — como a regra padrão,
-    um equipamento ou uma habilidade Beyonder —, o jogador escolhe qual fórmula
-    utilizar. <strong>As fórmulas não se somam</strong>. Bônus que não substituam
-    a fórmula só são aplicados quando a regra que os concede permitir isso.
-  </p>
-  <p>
-    <strong>Exemplo:</strong> com Pontos.(DES) = 3, o personagem possui Mod.(DES) +1
-    e Defesa 11 pela fórmula padrão.
-  </p>
-</div>
-
-<h3 id="blindagem-limiares">Blindagem, armaduras e Limiares de Dano</h3>
-<p>
-  <strong>Armadura</strong> é um equipamento. <strong>Blindagem</strong> é um recurso
-  de proteção que pode ser concedido por uma armadura, por poderes Beyonder ou por
-  outras fontes. Uma armadura pode conceder pontos de Blindagem e modificar os
-  Limiares de Dano; uma fonte diferente também pode conceder Blindagem sem ser
-  uma armadura.
-</p>
-<p>
-  A descrição de cada armadura deve informar separadamente a quantidade de pontos
-  de Blindagem concedida e os valores ou a regra de alteração dos Limiares de Dano.
-  Não existe cálculo inicial de Blindagem: o personagem só recebe esse recurso
-  quando uma fonte o concede expressamente. O uso de armadura também não altera
-  automaticamente a Defesa.
-</p>
-<div class="box box-note">
-  <div class="box-title">Registro da Blindagem na ficha</div>
-  <p>
-    Ao receber Blindagem, conte os quadrados destinados ao recurso e registre a
-    quantidade total seguida de uma barra (/). Por exemplo, uma fonte que conceda
-    3 pontos deve ser registrada como <strong>3/</strong>. Marque os quadrados
-    gastos quando utilizar a Blindagem. A fonte que concede o recurso determina
-    eventuais condições especiais de obtenção ou recuperação.
-  </p>
-</div>
-
-<div class="box box-rule">
-  <div class="box-title">Como determinar a categoria de dano</div>
-  <p>
-    Os Limiares de Dano definem a categoria de um ferimento de acordo com o valor
-    de dano causado pelo ataque. Primeiro, determine o valor de dano conforme a
-    habilidade, arma ou efeito utilizado. Depois, compare esse valor com os dois
-    limiares do personagem:
-  </p>
+  <div class="box-title">Composição da Espiritualidade Máxima</div>
+  <p style="text-align:center; font-size:1.1em;"><strong>Espiritualidade Máxima = Ganhos por Sequência + Bônus de Digestão de Poções</strong></p>
   <ul>
-    <li><strong>Dano Menor:</strong> valor inferior ao primeiro limiar.</li>
-    <li><strong>Dano Maior:</strong> valor igual ou superior ao primeiro limiar, mas inferior ao segundo.</li>
-    <li><strong>Dano Severo:</strong> valor igual ou superior ao segundo limiar.</li>
+    <li><strong>Ganhos por Sequência:</strong> ao alcançar uma Sequência, acrescente à Espiritualidade máxima o valor indicado na coluna <em>Espiritualidade ao avançar</em> do Capítulo 4. Na criação de personagem, o valor da Sequência 9 é considerado o ganho inicial.</li>
+    <li><strong>Bônus de Digestão:</strong> ao atingir 50% de Digestão de cada poção, a Espiritualidade máxima aumenta permanentemente em +2 pontos. O bônus se acumula entre as poções, uma vez por poção.</li>
   </ul>
-  <p>
-    O primeiro limiar determina quando o dano passa de Menor para Maior; o segundo
-    determina quando passa de Maior para Severo. Utilize sempre os limiares atuais
-    do personagem, considerando eventuais alterações fornecidas por armaduras ou
-    outros efeitos.
-  </p>
+  <p>Os Atributos não acrescentam Espiritualidade. Os valores concedidos por cada Sequência são definidos na tabela do Capítulo 4. Os aumentos descritos nesta seção afetam a Espiritualidade máxima; a reserva atual continua sujeita às regras de recuperação do Capítulo 3.</p>
 </div>
 
-<div class="box box-rule">
-  <div class="box-title">Limiares naturais de Dano sem Armadura</div>
-  <p>
-    Na ausência de uma armadura ou efeito que modifique os valores, utilize os
-    limiares naturais determinados pela Sequência. Neste livro, a progressão
-    apresentada vai da Sequência 9 até a <strong>Sequência 5</strong>.
-  </p>
-  <table>
-    <thead><tr><th>Sequência</th><th>Menor → Maior</th><th>Maior → Severo</th></tr></thead>
-    <tbody>
-      <tr><td>9</td><td>3</td><td>6</td></tr>
-      <tr><td>8</td><td>4</td><td>8</td></tr>
-      <tr><td>7</td><td>5</td><td>10</td></tr>
-      <tr><td>6</td><td>6</td><td>12</td></tr>
-      <tr><td>5</td><td>7</td><td>14</td></tr>
-    </tbody>
-  </table>
-  <p>
-    <strong>Menor para Maior:</strong> 2 + (10 − Sequência).<br/>
-    <strong>Maior para Severo:</strong> 4 + 2 × (10 − Sequência).
-  </p>
-  <p>
-    Quando uma armadura modificar os Limiares de Dano, utilize os valores ou a
-    regra indicados em sua descrição. Não acrescente um bônus genérico de armadura
-    aos limiares: o equipamento deve especificar como sua proteção altera os valores.
-  </p>
-</div>
+<h3 id="sintonia">Sintonia da Sequência</h3>
 
-<div class="box box-note">
-  <div class="box-title">Categorias de ferimento e marcação de PV</div>
-  <p>Depois de determinar a categoria do dano, marque os Pontos de Vida correspondentes:</p>
-  <table>
-    <thead><tr><th>Categoria</th><th>PV marcados</th></tr></thead>
-    <tbody>
-      <tr><td>Dano Menor</td><td>1 PV</td></tr>
-      <tr><td>Dano Maior</td><td>2 PV</td></tr>
-      <tr><td>Dano Severo</td><td>3 PV</td></tr>
-    </tbody>
-  </table>
-</div>
+<p>
+  Cada Sequência possui <strong>quatro poderes Beyonder</strong>. Durante a Digestão de uma
+  poção, o personagem pode Sintonizar até <strong>dois poderes da Sequência correspondente
+  àquela poção</strong>. A Sintonia aprimora diretamente o poder escolhido, concedendo-lhe
+  um reforço leve relacionado à sua função.
+</p>
 
-<div class="box box-rule">
-  <div class="box-title">Como utilizar a Blindagem</div>
-  <p>
-    Depois de identificar a categoria do dano recebido, o personagem pode gastar
-    <strong>1 ponto de Blindagem</strong> para reduzir essa categoria em um nível,
-    antes de marcar os PV. A redução segue esta ordem:
-  </p>
-  <table>
-    <thead><tr><th>Dano recebido</th><th>Após gastar 1 ponto de Blindagem</th></tr></thead>
-    <tbody>
-      <tr><td>Dano Severo</td><td>Dano Maior</td></tr>
-      <tr><td>Dano Maior</td><td>Dano Menor</td></tr>
-      <tr><td>Dano Menor</td><td>Nenhum dano</td></tr>
-    </tbody>
-  </table>
-  <p>
-    O limite é de <strong>1 ponto de Blindagem por ataque sofrido</strong>,
-    independentemente da quantidade total que o personagem possua. Não é possível
-    gastar vários pontos para reduzir o mesmo ataque em mais de um nível. Se o dano
-    for reduzido a Nenhum dano, nenhum PV é marcado por aquele ataque.
-  </p>
-</div>
+<p>
+  A Sintonia acontece em dois marcos: ao alcançar <strong>25% de Digestão</strong>, o jogador
+  escolhe um dos quatro poderes da Sequência atual para Sintonizar; ao alcançar
+  <strong>75% de Digestão</strong>, escolhe um segundo poder diferente da mesma Sequência.
+  Portanto, ao concluir a Digestão da poção, o personagem terá dois dos quatro poderes
+  daquela Sequência Sintonizados.
+</p>
 
 <div class="box box-example">
-  <div class="box-title">Exemplo — Sequência 8</div>
+  <div class="box-title">Exemplo: personagem na Sequência 7</div>
   <p>
-    Um personagem na Sequência 8, sem armadura que modifique seus limiares, possui
-    Menor → Maior igual a <strong>4</strong> e Maior → Severo igual a <strong>8</strong>.
-    Assim, um ataque que cause 3 pontos de dano provoca Dano Menor; com 5 pontos,
-    provoca Dano Maior; com 8 pontos, provoca Dano Severo.
+    Enquanto digere a poção da Sequência 7, o personagem não pode usar esses marcos para
+    Sintonizar poderes das Sequências 9 ou 8. Ao atingir 25% de Digestão, escolhe um poder
+    da Sequência 7. Ao atingir 75%, escolhe outro poder da Sequência 7, diferente do primeiro.
+    Ao atingir 50%, recebe +2 permanentes à Espiritualidade máxima, cumulativos com os ganhos por Sequência; ao concluir 100% da Digestão,
+    recupera 1 ponto de Lucidez, respeitando o máximo de 10. Os poderes das Sequências anteriores são tratados durante
+    a Digestão de suas respectivas poções.
+  </p>
+  <table>
+    <thead><tr><th>Absorção da poção da Sequência 7</th><th>Recompensa</th><th>Poderes da Seq. 7 Sintonizados</th></tr></thead>
+    <tbody>
+      <tr><td>25%</td><td>Sintoniza 1 poder</td><td>1 de 4</td></tr>
+      <tr><td>50%</td><td>+2 permanentes à Espiritualidade máxima</td><td>1 de 4</td></tr>
+      <tr><td>75%</td><td>Sintoniza um segundo poder</td><td>2 de 4</td></tr>
+      <tr><td>100%</td><td>Recupera 1 ponto de Lucidez</td><td>2 de 4</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+  A Sintonia não concede um bônus genérico a todos os testes do personagem. Ela aprimora
+  diretamente o poder Beyonder escolhido, por meio de um reforço leve relacionado à função
+  daquele poder. O efeito específico de cada Sintonia será definido junto da criação e da
+  descrição dos poderes Beyonder.
+</p>
+
+<p>
+  Cada poder só pode ser Sintonizado uma vez. A escolha é feita exclusivamente entre os
+  quatro poderes da Sequência cuja poção está sendo digerida: aos 25% e 75%, o jogador
+  escolhe um poder ainda não Sintonizado daquela Sequência. Os benefícios de 50% e 100%
+  são aplicados independentemente da escolha dos poderes.
+</p>
+
+<div class="box box-example">
+  <div class="box-title">Exemplo de Digestão e Foco de Atuação</div>
+  <p>
+    Lena é uma Insone na Sequência 9. No início da sessão, declara que pretende prestar
+    atenção aos sinais de perigo enquanto o grupo descansa. Durante a aventura, ela assume
+    a vigília e percebe indícios de que alguém está seguindo os personagens. O Mestre
+    considera que a ação expressou de forma relevante a vigilância da Sequência e concede
+    <strong>5 Pontos de Digestão</strong>. Os pontos são concedidos pela atuação realizada,
+    não pela declaração do Foco.
   </p>
   <p>
-    Se o personagem receber 5 pontos de dano, o resultado será Dano Maior, que
-    normalmente marcaria 2 PV. Caso gaste 1 ponto de Blindagem, o ferimento cai
-    para Dano Menor e ele marca apenas 1 PV. Se sofrer Dano Menor e gastar 1 ponto,
-    o dano é reduzido a Nenhum dano e não marca PV.
+    Em outra sessão, Lena organiza uma vigília prolongada para proteger um bairro ameaçado
+    e identifica a origem de uma série de desaparecimentos. Como essa decisão altera o rumo
+    do arco e representa uma atuação decisiva, o Mestre concede <strong>10 pontos</strong>,
+    sem somar também os 5 pontos da atuação coerente.
+  </p>
+</div>
+
+<div class="separator"></div>
+
+<h2 id="principios">Princípios de Atuação por Caminho</h2>
+
+<p>
+  As tabelas apresentam diretrizes de interpretação para as <strong>Sequências 9 a 5</strong>,
+  o intervalo de progressão coberto por este volume. As descrições são orientações para o
+  RPG, inspiradas nos temas e nas
+  características de cada Caminho; não são ordens obrigatórias, citações do romance ou uma
+  lista fechada de comportamentos.
+</p>
+
+<p>
+  Cada Sequência é apresentada em duas partes: <strong>Essência</strong>, o princípio que
+  representa; e <strong>Expressão</strong>, exemplos de como o personagem pode demonstrá-lo.
+  Os exemplos são orientativos e não esgotam as possibilidades de interpretação.
+</p>
+
+<p>
+  O jogador pode encontrar outras formas de expressar o princípio em sua própria história.
+  O Mestre deve considerar a intenção, o contexto, a relevância e as consequências da ação,
+  sem exigir que o personagem reproduza literalmente os exemplos da tabela.
+</p>
+
+<h3 id="caminho-01">Caminho do Louco</h3>
+<table>
+  <thead><tr><th>Sequência</th><th>Nome</th><th>Princípio de atuação</th></tr></thead>
+  <tbody>
+    <tr><td>9</td><td><strong>Vidente</strong></td><td><strong>Essência:</strong> Reconhecer que os acontecimentos podem oferecer sinais sobre possibilidades e tendências.<br><strong>Expressão:</strong> Observar presságios, realizar adivinhações e usar as interpretações para orientar decisões, sempre considerando seus limites.</td></tr>
+    <tr><td>8</td><td><strong>Palhaço</strong></td><td><strong>Essência:</strong> Enfrentar a imprevisibilidade sem perder o domínio do próprio corpo e das próprias reações.<br><strong>Expressão:</strong> Usar expressão, humor, agilidade e controle corporal para atravessar situações tensas e responder ao inesperado.</td></tr>
+    <tr><td>7</td><td><strong>Mago</strong></td><td><strong>Essência:</strong> Transformar preparação, encenação e surpresa em instrumentos para alterar uma situação.<br><strong>Expressão:</strong> Planejar alternativas, preparar recursos, conduzir a atenção e revelar soluções no momento adequado.</td></tr>
+    <tr><td>6</td><td><strong>Sem-Rosto</strong></td><td><strong>Essência:</strong> Compreender que a identidade também é construída por aparência, hábitos, gestos e relações.<br><strong>Expressão:</strong> Estudar pessoas e ambientes, adaptar a própria apresentação e sustentar papéis diferentes de maneira convincente.</td></tr>
+    <tr><td>5</td><td><strong>Marionetista</strong></td><td><strong>Essência:</strong> Perceber as relações e os vínculos indiretos que conectam pessoas e acontecimentos.<br><strong>Expressão:</strong> Influenciar situações por meio de intermediários, antecipar reações e compreender como pequenas ações produzem efeitos em cadeia.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="caminho-02">Caminho da Porta</h3>
+<table>
+  <thead><tr><th>Sequência</th><th>Nome</th><th>Princípio de atuação</th></tr></thead>
+  <tbody>
+    <tr><td>9</td><td><strong>Aprendiz</strong></td><td><strong>Essência:</strong> Manter abertura e humildade diante do desconhecido.<br><strong>Expressão:</strong> Estudar, fazer perguntas, aceitar orientação e reconhecer o que ainda não sabe antes de tentar ultrapassar seus limites.</td></tr>
+    <tr><td>8</td><td><strong>Mestre dos Truques</strong></td><td><strong>Essência:</strong> Compreender que a percepção pode ser conduzida por encenação, distração e artifício.<br><strong>Expressão:</strong> Preparar truques com intenção, observar a atenção do público e escolher o momento certo para revelar ou ocultar algo.</td></tr>
+    <tr><td>7</td><td><strong>Astrólogo</strong></td><td><strong>Essência:</strong> Investigar padrões e ciclos que conectam acontecimentos aparentemente distantes.<br><strong>Expressão:</strong> Observar sinais celestes, registrar ciclos, comparar previsões com resultados e revisar interpretações.</td></tr>
+    <tr><td>6</td><td><strong>Escriba</strong></td><td><strong>Essência:</strong> Preservar experiências e informações para que possam ser consultadas e compreendidas depois.<br><strong>Expressão:</strong> Registrar fenômenos, costumes, rotas e conhecimentos com precisão, organizando detalhes que poderiam ser esquecidos.</td></tr>
+    <tr><td>5</td><td><strong>Viajante</strong></td><td><strong>Essência:</strong> Explorar fronteiras e compreender o que existe além dos lugares conhecidos.<br><strong>Expressão:</strong> Buscar rotas, atravessar ambientes desconhecidos, adaptar-se a novas condições e transformar deslocamentos em descobertas.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="caminho-03">Caminho do Erro</h3>
+<table>
+  <thead><tr><th>Sequência</th><th>Nome</th><th>Princípio de atuação</th></tr></thead>
+  <tbody>
+    <tr><td>9</td><td><strong>Saqueador</strong></td><td><strong>Essência:</strong> Reconhecer oportunidades e vulnerabilidades que permitem tomar aquilo que está desprotegido.<br><strong>Expressão:</strong> Observar alvos, identificar falhas de segurança e apropriar-se de recursos com planejamento e discrição.</td></tr>
+    <tr><td>8</td><td><strong>Golpista</strong></td><td><strong>Essência:</strong> Compreender como expectativas e confiança podem ser construídas, desviadas e exploradas.<br><strong>Expressão:</strong> Preparar versões plausíveis, identificar o que os outros desejam acreditar e conduzir uma fraude com objetivo definido.</td></tr>
+    <tr><td>7</td><td><strong>Criptologista</strong></td><td><strong>Essência:</strong> Encontrar a lógica escondida por trás de mensagens, símbolos e informações fragmentadas.<br><strong>Expressão:</strong> Decifrar códigos, comparar padrões e reconstruir mensagens a partir de pistas incompletas.</td></tr>
+    <tr><td>6</td><td><strong>Prometeu</strong></td><td><strong>Essência:</strong> Questionar limites de posse e acesso, buscando aquilo que foi protegido ou reservado.<br><strong>Expressão:</strong> Investigar recursos ou conhecimentos restritos, compreender suas defesas e aceitar conscientemente os riscos de tomá-los.</td></tr>
+    <tr><td>5</td><td><strong>Ladrão de Sonhos</strong></td><td><strong>Essência:</strong> Perceber o valor e a vulnerabilidade de conteúdos que não podem ser segurados fisicamente.<br><strong>Expressão:</strong> Investigar sonhos, pensamentos e intenções, compreendendo como podem ser alcançados ou influenciados de forma indireta.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="caminho-04">Caminho do Visionário</h3>
+<table>
+  <thead><tr><th>Sequência</th><th>Nome</th><th>Princípio de atuação</th></tr></thead>
+  <tbody>
+    <tr><td>9</td><td><strong>Espectador</strong></td><td><strong>Essência:</strong> Compreender pessoas e situações por meio da observação atenta antes de interferir.<br><strong>Expressão:</strong> Ler expressões, emoções, comportamentos e relações, reunindo informações sem exigir que toda cena gire em torno de si.</td></tr>
+    <tr><td>8</td><td><strong>Telepata</strong></td><td><strong>Essência:</strong> Reconhecer que a vida interior das pessoas influencia suas palavras e ações.<br><strong>Expressão:</strong> Considerar pensamentos, emoções e motivações para compreender melhor alguém e escolher como responder.</td></tr>
+    <tr><td>7</td><td><strong>Psiquiatra</strong></td><td><strong>Essência:</strong> Compreender conflitos e padrões psicológicos sem reduzir a pessoa a um rótulo.<br><strong>Expressão:</strong> Ouvir, identificar contradições, reconhecer mecanismos de defesa e ajudar a organizar problemas emocionais ou mentais.</td></tr>
+    <tr><td>6</td><td><strong>Hipnotizador</strong></td><td><strong>Essência:</strong> Entender como atenção, sugestão e expectativa podem influenciar a percepção e a decisão.<br><strong>Expressão:</strong> Conduzir a atenção com método, preparar sugestões e reconhecer as condições e os limites da influência exercida.</td></tr>
+    <tr><td>5</td><td><strong>Andarilho dos Sonhos</strong></td><td><strong>Essência:</strong> Explorar sonhos como paisagens mentais que possuem lógica, símbolos e relações próprias.<br><strong>Expressão:</strong> Investigar ambientes oníricos, registrar descobertas e intervir com propósito, preservando a capacidade de observar.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="caminho-05">Caminho do Tirano</h3>
+<table>
+  <thead><tr><th>Sequência</th><th>Nome</th><th>Princípio de atuação</th></tr></thead>
+  <tbody>
+    <tr><td>9</td><td><strong>Marinheiro</strong></td><td><strong>Essência:</strong> Respeitar a força do mar e compreender as condições necessárias para atravessá-lo.<br><strong>Expressão:</strong> Aprender sobre embarcações, rotas, correntes e clima, enfrentando o ambiente marítimo com preparo.</td></tr>
+    <tr><td>8</td><td><strong>Povo da Fúria</strong></td><td><strong>Essência:</strong> Reconhecer a força da raiva e aprender a direcioná-la.<br><strong>Expressão:</strong> Identificar o que desperta a fúria, suportar confrontos e transformar intensidade emocional em ação deliberada.</td></tr>
+    <tr><td>7</td><td><strong>Navegador dos Mares</strong></td><td><strong>Essência:</strong> Compreender o oceano como um espaço de rotas, sinais e desafios a serem interpretados.<br><strong>Expressão:</strong> Planejar travessias, reconhecer correntes e mudanças climáticas e buscar caminhos mesmo em regiões desconhecidas.</td></tr>
+    <tr><td>6</td><td><strong>Abençoado pelo Vento</strong></td><td><strong>Essência:</strong> Expressar adaptação, movimento e iniciativa diante de circunstâncias mutáveis.<br><strong>Expressão:</strong> Mudar de direção quando necessário, agir com rapidez e aproveitar oportunidades sem perder o controle.</td></tr>
+    <tr><td>5</td><td><strong>Cantor do Oceano</strong></td><td><strong>Essência:</strong> Reconhecer e expressar a força do mar por meio de ritmo, voz e presença.<br><strong>Expressão:</strong> Escutar seus ciclos, transmitir sua intensidade e agir em sintonia com forças maiores que a própria vontade.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="caminho-06">Caminho do Sol</h3>
+<table>
+  <thead><tr><th>Sequência</th><th>Nome</th><th>Princípio de atuação</th></tr></thead>
+  <tbody>
+    <tr><td>9</td><td><strong>Bardo</strong></td><td><strong>Essência:</strong> Usar a expressão para transmitir clareza, esperança e convicção.<br><strong>Expressão:</strong> Empregar voz, música, discurso ou presença para comunicar valores e fortalecer outras pessoas.</td></tr>
+    <tr><td>8</td><td><strong>Suplicante da Luz</strong></td><td><strong>Essência:</strong> Reconhecer a própria limitação diante do sagrado e buscar orientação com humildade.<br><strong>Expressão:</strong> Pedir auxílio, observar sinais e aceitar que receber amparo também exige responsabilidade pelas próprias escolhas.</td></tr>
+    <tr><td>7</td><td><strong>Sumo Sacerdote Solar</strong></td><td><strong>Essência:</strong> Assumir responsabilidade pela preservação e orientação de uma comunidade de fé.<br><strong>Expressão:</strong> Conduzir ritos, transmitir ensinamentos e procurar coerência entre autoridade, discurso e conduta.</td></tr>
+    <tr><td>6</td><td><strong>Notário</strong></td><td><strong>Essência:</strong> Compreender o peso das palavras registradas, dos juramentos e dos compromissos.<br><strong>Expressão:</strong> Testemunhar acordos, verificar declarações e preservar registros com precisão e imparcialidade.</td></tr>
+    <tr><td>5</td><td><strong>Sacerdote da Luz</strong></td><td><strong>Essência:</strong> Confrontar corrupção e obscuridade em defesa da clareza e da purificação.<br><strong>Expressão:</strong> Identificar influências nocivas, proteger pessoas e agir com convicção sem abandonar o discernimento.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="caminho-07">Caminho da Torre Branca</h3>
+<table>
+  <thead><tr><th>Sequência</th><th>Nome</th><th>Princípio de atuação</th></tr></thead>
+  <tbody>
+    <tr><td>9</td><td><strong>Leitor</strong></td><td><strong>Essência:</strong> Buscar conhecimento de maneira contínua e organizada.<br><strong>Expressão:</strong> Ler, observar, memorizar e comparar fontes, distinguindo informação acumulada de compreensão real.</td></tr>
+    <tr><td>8</td><td><strong>Aluno de Raciocínio</strong></td><td><strong>Essência:</strong> Construir conclusões a partir de evidências e relações lógicas.<br><strong>Expressão:</strong> Testar hipóteses, procurar contradições e rever conclusões diante de novas informações.</td></tr>
+    <tr><td>7</td><td><strong>Detetive</strong></td><td><strong>Essência:</strong> Reconstruir acontecimentos por meio de evidências e conexões verificáveis.<br><strong>Expressão:</strong> Investigar, comparar depoimentos, examinar vestígios e considerar explicações alternativas.</td></tr>
+    <tr><td>6</td><td><strong>Polímata</strong></td><td><strong>Essência:</strong> Integrar conhecimentos de diferentes áreas para compreender problemas complexos.<br><strong>Expressão:</strong> Relacionar disciplinas, adaptar métodos e buscar perspectivas complementares para resolver uma questão.</td></tr>
+    <tr><td>5</td><td><strong>Mestre do Misticismo</strong></td><td><strong>Essência:</strong> Compreender os princípios e as estruturas que organizam o conhecimento místico.<br><strong>Expressão:</strong> Estudar símbolos, relações e fundamentos, procurando entender por que um procedimento funciona e quais são seus limites.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="caminho-08">Caminho do Enforcado</h3>
+<table>
+  <thead><tr><th>Sequência</th><th>Nome</th><th>Princípio de atuação</th></tr></thead>
+  <tbody>
+    <tr><td>9</td><td><strong>Suplicante dos Segredos</strong></td><td><strong>Essência:</strong> Buscar conhecimento oculto reconhecendo que todo contato pode envolver risco e preço.<br><strong>Expressão:</strong> Investigar segredos, realizar súplicas e avaliar a origem, a confiabilidade e as consequências das respostas recebidas.</td></tr>
+    <tr><td>8</td><td><strong>Ouvinte</strong></td><td><strong>Essência:</strong> Receber informações perturbadoras sem permitir que elas dominem o próprio julgamento.<br><strong>Expressão:</strong> Escutar confissões, sussurros e manifestações, separar informação de influência e avaliar o que foi ouvido.</td></tr>
+    <tr><td>7</td><td><strong>Asceta das Sombras</strong></td><td><strong>Essência:</strong> Cultivar disciplina, serviço e constância longe da aprovação pública.<br><strong>Expressão:</strong> Praticar autocontrole, cumprir compromissos discretos e manter uma rotina coerente com suas convicções.</td></tr>
+    <tr><td>6</td><td><strong>Bispo das Rosas</strong></td><td><strong>Essência:</strong> Compreender a influência exercida por fé, desejo, sacrifício e pertencimento.<br><strong>Expressão:</strong> Conduzir seguidores, reconhecer suas necessidades e assumir responsabilidade pelas consequências de sua influência.</td></tr>
+    <tr><td>5</td><td><strong>Pastor</strong></td><td><strong>Essência:</strong> Reunir e conduzir forças diferentes, compreendendo as características de cada uma.<br><strong>Expressão:</strong> Coordenar um grupo, administrar capacidades distintas e preservar a coesão sem ignorar conflitos internos.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="caminho-09">Caminho das Trevas</h3>
+<table>
+  <thead><tr><th>Sequência</th><th>Nome</th><th>Princípio de atuação</th></tr></thead>
+  <tbody>
+    <tr><td>9</td><td><strong>Insone</strong></td><td><strong>Essência:</strong> Manter atenção e prontidão quando a situação exige vigilância.<br><strong>Expressão:</strong> Observar durante períodos de descanso, reconhecer sinais discretos e proteger pessoas ou locais sem negligenciar a própria necessidade de repouso.</td></tr>
+    <tr><td>8</td><td><strong>Poeta da Meia-Noite</strong></td><td><strong>Essência:</strong> Encontrar na quietude da noite espaço para perceber e expressar aspectos que passam despercebidos durante o dia.<br><strong>Expressão:</strong> Observar, refletir e transformar experiências noturnas em expressão ou compreensão.</td></tr>
+    <tr><td>7</td><td><strong>Pesadelo</strong></td><td><strong>Essência:</strong> Compreender como o medo se forma e se manifesta na mente e nos sonhos.<br><strong>Expressão:</strong> Identificar temores, investigar suas origens e confrontar ou conduzir manifestações oníricas com propósito.</td></tr>
+    <tr><td>6</td><td><strong>Assegurador de Almas</strong></td><td><strong>Essência:</strong> Reconhecer a necessidade de estabilidade, proteção e orientação no domínio espiritual.<br><strong>Expressão:</strong> Ajudar a estabilizar manifestações, orientar almas e respeitar a diferença entre memória, descanso e perturbação.</td></tr>
+    <tr><td>5</td><td><strong>Bruxo Espiritual</strong></td><td><strong>Essência:</strong> Desenvolver uma relação consciente com espíritos e com as forças do mundo espiritual.<br><strong>Expressão:</strong> Estabelecer contato, negociar limites, conduzir presenças e compreender os riscos de cada vínculo.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="caminho-10">Caminho da Morte</h3>
+<table>
+  <thead><tr><th>Sequência</th><th>Nome</th><th>Princípio de atuação</th></tr></thead>
+  <tbody>
+    <tr><td>9</td><td><strong>Coletor de Cadáveres</strong></td><td><strong>Essência:</strong> Reconhecer que os mortos e os vestígios da morte carregam informações e exigem respeito.<br><strong>Expressão:</strong> Examinar cadáveres, identificar sinais e lidar com restos mortais de forma prática e cuidadosa.</td></tr>
+    <tr><td>8</td><td><strong>Coveiro</strong></td><td><strong>Essência:</strong> Preservar os ritos e os limites que separam os vivos dos mortos.<br><strong>Expressão:</strong> Preparar sepultamentos, cuidar dos túmulos e garantir que os falecidos recebam o tratamento adequado.</td></tr>
+    <tr><td>7</td><td><strong>Médium Espiritual</strong></td><td><strong>Essência:</strong> Servir de intermediário entre os vivos e as presenças do mundo espiritual.<br><strong>Expressão:</strong> Estabelecer contato, ouvir, interpretar mensagens e manter clareza diante de manifestações ambíguas ou hostis.</td></tr>
+    <tr><td>6</td><td><strong>Guia Espiritual</strong></td><td><strong>Essência:</strong> Compreender os caminhos que ligam os espíritos ao mundo dos vivos e orientar suas travessias.<br><strong>Expressão:</strong> Conduzir manifestações, ajudar presenças a encontrar direção e reconhecer quando uma intervenção é necessária.</td></tr>
+    <tr><td>5</td><td><strong>Guardião do Portão</strong></td><td><strong>Essência:</strong> Compreender e proteger os limiares entre a vida, a morte e os espaços espirituais.<br><strong>Expressão:</strong> Vigiar passagens, reconhecer o que tenta atravessá-las e assumir responsabilidade pelas consequências de permitir ou impedir uma travessia.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="caminho-11">Caminho do Gigante do Crepúsculo</h3>
+<table>
+  <thead><tr><th>Sequência</th><th>Nome</th><th>Princípio de atuação</th></tr></thead>
+  <tbody>
+    <tr><td>9</td><td><strong>Guerreiro</strong></td><td><strong>Essência:</strong> Cultivar disciplina física e capacidade de enfrentar perigos com preparo.<br><strong>Expressão:</strong> Treinar, dominar técnicas e equipamentos e encarar desafios com firmeza e discernimento.</td></tr>
+    <tr><td>8</td><td><strong>Pugilista</strong></td><td><strong>Essência:</strong> Compreender o corpo como instrumento de combate, resistência e precisão.<br><strong>Expressão:</strong> Aperfeiçoar movimentos, distância, ritmo e resistência, aprendendo a agir sob pressão.</td></tr>
+    <tr><td>7</td><td><strong>Mestre das Armas</strong></td><td><strong>Essência:</strong> Compreender as possibilidades e limitações de cada arma.<br><strong>Expressão:</strong> Estudar alcance, peso e manejo, treinar técnicas e adaptar a escolha do equipamento à situação.</td></tr>
+    <tr><td>6</td><td><strong>Paladino da Aurora</strong></td><td><strong>Essência:</strong> Usar força e coragem para proteger e renovar diante de ameaças.<br><strong>Expressão:</strong> Enfrentar perigos, apoiar aliados e agir como referência de firmeza sem ignorar os riscos.</td></tr>
+    <tr><td>5</td><td><strong>Guardião</strong></td><td><strong>Essência:</strong> Colocar a proteção de pessoas e lugares sob sua responsabilidade no centro das decisões.<br><strong>Expressão:</strong> Antecipar ameaças, sustentar posições, organizar defesas e aceitar riscos calculados para preservar outros.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="caminho-12">Caminho do Sacerdote Vermelho</h3>
+<table>
+  <thead><tr><th>Sequência</th><th>Nome</th><th>Princípio de atuação</th></tr></thead>
+  <tbody>
+    <tr><td>9</td><td><strong>Caçador</strong></td><td><strong>Essência:</strong> Compreender a relação entre alvo, terreno e perseguição.<br><strong>Expressão:</strong> Observar rastros, preparar armadilhas, estudar o ambiente e escolher quando iniciar ou interromper uma caçada.</td></tr>
+    <tr><td>8</td><td><strong>Provocador</strong></td><td><strong>Essência:</strong> Identificar tensões latentes e compreender como podem ser reveladas ou ampliadas.<br><strong>Expressão:</strong> Usar palavras, desafios e informações para expor fraquezas ou desencadear uma reação com finalidade definida.</td></tr>
+    <tr><td>7</td><td><strong>Piromaníaco</strong></td><td><strong>Essência:</strong> Compreender o fogo como força de destruição, transformação e intimidação.<br><strong>Expressão:</strong> Reconhecer o impacto de uma chama sobre objetos, pessoas e situações e decidir conscientemente como usar esse poder.</td></tr>
+    <tr><td>6</td><td><strong>Conspirador</strong></td><td><strong>Essência:</strong> Planejar ações a partir de informações incompletas, objetivos ocultos e relações de poder.<br><strong>Expressão:</strong> Preservar intenções, preparar contingências, antecipar reações e organizar condições favoráveis ao plano.</td></tr>
+    <tr><td>5</td><td><strong>Ceifador</strong></td><td><strong>Essência:</strong> Reconhecer o momento decisivo em que um conflito ou ciclo precisa chegar ao fim.<br><strong>Expressão:</strong> Identificar o que deve ser encerrado, agir sem hesitação desnecessária e assumir as consequências do resultado.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="caminho-13">Caminho da Demonesa</h3>
+<table>
+  <thead><tr><th>Sequência</th><th>Nome</th><th>Princípio de atuação</th></tr></thead>
+  <tbody>
+    <tr><td>9</td><td><strong>Assassina</strong></td><td><strong>Essência:</strong> Compreender vulnerabilidades e a importância da preparação e do momento de agir.<br><strong>Expressão:</strong> Estudar o alvo, disfarçar intenções e escolher meios precisos em vez de recorrer à violência indiscriminada.</td></tr>
+    <tr><td>8</td><td><strong>Instigadora</strong></td><td><strong>Essência:</strong> Reconhecer conflitos latentes e os fatores que podem fazê-los crescer.<br><strong>Expressão:</strong> Identificar tensões, aproximar interesses incompatíveis e provocar mudanças por meio de pessoas e circunstâncias.</td></tr>
+    <tr><td>7</td><td><strong>Bruxa</strong></td><td><strong>Essência:</strong> Compreender a transformação, o artifício e o perigo como instrumentos de mudança.<br><strong>Expressão:</strong> Estudar práticas místicas, alterar aparências e explorar possibilidades sem ignorar o custo das transformações.</td></tr>
+    <tr><td>6</td><td><strong>Demônia do Prazer</strong></td><td><strong>Essência:</strong> Compreender desejos, prazeres e necessidades que orientam escolhas e relações.<br><strong>Expressão:</strong> Perceber o que move as pessoas e como desejo e satisfação podem ser despertados, negociados ou influenciados.</td></tr>
+    <tr><td>5</td><td><strong>Demônia da Aflição</strong></td><td><strong>Essência:</strong> Reconhecer o sofrimento e a calamidade como forças que transformam indivíduos e comunidades.<br><strong>Expressão:</strong> Investigar como aflições surgem e se propagam, bem como as formas de suportá-las, contê-las ou conduzi-las.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="caminho-14">Caminho da Roda da Fortuna</h3>
+<table>
+  <thead><tr><th>Sequência</th><th>Nome</th><th>Princípio de atuação</th></tr></thead>
+  <tbody>
+    <tr><td>9</td><td><strong>Monstro</strong></td><td><strong>Essência:</strong> Perceber acontecimentos incomuns, coincidências e sinais que podem indicar tendências.<br><strong>Expressão:</strong> Observar padrões fora do esperado e considerar tanto a oportunidade quanto o perigo presentes no acaso.</td></tr>
+    <tr><td>8</td><td><strong>Robô</strong></td><td><strong>Essência:</strong> Compreender o valor da regularidade, da precisão e da resposta consistente.<br><strong>Expressão:</strong> Criar rotinas, observar padrões e agir com disciplina, mantendo abertura para ajustar procedimentos quando necessário.</td></tr>
+    <tr><td>7</td><td><strong>Sortudo</strong></td><td><strong>Essência:</strong> Reconhecer oportunidades e estar preparado para aproveitá-las.<br><strong>Expressão:</strong> Manter alternativas, agir quando uma possibilidade surge e avaliar o risco por trás de cada oportunidade.</td></tr>
+    <tr><td>6</td><td><strong>Sacerdote da Calamidade</strong></td><td><strong>Essência:</strong> Compreender os ciclos que aproximam fortuna, infortúnio e consequências inesperadas.<br><strong>Expressão:</strong> Observar presságios, relacionar acontecimentos e considerar efeitos indiretos de uma mudança de sorte.</td></tr>
+    <tr><td>5</td><td><strong>Vencedor</strong></td><td><strong>Essência:</strong> Transformar oportunidades em resultados concretos sem ignorar a imprevisibilidade.<br><strong>Expressão:</strong> Definir objetivos, aproveitar circunstâncias favoráveis e aprender também com derrotas e vitórias parciais.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="caminho-15">Caminho da Lua</h3>
+<table>
+  <thead><tr><th>Sequência</th><th>Nome</th><th>Princípio de atuação</th></tr></thead>
+  <tbody>
+    <tr><td>9</td><td><strong>Boticário</strong></td><td><strong>Essência:</strong> Compreender as propriedades das substâncias e a importância da proporção e da dosagem.<br><strong>Expressão:</strong> Estudar ingredientes, preparar misturas com precisão e registrar resultados, distinguindo remédio, veneno e efeito inesperado.</td></tr>
+    <tr><td>8</td><td><strong>Domador de Bestas</strong></td><td><strong>Essência:</strong> Compreender o comportamento das criaturas e construir formas de conduzi-las.<br><strong>Expressão:</strong> Observar, ganhar confiança e estabelecer comandos por meio de paciência, consistência e conhecimento da criatura.</td></tr>
+    <tr><td>7</td><td><strong>Vampiro</strong></td><td><strong>Essência:</strong> Reconhecer necessidades e instintos de uma existência ligada à noite e ao sangue.<br><strong>Expressão:</strong> Controlar impulsos, preservar discrição e compreender a própria relação com vitalidade, desejo e dependência.</td></tr>
+    <tr><td>6</td><td><strong>Professor de Poções</strong></td><td><strong>Essência:</strong> Compreender fórmulas e reações e transmitir esse conhecimento com método.<br><strong>Expressão:</strong> Investigar ingredientes, testar hipóteses com cautela, ensinar procedimentos e registrar resultados reproduzíveis.</td></tr>
+    <tr><td>5</td><td><strong>Estudioso Escarlate</strong></td><td><strong>Essência:</strong> Investigar as relações entre Lua, sangue, ciclos e fenômenos da vida noturna.<br><strong>Expressão:</strong> Observar ciclos, comparar manifestações e construir conhecimento a partir de evidências e tradições.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="caminho-16">Caminho da Mãe</h3>
+<table>
+  <thead><tr><th>Sequência</th><th>Nome</th><th>Princípio de atuação</th></tr></thead>
+  <tbody>
+    <tr><td>9</td><td><strong>Plantador</strong></td><td><strong>Essência:</strong> Compreender que a vida depende de condições, cuidado e tempo.<br><strong>Expressão:</strong> Preparar o solo, cultivar, observar ciclos e ajustar os cuidados às necessidades de cada planta.</td></tr>
+    <tr><td>8</td><td><strong>Médico</strong></td><td><strong>Essência:</strong> Preservar a vida e tratar enfermidades com conhecimento e responsabilidade.<br><strong>Expressão:</strong> Examinar pacientes, buscar causas, tratar ferimentos e considerar a pessoa para além do sintoma imediato.</td></tr>
+    <tr><td>7</td><td><strong>Sacerdote da Colheita</strong></td><td><strong>Essência:</strong> Compreender os ciclos de plantio, crescimento, abundância e renovação.<br><strong>Expressão:</strong> Organizar recursos, promover fertilidade e reconhecer que a colheita depende do equilíbrio e da continuidade.</td></tr>
+    <tr><td>6</td><td><strong>Biólogo</strong></td><td><strong>Essência:</strong> Investigar os organismos e as relações que sustentam os sistemas vivos.<br><strong>Expressão:</strong> Observar adaptação, reprodução e interação com o ambiente, relacionando processos individuais a sistemas maiores.</td></tr>
+    <tr><td>5</td><td><strong>Druida</strong></td><td><strong>Essência:</strong> Compreender a natureza como um sistema de equilíbrio, transformação e renovação.<br><strong>Expressão:</strong> Proteger ambientes, respeitar ciclos e considerar os efeitos de longo prazo das intervenções sobre a vida.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="caminho-17">Caminho do Imperador Negro</h3>
+<table>
+  <thead><tr><th>Sequência</th><th>Nome</th><th>Princípio de atuação</th></tr></thead>
+  <tbody>
+    <tr><td>9</td><td><strong>Advogado</strong></td><td><strong>Essência:</strong> Compreender como regras e instituições organizam relações e distribuem poder.<br><strong>Expressão:</strong> Interpretar normas, identificar exceções e explorar brechas com conhecimento da estrutura que lhes dá sentido.</td></tr>
+    <tr><td>8</td><td><strong>Bárbaro</strong></td><td><strong>Essência:</strong> Questionar ordens impostas e reconhecer que estruturas diferentes podem obedecer a princípios diferentes.<br><strong>Expressão:</strong> Confrontar sistemas rígidos, desafiar convenções e procurar alternativas quando a ordem existente se mostra injusta ou inadequada.</td></tr>
+    <tr><td>7</td><td><strong>Subornador</strong></td><td><strong>Essência:</strong> Compreender os interesses, necessidades e incentivos que influenciam pessoas e instituições.<br><strong>Expressão:</strong> Identificar o que cada parte valoriza e oferecer concessões capazes de alterar uma decisão ou relação de poder.</td></tr>
+    <tr><td>6</td><td><strong>Barão da Corrupção</strong></td><td><strong>Essência:</strong> Perceber como estruturas podem ser desviadas por dentro, sem necessariamente destruí-las.<br><strong>Expressão:</strong> Modificar procedimentos, explorar dependências e alterar relações de poder para que um sistema passe a servir a outros interesses.</td></tr>
+    <tr><td>5</td><td><strong>Mentor da Desordem</strong></td><td><strong>Essência:</strong> Compreender como regras e hierarquias podem ser questionadas e reorganizadas.<br><strong>Expressão:</strong> Ensinar outros a identificar fragilidades, coordenar rupturas e transformar o equilíbrio de poder.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="caminho-18">Caminho do Justiciar</h3>
+<table>
+  <thead><tr><th>Sequência</th><th>Nome</th><th>Princípio de atuação</th></tr></thead>
+  <tbody>
+    <tr><td>9</td><td><strong>Árbitro</strong></td><td><strong>Essência:</strong> Compreender regras comuns e a responsabilidade de aplicá-las a conflitos concretos.<br><strong>Expressão:</strong> Ouvir as partes, esclarecer normas e intervir com coerência quando uma disputa exige decisão.</td></tr>
+    <tr><td>8</td><td><strong>Xerife</strong></td><td><strong>Essência:</strong> Fazer cumprir a lei em situações práticas e proteger a comunidade sob sua responsabilidade.<br><strong>Expressão:</strong> Investigar ocorrências, perseguir infratores e agir dentro dos limites de sua autoridade.</td></tr>
+    <tr><td>7</td><td><strong>Interrogador</strong></td><td><strong>Essência:</strong> Buscar a verdade comparando versões, perguntas e evidências.<br><strong>Expressão:</strong> Questionar, identificar inconsistências e confrontar relatos sem abandonar a avaliação crítica das respostas.</td></tr>
+    <tr><td>6</td><td><strong>Juiz</strong></td><td><strong>Essência:</strong> Avaliar fatos, provas e circunstâncias antes de estabelecer uma decisão.<br><strong>Expressão:</strong> Ponderar responsabilidades, considerar proporcionalidade e explicar a relação entre a conduta e a consequência.</td></tr>
+    <tr><td>5</td><td><strong>Paladino Disciplinador</strong></td><td><strong>Essência:</strong> Sustentar limites e aplicar consequências quando regras fundamentais são violadas.<br><strong>Expressão:</strong> Investigar a transgressão, reconhecer os limites da própria autoridade e agir com determinação proporcional.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="caminho-19">Caminho do Abismo</h3>
+<table>
+  <thead><tr><th>Sequência</th><th>Nome</th><th>Princípio de atuação</th></tr></thead>
+  <tbody>
+    <tr><td>9</td><td><strong>Criminoso</strong></td><td><strong>Essência:</strong> Reconhecer os próprios desejos e a tensão entre impulso, consciência e convenções.<br><strong>Expressão:</strong> Examinar o que realmente o move, identificar oportunidades e decidir conscientemente quando transgredir limites.</td></tr>
+    <tr><td>8</td><td><strong>Anjo sem Asas</strong></td><td><strong>Essência:</strong> Confrontar a perda de restrições e a presença de impulsos que desafiam a identidade anterior.<br><strong>Expressão:</strong> Reconhecer desejos sombrios, compreender sua origem e decidir como lidar com eles sem negar sua existência.</td></tr>
+    <tr><td>7</td><td><strong>Assassino em Série</strong></td><td><strong>Essência:</strong> Compreender como repetição e obsessão podem transformar atos em padrões compulsivos.<br><strong>Expressão:</strong> Reconhecer ciclos de comportamento, investigar suas causas e avaliar como a repetição altera a própria identidade.</td></tr>
+    <tr><td>6</td><td><strong>Diabo</strong></td><td><strong>Essência:</strong> Reconhecer como tentação, medo e corrupção podem alterar escolhas e relações.<br><strong>Expressão:</strong> Identificar fraquezas, usar presença e ameaça de maneira deliberada e compreender o que sustenta a influência exercida.</td></tr>
+    <tr><td>5</td><td><strong>Apóstolo do Desejo</strong></td><td><strong>Essência:</strong> Compreender desejos e emoções como forças que orientam decisões.<br><strong>Expressão:</strong> Identificar motivações, perceber conflitos entre vontades e direcionar impulsos sem ignorar suas consequências.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="caminho-20">Caminho do Acorrentado</h3>
+<table>
+  <thead><tr><th>Sequência</th><th>Nome</th><th>Princípio de atuação</th></tr></thead>
+  <tbody>
+    <tr><td>9</td><td><strong>Prisioneiro</strong></td><td><strong>Essência:</strong> Compreender limites, contenção e a capacidade de suportar restrições.<br><strong>Expressão:</strong> Reconhecer desejos, praticar temperança e distinguir limites que protegem daqueles que precisam ser confrontados.</td></tr>
+    <tr><td>8</td><td><strong>Lunático</strong></td><td><strong>Essência:</strong> Reconhecer alterações da própria percepção e lidar com impulsos instáveis.<br><strong>Expressão:</strong> Observar mudanças de estado, buscar referências externas e decidir com cautela quando a própria percepção estiver comprometida.</td></tr>
+    <tr><td>7</td><td><strong>Lobisomem</strong></td><td><strong>Essência:</strong> Compreender os instintos de caça, força e transformação que coexistem com a razão.<br><strong>Expressão:</strong> Reconhecer impulsos bestiais, aprender seus sinais e escolher quando liberar ou conter a própria natureza.</td></tr>
+    <tr><td>6</td><td><strong>Zumbi</strong></td><td><strong>Essência:</strong> Compreender a persistência de um corpo alterado diante do desgaste e da perda.<br><strong>Expressão:</strong> Suportar condições adversas, continuar quando necessário e reconhecer o que ainda pode ser preservado.</td></tr>
+    <tr><td>5</td><td><strong>Espectro</strong></td><td><strong>Essência:</strong> Compreender a existência entre presença e ausência, corpo e espírito, vínculo e separação.<br><strong>Expressão:</strong> Lidar com manifestações invisíveis, preservar vínculos importantes e reconhecer quando é preciso se afastar.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="caminho-21">Caminho do Eremita</h3>
+<table>
+  <thead><tr><th>Sequência</th><th>Nome</th><th>Princípio de atuação</th></tr></thead>
+  <tbody>
+    <tr><td>9</td><td><strong>Investigador de Mistérios</strong></td><td><strong>Essência:</strong> Investigar aquilo que permanece oculto e reconhecer o perigo inerente à descoberta.<br><strong>Expressão:</strong> Formular perguntas, decifrar símbolos, comparar fontes e verificar respostas antes de aceitá-las.</td></tr>
+    <tr><td>8</td><td><strong>Estudioso de Combate</strong></td><td><strong>Essência:</strong> Transformar estudo e experiência prática em compreensão aplicável ao confronto.<br><strong>Expressão:</strong> Observar técnicas, testar conhecimentos em situações reais e aprender com acertos, erros e adversários.</td></tr>
+    <tr><td>7</td><td><strong>Bruxo</strong></td><td><strong>Essência:</strong> Compreender práticas místicas por meio de seus fundamentos, procedimentos e consequências.<br><strong>Expressão:</strong> Estudar fórmulas, preparar rituais e aplicar conhecimentos com método, reconhecendo o que ainda não controla.</td></tr>
+    <tr><td>6</td><td><strong>Professor de Pergaminhos</strong></td><td><strong>Essência:</strong> Preservar e transmitir conhecimentos registrados, interpretando sua origem e seu contexto.<br><strong>Expressão:</strong> Comparar textos, investigar símbolos, identificar lacunas e ensinar o que foi compreendido.</td></tr>
+    <tr><td>5</td><td><strong>Mestre das Constelações</strong></td><td><strong>Essência:</strong> Compreender padrões celestes e as relações simbólicas ou místicas que podem expressar.<br><strong>Expressão:</strong> Observar estrelas, registrar movimentos e construir interpretações que possam ser comparadas e revistas.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="caminho-22">Caminho do Paragon</h3>
+<table>
+  <thead><tr><th>Sequência</th><th>Nome</th><th>Princípio de atuação</th></tr></thead>
+  <tbody>
+    <tr><td>9</td><td><strong>Erudito</strong></td><td><strong>Essência:</strong> Compreender os princípios científicos e técnicos que explicam o funcionamento das coisas.<br><strong>Expressão:</strong> Observar, formular hipóteses, testar explicações e valorizar aplicações verificáveis do conhecimento.</td></tr>
+    <tr><td>8</td><td><strong>Arqueólogo</strong></td><td><strong>Essência:</strong> Reconstruir contextos passados a partir de vestígios materiais.<br><strong>Expressão:</strong> Investigar sítios, preservar achados e relacionar objetos a seu período, função e ambiente de origem.</td></tr>
+    <tr><td>7</td><td><strong>Avaliador</strong></td><td><strong>Essência:</strong> Reconhecer qualidade, procedência, autenticidade e valor por meio de exame cuidadoso.<br><strong>Expressão:</strong> Comparar materiais, verificar detalhes e considerar histórico e condições antes de atribuir valor.</td></tr>
+    <tr><td>6</td><td><strong>Artesão</strong></td><td><strong>Essência:</strong> Transformar conhecimento de materiais e mecanismos em objetos funcionais.<br><strong>Expressão:</strong> Construir, reparar e aperfeiçoar ferramentas, avaliando a relação entre forma, material e finalidade.</td></tr>
+    <tr><td>5</td><td><strong>Astrônomo</strong></td><td><strong>Essência:</strong> Investigar os corpos celestes por meio de observação, cálculo e modelos.<br><strong>Expressão:</strong> Registrar movimentos, comparar medições e usar o conhecimento do céu para ampliar a compreensão do mundo.</td></tr>
+  </tbody>
+</table>
+
+<div class="separator"></div>
+
+<h2 id="avanco">Avanço e consumo da próxima poção</h2>
+
+<p>
+  Atingir <strong>100 Pontos de Digestão</strong> significa que a poção da Sequência atual
+  foi completamente assimilada. Isso não concede automaticamente uma nova Sequência.
+  O personagem ainda precisa obter a fórmula da próxima poção, reunir seus ingredientes
+  e cumprir os requisitos de avanço definidos para o Caminho.
+</p>
+
+<h3>Requisitos para avançar</h3>
+
+<ol>
+  <li><strong>Digestão completa:</strong> acumular 100 Pontos de Digestão na Sequência atual.</li>
+  <li><strong>Fórmula:</strong> conhecer a composição e o método de preparo da poção da próxima Sequência.</li>
+  <li><strong>Ingredientes:</strong> reunir os ingredientes principais e suplementares exigidos pela fórmula.</li>
+  <li><strong>Preparação:</strong> organizar o local, os materiais e as condições necessárias para o consumo.</li>
+  <li><strong>Ritual:</strong> cumprir o ritual de avanço quando a poção da Sequência-alvo exigir um, conforme os requisitos próprios daquele Caminho.</li>
+</ol>
+
+<p>
+  Neste volume, a progressão descrita vai da Sequência 9 até a <strong>Sequência 5</strong>.
+  Ao avançar da Sequência 6 para a 5, o Mestre deve verificar os requisitos e o ritual
+  específico da poção correspondente. Não existe um ritual universal que substitua as
+  exigências próprias de cada Caminho.
+</p>
+
+<h3>Teste de Consumo da Poção</h3>
+
+<p>
+  Depois de cumprir os requisitos, o personagem realiza um teste para representar a
+  dificuldade de assimilar a nova Característica Beyonder. O teste utiliza Determinação,
+  pois mede a capacidade de resistir à pressão da poção durante a assimilação.
+</p>
+
+<div class="box box-rule">
+  <div class="box-title">Teste de Consumo</div>
+  <p><strong>Rolagem:</strong> 2d10 + Mod.(DET)</p>
+  <p><strong>Classe de Dificuldade:</strong></p>
+  <table>
+    <thead><tr><th>Sequência-alvo</th><th>CD</th></tr></thead>
+    <tbody>
+      <tr><td>Sequência 8</td><td>8</td></tr>
+      <tr><td>Sequência 7</td><td>10</td></tr>
+      <tr><td>Sequência 6</td><td>12</td></tr>
+      <tr><td>Sequência 5</td><td>15</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Resultados:</strong></p>
+  <ul>
+    <li><strong>Sucesso:</strong> o personagem assimila a poção e avança para a nova Sequência. A digestão da nova poção começa em 0/100.</li>
+    <li><strong>Falha:</strong> a poção é mal digerida. O personagem ainda avança, mas a nova Característica permanece parcialmente assimilada e ele perde <strong>3 pontos de Lucidez</strong>. A digestão continua exigindo os mesmos <strong>100 Pontos de Digestão</strong>.</li>
+    <li><strong>Falha Crítica:</strong> aplica as consequências de uma Falha — incluindo a perda de <strong>3 pontos de Lucidez</strong> — e provoca também uma crise relacionada à influência da Característica. O Mestre deve aplicar o procedimento de crise e perda de controle descrito na seção Lucidez, Âncoras e perda de controle do Capítulo 3. A perda fixa de 3 pontos por má digestão é aplicada uma única vez por consumo.</li>
+  </ul>
+  <p class="box-note">
+    A Falha Crítica segue a regra geral do sistema: os dois dados selecionados mostram
+    1 e o resultado final fica abaixo da CD. Um único resultado natural 1 não é suficiente.
   </p>
 </div>
 
 <p>
-  O deslocamento básico de um personagem é de <strong>9 metros</strong>, salvo quando
-  uma habilidade, condição ou equipamento alterar esse valor.
+  A digestão da nova Sequência é registrada separadamente da anterior. Os pontos acumulados
+  na Sequência concluída não são transferidos. Mesmo quando ocorre má digestão, o personagem
+  começa em 0 e precisa acumular os mesmos 100 Pontos de Digestão para considerar a nova
+  poção plenamente assimilada.
 </p>
+
 <div class="separator"></div>
 
-<h2 id="resumo">Resumo Rápido de Referência</h2>
-<div class="stat-block">
-  <h4>Fórmulas e regras principais</h4>
-  <div class="stat-line"><span class="stat-label">Modificador de Atributo:</span><span>Mod.(ATR) = Pontos.(ATR) − 2</span></div>
-  <div class="stat-line"><span class="stat-label">Modificador de Proficiência:</span><span>Mod.(Proficiência) = Pontos da Proficiência − 2</span></div>
-  <div class="stat-line"><span class="stat-label">Teste:</span><span>soma dos dois dados selecionados + Mod.(Atributo) + Mod.(Proficiência) + bônus aplicáveis ≥ CD</span></div>
-  <div class="stat-line"><span class="stat-label">Especialização:</span><span>cada especialização pertinente concede +1 ao teste; especializações distintas podem somar seus bônus</span></div>
-  <div class="stat-line"><span class="stat-label">Vantagem:</span><span>após cancelar fontes opostas, role 3d10 e some os dois maiores; fontes excedentes não se acumulam</span></div>
-  <div class="stat-line"><span class="stat-label">Desvantagem:</span><span>após cancelar fontes opostas, role 3d10 e some os dois menores; fontes excedentes não se acumulam</span></div>
-  <div class="stat-line"><span class="stat-label">Sem Vantagem ou Desvantagem:</span><span>fontes equilibradas ou ausentes: role 2d10 normalmente</span></div>
-  <div class="stat-line"><span class="stat-label">Acerto Crítico:</span><span>dois dados utilizados mostram 10 e o total alcança a CD</span></div>
-  <div class="stat-line"><span class="stat-label">Falha Crítica:</span><span>dois dados utilizados mostram 1 e o total fica abaixo da CD</span></div>
-  <div class="stat-line"><span class="stat-label">PV:</span><span>3 + Pontos.(VIG) + (10 − Sequência)</span></div>
-  <div class="stat-line"><span class="stat-label">Espiritualidade máxima:</span><span>Valor-base do Caminho/Sequência + Bônus de Digestão de Poção (+2 permanente a cada 50% de uma poção) + outros bônus</span></div>
-  <div class="stat-line"><span class="stat-label">Teste de Lucidez:</span><span>2d10 + bônus total das Âncoras ativas + modificador de circunstância; uso excedente de Espiritualidade: CD 8 + excedente acumulado</span></div>
-  <div class="stat-line"><span class="stat-label">Recuperação da Espiritualidade:</span><span>8 horas: recuperação total, 1 vez a cada 24 horas; 1 hora: 1d10 + (10 − Sequência), até 2 vezes por dia</span></div>
-  <div class="stat-line"><span class="stat-label">Defesa:</span><span>10 + Mod.(DES); fórmulas alternativas são escolhidas, não somadas</span></div>
-  <div class="stat-line"><span class="stat-label">Lucidez:</span><span>inicial 7, máximo 10, mínimo 0; cada Âncora ativa concede +1 em testes de Lucidez</span></div>
-  <div class="stat-line"><span class="stat-label">Limiar Menor → Maior:</span><span>2 + (10 − Sequência), sem armadura</span></div>
-  <div class="stat-line"><span class="stat-label">Limiar Maior → Severo:</span><span>4 + 2 × (10 − Sequência), sem armadura</span></div>
-  <div class="stat-line"><span class="stat-label">Blindagem:</span><span>1 ponto reduz o dano em um nível; máximo de 1 ponto por ataque</span></div>
-  <div class="stat-line"><span class="stat-label">Deslocamento básico:</span><span>9 metros</span></div>
-</div>
 
+<div class="separator"></div>
 
+<h2 id="formulas">Fórmulas e ingredientes</h2>
+
+<p>
+  Fórmulas e ingredientes Beyonder são recursos raros. Sua obtenção costuma envolver
+  organizações, contatos clandestinos, pesquisas, expedições e negociações perigosas.
+  Conhecer a fórmula não significa possuir os ingredientes, e reunir os materiais não
+  garante que o personagem saiba prepará-los corretamente.
+</p>
+
+<h3>Fontes de fórmulas</h3>
+
+<ul>
+  <li><strong>Reuniões Beyonder:</strong> encontros clandestinos nos quais participantes negociam fórmulas, ingredientes, características e informações. A procedência do material e a confiabilidade do vendedor devem ser avaliadas.</li>
+  <li><strong>Organizações:</strong> Igrejas Ortodoxas, instituições oficiais, sociedades secretas e outras facções podem guardar fórmulas e conceder acesso a membros ou agentes de confiança.</li>
+  <li><strong>Pesquisa e documentos:</strong> diários, registros, bibliotecas restritas, arquivos e anotações de Beyonders podem conter fórmulas completas ou fragmentos que precisam ser verificados.</li>
+  <li><strong>Expedições e investigações:</strong> ruínas, criaturas sobrenaturais e locais associados a fenômenos místicos podem revelar ingredientes, registros ou pistas sobre uma poção.</li>
+  <li><strong>Contatos excepcionais:</strong> uma campanha pode apresentar fontes extraordinárias de conhecimento, mas seu acesso depende das circunstâncias e não é uma facilidade disponível automaticamente a todos os personagens.</li>
+</ul>
+
+<h3>Ingredientes principais e suplementares</h3>
+
+<p>
+  Cada fórmula determina os ingredientes necessários, suas quantidades e o método de
+  preparo. Em geral, é útil distinguir:
+</p>
+
+<ul>
+  <li><strong>Ingredientes principais:</strong> materiais raros, muitas vezes obtidos de criaturas sobrenaturais, características Beyonder ou locais específicos. São normalmente os componentes mais difíceis de encontrar.</li>
+  <li><strong>Ingredientes suplementares:</strong> ervas, minerais, líquidos-base e outros materiais usados para estabilizar ou completar a preparação. Podem ser mais acessíveis, mas ainda precisam corresponder à fórmula.</li>
+</ul>
+
+<p>
+  O Mestre define disponibilidade, preço e riscos de aquisição conforme a região, a
+  Sequência, a organização que controla o conhecimento e as condições da campanha.
+  Não existe um preço universal: uma fórmula pode ser negociada por dinheiro, favores,
+  informações, serviços ou acesso a recursos de uma facção.
+</p>
 
 <div class="box box-lore">
-  <div class="box-title">Orientação ao Mestre</div>
+  <div class="box-title">O valor do conhecimento</div>
   <p>
-    Os números servem para resolver situações incertas, não para substituir a
-    interpretação. Se uma ação é trivial e não existe consequência relevante para
-    o fracasso, o personagem pode simplesmente realizá-la. Se uma ação é impossível
-    nas circunstâncias, não solicite um teste. Reserve os dados para momentos em
-    que o resultado é incerto e as consequências importam.
+    Em um mundo onde as fórmulas são segredos e os ingredientes podem vir de criaturas
+    perigosas, obter informação já é parte da aventura. Uma fórmula incompleta pode levar
+    a uma investigação; um ingrediente raro pode exigir uma expedição; e uma organização
+    disposta a ajudar pode exigir lealdade em troca.
   </p>
+</div>
+
+<div class="separator"></div>
+
+<h2 id="xp">Progressão por Experiência (XP)</h2>
+
+<p>
+  A progressão por XP representa o desenvolvimento das capacidades do personagem por
+  meio das experiências vividas durante a campanha. Ela é independente da progressão por
+  Sequência: XP não permite consumir uma poção, avançar de Sequência, obter uma fórmula ou
+  substituir os Pontos de Digestão exigidos pelo Método de Atuação.
+</p>
+
+<h3>Reservas independentes de XP</h3>
+
+<p>
+  Cada personagem acompanha duas reservas distintas. Os pontos de uma reserva só podem
+  ser utilizados no tipo de aprimoramento correspondente e não podem ser transferidos,
+  convertidos ou combinados com os pontos da outra reserva.
+</p>
+
+<div class="box box-rule">
+  <div class="box-title">Tipos de Experiência</div>
+  <table>
+    <thead><tr><th>Reserva</th><th>Uso permitido</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>XP de Atributos</strong></td>
+        <td>Adquirir aumentos de +1 em um Atributo.</td>
+      </tr>
+      <tr>
+        <td><strong>XP de Proficiências</strong></td>
+        <td>Adquirir aumentos de +1 em duas Proficiências distintas pertencentes ao mesmo grupo.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3>Como funcionam os aumentos</h3>
+
+<p>
+  A conversão é direta: <strong>1 XP de Atributos aumenta em +1 Ponto um Atributo</strong>,
+  enquanto <strong>1 XP de Proficiências aumenta em +1 ponto duas Proficiências distintas
+  do mesmo grupo</strong>. Assim, com 1 XP de Proficiências, o jogador escolhe duas Proficiências
+  do grupo Talentos, Perícias ou Conhecimentos e aumenta cada uma em 1 ponto. As duas
+  Proficiências escolhidas devem pertencer ao mesmo grupo.
+  O custo não aumenta conforme o valor atual: elevar um Atributo de 2 para 3 custa o mesmo
+  que elevá-lo de 4 para 5; da mesma forma, cada XP de Proficiências sempre aumenta duas
+  Proficiências em 1 ponto cada, respeitados os limites individuais.
+</p>
+
+<p>
+  O XP de Atributos não pode comprar aumentos de Proficiências, e o XP de Proficiências
+  não pode comprar aumentos de Atributos. Cada personagem decide como utilizar suas próprias
+  reservas, respeitando a finalidade de cada uma.
+</p>
+
+<h3>Registro e aplicação do XP</h3>
+
+<p>
+  Sempre que receber XP, o jogador deve marcar a quantidade recebida nos campos
+  correspondentes da ficha e aplicar imediatamente os aumentos permitidos por esse ganho.
+  O XP deve ser convertido no aprimoramento correspondente, seguindo as regras de cada
+  reserva: o XP de Atributos aumenta um Atributo, enquanto o XP de Proficiências aumenta
+  duas Proficiências distintas do mesmo grupo.
+</p>
+
+<h3>Separação entre XP e progressão por Sequência</h3>
+
+<p>
+  Os dois sistemas medem desenvolvimentos diferentes. Os Pontos de Digestão representam
+  a assimilação da Característica Beyonder e são necessários para avançar de Sequência.
+  O XP representa o aprimoramento das capacidades do personagem. Um não substitui o outro,
+  e os pontos acumulados em uma dessas formas de progressão não podem ser convertidos na
+  outra.
+</p>
+
+<h3>Concessão de XP</h3>
+
+<div class="box box-note">
+  <div class="box-title">Critério de concessão</div>
+  <p>
+    A concessão de XP e a quantidade distribuída ficam a critério do Mestre, conforme o
+    ritmo e os acontecimentos da campanha. O XP pode ser concedido em ocasiões relevantes,
+    como o encerramento de um arco narrativo, uma grande descoberta, a conclusão de um
+    objetivo importante, uma virada significativa na história ou outro momento memorável.
+  </p>
+  <p>
+    Não é necessário conceder XP ao final de toda sessão. Cabe ao Mestre avaliar quando
+    um acontecimento representa uma oportunidade adequada de desenvolvimento para os
+    personagens.
+  </p>
+</div>
+
+<div class="box box-note">
+  <div class="box-title">Procedimento: Downtime antes da concessão de XP</div>
+  <p>
+    Antes de conceder XP, o Mestre deve oferecer aos personagens um período de
+    <em>Downtime</em>. Durante esse intervalo, os jogadores explicam o que seus personagens
+    fizeram para desenvolver as características que desejam aprimorar. O XP é concedido
+    ao final do Downtime e, assim que recebido, deve ser registrado e imediatamente aplicado
+    conforme as regras deste capítulo.
+  </p>
+  <p>
+    Um Atributo pode ser aprimorado por meio de treinamento, disciplina ou experiências
+    que desafiaram o personagem. Uma Proficiência pode evoluir com estudo, prática,
+    pesquisa, trabalho ou aplicação constante. Por exemplo, um personagem que aumenta
+    Força pode descrever um treinamento físico, enquanto outro que aprimora duas Perícias
+    pode explicar como praticou ambas durante o intervalo.
+  </p>
+  <p>
+    O Downtime deve dar contexto narrativo à evolução sem se transformar em uma exigência
+    burocrática. O Mestre define a duração adequada à campanha, e cada jogador apresenta
+    uma justificativa coerente para os aprimoramentos escolhidos. O procedimento é parte
+    da concessão de XP, não uma atividade opcional posterior ao recebimento dos pontos.
+  </p>
+</div>
+
+<div class="separator"></div>
+
+<div class="box box-rule" id="resumo-final">
+  <div class="box-title">Resumo de referência</div>
+  <ul>
+    <li>O Método de Atuação permite assimilar a Característica Beyonder ao compreender e expressar a essência da Sequência, sem imitar um estereótipo.</li>
+    <li>O Foco de Atuação é uma intenção opcional declarada no início da sessão; não concede pontos por si só.</li>
+    <li>Cada Sequência possui quatro poderes Beyonder. Durante a Digestão da poção de uma Sequência, o personagem Sintoniza um poder à escolha aos 25% e um segundo poder diferente aos 75%. A Sintonia concede um reforço leve ao poder escolhido; seus efeitos específicos serão definidos na criação dos poderes.</li>
+    <li>Cada Sequência exige 100 Pontos de Digestão. A contagem é limitada a 100/100; pontos excedentes são perdidos e não passam para a próxima poção. Os pontos são concedidos por atuação coerente, atuação decisiva, marcos narrativos e atividades de intervalo, sem recompensar duas vezes a mesma ação.</li>
+    <li>Os marcos de Digestão concedem recompensas: aos 25%, Sintoniza um poder; aos 50%, acrescenta +2 permanentes à Espiritualidade máxima; aos 75%, Sintoniza um segundo poder; aos 100%, recupera 1 ponto de Lucidez, respeitando o máximo de 10. A Espiritualidade máxima soma os ganhos recebidos ao alcançar cada Sequência e os bônus permanentes de +2 por poção que chega a 50% de Digestão. A Sintonia afeta apenas poderes da Sequência cuja poção está sendo digerida. As tabelas apresentam Essência e Expressão para as Sequências 9 a 5.</li>
+    <li>O personagem precisa concluir a digestão, obter a fórmula e os ingredientes e cumprir os requisitos de avanço antes de consumir a próxima poção.</li>
+    <li>O Teste de Consumo usa 2d10 + Mod.(DET), com CD definida pela Sequência-alvo. Uma Falha ou Falha Crítica representa má digestão e causa perda de 3 pontos de Lucidez, mas não altera a exigência de 100 Pontos de Digestão. A Falha Crítica também aciona as regras de crise e perda de controle descritas no Capítulo 3.</li>
+    <li>Fórmulas e ingredientes são raros; sua obtenção deve alimentar a investigação, as relações com facções e as aventuras da campanha.</li>
+    <li>A progressão por XP utiliza duas reservas independentes: XP de Atributos, para aumentar um Atributo em +1, e XP de Proficiências, para aumentar duas Proficiências distintas do mesmo grupo em +1 cada.</li>
+    <li>1 XP de Atributos aumenta um Atributo em +1 Ponto. 1 XP de Proficiências aumenta duas Proficiências distintas do mesmo grupo (Talentos, Perícias ou Conhecimentos) em +1 ponto cada. Ao receber XP, o jogador deve registrá-lo na ficha e aplicar imediatamente os aumentos correspondentes.</li>
+    <li>A concessão de XP e a quantidade distribuída ficam a critério do Mestre, podendo ocorrer em marcos relevantes, como o fim de um arco narrativo, uma grande descoberta ou outro momento memorável da campanha.</li>
+    <li>Antes de conceder XP, o Mestre oferece um período de Downtime para que os jogadores descrevam como seus personagens treinaram, estudaram ou praticaram as características que desejam aprimorar. Depois do Downtime, o XP é registrado e imediatamente aplicado.</li>
+    <li>XP e Pontos de Digestão não podem ser convertidos nem substituem um ao outro.</li>
+  </ul>
+  <p><a href="#topo">Voltar ao início do capítulo ↑</a></p>
 </div>
 
 <nav class="book-nav">
-  <a href="02-criacao.html">← Capítulo 2 — Criação de Personagem</a>
-  <a href="04-pathways.html">Capítulo 4 — Os 22 Caminhos →</a>
+  <a href="05-sequencias.html">← Capítulo 5 — Sequências &amp; Poderes</a>
+  <a href="07-combate.html">Capítulo 7 — Combate →</a>
 </nav>
 
 </body>
