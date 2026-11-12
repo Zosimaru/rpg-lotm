@@ -181,10 +181,11 @@
     </tbody>
   </table>
   <p class="box-note">
-    O limite recomendado é de <strong>20 Pontos de Digestão por personagem em uma sessão</strong>,
-    incluindo marcos narrativos. Atividades de intervalo podem conceder até 5 pontos por
-    semana completa. Uma mesma ação ou acontecimento não pode ser recompensado por mais
-    de uma categoria.
+    A contagem de uma poção nunca ultrapassa <strong>100/100 Pontos de Digestão</strong>.
+    Se uma recompensa fizer o personagem ultrapassar esse limite, a contagem é encerrada
+    em 100/100 e os pontos excedentes são perdidos; eles não são transferidos para a poção
+    da próxima Sequência. Uma mesma ação ou acontecimento não pode ser recompensado por
+    mais de uma categoria.
   </p>
 </div>
 
@@ -209,9 +210,9 @@
     <thead><tr><th>Progresso</th><th>Marco</th><th>O que representa</th><th>Recompensa</th></tr></thead>
     <tbody>
       <tr><td>25%</td><td><strong>Primeiro contato</strong></td><td>O personagem começa a reconhecer o princípio da Sequência e percebe como ele se manifesta em suas experiências.</td><td>Sintoniza um poder da Sequência atual, à sua escolha.</td></tr>
-      <tr><td>50%</td><td><strong>Compreensão</strong></td><td>O personagem já consegue aplicar o princípio em mais de um contexto e começa a reconhecer seus limites.</td><td>Recebe <strong>+2 pontos de Espiritualidade</strong>.</td></tr>
+      <tr><td>50%</td><td><strong>Compreensão</strong></td><td>O personagem já consegue aplicar o princípio em mais de um contexto e começa a reconhecer seus limites.</td><td>Aumenta permanentemente a <strong>Espiritualidade máxima em +2 pontos</strong>.</td></tr>
       <tr><td>75%</td><td><strong>Incorporação</strong></td><td>O princípio passa a influenciar naturalmente suas decisões, sem exigir imitação deliberada ou repetição mecânica.</td><td>Sintoniza um segundo poder da Sequência atual, diferente do primeiro.</td></tr>
-      <tr><td>100%</td><td><strong>Digestão completa</strong></td><td>A Característica da Sequência foi assimilada, permitindo que o personagem cumpra os demais requisitos para avançar.</td><td>Recupera <strong>1 ponto de Lucidez</strong>.</td></tr>
+      <tr><td>100%</td><td><strong>Digestão completa</strong></td><td>A Característica da Sequência foi assimilada, permitindo que o personagem cumpra os demais requisitos para avançar.</td><td>Recupera <strong>1 ponto de Lucidez</strong>, sem ultrapassar o máximo de 10.</td></tr>
     </tbody>
   </table>
 </div>
@@ -220,7 +221,9 @@
   Os marcos correspondem a percentuais do total de <strong>100 Pontos de Digestão</strong>
   exigidos para a poção atual. Cada marco concede a recompensa indicada na tabela, além
   de representar uma etapa da assimilação. Essas recompensas não concedem Pontos de
-  Digestão adicionais.
+  Digestão adicionais. O aumento de Espiritualidade concedido aos 50% é permanente e
+  cumulativo: cada nova poção que alcança esse marco acrescenta outros 2 pontos à
+  Espiritualidade máxima.
 </p>
 
 <h3 id="sintonia">Sintonia da Sequência</h3>
@@ -246,15 +249,15 @@
     Enquanto digere a poção da Sequência 7, o personagem não pode usar esses marcos para
     Sintonizar poderes das Sequências 9 ou 8. Ao atingir 25% de Digestão, escolhe um poder
     da Sequência 7. Ao atingir 75%, escolhe outro poder da Sequência 7, diferente do primeiro.
-    Ao atingir 50%, recebe +2 pontos de Espiritualidade; ao concluir 100% da Digestão,
-    recupera 1 ponto de Lucidez. Os poderes das Sequências anteriores são tratados durante
+    Ao atingir 50%, recebe +2 permanentes à Espiritualidade máxima; ao concluir 100% da Digestão,
+    recupera 1 ponto de Lucidez, respeitando o máximo de 10. Os poderes das Sequências anteriores são tratados durante
     a Digestão de suas respectivas poções.
   </p>
   <table>
     <thead><tr><th>Absorção da poção da Sequência 7</th><th>Recompensa</th><th>Poderes da Seq. 7 Sintonizados</th></tr></thead>
     <tbody>
       <tr><td>25%</td><td>Sintoniza 1 poder</td><td>1 de 4</td></tr>
-      <tr><td>50%</td><td>+2 pontos de Espiritualidade</td><td>1 de 4</td></tr>
+      <tr><td>50%</td><td>+2 permanentes à Espiritualidade máxima</td><td>1 de 4</td></tr>
       <tr><td>75%</td><td>Sintoniza um segundo poder</td><td>2 de 4</td></tr>
       <tr><td>100%</td><td>Recupera 1 ponto de Lucidez</td><td>2 de 4</td></tr>
     </tbody>
@@ -317,7 +320,7 @@
   sem exigir que o personagem reproduza literalmente os exemplos da tabela.
 </p>
 
-<h3 id="caminho-01">Caminho do Tolo</h3>
+<h3 id="caminho-01">Caminho do Louco</h3>
 <table>
   <thead><tr><th>Sequência</th><th>Nome</th><th>Princípio de atuação</th></tr></thead>
   <tbody>
@@ -569,7 +572,7 @@
   </tbody>
 </table>
 
-<h3 id="caminho-22">Caminho do Párago</h3>
+<h3 id="caminho-22">Caminho do Paragon</h3>
 <table>
   <thead><tr><th>Sequência</th><th>Nome</th><th>Princípio de atuação</th></tr></thead>
   <tbody>
@@ -634,7 +637,7 @@
   <ul>
     <li><strong>Sucesso:</strong> o personagem assimila a poção e avança para a nova Sequência. A digestão da nova poção começa em 0/100.</li>
     <li><strong>Falha:</strong> a poção é mal digerida. O personagem ainda avança, mas a nova Característica permanece parcialmente assimilada e ele perde <strong>3 pontos de Lucidez</strong>. A digestão continua exigindo os mesmos <strong>100 Pontos de Digestão</strong>.</li>
-    <li><strong>Falha Crítica:</strong> aplica as consequências de uma Falha — incluindo a perda de <strong>3 pontos de Lucidez</strong> — e provoca também uma crise relacionada à influência da Característica. O Mestre deve aplicar o procedimento de crise e perda de controle previsto no capítulo dedicado à Lucidez. A perda fixa de 3 pontos por má digestão é aplicada uma única vez por consumo.</li>
+    <li><strong>Falha Crítica:</strong> aplica as consequências de uma Falha — incluindo a perda de <strong>3 pontos de Lucidez</strong> — e provoca também uma crise relacionada à influência da Característica. O Mestre deve aplicar o procedimento de crise e perda de controle descrito na seção Lucidez, Âncoras e perda de controle do Capítulo 3. A perda fixa de 3 pontos por má digestão é aplicada uma única vez por consumo.</li>
   </ul>
   <p class="box-note">
     A Falha Crítica segue a regra geral do sistema: os dois dados selecionados mostram
@@ -795,12 +798,13 @@
 </div>
 
 <div class="box box-note">
-  <div class="box-title">Sugestão para o Mestre: período de Downtime</div>
+  <div class="box-title">Procedimento: Downtime antes da concessão de XP</div>
   <p>
-    Quando planejar conceder XP, considere oferecer aos personagens um período de
-    <em>Downtime</em> antes de aplicar os aprimoramentos. Convide os jogadores a explicar
-    o que seus personagens fizeram durante esse intervalo para desenvolver as características
-    que desejam melhorar.
+    Antes de conceder XP, o Mestre deve oferecer aos personagens um período de
+    <em>Downtime</em>. Durante esse intervalo, os jogadores explicam o que seus personagens
+    fizeram para desenvolver as características que desejam aprimorar. O XP é concedido
+    ao final do Downtime e, assim que recebido, deve ser registrado e imediatamente aplicado
+    conforme as regras deste capítulo.
   </p>
   <p>
     Um Atributo pode ser aprimorado por meio de treinamento, disciplina ou experiências
@@ -810,10 +814,10 @@
     pode explicar como praticou ambas durante o intervalo.
   </p>
   <p>
-    O objetivo é dar contexto narrativo à evolução, não transformar o Downtime em uma
-    exigência burocrática. O Mestre pode adaptar a duração e o nível de detalhamento à
-    campanha, permitindo que cada jogador apresente uma justificativa coerente para os
-    aprimoramentos escolhidos.
+    O Downtime deve dar contexto narrativo à evolução sem se transformar em uma exigência
+    burocrática. O Mestre define a duração adequada à campanha, e cada jogador apresenta
+    uma justificativa coerente para os aprimoramentos escolhidos. O procedimento é parte
+    da concessão de XP, não uma atividade opcional posterior ao recebimento dos pontos.
   </p>
 </div>
 
@@ -825,15 +829,15 @@
     <li>O Método de Atuação permite assimilar a Característica Beyonder ao compreender e expressar a essência da Sequência, sem imitar um estereótipo.</li>
     <li>O Foco de Atuação é uma intenção opcional declarada no início da sessão; não concede pontos por si só.</li>
     <li>Cada Sequência possui quatro poderes Beyonder. Durante a Digestão da poção de uma Sequência, o personagem Sintoniza um poder à escolha aos 25% e um segundo poder diferente aos 75%. A Sintonia concede um reforço leve ao poder escolhido; seus efeitos específicos serão definidos na criação dos poderes.</li>
-    <li>Cada Sequência exige 100 Pontos de Digestão. Os pontos são concedidos por atuação coerente, atuação decisiva, marcos narrativos e atividades de intervalo, sem recompensar duas vezes a mesma ação.</li>
-    <li>Os marcos de Digestão concedem recompensas: aos 25%, Sintoniza um poder; aos 50%, recebe +2 pontos de Espiritualidade; aos 75%, Sintoniza um segundo poder; aos 100%, recupera 1 ponto de Lucidez. A Sintonia afeta apenas poderes da Sequência cuja poção está sendo digerida. As tabelas apresentam Essência e Expressão para as Sequências 9 a 5.</li>
+    <li>Cada Sequência exige 100 Pontos de Digestão. A contagem é limitada a 100/100; pontos excedentes são perdidos e não passam para a próxima poção. Os pontos são concedidos por atuação coerente, atuação decisiva, marcos narrativos e atividades de intervalo, sem recompensar duas vezes a mesma ação.</li>
+    <li>Os marcos de Digestão concedem recompensas: aos 25%, Sintoniza um poder; aos 50%, recebe +2 permanentes à Espiritualidade máxima; aos 75%, Sintoniza um segundo poder; aos 100%, recupera 1 ponto de Lucidez, respeitando o máximo de 10. A Sintonia afeta apenas poderes da Sequência cuja poção está sendo digerida. As tabelas apresentam Essência e Expressão para as Sequências 9 a 5.</li>
     <li>O personagem precisa concluir a digestão, obter a fórmula e os ingredientes e cumprir os requisitos de avanço antes de consumir a próxima poção.</li>
-    <li>O Teste de Consumo usa 2d10 + Mod.(DET), com CD definida pela Sequência-alvo. Uma Falha ou Falha Crítica representa má digestão e causa perda de 3 pontos de Lucidez, mas não altera a exigência de 100 Pontos de Digestão. A Falha Crítica também aciona as regras de crise e perda de controle.</li>
+    <li>O Teste de Consumo usa 2d10 + Mod.(DET), com CD definida pela Sequência-alvo. Uma Falha ou Falha Crítica representa má digestão e causa perda de 3 pontos de Lucidez, mas não altera a exigência de 100 Pontos de Digestão. A Falha Crítica também aciona as regras de crise e perda de controle descritas no Capítulo 3.</li>
     <li>Fórmulas e ingredientes são raros; sua obtenção deve alimentar a investigação, as relações com facções e as aventuras da campanha.</li>
     <li>A progressão por XP utiliza duas reservas independentes: XP de Atributos, para aumentar um Atributo em +1, e XP de Proficiências, para aumentar duas Proficiências distintas do mesmo grupo em +1 cada.</li>
     <li>1 XP de Atributos aumenta um Atributo em +1 Ponto. 1 XP de Proficiências aumenta duas Proficiências distintas do mesmo grupo (Talentos, Perícias ou Conhecimentos) em +1 ponto cada. Ao receber XP, o jogador deve registrá-lo na ficha e aplicar imediatamente os aumentos correspondentes.</li>
     <li>A concessão de XP e a quantidade distribuída ficam a critério do Mestre, podendo ocorrer em marcos relevantes, como o fim de um arco narrativo, uma grande descoberta ou outro momento memorável da campanha.</li>
-    <li>O Mestre pode oferecer um período de Downtime para que os jogadores descrevam como seus personagens treinaram, estudaram ou praticaram as características que desejam aprimorar.</li>
+    <li>Antes de conceder XP, o Mestre oferece um período de Downtime para que os jogadores descrevam como seus personagens treinaram, estudaram ou praticaram as características que desejam aprimorar. Depois do Downtime, o XP é registrado e imediatamente aplicado.</li>
     <li>XP e Pontos de Digestão não podem ser convertidos nem substituem um ao outro.</li>
   </ul>
   <p><a href="#topo">Voltar ao início do capítulo ↑</a></p>
