@@ -54,7 +54,7 @@
     <li><a href="#atributos"><strong>Atributos:</strong> escalas, categorias, dimensões e modificadores.</a></li>
     <li><a href="#pericias"><strong>Proficiências:</strong> Talentos, Perícias e Conhecimentos, distribuição, aplicações e especializações.</a></li>
     <li><a href="#sistema-testes"><strong>Sistema de Testes:</strong> rolagens 2d10, Classes de Dificuldade, resultados críticos, Vantagem, Desvantagem e testes disputados.</a></li>
-    <li><a href="#estatisticas-derivadas"><strong>Estatísticas Derivadas:</strong> Pontos de Vida, Espiritualidade, Defesa, Lucidez, Blindagem e Limiares de Dano.</a></li>
+    <li><a href="#estatisticas-derivadas"><strong>Estatísticas Derivadas:</strong> Pontos de Vida, Espiritualidade, Esquiva, Lucidez, Blindagem e Limiares de Dano.</a></li>
     <li><a href="#resumo"><strong>Resumo Rápido de Referência:</strong> consulta concentrada das principais fórmulas e regras.</a></li>
   </ul>
 </div>
@@ -1216,26 +1216,27 @@
   a conclusão da Digestão de uma poção concede +1 ponto de Lucidez, respeitando o máximo de 10.
 </p>
 
-<h3 id="defesa">Defesa</h3>
+<h3 id="defesa">Esquiva</h3>
 <p>
-  A Defesa representa a dificuldade de atingir o personagem. Em um ataque, o
+  A Esquiva representa a dificuldade de atingir o personagem. Em um ataque, o
   atacante realiza o teste indicado pela ação; o ataque acerta quando o resultado
-  final iguala ou supera a Defesa do alvo. A Defesa padrão considera a Destreza e
-  não recebe automaticamente um bônus por uso de armadura.
+  final iguala ou supera a Esquiva do alvo. A fórmula padrão considera Destreza e
+  Raciocínio e não recebe automaticamente um bônus por uso de armadura.
 </p>
 <div class="box box-rule">
-  <div class="box-title">Cálculo padrão da Defesa</div>
-  <p style="text-align:center; font-size:1.15em;"><strong>Defesa = 10 + Mod.(DES)</strong></p>
+  <div class="box-title">Cálculo padrão da Esquiva</div>
+  <p style="text-align:center; font-size:1.15em;"><strong>Esquiva = 10 + Mod.(DES) + Mod.(RAC)</strong></p>
   <p>
-    O modificador é calculado por <strong>Mod.(DES) = Pontos.(DES) − 2</strong>.
-    Se mais de uma fonte oferecer uma fórmula de Defesa — como a regra padrão,
-    um equipamento ou uma habilidade Beyonder —, o jogador escolhe qual fórmula
-    utilizar. <strong>As fórmulas não se somam</strong>. Bônus que não substituam
-    a fórmula só são aplicados quando a regra que os concede permitir isso.
+    Os modificadores são calculados por <strong>Mod.(DES) = Pontos.(DES) − 2</strong> e
+    <strong>Mod.(RAC) = Pontos.(RAC) − 2</strong>. Se mais de uma fonte oferecer uma
+    fórmula de Esquiva — como a regra padrão, um equipamento ou uma habilidade
+    Beyonder —, o jogador escolhe qual fórmula utilizar. <strong>As fórmulas não se
+    somam</strong>. Bônus que não substituam a fórmula só são aplicados quando a regra
+    que os concede permitir isso.
   </p>
   <p>
-    <strong>Exemplo:</strong> com Pontos.(DES) = 3, o personagem possui Mod.(DES) +1
-    e Defesa 11 pela fórmula padrão.
+    <strong>Exemplo:</strong> com Pontos.(DES) = 3 e Pontos.(RAC) = 3, o personagem
+    possui Mod.(DES) +1 e Mod.(RAC) +1, resultando em Esquiva 12 pela fórmula padrão.
   </p>
 </div>
 
@@ -1252,7 +1253,7 @@
   de Blindagem concedida e os valores ou a regra de alteração dos Limiares de Dano.
   Não existe cálculo inicial de Blindagem: o personagem só recebe esse recurso
   quando uma fonte o concede expressamente. O uso de armadura também não altera
-  automaticamente a Defesa.
+  automaticamente a Esquiva.
 </p>
 <div class="box box-note">
   <div class="box-title">Registro da Blindagem na ficha</div>
@@ -1388,7 +1389,7 @@
   <div class="stat-line"><span class="stat-label">Espiritualidade máxima:</span><span>Valor-base do Caminho/Sequência + Bônus de Digestão de Poção (+2 permanente a cada 50% de uma poção) + outros bônus</span></div>
   <div class="stat-line"><span class="stat-label">Teste de Lucidez:</span><span>2d10 + bônus total das Âncoras ativas + modificador de circunstância; uso excedente de Espiritualidade: CD 8 + excedente acumulado</span></div>
   <div class="stat-line"><span class="stat-label">Recuperação da Espiritualidade:</span><span>8 horas: recuperação total, 1 vez a cada 24 horas; 1 hora: 1d10 + (10 − Sequência), até 2 vezes por dia</span></div>
-  <div class="stat-line"><span class="stat-label">Defesa:</span><span>10 + Mod.(DES); fórmulas alternativas são escolhidas, não somadas</span></div>
+  <div class="stat-line"><span class="stat-label">Esquiva:</span><span>10 + Mod.(DES) + Mod.(RAC); fórmulas alternativas são escolhidas, não somadas</span></div>
   <div class="stat-line"><span class="stat-label">Lucidez:</span><span>inicial 7, máximo 10, mínimo 0; cada Âncora ativa concede +1 em testes de Lucidez</span></div>
   <div class="stat-line"><span class="stat-label">Limiar Menor → Maior:</span><span>2 + (10 − Sequência), sem armadura</span></div>
   <div class="stat-line"><span class="stat-label">Limiar Maior → Severo:</span><span>4 + 2 × (10 − Sequência), sem armadura</span></div>
