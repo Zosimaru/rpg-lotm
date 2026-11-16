@@ -640,7 +640,7 @@
 }
 .dh-defense-compact .stat-label-box { min-width: auto; }
 
-/* --- Vida, limiares de dano e armadura (adaptação Daggerheart) --- */
+/* --- Vida, limiares de dano e vestimenta (adaptação Daggerheart) --- */
 .dh-track-row {
   display: flex;
   align-items: center;
@@ -764,7 +764,7 @@
   display: inline-block;
 }
 .dh-slot.armor-slot { border-radius: 2pt; }
-/* Caixa ampliada para registrar o total de Vida/Armadura */
+/* Caixa ampliada para registrar o total de Vida/Vestimenta */
 .dh-slot.dh-total-slot {
   width: 29pt;
   height: 19pt;
@@ -2398,6 +2398,180 @@
   background: #fff;
 }
 
+
+/* Campo para registrar as propriedades da Vestimenta. */
+.armor-properties-field {
+  display: flex;
+  flex-direction: column;
+  gap: 1pt;
+  margin-bottom: 3pt;
+}
+.armor-properties-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 1pt;
+}
+.armor-properties-line {
+  display: block;
+  width: 100%;
+  height: 9pt;
+  border-bottom: 1px dotted #aaa;
+}
+
+
+/* ============================================================
+   PÁGINA 2 — AMPLIAÇÃO GERAL DAS ÁREAS DE ESCRITA
+   ============================================================ */
+#page2 > .sheet-title {
+  margin-bottom: 10pt !important;
+}
+
+/* Método de Atuação: mais espaço no princípio e melhor área de marcação. */
+#page2 > .sheet-title + .s-box {
+  padding: 7pt 8pt 8pt;
+  margin-bottom: 7pt;
+}
+#page2 > .sheet-title + .s-box .field {
+  margin-bottom: 8pt;
+}
+#page2 > .sheet-title + .s-box .field-line {
+  min-height: 21pt;
+}
+#page2 .digest-bar {
+  gap: 2pt;
+}
+#page2 .digest-cell {
+  width: 10pt;
+  height: 14pt;
+}
+
+/* Lucidez e XP: mais respiro sem alterar a quantidade de marcas. */
+#page2 .progression-track-grid {
+  gap: 7pt;
+  margin-bottom: 8pt;
+}
+#page2 .progression-track-grid > .s-box {
+  padding: 6pt 7pt 7pt;
+  min-height: 55pt;
+}
+#page2 .progression-track-grid .s-box-title {
+  margin-bottom: 5pt;
+}
+#page2 .progression-track-grid .lucidez-track {
+  min-height: 19pt;
+  gap: 3pt;
+}
+#page2 .progression-track-grid .lucidez-cell {
+  width: 13pt;
+  height: 13pt;
+  flex-basis: 13pt;
+}
+
+/* Armas: linhas de preenchimento mais altas. */
+#page2 .weapons-wide-box {
+  padding: 7pt 8pt 8pt;
+  margin-bottom: 8pt;
+}
+#page2 .weapons-wide-box .s-box-title {
+  margin-bottom: 7pt;
+}
+#page2 .weapon-table-head {
+  min-height: 21pt;
+  padding: 3pt 5pt 5pt;
+}
+#page2 .weapon-entry {
+  min-height: 43pt;
+  padding: 3pt 5pt 0;
+}
+#page2 .weapon-entry-cell {
+  min-height: 39pt;
+}
+
+/* Vestimenta, propriedades e itens gerais. */
+#page2 .equipment-details {
+  gap: 7pt;
+  margin-bottom: 8pt;
+  align-items: stretch;
+}
+#page2 .equipment-details > .s-box {
+  padding: 7pt 8pt 8pt;
+  margin-bottom: 0;
+}
+#page2 .equipment-details > .s-box .s-box-title {
+  margin-bottom: 7pt;
+}
+#page2 .armor-equipment-field {
+  gap: 3pt;
+  margin-bottom: 5pt;
+}
+#page2 .armor-equipment-field .armor-field-line {
+  min-height: 19pt;
+}
+#page2 .armor-properties-field {
+  gap: 2pt;
+  margin-bottom: 6pt;
+}
+#page2 .armor-properties-lines {
+  gap: 2pt;
+}
+#page2 .armor-properties-line {
+  height: 15pt;
+}
+#page2 .armor-threshold-field {
+  margin-bottom: 5pt;
+}
+#page2 .armor-threshold-line {
+  min-height: 19pt;
+}
+#page2 .armor-threshold-captions {
+  margin-top: 2pt;
+}
+#page2 .armor-values-grid {
+  margin-top: 4pt;
+}
+#page2 .armor-value-line {
+  min-height: 19pt;
+}
+#page2 .item-lines {
+  gap: 0 9pt;
+}
+#page2 .item-line {
+  min-height: 19pt;
+  padding: 2pt 0;
+}
+#page2 .equipment-details > .s-box .field {
+  margin-top: 7pt !important;
+}
+#page2 .equipment-details > .s-box .field-line {
+  min-height: 18pt;
+}
+
+/* Artefatos Selados: campos de Nome, Poder e Efeito Colateral maiores. */
+#page2 > .s-box:has(.artifact-block) {
+  padding: 7pt 8pt 8pt;
+  margin-bottom: 0;
+}
+#page2 > .s-box:has(.artifact-block) > .s-box-title {
+  margin-bottom: 7pt;
+}
+#page2 .artifact-block {
+  min-height: 108pt;
+  padding: 6pt 7pt 7pt;
+  margin-bottom: 0;
+}
+#page2 .artifact-header {
+  font-size: 7pt;
+  padding-bottom: 3pt;
+  margin-bottom: 5pt;
+}
+#page2 .artifact-block .field {
+  margin-bottom: 5pt;
+  align-items: end;
+}
+#page2 .artifact-block .field-line {
+  min-height: 16pt;
+}
+
 </style>
 </head>
 <body>
@@ -2408,11 +2582,11 @@
   Configure para A4, margens mínimas, e ative &quot;Gráficos de fundo&quot; para melhor resultado.
   A ficha ocupa 2 páginas (frente e verso).
   <strong>Fórmulas da ficha</strong>: modificador de atributo/perícia é <strong>Valor − 2</strong>;
-  PV = 3 + Pontos. (VIG) + (10 - Seq.) (+1 na Seq. 9; +2 na Seq. 8; ...);
-  Espiritualidade = Caminho + Mod. (DET) + Mod. (ACO); Lucidez inicial = 7;
-  Defesa = 10 + Mod. (DES) ou Cálculo do Equipamento;
-  Limiar Maior/Severo = Limiar-base da armadura + (10 - Seq.);
-  sem armadura: Menor &gt; Maior = 2 + (10 - Seq.); Maior &gt; Severo = 4 + (10 - Seq.);
+  PV = 3 + Mod. (VIG) + (10 - Seq.);
+  Espiritualidade Máxima = Espiritualidade Inicial + Bônus de Digestão de Poção (+2 a cada 50%) + Outros Bônus; Lucidez inicial = 7;
+  Esquiva Base = 10 + Mod. (DES) + Mod. (RAC);
+  Limiares com armadura = utilizar os valores ou a regra indicados na descrição da armadura;
+  sem vestimenta: Menor &gt; Maior = 2 + (10 - Seq.); Maior &gt; Severo = 4 + 2 × (10 - Seq.);
   Movimento = 9 m.
 </div>
 
@@ -2723,14 +2897,14 @@
         <span class="dh-track-slots" aria-label="19 espaços de vida"><span class="dh-slot dh-total-slot" title="Total de Vida"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span></span></span>
       </div>
       <div class="dh-armor-defense-row">
-        <div class="dh-track-row" aria-label="Espaços de Armadura">
+        <div class="dh-track-row" aria-label="Espaços de Vestimenta">
           <span class="dh-track-label">Blindagem</span>
-          <span class="dh-track-slots"><span class="dh-slot dh-total-slot" title="Total de Armadura"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span></span>
+          <span class="dh-track-slots"><span class="dh-slot dh-total-slot" title="Total de Vestimenta"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span><span class="dh-slot"></span></span>
         </div>
         <div class="stat-row dh-defense-compact">
-          <span class="stat-label-box">Defesa</span>
+          <span class="stat-label-box">Esquiva</span>
           <span class="stat-boxes defense-entry">
-            <svg class="shield-symbol" viewBox="0 0 100 112" role="img" aria-label="Campo para preencher Defesa" xmlns="http://www.w3.org/2000/svg">
+            <svg class="shield-symbol" viewBox="0 0 100 112" role="img" aria-label="Campo para preencher Esquiva" xmlns="http://www.w3.org/2000/svg">
               <path d="M50 4 94 20v31c0 26-17 44-44 57C23 95 6 77 6 51V20L50 4Z" fill="white" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/>
             </svg>
           </span>
@@ -2770,8 +2944,8 @@
       <div class="stat-row spirituality-row">
         <span class="spirituality-label">Espiritualidade</span>
         <span class="spirituality-total-group">
-          <span class="spirituality-sub-label">Total</span>
-          <span class="spirituality-total-box" aria-label="Valor total de Espiritualidade"></span>
+          <span class="spirituality-sub-label">Máxima</span>
+          <span class="spirituality-total-box" aria-label="Valor máximo de Espiritualidade"></span>
         </span>
         <span class="spirituality-current">
           <span class="spirituality-sub-label">Atual:</span>
@@ -2815,12 +2989,12 @@
         <div class="s-box-title" style="font-size:7pt;">Fórmulas Rápidas <span style="font-weight:400;color:#666;">(Cap. 3 — todos os Caminhos)</span></div>
         <div style="font-size:6.5pt; color:#555; line-height:1.55;">
           <strong>Mod. atributo/perícia</strong> = Pontos − 2<br>
-          <strong>PV</strong> = 3 + Pontos. (VIG) + (10 - Seq.) (+1 na Seq. 9; +2 na Seq. 8; ...)<br>
-          <strong>Espiritualidade</strong> = Caminho + Digestão de poção<br>
+          <strong>PV</strong> = 3 + Mod. (VIG) + (10 - Seq.)<br>
+          <strong>Espiritualidade Máxima</strong> = Espiritualidade Inicial + Bônus de Digestão (+2 a cada 50%) + Outros Bônus<br>
           <strong>Lucidez inicial</strong> = 7<br>
-          <strong>Defesa</strong> = 10 + Mod. (DES) ou Cálculo do Equipamento<br>
-          <strong>Limiar Maior/Severo</strong> = Limiar-base da armadura + (10 - Seq.)<br>
-          <strong>Sem armadura</strong> = Menor &gt; Maior: 2 + (10 - Seq.); Maior &gt; Severo: 4 + (10 - Seq.)<br>
+          <strong>Esquiva Base</strong> = 10 + Mod. (DES) + Mod. (RAC)<br>
+          <strong>Limiares com armadura</strong> = utilizar os valores ou a regra indicados na descrição da armadura<br>
+          <strong>Sem vestimenta</strong> = Menor &gt; Maior: 2 + (10 - Seq.); Maior &gt; Severo: 4 + 2 × (10 - Seq.)<br>
           <strong>Movimento</strong> = 9 m
         </div>
       </div>
@@ -2914,10 +3088,17 @@
   <!-- Armor data and general items -->
   <div class="grid-2 equipment-details">
     <div class="s-box armor-details-box">
-      <div class="s-box-title">Armadura e Blindagem</div>
+      <div class="s-box-title">Vestimenta e Blindagem</div>
       <div class="armor-equipment-field">
-        <span class="armor-field-title">Armadura</span>
+        <span class="armor-field-title">Vestimenta</span>
         <span class="armor-field-line"></span>
+      </div>
+      <div class="armor-properties-field">
+        <span class="armor-field-title">Propriedades</span>
+        <div class="armor-properties-lines">
+          <span class="armor-properties-line"></span>
+          <span class="armor-properties-line"></span>
+        </div>
       </div>
       <div class="armor-threshold-field">
         <span class="armor-field-title">Limiar-base</span>
