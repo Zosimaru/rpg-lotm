@@ -569,21 +569,22 @@
   <div class="box-title">Exemplo de aplicação em diferentes testes</div>
   <p>
     Um personagem com a especialização <strong>Cirurgia de Campo</strong> recebe
-    +1 ao realizar um procedimento, avaliar um ferimento ou identificar a causa provável
+    +2 ao realizar um procedimento, avaliar um ferimento ou identificar a causa provável
     de uma lesão. Também pode receber esse bônus em um teste de Intimidação quando
     descreve com precisão as consequências anatômicas de um ferimento para pressionar
     alguém. Nesse caso, o teste continua usando o Atributo e a Proficiência adequados
-    à abordagem; a Especialização concede +1 porque sua técnica participa diretamente
+    à abordagem; a Especialização concede +2 porque sua técnica participa diretamente
     da ação. Ela não se aplicaria, por exemplo, em uma negociação sem qualquer relação
-    com anatomia ou tratamento de ferimentos.
+    com anatomia ou tratamento de ferimentos. Mesmo que outra especialização também
+    contribuísse para a mesma ação, o bônus total permaneceria +2.
   </p>
 </div>
 <ul>
   <li><strong>Outros exemplos:</strong> Investigação Forense, Toxicologia, Documentoscopia, Cartografia Costeira, Navegação Astronômica, História da Nobreza e Rituais de Proteção.</li>
-  <li>Quando a especialização contribuir de maneira clara e direta para a ação, ela concede <strong>+1 ao resultado do teste</strong>, independentemente da Proficiência utilizada.</li>
+  <li>Quando uma ou mais especializações contribuírem de maneira clara e direta para a ação, o personagem recebe um bônus único de <strong>+2 ao resultado do teste</strong>, independentemente da Proficiência utilizada.</li>
   <li>O jogador deve demonstrar como o campo específico da especialização participa da ação. Uma relação apenas temática ou vagamente relacionada não é suficiente.</li>
   <li>O Mestre tem a decisão final sobre a pertinência da aplicação. A especialização não altera a natureza fundamental da ação nem substitui requisitos necessários para realizá-la.</li>
-  <li>Bônus de especializações diferentes podem se acumular quando cada uma contribuir de forma direta e comprovável para a mesma ação; cada especialização pertinente acrescenta +1 ao resultado.</li>
+  <li>Os bônus de especializações diferentes não se acumulam. Mesmo que várias sejam pertinentes à mesma ação, o bônus total permanece +2.</li>
   <li>Uma especialização não substitui a Proficiência ou o Atributo exigido, não garante sucesso e não permite realizar uma atividade que o personagem não teria condições de executar normalmente.</li>
 </ul>
 
@@ -609,9 +610,9 @@
   <p>
     O bônus total reúne <strong>Mod.(Atributo)</strong>,
     <strong>Mod.(Proficiência)</strong> e outros modificadores concedidos por regras,
-    equipamentos ou habilidades. Cada Especialização diretamente pertinente acrescenta
-    <strong>+1</strong>; bônus de Especializações diferentes podem se acumular quando todas
-    contribuírem para a mesma ação.
+    equipamentos ou habilidades. Uma ou mais Especializações diretamente pertinentes
+    concedem um bônus único de <strong>+2</strong>; bônus de Especializações diferentes
+    não se acumulam.
   </p>
   <p style="text-align:center; font-size:1.1em;">
     <strong>Dois dados selecionados + Mod.(Atributo) + Mod.(Proficiência) + bônus aplicáveis ≥ CD</strong>
@@ -690,7 +691,7 @@
   O Sucesso Crítico ocorre quando os dois dados selecionados mostram valores iguais e o
   resultado final é suficiente para vencer o teste. Além do sucesso normal, o personagem
   obtém um benefício adicional significativo, proporcional à ação e às circunstâncias.
-  O benefício pode ser dano adicional, uma abertura na defesa, uma descoberta extra ou uma
+  O benefício pode ser dano adicional, uma abertura para um ataque, uma descoberta extra ou uma
   oportunidade social relevante, conforme o pilar envolvido.
 </p>
 <div class="box box-example">
@@ -726,7 +727,7 @@
 <table>
   <thead><tr><th>Pilar</th><th>Sucesso Crítico</th><th>Falha Crítica</th></tr></thead>
   <tbody>
-    <tr><td><strong>Combate</strong></td><td>Dano adicional, abertura na defesa ou condição especial, se compatível com a ação.</td><td>Perda de equilíbrio, exposição ou abertura na defesa.</td></tr>
+    <tr><td><strong>Combate</strong></td><td>Dano adicional, abertura para um ataque ou condição especial, se compatível com a ação.</td><td>Perda de equilíbrio, exposição ou abertura para um ataque.</td></tr>
     <tr><td><strong>Exploração</strong></td><td>Descoberta adicional, informação relevante ou economia de recursos.</td><td>Acidente, perda de recursos ou exposição a perigo.</td></tr>
     <tr><td><strong>Interação</strong></td><td>Concessão adicional, informação importante ou oportunidade social.</td><td>Revelação indesejada, comprometimento da posição ou desconfiança.</td></tr>
   </tbody>
@@ -958,10 +959,10 @@
       <tr><td>Caminho do Tirano</td><td>7</td></tr>
       <tr><td>Caminho da Torre Branca</td><td>10</td></tr>
       <tr><td>Caminho do Enforcado</td><td>11</td></tr>
-      <tr><td>Caminho das Trevas</td><td>11</td></tr>
+      <tr><td>Caminho da Escuridão</td><td>11</td></tr>
       <tr><td>Caminho da Morte</td><td>10</td></tr>
       <tr><td>Caminho do Gigante do Crepúsculo</td><td>6</td></tr>
-      <tr><td>Caminho da Demonesa</td><td>8</td></tr>
+      <tr><td>Caminho da Demônia</td><td>8</td></tr>
       <tr><td>Caminho do Sacerdote Vermelho</td><td>6</td></tr>
       <tr><td>Caminho da Roda da Fortuna</td><td>11</td></tr>
       <tr><td>Caminho da Lua</td><td>9</td></tr>
@@ -1050,12 +1051,13 @@
 
 <h4>Recuperação da Espiritualidade</h4>
 <p>
-  A Espiritualidade pode ser recuperada por meio de descanso. Existem duas formas
-  de recuperação, cada uma com seu próprio limite de utilização:
+  A Espiritualidade pode ser recuperada por meio de Descanso Completo e Descanso Breve.
+  O Descanso Completo pode ser realizado uma vez a cada intervalo de 24 horas e também
+  renova as duas utilizações de Descanso Breve disponíveis para o personagem:
 </p>
 <ul>
-  <li><strong>Descanso completo:</strong> após 8 horas de descanso, o personagem recupera toda a Espiritualidade, até seu valor máximo. Essa recuperação pode ser realizada <strong>uma vez a cada período de 24 horas</strong>.</li>
-  <li><strong>Descanso breve:</strong> após 1 hora de descanso, o personagem recupera <strong>1d10 + (10 − Sequência)</strong> pontos de Espiritualidade, sem ultrapassar seu valor máximo. Essa recuperação pode ser realizada <strong>até duas vezes por dia</strong>.</li>
+  <li><strong>Descanso Completo:</strong> após 8 horas de descanso, o personagem recupera toda a Espiritualidade, até seu valor máximo. Pode ser realizado <strong>uma vez a cada intervalo de 24 horas</strong>. Cada Descanso Completo renova o direito a duas utilizações de Descanso Breve.</li>
+  <li><strong>Descanso Breve:</strong> após 1 hora de descanso, o personagem recupera <strong>1d10 + (10 − Sequência)</strong> pontos de Espiritualidade, sem ultrapassar seu valor máximo. O personagem pode realizar <strong>duas utilizações de Descanso Breve entre um Descanso Completo e o próximo</strong>. As utilizações não se acumulam: ao realizar um novo Descanso Completo, a quantidade disponível é renovada para duas.</li>
 </ul>
 <p>
   Os pontos recuperados não podem elevar a reserva acima da Espiritualidade máxima
@@ -1099,7 +1101,9 @@
     todas as Âncoras ativas do personagem e o modificador de circunstância indicado pelo
     Mestre. Compare o resultado à CD definida pelo efeito ou pela situação. Na ausência de
     uma CD específica, utilize a tabela geral de Classes de Dificuldade deste capítulo.
-    Nenhum Atributo ou Proficiência é somado ao teste.
+    Nenhum Atributo ou Proficiência é somado ao teste. O bônus geral de +2 das
+    Especializações também não se aplica: a primeira Especialização contribui apenas
+    por meio da Âncora de Reconhecimento (+1), enquanto estiver ativa.
   </p>
 </div>
 
@@ -1114,8 +1118,8 @@
   <tbody>
     <tr>
       <td><strong>Relacionamentos</strong></td>
-      <td>Relações fortes o bastante para estabilizar o personagem. Na criação, os três relacionamentos significativos escolhidos representam Âncoras. Durante a campanha, outros vínculos podem se tornar Âncoras quando o Mestre e o jogador concordarem que a relação alcançou essa importância.</td>
-      <td>+1 por relacionamento-Âncora</td>
+      <td>Na criação, o jogador define três NPCs de relacionamento: um é escolhido como Âncora de Relacionamento e concede +1; os outros dois são Conexões e não concedem bônus inicialmente. Durante a campanha, uma Conexão ou outro vínculo pode se tornar Âncora quando o Mestre e o jogador concordarem que a relação alcançou essa importância.</td>
+      <td>+1 pela Âncora de Relacionamento ativa</td>
     </tr>
     <tr>
       <td><strong>Identidade</strong></td>
@@ -1135,11 +1139,12 @@
   </tbody>
 </table>
 <p>
-  Na criação, os três relacionamentos fornecem +3, o Conceito fornece +1 e a primeira
-  Especialização fornece +1: o personagem começa, portanto, com <strong>cinco bônus de
-  Âncora</strong>. Âncoras adicionais podem ser conquistadas durante a campanha, conforme
-  os vínculos se desenvolvam. Uma relação casual, uma especialização posterior ou uma
-  referência sem significado pessoal não concede bônus automaticamente.
+  Na criação, a Âncora de Relacionamento fornece +1, o Conceito estabelece a Âncora de
+  Identidade (+1) e a primeira Especialização estabelece a Âncora de Reconhecimento (+1).
+  O personagem começa, portanto, com <strong>três bônus de Âncora</strong>. As duas Conexões
+  iniciais não concedem bônus, mas podem se tornar Âncoras durante a campanha quando
+  adquirirem importância suficiente. Uma relação casual ou uma referência sem significado
+  pessoal não concede bônus automaticamente.
 </p>
 
 <h4>Bônus de circunstância</h4>
@@ -1228,27 +1233,24 @@
   a conclusão da Digestão de uma poção concede +1 ponto de Lucidez, respeitando o máximo de 10.
 </p>
 
-<h3 id="defesa">Esquiva</h3>
+<h3 id="esquiva">Esquiva</h3>
 <p>
   A Esquiva representa a dificuldade de atingir o personagem. Em um ataque, o
   atacante realiza o teste indicado pela ação; o ataque acerta quando o resultado
-  final iguala ou supera a Esquiva do alvo. A fórmula padrão considera Destreza e
-  Raciocínio e não recebe automaticamente um bônus por uso de armadura.
+  final iguala ou supera a Esquiva do alvo. A Esquiva Base utiliza os modificadores
+  de Destreza e Raciocínio.
 </p>
 <div class="box box-rule">
-  <div class="box-title">Cálculo padrão da Esquiva</div>
-  <p style="text-align:center; font-size:1.15em;"><strong>Esquiva = 10 + Mod.(DES) + Mod.(RAC)</strong></p>
+  <div class="box-title">Cálculo da Esquiva Base</div>
+  <p style="text-align:center; font-size:1.15em;"><strong>Esquiva Base = 10 + Mod.(DES) + Mod.(RAC)</strong></p>
   <p>
     Os modificadores são calculados por <strong>Mod.(DES) = Pontos.(DES) − 2</strong> e
-    <strong>Mod.(RAC) = Pontos.(RAC) − 2</strong>. Se mais de uma fonte oferecer uma
-    fórmula de Esquiva — como a regra padrão, um equipamento ou uma habilidade
-    Beyonder —, o jogador escolhe qual fórmula utilizar. <strong>As fórmulas não se
-    somam</strong>. Bônus que não substituam a fórmula só são aplicados quando a regra
-    que os concede permitir isso.
+    <strong>Mod.(RAC) = Pontos.(RAC) − 2</strong>. Some os dois modificadores ao valor
+    base de 10 para determinar a Esquiva Base do personagem.
   </p>
   <p>
     <strong>Exemplo:</strong> com Pontos.(DES) = 3 e Pontos.(RAC) = 3, o personagem
-    possui Mod.(DES) +1 e Mod.(RAC) +1, resultando em Esquiva 12 pela fórmula padrão.
+    possui Mod.(DES) +1 e Mod.(RAC) +1, resultando em Esquiva Base 12.
   </p>
 </div>
 
@@ -1264,8 +1266,7 @@
   A descrição de cada armadura deve informar separadamente a quantidade de pontos
   de Blindagem concedida e os valores ou a regra de alteração dos Limiares de Dano.
   Não existe cálculo inicial de Blindagem: o personagem só recebe esse recurso
-  quando uma fonte o concede expressamente. O uso de armadura também não altera
-  automaticamente a Esquiva.
+  quando uma fonte o concede expressamente.
 </p>
 <div class="box box-note">
   <div class="box-title">Registro da Blindagem na ficha</div>
@@ -1391,7 +1392,7 @@
   <div class="stat-line"><span class="stat-label">Modificador de Atributo:</span><span>Mod.(ATR) = Pontos.(ATR) − 2</span></div>
   <div class="stat-line"><span class="stat-label">Modificador de Proficiência:</span><span>Mod.(Proficiência) = Pontos da Proficiência − 2</span></div>
   <div class="stat-line"><span class="stat-label">Teste:</span><span>soma dos dois dados selecionados + Mod.(Atributo) + Mod.(Proficiência) + bônus aplicáveis ≥ CD</span></div>
-  <div class="stat-line"><span class="stat-label">Especialização:</span><span>cada especialização pertinente concede +1 ao teste; especializações distintas podem somar seus bônus</span></div>
+  <div class="stat-line"><span class="stat-label">Especialização:</span><span>uma ou mais especializações pertinentes concedem +2 ao teste; os bônus não se acumulam</span></div>
   <div class="stat-line"><span class="stat-label">Vantagem:</span><span>após cancelar fontes opostas, role 3d10 e selecione/some os dois maiores; fontes excedentes não se acumulam</span></div>
   <div class="stat-line"><span class="stat-label">Desvantagem:</span><span>após cancelar fontes opostas, role 3d10 e selecione/some os dois menores; fontes excedentes não se acumulam</span></div>
   <div class="stat-line"><span class="stat-label">Sem Vantagem ou Desvantagem:</span><span>fontes equilibradas ou ausentes: role 2d10 normalmente</span></div>
@@ -1400,8 +1401,8 @@
   <div class="stat-line"><span class="stat-label">PV:</span><span>3 + Mod.(VIG) + (10 − Sequência)</span></div>
   <div class="stat-line"><span class="stat-label">Espiritualidade máxima:</span><span>Espiritualidade inicial + Bônus de Digestão de Poção (+2 permanente a cada 50% de uma poção) + outros bônus</span></div>
   <div class="stat-line"><span class="stat-label">Teste de Lucidez:</span><span>2d10 + bônus total das Âncoras ativas + modificador de circunstância; uso excedente de Espiritualidade: CD 8 + excedente acumulado</span></div>
-  <div class="stat-line"><span class="stat-label">Recuperação da Espiritualidade:</span><span>8 horas: recuperação total, 1 vez a cada 24 horas; 1 hora: 1d10 + (10 − Sequência), até 2 vezes por dia</span></div>
-  <div class="stat-line"><span class="stat-label">Esquiva:</span><span>10 + Mod.(DES) + Mod.(RAC); fórmulas alternativas são escolhidas, não somadas</span></div>
+  <div class="stat-line"><span class="stat-label">Recuperação da Espiritualidade:</span><span>Descanso Completo: recuperação total, 1 vez a cada intervalo de 24 horas; cada Descanso Completo renova duas utilizações de Descanso Breve, de 1 hora cada</span></div>
+  <div class="stat-line"><span class="stat-label">Esquiva Base:</span><span>10 + Mod.(DES) + Mod.(RAC)</span></div>
   <div class="stat-line"><span class="stat-label">Lucidez:</span><span>inicial 7, máximo 10, mínimo 0; cada Âncora ativa concede +1 em testes de Lucidez</span></div>
   <div class="stat-line"><span class="stat-label">Limiar Menor → Maior:</span><span>2 + (10 − Sequência), sem armadura</span></div>
   <div class="stat-line"><span class="stat-label">Limiar Maior → Severo:</span><span>4 + 2 × (10 − Sequência), sem armadura</span></div>
