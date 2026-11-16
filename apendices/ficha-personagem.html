@@ -2745,6 +2745,142 @@
   padding-top: 0;
 }
 
+
+/* Escala incorporada às bolinhas: valores legíveis no interior dos círculos. */
+#page1 .attr-values-heading,
+#page1 .skill-values-heading {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  gap: 5pt;
+  width: 100%;
+  height: 7pt;
+  min-height: 7pt;
+  box-sizing: border-box;
+  padding: 0 4pt 2pt;
+}
+#page1 .dot-scale-wrap {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 0;
+  margin: 0 1pt;
+  overflow: visible;
+}
+#page1 .dot-minus-two {
+  position: absolute;
+  right: calc(100% + 1.5pt);
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 5pt;
+  line-height: 1;
+  font-weight: 500;
+  white-space: nowrap;
+}
+#page1 .dot-value {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #999;
+  font-size: 5pt;
+  line-height: 1;
+  font-weight: 500;
+  white-space: nowrap;
+}
+#page1 .dot,
+#page1 .skill-dot {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+
+
+/* Valores escritos diretamente dentro dos círculos. */
+#page1 .dot-scale-wrap {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 0;
+  margin: 0 1pt;
+  overflow: visible;
+}
+#page1 .dot-minus-two {
+  position: absolute;
+  left: -6pt;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 5pt;
+  line-height: 1;
+  font-weight: 500;
+  white-space: nowrap;
+}
+#page1 .dot,
+#page1 .skill-dot {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 5pt;
+  line-height: 1;
+  font-weight: 500;
+  color: #999;
+  white-space: nowrap;
+}
+
+
+/* Cabeçalhos sem escala: os números ficam exclusivamente dentro das bolinhas. */
+#page1 .attr-values-heading,
+#page1 .skill-values-heading {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  gap: 5pt;
+  height: 7pt;
+  min-height: 7pt;
+  padding: 0 4pt 2pt;
+  box-sizing: border-box;
+}
+#page1 .dot-scale-wrap {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 0;
+  margin: 0 1pt;
+  overflow: visible;
+}
+#page1 .dot-minus-two {
+  position: absolute;
+  left: -6pt;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 5pt;
+  line-height: 1;
+  font-weight: 500;
+  white-space: nowrap;
+}
+#page1 .dot,
+#page1 .skill-dot {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 5pt;
+  line-height: 1;
+  font-weight: 500;
+  color: #999;
+  white-space: nowrap;
+}
+
 </style>
 </head>
 <body>
@@ -2809,25 +2945,22 @@
       <!-- Physical -->
       <div>
         <div class="attr-category">Físicos</div>
-        <div class="attr-values-heading"><span class="scale-heading-spacer"></span>
-          <span class="dot-scale-heading" aria-hidden="true">
-            <span>-2</span><span>-1</span><span>0</span><span>+1</span><span>+2</span><span>+3</span>
-          </span><span class="bonus-label">Bônus</span><span class="total-label">Mod Total</span></div>
+        <div class="attr-values-heading"><span class="bonus-label">Bônus</span><span class="total-label">Mod Total</span></div>
         <div class="attr-row">
           <span class="attr-name">Força <span style="font-size:6pt;color:#888;">FOR</span></span>
-          <span class="dot-scale-wrap"><span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="attr-dots"><span class="dot">-1</span><span class="dot">0</span><span class="dot">+1</span><span class="dot">+2</span><span class="dot">+3</span></span></span>
           <span class="attr-bonus" title="Bônus"></span>
           <span class="attr-mod" title="Total"></span>
         </div>
         <div class="attr-row">
           <span class="attr-name">Destreza <span style="font-size:6pt;color:#888;">DES</span></span>
-          <span class="dot-scale-wrap"><span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="attr-dots"><span class="dot">-1</span><span class="dot">0</span><span class="dot">+1</span><span class="dot">+2</span><span class="dot">+3</span></span></span>
           <span class="attr-bonus" title="Bônus"></span>
           <span class="attr-mod" title="Total"></span>
         </div>
         <div class="attr-row">
           <span class="attr-name">Vigor <span style="font-size:6pt;color:#888;">VIG</span></span>
-          <span class="dot-scale-wrap"><span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="attr-dots"><span class="dot">-1</span><span class="dot">0</span><span class="dot">+1</span><span class="dot">+2</span><span class="dot">+3</span></span></span>
           <span class="attr-bonus" title="Bônus"></span>
           <span class="attr-mod" title="Total"></span>
         </div>
@@ -2836,25 +2969,22 @@
       <!-- Social -->
       <div>
         <div class="attr-category">Sociais</div>
-        <div class="attr-values-heading"><span class="scale-heading-spacer"></span>
-          <span class="dot-scale-heading" aria-hidden="true">
-            <span>-2</span><span>-1</span><span>0</span><span>+1</span><span>+2</span><span>+3</span>
-          </span><span class="bonus-label">Bônus</span><span class="total-label">Mod Total</span></div>
+        <div class="attr-values-heading"><span class="bonus-label">Bônus</span><span class="total-label">Mod Total</span></div>
         <div class="attr-row">
           <span class="attr-name">Carisma <span style="font-size:6pt;color:#888;">CAR</span></span>
-          <span class="dot-scale-wrap"><span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="attr-dots"><span class="dot">-1</span><span class="dot">0</span><span class="dot">+1</span><span class="dot">+2</span><span class="dot">+3</span></span></span>
           <span class="attr-bonus" title="Bônus"></span>
           <span class="attr-mod" title="Total"></span>
         </div>
         <div class="attr-row">
           <span class="attr-name">Manipulação <span style="font-size:6pt;color:#888;">MAN</span></span>
-          <span class="dot-scale-wrap"><span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="attr-dots"><span class="dot">-1</span><span class="dot">0</span><span class="dot">+1</span><span class="dot">+2</span><span class="dot">+3</span></span></span>
           <span class="attr-bonus" title="Bônus"></span>
           <span class="attr-mod" title="Total"></span>
         </div>
         <div class="attr-row">
           <span class="attr-name">Autocontrole <span style="font-size:6pt;color:#888;">ACO</span></span>
-          <span class="dot-scale-wrap"><span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="attr-dots"><span class="dot">-1</span><span class="dot">0</span><span class="dot">+1</span><span class="dot">+2</span><span class="dot">+3</span></span></span>
           <span class="attr-bonus" title="Bônus"></span>
           <span class="attr-mod" title="Total"></span>
         </div>
@@ -2863,25 +2993,22 @@
       <!-- Mental -->
       <div>
         <div class="attr-category">Mentais</div>
-        <div class="attr-values-heading"><span class="scale-heading-spacer"></span>
-          <span class="dot-scale-heading" aria-hidden="true">
-            <span>-2</span><span>-1</span><span>0</span><span>+1</span><span>+2</span><span>+3</span>
-          </span><span class="bonus-label">Bônus</span><span class="total-label">Mod Total</span></div>
+        <div class="attr-values-heading"><span class="bonus-label">Bônus</span><span class="total-label">Mod Total</span></div>
         <div class="attr-row">
           <span class="attr-name">Inteligência <span style="font-size:6pt;color:#888;">INT</span></span>
-          <span class="dot-scale-wrap"><span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="attr-dots"><span class="dot">-1</span><span class="dot">0</span><span class="dot">+1</span><span class="dot">+2</span><span class="dot">+3</span></span></span>
           <span class="attr-bonus" title="Bônus"></span>
           <span class="attr-mod" title="Total"></span>
         </div>
         <div class="attr-row">   
           <span class="attr-name">Raciocínio <span style="font-size:6pt;color:#888;">RAC</span></span>
-          <span class="dot-scale-wrap"><span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="attr-dots"><span class="dot">-1</span><span class="dot">0</span><span class="dot">+1</span><span class="dot">+2</span><span class="dot">+3</span></span></span>
           <span class="attr-bonus" title="Bônus"></span>
           <span class="attr-mod" title="Total"></span>
         </div>
         <div class="attr-row">
           <span class="attr-name">Determinação <span style="font-size:6pt;color:#888;">DET</span></span>
-          <span class="dot-scale-wrap"><span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="attr-dots"><span class="dot">-1</span><span class="dot">0</span><span class="dot">+1</span><span class="dot">+2</span><span class="dot">+3</span></span></span>
           <span class="attr-bonus" title="Bônus"></span>
           <span class="attr-mod" title="Total"></span>
         </div>
@@ -2896,165 +3023,156 @@
     <div class="grid-3 skill-cols">
       <div class="skill-column">
         <div class="attr-category">Talentos</div>
-        <div class="skill-values-heading"><span class="scale-heading-spacer"></span>
-          <span class="dot-scale-heading" aria-hidden="true">
-            <span>-2</span><span>-1</span><span>0</span><span>+1</span><span>+2</span><span>+3</span>
-          </span><span class="bonus-label">Bônus</span><span class="total-label">Mod Total</span></div>
+        <div class="skill-values-heading"><span class="bonus-label">Bônus</span><span class="total-label">Mod Total</span></div>
         <div class="skill-row">
           <span class="skill-name">Acrobacia</span>
-          <span class="dot-scale-wrap"><span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="skill-dots"><span class="skill-dot">-1</span><span class="skill-dot">0</span><span class="skill-dot">+1</span><span class="skill-dot">+2</span><span class="skill-dot">+3</span></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Atletismo</span>
-          <span class="dot-scale-wrap"><span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="skill-dots"><span class="skill-dot">-1</span><span class="skill-dot">0</span><span class="skill-dot">+1</span><span class="skill-dot">+2</span><span class="skill-dot">+3</span></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Empatia</span>
-          <span class="dot-scale-wrap"><span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="skill-dots"><span class="skill-dot">-1</span><span class="skill-dot">0</span><span class="skill-dot">+1</span><span class="skill-dot">+2</span><span class="skill-dot">+3</span></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Furtividade</span>
-          <span class="dot-scale-wrap"><span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="skill-dots"><span class="skill-dot">-1</span><span class="skill-dot">0</span><span class="skill-dot">+1</span><span class="skill-dot">+2</span><span class="skill-dot">+3</span></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Intimidação</span>
-          <span class="dot-scale-wrap"><span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="skill-dots"><span class="skill-dot">-1</span><span class="skill-dot">0</span><span class="skill-dot">+1</span><span class="skill-dot">+2</span><span class="skill-dot">+3</span></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Luta</span>
-          <span class="dot-scale-wrap"><span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="skill-dots"><span class="skill-dot">-1</span><span class="skill-dot">0</span><span class="skill-dot">+1</span><span class="skill-dot">+2</span><span class="skill-dot">+3</span></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Performance</span>
-          <span class="dot-scale-wrap"><span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="skill-dots"><span class="skill-dot">-1</span><span class="skill-dot">0</span><span class="skill-dot">+1</span><span class="skill-dot">+2</span><span class="skill-dot">+3</span></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Persuasão</span>
-          <span class="dot-scale-wrap"><span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="skill-dots"><span class="skill-dot">-1</span><span class="skill-dot">0</span><span class="skill-dot">+1</span><span class="skill-dot">+2</span><span class="skill-dot">+3</span></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
       </div>
       <div class="skill-column">
         <div class="attr-category">Perícias</div>
-        <div class="skill-values-heading"><span class="scale-heading-spacer"></span>
-          <span class="dot-scale-heading" aria-hidden="true">
-            <span>-2</span><span>-1</span><span>0</span><span>+1</span><span>+2</span><span>+3</span>
-          </span><span class="bonus-label">Bônus</span><span class="total-label">Mod Total</span></div>
+        <div class="skill-values-heading"><span class="bonus-label">Bônus</span><span class="total-label">Mod Total</span></div>
         <div class="skill-row">
           <span class="skill-name">Armas Brancas</span>
-          <span class="dot-scale-wrap"><span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="skill-dots"><span class="skill-dot">-1</span><span class="skill-dot">0</span><span class="skill-dot">+1</span><span class="skill-dot">+2</span><span class="skill-dot">+3</span></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Armas de Fogo</span>
-          <span class="dot-scale-wrap"><span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="skill-dots"><span class="skill-dot">-1</span><span class="skill-dot">0</span><span class="skill-dot">+1</span><span class="skill-dot">+2</span><span class="skill-dot">+3</span></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Condução</span>
-          <span class="dot-scale-wrap"><span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="skill-dots"><span class="skill-dot">-1</span><span class="skill-dot">0</span><span class="skill-dot">+1</span><span class="skill-dot">+2</span><span class="skill-dot">+3</span></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Etiqueta</span>
-          <span class="dot-scale-wrap"><span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="skill-dots"><span class="skill-dot">-1</span><span class="skill-dot">0</span><span class="skill-dot">+1</span><span class="skill-dot">+2</span><span class="skill-dot">+3</span></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Investigação</span>
-          <span class="dot-scale-wrap"><span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="skill-dots"><span class="skill-dot">-1</span><span class="skill-dot">0</span><span class="skill-dot">+1</span><span class="skill-dot">+2</span><span class="skill-dot">+3</span></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Prestidigitação</span>
-          <span class="dot-scale-wrap"><span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="skill-dots"><span class="skill-dot">-1</span><span class="skill-dot">0</span><span class="skill-dot">+1</span><span class="skill-dot">+2</span><span class="skill-dot">+3</span></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Subterfúgio</span>
-          <span class="dot-scale-wrap"><span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="skill-dots"><span class="skill-dot">-1</span><span class="skill-dot">0</span><span class="skill-dot">+1</span><span class="skill-dot">+2</span><span class="skill-dot">+3</span></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Sobrevivência</span>
-          <span class="dot-scale-wrap"><span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="skill-dots"><span class="skill-dot">-1</span><span class="skill-dot">0</span><span class="skill-dot">+1</span><span class="skill-dot">+2</span><span class="skill-dot">+3</span></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
       </div>
       <div class="skill-column">
         <div class="attr-category">Conhecimentos</div>
-        <div class="skill-values-heading"><span class="scale-heading-spacer"></span>
-          <span class="dot-scale-heading" aria-hidden="true">
-            <span>-2</span><span>-1</span><span>0</span><span>+1</span><span>+2</span><span>+3</span>
-          </span><span class="bonus-label">Bônus</span><span class="total-label">Mod Total</span></div>
+        <div class="skill-values-heading"><span class="bonus-label">Bônus</span><span class="total-label">Mod Total</span></div>
         <div class="skill-row">
           <span class="skill-name">Ciências</span>
-          <span class="dot-scale-wrap"><span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="skill-dots"><span class="skill-dot">-1</span><span class="skill-dot">0</span><span class="skill-dot">+1</span><span class="skill-dot">+2</span><span class="skill-dot">+3</span></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
           <span class="skill-name">História</span>
-          <span class="dot-scale-wrap"><span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="skill-dots"><span class="skill-dot">-1</span><span class="skill-dot">0</span><span class="skill-dot">+1</span><span class="skill-dot">+2</span><span class="skill-dot">+3</span></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Medicina</span>
-          <span class="dot-scale-wrap"><span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="skill-dots"><span class="skill-dot">-1</span><span class="skill-dot">0</span><span class="skill-dot">+1</span><span class="skill-dot">+2</span><span class="skill-dot">+3</span></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Natureza</span>
-          <span class="dot-scale-wrap"><span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="skill-dots"><span class="skill-dot">-1</span><span class="skill-dot">0</span><span class="skill-dot">+1</span><span class="skill-dot">+2</span><span class="skill-dot">+3</span></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Navegação</span>
-          <span class="dot-scale-wrap"><span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="skill-dots"><span class="skill-dot">-1</span><span class="skill-dot">0</span><span class="skill-dot">+1</span><span class="skill-dot">+2</span><span class="skill-dot">+3</span></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Ocultismo</span>
-          <span class="dot-scale-wrap"><span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="skill-dots"><span class="skill-dot">-1</span><span class="skill-dot">0</span><span class="skill-dot">+1</span><span class="skill-dot">+2</span><span class="skill-dot">+3</span></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Submundo</span>
-          <span class="dot-scale-wrap"><span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="skill-dots"><span class="skill-dot">-1</span><span class="skill-dot">0</span><span class="skill-dot">+1</span><span class="skill-dot">+2</span><span class="skill-dot">+3</span></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
         <div class="skill-row">
           <span class="skill-name">Teologia</span>
-          <span class="dot-scale-wrap"><span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></span>
+          <span class="dot-scale-wrap"><span class="dot-minus-two">-2</span><span class="skill-dots"><span class="skill-dot">-1</span><span class="skill-dot">0</span><span class="skill-dot">+1</span><span class="skill-dot">+2</span><span class="skill-dot">+3</span></span></span>
           <span class="skill-val"></span>
           <span class="skill-mod"></span>
         </div>
@@ -3983,4 +4101,4 @@
 </nav>
 
 </body>
-</html>
+</html>   
