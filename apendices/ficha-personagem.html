@@ -2675,6 +2675,76 @@
   padding-top: 0;
 }
 
+
+
+/* Escala de modificadores — cada valor centralizado sobre sua bolinha. */
+#page1 .attr-values-heading,
+#page1 .skill-values-heading {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  gap: 0;
+  width: 100%;
+  height: 9pt;
+  min-height: 9pt;
+  box-sizing: border-box;
+  padding: 0 4pt 2pt 4pt;
+}
+#page1 .scale-heading-spacer {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+#page1 .dot-scale-heading {
+  position: relative;
+  display: inline-block;
+  flex: 0 0 57.2pt;
+  width: 57.2pt;
+  height: 8pt;
+  margin: 0 3pt;
+  position: relative;
+  left: 5.6pt;
+  font-size: 6pt;
+  line-height: 8pt;
+  font-weight: 600;
+  color: #999;
+  white-space: nowrap;
+}
+#page1 .dot-scale-heading span {
+  position: absolute;
+  width: 10pt;
+  text-align: center;
+  transform: translateX(-50%);
+}
+/* -2 fica à esquerda da primeira bolinha. */
+#page1 .dot-scale-heading span:nth-child(1) {
+  left: 0pt;
+  width: 6pt;
+  transform: translateX(-100%);
+}
+/* -1, 0, +1, +2 e +3: centros das cinco bolinhas. */
+#page1 .dot-scale-heading span:nth-child(2) { left: 7pt; }
+#page1 .dot-scale-heading span:nth-child(3) { left: 18.6pt; }
+#page1 .dot-scale-heading span:nth-child(4) { left: 30.2pt; }
+#page1 .dot-scale-heading span:nth-child(5) { left: 41.8pt; }
+#page1 .dot-scale-heading span:nth-child(6) { left: 53.4pt; }
+
+#page1 .attr-values-heading .bonus-label,
+#page1 .skill-values-heading .bonus-label {
+  flex: 0 0 14pt;
+  width: 14pt;
+  margin: 0 3pt;
+  text-align: center;
+}
+#page1 .attr-values-heading .total-label,
+#page1 .skill-values-heading .total-label {
+  flex: 0 0 24pt;
+  width: 24pt;
+  text-align: center;
+}
+#page1 .dot-scale-wrap {
+  padding-top: 0;
+}
+
 </style>
 </head>
 <body>
