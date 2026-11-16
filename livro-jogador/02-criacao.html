@@ -52,7 +52,7 @@
       <ul><li><a href="#ancoras-iniciais">Estabeleça as <strong>Âncoras e Conexões Iniciais</strong>.</a></li></ul>
     </li>
     <li><a href="#passo-9-equipamento-inicial">Anote o <strong>Equipamento Inicial</strong>.</a></li>
-    <li><a href="#passo-10-defesa-blindagem-limiares">Calcule <strong>Esquiva, Blindagem e Limiares de Dano</strong>.</a></li>
+    <li><a href="#passo-9-esquiva-blindagem-limiares">Calcule <strong>Esquiva, Blindagem e Limiares de Dano</strong>.</a></li>
     <li><a href="#passo-11-detalhes-finais">Defina os <strong>Detalhes Finais</strong>.</a></li>
   </ol>
 </div>
@@ -467,7 +467,8 @@
   ocupação e experiências. Essa primeira especialização também estabelece a
   <strong>Âncora de Reconhecimento</strong>, que concede +1 nos testes de Lucidez enquanto
   o personagem mantiver coerência com essa competência e com a experiência que ela representa.
-  Especializações adicionais podem ser concedidas pelo Mestre após grandes feitos ou momentos
+  Em testes de Lucidez, aplica-se o bônus da Âncora de Reconhecimento, não o bônus geral de +2
+  das Especializações. Especializações adicionais podem ser concedidas pelo Mestre após grandes feitos ou momentos
   memoráveis da campanha, mas não se tornam Âncoras automaticamente.
 </p>
 <div class="box box-note">
@@ -483,7 +484,7 @@
     ou <strong>Rituais de Proteção</strong>.
   </p>
   <p>
-    Uma especialização concede <strong>+1 ao resultado do teste</strong> quando
+    Uma especialização concede <strong>+2 ao resultado do teste</strong> quando
     seu conhecimento ou técnica contribuir de maneira direta para a ação. Esse bônus
     não se aplica por uma associação vaga com a situação nem muda a natureza
     fundamental da ação. O jogador deve explicar como a especialização está sendo
@@ -491,16 +492,17 @@
   </p>
 </div>
 <div class="box box-example">
-  <div class="box-title">Exemplo de aplicação e acúmulo de especializações</div>
+  <div class="box-title">Exemplo de aplicação de especializações</div>
   <p>
     Um personagem que investiga uma substância venenosa encontrada em uma planta
     desconhecida pode utilizar <strong>Botânica Medicinal</strong> para identificar
     a espécie e <strong>Toxicologia</strong> para compreender os efeitos da substância.
-    Se ambas as especializações contribuírem diretamente para a mesma análise,
-    cada uma concede <strong>+1 ao teste</strong>, totalizando +2. Esses bônus são
-    somados ao resultado final e não alteram a quantidade de dados rolados. A rolagem
-    continua seguindo a regra de cancelamento entre fontes de Vantagem e Desvantagem apresentada no Capítulo 3.
-    O teste utiliza o Atributo e a Proficiência adequados à abordagem.
+    Uma especialização diretamente pertinente concede <strong>+2 ao teste</strong>.
+    Mesmo que mais de uma especialização contribua para a mesma análise, o bônus não
+    se acumula: o personagem recebe apenas +2. Esse bônus é somado ao resultado final
+    e não altera a quantidade de dados rolados. A rolagem continua seguindo a regra de
+    cancelamento entre fontes de Vantagem e Desvantagem apresentada no Capítulo 3. O
+    teste utiliza o Atributo e a Proficiência adequados à abordagem.
   </p>
   <p>
     A concessão dos bônus não é automática: o jogador deve demonstrar a contribuição
@@ -510,8 +512,8 @@
 </div>
 <ul>
   <li><strong>Outros exemplos:</strong> Caligrafia de Arquivos Oficiais, Anatomia Forense, Herbologia Medicinal, Rastreamento Urbano, Identificação de Selos e Lacres, Astrologia Natal, Liturgia das Igrejas Ortodoxas, Manutenção de Autômatos e Criptografia de Correspondências.</li>
-  <li>Cada especialização claramente pertinente à ação concede <strong>+1 ao resultado do teste</strong>, independentemente da Proficiência utilizada. Quando duas ou mais especializações distintas contribuírem diretamente para a mesma ação, seus bônus são somados (+2 para duas especializações, +3 para três, e assim por diante).</li>
-  <li>A mesma especialização concede no máximo +1 por teste. O jogador deve demonstrar como cada campo específico participa da ação; uma relação apenas temática ou vagamente relacionada não é suficiente.</li>
+  <li>Quando uma ou mais especializações contribuírem de maneira clara e direta para a ação, o personagem recebe um bônus único de <strong>+2 ao resultado do teste</strong>, independentemente da Proficiência utilizada. Os bônus de especializações não se acumulam: mesmo que várias sejam pertinentes, o bônus total permanece +2.</li>
+  <li>O jogador deve demonstrar como a especialização participa da ação; uma relação apenas temática ou vagamente relacionada não é suficiente. Uma mesma especialização concede no máximo um bônus de +2 por teste.</li>
   <li>O Mestre tem a decisão final sobre a pertinência da aplicação. A especialização não altera a natureza fundamental da ação nem substitui requisitos necessários para realizá-la.</li>
   <li>Uma especialização não substitui a Proficiência ou o Atributo exigido, não garante sucesso e não permite realizar uma atividade que o personagem não teria condições de executar normalmente.</li>
 </ul>
@@ -539,7 +541,7 @@
     Sua especialização inicial é <strong>Documentoscopia</strong>. Ela pode
     contribuir para comparar assinaturas, identificar alterações em registros
     ou avaliar a autenticidade de documentos. Quando esse conhecimento participar
-    diretamente da ação, Documentoscopia concede +1 ao resultado do teste, sujeito
+    diretamente da ação, Documentoscopia concede +2 ao resultado do teste, sujeito
     à aprovação do Mestre. A distribuição completa de Edmund aparece no exemplo de
     criação ao final do capítulo.
   </p>
@@ -660,11 +662,9 @@
 
 <div class="box box-rule">
   <div class="box-title">Fórmula de PV</div>
-  <p style="text-align:center; font-size:1.2em;"><strong>PV = 3 + Pontos.(VIG) + (10 − Sequência)</strong></p>
+  <p style="text-align:center; font-size:1.2em;"><strong>PV = 3 + Mod.(VIG) + (10 − Sequência)</strong></p>
   <p class="box-note">
-    Nesta fórmula, utiliza-se diretamente a quantidade de pontos de Vigor do personagem, indicada por <strong>Pontos.(VIG)</strong>, sem
-    calcular modificador. O acréscimo de progressão corresponde a 10 menos o número da Sequência.
-    Neste livro, a tabela contempla apenas as Sequências 9 a 5.
+    Nesta fórmula, utiliza-se o <strong>modificador de Vigor</strong>, calculado por <strong>Mod.(VIG) = Pontos.(VIG) − 2</strong>. O acréscimo de progressão corresponde a 10 menos o número da Sequência. Neste livro, a tabela contempla apenas as Sequências 9 a 5.
   </p>
   <table>
     <thead><tr><th>Sequência</th><th>Bônus de PV</th></tr></thead>
@@ -682,10 +682,7 @@
     Por isso, a tabela e os exemplos de progressão terminam na Sequência 5.
   </p>
   <p>
-    Exemplo: um personagem com <strong>Pontos.(VIG) = 2</strong> começa na
-    <strong>Sequência 9</strong> com <strong>3 + 2 + (10 − 9) = 6 PV</strong>.
-    Ao alcançar a <strong>Sequência 5</strong>, mantendo o mesmo Vigor, terá
-    <strong>3 + 2 + (10 − 5) = 10 PV</strong>.
+    Exemplo: um personagem com <strong>Pontos.(VIG) = 2</strong> possui <strong>Mod.(VIG) = +0</strong>. Na <strong>Sequência 9</strong>, começa com <strong>3 + 0 + (10 − 9) = 4 PV</strong>. Ao alcançar a <strong>Sequência 5</strong>, mantendo o mesmo Vigor, terá <strong>3 + 0 + (10 − 5) = 8 PV</strong>.
   </p>
   <div class="box box-note">
     <div class="box-title">Registro dos Pontos de Vida na ficha</div>
@@ -851,7 +848,7 @@
 
 <div class="separator"></div>
 
-<h2 id="passo-10-defesa-blindagem-limiares">Passo 9 — Esquiva, Blindagem e Limiares de Dano</h2>
+<h2 id="passo-9-esquiva-blindagem-limiares">Passo 9 — Esquiva, Blindagem e Limiares de Dano</h2>
 <p>
   Neste passo, calcule e registre a Esquiva e os Limiares de Dano. A criação não concede
   armadura nem pontos de Blindagem; registre 0/ nesse campo, salvo se o Mestre determinar
@@ -861,16 +858,14 @@
 <h3>Esquiva</h3>
 <p>
   A Esquiva indica o valor que um adversário precisa alcançar em um teste de ataque
-  para atingir o personagem. Utilize a fórmula padrão abaixo, salvo se uma regra
-  específica conceder uma fórmula alternativa.
+  para atingir o personagem. O cálculo da Esquiva Base é apresentado a seguir.
 </p>
 <div class="box box-rule">
-  <div class="box-title">Cálculo da Esquiva</div>
-  <p style="text-align:center; font-size:1.15em;"><strong>Esquiva = 10 + Mod.(DES) + Mod.(RAC)</strong></p>
+  <div class="box-title">Cálculo da Esquiva Base</div>
+  <p style="text-align:center; font-size:1.15em;"><strong>Esquiva Base = 10 + Mod.(DES) + Mod.(RAC)</strong></p>
   <p>
     Os modificadores são calculados por <strong>Mod.(DES) = Pontos.(DES) − 2</strong> e
-    <strong>Mod.(RAC) = Pontos.(RAC) − 2</strong>. Se mais de uma fonte oferecer uma
-    fórmula de Esquiva, escolha apenas uma; fórmulas alternativas não se somam.
+    <strong>Mod.(RAC) = Pontos.(RAC) − 2</strong>. Some os dois modificadores ao valor-base de 10 para determinar a Esquiva Base do personagem.
   </p>
 </div>
 
@@ -916,7 +911,7 @@
     Sem armadura e sem uma fonte de Blindagem, registra:
   </p>
   <ul>
-    <li><strong>Esquiva:</strong> 10 + (2 − 2) + (2 − 2) = <strong>10</strong>.</li>
+    <li><strong>Esquiva Base:</strong> 10 + (2 − 2) + (2 − 2) = <strong>10</strong>.</li>
     <li><strong>Armadura:</strong> nenhuma.</li>
     <li><strong>Blindagem:</strong> <strong>0/</strong>.</li>
     <li><strong>Limiar Menor → Maior:</strong> <strong>4</strong>.</li>
@@ -1014,7 +1009,7 @@
     no escritório. Esses pontos são acrescentados diretamente aos valores das Proficiências
     depois da distribuição dos 27 pontos. Sobrevivência passa de 0 para 1 e Investigação
     de 1 para 2. Edmund também possui a especialização <strong>Documentoscopia</strong>.
-    Ela concede +1 ao resultado do teste ao comparar assinaturas, identificar alterações
+    Ela concede +2 ao resultado do teste ao comparar assinaturas, identificar alterações
     em registros ou avaliar a autenticidade de um documento apresentado como prova.
     O bônus não se aplica a qualquer investigação apenas porque existe um documento
     envolvido: Edmund deve demonstrar como a análise documental participa diretamente
@@ -1043,7 +1038,7 @@
   </p>
 
   <h4>Passo 6 — Pontos de Vida</h4>
-  <p>PV = 3 + Pontos.(VIG) (2) + (10 − 9) = <strong>6 PV</strong>.</p>
+  <p>Como Pontos.(VIG) = 2, Mod.(VIG) = +0. Portanto, PV = 3 + 0 + (10 − 9) = <strong>4 PV</strong>.</p>
 
   <h4>Passo 7 — Lucidez</h4>
   <p>Lucidez inicial: <strong>7 pontos</strong>. Todos os personagens começam com esse mesmo valor, sem necessidade de cálculo.</p>
@@ -1065,7 +1060,7 @@
 
   <h4>Passo 9 — Esquiva, Blindagem e Limiares de Dano</h4>
   <ul>
-    <li><strong>Esquiva:</strong> como Pontos.(DES) = 2, Mod.(DES) = +0, e Pontos.(RAC) = 4, Mod.(RAC) = +2; portanto, Esquiva = 10 + 0 + 2 = <strong>12</strong>.</li>
+    <li><strong>Esquiva Base:</strong> como Pontos.(DES) = 2, Mod.(DES) = +0, e Pontos.(RAC) = 4, Mod.(RAC) = +2; portanto, Esquiva Base = 10 + 0 + 2 = <strong>12</strong>.</li>
     <li><strong>Armadura:</strong> nenhuma.</li>
     <li><strong>Blindagem:</strong> 0 pontos.</li>
     <li><strong>Limiar de Menor para Maior:</strong> 2 + (10 − 9) = <strong>3</strong>.</li>
