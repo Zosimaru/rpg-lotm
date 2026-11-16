@@ -6,6 +6,88 @@
 <title>Cap. 3 — Atributos, Proficiências e Sistema de Testes · Senhor dos Mistérios RPG</title>
 <link rel="stylesheet" href="../assets/css/common.css">
 <link rel="stylesheet" href="../assets/css/print.css">
+<style>
+/* Diagramação específica do resumo rápido de referência */
+#quick-reference-panel {
+  box-sizing: border-box;
+  margin: 1.1rem 0 1.5rem;
+  padding: 1.15rem;
+  border: 1px solid #9a742b;
+  border-top: 4px solid #9a742b;
+  border-radius: 7px;
+  background: #f1e8d7;
+  color: #25211b;
+}
+#quick-reference-panel .quickref-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+#quick-reference-panel .quickref-column {
+  display: grid;
+  gap: 1rem;
+  min-width: 0;
+  align-content: start;
+}
+#quick-reference-panel .quickref-group {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #d5c5a7;
+  border-radius: 6px;
+  background: #faf6ee;
+}
+#quick-reference-panel .quickref-group h4 {
+  margin: 0;
+  padding: .65rem .8rem;
+  border-bottom: 1px solid #d5c5a7;
+  background: #e9dcc3;
+  color: #765719;
+  font-family: inherit;
+  font-size: .92rem;
+  line-height: 1.25;
+  letter-spacing: .025em;
+}
+#quick-reference-panel .quickref-rows {
+  padding: .2rem .8rem;
+}
+#quick-reference-panel .quickref-row {
+  display: grid;
+  grid-template-columns: minmax(125px, .42fr) minmax(0, .58fr);
+  gap: .8rem;
+  align-items: start;
+  padding: .52rem 0;
+  border-bottom: 1px solid #e8dfd0;
+  font-size: .91rem;
+  line-height: 1.42;
+}
+#quick-reference-panel .quickref-row:last-child {
+  border-bottom: 0;
+}
+#quick-reference-panel .quickref-label {
+  color: #4f3b19;
+  font-weight: 700;
+}
+#quick-reference-panel .quickref-value {
+  min-width: 0;
+  color: #2c2924;
+}
+@media (max-width: 720px) {
+  #quick-reference-panel { padding: .75rem; }
+  #quick-reference-panel .quickref-grid { grid-template-columns: minmax(0, 1fr); }
+  #quick-reference-panel .quickref-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: .15rem;
+    padding: .58rem 0;
+  }
+}
+@media print {
+  #quick-reference-panel { background: #fff; border: 1px solid #777; }
+  #quick-reference-panel .quickref-group { break-inside: avoid; }
+  #quick-reference-panel .quickref-group h4 { background: #eee; color: #222; }
+}
+</style>
+
 </head>
 <body>
 
@@ -666,13 +748,13 @@
 <table>
   <thead><tr><th>CD</th><th>Dificuldade</th><th>Descrição</th></tr></thead>
   <tbody>
-    <tr><td>5</td><td>Trivial</td><td>Tão fácil que só falha em circunstâncias verdadeiramente extraordinárias.</td></tr>
-    <tr><td>8</td><td>Fácil</td><td>Desafiador para leigos, rotineiro para quem possui treinamento.</td></tr>
-    <tr><td>10</td><td>Moderado</td><td>Requer competência; um profissional teria boas chances de sucesso.</td></tr>
-    <tr><td>13</td><td>Difícil</td><td>Exige habilidade real; falhas são comuns mesmo entre competentes.</td></tr>
-    <tr><td>15</td><td>Muito Difícil</td><td>Apenas especialistas têm chance razoável. Amadores quase certamente falham.</td></tr>
-    <tr><td>18</td><td>Quase Impossível</td><td>Exige maestria excepcional combinada com uma boa dose de sorte.</td></tr>
-    <tr><td>20+</td><td>Lendário</td><td>Feitos que entram para a história. Quase sobre-humano; exige poderes Beyonder ou circunstâncias excepcionais.</td></tr>
+    <tr><td>6</td><td>Trivial</td><td>Tão fácil que só falha em circunstâncias verdadeiramente extraordinárias.</td></tr>
+    <tr><td>9</td><td>Fácil</td><td>Desafiador para leigos, rotineiro para quem possui treinamento.</td></tr>
+    <tr><td>11</td><td>Moderado</td><td>Requer competência; um profissional teria boas chances de sucesso.</td></tr>
+    <tr><td>14</td><td>Difícil</td><td>Exige habilidade real; falhas são comuns mesmo entre competentes.</td></tr>
+    <tr><td>16</td><td>Muito Difícil</td><td>Apenas especialistas têm chance razoável. Amadores quase certamente falham.</td></tr>
+    <tr><td>19</td><td>Quase Impossível</td><td>Exige maestria excepcional combinada com uma boa dose de sorte.</td></tr>
+    <tr><td>21+</td><td>Lendário</td><td>Feitos que entram para a história. Quase sobre-humano; exige poderes Beyonder ou circunstâncias excepcionais.</td></tr>
   </tbody>
 </table>
 
@@ -1217,15 +1299,29 @@
   <p><strong>Lucidez 0 — Perda de Controle</strong></p>
   <p>O personagem perde sua capacidade de preservar a própria consciência e identidade.</p>
   <p><strong>Possíveis manifestações:</strong></p>
+  <p>
+    A perda de controle representa o colapso da identidade e do domínio sobre o próprio
+    corpo e poderes. As manifestações variam conforme o Caminho e a Sequência, mas podem
+    incluir consequências extremas como:
+  </p>
   <ul>
-    <li>Transformação física monstruosa.</li>
+    <li><strong>Ruptura da identidade:</strong> o personagem deixa de reconhecer aliados, pessoas queridas e até mesmo suas próprias Âncoras. Pode interpretar todos ao redor como inimigos, presas, ameaças ou instrumentos para satisfazer sua compulsão.</li>
+    <li><strong>Violência contra aliados:</strong> ataca, persegue, captura ou tenta eliminar personagens e NPCs próximos, sem reconhecer os vínculos que antes o impediam de feri-los.</li>
+    <li><strong>Uso catastrófico dos poderes:</strong> libera habilidades Beyonder sem distinguir aliados de inimigos, provoca efeitos em área, destrói o ambiente ou desencadeia fenômenos que não consegue interromper.</li>
+    <li><strong>Compulsão dominante:</strong> passa a agir exclusivamente em função de um impulso sobrenatural ligado ao Caminho, como caçar, consumir, roubar, punir, dominar, espalhar corrupção ou cumprir um objetivo delirante.</li>
+    <li><strong>Deformação monstruosa:</strong> o corpo sofre mutações severas, perde características humanas e assume uma forma relacionada ao Caminho, acompanhada de instintos e capacidades que o personagem não consegue controlar.</li>
+    <li><strong>Manifestação de uma natureza sobrenatural:</strong> características da criatura mítica, entidade ou força associada ao Caminho se impõem sobre a personalidade, podendo transformar o personagem em uma ameaça para todos ao redor.</li>
+    <li><strong>Colapso completo:</strong> a personalidade anterior deixa de orientar suas ações. O personagem pode tornar-se uma criatura descontrolada, atacar indiscriminadamente ou permanecer dominado por uma força sobrenatural, deixando de responder a tentativas comuns de diálogo.</li>
   </ul>
 </div>
 <p>
-  Essas descrições são referências narrativas, não instruções para o comportamento do
-  personagem. O Mestre pode apresentar sintomas, percepções distorcidas e consequências
-  da crise, mas não assume o controle permanente do personagem nem decide suas ações;
-  o jogador continua responsável pelas escolhas do personagem.
+  <strong>Em Perda de Controle, o jogador deixa de conduzir o personagem.</strong> Enquanto
+  a condição persistir, o Mestre assume temporariamente seu controle e determina suas
+  ações, reações, alvos e o uso de seus poderes, de acordo com a manifestação apresentada.
+  O personagem pode representar uma ameaça real ao grupo, a NPCs e a si próprio. O jogador
+  retoma o controle quando a Perda de Controle for encerrada por uma regra, intervenção ou
+  solução narrativa estabelecida na situação; a simples vontade do jogador não interrompe
+  o episódio.
 </p>
 <p>
   A Lucidez não se recupera automaticamente com descanso comum. Uma regra, poder, item ou
@@ -1254,16 +1350,16 @@
   </p>
 </div>
 
-<h3 id="blindagem-limiares">Blindagem, armaduras e Limiares de Dano</h3>
+<h3 id="blindagem-limiares">Blindagem, Vestimentas e Limiares de Dano</h3>
 <p>
-  <strong>Armadura</strong> é um equipamento. <strong>Blindagem</strong> é um recurso
-  de proteção que pode ser concedido por uma armadura, por poderes Beyonder ou por
-  outras fontes. Uma armadura pode conceder pontos de Blindagem e modificar os
+  <strong>Vestimenta</strong> é um equipamento. <strong>Blindagem</strong> é um recurso
+  de proteção que pode ser concedido por uma Vestimenta, por poderes Beyonder ou por
+  outras fontes. Uma Vestimenta pode conceder pontos de Blindagem e modificar os
   Limiares de Dano; uma fonte diferente também pode conceder Blindagem sem ser
-  uma armadura.
+  uma Vestimenta.
 </p>
 <p>
-  A descrição de cada armadura deve informar separadamente a quantidade de pontos
+  A descrição de cada Vestimenta deve informar separadamente a quantidade de pontos
   de Blindagem concedida e os valores ou a regra de alteração dos Limiares de Dano.
   Não existe cálculo inicial de Blindagem: o personagem só recebe esse recurso
   quando uma fonte o concede expressamente.
@@ -1295,15 +1391,15 @@
   <p>
     O primeiro limiar determina quando o dano passa de Menor para Maior; o segundo
     determina quando passa de Maior para Severo. Utilize sempre os limiares atuais
-    do personagem, considerando eventuais alterações fornecidas por armaduras ou
+    do personagem, considerando eventuais alterações fornecidas por Vestimentas ou
     outros efeitos.
   </p>
 </div>
 
 <div class="box box-rule">
-  <div class="box-title">Limiares naturais de Dano sem Armadura</div>
+  <div class="box-title">Limiares naturais de Dano sem Vestimenta</div>
   <p>
-    Na ausência de uma armadura ou efeito que modifique os valores, utilize os
+    Na ausência de uma Vestimenta ou efeito que modifique os valores, utilize os
     limiares naturais determinados pela Sequência. Neste livro, a progressão
     apresentada vai da Sequência 9 até a <strong>Sequência 5</strong>.
   </p>
@@ -1322,8 +1418,8 @@
     <strong>Maior para Severo:</strong> 4 + 2 × (10 − Sequência).
   </p>
   <p>
-    Quando uma armadura modificar os Limiares de Dano, utilize os valores ou a
-    regra indicados em sua descrição. Não acrescente um bônus genérico de armadura
+    Quando uma Vestimenta modificar os Limiares de Dano, utilize os valores ou a
+    regra indicados em sua descrição. Não acrescente um bônus genérico de Vestimenta
     aos limiares: o equipamento deve especificar como sua proteção altera os valores.
   </p>
 </div>
@@ -1367,7 +1463,7 @@
 <div class="box box-example">
   <div class="box-title">Exemplo — Sequência 8</div>
   <p>
-    Um personagem na Sequência 8, sem armadura que modifique seus limiares, possui
+    Um personagem na Sequência 8, sem Vestimenta que modifique seus limiares, possui
     Menor → Maior igual a <strong>4</strong> e Maior → Severo igual a <strong>8</strong>.
     Assim, um ataque que cause 3 pontos de dano provoca Dano Menor; com 5 pontos,
     provoca Dano Maior; com 8 pontos, provoca Dano Severo.
@@ -1387,30 +1483,56 @@
 <div class="separator"></div>
 
 <h2 id="resumo">Resumo Rápido de Referência</h2>
-<div class="stat-block">
-  <h4>Fórmulas e regras principais</h4>
-  <div class="stat-line"><span class="stat-label">Modificador de Atributo:</span><span>Mod.(ATR) = Pontos.(ATR) − 2</span></div>
-  <div class="stat-line"><span class="stat-label">Modificador de Proficiência:</span><span>Mod.(Proficiência) = Pontos da Proficiência − 2</span></div>
-  <div class="stat-line"><span class="stat-label">Teste:</span><span>soma dos dois dados selecionados + Mod.(Atributo) + Mod.(Proficiência) + bônus aplicáveis ≥ CD</span></div>
-  <div class="stat-line"><span class="stat-label">Especialização:</span><span>uma ou mais especializações pertinentes concedem +2 ao teste; os bônus não se acumulam</span></div>
-  <div class="stat-line"><span class="stat-label">Vantagem:</span><span>após cancelar fontes opostas, role 3d10 e selecione/some os dois maiores; fontes excedentes não se acumulam</span></div>
-  <div class="stat-line"><span class="stat-label">Desvantagem:</span><span>após cancelar fontes opostas, role 3d10 e selecione/some os dois menores; fontes excedentes não se acumulam</span></div>
-  <div class="stat-line"><span class="stat-label">Sem Vantagem ou Desvantagem:</span><span>fontes equilibradas ou ausentes: role 2d10 normalmente</span></div>
-  <div class="stat-line"><span class="stat-label">Sucesso Crítico:</span><span>os dois dados selecionados mostram valores iguais e o teste é bem-sucedido</span></div>
-  <div class="stat-line"><span class="stat-label">Falha Crítica:</span><span>os dois dados selecionados mostram valores iguais e o teste falha</span></div>
-  <div class="stat-line"><span class="stat-label">PV:</span><span>3 + Mod.(VIG) + (10 − Sequência)</span></div>
-  <div class="stat-line"><span class="stat-label">Espiritualidade máxima:</span><span>Espiritualidade inicial + Bônus de Digestão de Poção (+2 permanente a cada 50% de uma poção) + outros bônus</span></div>
-  <div class="stat-line"><span class="stat-label">Teste de Lucidez:</span><span>2d10 + bônus total das Âncoras ativas + modificador de circunstância; uso excedente de Espiritualidade: CD 8 + excedente acumulado</span></div>
-  <div class="stat-line"><span class="stat-label">Recuperação da Espiritualidade:</span><span>Descanso Completo: recuperação total, 1 vez a cada intervalo de 24 horas; cada Descanso Completo renova duas utilizações de Descanso Breve, de 1 hora cada</span></div>
-  <div class="stat-line"><span class="stat-label">Esquiva Base:</span><span>10 + Mod.(DES) + Mod.(RAC)</span></div>
-  <div class="stat-line"><span class="stat-label">Lucidez:</span><span>inicial 7, máximo 10, mínimo 0; cada Âncora ativa concede +1 em testes de Lucidez</span></div>
-  <div class="stat-line"><span class="stat-label">Limiar Menor → Maior:</span><span>2 + (10 − Sequência), sem armadura</span></div>
-  <div class="stat-line"><span class="stat-label">Limiar Maior → Severo:</span><span>4 + 2 × (10 − Sequência), sem armadura</span></div>
-  <div class="stat-line"><span class="stat-label">Blindagem:</span><span>1 ponto reduz o dano em um nível; máximo de 1 ponto por ataque</span></div>
-  <div class="stat-line"><span class="stat-label">Deslocamento básico:</span><span>9 metros</span></div>
+<div id="quick-reference-panel" class="stat-block quick-reference">
+  <div class="quickref-grid">
+    <div class="quickref-column">
+      <section class="quickref-group" aria-label="Fundamentos do teste">
+        <h4>Fundamentos do teste</h4>
+        <div class="quickref-rows">
+          <div class="quickref-row"><span class="quickref-label">Modificador de Atributo</span><span class="quickref-value">Mod.(ATR) = Pontos.(ATR) − 2</span></div>
+          <div class="quickref-row"><span class="quickref-label">Modificador de Proficiência</span><span class="quickref-value">Mod.(Proficiência) = Pontos da Proficiência − 2</span></div>
+          <div class="quickref-row"><span class="quickref-label">Teste</span><span class="quickref-value">soma dos dois dados selecionados + Mod.(Atributo) + Mod.(Proficiência) + bônus aplicáveis ≥ CD</span></div>
+          <div class="quickref-row"><span class="quickref-label">Especialização</span><span class="quickref-value">uma ou mais especializações pertinentes concedem +2 ao teste; os bônus não se acumulam</span></div>
+        </div>
+      </section>
+
+      <section class="quickref-group" aria-label="Vantagem, desvantagem e críticos">
+        <h4>Vantagem, desvantagem e críticos</h4>
+        <div class="quickref-rows">
+          <div class="quickref-row"><span class="quickref-label">Vantagem</span><span class="quickref-value">após cancelar fontes opostas, role 3d10 e selecione/some os dois maiores; fontes excedentes não se acumulam</span></div>
+          <div class="quickref-row"><span class="quickref-label">Desvantagem</span><span class="quickref-value">após cancelar fontes opostas, role 3d10 e selecione/some os dois menores; fontes excedentes não se acumulam</span></div>
+          <div class="quickref-row"><span class="quickref-label">Sem Vantagem ou Desvantagem</span><span class="quickref-value">fontes equilibradas ou ausentes: role 2d10 normalmente</span></div>
+          <div class="quickref-row"><span class="quickref-label">Sucesso Crítico</span><span class="quickref-value">os dois dados selecionados mostram valores iguais e o teste é bem-sucedido</span></div>
+          <div class="quickref-row"><span class="quickref-label">Falha Crítica</span><span class="quickref-value">os dois dados selecionados mostram valores iguais e o teste falha</span></div>
+        </div>
+      </section>
+    </div>
+
+    <div class="quickref-column">
+      <section class="quickref-group" aria-label="Recursos e recuperação">
+        <h4>Recursos e recuperação</h4>
+        <div class="quickref-rows">
+          <div class="quickref-row"><span class="quickref-label">PV</span><span class="quickref-value">3 + Mod.(VIG) + (10 − Sequência)</span></div>
+          <div class="quickref-row"><span class="quickref-label">Espiritualidade máxima</span><span class="quickref-value">Espiritualidade inicial + Bônus de Digestão de Poção (+2 permanente a cada 50% de uma poção) + outros bônus</span></div>
+          <div class="quickref-row"><span class="quickref-label">Teste de Lucidez</span><span class="quickref-value">2d10 + bônus total das Âncoras ativas + modificador de circunstância; uso excedente de Espiritualidade: CD 8 + excedente acumulado</span></div>
+          <div class="quickref-row"><span class="quickref-label">Recuperação da Espiritualidade</span><span class="quickref-value">Descanso Completo: recuperação total, 1 vez a cada intervalo de 24 horas; cada Descanso Completo renova duas utilizações de Descanso Breve, de 1 hora cada</span></div>
+          <div class="quickref-row"><span class="quickref-label">Lucidez</span><span class="quickref-value">inicial 7, máximo 10, mínimo 0; cada Âncora ativa concede +1 em testes de Lucidez</span></div>
+        </div>
+      </section>
+
+      <section class="quickref-group" aria-label="Defesa, dano e deslocamento">
+        <h4>Defesa, dano e deslocamento</h4>
+        <div class="quickref-rows">
+          <div class="quickref-row"><span class="quickref-label">Esquiva Base</span><span class="quickref-value">10 + Mod.(DES) + Mod.(RAC)</span></div>
+          <div class="quickref-row"><span class="quickref-label">Limiar Menor → Maior</span><span class="quickref-value">2 + (10 − Sequência), sem Vestimenta</span></div>
+          <div class="quickref-row"><span class="quickref-label">Limiar Maior → Severo</span><span class="quickref-value">4 + 2 × (10 − Sequência), sem Vestimenta</span></div>
+          <div class="quickref-row"><span class="quickref-label">Blindagem</span><span class="quickref-value">1 ponto reduz o dano em um nível; máximo de 1 ponto por ataque</span></div>
+          <div class="quickref-row"><span class="quickref-label">Deslocamento básico</span><span class="quickref-value">9 metros</span></div>
+        </div>
+      </section>
+    </div>
+  </div>
 </div>
-
-
 
 <div class="box box-lore">
   <div class="box-title">Orientação ao Mestre</div>
