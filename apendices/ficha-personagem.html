@@ -325,34 +325,6 @@
   padding: 0 1pt;
 }
 
-/* --- Save row ------------ */
-.save-row {
-  display: flex;
-  align-items: center;
-  gap: 6pt;
-  padding: 2pt 4pt;
-  border-bottom: 1px dotted #ccc;
-}
-
-.save-name {
-  font-size: 8pt;
-  font-weight: 600;
-  min-width: 50pt;
-}
-
-.save-formula {
-  font-size: 6.5pt;
-  color: #777;
-  flex: 1;
-}
-
-.save-box {
-  width: 22pt;
-  height: 14pt;
-  border: 1.2px solid #1a1a1a;
-  text-align: center;
-  font-size: 8pt;
-}
 
 /* --- Power block --------- */
 .power-cols {
@@ -373,12 +345,38 @@
 
 .power-title-row {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto minmax(22pt, 0.45fr);
-  gap: 2pt 3pt;
+  grid-template-columns: auto minmax(0, 1fr) auto minmax(18pt, 0.38fr) auto;
+  gap: 2pt 2.5pt;
   align-items: end;
   border-bottom: 1px dotted #ccc;
   padding-bottom: 2pt;
   margin-bottom: 2pt;
+}
+
+.power-tuning {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2pt;
+  white-space: nowrap;
+  padding-bottom: 1pt;
+}
+
+.power-tuning-box {
+  display: inline-block;
+  width: 7pt;
+  height: 7pt;
+  flex: 0 0 7pt;
+  border: 1px solid #444;
+  background: #fff;
+}
+
+.power-tuning-label {
+  display: inline-block;
+  color: #555;
+  font-size: 5pt;
+  font-weight: 700;
+  line-height: 1;
 }
 
 .power-meta-row {
@@ -566,7 +564,7 @@
 
   .sheet-title { color: #333; }
   .s-box { border-color: #000; }
-  .attr-mod, .stat-box, .save-box, .skill-val, .skill-mod { border-color: #000; }
+  .attr-mod, .stat-box, .skill-val, .skill-mod { border-color: #000; }
   .dot, .skill-dot { border-color: #000; }
   .dot.dot-filled,
   .skill-dot.skill-dot-filled {
@@ -807,8 +805,7 @@
 }
 #page1 .attr-row,
 #page1 .skill-row,
-#page1 .stat-row,
-#page1 .save-row {
+#page1 .stat-row {
   padding-top: 6pt;
   padding-bottom: 6pt;
 }
@@ -1773,6 +1770,634 @@
   background: #fff;
 }
 
+
+/* Lucidez e Experiência em quadros compactos lado a lado na página 2. */
+.progression-track-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 5pt;
+  align-items: stretch;
+  margin-bottom: 5pt;
+}
+.progression-track-grid > .s-box {
+  min-width: 0;
+  margin-bottom: 0;
+  padding: 3pt 5pt 4pt;
+  page-break-inside: avoid;
+}
+.progression-track-grid .s-box-title {
+  margin-bottom: 3pt;
+}
+.progression-track-grid .lucidez-track {
+  display: flex;
+  align-items: center;
+  gap: 2pt;
+  min-height: 14pt;
+  padding: 0;
+}
+.progression-track-grid .lucidez-cell {
+  width: 12pt;
+  height: 12pt;
+  flex: 0 0 12pt;
+}
+.xp-track-row {
+  display: flex;
+  align-items: center;
+  gap: 3pt;
+  min-height: 13pt;
+}
+.xp-track-label,
+.xp-total-label {
+  font-size: 6pt;
+  font-weight: 700;
+  color: #444;
+  white-space: nowrap;
+}
+.xp-track {
+  display: flex;
+  align-items: center;
+  gap: 1.5pt;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.xp-cell {
+  display: block;
+  width: 9pt;
+  height: 10pt;
+  flex: 1 1 0;
+  min-width: 5pt;
+  max-width: 12pt;
+  border: 1px solid #222;
+  background: #fff;
+}
+.xp-total-row {
+  display: flex;
+  align-items: end;
+  gap: 4pt;
+  margin-top: 2pt;
+}
+.xp-total-line {
+  display: block;
+  flex: 1 1 auto;
+  min-width: 10pt;
+  height: 10pt;
+  border-bottom: 1px solid #888;
+}
+
+
+/* XP: apenas as duas trilhas solicitadas, sem título nem total adicional. */
+.progression-track-grid .xp-track-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6pt;
+  min-height: 40pt;
+  padding: 4pt 5pt;
+}
+.progression-track-grid .xp-track-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3pt;
+  min-height: 12pt;
+  width: 100%;
+}
+.progression-track-grid .xp-track-label {
+  flex: 0 0 auto;
+  font-size: 5.8pt;
+  font-weight: 700;
+  color: #333;
+  white-space: nowrap;
+}
+.progression-track-grid .xp-track {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.8pt;
+  flex: 0 0 auto;
+  min-width: 0;
+}
+.progression-track-grid .xp-cell {
+  display: block;
+  width: 7pt;
+  height: 9pt;
+  min-width: 0;
+  max-width: none;
+  flex: 0 0 7pt;
+  border: 1px solid #222;
+  background: #fff;
+}
+.progression-track-grid .xp-attribute-row .xp-cell {
+  width: 9pt;
+  height: 10pt;
+  flex-basis: 9pt;
+}
+.progression-track-grid .xp-track-box .s-box-title,
+.progression-track-grid .xp-track-box .xp-total-row,
+.progression-track-grid .xp-track-box .xp-total-label,
+.progression-track-grid .xp-track-box .xp-total-line {
+  display: none !important;
+}
+
+
+/* Distribuição refinada das duas trilhas de XP dentro da caixa. */
+.progression-track-grid .xp-track-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6pt;
+  min-height: 42pt;
+  padding: 5pt 6pt;
+  box-sizing: border-box;
+}
+.progression-track-grid .xp-track-row {
+  display: grid;
+  grid-template-columns: 61pt minmax(0, 1fr);
+  align-items: center;
+  column-gap: 5pt;
+  width: 100%;
+  min-height: 14pt;
+  box-sizing: border-box;
+}
+.progression-track-grid .xp-track-label {
+  display: block;
+  width: 61pt;
+  min-width: 0;
+  font-size: 6pt;
+  line-height: 1.1;
+  font-weight: 700;
+  color: #333;
+  white-space: nowrap;
+}
+.progression-track-grid .xp-track {
+  display: grid;
+  width: 100%;
+  min-width: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+  box-sizing: border-box;
+}
+.progression-track-grid .xp-cell {
+  display: block;
+  width: 8pt;
+  height: 8pt;
+  min-width: 0;
+  max-width: none;
+  flex: none;
+  box-sizing: border-box;
+  border: 1px solid #222;
+  background: #fff;
+}
+.progression-track-grid .xp-attribute-row .xp-track {
+  grid-template-columns: repeat(15, 8pt);
+}
+.progression-track-grid .xp-attribute-row .xp-cell {
+  width: 8pt;
+  height: 8pt;
+  flex-basis: 8pt;
+}
+.progression-track-grid .xp-proficiency-row .xp-track {
+  grid-template-columns: repeat(15, 8pt);
+}
+.progression-track-grid .xp-proficiency-row .xp-cell {
+  width: 8pt;
+  height: 8pt;
+}
+
+
+/* Cabeçalhos Bônus e Mod Total: dimensões compactas para evitar sobreposição. */
+#page1 .attr-values-heading,
+#page1 .skill-values-heading {
+  gap: 5pt;
+}
+#page1 .bonus-label {
+  display: block;
+  width: 13.5pt !important;
+  min-width: 13.5pt !important;
+  font-size: 5.1pt !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  text-align: center;
+}
+#page1 .total-label {
+  display: block;
+  width: 23.5pt !important;
+  min-width: 23.5pt !important;
+  font-size: 5.1pt !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  text-align: center;
+  overflow: visible;
+}
+
+
+/* Âncoras: três marcadores para os vínculos fundamentais do personagem. */
+.anchor-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6pt;
+  min-height: 19pt;
+  padding: 2pt 4pt;
+  border-bottom: 1px dotted #ccc;
+}
+.anchor-name {
+  font-size: 8pt;
+  font-weight: 600;
+  color: #222;
+}
+.anchor-box {
+  display: block;
+  width: 16pt;
+  height: 16pt;
+  flex: 0 0 16pt;
+  box-sizing: border-box;
+  border: 1.2px solid #1a1a1a;
+  background: #fff;
+}
+
+
+/* Linha de total das Âncoras: destaque discreto para o quadrado de contagem. */
+.anchor-total-row {
+  margin-top: 2pt;
+  border-top: 1px solid #999;
+  border-bottom: 0;
+  padding-top: 3pt;
+}
+.anchor-total-row .anchor-name {
+  font-weight: 700;
+}
+.anchor-total-row .anchor-box {
+  width: 19pt;
+  height: 17pt;
+  flex-basis: 19pt;
+  border-width: 1.4px;
+}
+
+
+/* Região de Âncoras da página 2. */
+.anchors-page2-region {
+  padding: 4pt 5pt 5pt;
+  margin-bottom: 4pt;
+  page-break-inside: avoid;
+}
+.anchors-page2-region > .s-box-title {
+  margin-bottom: 3pt;
+}
+.anchors-subsection-title {
+  font-size: 6.8pt;
+  font-weight: 700;
+  color: #444;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 1.5pt;
+  margin-bottom: 3pt;
+}
+.anchors-connections-block {
+  margin-bottom: 5pt;
+}
+.anchors-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 5pt;
+  align-items: stretch;
+}
+.anchor-detail-card {
+  min-width: 0;
+  border: 1px solid #d0d0d0;
+  padding: 3pt 4pt 4pt;
+}
+.anchor-detail-card .notes-lines .n-line {
+  min-height: 13pt;
+}
+.anchor-specializations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2pt;
+}
+.anchor-specialization-entry {
+  padding: 1pt 0 2pt;
+  border-bottom: 1px dotted #ccc;
+}
+.anchor-spec-name-row,
+.anchor-spec-notes-row {
+  display: flex;
+  align-items: end;
+  gap: 3pt;
+  min-height: 12pt;
+}
+.anchor-spec-label {
+  flex: 0 0 auto;
+  font-size: 5.4pt;
+  font-weight: 700;
+  color: #555;
+  white-space: nowrap;
+}
+.anchor-spec-line {
+  display: block;
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 9pt;
+  border-bottom: 1px solid #999;
+}
+
+
+/* Ajuste de densidade da página 2 para acomodar a Região de Âncoras em A4. */
+#page2 .sheet-title + .s-box {
+  padding: 3pt 5pt;
+  margin-bottom: 3pt;
+}
+#page2 .sheet-title + .s-box .field {
+  margin-bottom: 2pt;
+}
+#page2 .progression-track-grid {
+  margin-bottom: 3pt;
+  gap: 4pt;
+}
+#page2 .progression-track-grid > .s-box {
+  padding: 2pt 4pt 3pt;
+}
+#page2 .lucidez-track-box {
+  min-height: 0;
+}
+#page2 .lucidez-track {
+  min-height: 12pt;
+}
+#page2 .lucidez-cell {
+  width: 10.5pt;
+  height: 10.5pt;
+  flex-basis: 10.5pt;
+}
+#page2 .weapons-wide-box {
+  padding: 3pt 5pt;
+  margin-bottom: 3pt;
+}
+#page2 .weapon-entry {
+  min-height: 20pt;
+  padding: 1pt 3pt 0;
+}
+#page2 .weapon-entry-cell {
+  min-height: 17pt;
+}
+#page2 .equipment-details {
+  gap: 4pt;
+  margin-bottom: 3pt;
+}
+#page2 .equipment-details > .s-box {
+  padding: 3pt 5pt;
+  margin-bottom: 3pt;
+}
+#page2 .armor-equipment-field .armor-field-line,
+#page2 .armor-field-line {
+  min-height: 9pt;
+}
+#page2 .armor-equipment-field {
+  margin-bottom: 1pt;
+}
+#page2 .armor-values-grid {
+  margin-top: 1pt;
+}
+#page2 .item-line {
+  min-height: 10pt;
+  padding: 0;
+}
+#page2 .item-lines {
+  gap: 0 6pt;
+}
+#page2 .artifact-section,
+#page2 > .s-box:has(.artifact-block) {
+  padding: 3pt 5pt;
+  margin-bottom: 3pt;
+}
+#page2 .artifact-block {
+  min-height: 0;
+  padding: 2pt 4pt;
+  margin-bottom: 1pt;
+}
+#page2 .artifact-header {
+  font-size: 6.2pt;
+  margin-bottom: 1pt;
+}
+#page2 .artifact-block .field {
+  margin-bottom: 1pt;
+}
+#page2 .artifact-block .field-line {
+  min-height: 7pt;
+}
+
+/* Região de Âncoras: três conexões compactas e três áreas narrativas. */
+#page2 .anchors-page2-region {
+  padding: 3pt 4pt 4pt;
+  margin-bottom: 0;
+  page-break-inside: avoid;
+}
+#page2 .anchors-page2-region > .s-box-title {
+  padding-bottom: 1pt;
+  margin-bottom: 2pt;
+}
+#page2 .anchors-subsection-title {
+  font-size: 6.2pt;
+  padding-bottom: 1pt;
+  margin-bottom: 2pt;
+}
+#page2 .anchors-connections-block {
+  margin-bottom: 3pt;
+}
+#page2 .connections-grid {
+  gap: 4pt;
+}
+#page2 .connection-card {
+  padding: 1pt 2pt 2pt;
+  min-height: 0;
+  height: 54pt;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+#page2 .conn-slot {
+  gap: 1pt;
+  padding: 0 0 1pt;
+}
+#page2 .conn-slot .conn-field {
+  gap: 0;
+  margin-bottom: 0;
+}
+#page2 .conn-field .field-label {
+  font-size: 5.5pt !important;
+  line-height: 1;
+}
+#page2 .conn-field .field-line {
+  min-height: 6pt;
+}
+#page2 .conn-observation {
+  margin-top: 1pt;
+}
+#page2 .conn-observation-title {
+  font-size: 5.4pt;
+  line-height: 1;
+  margin-bottom: 0;
+}
+#page2 .conn-observation-line {
+  min-height: 5.5pt;
+}
+#page2 .anchors-detail-grid {
+  gap: 4pt;
+}
+#page2 .anchor-detail-card {
+  padding: 2pt 3pt 3pt;
+  min-height: 0;
+  box-sizing: border-box;
+}
+#page2 .anchor-detail-card .notes-lines .n-line {
+  min-height: 7.5pt;
+}
+#page2 .anchor-specializations-list {
+  gap: 1pt;
+}
+#page2 .anchor-specialization-entry {
+  padding: 0 0 1pt;
+}
+#page2 .anchor-spec-name-row,
+#page2 .anchor-spec-notes-row {
+  min-height: 7pt;
+  gap: 2pt;
+}
+#page2 .anchor-spec-label {
+  font-size: 5pt;
+}
+#page2 .anchor-spec-line {
+  height: 5pt;
+}
+
+
+/* ============================================================
+   PÁGINA EXCLUSIVA — REGIÃO DE ÂNCORAS
+   ============================================================ */
+.anchors-dedicated-page { page-break-before: always; }
+.anchors-page-title { font-size: 17pt; margin-bottom: 7pt; }
+.anchors-dedicated-shell { padding: 7pt 8pt 8pt; margin-bottom: 0; }
+.anchors-section { margin-bottom: 12pt; }
+.anchors-section-title {
+  font-size: 9pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #333;
+  border-bottom: 1px solid #555;
+  padding-bottom: 3pt;
+  margin-bottom: 6pt;
+}
+.anchors-connections-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, 112pt);
+  gap: 8pt;
+  align-items: stretch;
+}
+.anchor-connection-card {
+  height: 112pt;
+  min-height: 112pt;
+  box-sizing: border-box;
+  padding: 5pt 6pt;
+  border: 1px solid #aaa;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.anchor-connection-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 5pt;
+  padding-bottom: 4pt;
+  border-bottom: 1px dotted #ccc;
+}
+.anchor-connection-field { display: flex; flex-direction: column; gap: 1pt; }
+.anchor-field-label { display: block; font-size: 7pt; font-weight: 700; color: #444; }
+.anchor-field-line {
+  display: block;
+  width: 100%;
+  height: 12pt;
+  border-bottom: 1px solid #999;
+}
+.anchor-connection-observations { margin-top: 4pt; flex: 1 1 auto; }
+.anchor-observations-title {
+  font-size: 6.5pt;
+  font-weight: 700;
+  color: #666;
+  margin-bottom: 1pt;
+  text-transform: uppercase;
+}
+.anchor-observation-line { height: 10pt; border-bottom: 1px dotted #ccc; }
+.anchors-history-notes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8pt;
+  margin-bottom: 12pt;
+  align-items: stretch;
+}
+.anchor-writing-panel {
+  min-height: 145pt;
+  box-sizing: border-box;
+  border: 1px solid #aaa;
+  padding: 5pt 6pt 6pt;
+}
+.anchor-writing-panel .anchors-section-title { margin-bottom: 5pt; }
+.anchor-note-lines { display: flex; flex-direction: column; }
+.anchor-note-line { display: block; height: 13pt; border-bottom: 1px dotted #ccc; }
+.anchors-specializations-section { margin-bottom: 0; }
+.anchors-specializations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, 60pt);
+  gap: 7pt 8pt;
+}
+.anchor-specialization-card {
+  height: 60pt;
+  box-sizing: border-box;
+  border: 1px solid #aaa;
+  padding: 5pt 6pt;
+  display: flex;
+  flex-direction: column;
+  gap: 4pt;
+}
+.anchor-specialization-field { display: flex; align-items: end; gap: 5pt; }
+.anchor-specialization-name-line {
+  display: block;
+  flex: 1 1 auto;
+  height: 12pt;
+  border-bottom: 1px solid #999;
+}
+.anchor-specialization-notes { display: flex; flex-direction: column; gap: 1pt; }
+.anchor-specialization-note-line { display: block; height: 10pt; border-bottom: 1px dotted #ccc; }
+
+
+/* Indicador de Âncora no canto superior direito de cada Conexão. */
+.anchor-connection-card { position: relative; }
+.anchor-connection-marker {
+  position: absolute;
+  top: 5pt;
+  right: 6pt;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 3pt;
+  color: #555;
+  font-size: 6pt;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+.anchor-connection-checkbox {
+  display: inline-block;
+  width: 8pt;
+  height: 8pt;
+  flex: 0 0 8pt;
+  box-sizing: border-box;
+  border: 1px solid #444;
+  background: #fff;
+}
+
 </style>
 </head>
 <body>
@@ -1788,7 +2413,7 @@
   Defesa = 10 + Mod. (DES) ou Cálculo do Equipamento;
   Limiar Maior/Severo = Limiar-base da armadura + (10 - Seq.);
   sem armadura: Menor &gt; Maior = 2 + (10 - Seq.); Maior &gt; Severo = 4 + (10 - Seq.);
-  Movimento = 9 m; salvaguardas: Corpo = ⌊(Pontos.(FOR) + Pontos.(VIG)) ÷ 2⌋; Mente = ⌊(Pontos.(INT) + Pontos.(ACO)) ÷ 2⌋; Espírito = ⌊(Pontos.(ACO) + Pontos.(DET)) ÷ 2⌋. Arredonde para baixo e use <strong>ND = 10 + Mod.</strong> quando a regra comparar com a salvaguarda do alvo.
+  Movimento = 9 m.
 </div>
 
 <!-- ================================================================ -->
@@ -1831,13 +2456,13 @@
 
   <!-- ---- ATTRIBUTES ---- -->
   <div class="s-box">
-    <div class="s-box-title">Atributos </div>
+    <div class="s-box-title">Atributos <span style="font-weight:400;color:#888;font-size:7pt;"> &#9679; Mod = Pontos &minus; 2</span></div>
     <div class="grid-3">
 
       <!-- Physical -->
       <div>
         <div class="attr-category">Físicos</div>
-        <div class="attr-values-heading"><span class="bonus-label">Bônus</span><span class="total-label">Total</span></div>
+        <div class="attr-values-heading"><span class="bonus-label">Bônus</span><span class="total-label">Mod Total</span></div>
         <div class="attr-row">
           <span class="attr-name">Força <span style="font-size:6pt;color:#888;">FOR</span></span>
           <span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
@@ -1861,7 +2486,7 @@
       <!-- Social -->
       <div>
         <div class="attr-category">Sociais</div>
-        <div class="attr-values-heading"><span class="bonus-label">Bônus</span><span class="total-label">Total</span></div>
+        <div class="attr-values-heading"><span class="bonus-label">Bônus</span><span class="total-label">Mod Total</span></div>
         <div class="attr-row">
           <span class="attr-name">Carisma <span style="font-size:6pt;color:#888;">CAR</span></span>
           <span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
@@ -1885,7 +2510,7 @@
       <!-- Mental -->
       <div>
         <div class="attr-category">Mentais</div>
-        <div class="attr-values-heading"><span class="bonus-label">Bônus</span><span class="total-label">Total</span></div>
+        <div class="attr-values-heading"><span class="bonus-label">Bônus</span><span class="total-label">Mod Total</span></div>
         <div class="attr-row">
           <span class="attr-name">Inteligência <span style="font-size:6pt;color:#888;">INT</span></span>
           <span class="attr-dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
@@ -1911,11 +2536,11 @@
 
   <!-- ---- SKILLS ---- -->
   <div class="s-box">
-    <div class="s-box-title">Proficiências <span style="font-weight:400;color:#888;font-size:7pt;"> &#9679;Mod = Valor &minus; 2</span></div>
+    <div class="s-box-title">Proficiências <span style="font-weight:400;color:#888;font-size:7pt;"> &#9679; Mod = Pontos &minus; 2</span></div>
     <div class="grid-3 skill-cols">
       <div class="skill-column">
         <div class="attr-category">Talentos</div>
-        <div class="skill-values-heading"><span class="bonus-label">Bônus</span><span class="total-label">Total</span></div>
+        <div class="skill-values-heading"><span class="bonus-label">Bônus</span><span class="total-label">Mod Total</span></div>
         <div class="skill-row">
           <span class="skill-name">Acrobacia</span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
@@ -1967,7 +2592,7 @@
       </div>
       <div class="skill-column">
         <div class="attr-category">Perícias</div>
-        <div class="skill-values-heading"><span class="bonus-label">Bônus</span><span class="total-label">Total</span></div>
+        <div class="skill-values-heading"><span class="bonus-label">Bônus</span><span class="total-label">Mod Total</span></div>
         <div class="skill-row">
           <span class="skill-name">Armas Brancas</span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
@@ -2019,7 +2644,7 @@
       </div>
       <div class="skill-column">
         <div class="attr-category">Conhecimentos</div>
-        <div class="skill-values-heading"><span class="bonus-label">Bônus</span><span class="total-label">Total</span></div>
+        <div class="skill-values-heading"><span class="bonus-label">Bônus</span><span class="total-label">Mod Total</span></div>
         <div class="skill-row">
           <span class="skill-name">Ciências</span>
           <span class="skill-dots"><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span>
@@ -2162,34 +2787,36 @@
       </div>
     </div>
 
-    <!-- Saves -->
+    <!-- Âncoras -->
     <div class="s-box">
-      <div class="s-box-title">Salvaguardas </div>
+      <div class="s-box-title">Âncoras</div>
 
-      <div class="save-row">
-        <span class="save-name">Corpo</span>
-        <span class="save-formula">Mod. = ⌊(Pontos.(FOR) + Pontos.(VIG)) ÷ 2⌋</span>
-        <span class="save-box"></span>
+      <div class="anchor-row">
+        <span class="anchor-name">Identidade</span>
+        <span class="anchor-box" aria-label="Marcar Identidade"></span>
       </div>
 
-      <div class="save-row">
-        <span class="save-name">Mente</span>
-        <span class="save-formula">Mod. = ⌊(Pontos.(INT) + Pontos.(ACO)) ÷ 2⌋</span>
-        <span class="save-box"></span>
+      <div class="anchor-row">
+        <span class="anchor-name">Relacionamentos</span>
+        <span class="anchor-box" aria-label="Marcar Relacionamentos"></span>
       </div>
 
-      <div class="save-row">
-        <span class="save-name">Espírito</span>
-        <span class="save-formula">Mod. = ⌊(Pontos.(ACO) + Pontos.(DET)) ÷ 2⌋</span>
-        <span class="save-box"></span>
+      <div class="anchor-row">
+        <span class="anchor-name">Reconhecimento</span>
+        <span class="anchor-box" aria-label="Marcar Reconhecimento"></span>
+      </div>
+
+      <div class="anchor-row anchor-total-row">
+        <span class="anchor-name">Total</span>
+        <span class="anchor-box" aria-label="Total de Âncoras"></span>
       </div>
 
       <div style="margin-top: 6pt;">
         <div class="s-box-title" style="font-size:7pt;">Fórmulas Rápidas <span style="font-weight:400;color:#666;">(Cap. 3 — todos os Caminhos)</span></div>
         <div style="font-size:6.5pt; color:#555; line-height:1.55;">
-          <strong>Mod. atributo/perícia</strong> = valor − 2<br>
+          <strong>Mod. atributo/perícia</strong> = Pontos − 2<br>
           <strong>PV</strong> = 3 + Pontos. (VIG) + (10 - Seq.) (+1 na Seq. 9; +2 na Seq. 8; ...)<br>
-          <strong>Espiritualidade</strong> = Caminho + Mod. (DET) + Mod. (ACO)<br>
+          <strong>Espiritualidade</strong> = Caminho + Digestão de poção<br>
           <strong>Lucidez inicial</strong> = 7<br>
           <strong>Defesa</strong> = 10 + Mod. (DES) ou Cálculo do Equipamento<br>
           <strong>Limiar Maior/Severo</strong> = Limiar-base da armadura + (10 - Seq.)<br>
@@ -2230,21 +2857,25 @@
   </div>
 
 
-  <!-- ---- LUCIDEZ ---- -->
-  <div class="s-box lucidez-track-box">
-    <div class="s-box-title">Lucidez</div>
-    <div class="lucidez-track" aria-label="Trilha de Lucidez com dez espaços">
-      <span class="lucidez-cell"></span>
-      <span class="lucidez-cell"></span>
-      <span class="lucidez-cell"></span>
-      <span class="lucidez-cell"></span>
-      <span class="lucidez-cell"></span>
-      <span class="lucidez-cell"></span>
-      <span class="lucidez-cell"></span>
-      <span class="lucidez-cell"></span>
-      <span class="lucidez-cell"></span>
-      <span class="lucidez-cell"></span>
+  <!-- ---- LUCIDEZ + EXPERIENCE ---- -->
+  <div class="grid-2 progression-track-grid">
+    <div class="s-box lucidez-track-box">
+      <div class="s-box-title">Lucidez</div>
+      <div class="lucidez-track" aria-label="Trilha de Lucidez com dez espaços">
+        <span class="lucidez-cell"></span>
+        <span class="lucidez-cell"></span>
+        <span class="lucidez-cell"></span>
+        <span class="lucidez-cell"></span>
+        <span class="lucidez-cell"></span>
+        <span class="lucidez-cell"></span>
+        <span class="lucidez-cell"></span>
+        <span class="lucidez-cell"></span>
+        <span class="lucidez-cell"></span>
+        <span class="lucidez-cell"></span>
+      </div>
     </div>
+
+<div class="s-box xp-track-box"><div class="xp-track-row xp-attribute-row"><span class="xp-track-label">XP de Atributo</span><div class="xp-track" aria-label="XP de Atributo: 5 espaços"><span class="xp-cell"></span><span class="xp-cell"></span><span class="xp-cell"></span><span class="xp-cell"></span><span class="xp-cell"></span><span class="xp-cell"></span><span class="xp-cell"></span><span class="xp-cell"></span><span class="xp-cell"></span><span class="xp-cell"></span><span class="xp-cell"></span><span class="xp-cell"></span><span class="xp-cell"></span><span class="xp-cell"></span><span class="xp-cell"></span></div></div><div class="xp-track-row xp-proficiency-row"><span class="xp-track-label">XP de Proficiência</span><div class="xp-track" aria-label="XP de Proficiência: 15 espaços"><span class="xp-cell"></span><span class="xp-cell"></span><span class="xp-cell"></span><span class="xp-cell"></span><span class="xp-cell"></span><span class="xp-cell"></span><span class="xp-cell"></span><span class="xp-cell"></span><span class="xp-cell"></span><span class="xp-cell"></span><span class="xp-cell"></span><span class="xp-cell"></span><span class="xp-cell"></span><span class="xp-cell"></span><span class="xp-cell"></span></div></div></div>
   </div>
 
   <!-- ---- EQUIPMENT ---- -->
@@ -2347,88 +2978,221 @@
     </div>
   </div>
 
-  <!-- ---- CONNECTIONS ---- -->
-  <div class="s-box connections-box">
-    <div class="s-box-title">Conexões </div>
-    <div class="grid-3 connections-grid">
-      <div class="connection-card">
-        <div class="conn-slot">
-          <div class="field conn-field">
-            <span class="field-label">Nome</span>
-            <span class="field-line"></span>
-          </div>
-          <div class="field conn-field">
-            <span class="field-label">Relação</span>
-            <span class="field-line"></span>
-          </div>
+  </div><!-- end page 2 -->
+
+<!-- ---- ÂNCORAS: PÁGINA DEDICADA ---- -->
+<div class="sheet sheet-page-break anchors-dedicated-page" id="anchorsPage">
+  <div class="sheet-title anchors-page-title">Região de Âncoras</div>
+
+  <div class="s-box anchors-dedicated-shell">
+    <div class="anchors-section">
+      <div class="anchors-section-title">Conexões</div>
+      <div class="grid-3 anchors-connections-grid">
+        <div class="connection-card anchor-connection-card" aria-label="Conexão 1">
+      <div class="anchor-connection-marker">
+        <span>Âncora</span>
+        <span class="anchor-connection-checkbox" aria-label="Marcar como Âncora"></span>
+      </div>
+      <div class="anchor-connection-fields">
+        <div class="anchor-connection-field">
+          <span class="anchor-field-label">Nome</span>
+          <span class="anchor-field-line"></span>
         </div>
-        <div class="conn-observation">
-          <div class="conn-observation-title">Observações</div>
-          <div class="conn-observation-line"></div>
-          <div class="conn-observation-line"></div>
-          <div class="conn-observation-line"></div>
+        <div class="anchor-connection-field">
+          <span class="anchor-field-label">Relação</span>
+          <span class="anchor-field-line"></span>
         </div>
       </div>
-
-      <div class="connection-card">
-        <div class="conn-slot">
-          <div class="field conn-field">
-            <span class="field-label">Nome</span>
-            <span class="field-line"></span>
-          </div>
-          <div class="field conn-field">
-            <span class="field-label">Relação</span>
-            <span class="field-line"></span>
-          </div>
+      <div class="anchor-connection-observations">
+        <div class="anchor-observations-title">Observações</div>
+        <div class="anchor-observation-line"></div>
+        <div class="anchor-observation-line"></div>
+        <div class="anchor-observation-line"></div>
+        <div class="anchor-observation-line"></div>
+      </div>
+    </div>
+<div class="connection-card anchor-connection-card" aria-label="Conexão 2">
+      <div class="anchor-connection-marker">
+        <span>Âncora</span>
+        <span class="anchor-connection-checkbox" aria-label="Marcar como Âncora"></span>
+      </div>
+      <div class="anchor-connection-fields">
+        <div class="anchor-connection-field">
+          <span class="anchor-field-label">Nome</span>
+          <span class="anchor-field-line"></span>
         </div>
-        <div class="conn-observation">
-          <div class="conn-observation-title">Observações</div>
-          <div class="conn-observation-line"></div>
-          <div class="conn-observation-line"></div>
-          <div class="conn-observation-line"></div>
+        <div class="anchor-connection-field">
+          <span class="anchor-field-label">Relação</span>
+          <span class="anchor-field-line"></span>
         </div>
       </div>
+      <div class="anchor-connection-observations">
+        <div class="anchor-observations-title">Observações</div>
+        <div class="anchor-observation-line"></div>
+        <div class="anchor-observation-line"></div>
+        <div class="anchor-observation-line"></div>
+        <div class="anchor-observation-line"></div>
+      </div>
+    </div>
+<div class="connection-card anchor-connection-card" aria-label="Conexão 3">
+      <div class="anchor-connection-marker">
+        <span>Âncora</span>
+        <span class="anchor-connection-checkbox" aria-label="Marcar como Âncora"></span>
+      </div>
+      <div class="anchor-connection-fields">
+        <div class="anchor-connection-field">
+          <span class="anchor-field-label">Nome</span>
+          <span class="anchor-field-line"></span>
+        </div>
+        <div class="anchor-connection-field">
+          <span class="anchor-field-label">Relação</span>
+          <span class="anchor-field-line"></span>
+        </div>
+      </div>
+      <div class="anchor-connection-observations">
+        <div class="anchor-observations-title">Observações</div>
+        <div class="anchor-observation-line"></div>
+        <div class="anchor-observation-line"></div>
+        <div class="anchor-observation-line"></div>
+        <div class="anchor-observation-line"></div>
+      </div>
+    </div>
+<div class="connection-card anchor-connection-card" aria-label="Conexão 4">
+      <div class="anchor-connection-marker">
+        <span>Âncora</span>
+        <span class="anchor-connection-checkbox" aria-label="Marcar como Âncora"></span>
+      </div>
+      <div class="anchor-connection-fields">
+        <div class="anchor-connection-field">
+          <span class="anchor-field-label">Nome</span>
+          <span class="anchor-field-line"></span>
+        </div>
+        <div class="anchor-connection-field">
+          <span class="anchor-field-label">Relação</span>
+          <span class="anchor-field-line"></span>
+        </div>
+      </div>
+      <div class="anchor-connection-observations">
+        <div class="anchor-observations-title">Observações</div>
+        <div class="anchor-observation-line"></div>
+        <div class="anchor-observation-line"></div>
+        <div class="anchor-observation-line"></div>
+        <div class="anchor-observation-line"></div>
+      </div>
+    </div>
+<div class="connection-card anchor-connection-card" aria-label="Conexão 5">
+      <div class="anchor-connection-marker">
+        <span>Âncora</span>
+        <span class="anchor-connection-checkbox" aria-label="Marcar como Âncora"></span>
+      </div>
+      <div class="anchor-connection-fields">
+        <div class="anchor-connection-field">
+          <span class="anchor-field-label">Nome</span>
+          <span class="anchor-field-line"></span>
+        </div>
+        <div class="anchor-connection-field">
+          <span class="anchor-field-label">Relação</span>
+          <span class="anchor-field-line"></span>
+        </div>
+      </div>
+      <div class="anchor-connection-observations">
+        <div class="anchor-observations-title">Observações</div>
+        <div class="anchor-observation-line"></div>
+        <div class="anchor-observation-line"></div>
+        <div class="anchor-observation-line"></div>
+        <div class="anchor-observation-line"></div>
+      </div>
+    </div>
+<div class="connection-card anchor-connection-card" aria-label="Conexão 6">
+      <div class="anchor-connection-marker">
+        <span>Âncora</span>
+        <span class="anchor-connection-checkbox" aria-label="Marcar como Âncora"></span>
+      </div>
+      <div class="anchor-connection-fields">
+        <div class="anchor-connection-field">
+          <span class="anchor-field-label">Nome</span>
+          <span class="anchor-field-line"></span>
+        </div>
+        <div class="anchor-connection-field">
+          <span class="anchor-field-label">Relação</span>
+          <span class="anchor-field-line"></span>
+        </div>
+      </div>
+      <div class="anchor-connection-observations">
+        <div class="anchor-observations-title">Observações</div>
+        <div class="anchor-observation-line"></div>
+        <div class="anchor-observation-line"></div>
+        <div class="anchor-observation-line"></div>
+        <div class="anchor-observation-line"></div>
+      </div>
+    </div>
+      </div>
+    </div>
 
-      <div class="connection-card">
-        <div class="conn-slot">
-          <div class="field conn-field">
-            <span class="field-label">Nome</span>
-            <span class="field-line"></span>
-          </div>
-          <div class="field conn-field">
-            <span class="field-label">Relação</span>
-            <span class="field-line"></span>
-          </div>
-        </div>
-        <div class="conn-observation">
-          <div class="conn-observation-title">Observações</div>
-          <div class="conn-observation-line"></div>
-          <div class="conn-observation-line"></div>
-          <div class="conn-observation-line"></div>
-        </div>
+    <div class="grid-2 anchors-history-notes-grid">
+      <div class="anchor-writing-panel">
+        <div class="anchors-section-title">História</div>
+        <div class="anchor-note-lines"><div class="anchor-note-line"></div><div class="anchor-note-line"></div><div class="anchor-note-line"></div><div class="anchor-note-line"></div><div class="anchor-note-line"></div><div class="anchor-note-line"></div><div class="anchor-note-line"></div><div class="anchor-note-line"></div><div class="anchor-note-line"></div></div>
+      </div>
+      <div class="anchor-writing-panel">
+        <div class="anchors-section-title">Notas</div>
+        <div class="anchor-note-lines"><div class="anchor-note-line"></div><div class="anchor-note-line"></div><div class="anchor-note-line"></div><div class="anchor-note-line"></div><div class="anchor-note-line"></div><div class="anchor-note-line"></div><div class="anchor-note-line"></div><div class="anchor-note-line"></div><div class="anchor-note-line"></div></div>
+      </div>
+    </div>
+
+    <div class="anchors-section anchors-specializations-section">
+      <div class="anchors-section-title">Especializações</div>
+      <div class="grid-2 anchors-specializations-grid">
+        <div class="anchor-specialization-card">
+      <div class="anchor-specialization-field">
+        <span class="anchor-field-label">Nome</span>
+        <span class="anchor-specialization-name-line"></span>
+      </div>
+      <div class="anchor-specialization-notes">
+        <span class="anchor-field-label">Anotações</span>
+        <div class="anchor-specialization-note-line"></div>
+        <div class="anchor-specialization-note-line"></div>
+      </div>
+    </div>
+<div class="anchor-specialization-card">
+      <div class="anchor-specialization-field">
+        <span class="anchor-field-label">Nome</span>
+        <span class="anchor-specialization-name-line"></span>
+      </div>
+      <div class="anchor-specialization-notes">
+        <span class="anchor-field-label">Anotações</span>
+        <div class="anchor-specialization-note-line"></div>
+        <div class="anchor-specialization-note-line"></div>
+      </div>
+    </div>
+<div class="anchor-specialization-card">
+      <div class="anchor-specialization-field">
+        <span class="anchor-field-label">Nome</span>
+        <span class="anchor-specialization-name-line"></span>
+      </div>
+      <div class="anchor-specialization-notes">
+        <span class="anchor-field-label">Anotações</span>
+        <div class="anchor-specialization-note-line"></div>
+        <div class="anchor-specialization-note-line"></div>
+      </div>
+    </div>
+<div class="anchor-specialization-card">
+      <div class="anchor-specialization-field">
+        <span class="anchor-field-label">Nome</span>
+        <span class="anchor-specialization-name-line"></span>
+      </div>
+      <div class="anchor-specialization-notes">
+        <span class="anchor-field-label">Anotações</span>
+        <div class="anchor-specialization-note-line"></div>
+        <div class="anchor-specialization-note-line"></div>
+      </div>
+    </div>
       </div>
     </div>
   </div>
+</div>
 
-    <!-- ---- BACKSTORY + NOTES ---- -->
-  <div class="grid-2">
-    <div class="s-box">
-      <div class="s-box-title">História </div>
-      <div class="notes-lines">
-        <div class="n-line"></div><div class="n-line"></div><div class="n-line"></div>
-        <div class="n-line"></div><div class="n-line"></div><div class="n-line"></div>
-      </div>
-    </div>
-    <div class="s-box">
-      <div class="s-box-title">Notas </div>
-      <div class="notes-lines">
-        <div class="n-line"></div><div class="n-line"></div><div class="n-line"></div>
-        <div class="n-line"></div><div class="n-line"></div><div class="n-line"></div>
-      </div>
-    </div>
-  </div>
-
-</div><!-- end page 2 -->
+  <!-- ---- BEYONDER POWERS: PAGE 4 ---- -->
 
   <!-- ---- BEYONDER POWERS: PAGE 3 ---- -->
   <div class="sheet sheet-page-break powers-page" id="page3">
@@ -2442,6 +3206,10 @@
           <span class="power-name power-fill"></span>
           <span class="power-lbl">Custo</span>
           <span class="power-cost power-fill"></span>
+          <span class="power-tuning" aria-label="Poder sintonizado">
+            <span class="power-tuning-box"></span>
+            <span class="power-tuning-label">Sint.</span>
+          </span>
         </div>
         <div class="power-meta-row">
           <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
@@ -2458,6 +3226,10 @@
           <span class="power-name power-fill"></span>
           <span class="power-lbl">Custo</span>
           <span class="power-cost power-fill"></span>
+          <span class="power-tuning" aria-label="Poder sintonizado">
+            <span class="power-tuning-box"></span>
+            <span class="power-tuning-label">Sint.</span>
+          </span>
         </div>
         <div class="power-meta-row">
           <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
@@ -2474,6 +3246,10 @@
           <span class="power-name power-fill"></span>
           <span class="power-lbl">Custo</span>
           <span class="power-cost power-fill"></span>
+          <span class="power-tuning" aria-label="Poder sintonizado">
+            <span class="power-tuning-box"></span>
+            <span class="power-tuning-label">Sint.</span>
+          </span>
         </div>
         <div class="power-meta-row">
           <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
@@ -2490,6 +3266,10 @@
           <span class="power-name power-fill"></span>
           <span class="power-lbl">Custo</span>
           <span class="power-cost power-fill"></span>
+          <span class="power-tuning" aria-label="Poder sintonizado">
+            <span class="power-tuning-box"></span>
+            <span class="power-tuning-label">Sint.</span>
+          </span>
         </div>
         <div class="power-meta-row">
           <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
@@ -2506,6 +3286,10 @@
           <span class="power-name power-fill"></span>
           <span class="power-lbl">Custo</span>
           <span class="power-cost power-fill"></span>
+          <span class="power-tuning" aria-label="Poder sintonizado">
+            <span class="power-tuning-box"></span>
+            <span class="power-tuning-label">Sint.</span>
+          </span>
         </div>
         <div class="power-meta-row">
           <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
@@ -2522,6 +3306,10 @@
           <span class="power-name power-fill"></span>
           <span class="power-lbl">Custo</span>
           <span class="power-cost power-fill"></span>
+          <span class="power-tuning" aria-label="Poder sintonizado">
+            <span class="power-tuning-box"></span>
+            <span class="power-tuning-label">Sint.</span>
+          </span>
         </div>
         <div class="power-meta-row">
           <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
@@ -2538,6 +3326,10 @@
           <span class="power-name power-fill"></span>
           <span class="power-lbl">Custo</span>
           <span class="power-cost power-fill"></span>
+          <span class="power-tuning" aria-label="Poder sintonizado">
+            <span class="power-tuning-box"></span>
+            <span class="power-tuning-label">Sint.</span>
+          </span>
         </div>
         <div class="power-meta-row">
           <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
@@ -2554,6 +3346,10 @@
           <span class="power-name power-fill"></span>
           <span class="power-lbl">Custo</span>
           <span class="power-cost power-fill"></span>
+          <span class="power-tuning" aria-label="Poder sintonizado">
+            <span class="power-tuning-box"></span>
+            <span class="power-tuning-label">Sint.</span>
+          </span>
         </div>
         <div class="power-meta-row">
           <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
@@ -2570,6 +3366,10 @@
           <span class="power-name power-fill"></span>
           <span class="power-lbl">Custo</span>
           <span class="power-cost power-fill"></span>
+          <span class="power-tuning" aria-label="Poder sintonizado">
+            <span class="power-tuning-box"></span>
+            <span class="power-tuning-label">Sint.</span>
+          </span>
         </div>
         <div class="power-meta-row">
           <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
@@ -2586,6 +3386,10 @@
           <span class="power-name power-fill"></span>
           <span class="power-lbl">Custo</span>
           <span class="power-cost power-fill"></span>
+          <span class="power-tuning" aria-label="Poder sintonizado">
+            <span class="power-tuning-box"></span>
+            <span class="power-tuning-label">Sint.</span>
+          </span>
         </div>
         <div class="power-meta-row">
           <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
@@ -2602,6 +3406,10 @@
           <span class="power-name power-fill"></span>
           <span class="power-lbl">Custo</span>
           <span class="power-cost power-fill"></span>
+          <span class="power-tuning" aria-label="Poder sintonizado">
+            <span class="power-tuning-box"></span>
+            <span class="power-tuning-label">Sint.</span>
+          </span>
         </div>
         <div class="power-meta-row">
           <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
@@ -2618,6 +3426,10 @@
           <span class="power-name power-fill"></span>
           <span class="power-lbl">Custo</span>
           <span class="power-cost power-fill"></span>
+          <span class="power-tuning" aria-label="Poder sintonizado">
+            <span class="power-tuning-box"></span>
+            <span class="power-tuning-label">Sint.</span>
+          </span>
         </div>
         <div class="power-meta-row">
           <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
@@ -2634,6 +3446,10 @@
           <span class="power-name power-fill"></span>
           <span class="power-lbl">Custo</span>
           <span class="power-cost power-fill"></span>
+          <span class="power-tuning" aria-label="Poder sintonizado">
+            <span class="power-tuning-box"></span>
+            <span class="power-tuning-label">Sint.</span>
+          </span>
         </div>
         <div class="power-meta-row">
           <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
@@ -2650,6 +3466,10 @@
           <span class="power-name power-fill"></span>
           <span class="power-lbl">Custo</span>
           <span class="power-cost power-fill"></span>
+          <span class="power-tuning" aria-label="Poder sintonizado">
+            <span class="power-tuning-box"></span>
+            <span class="power-tuning-label">Sint.</span>
+          </span>
         </div>
         <div class="power-meta-row">
           <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
@@ -2666,6 +3486,10 @@
           <span class="power-name power-fill"></span>
           <span class="power-lbl">Custo</span>
           <span class="power-cost power-fill"></span>
+          <span class="power-tuning" aria-label="Poder sintonizado">
+            <span class="power-tuning-box"></span>
+            <span class="power-tuning-label">Sint.</span>
+          </span>
         </div>
         <div class="power-meta-row">
           <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
@@ -2682,6 +3506,10 @@
           <span class="power-name power-fill"></span>
           <span class="power-lbl">Custo</span>
           <span class="power-cost power-fill"></span>
+          <span class="power-tuning" aria-label="Poder sintonizado">
+            <span class="power-tuning-box"></span>
+            <span class="power-tuning-label">Sint.</span>
+          </span>
         </div>
         <div class="power-meta-row">
           <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
@@ -2698,6 +3526,10 @@
           <span class="power-name power-fill"></span>
           <span class="power-lbl">Custo</span>
           <span class="power-cost power-fill"></span>
+          <span class="power-tuning" aria-label="Poder sintonizado">
+            <span class="power-tuning-box"></span>
+            <span class="power-tuning-label">Sint.</span>
+          </span>
         </div>
         <div class="power-meta-row">
           <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
@@ -2714,6 +3546,10 @@
           <span class="power-name power-fill"></span>
           <span class="power-lbl">Custo</span>
           <span class="power-cost power-fill"></span>
+          <span class="power-tuning" aria-label="Poder sintonizado">
+            <span class="power-tuning-box"></span>
+            <span class="power-tuning-label">Sint.</span>
+          </span>
         </div>
         <div class="power-meta-row">
           <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
@@ -2730,6 +3566,10 @@
           <span class="power-name power-fill"></span>
           <span class="power-lbl">Custo</span>
           <span class="power-cost power-fill"></span>
+          <span class="power-tuning" aria-label="Poder sintonizado">
+            <span class="power-tuning-box"></span>
+            <span class="power-tuning-label">Sint.</span>
+          </span>
         </div>
         <div class="power-meta-row">
           <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
@@ -2746,6 +3586,10 @@
           <span class="power-name power-fill"></span>
           <span class="power-lbl">Custo</span>
           <span class="power-cost power-fill"></span>
+          <span class="power-tuning" aria-label="Poder sintonizado">
+            <span class="power-tuning-box"></span>
+            <span class="power-tuning-label">Sint.</span>
+          </span>
         </div>
         <div class="power-meta-row">
           <div class="power-meta"><span class="power-lbl">Ação</span><span class="power-meta-val power-fill"></span></div>
