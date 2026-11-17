@@ -3,69 +3,69 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Conflito | Senhor dos Mistérios RPG</title>
+<title>Capítulo 7 — Conflitos | Senhor dos Mistérios RPG</title>
 <link rel="stylesheet" href="../assets/css/common.css">
 <link rel="stylesheet" href="../assets/css/print.css">
 <style>
-  .combat-chapter { max-width: 1080px; margin: 0 auto; padding: 1rem 1.25rem 2rem; color: #28241e; line-height: 1.62; }
-  .combat-chapter h1 { margin: 0 0 1rem; padding-bottom: .65rem; border-bottom: 3px solid #9a742b; color: #765719; }
-  .combat-chapter h2 { margin: 2.1rem 0 .8rem; padding: .45rem .7rem; border-left: 5px solid #9a742b; border-bottom: 1px solid #d6c7a8; background: #f3ecdf; color: #654b1c; font-size: 1.42rem; }
-  .combat-chapter h3 { margin: 1.35rem 0 .5rem; color: #315f9f; font-size: 1.12rem; }
-  .combat-chapter h4 { margin: .2rem 0 .45rem; color: #765719; font-size: 1rem; }
-  .combat-chapter p { margin: .55rem 0 .8rem; }
-  .combat-chapter blockquote { margin: 1rem 0 1.3rem; padding: .9rem 1.1rem; border-left: 4px solid #9a742b; background: #f4efe5; font-style: italic; }
-  .combat-chapter .cite { display: block; margin-top: .35rem; font-size: .88rem; text-align: right; font-style: normal; color: #6c6252; }
-  .combat-chapter .version-strip { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin: .8rem 0 1.1rem; color: #655b4c; font-size: .88rem; }
-  .combat-chapter .version-pill { display: inline-block; padding: .18rem .55rem; border: 1px solid #c4a86b; border-radius: 999px; color: #725318; background: #f8f1e2; font-weight: 700; }
-  .combat-chapter .intro-panel, .combat-chapter .rule-box, .combat-chapter .note-box, .combat-chapter .warning-box, .combat-chapter .example-box, .combat-chapter .formula-box, .combat-chapter .summary-box { margin: .85rem 0 1rem; padding: .9rem 1rem; border: 1px solid #d8c9aa; border-radius: 6px; background: #fbf8f1; break-inside: avoid; page-break-inside: avoid; }
-  .combat-chapter .rule-box { border-left: 4px solid #3c6c9e; background: #f1f5fa; }
-  .combat-chapter .note-box { border-left: 4px solid #9a742b; background: #f8f1e2; }
-  .combat-chapter .warning-box { border-left: 4px solid #a63f35; background: #fbf0ee; }
-  .combat-chapter .example-box { border-left: 4px solid #6b8b67; background: #f2f7f0; }
-  .combat-chapter .formula-box { text-align: center; border: 1px solid #b9c9dc; background: #edf3fa; }
-  .combat-chapter .formula { display: block; margin: .3rem 0; font-size: 1.13rem; font-weight: 700; color: #254d7b; }
-  .combat-chapter .box-title { margin-bottom: .45rem; color: #765719; font-weight: 800; text-transform: uppercase; letter-spacing: .025em; font-size: .88rem; }
-  .combat-chapter .two-col { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: .8rem; }
-  .combat-chapter .three-col { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: .7rem; }
-  .combat-chapter .four-col { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: .7rem; }
-  .combat-chapter .mini-card { padding: .75rem; border: 1px solid #d9cfbd; border-radius: 5px; background: #fffdf8; break-inside: avoid; }
-  .combat-chapter .mini-card strong { color: #765719; }
-  .combat-chapter .toc { margin: 1rem 0 1.5rem; padding: .9rem 1rem; border: 1px solid #c8d4e2; border-radius: 6px; background: #f4f7fb; }
-  .combat-chapter .toc-title { margin: 0 0 .45rem; color: #315f9f; font-weight: 800; }
-  .combat-chapter .toc ol { columns: 2; column-gap: 2rem; margin: .2rem 0 0; padding-left: 1.3rem; }
-  .combat-chapter .toc li { margin: .18rem 0; break-inside: avoid; }
-  .combat-chapter a { color: #315f9f; }
-  .combat-chapter table { width: 100%; border-collapse: collapse; margin: .7rem 0 1rem; font-size: .94rem; }
-  .combat-chapter th { padding: .55rem .6rem; background: #292824; color: #f7f1e5; text-align: left; }
-  .combat-chapter td { padding: .5rem .6rem; border-bottom: 1px solid #e1d8c8; vertical-align: top; }
-  .combat-chapter tbody tr:nth-child(even) { background: #f4eddf; }
-  .combat-chapter ul, .combat-chapter ol { padding-left: 1.35rem; }
-  .combat-chapter li { margin: .25rem 0; }
-  .combat-chapter .small { color: #665f53; font-size: .9rem; }
-  .combat-chapter .tag { display: inline-block; padding: .08rem .4rem; border-radius: 3px; background: #e8edf3; color: #315f9f; font-size: .8rem; font-weight: 700; }
-  .combat-chapter .focus-marker { display: inline-block; margin: 0 .12rem; padding: .08rem .42rem; border: 1px solid #b68a32; border-radius: 999px; background: #f8edcf; color: #725318; font-size: .76rem; font-weight: 800; letter-spacing: .02em; white-space: nowrap; }
-  .combat-chapter .cycle-marker-panel { display: flex; align-items: center; gap: .85rem; margin: .75rem 0 1rem; padding: .8rem .9rem; border: 1px solid #d4c39f; border-radius: 6px; background: #f8f1e2; }
-  .combat-chapter .cycle-marker-token { display: inline-flex; flex: 0 0 auto; width: 2.55rem; height: 2.55rem; align-items: center; justify-content: center; border: 2px solid #9a742b; border-radius: 50%; background: #fffaf0; color: #765719; font-weight: 800; }
-  .combat-chapter .cycle-marker-panel p { margin: .18rem 0 0; }
-  @media (max-width: 520px) { .combat-chapter .cycle-marker-panel { align-items: flex-start; flex-direction: column; } }
-  .combat-chapter .interruption-panel { display: flex; align-items: center; gap: .85rem; margin: .7rem 0 1rem; padding: .8rem .9rem; border: 1px solid #a8bfd8; border-radius: 6px; background: #edf3fa; }
-  .combat-chapter .interruption-token { flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; min-width: 5.4rem; min-height: 3rem; padding: .25rem .5rem; border: 2px solid #315f9f; border-radius: 7px; background: #315f9f; color: #fff; font-size: .72rem; font-weight: 800; text-align: center; letter-spacing: .03em; }
-  .combat-chapter .interruption-panel p { margin: .2rem 0 0; }
-  @media (max-width: 520px) { .combat-chapter .interruption-panel { align-items: flex-start; flex-direction: column; } }
-  .combat-chapter .separator { height: 1px; margin: 1.5rem 0; background: #d8c9aa; }
-  .combat-chapter .quick-ref h3 { margin-top: 1rem; padding-bottom: .25rem; border-bottom: 1px solid #d8c9aa; }
-  .combat-chapter .quick-ref ul { margin-top: .35rem; }
-  .combat-chapter .book-nav { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #d8c9aa; }
-  .combat-chapter .book-nav a { font-weight: 700; text-decoration: none; }
-  @media (max-width: 900px) { .combat-chapter .four-col { grid-template-columns: repeat(2, minmax(0,1fr)); } }
-  @media (max-width: 720px) { .combat-chapter .two-col, .combat-chapter .three-col, .combat-chapter .four-col { grid-template-columns: 1fr; } .combat-chapter .toc ol { columns: 1; } .combat-chapter table { display: block; overflow-x: auto; } }
-  @media print { .combat-chapter { max-width: none; padding: 0; } .combat-chapter h2 { break-after: avoid; page-break-after: avoid; } .combat-chapter .toc { break-inside: avoid; } .combat-chapter a { color: inherit; text-decoration: none; } }
+  .conflict-chapter { max-width: 1080px; margin: 0 auto; padding: 1rem 1.25rem 2rem; color: #28241e; line-height: 1.62; }
+  .conflict-chapter h1 { margin: 0 0 1rem; padding-bottom: .65rem; border-bottom: 3px solid #9a742b; color: #765719; }
+  .conflict-chapter h2 { margin: 2.1rem 0 .8rem; padding: .45rem .7rem; border-left: 5px solid #9a742b; border-bottom: 1px solid #d6c7a8; background: #f3ecdf; color: #654b1c; font-size: 1.42rem; }
+  .conflict-chapter h3 { margin: 1.35rem 0 .5rem; color: #315f9f; font-size: 1.12rem; }
+  .conflict-chapter h4 { margin: .2rem 0 .45rem; color: #765719; font-size: 1rem; }
+  .conflict-chapter p { margin: .55rem 0 .8rem; }
+  .conflict-chapter blockquote { margin: 1rem 0 1.3rem; padding: .9rem 1.1rem; border-left: 4px solid #9a742b; background: #f4efe5; font-style: italic; }
+  .conflict-chapter .cite { display: block; margin-top: .35rem; font-size: .88rem; text-align: right; font-style: normal; color: #6c6252; }
+  .conflict-chapter .version-strip { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin: .8rem 0 1.1rem; color: #655b4c; font-size: .88rem; }
+  .conflict-chapter .version-pill { display: inline-block; padding: .18rem .55rem; border: 1px solid #c4a86b; border-radius: 999px; color: #725318; background: #f8f1e2; font-weight: 700; }
+  .conflict-chapter .intro-panel, .conflict-chapter .rule-box, .conflict-chapter .note-box, .conflict-chapter .warning-box, .conflict-chapter .example-box, .conflict-chapter .formula-box, .conflict-chapter .summary-box { margin: .85rem 0 1rem; padding: .9rem 1rem; border: 1px solid #d8c9aa; border-radius: 6px; background: #fbf8f1; break-inside: avoid; page-break-inside: avoid; }
+  .conflict-chapter .rule-box { border-left: 4px solid #3c6c9e; background: #f1f5fa; }
+  .conflict-chapter .note-box { border-left: 4px solid #9a742b; background: #f8f1e2; }
+  .conflict-chapter .warning-box { border-left: 4px solid #a63f35; background: #fbf0ee; }
+  .conflict-chapter .example-box { border-left: 4px solid #6b8b67; background: #f2f7f0; }
+  .conflict-chapter .formula-box { text-align: center; border: 1px solid #b9c9dc; background: #edf3fa; }
+  .conflict-chapter .formula { display: block; margin: .3rem 0; font-size: 1.13rem; font-weight: 700; color: #254d7b; }
+  .conflict-chapter .box-title { margin-bottom: .45rem; color: #765719; font-weight: 800; text-transform: uppercase; letter-spacing: .025em; font-size: .88rem; }
+  .conflict-chapter .two-col { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: .8rem; }
+  .conflict-chapter .three-col { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: .7rem; }
+  .conflict-chapter .four-col { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: .7rem; }
+  .conflict-chapter .mini-card { padding: .75rem; border: 1px solid #d9cfbd; border-radius: 5px; background: #fffdf8; break-inside: avoid; }
+  .conflict-chapter .mini-card strong { color: #765719; }
+  .conflict-chapter .toc { margin: 1rem 0 1.5rem; padding: .9rem 1rem; border: 1px solid #c8d4e2; border-radius: 6px; background: #f4f7fb; }
+  .conflict-chapter .toc-title { margin: 0 0 .45rem; color: #315f9f; font-weight: 800; }
+  .conflict-chapter .toc ol { columns: 2; column-gap: 2rem; margin: .2rem 0 0; padding-left: 1.3rem; }
+  .conflict-chapter .toc li { margin: .18rem 0; break-inside: avoid; }
+  .conflict-chapter a { color: #315f9f; }
+  .conflict-chapter table { width: 100%; border-collapse: collapse; margin: .7rem 0 1rem; font-size: .94rem; }
+  .conflict-chapter th { padding: .55rem .6rem; background: #292824; color: #f7f1e5; text-align: left; }
+  .conflict-chapter td { padding: .5rem .6rem; border-bottom: 1px solid #e1d8c8; vertical-align: top; }
+  .conflict-chapter tbody tr:nth-child(even) { background: #f4eddf; }
+  .conflict-chapter ul, .conflict-chapter ol { padding-left: 1.35rem; }
+  .conflict-chapter li { margin: .25rem 0; }
+  .conflict-chapter .small { color: #665f53; font-size: .9rem; }
+  .conflict-chapter .tag { display: inline-block; padding: .08rem .4rem; border-radius: 3px; background: #e8edf3; color: #315f9f; font-size: .8rem; font-weight: 700; }
+  .conflict-chapter .focus-marker { display: inline-block; margin: 0 .12rem; padding: .08rem .42rem; border: 1px solid #b68a32; border-radius: 999px; background: #f8edcf; color: #725318; font-size: .76rem; font-weight: 800; letter-spacing: .02em; white-space: nowrap; }
+  .conflict-chapter .cycle-marker-panel { display: flex; align-items: center; gap: .85rem; margin: .75rem 0 1rem; padding: .8rem .9rem; border: 1px solid #d4c39f; border-radius: 6px; background: #f8f1e2; }
+  .conflict-chapter .cycle-marker-token { display: inline-flex; flex: 0 0 auto; width: 2.55rem; height: 2.55rem; align-items: center; justify-content: center; border: 2px solid #9a742b; border-radius: 50%; background: #fffaf0; color: #765719; font-weight: 800; }
+  .conflict-chapter .cycle-marker-panel p { margin: .18rem 0 0; }
+  @media (max-width: 520px) { .conflict-chapter .cycle-marker-panel { align-items: flex-start; flex-direction: column; } }
+  .conflict-chapter .interruption-panel { display: flex; align-items: center; gap: .85rem; margin: .7rem 0 1rem; padding: .8rem .9rem; border: 1px solid #a8bfd8; border-radius: 6px; background: #edf3fa; }
+  .conflict-chapter .interruption-token { flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; min-width: 5.4rem; min-height: 3rem; padding: .25rem .5rem; border: 2px solid #315f9f; border-radius: 7px; background: #315f9f; color: #fff; font-size: .72rem; font-weight: 800; text-align: center; letter-spacing: .03em; }
+  .conflict-chapter .interruption-panel p { margin: .2rem 0 0; }
+  @media (max-width: 520px) { .conflict-chapter .interruption-panel { align-items: flex-start; flex-direction: column; } }
+  .conflict-chapter .separator { height: 1px; margin: 1.5rem 0; background: #d8c9aa; }
+  .conflict-chapter .quick-ref h3 { margin-top: 1rem; padding-bottom: .25rem; border-bottom: 1px solid #d8c9aa; }
+  .conflict-chapter .quick-ref ul { margin-top: .35rem; }
+  .conflict-chapter .book-nav { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #d8c9aa; }
+  .conflict-chapter .book-nav a { font-weight: 700; text-decoration: none; }
+  @media (max-width: 900px) { .conflict-chapter .four-col { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+  @media (max-width: 720px) { .conflict-chapter .two-col, .conflict-chapter .three-col, .conflict-chapter .four-col { grid-template-columns: 1fr; } .conflict-chapter .toc ol { columns: 1; } .conflict-chapter table { display: block; overflow-x: auto; } }
+  @media print { .conflict-chapter { max-width: none; padding: 0; } .conflict-chapter h2 { break-after: avoid; page-break-after: avoid; } .conflict-chapter .toc { break-inside: avoid; } .conflict-chapter a { color: inherit; text-decoration: none; } }
 </style>
 </head>
 <body>
-<main class="combat-chapter" id="topo">
+<main class="conflict-chapter" id="topo">
 
-<h1>Conflito</h1>
+<h1>Capítulo 7 — Conflitos <span class="en">(Conflicts)</span></h1>
 
 <blockquote>
   “Em Backlund, os revólveres falam primeiro e as perguntas vêm depois. Mas, diante de um Beyonder, até o silêncio pode se tornar uma ameaça.”
@@ -73,13 +73,13 @@
 </blockquote>
 
 <div class="intro-panel">
-  <p>O combate em <strong>Senhor dos Mistérios RPG</strong> combina armas mundanas, confronto físico e poderes sobrenaturais. Este conteúdo apresenta uma base para resolver ataques, ferimentos, proteção, condições e efeitos Beyonder usando o sistema atual de <strong>2d10</strong>.</p>
+  <p>Em <strong>Senhor dos Mistérios RPG</strong>, um conflito não se limita à violência: uma negociação, um interrogatório ou uma disputa de vontades podem ser tão decisivos quanto enfrentar um monstro. Este capítulo apresenta a estrutura de Foco e resolução de ações usada nesses confrontos, além das regras específicas para ataques, ferimentos, proteção, condições e poderes Beyonder quando a situação envolver violência física ou sobrenatural, sempre utilizando o sistema de <strong>2d10</strong>.</p>
   </div>
 
 <nav class="toc" aria-label="Sumário do capítulo">
   <div class="toc-title">Neste capítulo</div>
   <ol>
-    <li><a href="#fundamentos">Fundamentos do Combate</a></li>
+    <li><a href="#fundamentos">Fundamentos dos Conflitos</a></li>
     <li><a href="#foco">Foco</a></li>
     <li><a href="#acoes">Movimentos e Ações durante o Foco</a></li>
     <li><a href="#ataques">Ataques</a></li>
@@ -88,28 +88,28 @@
     <li><a href="#vestimentas">Vestimentas e Blindagem</a></li>
     <li><a href="#condicoes">Condições</a></li>
     <li><a href="#pv-morte">Incapacitação, Morte e Cura</a></li>
-    <li><a href="#poderes">Poderes Beyonder em Combate</a></li>
+    <li><a href="#poderes">Poderes Beyonder em Conflitos</a></li>
     <li><a href="#armas">Armas e Propriedades</a></li>
-    <li><a href="#exemplo">Exemplo de Combate</a></li>
+    <li><a href="#exemplo">Exemplo de Conflito</a></li>
     <li><a href="#resumo">Resumo de Referência</a></li>
   </ol>
 </nav>
 
 <section id="fundamentos">
-<h2>1. Fundamentos do Combate</h2>
-<p>O combate não utiliza Iniciativa nem uma ordem fixa. O <strong>Foco</strong> alterna dinamicamente entre personagens jogadores e ameaças. As ativações são organizadas em <strong>ciclos de conflito</strong>: cada ciclo termina quando todos os personagens jogadores envolvidos tiverem recebido o Foco ao menos uma vez. Falhas transferem o Foco ao Mestre, e <strong>Fichas de Interrupção</strong> permitem inserir ameaças antes do início de uma ativação.</p>
+<h2>1. Fundamentos dos Conflitos</h2>
+<p>A resolução dos conflitos não utiliza Iniciativa nem uma ordem fixa. O <strong>Foco</strong> alterna dinamicamente entre personagens jogadores e ameaças. As ativações são organizadas em <strong>ciclos de conflito</strong>: cada ciclo termina quando todos os personagens jogadores envolvidos tiverem recebido o Foco ao menos uma vez. Falhas transferem o Foco ao Mestre, e <strong>Fichas de Interrupção</strong> permitem inserir ameaças antes do início de uma ativação.</p>
 
 <div class="rule-box">
   <div class="box-title">Resolução básica</div>
-  <p>Quando uma ação de combate tiver resultado incerto e consequências relevantes, utilize a fórmula geral do Capítulo 3:</p>
+  <p>Quando uma ação durante um conflito tiver resultado incerto e consequências relevantes, utilize a fórmula geral do Capítulo 3:</p>
   <span class="formula">2d10 + Mod.(Atributo) + Mod.(Proficiência) + bônus aplicáveis</span>
   <p>Compare o resultado à Esquiva do alvo ou à Classe de Dificuldade (CD) indicada pelo poder ou pela situação. O Mestre escolhe o Atributo conforme a abordagem descrita pelo jogador e acrescenta uma Proficiência quando houver treinamento diretamente pertinente.</p>
 </div>
 
-<h3>Críticos em combate</h3>
+<h3>Críticos em conflitos</h3>
 <p>A verificação ocorre depois da seleção dos dois dados, inclusive quando houver Vantagem ou Desvantagem. A regra é a mesma do Capítulo 3:</p>
 <table>
-  <thead><tr><th>Dados selecionados</th><th>Resultado</th><th>Efeito no combate</th></tr></thead>
+  <thead><tr><th>Dados selecionados</th><th>Resultado</th><th>Efeito no conflito</th></tr></thead>
   <tbody>
     <tr><td><strong>10 + 10</strong></td><td>Sucesso Crítico</td><td>O ataque acerta independentemente da Esquiva. Dobre todos os dados de dano do ataque; modificadores fixos não são duplicados.</td></tr>
     <tr><td><strong>1 + 1</strong></td><td>Falha Crítica</td><td>O ataque falha automaticamente, independentemente do bônus ou da Esquiva. Não existe penalidade adicional obrigatória.</td></tr>
@@ -125,7 +125,7 @@
 <section id="foco">
 <h2>2. Foco e Ciclos de Conflito</h2>
 <p>O <strong>Foco</strong> indica quem tem a oportunidade de agir naquele momento. Quando um personagem ou uma ameaça recebe o Foco, realiza sua <strong>ativação</strong>: resolve uma ação significativa, o movimento e as interações que fizerem parte da mesma sequência. Depois, o Foco é transferido conforme a escolha dos jogadores, os resultados dos testes e as intervenções do Mestre.</p>
-<p>O combate é dividido em <strong>ciclos de conflito</strong>, mas os ciclos não determinam uma ordem fixa nem limitam quantas vezes alguém pode receber o Foco. Um personagem jogador ou uma ameaça pode receber o Foco mais de uma vez no mesmo ciclo. O ciclo só é reiniciado quando todos os personagens jogadores envolvidos tiverem recebido o Foco pelo menos uma vez.</p>
+<p>A condução do conflito é dividida em <strong>ciclos de conflito</strong>, mas os ciclos não determinam uma ordem fixa nem limitam quantas vezes alguém pode receber o Foco. Um personagem jogador ou uma ameaça pode receber o Foco mais de uma vez no mesmo ciclo. O ciclo só é reiniciado quando todos os personagens jogadores envolvidos tiverem recebido o Foco pelo menos uma vez.</p>
 
 <div class="rule-box">
   <div class="box-title">Como marcar a participação no ciclo</div>
@@ -466,10 +466,10 @@
 </section>
 
 <section id="poderes">
-<h2>10. Poderes Beyonder em Combate</h2>
+<h2>10. Poderes Beyonder em Conflitos</h2>
 <h3>Espiritualidade e custos</h3>
 <p>O uso de poderes consome Espiritualidade conforme o custo indicado na descrição de cada poder. A descrição deve informar como a ativação acontece: se é imediata, exige preparação, mantém um efeito contínuo, depende de um gatilho ou permite uma resposta fora do Foco do personagem. O poder também deve indicar o que pode interromper sua execução.</p>
-<p>A recuperação da Espiritualidade segue exclusivamente as regras de <strong>Descanso Completo</strong> e <strong>Descanso Breve</strong> dos Capítulos 3 e 6. Não há recuperação adicional de Espiritualidade por hora, meditação ou repouso durante o combate. Estas regras seguem exclusivamente os Descansos Completos e Breves.</p>
+<p>A recuperação da Espiritualidade segue exclusivamente as regras de <strong>Descanso Completo</strong> e <strong>Descanso Breve</strong> dos Capítulos 3 e 6. Não há recuperação adicional de Espiritualidade por hora, meditação ou repouso durante um conflito. Estas regras seguem exclusivamente os Descansos Completos e Breves.</p>
 
 <h3>Concentração</h3>
 <p>Um personagem pode manter apenas <strong>um poder que exija Concentração</strong> por vez. Ativar outro poder que também exija Concentração encerra o anterior, salvo se um dos poderes disser expressamente o contrário.</p>
@@ -491,7 +491,7 @@
 </ul>
 <p>O Mestre pode reconhecer usos criativos por meio de um modificador circunstancial, Vantagem, Desvantagem ou uma consequência narrativa coerente. O mesmo benefício não deve ser concedido duas vezes pela mesma vantagem ficcional.</p>
 
-<h3>Informações que todo poder de combate deve apresentar</h3>
+<h3>Informações que todo poder utilizado em conflitos deve apresentar</h3>
 <ul>
   <li>Custo de Espiritualidade e tipo de ativação.</li>
   <li>Alcance, área e quantidade de alvos.</li>
@@ -545,7 +545,7 @@
 </section>
 
 <section id="exemplo">
-<h2>12. Exemplo de Combate</h2>
+<h2>12. Exemplo de Conflito</h2>
 <p>O exemplo demonstra a contagem de ciclos, as transferências entre jogadores, o uso de Fichas de Interrupção e a passagem do Foco ao Mestre após uma falha. Os resultados são ilustrativos.</p>
 <div class="example-box">
   <div class="box-title">Participantes</div>
@@ -642,6 +642,11 @@
   </section>
 </div>
 </section>
+
+<nav class="book-nav" aria-label="Navegação entre capítulos">
+  <a href="06-atuacao.html">← Capítulo 6 — Método de Atuação</a>
+  <a href="08-equipamento.html">Capítulo 8 — Equipamento &amp; Artefatos →</a>
+</nav>
 </main>
 </body>
 </html>
