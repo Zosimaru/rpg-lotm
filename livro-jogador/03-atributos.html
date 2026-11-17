@@ -86,6 +86,28 @@
   #quick-reference-panel .quickref-group { break-inside: avoid; }
   #quick-reference-panel .quickref-group h4 { background: #eee; color: #222; }
 }
+
+/* Hierarquia visual dos blocos de Estatísticas Derivadas */
+.stats-topic-heading {
+  margin: 1.7rem 0 .75rem;
+  padding: .65rem .85rem;
+  border-left: 4px solid #9a742b;
+  border-bottom: 1px solid #d5c5a7;
+  border-radius: 0 5px 5px 0;
+  background: #f2eadb;
+  color: #765719;
+}
+body h5 {
+  margin: 1.05rem 0 .45rem;
+  color: #5c4927;
+  font-size: 1rem;
+}
+body h6 {
+  margin: .85rem 0 .35rem;
+  color: #6c5a3a;
+  font-size: .94rem;
+}
+
 </style>
 
 </head>
@@ -136,7 +158,16 @@
     <li><a href="#atributos"><strong>Atributos:</strong> escalas, categorias, dimensões e modificadores.</a></li>
     <li><a href="#pericias"><strong>Proficiências:</strong> Talentos, Perícias e Conhecimentos, distribuição, aplicações e especializações.</a></li>
     <li><a href="#sistema-testes"><strong>Sistema de Testes:</strong> rolagens 2d10, Classes de Dificuldade, resultados críticos, Vantagem, Desvantagem e testes disputados.</a></li>
-    <li><a href="#estatisticas-derivadas"><strong>Estatísticas Derivadas:</strong> Pontos de Vida, Espiritualidade, Esquiva, Lucidez, Blindagem e Limiares de Dano.</a></li>
+    <li>
+  <a href="#estatisticas-derivadas">
+    <strong>Estatísticas Derivadas:</strong>
+    recursos do personagem, Lucidez e Âncoras, Esquiva, Blindagem e Limiares de Dano.
+  </a>
+  <ul>
+    <li><a href="#recursos-personagem"><strong>Recursos e Integridade:</strong> Pontos de Vida, Espiritualidade, Lucidez, Âncoras e Perda de Controle.</a></li>
+    <li><a href="#defesa-protecao"><strong>Defesa e Proteção:</strong> Esquiva, Vestimentas, Blindagem e Limiares de Dano.</a></li>
+  </ul>
+</li>
     <li><a href="#resumo"><strong>Resumo Rápido de Referência:</strong> consulta concentrada das principais fórmulas e regras.</a></li>
   </ul>
 </div>
@@ -724,8 +755,8 @@
   <li><strong>Calcule o bônus total:</strong> some Mod.(Atributo), Mod.(Proficiência) e os bônus que realmente se aplicarem.</li>
   <li><strong>Compare as fontes:</strong> cada fonte de Vantagem cancela uma fonte de Desvantagem. Depois dos cancelamentos, verifique qual tipo ainda predomina. Fontes excedentes do mesmo tipo não se acumulam.</li>
   <li><strong>Role os dados:</strong> sem predominância, role 2d10 normalmente. Se restar Vantagem, role 3d10 e mantenha os dois maiores; se restar Desvantagem, role 3d10 e mantenha os dois menores. Independentemente da quantidade de fontes excedentes, apenas um dado adicional é utilizado.</li>
-  <li><strong>Some e compare:</strong> some os dois dados utilizados, acrescente o bônus total e compare o resultado à CD ou ao total do oponente.</li>
-  <li><strong>Verifique um possível crítico:</strong> confira se os dois dados selecionados apresentam valores iguais. Se houver uma dupla, classifique o resultado conforme o teste tenha sido bem-sucedido ou não.</li>
+  <li><strong>Verifique os críticos:</strong> em testes contra CD, depois de selecionar os dois dados, <strong>10 + 10</strong> gera Sucesso Crítico e <strong>1 + 1</strong> gera Falha Crítica, independentemente da soma, dos bônus ou da CD. Duplas de outros valores não geram críticos. Em testes disputados, aplica-se a regra própria de comparação de totais, sem críticos automáticos.</li>
+  <li><strong>Some e compare:</strong> quando não houver um resultado crítico, some os dois dados utilizados, acrescente o bônus total e compare o resultado à CD ou ao total do oponente.</li>
   <li><strong>Interprete o resultado:</strong> descreva o sucesso, a falha e, quando houver, o efeito crítico ou a complicação adicional.</li>
 </ol>
 
@@ -760,28 +791,32 @@
 
 <h3 id="criticos">Resultados críticos</h3>
 <p>
-  Depois de selecionar os dois dados que compõem o resultado, verifique se eles mostram
-  <strong>o mesmo valor natural</strong>. Qualquer dupla — de 1 + 1 a 10 + 10 — pode gerar
-  um resultado crítico. A classificação depende do resultado final do teste: se o personagem
-  for bem-sucedido, ocorre um <strong>Sucesso Crítico</strong>; se falhar, ocorre uma
-  <strong>Falha Crítica</strong>. Portanto, não é necessário obter 10 + 10 para um Sucesso
-  Crítico nem 1 + 1 para uma Falha Crítica.
+  Depois de selecionar os dois dados que compõem o resultado, verifique seus valores naturais.
+  O <strong>Sucesso Crítico</strong> ocorre quando os dois dados selecionados mostram
+  <strong>10 + 10</strong>; a <strong>Falha Crítica</strong> ocorre quando mostram
+  <strong>1 + 1</strong>. Essa classificação é independente da soma dos dados, dos bônus e do
+  resultado em relação à CD: 10 + 10 é sempre Sucesso Crítico, mesmo que o total fique abaixo
+  da CD, e 1 + 1 é sempre Falha Crítica, mesmo que o total alcance ou supere a CD. Duplas de
+  outros valores não geram críticos. Em testes disputados, permanece a regra própria de
+  comparação dos totais, sem aplicação automática de críticos.
 </p>
 
 <h4 id="acerto-critico">Sucesso Crítico</h4>
 <p>
-  O Sucesso Crítico ocorre quando os dois dados selecionados mostram valores iguais e o
-  resultado final é suficiente para vencer o teste. Além do sucesso normal, o personagem
-  obtém um benefício adicional significativo, proporcional à ação e às circunstâncias.
-  O benefício pode ser dano adicional, uma abertura para um ataque, uma descoberta extra ou uma
-  oportunidade social relevante, conforme o pilar envolvido.
+  O Sucesso Crítico ocorre sempre que os dois dados selecionados mostram
+  <strong>10 + 10</strong>, independentemente do resultado final ou da CD. O teste é
+  considerado bem-sucedido mesmo que a soma dos dados com os bônus não alcance a CD.
+  Além do sucesso, o personagem obtém um benefício adicional significativo, proporcional
+  à ação e às circunstâncias. O benefício pode ser dano adicional, uma abertura para um
+  ataque, uma descoberta extra ou uma oportunidade social relevante, conforme o pilar
+  envolvido.
 </p>
 <div class="box box-example">
   <div class="box-title">Exemplo: Sucesso Crítico</div>
   <p>
     Uma personagem tenta convencer um comerciante a revelar quem comprou um ingrediente
-    raro. Ela possui bônus total +3, rola 7 e 7 e alcança 17 contra CD 15. Como os dois dados
-    selecionados mostram o mesmo valor e o total supera a CD, ela obtém um
+    raro. Ela possui bônus total +3, rola 10 e 10 e alcança 23 contra CD 25. Embora o total
+    fique abaixo da CD, os dois dados selecionados mostram 10 + 10, portanto ela obtém um
     <strong>Sucesso Crítico</strong>: o comerciante revela a informação e ainda recorda
     um detalhe útil sobre o comprador, oferecendo uma nova pista à investigação.
   </p>
@@ -789,18 +824,19 @@
 
 <h4 id="falha-critica">Falha Crítica</h4>
 <p>
-  A Falha Crítica ocorre quando os dois dados selecionados mostram valores iguais e o
-  resultado final não é suficiente para vencer o teste. Além de não alcançar o objetivo,
-  o personagem sofre uma complicação adicional relevante, proporcional à ação. A complicação
-  pode envolver exposição, perda de recursos, dano a uma ferramenta, desequilíbrio ou
-  agravamento da situação.
+  A Falha Crítica ocorre sempre que os dois dados selecionados mostram
+  <strong>1 + 1</strong>, independentemente do resultado final ou da CD. O teste é
+  considerado malsucedido mesmo que a soma dos dados com os bônus alcance ou supere a CD.
+  Além de não alcançar o objetivo, o personagem sofre uma complicação adicional relevante,
+  proporcional à ação. A complicação pode envolver exposição, perda de recursos, dano a uma
+  ferramenta, desequilíbrio ou agravamento da situação.
 </p>
 <div class="box box-example">
   <div class="box-title">Exemplo: Falha Crítica</div>
   <p>
-    Um personagem tenta abrir discretamente uma fechadura, possui bônus total +3 e rola
-    4 e 4. Seu resultado final é 11 contra CD 13. Como os dois dados selecionados mostram
-    o mesmo valor e o total não alcança a CD, ocorre uma <strong>Falha Crítica</strong>:
+    Um personagem tenta abrir discretamente uma fechadura, possui bônus total +8 e rola
+    1 e 1. Seu resultado final é 10 contra CD 9. Embora o total alcance a CD, os dois dados
+    selecionados mostram 1 + 1, portanto ocorre uma <strong>Falha Crítica</strong>:
     a gazua se quebra dentro do mecanismo e o ruído alerta uma pessoa no cômodo ao lado.
   </p>
 </div>
@@ -820,10 +856,10 @@
   contexto e para o impacto que o resultado pode produzir na história.
 </p>
 <p>
-  Em testes disputados, verifique a dupla nos dois dados selecionados de cada participante.
-  A vitória conta como Sucesso Crítico e a derrota como Falha Crítica quando houver uma dupla.
-  O maior resultado vence; em caso de empate, prevalece o defensor, conforme a regra de testes
-  disputados. Assim, a classificação crítica acompanha o resultado efetivo de cada participante.
+  Nos testes contra CD, os resultados críticos são definidos exclusivamente pelos dois dados
+  selecionados e não dependem do total final. Em testes disputados, permanece a regra própria:
+  compare os totais normalmente, e o maior resultado vence; em caso de empate, prevalece o
+  defensor.
 </p>
 
 <h3 id="testes-disputados">Testes disputados</h3>
@@ -880,9 +916,9 @@
   <div class="box-title">Exemplo: seleção dos dados e crítico</div>
   <p>
     Com Vantagem, uma rolagem de <strong>8, 8 e 10</strong> mantém os dois maiores resultados:
-    10 e 8. Como eles são diferentes, não há crítico. Com Desvantagem, a mesma rolagem mantém
-    8 e 8; como os dados selecionados são iguais, há um resultado crítico, cuja classificação
-    dependerá de o total alcançar ou não a CD.
+    10 e 8; não há crítico. Com Desvantagem, uma rolagem de <strong>1, 1 e 8</strong> mantém
+    1 + 1; ocorre Falha Crítica independentemente do total final ou da CD. A verificação
+    considera apenas os dois dados selecionados após aplicar Vantagem ou Desvantagem.
   </p>
 </div>
 <div class="box box-example">
@@ -946,7 +982,14 @@
   ficha e atualizadas quando uma regra alterar os valores utilizados no cálculo.
 </p>
 
-<h3 id="pontos-vida">Pontos de Vida (PV)</h3>
+<h3 id="recursos-personagem" class="stats-topic-heading">Recursos e Integridade do Personagem</h3>
+<p>
+  Este bloco reúne os recursos que representam a sobrevivência, a capacidade sobrenatural
+  e a estabilidade da identidade do personagem: Pontos de Vida, Espiritualidade, Lucidez
+  e Âncoras.
+</p>
+
+<h4 id="pontos-vida">Pontos de Vida (PV)</h4>
 <p>
   Os Pontos de Vida representam a capacidade do personagem de suportar ferimentos
   físicos e continuar agindo. A fórmula utiliza o modificador de Vigor e a Sequência
@@ -992,7 +1035,7 @@
   </p>
 </div>
 
-<h3 id="espiritualidade">Espiritualidade</h3>
+<h4 id="espiritualidade">Espiritualidade</h4>
 <p>
   A Espiritualidade representa a capacidade do personagem de canalizar sua própria
   essência espiritual. No sistema, ela funciona como uma reserva utilizada para
@@ -1022,7 +1065,7 @@
     Sem outros bônus, sua Espiritualidade máxima passa de 13 para 15 e, depois, para 17.
   </p>
 </div>
-<h4>Espiritualidade inicial por Caminho (Sequência 9)</h4>
+<h5>Espiritualidade inicial por Caminho (Sequência 9)</h5>
 <div class="box box-note">
   <p>
     Os valores abaixo representam a Espiritualidade-base com que cada personagem começa
@@ -1070,7 +1113,7 @@
   </p>
 </div>
 
-<h4>Utilização da Espiritualidade</h4>
+<h5>Utilização da Espiritualidade</h5>
 <p>
   A Espiritualidade é consumida quando uma habilidade, feitiço ou ritual indicar
   expressamente um custo. O custo deve constar na descrição do efeito ou nas regras
@@ -1131,7 +1174,7 @@
   </p>
 </div>
 
-<h4>Recuperação da Espiritualidade</h4>
+<h5>Recuperação da Espiritualidade</h5>
 <p>
   A Espiritualidade pode ser recuperada por meio de Descanso Completo e Descanso Breve.
   O Descanso Completo pode ser realizado uma vez a cada intervalo de 24 horas e também
@@ -1167,7 +1210,7 @@
   </p>
 </div>
 
-<h3 id="lucidez-ancoras">Lucidez, Âncoras e perda de controle</h3>
+<h4 id="lucidez-ancoras">Lucidez, Âncoras e Perda de Controle</h4>
 <p>
   A <strong>Lucidez</strong> mede a capacidade do personagem de preservar sua percepção,
   identidade e autonomia diante de influências sobrenaturais. Todos os personagens começam
@@ -1189,7 +1232,7 @@
   </p>
 </div>
 
-<h4>Âncoras</h4>
+<h5>Âncoras</h5>
 <p>
   Âncoras são vínculos, referências e convicções que ajudam o personagem a preservar sua
   identidade diante do sobrenatural. <strong>Cada Âncora ativa concede +1 nos testes de
@@ -1229,7 +1272,7 @@
   pessoal não concede bônus automaticamente.
 </p>
 
-<h4>Bônus de circunstância</h4>
+<h5>Bônus de circunstância</h5>
 <p>
   A situação pode facilitar ou dificultar um teste de Lucidez. O Mestre escolhe um único
   modificador final que represente o conjunto das circunstâncias relevantes; fatores que
@@ -1253,7 +1296,7 @@
   de maneira relevante no teste.
 </p>
 
-<h4>Estados de Lucidez</h4>
+<h5>Estados de Lucidez</h5>
 <p>
   A quantidade atual de Lucidez indica o estado mental do personagem. As descrições
   apresentam sintomas e possíveis interferências na vida cotidiana, servindo como
@@ -1271,7 +1314,7 @@
   </tbody>
 </table>
 
-<h5>Instabilidade — 4 a 6</h5>
+<h6>Instabilidade — 4 a 6</h6>
 <div class="box box-note">
   <div class="box-title">Primeiros sinais de deterioração</div>
 </div>
@@ -1314,22 +1357,34 @@
     <li><strong>Colapso completo:</strong> a personalidade anterior deixa de orientar suas ações. O personagem pode tornar-se uma criatura descontrolada, atacar indiscriminadamente ou permanecer dominado por uma força sobrenatural, deixando de responder a tentativas comuns de diálogo.</li>
   </ul>
 </div>
-<p>
-  <strong>Em Perda de Controle, o jogador deixa de conduzir o personagem.</strong> Enquanto
-  a condição persistir, o Mestre assume temporariamente seu controle e determina suas
-  ações, reações, alvos e o uso de seus poderes, de acordo com a manifestação apresentada.
-  O personagem pode representar uma ameaça real ao grupo, a NPCs e a si próprio. O jogador
-  retoma o controle quando a Perda de Controle for encerrada por uma regra, intervenção ou
-  solução narrativa estabelecida na situação; a simples vontade do jogador não interrompe
-  o episódio.
+<p class="permanent-character-loss">
+  <strong>Perda permanente do personagem:</strong> ao atingir <strong>0 pontos de Lucidez</strong>,
+  o jogador perde definitivamente aquele personagem. Ele deixa de ser um personagem jogável
+  sob o controle do jogador, e o Mestre assume seu controle de forma permanente, determinando
+  suas ações, reações, alvos, uso dos poderes e destino na história. O personagem pode continuar
+  representando uma ameaça real ao grupo, a NPCs e a si próprio.
+  <strong>Nenhum descanso, recuperação de Lucidez, poder, item, intervenção ou solução narrativa
+  devolve o personagem ao jogador.</strong> A perda é definitiva, mas não significa necessariamente
+  morte imediata: conforme a manifestação e as consequências da campanha, ele pode permanecer
+  na história como NPC, criatura descontrolada ou antagonista.
 </p>
 <p>
   A Lucidez não se recupera automaticamente com descanso comum. Uma regra, poder, item ou
   marco de progressão deve indicar expressamente quando ela é restaurada. Neste sistema,
   a conclusão da Digestão de uma poção concede +1 ponto de Lucidez, respeitando o máximo de 10.
+  <strong>Essa recuperação não reverte a perda permanente de um personagem que já tenha
+  alcançado 0 de Lucidez e não devolve seu controle ao jogador.</strong>
 </p>
 
-<h3 id="esquiva">Esquiva</h3>
+<div class="separator"></div>
+
+<h3 id="defesa-protecao" class="stats-topic-heading">Defesa e Proteção</h3>
+<p>
+  Este bloco reúne as regras para evitar ataques e reduzir ou classificar os ferimentos
+  recebidos: Esquiva, Blindagem, Vestimentas e Limiares de Dano.
+</p>
+
+<h4 id="esquiva">Esquiva</h4>
 <p>
   A Esquiva representa a dificuldade de atingir o personagem. Em um ataque, o
   atacante realiza o teste indicado pela ação; o ataque acerta quando o resultado
@@ -1350,7 +1405,7 @@
   </p>
 </div>
 
-<h3 id="blindagem-limiares">Blindagem, Vestimentas e Limiares de Dano</h3>
+<h4 id="blindagem-limiares">Blindagem, Vestimentas e Limiares de Dano</h4>
 <p>
   <strong>Vestimenta</strong> é um equipamento. <strong>Blindagem</strong> é um recurso
   de proteção que pode ser concedido por uma Vestimenta, por poderes Beyonder ou por
@@ -1502,8 +1557,8 @@
           <div class="quickref-row"><span class="quickref-label">Vantagem</span><span class="quickref-value">após cancelar fontes opostas, role 3d10 e selecione/some os dois maiores; fontes excedentes não se acumulam</span></div>
           <div class="quickref-row"><span class="quickref-label">Desvantagem</span><span class="quickref-value">após cancelar fontes opostas, role 3d10 e selecione/some os dois menores; fontes excedentes não se acumulam</span></div>
           <div class="quickref-row"><span class="quickref-label">Sem Vantagem ou Desvantagem</span><span class="quickref-value">fontes equilibradas ou ausentes: role 2d10 normalmente</span></div>
-          <div class="quickref-row"><span class="quickref-label">Sucesso Crítico</span><span class="quickref-value">os dois dados selecionados mostram valores iguais e o teste é bem-sucedido</span></div>
-          <div class="quickref-row"><span class="quickref-label">Falha Crítica</span><span class="quickref-value">os dois dados selecionados mostram valores iguais e o teste falha</span></div>
+          <div class="quickref-row"><span class="quickref-label">Sucesso Crítico</span><span class="quickref-value">10 + 10 nos dados selecionados; independe do total final e da CD</span></div>
+          <div class="quickref-row"><span class="quickref-label">Falha Crítica</span><span class="quickref-value">1 + 1 nos dados selecionados; independe do total final e da CD</span></div>
         </div>
       </section>
     </div>
@@ -1520,8 +1575,8 @@
         </div>
       </section>
 
-      <section class="quickref-group" aria-label="Defesa, dano e deslocamento">
-        <h4>Defesa, dano e deslocamento</h4>
+      <section class="quickref-group" aria-label="Defesa, proteção e deslocamento">
+        <h4>Defesa, proteção e deslocamento</h4>
         <div class="quickref-rows">
           <div class="quickref-row"><span class="quickref-label">Esquiva Base</span><span class="quickref-value">10 + Mod.(DES) + Mod.(RAC)</span></div>
           <div class="quickref-row"><span class="quickref-label">Limiar Menor → Maior</span><span class="quickref-value">2 + (10 − Sequência), sem Vestimenta</span></div>
