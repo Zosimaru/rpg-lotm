@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Capítulo 7 — Combate | Senhor dos Mistérios RPG</title>
+<title>Conflito | Senhor dos Mistérios RPG</title>
 <link rel="stylesheet" href="../assets/css/common.css">
 <link rel="stylesheet" href="../assets/css/print.css">
 <style>
@@ -65,7 +65,7 @@
 <body>
 <main class="combat-chapter" id="topo">
 
-<h1>Capítulo 7 — Combate <span class="en">(Combat System)</span></h1>
+<h1>Conflito</h1>
 
 <blockquote>
   “Em Backlund, os revólveres falam primeiro e as perguntas vêm depois. Mas, diante de um Beyonder, até o silêncio pode se tornar uma ameaça.”
@@ -73,7 +73,7 @@
 </blockquote>
 
 <div class="intro-panel">
-  <p>O combate em <strong>Senhor dos Mistérios RPG</strong> combina armas mundanas, confronto físico e poderes sobrenaturais. Este capítulo apresenta uma base para resolver ataques, ferimentos, proteção, condições e efeitos Beyonder usando o sistema atual de <strong>2d10</strong>.</p>
+  <p>O combate em <strong>Senhor dos Mistérios RPG</strong> combina armas mundanas, confronto físico e poderes sobrenaturais. Este conteúdo apresenta uma base para resolver ataques, ferimentos, proteção, condições e efeitos Beyonder usando o sistema atual de <strong>2d10</strong>.</p>
   </div>
 
 <nav class="toc" aria-label="Sumário do capítulo">
@@ -295,23 +295,39 @@
 <p>O valor de dano é o resultado dos dados e modificadores indicados pela arma ou pelo poder. Depois de aplicar os modificadores e as resistências pertinentes, compare o valor final aos Limiares de Dano do alvo.</p>
 
 <h3>Tipos de dano</h3>
-<p>Todo ataque que causar dano possui um tipo. Utilize as treze categorias abaixo; o tipo descreve a natureza do dano e determina quais Resistências, Vulnerabilidades ou Imunidades podem se aplicar.</p>
+<p>Os treze tipos de dano são organizados em três grupos: <strong>Físicos</strong>, <strong>Elementais</strong> e <strong>Sobrenaturais</strong>. Essa divisão facilita a consulta e não altera os efeitos de cada tipo. Resistências, Vulnerabilidades e Imunidades se aplicam ao tipo específico indicado, não ao grupo inteiro, salvo quando uma regra disser expressamente o contrário.</p>
+
+<h4>Físicos</h4>
+<table>
+  <thead><tr><th>Tipo de dano</th><th>Exemplos</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Contundente (Bludgeoning)</strong></td><td>Socos, martelos, bastões, impactos, quedas e constrição.</td></tr>
+    <tr><td><strong>Perfurante (Piercing)</strong></td><td>Balas, flechas, lanças, adagas, presas e outros ataques que perfuram.</td></tr>
+    <tr><td><strong>Cortante (Slashing)</strong></td><td>Espadas, sabres, machados, garras e lâminas.</td></tr>
+  </tbody>
+</table>
+
+<h4>Elementais</h4>
 <table>
   <thead><tr><th>Tipo de dano</th><th>Exemplos</th></tr></thead>
   <tbody>
     <tr><td><strong>Ácido (Acid)</strong></td><td>Líquidos corrosivos, enzimas e substâncias que dissolvem ou corroem materiais.</td></tr>
-    <tr><td><strong>Contundente (Bludgeoning)</strong></td><td>Socos, martelos, bastões, impactos, quedas e constrição.</td></tr>
     <tr><td><strong>Gélido (Cold)</strong></td><td>Frio sobrenatural, congelamento e descargas de energia gélida.</td></tr>
     <tr><td><strong>Fogo (Fire)</strong></td><td>Chamas, combustão, explosões incendiárias e calor intenso.</td></tr>
-    <tr><td><strong>Energia (Force)</strong></td><td>Energia sobrenatural concentrada, impacto mágico puro e descargas de força.</td></tr>
     <tr><td><strong>Elétrico (Lightning)</strong></td><td>Raios, eletricidade, descargas e tempestades canalizadas.</td></tr>
-    <tr><td><strong>Necrótico (Necrotic)</strong></td><td>Drenagem vital, putrefação, energia de morte e deterioração espiritual.</td></tr>
-    <tr><td><strong>Perfurante (Piercing)</strong></td><td>Balas, flechas, lanças, adagas, presas e outros ataques que perfuram.</td></tr>
     <tr><td><strong>Venenoso (Poison)</strong></td><td>Toxinas, venenos, gases tóxicos e substâncias nocivas.</td></tr>
+    <tr><td><strong>Trovejante (Thunder)</strong></td><td>Ondas de choque, explosões sonoras e impactos de pressão acústica.</td></tr>
+  </tbody>
+</table>
+
+<h4>Sobrenaturais</h4>
+<table>
+  <thead><tr><th>Tipo de dano</th><th>Exemplos</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Energia (Force)</strong></td><td>Energia sobrenatural concentrada, impacto mágico puro e descargas de força.</td></tr>
+    <tr><td><strong>Necrótico (Necrotic)</strong></td><td>Drenagem vital, putrefação, energia de morte e deterioração espiritual.</td></tr>
     <tr><td><strong>Psíquico (Psychic)</strong></td><td>Ataques mentais, sobrecarga cognitiva e agressões diretas à consciência.</td></tr>
     <tr><td><strong>Radiante (Radiant)</strong></td><td>Luz sobrenatural, purificação, energia solar e manifestações luminosas.</td></tr>
-    <tr><td><strong>Cortante (Slashing)</strong></td><td>Espadas, sabres, machados, garras e lâminas.</td></tr>
-    <tr><td><strong>Trovejante (Thunder)</strong></td><td>Ondas de choque, explosões sonoras e impactos de pressão acústica.</td></tr>
   </tbody>
 </table>
 
@@ -453,7 +469,7 @@
 <h2>10. Poderes Beyonder em Combate</h2>
 <h3>Espiritualidade e custos</h3>
 <p>O uso de poderes consome Espiritualidade conforme o custo indicado na descrição de cada poder. A descrição deve informar como a ativação acontece: se é imediata, exige preparação, mantém um efeito contínuo, depende de um gatilho ou permite uma resposta fora do Foco do personagem. O poder também deve indicar o que pode interromper sua execução.</p>
-<p>A recuperação da Espiritualidade segue exclusivamente as regras de <strong>Descanso Completo</strong> e <strong>Descanso Breve</strong> dos Capítulos 3 e 6. O Capítulo 7 não cria recuperação adicional por hora, meditação ou repouso durante o combate.</p>
+<p>A recuperação da Espiritualidade segue exclusivamente as regras de <strong>Descanso Completo</strong> e <strong>Descanso Breve</strong> dos Capítulos 3 e 6. Não há recuperação adicional de Espiritualidade por hora, meditação ou repouso durante o combate. Estas regras seguem exclusivamente os Descansos Completos e Breves.</p>
 
 <h3>Concentração</h3>
 <p>Um personagem pode manter apenas <strong>um poder que exija Concentração</strong> por vez. Ativar outro poder que também exija Concentração encerra o anterior, salvo se um dos poderes disser expressamente o contrário.</p>
