@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Capítulo 7 — Combate | Senhor dos Mistérios RPG</title>
-<link rel="stylesheet" href="../assets/css/common.css">
-<link rel="stylesheet" href="../assets/css/print.css">
+<link href="../assets/css/common.css" rel="stylesheet"/>
+<link href="../assets/css/print.css" rel="stylesheet"/>
 <style>
   .combat-chapter { max-width: 1080px; margin: 0 auto; padding: 1rem 1.25rem 2rem; color: #28241e; line-height: 1.62; }
   .combat-chapter h1 { margin: 0 0 1rem; padding-bottom: .65rem; border-bottom: 3px solid #9a742b; color: #765719; }
@@ -64,566 +65,466 @@
 </head>
 <body>
 <main class="combat-chapter" id="topo">
-
 <h1>Capítulo 7 — Combate <span class="en">(Combat System)</span></h1>
-
 <blockquote>
   “Em Backlund, os revólveres falam primeiro e as perguntas vêm depois. Mas, diante de um Beyonder, até o silêncio pode se tornar uma ameaça.”
   <span class="cite">— Detetive particular anônimo, distrito de East Borough</span>
 </blockquote>
-
 <div class="intro-panel">
-  <p>O combate em <strong>Senhor dos Mistérios RPG</strong> combina armas mundanas, confronto físico e poderes sobrenaturais. Este capítulo apresenta uma base para resolver ataques, ferimentos, proteção, condições e efeitos Beyonder usando o sistema atual de <strong>2d10</strong>.</p>
-  </div>
-
-<nav class="toc" aria-label="Sumário do capítulo">
-  <div class="toc-title">Neste capítulo</div>
-  <ol>
-    <li><a href="#fundamentos">Fundamentos do Combate</a></li>
-    <li><a href="#foco">Foco</a></li>
-    <li><a href="#acoes">Movimentos e Ações durante o Foco</a></li>
-    <li><a href="#ataques">Ataques</a></li>
-    <li><a href="#resistencia">Resistência a Poderes</a></li>
-    <li><a href="#dano">Dano e Limiares</a></li>
-    <li><a href="#vestimentas">Vestimentas e Blindagem</a></li>
-    <li><a href="#condicoes">Condições</a></li>
-    <li><a href="#pv-morte">Incapacitação, Morte e Cura</a></li>
-    <li><a href="#poderes">Poderes Beyonder em Combate</a></li>
-    <li><a href="#armas">Armas e Propriedades</a></li>
-    <li><a href="#exemplo">Exemplo de Combate</a></li>
-    <li><a href="#resumo">Resumo de Referência</a></li>
-  </ol>
+<p>O combate em <strong>Senhor dos Mistérios RPG</strong> combina armas mundanas, confronto físico e poderes sobrenaturais. Este capítulo apresenta uma base para resolver ataques, ferimentos, proteção, condições e efeitos Beyonder usando o sistema atual de <strong>2d10</strong>.</p>
+</div>
+<nav aria-label="Sumário do capítulo" class="toc">
+<div class="toc-title">Neste capítulo</div>
+<ol>
+<li><a href="#fundamentos">Fundamentos do Combate</a></li>
+<li><a href="#foco">Foco</a></li>
+<li><a href="#acoes">Movimentos e Ações durante o Foco</a></li>
+<li><a href="#ataques">Ataques</a></li>
+<li><a href="#resistencia">Resistência a Poderes</a></li>
+<li><a href="#dano">Dano e Limiares</a></li>
+<li><a href="#vestimentas">Vestimentas e Blindagem</a></li>
+<li><a href="#condicoes">Condições</a></li>
+<li><a href="#pv-morte">Incapacitação, Morte e Cura</a></li>
+<li><a href="#poderes">Poderes Beyonder em Combate</a></li>
+<li><a href="#armas">Armas e Propriedades</a></li>
+<li><a href="#exemplo">Exemplo de Combate</a></li>
+<li><a href="#resumo">Resumo de Referência</a></li>
+</ol>
 </nav>
-
 <section id="fundamentos">
 <h2>1. Fundamentos do Combate</h2>
-<p>O combate não utiliza Iniciativa nem uma ordem fixa. O <strong>Foco</strong> alterna dinamicamente entre personagens jogadores e ameaças. As ativações são organizadas em <strong>ciclos de conflito</strong>: cada ciclo termina quando todos os personagens jogadores envolvidos tiverem recebido o Foco ao menos uma vez. Falhas transferem o Foco ao Mestre, e <strong>Fichas de Interrupção</strong> permitem inserir ameaças antes do início de uma ativação.</p>
-
+<p>O combate utiliza testes de <strong>2d10</strong> para resolver ações incertas. O Foco organiza as ativações sem Iniciativa ou ordem fixa; seu funcionamento e os ciclos de conflito estão na seção <a href="#foco">Foco e Ciclos de Conflito</a>.</p>
 <div class="rule-box">
-  <div class="box-title">Resolução básica</div>
-  <p>Quando uma ação de combate tiver resultado incerto e consequências relevantes, utilize a fórmula geral do Capítulo 3:</p>
-  <span class="formula">2d10 + Mod.(Atributo) + Mod.(Proficiência) + bônus aplicáveis</span>
-  <p>Compare o resultado à Esquiva do alvo ou à Classe de Dificuldade (CD) indicada pelo poder ou pela situação. O Mestre escolhe o Atributo conforme a abordagem descrita pelo jogador e acrescenta uma Proficiência quando houver treinamento diretamente pertinente.</p>
+<div class="box-title">Resolução básica</div>
+<p>Quando uma ação de combate tiver resultado incerto e consequências relevantes, utilize a fórmula geral do Capítulo 3:</p>
+<span class="formula">2d10 + Mod.(Atributo) + Mod.(Proficiência) + bônus aplicáveis</span>
+<p>Compare o resultado à Esquiva do alvo ou à Classe de Dificuldade (CD) indicada pelo poder ou pela situação. O Mestre escolhe o Atributo conforme a abordagem descrita pelo jogador e acrescenta uma Proficiência quando houver treinamento diretamente pertinente.</p>
 </div>
-
 <h3>Críticos em combate</h3>
 <p>A verificação ocorre depois da seleção dos dois dados, inclusive quando houver Vantagem ou Desvantagem. A regra é a mesma do Capítulo 3:</p>
 <table>
-  <thead><tr><th>Dados selecionados</th><th>Resultado</th><th>Efeito no combate</th></tr></thead>
-  <tbody>
-    <tr><td><strong>10 + 10</strong></td><td>Sucesso Crítico</td><td>O ataque acerta independentemente da Esquiva. Dobre todos os dados de dano do ataque; modificadores fixos não são duplicados.</td></tr>
-    <tr><td><strong>1 + 1</strong></td><td>Falha Crítica</td><td>O ataque falha automaticamente, independentemente do bônus ou da Esquiva. Não existe penalidade adicional obrigatória.</td></tr>
-    <tr><td>Qualquer outra combinação</td><td>Resultado comum</td><td>Compare normalmente o total à Esquiva ou à CD.</td></tr>
-  </tbody>
+<thead><tr><th>Dados selecionados</th><th>Resultado</th><th>Efeito no combate</th></tr></thead>
+<tbody>
+<tr><td><strong>10 + 10</strong></td><td>Sucesso Crítico</td><td>O ataque acerta independentemente da Esquiva. Dobre todos os dados de dano do ataque; modificadores fixos não são duplicados.</td></tr>
+<tr><td><strong>1 + 1</strong></td><td>Falha Crítica</td><td>O ataque falha automaticamente, independentemente do bônus ou da Esquiva. Não existe penalidade adicional obrigatória.</td></tr>
+<tr><td>Qualquer outra combinação</td><td>Resultado comum</td><td>Compare normalmente o total à Esquiva ou à CD.</td></tr>
+</tbody>
 </table>
 <p>Em testes disputados, os participantes comparam os resultados totais; não há críticos automáticos. Em ataques contra uma Esquiva fixa ou em testes contra CD, os críticos seguem a regra universal de 10–10 e 1–1, sem depender do total final.</p>
-
 <h3>Testes disputados</h3>
 <p>Quando dois participantes se opõem diretamente, ambos fazem o teste apropriado com 2d10 e seus bônus. O maior resultado vence. Em caso de empate, prevalece quem estava se defendendo ou resistindo à ação; se não houver uma parte claramente defensora, a situação permanece sem mudança e o Mestre pode solicitar nova abordagem.</p>
 </section>
-
 <section id="foco">
 <h2>2. Foco e Ciclos de Conflito</h2>
-<p>O <strong>Foco</strong> indica quem tem a oportunidade de agir naquele momento. Quando um personagem ou uma ameaça recebe o Foco, realiza sua <strong>ativação</strong>: resolve uma ação significativa, o movimento e as interações que fizerem parte da mesma sequência. Depois, o Foco é transferido conforme a escolha dos jogadores, os resultados dos testes e as intervenções do Mestre.</p>
-<p>O combate é dividido em <strong>ciclos de conflito</strong>, mas os ciclos não determinam uma ordem fixa nem limitam quantas vezes alguém pode receber o Foco. Um personagem jogador ou uma ameaça pode receber o Foco mais de uma vez no mesmo ciclo. O ciclo só é reiniciado quando todos os personagens jogadores envolvidos tiverem recebido o Foco pelo menos uma vez.</p>
-
+<p>O &lt;strong&gt;Foco&lt;/strong&gt; indica quem age em seguida. Cada participante realiza sua ativação quando recebe o Foco; a transferência ocorre ao fim do turno, salvo uma interrupção do Mestre.</p>
+<h3>Ciclos e marcadores</h3>
+<p>Um <strong>ciclo</strong> termina quando todos os personagens jogadores envolvidos tiverem concluído uma ativação. Cada jogador pode receber o Foco <strong>uma única vez por ciclo</strong>; uma ameaça pode recebê-lo normalmente uma vez e, no máximo, uma segunda vez, apenas quando um poder ou habilidade permitir expressamente.</p>
 <div class="rule-box">
-  <div class="box-title">Como marcar a participação no ciclo</div>
-  <p>Use uma ficha, moeda ou marcador ao lado de cada personagem jogador assim que ele começar sua primeira ativação no ciclo. Um personagem que recebe o Foco novamente mantém o mesmo marcador: não é necessário colocar outro.</p>
-  <div class="cycle-marker-panel">
-    <span class="cycle-marker-token" aria-label="Marcador de participação">P</span>
-    <div>
-      <strong>Marcador de participação</strong>
-      <p class="small">Coloque um marcador ao lado do jogador quando seu personagem receber o Foco pela primeira vez no ciclo. Remova todos os marcadores de participação quando o ciclo terminar.</p>
-    </div>
-  </div>
-  <ul>
-    <li>O ciclo termina quando <strong>todos os personagens jogadores envolvidos no conflito</strong> tiverem um marcador de participação.</li>
-    <li>As ameaças não precisam receber o Foco para que o ciclo termine. Se for útil, o Mestre pode usar marcadores diferentes para acompanhar quais ameaças já agiram, mas isso não altera o encerramento do ciclo.</li>
-    <li>Uma ativação interrompida antes de começar não marca o participante interrompido. Ele recebe o marcador quando sua ativação realmente começar.</li>
-    <li>Ao encerrar o ciclo, retire os marcadores dos personagens jogadores e comece outro ciclo. As Fichas de Interrupção do Mestre não são removidas nessa passagem.</li>
-  </ul>
+<div class="box-title">Marcação de participação</div>
+<div class="cycle-marker-panel">
+<span aria-label="Marcador de participação" class="cycle-marker-token">P</span>
+<div>
+<strong>Use uma ficha, moeda ou marcador por personagem jogador.</strong>
+<p class="small">Coloque o marcador quando a ativação do personagem começar e mantenha-o até o fim do ciclo.</p>
 </div>
-
-<h3>Transferência de Foco</h3>
-<p>O Mestre concede o Foco inicial conforme a situação ficcional. Ao concluir sua ativação, um jogador pode passar voluntariamente o Foco para outro personagem jogador. O Foco também pode passar ao Mestre em consequência de uma falha ou por decisão narrativa do jogador.</p>
+</div>
 <ul>
-  <li><strong>Transferência entre jogadores:</strong> quando um jogador escolhe outro personagem jogador para receber o Foco, o Mestre recebe <strong>1 Ficha de Interrupção</strong> ao final da ativação do personagem que recebeu o Foco, desde que essa ativação comece e não seja interrompida antes de começar. A ficha é concedida mesmo que a ativação termine em falha; a falha, por si só, não gera uma ficha adicional.</li>
-  <li><strong>O mesmo personagem recebe Foco duas vezes:</strong> se um personagem receber o Foco duas vezes, no mesmo ciclo, por transferências voluntárias de outros jogadores, cada uma dessas ativações gera 1 ficha ao final. Portanto, o Mestre recebe <strong>2 fichas no total pelas duas ativações</strong>, e não 2 fichas adicionais na segunda. O limite máximo de acúmulo continua sendo 2.</li>
-  <li><strong>Falha:</strong> quando um personagem jogador obtém uma falha em um teste durante sua ativação, inclusive uma Falha Crítica, o Foco passa imediatamente ao Mestre. A falha não concede Ficha de Interrupção. O Mestre pode colocar uma ameaça em Foco para representar a resposta do conflito.</li>
-  <li><strong>Passagem voluntária ao Mestre:</strong> um jogador também pode entregar o Foco ao Mestre por escolha narrativa. O Mestre escolhe uma ameaça para agir, mas essa passagem não concede ficha, pois a recompensa é exclusiva da transferência voluntária entre personagens jogadores.</li>
-  <li><strong>Outras transferências:</strong> passagens feitas por ameaças, pelo Mestre ou por efeitos automáticos não concedem fichas, salvo se uma habilidade disser expressamente o contrário.</li>
+<li>Ao fim da ativação que completar a participação de todos, encerre o ciclo, retire os marcadores dos jogadores e faça a próxima transferência já no novo ciclo.</li>
+<li>Se o Mestre passar o Foco a um jogador, deve escolher alguém que ainda não tenha marcador no ciclo atual.</li>
+<li>Para cada ameaça, use um marcador na primeira ativação. Um segundo marcador só é permitido quando um poder ou habilidade conceder expressamente uma segunda ativação; uma ameaça nunca age mais de duas vezes no ciclo.</li>
 </ul>
-<p>Se uma transferência entre jogadores for interrompida antes de o personagem destinatário começar sua ativação, <strong>ela não gera Ficha de Interrupção</strong>, mesmo que o Foco retorne a esse personagem depois. A recompensa daquela transferência foi cancelada; transferências posteriores realizadas normalmente continuam seguindo as regras habituais.</p>
-
+</div>
+<h3>Como o Foco é transferido</h3>
+<ul>
+<li><strong>Entre jogadores:</strong> ao concluir sua ativação, o jogador pode passar o Foco a outro personagem jogador que ainda não tenha agido no ciclo. O Mestre recebe <strong>1 Ficha de Interrupção</strong> ao final da ativação do destinatário, desde que ela comece sem ser interrompida.</li>
+<li><strong>Para o Mestre:</strong> o jogador pode entregar voluntariamente o Foco ao Mestre; o Mestre escolhe uma ameaça elegível para agir. Essa passagem não gera ficha.</li>
+<li><strong>Por falha:</strong> se uma ação não alcançar seu objetivo e o resultado favorecer as ameaças — por exemplo, um ataque errar ou uma ameaça resistir a um poder — o jogador conclui sua ativação e, somente ao final do turno, o Foco passa ao Mestre. A falha, por si só, não gera ficha nem cancela a ficha devida por uma transferência voluntária entre jogadores que tenha sido concluída normalmente. Ela prevalece sobre uma transferência voluntária para outro jogador.</li>
+<li><strong>Depois da ameaça:</strong> quando uma ameaça concluir uma ativação que não faça parte de uma interrupção, o Mestre escolhe um personagem jogador ainda não marcado. Se todos já tiverem concluído sua ativação, o ciclo anterior já estará encerrado e a escolha será feita no novo ciclo.</li>
+</ul>
 <h3>Fichas de Interrupção</h3>
-<p>As <strong>Fichas de Interrupção</strong> são um recurso exclusivo do Mestre. O Mestre começa cada conflito com <strong>0 fichas</strong> e pode guardar no máximo <strong>2 fichas</strong>. Sempre que receber uma ficha e já estiver no limite, a ficha excedente é descartada. Use moedas ou peças de uma cor diferente dos marcadores de participação dos jogadores.</p>
+<p>O Mestre começa cada conflito com 0 Fichas de Interrupção e pode acumular no máximo 2. Elas são geradas apenas pelas transferências voluntárias entre jogadores, conforme a regra acima; falhas e passagens voluntárias diretamente ao Mestre não geram fichas. O excedente é descartado.</p>
 <div class="interruption-panel">
-  <div class="interruption-token" aria-label="Uma Ficha de Interrupção">INTERRUPÇÃO</div>
-  <div>
-    <strong>1 ficha = 1 interrupção</strong>
-    <p class="small">O Mestre pode manter de 0 a 2 fichas disponíveis. Cada ficha gasta permite inserir uma ativação de ameaça antes que o participante interrompido comece sua ação.</p>
-  </div>
+<div aria-label="Uma Ficha de Interrupção" class="interruption-token">INTERRUPÇÃO</div>
+<div>
+<strong>1 ficha = 1 ativação adicional de ameaça</strong>
+<p class="small">As fichas ficam em uma reserva separada dos marcadores de participação e não são removidas quando um ciclo termina.</p>
+</div>
 </div>
 <ol>
-  <li><strong>Momento de uso:</strong> o Mestre pode gastar 1 ficha no início da ativação de qualquer personagem ou ameaça, antes que esse participante comece sua ação.</li>
-  <li><strong>Ativação da ameaça:</strong> ao gastar a ficha, o Mestre assume imediatamente o Foco e escolhe uma ameaça para agir.</li>
-  <li><strong>Retorno do Foco:</strong> depois que a ameaça concluir sua ativação, o Foco retorna ao participante cuja ativação foi interrompida. A interrupção não cancela nem consome a ativação original.</li>
-  <li><strong>Participação:</strong> a ameaça que entrou em Foco conta como tendo recebido o Foco durante o ciclo. O participante interrompido só recebe seu marcador quando sua própria ativação começar.</li>
-  <li><strong>Ameaças consecutivas:</strong> o Mestre pode gastar fichas adicionais para colocar outras ameaças em Foco uma após a outra. Cada ficha permite uma ativação adicional. Se encadear várias ameaças dessa forma, o Foco só retorna ao participante originalmente interrompido depois que a última ameaça concluir sua ativação. Uma habilidade de ameaça também pode permitir uma sequência sem gasto de ficha, se disser isso expressamente.</li>
-  <li><strong>Limite da interrupção:</strong> uma ficha não permite interromper uma ação depois que ela começou, desfazer um resultado ou alterar retroativamente uma ativação concluída.</li>
+<li>O Mestre pode gastar 1 ficha no início da ativação de um personagem ou ameaça, antes que esse participante comece sua ação.</li>
+<li>O Mestre escolhe uma ameaça elegível, que recebe o Foco e conclui sua ativação.</li>
+<li>Depois, o Foco retorna ao participante cuja ativação foi interrompida. A interrupção não cancela nem consome essa ativação.</li>
+<li>O Mestre pode gastar fichas adicionais para encadear outras ameaças; cada ativação adicional exige 1 ficha. Habilidades específicas também podem permitir essa sequência.</li>
+<li>Uma Ficha de Interrupção não permite que uma ameaça aja pela segunda vez no ciclo: isso só é possível se um poder ou habilidade autorizar expressamente.</li>
 </ol>
-
 <div class="note-box">
-  <strong>Exemplo de transferência interrompida:</strong> Ana passa o Foco para Dmitri. Antes de Dmitri começar sua ação, o Mestre gasta 1 ficha e coloca Marcus em Foco. Depois da ativação de Marcus, o Foco retorna a Dmitri, que realiza sua ação normalmente. Como a transferência original foi interrompida antes do início da ativação, ela não gera ficha para o Mestre.
+<strong>Exemplo:</strong> Ana passa o Foco para Dmitri. Antes de Dmitri começar sua ativação, o Mestre gasta 1 ficha para colocar uma ameaça em Foco. Depois que ela agir, o Foco retorna a Dmitri. Como a interrupção ocorreu antes do início da ativação, a transferência Ana–Dmitri não gera ficha.
 </div>
-
-<h3>Ativações das ameaças</h3>
-<p>O Mestre pode colocar uma ameaça em Foco quando o recebe após uma falha ou quando um jogador lhe entrega o Foco por decisão narrativa. A primeira ativação de resposta não exige gasto de Ficha de Interrupção. Depois da ativação, o Mestre devolve o Foco a um personagem jogador que ainda não tenha recebido o Foco no ciclo.</p>
-<ul>
-  <li>Se ainda houver personagens jogadores sem marcador de participação, o Mestre escolhe um deles para receber o Foco.</li>
-  <li>Se todos os personagens jogadores já tiverem recebido o Foco, o ciclo se encerra depois da resolução da ativação de ameaça decorrente da falha; retire os marcadores e inicie um novo ciclo, escolhendo então um personagem jogador para receber o Foco.</li>
-  <li>O Mestre não pode colocar várias ameaças em sequência livremente. Para cada ativação consecutiva adicional, deve gastar 1 Ficha de Interrupção ou utilizar uma habilidade que permita expressamente essa sequência.</li>
-  <li>Uma ameaça pode receber o Foco novamente no mesmo ciclo. Isso não reinicia o ciclo, pois seu encerramento depende da participação de todos os personagens jogadores.</li>
-  <li>Vários adversários conduzidos como uma única unidade contam como uma única ameaça para fins de ativação. Se forem conduzidos separadamente, cada um realiza sua própria ativação.</li>
-</ul>
-
-<h3>Controle dos marcadores</h3>
-<ul>
-  <li><strong>Marcadores dos jogadores:</strong> coloque uma ficha ao lado de cada personagem jogador quando ele começar sua primeira ativação no ciclo. Mantenha o marcador mesmo que ele receba o Foco novamente.</li>
-  <li><strong>Marcadores das ameaças:</strong> são opcionais e servem apenas para ajudar o Mestre a acompanhar as ativações. As ameaças não precisam de marcador para que o ciclo termine e podem receber o Foco novamente.</li>
-  <li><strong>Fichas de Interrupção:</strong> mantenha-as em uma reserva separada, com cor ou formato diferente. Elas indicam quantas interrupções o Mestre ainda pode realizar, até o máximo de 2.</li>
-  <li><strong>Fim do ciclo:</strong> quando todos os personagens jogadores tiverem recebido o Foco, retire os marcadores de participação dos jogadores e inicie um novo ciclo. As Fichas de Interrupção não gastas permanecem com o Mestre.</li>
-  <li><strong>Reações:</strong> uma Reação realizada fora da ativação normal não conta como participação no ciclo, salvo quando seu efeito disser expressamente o contrário.</li>
-</ul>
 </section>
-
 <section id="acoes">
 <h2>3. Movimentos e Ações durante o Foco</h2>
 <p>Quando recebe o Foco, o personagem pode realizar uma <strong>Ação</strong> significativa e incluir o deslocamento e as interações simples que façam parte da mesma sequência. Algumas habilidades, poderes e itens também concedem uma <strong>Ação Bônus</strong>; ela só pode ser usada quando a própria descrição indicar expressamente essa possibilidade.</p>
-<p>O Foco não impõe uma lista universal de ações nem exige que cada gesto seja resolvido separadamente. Sacar uma arma, avançar até uma posição próxima e disparar podem compor uma sequência coerente. Já realizar vários ataques independentes, ativar diversos poderes ou perseguir objetivos diferentes normalmente exige outra oportunidade de Foco. Um personagem ou ameaça pode receber o Foco mais de uma vez no mesmo ciclo; isso não reinicia o ciclo nem concede ações adicionais por si só. As Fichas de Interrupção são geradas somente nas situações de transferência entre jogadores descritas na seção anterior.</p>
-
+<p>O Foco não impõe uma lista universal de ações. Uma sequência coerente pode incluir deslocamento e interações simples; ações independentes adicionais exigem uma Ação Bônus concedida por regra específica ou outra ativação.</p>
 <div class="four-col">
-  <div class="mini-card"><strong>Ação</strong><br>Atividade significativa, como atacar, ajudar, usar um item ou executar uma manobra. A tabela identifica quais opções exigem Ação.</div>
-  <div class="mini-card"><strong>Ação Bônus</strong><br>Atividade rápida concedida por uma habilidade, poder ou item. Só existe quando a descrição da fonte a indicar; não é uma opção automática para qualquer ação.</div>
-  <div class="mini-card"><strong>Movimento</strong><br>Deslocar-se, mudar de posição ou atravessar o ambiente. O deslocamento humano básico de 9 metros serve como referência para um movimento curto.</div>
-  <div class="mini-card"><strong>Reação</strong><br>Resposta a um gatilho específico, mesmo quando o personagem não está com o Foco. A regra que concede a Reação define seu alcance e seus limites.</div>
+<div class="mini-card"><strong>Ação</strong><br/>Atividade significativa, como atacar, ajudar, usar um item ou executar uma manobra. A tabela identifica quais opções exigem Ação.</div>
+<div class="mini-card"><strong>Ação Bônus</strong><br/>Atividade rápida concedida por uma habilidade, poder ou item. Só existe quando a descrição da fonte a indicar; não é uma opção automática para qualquer ação.</div>
+<div class="mini-card"><strong>Movimento</strong><br/>Deslocar-se, mudar de posição ou atravessar o ambiente. O deslocamento humano básico de 9 metros serve como referência para um movimento curto.</div>
+<div class="mini-card"><strong>Reação</strong><br/>Resposta a um gatilho específico, mesmo quando o personagem não está com o Foco. A regra que concede a Reação define seu alcance e seus limites.</div>
 </div>
-
 <h3>Ações e movimentos disponíveis</h3>
 <table>
-  <thead><tr><th>Opção</th><th>Tipo</th><th>Como funciona</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Atacar</strong></td><td><span class="tag">Ação</span></td><td>Realizar um ataque corpo a corpo ou à distância. O teste e o dano seguem as seções correspondentes.</td></tr>
-    <tr><td><strong>Usar Poder</strong></td><td><span class="tag">Ação ou Ação Bônus</span></td><td>Ativar um poder Beyonder. A descrição informa o tipo de ação, custo de Espiritualidade, alcance, alvos, duração, preparação e concentração.</td></tr>
-    <tr><td><strong>Usar Item</strong></td><td><span class="tag">Ação ou Ação Bônus</span></td><td>Utilizar um item que exija atenção ou manipulação significativa. O item informa quando pode ser usado como Ação Bônus. Interações simples com objetos acessíveis podem acompanhar outra ação quando a ficção permitir.</td></tr>
-    <tr><td><strong>Movimentar-se</strong></td><td><span class="tag">Movimento</span></td><td>Deslocar-se, buscar cobertura, aproximar-se de um alvo, atravessar um obstáculo ou mudar de posição. O deslocamento básico de 9 metros serve como referência para um movimento curto em condições normais.</td></tr>
-    <tr><td><strong>Ajudar</strong></td><td><span class="tag">Ação</span></td><td>Descrever como auxilia um aliado em uma ação específica. Quando a ajuda for viável e relevante, o aliado recebe Vantagem no próximo teste diretamente beneficiado. Fontes excedentes não acumulam.</td></tr>
-    <tr><td><strong>Esquivar</strong></td><td><span class="tag">Ação</span></td><td>Descrever uma postura evasiva, uso de cobertura ou movimento defensivo. O Mestre pode conceder Vantagem em um teste de defesa pertinente ou impor Desvantagem ao ataque que a manobra procura evitar, desde que a posição justifique o benefício.</td></tr>
-    <tr><td><strong>Esconder-se</strong></td><td><span class="tag">Ação</span></td><td>Usar cobertura, sombras, disfarce ou distração para ocultar a presença. Quando houver risco de ser descoberto, faça um teste de Furtividade contra a percepção dos observadores.</td></tr>
-    <tr><td><strong>Preparar-se</strong></td><td><span class="tag">Ação</span></td><td>Declarar uma intenção e uma condição perceptível que levará o personagem a agir. Quando a condição acontecer, o Mestre pode devolver o Foco ao personagem ou reconhecer uma vantagem situacional, conforme a preparação e a oportunidade.</td></tr>
-    <tr><td><strong>Executar uma manobra</strong></td><td><span class="tag">Ação</span></td><td>Agarrar, derrubar, empurrar, desarmar ou tentar controlar fisicamente um adversário. A manobra é resolvida pelo teste ou disputa apropriada.</td></tr>
-    <tr><td><strong>Recuar</strong></td><td><span class="tag">Movimento</span></td><td>Abandonar o alcance de um adversário. Se o movimento expuser o personagem a um ataque, o Mestre pode assumir o Foco para representar a abertura. Cobertura, distração ou uma manobra adequada podem evitar essa consequência.</td></tr>
-  </tbody>
+<thead><tr><th>Opção</th><th>Tipo</th><th>Como funciona</th></tr></thead>
+<tbody>
+<tr><td><strong>Atacar</strong></td><td><span class="tag">Ação</span></td><td>Realizar um ataque corpo a corpo ou à distância. O teste e o dano seguem as seções correspondentes.</td></tr>
+<tr><td><strong>Usar Poder</strong></td><td><span class="tag">Ação ou Ação Bônus</span></td><td>Ativar um poder Beyonder. A descrição informa o tipo de ação, custo de Espiritualidade, alcance, alvos, duração, preparação e concentração.</td></tr>
+<tr><td><strong>Usar Item</strong></td><td><span class="tag">Ação ou Ação Bônus</span></td><td>Utilizar um item que exija atenção ou manipulação significativa. O item informa quando pode ser usado como Ação Bônus. Interações simples com objetos acessíveis podem acompanhar outra ação quando a ficção permitir.</td></tr>
+<tr><td><strong>Movimentar-se</strong></td><td><span class="tag">Movimento</span></td><td>Deslocar-se, buscar cobertura, aproximar-se de um alvo, atravessar um obstáculo ou mudar de posição. O deslocamento básico de 9 metros serve como referência para um movimento curto em condições normais.</td></tr>
+<tr><td><strong>Ajudar</strong></td><td><span class="tag">Ação</span></td><td>Descrever como auxilia um aliado em uma ação específica. Quando a ajuda for viável e relevante, o aliado recebe Vantagem no próximo teste diretamente beneficiado. Fontes excedentes não acumulam.</td></tr>
+<tr><td><strong>Esquivar</strong></td><td><span class="tag">Ação</span></td><td>Descrever uma postura evasiva, uso de cobertura ou movimento defensivo. O Mestre pode conceder Vantagem em um teste de defesa pertinente ou impor Desvantagem ao ataque que a manobra procura evitar, desde que a posição justifique o benefício.</td></tr>
+<tr><td><strong>Esconder-se</strong></td><td><span class="tag">Ação</span></td><td>Usar cobertura, sombras, disfarce ou distração para ocultar a presença. Quando houver risco de ser descoberto, faça um teste de Furtividade contra a percepção dos observadores.</td></tr>
+<tr><td><strong>Preparar-se</strong></td><td><span class="tag">Ação</span></td><td>Declarar uma intenção e um evento que acionará uma resposta. A preparação não concede outra ativação nem permite receber Foco novamente no mesmo ciclo; qualquer Reação depende de uma regra ou habilidade específica.</td></tr>
+<tr><td><strong>Executar uma manobra</strong></td><td><span class="tag">Ação</span></td><td>Agarrar, derrubar, empurrar, desarmar ou tentar controlar fisicamente um adversário. A manobra é resolvida pelo teste ou disputa apropriada.</td></tr>
+<tr><td><strong>Recuar</strong></td><td><span class="tag">Movimento</span></td><td>Abandonar o alcance corpo a corpo. Se a saída abrir uma oportunidade, o adversário só poderá responder por uma Reação concedida por regra ou habilidade específica.</td></tr>
+</tbody>
 </table>
-
 <h3>Movimento e terreno</h3>
 <ul>
-  <li>O deslocamento básico de um personagem humano é de <strong>9 metros</strong> em um movimento curto, salvo alteração concedida por Atributo, poder, condição ou equipamento.</li>
-  <li>O movimento pode acompanhar uma ação quando for parte natural da mesma sequência. Percorrer uma distância muito maior, atravessar uma área perigosa ou alcançar uma posição difícil pode exigir outro teste ou permitir que uma ameaça intervenha.</li>
-  <li>Terreno difícil reduz pela metade a distância percorrida em um mesmo movimento. Obstáculos, escaladas e travessias perigosas podem exigir testes de Atributo e Proficiência.</li>
-  <li>Levantar-se quando estiver Derrubado consome aproximadamente metade do deslocamento curto de referência (4,5 metros), mas não exige uma Ação separada.</li>
+<li>O deslocamento básico de um personagem humano é de <strong>9 metros</strong> em um movimento curto, salvo alteração concedida por Atributo, poder, condição ou equipamento.</li>
+<li>O movimento pode acompanhar uma ação quando for parte natural da mesma sequência. Percorrer uma distância muito maior, atravessar uma área perigosa ou alcançar uma posição difícil pode exigir outro teste ou permitir que uma ameaça intervenha.</li>
+<li>Terreno difícil reduz pela metade a distância percorrida em um mesmo movimento. Obstáculos, escaladas e travessias perigosas podem exigir testes de Atributo e Proficiência.</li>
+<li>Levantar-se quando estiver Derrubado consome aproximadamente metade do deslocamento curto de referência (4,5 metros), mas não exige uma Ação separada.</li>
 </ul>
-
 <h3>Respostas e Reações</h3>
 <p>Não existe uma Reação genérica que todos recuperam automaticamente após a ação de outro participante. Uma Reação só pode ser realizada quando uma habilidade, poder, condição ou regra específica indicar seu gatilho. A descrição correspondente informa o que pode ser feito e quaisquer limites de uso.</p>
-<p>Quando uma criatura deixa voluntariamente o alcance corpo a corpo de um adversário e isso abre uma oportunidade clara, o Mestre pode assumir o Foco para resolver um ataque ou outra resposta imediata daquele adversário. Teletransporte, deslocamento forçado ou efeitos semelhantes não oferecem essa abertura, salvo indicação expressa do efeito.</p>
-
+<p>Quando uma criatura deixa voluntariamente o alcance corpo a corpo de um adversário e abre uma oportunidade clara, esse adversário só pode realizar um ataque de oportunidade se uma regra ou habilidade lhe conceder uma Reação. Isso não transfere o Foco. Teletransporte, deslocamento forçado ou efeitos semelhantes não oferecem essa abertura, salvo indicação expressa.</p>
 <h3>Agarrar e escapar</h3>
 <p>Para agarrar uma criatura ao alcance, o atacante realiza uma disputa de <strong>2d10 + Mod.(FOR) + Mod.(Luta)</strong> contra <strong>2d10 + Mod.(FOR) + Mod.(Luta)</strong> ou <strong>2d10 + Mod.(DES) + Mod.(Acrobacia)</strong>, conforme a forma escolhida pelo alvo para resistir. Se o atacante vencer, o alvo fica <strong>Agarrado</strong> e seu deslocamento é impedido enquanto a contenção persistir.</p>
-<p>Para escapar, o alvo precisa conquistar uma nova oportunidade de Foco e vencer a mesma disputa. Uma criatura muito maior, uma condição ou uma habilidade específica pode impedir ou modificar essa manobra.</p>
+<p>Para escapar, o alvo deve vencer a mesma disputa em uma ativação posterior. Se já tiver recebido o Foco no ciclo atual, só poderá tentar novamente no próximo ciclo, salvo se uma habilidade conceder uma Reação apropriada.</p>
 </section>
-
 <section id="ataques">
 <h2>4. Ataques</h2>
 <p>Um ataque acerta quando seu resultado final iguala ou supera a <strong>Esquiva</strong> do alvo. A escolha do Atributo segue a abordagem descrita pelo jogador, respeitando a Proficiência efetivamente utilizada.</p>
-
 <h3>Ataques corpo a corpo</h3>
 <div class="formula-box">
-  <span class="formula">2d10 + Mod.(FOR ou DES) + Mod.(Armas Brancas) ≥ Esquiva</span>
-  <p class="small">Use Força para impacto e potência; Destreza quando a técnica, precisão ou propriedade da arma justificar.</p>
+<span class="formula">2d10 + Mod.(FOR ou DES) + Mod.(Armas Brancas) ≥ Esquiva</span>
+<p class="small">Use Força para impacto e potência; Destreza quando a técnica, precisão ou propriedade da arma justificar.</p>
 </div>
 <p>Em um acerto, role os dados de dano da arma e acrescente o modificador de Força. O personagem pode utilizar Destreza no teste de ataque quando a técnica justificar; isso não altera o modificador de dano. Se a arma possuir a propriedade <strong>Finesse</strong>, pode utilizar Mod.(DES) também no dano, em vez de Mod.(FOR). O ataque desarmado utiliza <strong>2d10 + Mod.(FOR ou DES) + Mod.(Luta)</strong> e causa 1d4 de dano Contundente, acrescido do modificador de Força.</p>
-
 <h3>Ataques à distância</h3>
 <div class="formula-box">
-  <span class="formula">2d10 + Mod.(DES) + Mod.(Proficiência pertinente) ≥ Esquiva</span>
-  <p class="small">Armas de fogo usam Armas de Fogo. Arcos, bestas e armas de disparo manual usam Armas Brancas, conforme o Capítulo 2.</p>
+<span class="formula">2d10 + Mod.(DES) + Mod.(Proficiência pertinente) ≥ Esquiva</span>
+<p class="small">Armas de fogo usam Armas de Fogo. Arcos, bestas e armas de disparo manual usam Armas Brancas, conforme o Capítulo 2.</p>
 </div>
 <p>Armas de fogo e armas de disparo não recebem bônus de Atributo ao dano, salvo se a descrição da arma, do equipamento ou de um poder determinar o contrário. Se houver um inimigo hostil a até 1,5 metro que possa ameaçar o atirador, o ataque à distância é realizado com <strong>Desvantagem</strong>.</p>
-
 <h3>Ataques com poderes Beyonder</h3>
 <p>O texto de cada poder deve informar como seu efeito é resolvido:</p>
 <ul>
-  <li><strong>Ataque contra Esquiva:</strong> o usuário faz o teste indicado pelo poder; se igualar ou superar a Esquiva do alvo, acerta.</li>
-  <li><strong>Resistência contra CD:</strong> o alvo faz um teste de resistência, utilizando o Atributo e, quando pertinente, a Proficiência indicados pelo poder. Se igualar ou superar a CD, resiste ao efeito.</li>
-  <li><strong>Teste disputado:</strong> quando o poder opuser diretamente o usuário e o alvo, ambos rolam os testes indicados e comparam os resultados. Não há críticos automáticos em testes disputados.</li>
+<li><strong>Ataque contra Esquiva:</strong> o usuário faz o teste indicado pelo poder; se igualar ou superar a Esquiva do alvo, acerta.</li>
+<li><strong>Resistência contra CD:</strong> o alvo faz um teste de resistência, utilizando o Atributo e, quando pertinente, a Proficiência indicados pelo poder. Se igualar ou superar a CD, resiste ao efeito.</li>
+<li><strong>Teste disputado:</strong> quando o poder opuser diretamente o usuário e o alvo, ambos rolam os testes indicados e comparam os resultados. Não há críticos automáticos em testes disputados.</li>
 </ul>
 <p>O poder deve indicar seu dano, tipo de dano, alcance, alvos, duração, custo e consequências de sucesso ou falha. Não se presume que todo poder seja um ataque ou que todo efeito possa ser evitado com Esquiva.</p>
 </section>
-
 <section id="resistencia">
 <h2>5. Resistência a Poderes</h2>
 <p>Os efeitos podem ser classificados como corporais, mentais ou espirituais. Essas categorias descrevem a natureza do poder; não são estatísticas separadas nem possuem modificadores universais próprios.</p>
 <div class="rule-box">
-  <div class="box-title">Teste de resistência</div>
-  <span class="formula">2d10 + Mod.(Atributo) + Mod.(Proficiência, se pertinente) ≥ CD</span>
+<div class="box-title">Teste de resistência</div>
+<span class="formula">2d10 + Mod.(Atributo) + Mod.(Proficiência, se pertinente) ≥ CD</span>
 </div>
 <table>
-  <thead><tr><th>Natureza do efeito</th><th>Abordagens possíveis</th><th>Exemplos</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Corporal</strong></td><td>Vigor para suportar; Destreza para evitar ou controlar o movimento; Força para romper uma restrição física.</td><td>Venenos, doenças, transmutações, contenção e controle corporal.</td></tr>
-    <tr><td><strong>Mental</strong></td><td>Autocontrole para regular reações; Determinação para resistir a imposições; Raciocínio para identificar inconsistências.</td><td>Medo, hipnose, ilusões, compulsões e controle mental.</td></tr>
-    <tr><td><strong>Espiritual</strong></td><td>Autocontrole ou Determinação para preservar a própria vontade; Ocultismo quando o conhecimento ritualístico permitir compreender ou contrariar o efeito.</td><td>Maldições, possessão, drenagem espiritual e ataques à alma.</td></tr>
-  </tbody>
+<thead><tr><th>Natureza do efeito</th><th>Abordagens possíveis</th><th>Exemplos</th></tr></thead>
+<tbody>
+<tr><td><strong>Corporal</strong></td><td>Vigor para suportar; Destreza para evitar ou controlar o movimento; Força para romper uma restrição física.</td><td>Venenos, doenças, transmutações, contenção e controle corporal.</td></tr>
+<tr><td><strong>Mental</strong></td><td>Autocontrole para regular reações; Determinação para resistir a imposições; Raciocínio para identificar inconsistências.</td><td>Medo, hipnose, ilusões, compulsões e controle mental.</td></tr>
+<tr><td><strong>Espiritual</strong></td><td>Autocontrole ou Determinação para preservar a própria vontade; Ocultismo quando o conhecimento ritualístico permitir compreender ou contrariar o efeito.</td><td>Maldições, possessão, drenagem espiritual e ataques à alma.</td></tr>
+</tbody>
 </table>
 <p class="note-box">A tabela oferece exemplos, não combinações obrigatórias. O poder deve especificar o teste sempre que sua resistência precisar de um procedimento diferente. A escolha do Atributo segue a abordagem e as regras gerais do Capítulo 3.</p>
 </section>
-
 <section id="dano">
 <h2>6. Dano e Limiares</h2>
 <p>O valor de dano é o resultado dos dados e modificadores indicados pela arma ou pelo poder. Depois de aplicar os modificadores e as resistências pertinentes, compare o valor final aos Limiares de Dano do alvo.</p>
-
 <h3>Tipos de dano</h3>
 <p>Todo ataque que causar dano possui um tipo. Utilize as treze categorias abaixo; o tipo descreve a natureza do dano e determina quais Resistências, Vulnerabilidades ou Imunidades podem se aplicar.</p>
 <table>
-  <thead><tr><th>Tipo de dano</th><th>Exemplos</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Ácido (Acid)</strong></td><td>Líquidos corrosivos, enzimas e substâncias que dissolvem ou corroem materiais.</td></tr>
-    <tr><td><strong>Contundente (Bludgeoning)</strong></td><td>Socos, martelos, bastões, impactos, quedas e constrição.</td></tr>
-    <tr><td><strong>Gélido (Cold)</strong></td><td>Frio sobrenatural, congelamento e descargas de energia gélida.</td></tr>
-    <tr><td><strong>Fogo (Fire)</strong></td><td>Chamas, combustão, explosões incendiárias e calor intenso.</td></tr>
-    <tr><td><strong>Energia (Force)</strong></td><td>Energia sobrenatural concentrada, impacto mágico puro e descargas de força.</td></tr>
-    <tr><td><strong>Elétrico (Lightning)</strong></td><td>Raios, eletricidade, descargas e tempestades canalizadas.</td></tr>
-    <tr><td><strong>Necrótico (Necrotic)</strong></td><td>Drenagem vital, putrefação, energia de morte e deterioração espiritual.</td></tr>
-    <tr><td><strong>Perfurante (Piercing)</strong></td><td>Balas, flechas, lanças, adagas, presas e outros ataques que perfuram.</td></tr>
-    <tr><td><strong>Venenoso (Poison)</strong></td><td>Toxinas, venenos, gases tóxicos e substâncias nocivas.</td></tr>
-    <tr><td><strong>Psíquico (Psychic)</strong></td><td>Ataques mentais, sobrecarga cognitiva e agressões diretas à consciência.</td></tr>
-    <tr><td><strong>Radiante (Radiant)</strong></td><td>Luz sobrenatural, purificação, energia solar e manifestações luminosas.</td></tr>
-    <tr><td><strong>Cortante (Slashing)</strong></td><td>Espadas, sabres, machados, garras e lâminas.</td></tr>
-    <tr><td><strong>Trovejante (Thunder)</strong></td><td>Ondas de choque, explosões sonoras e impactos de pressão acústica.</td></tr>
-  </tbody>
+<thead><tr><th>Tipo de dano</th><th>Exemplos</th></tr></thead>
+<tbody>
+<tr><td><strong>Ácido (Acid)</strong></td><td>Líquidos corrosivos, enzimas e substâncias que dissolvem ou corroem materiais.</td></tr>
+<tr><td><strong>Contundente (Bludgeoning)</strong></td><td>Socos, martelos, bastões, impactos, quedas e constrição.</td></tr>
+<tr><td><strong>Gélido (Cold)</strong></td><td>Frio sobrenatural, congelamento e descargas de energia gélida.</td></tr>
+<tr><td><strong>Fogo (Fire)</strong></td><td>Chamas, combustão, explosões incendiárias e calor intenso.</td></tr>
+<tr><td><strong>Energia (Force)</strong></td><td>Energia sobrenatural concentrada, impacto mágico puro e descargas de força.</td></tr>
+<tr><td><strong>Elétrico (Lightning)</strong></td><td>Raios, eletricidade, descargas e tempestades canalizadas.</td></tr>
+<tr><td><strong>Necrótico (Necrotic)</strong></td><td>Drenagem vital, putrefação, energia de morte e deterioração espiritual.</td></tr>
+<tr><td><strong>Perfurante (Piercing)</strong></td><td>Balas, flechas, lanças, adagas, presas e outros ataques que perfuram.</td></tr>
+<tr><td><strong>Venenoso (Poison)</strong></td><td>Toxinas, venenos, gases tóxicos e substâncias nocivas.</td></tr>
+<tr><td><strong>Psíquico (Psychic)</strong></td><td>Ataques mentais, sobrecarga cognitiva e agressões diretas à consciência.</td></tr>
+<tr><td><strong>Radiante (Radiant)</strong></td><td>Luz sobrenatural, purificação, energia solar e manifestações luminosas.</td></tr>
+<tr><td><strong>Cortante (Slashing)</strong></td><td>Espadas, sabres, machados, garras e lâminas.</td></tr>
+<tr><td><strong>Trovejante (Thunder)</strong></td><td>Ondas de choque, explosões sonoras e impactos de pressão acústica.</td></tr>
+</tbody>
 </table>
-
 <h3>Resistência, vulnerabilidade e imunidade</h3>
 <ul>
-  <li><strong>Resistência:</strong> o alvo sofre <strong>1 ponto a menos de dano</strong> daquele tipo, após os demais modificadores. O dano não pode ser reduzido abaixo de 0.</li>
-  <li><strong>Vulnerabilidade:</strong> o alvo sofre <strong>1 ponto a mais de dano</strong> daquele tipo, após os demais modificadores.</li>
-  <li><strong>Imunidade:</strong> o alvo não recebe dano daquele tipo.</li>
-  <li>Quando Resistência e Vulnerabilidade ao mesmo tipo se aplicarem simultaneamente, elas se anulam. Fontes múltiplas da mesma Resistência ou Vulnerabilidade não se acumulam, salvo indicação expressa.</li>
+<li><strong>Resistência:</strong> o alvo sofre <strong>1 ponto a menos de dano</strong> daquele tipo, após os demais modificadores. O dano não pode ser reduzido abaixo de 0.</li>
+<li><strong>Vulnerabilidade:</strong> o alvo sofre <strong>1 ponto a mais de dano</strong> daquele tipo, após os demais modificadores.</li>
+<li><strong>Imunidade:</strong> o alvo não recebe dano daquele tipo.</li>
+<li>Quando Resistência e Vulnerabilidade ao mesmo tipo se aplicarem simultaneamente, elas se anulam. Fontes múltiplas da mesma Resistência ou Vulnerabilidade não se acumulam, salvo indicação expressa.</li>
 </ul>
-
 <h3>Limiares por Sequência</h3>
 <p>Na ausência de uma Vestimenta ou efeito que altere os valores, utilize os limiares naturais do Capítulo 3:</p>
 <table>
-  <thead><tr><th>Sequência</th><th>Menor → Maior</th><th>Maior → Severo</th></tr></thead>
-  <tbody>
-    <tr><td>9</td><td>3</td><td>6</td></tr>
-    <tr><td>8</td><td>4</td><td>8</td></tr>
-    <tr><td>7</td><td>5</td><td>10</td></tr>
-    <tr><td>6</td><td>6</td><td>12</td></tr>
-    <tr><td>5</td><td>7</td><td>14</td></tr>
-  </tbody>
+<thead><tr><th>Sequência</th><th>Menor → Maior</th><th>Maior → Severo</th></tr></thead>
+<tbody>
+<tr><td>9</td><td>3</td><td>6</td></tr>
+<tr><td>8</td><td>4</td><td>8</td></tr>
+<tr><td>7</td><td>5</td><td>10</td></tr>
+<tr><td>6</td><td>6</td><td>12</td></tr>
+<tr><td>5</td><td>7</td><td>14</td></tr>
+</tbody>
 </table>
 <table>
-  <thead><tr><th>Categoria de dano</th><th>Condição</th><th>PV marcados</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Menor</strong></td><td>Valor abaixo do primeiro limiar</td><td>1 PV</td></tr>
-    <tr><td><strong>Maior</strong></td><td>Valor igual ou superior ao primeiro limiar, mas abaixo do segundo</td><td>2 PV</td></tr>
-    <tr><td><strong>Severo</strong></td><td>Valor igual ou superior ao segundo limiar</td><td>3 PV</td></tr>
-  </tbody>
+<thead><tr><th>Categoria de dano</th><th>Condição</th><th>PV marcados</th></tr></thead>
+<tbody>
+<tr><td><strong>Menor</strong></td><td>Valor abaixo do primeiro limiar</td><td>1 PV</td></tr>
+<tr><td><strong>Maior</strong></td><td>Valor igual ou superior ao primeiro limiar, mas abaixo do segundo</td><td>2 PV</td></tr>
+<tr><td><strong>Severo</strong></td><td>Valor igual ou superior ao segundo limiar</td><td>3 PV</td></tr>
+</tbody>
 </table>
-
 <h3>Ordem de resolução do dano</h3>
 <ol>
-  <li>Role os dados de dano da arma ou do poder e acrescente os modificadores fixos previstos.</li>
-  <li>Aplique outros modificadores indicados pelo efeito.</li>
-  <li>Aplique Resistência, Vulnerabilidade ou Imunidade ao tipo de dano.</li>
-  <li>Compare o valor final aos Limiares de Dano do alvo e determine a categoria: Menor, Maior ou Severo.</li>
-  <li>O alvo pode gastar Blindagem para reduzir a categoria em um nível.</li>
-  <li>Marque os PV correspondentes à categoria final.</li>
+<li>Role os dados de dano da arma ou do poder e acrescente os modificadores fixos previstos.</li>
+<li>Aplique outros modificadores indicados pelo efeito.</li>
+<li>Aplique Resistência, Vulnerabilidade ou Imunidade ao tipo de dano.</li>
+<li>Compare o valor final aos Limiares de Dano do alvo e determine a categoria: Menor, Maior ou Severo.</li>
+<li>Aplique a Blindagem conforme as regras da seção Vestimentas e Blindagem.</li>
+<li>Marque os PV correspondentes à categoria final.</li>
 </ol>
 <div class="example-box">
-  <div class="box-title">Exemplo — personagem na Sequência 8</div>
-  <p>Um personagem na Sequência 8 possui limiares 4 e 8. Um ataque que cause 3 pontos de dano é Menor e marca 1 PV; com 5 pontos, é Maior e marca 2 PV; com 8 pontos, é Severo e marca 3 PV. Se o personagem gastar 1 ponto de Blindagem contra o dano Maior, a categoria cai para Menor e ele marca apenas 1 PV.</p>
+<div class="box-title">Exemplo — personagem na Sequência 8</div>
+<p>Um personagem na Sequência 8 possui limiares 4 e 8. Um ataque que cause 3 pontos de dano é Menor e marca 1 PV; com 5 pontos, é Maior e marca 2 PV; com 8 pontos, é Severo e marca 3 PV. Se o personagem gastar 1 ponto de Blindagem contra o dano Maior, a categoria cai para Menor e ele marca apenas 1 PV.</p>
 </div>
 </section>
-
 <section id="vestimentas">
 <h2>7. Vestimentas e Blindagem</h2>
-<p>Uma <strong>Vestimenta</strong> é um equipamento de proteção. <strong>Blindagem</strong> é um recurso que pode ser concedido por uma Vestimenta, poder Beyonder ou outra fonte. Uma Vestimenta pode conceder Blindagem e modificar os Limiares de Dano; não existe bônus genérico de Vestimenta à Esquiva.</p>
+<p>Vestimentas são equipamentos de proteção. Elas podem conceder Blindagem ou alterar os Limiares de Dano, mas não fornecem bônus genérico à Esquiva.</p>
 <div class="rule-box">
-  <div class="box-title">Uso da Blindagem</div>
-  <ul>
-    <li>Depois de determinar a categoria do dano, o personagem pode gastar <strong>1 ponto de Blindagem</strong> para reduzi-la em um nível.</li>
-    <li>A redução segue a ordem: Severo → Maior → Menor → Nenhum dano.</li>
-    <li>O limite é de <strong>1 ponto de Blindagem por ataque sofrido</strong>, independentemente da quantidade total disponível.</li>
-    <li>Se a categoria for reduzida a Nenhum dano, nenhum PV é marcado por aquele ataque.</li>
-  </ul>
+<div class="box-title">Uso da Blindagem</div>
+<ul>
+<li>Depois de determinar a categoria do dano, o personagem pode gastar <strong>1 ponto de Blindagem</strong> para reduzi-la em um nível.</li>
+<li>A redução segue a ordem: Severo → Maior → Menor → Nenhum dano.</li>
+<li>O limite é de <strong>1 ponto de Blindagem por ataque sofrido</strong>, independentemente da quantidade total disponível.</li>
+<li>Se a categoria for reduzida a Nenhum dano, nenhum PV é marcado por aquele ataque.</li>
+</ul>
 </div>
-<p>A descrição de cada Vestimenta deve informar a quantidade de Blindagem concedida, seus requisitos ou limitações e qualquer alteração específica dos Limiares de Dano. Utilize os valores descritos pelo equipamento; não some um bônus genérico aos limiares.</p>
-<p class="small">Os valores individuais das Vestimentas e dos equipamentos de proteção serão detalhados no capítulo de Equipamentos. Esta seção estabelece apenas como eles interagem com Esquiva, Blindagem e dano.</p>
+<p>A ficha de cada Vestimenta deve informar sua Blindagem, requisitos, limitações e quaisquer alterações específicas dos Limiares. Os equipamentos disponíveis serão apresentados no capítulo de Equipamentos.</p>
 </section>
-
 <section id="condicoes">
 <h2>8. Condições</h2>
 <p>Condições representam efeitos temporários que restringem ações, alteram testes ou modificam a posição do personagem. A fonte da condição deve informar sua duração e como ela termina. Quando uma condição conceder Vantagem ou Desvantagem, aplique as regras gerais do Capítulo 3; fontes excedentes não se acumulam.</p>
 <table>
-  <thead><tr><th>Condição</th><th>Efeito</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Atordoado</strong></td><td>Não pode realizar Ações ou Reações. Ataques contra o alvo são feitos com Vantagem. O deslocamento é reduzido a 0 enquanto durar a condição.</td></tr>
-    <tr><td><strong>Cego</strong></td><td>Não pode ver. Seus ataques contra alvos que não consegue localizar são impossíveis ou feitos com Desvantagem, conforme a situação; ataques contra ele têm Vantagem quando o atacante consegue localizá-lo.</td></tr>
-    <tr><td><strong>Enfeitiçado</strong></td><td>Não pode atacar nem prejudicar diretamente a fonte do encantamento. A fonte tem Vantagem em interações sociais que dependam da influência do encantamento.</td></tr>
-    <tr><td><strong>Amedrontado</strong></td><td>Tem Desvantagem em ações diretamente dirigidas à fonte do medo enquanto ela estiver presente e não pode aproximar-se voluntariamente dela, salvo se um efeito determinar o contrário.</td></tr>
-    <tr><td><strong>Envenenado</strong></td><td>Tem Desvantagem em testes de esforço físico ou coordenação diretamente prejudicados pelo veneno. O dano contínuo e a duração dependem da substância ou do poder responsável.</td></tr>
-    <tr><td><strong>Paralisado</strong></td><td>Não pode mover-se nem realizar Ações ou Reações que dependam de movimento. Ataques contra o alvo têm Vantagem. Um acerto não se torna automaticamente crítico: os críticos continuam dependendo dos dados selecionados.</td></tr>
-    <tr><td><strong>Derrubado</strong></td><td>Ataques corpo a corpo contra o alvo têm Vantagem; ataques à distância contra ele têm Desvantagem. Levantar-se consome aproximadamente metade do deslocamento curto de referência (4,5 metros).</td></tr>
-    <tr><td><strong>Invisível</strong></td><td>Não pode ser visto sem meios especiais. Ataques contra o alvo têm Desvantagem enquanto sua localização não for identificada; seus ataques têm Vantagem contra criaturas que não consigam percebê-lo.</td></tr>
-    <tr><td><strong>Possuído</strong></td><td>Uma entidade assume o controle do corpo conforme a descrição do efeito. O Mestre conduz as ações durante a possessão; a duração e os testes para expulsar a entidade são definidos pela fonte do efeito.</td></tr>
-    <tr><td><strong>Desorientado</strong></td><td>Tem Desvantagem em testes que dependam de atenção, orientação espacial ou raciocínio imediato. O efeito não reduz Lucidez nem implica Perda de Controle.</td></tr>
-    <tr><td><strong>Compelido</strong></td><td>Deve seguir a instrução específica imposta por um poder. A ordem, duração, limites e possibilidade de resistência precisam constar na descrição do efeito. A condição não autoriza controle irrestrito do personagem.</td></tr>
-  </tbody>
+<thead><tr><th>Condição</th><th>Efeito</th></tr></thead>
+<tbody>
+<tr><td><strong>Atordoado</strong></td><td>Não pode realizar Ações ou Reações. Ataques contra o alvo são feitos com Vantagem. O deslocamento é reduzido a 0 enquanto durar a condição.</td></tr>
+<tr><td><strong>Cego</strong></td><td>Não pode ver. Seus ataques contra alvos que não consegue localizar são impossíveis ou feitos com Desvantagem, conforme a situação; ataques contra ele têm Vantagem quando o atacante consegue localizá-lo.</td></tr>
+<tr><td><strong>Enfeitiçado</strong></td><td>Não pode atacar nem prejudicar diretamente a fonte do encantamento. A fonte tem Vantagem em interações sociais que dependam da influência do encantamento.</td></tr>
+<tr><td><strong>Amedrontado</strong></td><td>Tem Desvantagem em ações diretamente dirigidas à fonte do medo enquanto ela estiver presente e não pode aproximar-se voluntariamente dela, salvo se um efeito determinar o contrário.</td></tr>
+<tr><td><strong>Envenenado</strong></td><td>Tem Desvantagem em testes de esforço físico ou coordenação diretamente prejudicados pelo veneno. O dano contínuo e a duração dependem da substância ou do poder responsável.</td></tr>
+<tr><td><strong>Paralisado</strong></td><td>Não pode mover-se nem realizar Ações ou Reações que dependam de movimento. Ataques contra o alvo têm Vantagem. Um acerto não se torna automaticamente crítico: os críticos continuam dependendo dos dados selecionados.</td></tr>
+<tr><td><strong>Derrubado</strong></td><td>Ataques corpo a corpo contra o alvo têm Vantagem; ataques à distância contra ele têm Desvantagem. Levantar-se consome aproximadamente metade do deslocamento curto de referência (4,5 metros).</td></tr>
+<tr><td><strong>Invisível</strong></td><td>Não pode ser visto sem meios especiais. Ataques contra o alvo têm Desvantagem enquanto sua localização não for identificada; seus ataques têm Vantagem contra criaturas que não consigam percebê-lo.</td></tr>
+<tr><td><strong>Possuído</strong></td><td>Uma entidade assume o controle do corpo conforme a descrição do efeito. O Mestre conduz as ações durante a possessão; a duração e os testes para expulsar a entidade são definidos pela fonte do efeito.</td></tr>
+<tr><td><strong>Desorientado</strong></td><td>Tem Desvantagem em testes que dependam de atenção, orientação espacial ou raciocínio imediato. O efeito não reduz Lucidez nem implica Perda de Controle.</td></tr>
+<tr><td><strong>Compelido</strong></td><td>Deve seguir a instrução específica imposta por um poder. A ordem, duração, limites e possibilidade de resistência precisam constar na descrição do efeito. A condição não autoriza controle irrestrito do personagem.</td></tr>
+</tbody>
 </table>
 <div class="warning-box">
-  <div class="box-title">Condições temporárias não são Perda de Controle</div>
-  <p>Possessão, compulsão ou desorientação são efeitos próprios e temporários, encerrados conforme as regras da fonte que os aplicou. Eles não substituem a regra de Lucidez do Capítulo 3. Quando um personagem chega a <strong>0 de Lucidez</strong>, o jogador perde permanentemente o personagem; nenhum teste de condição ou recuperação posterior devolve seu controle.</p>
+<div class="box-title">Condições temporárias não são Perda de Controle</div>
+<p>Possessão, compulsão ou desorientação são efeitos próprios e temporários, encerrados conforme as regras da fonte que os aplicou. Eles não substituem a regra de Lucidez do Capítulo 3. Quando um personagem chega a <strong>0 de Lucidez</strong>, o jogador perde permanentemente o personagem; nenhum teste de condição ou recuperação posterior devolve seu controle.</p>
 </div>
 </section>
-
 <section id="pv-morte">
 <h2>9. Incapacitação, Morte e Cura</h2>
 <h3>Pontos de Vida e Incapacitação</h3>
 <p>Os Pontos de Vida são calculados conforme o Capítulo 3: <strong>PV = 3 + Mod.(VIG) + (10 − Sequência)</strong>. Os PV representam a capacidade de suportar ferimentos e continuar agindo.</p>
 <ul>
-  <li>Quando os PV chegam a <strong>0 ou menos</strong>, o personagem fica <strong>Incapacitado</strong>: cai inconsciente, não pode agir, mover-se ou usar Reações.</li>
-  <li>Valores abaixo de 0 representam risco de morte e são mantidos até que o personagem seja estabilizado ou receba cura.</li>
-  <li>Se o personagem for curado e seus PV voltarem a um valor acima de 0, ele deixa a condição Incapacitado e recupera a consciência, salvo se outro efeito impedir.</li>
+<li>Quando os PV chegam a <strong>0 ou menos</strong>, o personagem fica <strong>Incapacitado</strong>: cai inconsciente, não pode agir, mover-se ou usar Reações.</li>
+<li>Valores abaixo de 0 representam risco de morte e são mantidos até que o personagem seja estabilizado ou receba cura.</li>
+<li>Se o personagem for curado e seus PV voltarem a um valor acima de 0, ele deixa a condição Incapacitado e recupera a consciência, salvo se outro efeito impedir.</li>
 </ul>
-
 <h3>Testes de Sobrevivência</h3>
 <p>Sempre que o Mestre assumir o Foco e o personagem continuar com 0 PV ou menos, sem estar estabilizado, ele faz um teste para determinar se consegue sobreviver aos ferimentos. Faça no máximo um teste por passagem do Foco para o Mestre.</p>
 <div class="formula-box">
-  <span class="formula">2d10 + Mod.(VIG) contra CD 11</span>
-  <p class="small">CD 11 corresponde à dificuldade Moderada do sistema atual.</p>
+<span class="formula">2d10 + Mod.(VIG) contra CD 11</span>
+<p class="small">CD 11 corresponde à dificuldade Moderada do sistema atual.</p>
 </div>
 <ul>
-  <li><strong>Sucesso:</strong> marque 1 sucesso de sobrevivência.</li>
-  <li><strong>Falha:</strong> marque 1 falha de sobrevivência.</li>
-  <li><strong>Sucesso Crítico (10 + 10):</strong> marque 2 sucessos, independentemente do total.</li>
-  <li><strong>Falha Crítica (1 + 1):</strong> marque 2 falhas, independentemente do total.</li>
-  <li><strong>3 sucessos:</strong> o personagem fica estabilizado. Continua inconsciente e com seus PV atuais, mas deixa de realizar Testes de Sobrevivência.</li>
-  <li><strong>3 falhas:</strong> o personagem morre.</li>
+<li><strong>Sucesso:</strong> marque 1 sucesso de sobrevivência.</li>
+<li><strong>Falha:</strong> marque 1 falha de sobrevivência.</li>
+<li><strong>Sucesso Crítico (10 + 10):</strong> marque 2 sucessos, independentemente do total.</li>
+<li><strong>Falha Crítica (1 + 1):</strong> marque 2 falhas, independentemente do total.</li>
+<li><strong>3 sucessos:</strong> o personagem fica estabilizado. Continua inconsciente e com seus PV atuais, mas deixa de realizar Testes de Sobrevivência.</li>
+<li><strong>3 falhas:</strong> o personagem morre.</li>
 </ul>
 <p>Se o personagem receber dano enquanto estiver com 0 PV ou menos, marque 1 falha de sobrevivência adicional. Se isso resultar na terceira falha, ele morre imediatamente. Um personagem estabilizado que receba novo dano perde a estabilização e volta a correr risco de morte.</p>
-
 <h3>Primeiros socorros e Medicina</h3>
 <table>
-  <thead><tr><th>Procedimento</th><th>Teste</th><th>Resultado</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Estabilizar</strong></td><td>2d10 + Mod.(INT ou RAC) + Mod.(Medicina) ≥ CD 11</td><td>Durante o Foco do personagem, uma intervenção significativa com meios adequados de primeiros socorros interrompe os Testes de Sobrevivência. O personagem permanece inconsciente e com seus PV atuais.</td></tr>
-    <tr><td><strong>Tratar ferimentos</strong></td><td>2d10 + Mod.(INT ou RAC) + Mod.(Medicina) ≥ CD 16</td><td>Durante o Foco do personagem, uma intervenção significativa com kit médico recupera 1d6 PV, sem ultrapassar o máximo. Pode ser usado uma vez por alvo entre Descansos Completos.</td></tr>
-  </tbody>
+<thead><tr><th>Procedimento</th><th>Teste</th><th>Resultado</th></tr></thead>
+<tbody>
+<tr><td><strong>Estabilizar</strong></td><td>2d10 + Mod.(INT ou RAC) + Mod.(Medicina) ≥ CD 11</td><td>Durante o Foco do personagem, uma intervenção significativa com meios adequados de primeiros socorros interrompe os Testes de Sobrevivência. O personagem permanece inconsciente e com seus PV atuais.</td></tr>
+<tr><td><strong>Tratar ferimentos</strong></td><td>2d10 + Mod.(INT ou RAC) + Mod.(Medicina) ≥ CD 16</td><td>Durante o Foco do personagem, uma intervenção significativa com kit médico recupera 1d6 PV, sem ultrapassar o máximo. Pode ser usado uma vez por alvo entre Descansos Completos.</td></tr>
+</tbody>
 </table>
 <p>O personagem que realiza o procedimento escolhe Inteligência para aplicar conhecimento médico ou Raciocínio para avaliar e executar rapidamente o tratamento. A Proficiência Medicina é utilizada quando o procedimento depende de conhecimento ou prática médica. Sem os instrumentos necessários, o Mestre pode impedir a tentativa ou impor Desvantagem, conforme a situação.</p>
 <p>Uma tentativa de estabilização malsucedida não causa falha de sobrevivência adicional por si só. O personagem continua sujeito aos testes normais sempre que o Mestre assumir o Foco enquanto ele permanecer incapacitado e não estabilizado.</p>
-
 <h3>Outras formas de recuperação</h3>
 <ul>
-  <li>Poderes Beyonder e itens podem restaurar PV conforme seus próprios efeitos.</li>
-  <li>Descanso Completo e Descanso Breve recuperam Espiritualidade conforme os Capítulos 3 e 6. Eles não restauram PV automaticamente, salvo se outra regra, poder ou item indicar isso expressamente.</li>
-  <li>A recuperação de PV nunca restaura Lucidez por consequência automática. A Lucidez segue suas próprias regras.</li>
+<li>Poderes Beyonder e itens podem restaurar PV conforme seus próprios efeitos.</li>
+<li>Descanso Completo e Descanso Breve recuperam Espiritualidade conforme os Capítulos 3 e 6. Eles não restauram PV automaticamente, salvo se outra regra, poder ou item indicar isso expressamente.</li>
 </ul>
-<div class="warning-box">
-  <div class="box-title">PV 0 e Lucidez 0 são consequências diferentes</div>
-  <p>Chegar a 0 PV deixa o personagem Incapacitado e inicia o procedimento de sobrevivência descrito nesta seção. Chegar a <strong>0 de Lucidez</strong> provoca a Perda de Controle e a <strong>perda permanente do personagem pelo jogador</strong>, conforme o Capítulo 3. Cura física não reverte essa perda.</p>
-</div>
+<div class="warning-box"><div class="box-title">PV e Lucidez têm consequências diferentes</div><p><strong>0 PV</strong> causa Incapacitação e inicia o procedimento de sobrevivência. <strong>0 de Lucidez</strong> causa Perda de Controle e a perda permanente do personagem pelo jogador, conforme o Capítulo 3; cura física não reverte essa perda.</p></div>
 </section>
-
 <section id="poderes">
 <h2>10. Poderes Beyonder em Combate</h2>
 <h3>Espiritualidade e custos</h3>
 <p>O uso de poderes consome Espiritualidade conforme o custo indicado na descrição de cada poder. A descrição deve informar como a ativação acontece: se é imediata, exige preparação, mantém um efeito contínuo, depende de um gatilho ou permite uma resposta fora do Foco do personagem. O poder também deve indicar o que pode interromper sua execução.</p>
-<p>A recuperação da Espiritualidade segue exclusivamente as regras de <strong>Descanso Completo</strong> e <strong>Descanso Breve</strong> dos Capítulos 3 e 6. O Capítulo 7 não cria recuperação adicional por hora, meditação ou repouso durante o combate.</p>
-
+<p>A recuperação de Espiritualidade segue os Descansos Completos e Breves dos Capítulos 3 e 6.</p>
 <h3>Concentração</h3>
 <p>Um personagem pode manter apenas <strong>um poder que exija Concentração</strong> por vez. Ativar outro poder que também exija Concentração encerra o anterior, salvo se um dos poderes disser expressamente o contrário.</p>
 <ul>
-  <li>Quando receber dano enquanto mantém Concentração, o personagem faz um teste de <strong>2d10 + Mod.(ACO)</strong> contra uma CD igual ao maior valor entre <strong>11</strong> e metade do dano recebido, arredondada para cima.</li>
-  <li>Se o teste falhar, o poder é encerrado.</li>
-  <li>Se obtiver 10 + 10, mantém a Concentração automaticamente. Se obtiver 1 + 1, perde a Concentração automaticamente.</li>
-  <li>Ficar inconsciente, Atordoado ou Paralisado encerra a Concentração automaticamente.</li>
+<li>Quando receber dano enquanto mantém Concentração, o personagem faz um teste de <strong>2d10 + Mod.(ACO)</strong> contra uma CD igual ao maior valor entre <strong>11</strong> e metade do dano recebido, arredondada para cima.</li>
+<li>Se o teste falhar, o poder é encerrado.</li>
+<li>Se obtiver 10 + 10, mantém a Concentração automaticamente. Se obtiver 1 + 1, perde a Concentração automaticamente.</li>
+<li>Ficar inconsciente, Atordoado ou Paralisado encerra a Concentração automaticamente.</li>
 </ul>
-<p class="small">A CD 11 substitui a antiga referência de CD 10 e acompanha a tabela atual de dificuldade. O valor pode ser ajustado após testes de equilíbrio.</p>
-
 <h3>Interações ambientais</h3>
 <p>Poderes Beyonder podem alterar o ambiente e produzir efeitos que não se resumem a dano:</p>
 <ul>
-  <li>Chamas podem incendiar objetos inflamáveis, iluminar áreas ou bloquear uma passagem.</li>
-  <li>Gelo pode congelar superfícies, tornar o terreno difícil, criar passagens ou selar portas.</li>
-  <li>Telecinese pode mover objetos, improvisar cobertura, desarmar oponentes ou deslocar obstáculos.</li>
-  <li>Ilusões podem distrair, ocultar rotas, criar pistas falsas ou confundir adversários.</li>
+<li>Chamas podem incendiar objetos inflamáveis, iluminar áreas ou bloquear uma passagem.</li>
+<li>Gelo pode congelar superfícies, tornar o terreno difícil, criar passagens ou selar portas.</li>
+<li>Telecinese pode mover objetos, improvisar cobertura, desarmar oponentes ou deslocar obstáculos.</li>
+<li>Ilusões podem distrair, ocultar rotas, criar pistas falsas ou confundir adversários.</li>
 </ul>
 <p>O Mestre pode reconhecer usos criativos por meio de um modificador circunstancial, Vantagem, Desvantagem ou uma consequência narrativa coerente. O mesmo benefício não deve ser concedido duas vezes pela mesma vantagem ficcional.</p>
-
-<h3>Informações que todo poder de combate deve apresentar</h3>
-<ul>
-  <li>Custo de Espiritualidade e tipo de ativação.</li>
-  <li>Alcance, área e quantidade de alvos.</li>
-  <li>Tipo de resolução: ataque contra Esquiva, teste de resistência contra CD ou disputa.</li>
-  <li>Dano e tipo de dano, quando houver.</li>
-  <li>Duração, necessidade de Concentração e formas de encerramento.</li>
-  <li>Condição aplicada e oportunidade de resistência, quando existir.</li>
-</ul>
+<h3>Dados da descrição de cada poder</h3>
+<ul><li>Custo e tipo de ativação; alcance, área e alvos.</li><li>Resolução: ataque contra Esquiva, resistência contra CD ou teste disputado.</li><li>Dano, tipo, duração, Concentração e condições aplicadas, quando houver.</li></ul>
 </section>
-
 <section id="armas">
 <h2>11. Armas e Propriedades</h2>
 <p>A tabela abaixo preserva as armas e os valores de dano do capítulo anterior como <strong>valores iniciais de playtest</strong>. A adequação definitiva desses dados depende de testes contra os Limiares de Dano das Sequências 9 a 5.</p>
 <table>
-  <thead><tr><th>Arma</th><th>Dano-base</th><th>Tipo</th><th>Alcance</th><th>Propriedades</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Revólver</strong></td><td>2d6</td><td>Perfurante</td><td>18 m</td><td>6 disparos; recarregar exige uma intervenção significativa e normalmente encerra o Foco do personagem.</td></tr>
-    <tr><td><strong>Rifle</strong></td><td>2d8</td><td>Perfurante</td><td>60 m</td><td>Disparo único; duas mãos; recarregar exige uma intervenção significativa e normalmente encerra o Foco do personagem.</td></tr>
-    <tr><td><strong>Espingarda</strong></td><td>3d6</td><td>Perfurante</td><td>9 m</td><td>2 disparos; duas mãos; dispersão; recarregar exige uma intervenção significativa e normalmente encerra o Foco do personagem.</td></tr>
-    <tr><td><strong>Espada / Sabre</strong></td><td>1d8 (1d10 com duas mãos)</td><td>Cortante</td><td>Corpo a corpo</td><td>Versátil; duas mãos para usar o dado maior.</td></tr>
-    <tr><td><strong>Adaga</strong></td><td>1d4</td><td>Perfurante</td><td>Corpo a corpo / arremesso 6 m</td><td>Finesse; leve; arremesso.</td></tr>
-    <tr><td><strong>Bengala / Bastão</strong></td><td>1d6 (1d8 com duas mãos)</td><td>Contundente</td><td>Corpo a corpo</td><td>Versátil.</td></tr>
-    <tr><td><strong>Punhos</strong></td><td>1d4</td><td>Contundente</td><td>Corpo a corpo</td><td>Desarmado; utiliza Luta.</td></tr>
-    <tr><td><strong>Besta</strong></td><td>1d10</td><td>Perfurante</td><td>30 m</td><td>Tiro único; duas mãos; recarregar exige uma intervenção significativa e normalmente encerra o Foco do personagem.</td></tr>
-  </tbody>
+<thead><tr><th>Arma</th><th>Dano-base</th><th>Tipo</th><th>Alcance</th><th>Propriedades</th></tr></thead>
+<tbody>
+<tr><td><strong>Revólver</strong></td><td>2d6</td><td>Perfurante</td><td>18 m</td><td>6 disparos.</td></tr>
+<tr><td><strong>Rifle</strong></td><td>2d8</td><td>Perfurante</td><td>60 m</td><td>Disparo único; duas mãos.</td></tr>
+<tr><td><strong>Espingarda</strong></td><td>3d6</td><td>Perfurante</td><td>9 m</td><td>2 disparos; duas mãos; dispersão.</td></tr>
+<tr><td><strong>Espada / Sabre</strong></td><td>1d8 (1d10 com duas mãos)</td><td>Cortante</td><td>Corpo a corpo</td><td>Versátil; duas mãos para usar o dado maior.</td></tr>
+<tr><td><strong>Adaga</strong></td><td>1d4</td><td>Perfurante</td><td>Corpo a corpo / arremesso 6 m</td><td>Finesse; leve; arremesso.</td></tr>
+<tr><td><strong>Bengala / Bastão</strong></td><td>1d6 (1d8 com duas mãos)</td><td>Contundente</td><td>Corpo a corpo</td><td>Versátil.</td></tr>
+<tr><td><strong>Punhos</strong></td><td>1d4</td><td>Contundente</td><td>Corpo a corpo</td><td>Desarmado; utiliza Luta.</td></tr>
+<tr><td><strong>Besta</strong></td><td>1d10</td><td>Perfurante</td><td>30 m</td><td>Tiro único; duas mãos.</td></tr>
+</tbody>
 </table>
-
 <h3>Propriedades das armas</h3>
 <table>
-  <thead><tr><th>Propriedade</th><th>Regra</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Versátil</strong></td><td>Pode ser usada com uma ou duas mãos. O dado entre parênteses indica o dano quando utilizada com duas mãos.</td></tr>
-    <tr><td><strong>Finesse</strong></td><td>Permite usar Mod.(DES) em vez de Mod.(FOR) nos testes de ataque e no dano corpo a corpo.</td></tr>
-    <tr><td><strong>Leve</strong></td><td>É fácil de manejar e ocultar. Por si só, não concede uma Ação adicional nem um segundo ataque; esse benefício precisa ser concedido por uma regra específica.</td></tr>
-    <tr><td><strong>Arremesso</strong></td><td>Pode ser lançada contra um alvo até o alcance indicado. O ataque utiliza Destreza e a Proficiência adequada à arma.</td></tr>
-    <tr><td><strong>Dispersão</strong></td><td>Quando a espingarda acerta o alvo principal, criaturas muito próximas dele podem sofrer metade do dano, arredondado para baixo. O efeito pode atingir aliados; o Mestre delimita a área conforme a cena.</td></tr>
-    <tr><td><strong>Recarregar</strong></td><td>Quando a munição se esgota, o personagem precisa dedicar uma intervenção significativa para recarregar, normalmente encerrando seu Foco. Cada arma informa a capacidade e o procedimento aplicável.</td></tr>
-    <tr><td><strong>Duas mãos</strong></td><td>Exige ambas as mãos para ser utilizada. O personagem não pode manter outro objeto empunhado que também exija uma mão durante o uso.</td></tr>
-  </tbody>
+<thead><tr><th>Propriedade</th><th>Regra</th></tr></thead>
+<tbody>
+<tr><td><strong>Versátil</strong></td><td>Pode ser usada com uma ou duas mãos. O dado entre parênteses indica o dano quando utilizada com duas mãos.</td></tr>
+<tr><td><strong>Finesse</strong></td><td>Permite usar Mod.(DES) em vez de Mod.(FOR) nos testes de ataque e no dano corpo a corpo.</td></tr>
+<tr><td><strong>Leve</strong></td><td>É fácil de manejar e ocultar. Por si só, não concede uma Ação adicional nem um segundo ataque; esse benefício precisa ser concedido por uma regra específica.</td></tr>
+<tr><td><strong>Arremesso</strong></td><td>Pode ser lançada contra um alvo até o alcance indicado. O ataque utiliza Destreza e a Proficiência adequada à arma.</td></tr>
+<tr><td><strong>Dispersão</strong></td><td>Quando a espingarda acerta o alvo principal, criaturas muito próximas dele podem sofrer metade do dano, arredondado para baixo. O efeito pode atingir aliados; o Mestre delimita a área conforme a cena.</td></tr>
+<tr><td><strong>Recarregar</strong></td><td>Quando a munição se esgota, recarregar exige uma Ação durante a ativação. A descrição da arma informa sua capacidade.</td></tr>
+<tr><td><strong>Duas mãos</strong></td><td>Exige ambas as mãos para ser utilizada. O personagem não pode manter outro objeto empunhado que também exija uma mão durante o uso.</td></tr>
+</tbody>
 </table>
-
 <div class="note-box">
-  <div class="box-title">Cálculo do dano das armas</div>
-  <ul>
-    <li><strong>Armas corpo a corpo:</strong> dados de dano da arma + Mod.(FOR), salvo quando a propriedade Finesse permitir utilizar Mod.(DES).</li>
-    <li><strong>Armas de fogo e de disparo:</strong> dados de dano da arma, sem bônus de Atributo ao dano.</li>
-    <li><strong>Armas desarmadas:</strong> 1d4 + Mod.(FOR), utilizando Luta no teste de ataque.</li>
-    <li>O modificador fixo não é duplicado em um Sucesso Crítico; somente os dados de dano são dobrados. Se o total final de dano for 0 ou menor, o ataque não causa dano.</li>
-  </ul>
+<div class="box-title">Cálculo do dano das armas</div>
+<ul>
+<li><strong>Armas corpo a corpo:</strong> dados de dano da arma + Mod.(FOR), salvo quando a propriedade Finesse permitir utilizar Mod.(DES).</li>
+<li><strong>Armas de fogo e de disparo:</strong> dados de dano da arma, sem bônus de Atributo ao dano.</li>
+<li><strong>Armas desarmadas:</strong> 1d4 + Mod.(FOR), utilizando Luta no teste de ataque.</li>
+<li>O modificador fixo não é duplicado em um Sucesso Crítico; somente os dados de dano são dobrados. Se o total final de dano for 0 ou menor, o ataque não causa dano.</li>
+</ul>
 </div>
 </section>
-
 <section id="exemplo">
 <h2>12. Exemplo de Combate</h2>
-<p>O exemplo demonstra a contagem de ciclos, as transferências entre jogadores, o uso de Fichas de Interrupção e a passagem do Foco ao Mestre após uma falha. Os resultados são ilustrativos.</p>
+<p>O exemplo mostra uma transferência voluntária, uma interrupção e uma falha que passa o Foco ao Mestre no fim da ativação.</p>
 <div class="example-box">
-  <div class="box-title">Participantes</div>
-  <ul>
-    <li><strong>Ana:</strong> personagem jogador; Destreza 3 (Mod. +1), Armas de Fogo 3 (Mod. +1), Esquiva 11, PV 5; revólver 2d6.</li>
-    <li><strong>Dmitri:</strong> personagem jogador; Força 4 (Mod. +2), Luta 3 (Mod. +1), Esquiva 10, PV 6; sabre 1d8.</li>
-    <li><strong>Celeste:</strong> personagem jogador; Destreza 3 (Mod. +1), Armas de Fogo 2 (Mod. +0), Esquiva 11, PV 5; revólver 2d6.</li>
-    <li><strong>Marcus Vane:</strong> ameaça; Esquiva 11, PV 6; poder de intimidação sobrenatural.</li>
-    <li><strong>Cultista:</strong> ameaça; Esquiva 10, PV 5; revólver 2d6.</li>
-  </ul>
-  <p>O Mestre começa o conflito com <strong>0 Fichas de Interrupção</strong> e pode guardar no máximo <strong>2</strong>. Para controlar o ciclo, serão colocados marcadores ao lado de Ana, Dmitri e Celeste; marcadores das ameaças são opcionais.</p>
+<div class="box-title">Participantes</div>
+<ul>
+<li><strong>Ana:</strong> personagem jogador; Destreza +1, Armas de Fogo +1, Esquiva 11; revólver 2d6.</li>
+<li><strong>Dmitri:</strong> personagem jogador; Força +2, Luta +1, Esquiva 10; sabre 1d8.</li>
+<li><strong>Celeste:</strong> personagem jogador; Destreza +1, Armas de Fogo +0, Esquiva 11; revólver 2d6.</li>
+<li><strong>Marcus e um cultista:</strong> ameaças. Cada uma pode agir uma vez neste ciclo, salvo poder que autorize uma segunda ativação.</li>
+</ul>
+<p>O Mestre começa com <strong>0 Fichas de Interrupção</strong>. Ana, Dmitri e Celeste recebem marcadores quando suas ativações começarem.</p>
 </div>
-
 <div class="example-box">
-  <div class="box-title">Ciclo 1 — Ana transfere o Foco para Dmitri</div>
-  <p>O confronto começa quando Ana percebe Marcus no armazém e decide disparar antes que ele conclua um gesto ritualístico. O Mestre concede o Foco a Ana. Quando sua ativação começa, Ana recebe um marcador de participação no ciclo.</p>
-  <p><strong>Ana:</strong> dispara contra Marcus. Rola 8 + 7 + Mod.(DES) +1 + Mod.(Armas de Fogo) +1 = <strong>17</strong>. Como o resultado supera a Esquiva 11 de Marcus, o ataque acerta.</p>
-  <p>Dano: 2d6 = 4 + 3 = <strong>7</strong>. O resultado alcança o primeiro limiar de Marcus (4), mas não o segundo (8). O ataque causa Dano Maior e marca <strong>2 PV</strong>. Marcus cai de 6 para 4 PV.</p>
-  <p>Ana conclui sua ativação e transfere voluntariamente o Foco para Dmitri.</p>
+<div class="box-title">1. Ana transfere o Foco para Dmitri</div>
+<p>Ana recebe o Foco e coloca seu marcador. Dispara contra Marcus: 2d10 resultam em 8 e 7; com +1 de Destreza e +1 de Armas de Fogo, totaliza <strong>17</strong> contra Esquiva 11. O ataque acerta e causa 2d6 de dano.</p>
+<p>Ao concluir sua ativação, Ana passa voluntariamente o Foco para Dmitri, que ainda não agiu neste ciclo.</p>
 </div>
-
 <div class="example-box">
-  <div class="box-title">Ciclo 1 — Ativação de Dmitri</div>
-  <p>Dmitri começa sua ativação e recebe um marcador de participação. Ele avança até Marcus e ataca com o sabre. Os dois dados selecionados mostram 10 + 10: é um <strong>Sucesso Crítico automático</strong>, independentemente da Esquiva ou do bônus total.</p>
-  <p>O sabre causa 1d8 + Mod.(FOR). Por ser crítico, os dados de dano são dobrados: <strong>2d8 +2</strong>. Dmitri obtém 3 + 4 + 2 = <strong>9 de dano</strong>. O resultado alcança o limiar Maior → Severo de Marcus (8), causando Dano Severo e marcando <strong>3 PV</strong>. Marcus cai de 4 para 1 PV.</p>
-  <p>Dmitri recebeu o Foco por uma transferência voluntária de Ana e sua ativação começou sem ser interrompida. Ao final dela, o Mestre recebe <strong>1 Ficha de Interrupção</strong>, e Dmitri transfere o Foco para Celeste.</p>
+<div class="box-title">2. Dmitri age e gera uma ficha</div>
+<p>Dmitri começa sua ativação e coloca seu marcador. Ataca Marcus com o sabre e obtém 10 + 10: Sucesso Crítico automático. O dano é 2d8 + Mod.(FOR), pois os dados da arma são dobrados e o modificador fixo não.</p>
+<p>Ao final da ativação de Dmitri, o Mestre recebe <strong>1 Ficha de Interrupção</strong> pela transferência voluntária feita por Ana. Dmitri passa o Foco para Celeste, que ainda não agiu.</p>
 </div>
-
 <div class="example-box">
-  <div class="box-title">Interrupção — Marcus entra em Foco</div>
-  <p>Antes que Celeste comece sua ativação, o Mestre gasta a Ficha de Interrupção que recebeu após a ativação de Dmitri. O Mestre assume o Foco e escolhe Marcus. Celeste ainda não recebe seu marcador de participação, pois sua ativação não começou.</p>
-  <p>Marcus realiza sua ativação e usa um poder de intimidação sobrenatural contra Dmitri. O poder exige uma resistência de Autocontrole contra CD 11. Dmitri rola 3 + 4 + Mod.(ACO) +0 = <strong>7</strong> e falha. Ele fica Amedrontado pelo período indicado pelo poder.</p>
-  <p>Após a ativação de Marcus, o Foco retorna a Celeste, cuja ativação havia sido interrompida. A transferência original de Dmitri para Celeste <strong>não gera uma Ficha de Interrupção</strong>, pois o Mestre a interrompeu antes de Celeste começar sua ação. Celeste continua apta a agir normalmente.</p>
+<div class="box-title">3. O Mestre interrompe Celeste</div>
+<p>Antes de Celeste começar sua ativação, o Mestre gasta a ficha recebida e coloca Marcus em Foco. Marcus usa um poder de intimidação contra Dmitri. Depois de Marcus concluir sua ativação, o Foco retorna a Celeste. A transferência Dmitri–Celeste não gera ficha porque foi interrompida antes do início da ativação de Celeste.</p>
 </div>
-
 <div class="example-box">
-  <div class="box-title">Ciclo 1 — Falha de Celeste e resposta do Mestre</div>
-  <p>Celeste começa sua ativação, recebe seu marcador de participação e dispara contra Marcus. Os dados selecionados mostram 1 + 1: é uma <strong>Falha Crítica automática</strong>.</p>
-  <p>Como Celeste falhou, o Foco passa imediatamente ao Mestre, sem gasto de Ficha de Interrupção e sem gerar uma ficha. O Mestre escolhe o cultista para responder à falha. O cultista realiza sua ativação e dispara contra Ana.</p>
-  <p>Ana, Dmitri e Celeste já receberam o Foco pelo menos uma vez. Como o ciclo acompanha apenas a participação dos personagens jogadores, o ciclo termina após a resolução da resposta do cultista. O Mestre remove os marcadores de participação dos três jogadores e inicia um novo ciclo. Os marcadores opcionais das ameaças não determinam o encerramento; as Fichas de Interrupção não gastas permanecem com o Mestre.</p>
+<div class="box-title">4. Celeste falha e o ciclo termina</div>
+<p>Celeste começa sua ativação e coloca seu marcador. Seu disparo erra Marcus; isso é uma falha porque o resultado favorece a ameaça. Celeste conclui o restante de sua ativação normalmente. <strong>Somente ao final do turno</strong> o Foco passa ao Mestre, sem gerar ficha.</p>
+<p>Ana, Dmitri e Celeste já concluíram uma ativação. O ciclo termina e seus marcadores são retirados. O Mestre escolhe o cultista — que ainda não agiu no novo ciclo — para responder à falha. Depois da ativação do cultista, o Mestre escolhe um jogador que ainda não tenha recebido Foco no ciclo atual.</p>
 </div>
-
-<div class="note-box">
-  <strong>Exemplo de duas transferências para o mesmo personagem:</strong> em um ciclo com quatro jogadores, Ana transfere o Foco para Dmitri. Ao final da ativação de Dmitri, o Mestre recebe 1 ficha. Mais tarde, Celeste transfere o Foco para Dmitri novamente, antes de o quarto jogador receber o Foco. Ao concluir essa segunda ativação iniciada por transferência de outro jogador, o Mestre recebe mais 1 ficha. Assim, as duas ativações geram <strong>2 Fichas de Interrupção no total</strong>. Se o Mestre já tiver 2 fichas guardadas quando uma nova ficha for gerada, a excedente é descartada.</note>
 </section>
-
 <section id="resumo">
 <h2>13. Resumo de Referência</h2>
 <div class="summary-box quick-ref">
-  <section>
-    <h3>Foco e ciclos de conflito</h3>
-    <ul>
-      <li><strong>Ciclo:</strong> termina quando todos os personagens jogadores envolvidos tiverem recebido o Foco ao menos uma vez. As ameaças não precisam agir para o ciclo terminar.</li>
-      <li><strong>Marcadores:</strong> coloque uma ficha ao lado de cada jogador quando seu personagem começar a primeira ativação do ciclo. Remova os marcadores dos jogadores quando todos tiverem participado. Marcadores de ameaça são opcionais.</li>
-      <li><strong>Transferência entre jogadores:</strong> gera 1 Ficha de Interrupção ao final da ativação do personagem que recebeu o Foco, desde que não tenha sido interrompida antes de começar.</li>
-      <li><strong>Mesmo personagem recebe Foco duas vezes:</strong> quando as duas ativações ocorrerem por transferência voluntária de outros jogadores no mesmo ciclo, cada uma gera 1 ficha: 2 fichas no total pelas duas ativações.</li>
-      <li><strong>Falha:</strong> o Foco passa imediatamente ao Mestre, que escolhe uma ameaça. A falha não gera ficha. Depois da ameaça agir, o Foco vai para um jogador ainda não marcado; se todos já estiverem marcados, encerre o ciclo e inicie outro.</li>
-      <li><strong>Interrupção:</strong> 1 ficha permite interromper o início de uma ativação e colocar uma ameaça em Foco. Depois da ameaça agir, o Foco retorna ao participante interrompido; sua ativação não é perdida.</li>
-      <li><strong>Transferência interrompida:</strong> se o Mestre interromper antes do destinatário começar sua ativação, a transferência não gera ficha, mesmo quando o Foco retornar a ele.</li>
-      <li><strong>Limite:</strong> o Mestre começa com 0 fichas e pode guardar no máximo 2. Fichas excedentes são descartadas.</li>
-      <li><strong>Ameaças em sequência:</strong> cada ameaça consecutiva adicional exige 1 ficha ou uma habilidade que permita a sequência. Ameaças podem receber o Foco mais de uma vez no ciclo.</li>
-      <li><strong>Reações:</strong> não contam como participação no ciclo, salvo indicação expressa.</li>
-    </ul>
-  </section>
-  <section>
-    <h3>Ataques e críticos</h3>
-    <ul>
-      <li><strong>Ataque corpo a corpo:</strong> 2d10 + Mod.(FOR ou DES) + Proficiência pertinente contra Esquiva; desarmado utiliza Luta.</li>
-      <li><strong>Ataque à distância:</strong> 2d10 + Mod.(DES) + Proficiência pertinente contra Esquiva.</li>
-      <li><strong>10 + 10:</strong> Sucesso Crítico automático; dobra os dados de dano, não os modificadores fixos.</li>
-      <li><strong>1 + 1:</strong> Falha Crítica automática; o ataque falha.</li>
-      <li><strong>Testes disputados:</strong> compara-se o total; não há críticos automáticos.</li>
-    </ul>
-  </section>
-  <section>
-    <h3>Dano e proteção</h3>
-    <ul>
-      <li><strong>Menor:</strong> 1 PV; <strong>Maior:</strong> 2 PV; <strong>Severo:</strong> 3 PV.</li>
-      <li><strong>Resistência:</strong> −1 dano; <strong>Vulnerabilidade:</strong> +1 dano; <strong>Imunidade:</strong> nenhum dano do tipo.</li>
-      <li><strong>Blindagem:</strong> 1 ponto reduz uma categoria; máximo de 1 ponto por ataque.</li>
-      <li><strong>Esquiva Base:</strong> 10 + Mod.(DES) + Mod.(RAC).</li>
-      <li>Use os Limiares de Dano naturais da Sequência, salvo alteração expressa da Vestimenta ou de outro efeito.</li>
-    </ul>
-  </section>
-  <section>
-    <h3>Incapacitação e poderes</h3>
-    <ul>
-      <li><strong>0 PV ou menos:</strong> Incapacitado e inconsciente; faz Testes de Sobrevivência quando o Mestre assumir o Foco, enquanto não estiver estabilizado.</li>
-      <li><strong>Sobrevivência:</strong> 2d10 + Mod.(VIG) contra CD 11; 3 sucessos estabilizam, 3 falhas matam.</li>
-      <li><strong>Medicina:</strong> CD 11 para estabilizar; CD 16 e kit médico para recuperar 1d6 PV, uma vez por alvo entre Descansos Completos.</li>
-      <li><strong>Espiritualidade:</strong> custos e recuperação seguem os poderes e os Descansos dos Capítulos 3 e 6.</li>
-      <li><strong>Lucidez 0:</strong> perda permanente do personagem pelo jogador, conforme o Capítulo 3.</li>
-    </ul>
-  </section>
+<section>
+<h3>Foco e ciclos</h3>
+<ul>
+<li><strong>Ciclo:</strong> termina quando todos os personagens jogadores concluírem uma ativação; então, retire seus marcadores.</li>
+<li><strong>Jogadores:</strong> cada personagem jogador recebe Foco no máximo uma vez por ciclo. O Mestre escolhe um jogador ainda não marcado quando devolver o Foco ao grupo.</li>
+<li><strong>Ameaças:</strong> cada ameaça age uma vez por ciclo; a segunda ativação só é permitida por poder ou habilidade expressa. Limite: duas ativações.</li>
+<li><strong>Falha:</strong> resultado da ação do jogador favorável às ameaças (ex.: ataque que erra ou efeito resistido). O jogador conclui seu turno; ao final, o Foco vai ao Mestre, que escolhe uma ameaça.</li>
+<li><strong>Passagem voluntária:</strong> para outro jogador ainda não marcado ou para o Mestre, que escolhe a ameaça. Só a passagem entre jogadores gera ficha.</li>
+<li><strong>Interrupção:</strong> 1 ficha permite inserir uma ameaça no início de uma ativação; depois, o Foco retorna ao participante interrompido. Cada ameaça adicional em sequência exige outra ficha ou uma habilidade.</li>
+<li>Fichas: o Mestre começa com 0 e pode guardar até 2. A transferência entre jogadores gera 1 ao fim da ativação do destinatário, mesmo se ele falhar; não gera ficha se for interrompida antes de começar.</li>
+</ul>
+</section>
+<section>
+<h3>Ataques e críticos</h3>
+<ul>
+<li><strong>Corpo a corpo:</strong> 2d10 + Mod.(FOR ou DES) + Proficiência pertinente contra Esquiva.</li>
+<li><strong>À distância:</strong> 2d10 + Mod.(DES) + Proficiência pertinente contra Esquiva.</li>
+<li><strong>10 + 10:</strong> Sucesso Crítico automático; dobra dados de dano, não modificadores fixos.</li>
+<li><strong>1 + 1:</strong> Falha Crítica automática.</li>
+<li><strong>Testes disputados:</strong> compare os totais; não há críticos automáticos.</li>
+</ul>
+</section>
+<section>
+<h3>Dano e proteção</h3>
+<ul>
+<li><strong>Dano Menor / Maior / Severo:</strong> marca 1 / 2 / 3 PV.</li>
+<li><strong>Resistência / Vulnerabilidade:</strong> −1 / +1 dano. <strong>Imunidade:</strong> nenhum dano daquele tipo.</li>
+<li><strong>Blindagem:</strong> gaste 1 para reduzir a categoria de dano em um nível; máximo de 1 por ataque.</li>
+<li><strong>Esquiva Base:</strong> 10 + Mod.(DES) + Mod.(RAC).</li>
+</ul>
+</section>
+<section>
+<h3>Incapacitação e poderes</h3>
+<ul>
+<li><strong>0 PV ou menos:</strong> Incapacitação e testes de sobrevivência; 3 sucessos estabilizam, 3 falhas matam.</li>
+<li><strong>Medicina:</strong> CD 11 para estabilizar; CD 16 e kit médico para recuperar 1d6 PV, uma vez por alvo entre Descansos Completos.</li>
+<li><strong>Espiritualidade:</strong> custos e recuperação seguem as descrições dos poderes e as regras de Descanso dos Capítulos 3 e 6.</li>
+<li><strong>0 Lucidez:</strong> perda permanente do personagem pelo jogador, conforme o Capítulo 3.</li>
+</ul>
+</section>
 </div>
 </section>
 </main>
