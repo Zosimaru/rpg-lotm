@@ -43,6 +43,15 @@
   .combat-chapter li { margin: .25rem 0; }
   .combat-chapter .small { color: #665f53; font-size: .9rem; }
   .combat-chapter .tag { display: inline-block; padding: .08rem .4rem; border-radius: 3px; background: #e8edf3; color: #315f9f; font-size: .8rem; font-weight: 700; }
+  .combat-chapter .focus-marker { display: inline-block; margin: 0 .12rem; padding: .08rem .42rem; border: 1px solid #b68a32; border-radius: 999px; background: #f8edcf; color: #725318; font-size: .76rem; font-weight: 800; letter-spacing: .02em; white-space: nowrap; }
+  .combat-chapter .cycle-marker-panel { display: flex; align-items: center; gap: .85rem; margin: .75rem 0 1rem; padding: .8rem .9rem; border: 1px solid #d4c39f; border-radius: 6px; background: #f8f1e2; }
+  .combat-chapter .cycle-marker-token { display: inline-flex; flex: 0 0 auto; width: 2.55rem; height: 2.55rem; align-items: center; justify-content: center; border: 2px solid #9a742b; border-radius: 50%; background: #fffaf0; color: #765719; font-weight: 800; }
+  .combat-chapter .cycle-marker-panel p { margin: .18rem 0 0; }
+  @media (max-width: 520px) { .combat-chapter .cycle-marker-panel { align-items: flex-start; flex-direction: column; } }
+  .combat-chapter .interruption-panel { display: flex; align-items: center; gap: .85rem; margin: .7rem 0 1rem; padding: .8rem .9rem; border: 1px solid #a8bfd8; border-radius: 6px; background: #edf3fa; }
+  .combat-chapter .interruption-token { flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; min-width: 5.4rem; min-height: 3rem; padding: .25rem .5rem; border: 2px solid #315f9f; border-radius: 7px; background: #315f9f; color: #fff; font-size: .72rem; font-weight: 800; text-align: center; letter-spacing: .03em; }
+  .combat-chapter .interruption-panel p { margin: .2rem 0 0; }
+  @media (max-width: 520px) { .combat-chapter .interruption-panel { align-items: flex-start; flex-direction: column; } }
   .combat-chapter .separator { height: 1px; margin: 1.5rem 0; background: #d8c9aa; }
   .combat-chapter .quick-ref h3 { margin-top: 1rem; padding-bottom: .25rem; border-bottom: 1px solid #d8c9aa; }
   .combat-chapter .quick-ref ul { margin-top: .35rem; }
@@ -88,7 +97,7 @@
 
 <section id="fundamentos">
 <h2>1. Fundamentos do Combate</h2>
-<p>O combate é conduzido de forma contínua, acompanhando o ritmo da ficção. Não há rodadas cronometradas, ordem fixa de participantes ou uma sequência obrigatória em que todos precisam agir. A atenção da cena é distribuída pelo <strong>Foco</strong>, que passa entre os personagens jogadores e as ameaças conforme as ações, suas consequências e o desenvolvimento do confronto.</p>
+<p>O combate não utiliza Iniciativa nem uma ordem fixa. O <strong>Foco</strong> alterna dinamicamente entre personagens jogadores e ameaças. As ativações são organizadas em <strong>ciclos de conflito</strong>: cada ciclo termina quando todos os personagens jogadores envolvidos tiverem recebido o Foco ao menos uma vez. Falhas transferem o Foco ao Mestre, e <strong>Fichas de Interrupção</strong> permitem inserir ameaças antes do início de uma ativação.</p>
 
 <div class="rule-box">
   <div class="box-title">Resolução básica</div>
@@ -114,45 +123,85 @@
 </section>
 
 <section id="foco">
-<h2>2. Foco</h2>
-<p>O <strong>Foco</strong> representa quem está no centro da ação naquele momento. Quando um personagem ou uma ameaça recebe o Foco, a atenção da mesa se concentra em sua ação e nas consequências imediatas. O Foco circula de maneira dinâmica: não existe Iniciativa, ordem fixa de participantes, rodada obrigatória ou quantidade predeterminada de ações antes de sua passagem.</p>
+<h2>2. Foco e Ciclos de Conflito</h2>
+<p>O <strong>Foco</strong> indica quem tem a oportunidade de agir naquele momento. Quando um personagem ou uma ameaça recebe o Foco, realiza sua <strong>ativação</strong>: resolve uma ação significativa, o movimento e as interações que fizerem parte da mesma sequência. Depois, o Foco é transferido conforme a escolha dos jogadores, os resultados dos testes e as intervenções do Mestre.</p>
+<p>O combate é dividido em <strong>ciclos de conflito</strong>, mas os ciclos não determinam uma ordem fixa nem limitam quantas vezes alguém pode receber o Foco. Um personagem jogador ou uma ameaça pode receber o Foco mais de uma vez no mesmo ciclo. O ciclo só é reiniciado quando todos os personagens jogadores envolvidos tiverem recebido o Foco pelo menos uma vez.</p>
 
-<h3>Início do confronto</h3>
-<p>O Mestre concede o Foco inicial de acordo com a situação ficcional. Ele pode começar com o personagem cuja ação inicia o confronto, com alguém que já está reagindo a uma ameaça evidente ou com um adversário cuja ação esteja prestes a acontecer. Não é necessário fazer uma rolagem para determinar quem começa.</p>
+<div class="rule-box">
+  <div class="box-title">Como marcar a participação no ciclo</div>
+  <p>Use uma ficha, moeda ou marcador ao lado de cada personagem jogador assim que ele começar sua primeira ativação no ciclo. Um personagem que recebe o Foco novamente mantém o mesmo marcador: não é necessário colocar outro.</p>
+  <div class="cycle-marker-panel">
+    <span class="cycle-marker-token" aria-label="Marcador de participação">P</span>
+    <div>
+      <strong>Marcador de participação</strong>
+      <p class="small">Coloque um marcador ao lado do jogador quando seu personagem receber o Foco pela primeira vez no ciclo. Remova todos os marcadores de participação quando o ciclo terminar.</p>
+    </div>
+  </div>
+  <ul>
+    <li>O ciclo termina quando <strong>todos os personagens jogadores envolvidos no conflito</strong> tiverem um marcador de participação.</li>
+    <li>As ameaças não precisam receber o Foco para que o ciclo termine. Se for útil, o Mestre pode usar marcadores diferentes para acompanhar quais ameaças já agiram, mas isso não altera o encerramento do ciclo.</li>
+    <li>Uma ativação interrompida antes de começar não marca o participante interrompido. Ele recebe o marcador quando sua ativação realmente começar.</li>
+    <li>Ao encerrar o ciclo, retire os marcadores dos personagens jogadores e comece outro ciclo. As Fichas de Interrupção do Mestre não são removidas nessa passagem.</li>
+  </ul>
+</div>
 
-<h3>Como o Foco passa</h3>
-<p>Quando um jogador recebe o Foco, descreve o que seu personagem faz. O jogador e o Mestre resolvem os testes necessários e estabelecem as consequências. Depois que a ação significativa se conclui, o Foco passa para quem ou para o que fizer mais sentido na cena. Considere especialmente:</p>
+<h3>Transferência de Foco</h3>
+<p>O Mestre concede o Foco inicial conforme a situação ficcional. Ao concluir sua ativação, um jogador pode passar voluntariamente o Foco para outro personagem jogador. O Foco também pode passar ao Mestre em consequência de uma falha ou por decisão narrativa do jogador.</p>
 <ul>
-  <li><strong>Consequências de uma regra:</strong> uma falha, uma Falha Crítica ou um efeito específico pode determinar que o Mestre assuma o Foco.</li>
-  <li><strong>Continuidade da ficção:</strong> o Foco pode passar para a pessoa ameaçada, para um aliado em posição de agir ou para o adversário que naturalmente reagiria ao que acabou de acontecer.</li>
-  <li><strong>Equilíbrio de participação:</strong> dê oportunidade a personagens que ainda não tiveram destaque ou que estão há mais tempo sem participar da ação.</li>
-  <li><strong>Oportunidade para o Mestre:</strong> o Mestre pode assumir o Foco quando uma ação cria uma abertura, produz uma consequência relevante, oferece uma oportunidade clara a uma ameaça ou quando os jogadores aguardam a resposta do mundo.</li>
+  <li><strong>Transferência entre jogadores:</strong> quando um jogador escolhe outro personagem jogador para receber o Foco, o Mestre recebe <strong>1 Ficha de Interrupção</strong> ao final da ativação do personagem que recebeu o Foco, desde que essa ativação comece e não seja interrompida antes de começar. A ficha é concedida mesmo que a ativação termine em falha; a falha, por si só, não gera uma ficha adicional.</li>
+  <li><strong>O mesmo personagem recebe Foco duas vezes:</strong> se um personagem receber o Foco duas vezes, no mesmo ciclo, por transferências voluntárias de outros jogadores, cada uma dessas ativações gera 1 ficha ao final. Portanto, o Mestre recebe <strong>2 fichas no total pelas duas ativações</strong>, e não 2 fichas adicionais na segunda. O limite máximo de acúmulo continua sendo 2.</li>
+  <li><strong>Falha:</strong> quando um personagem jogador obtém uma falha em um teste durante sua ativação, inclusive uma Falha Crítica, o Foco passa imediatamente ao Mestre. A falha não concede Ficha de Interrupção. O Mestre pode colocar uma ameaça em Foco para representar a resposta do conflito.</li>
+  <li><strong>Passagem voluntária ao Mestre:</strong> um jogador também pode entregar o Foco ao Mestre por escolha narrativa. O Mestre escolhe uma ameaça para agir, mas essa passagem não concede ficha, pois a recompensa é exclusiva da transferência voluntária entre personagens jogadores.</li>
+  <li><strong>Outras transferências:</strong> passagens feitas por ameaças, pelo Mestre ou por efeitos automáticos não concedem fichas, salvo se uma habilidade disser expressamente o contrário.</li>
 </ul>
-<p>Uma falha não obriga o Mestre a realizar um ataque. Sua resposta pode ser um contra-ataque, uma mudança de posição, a chegada de uma ameaça, a perda de um recurso, o agravamento do perigo ou outra consequência coerente.</p>
+<p>Se uma transferência entre jogadores for interrompida antes de o personagem destinatário começar sua ativação, <strong>ela não gera Ficha de Interrupção</strong>, mesmo que o Foco retorne a esse personagem depois. A recompensa daquela transferência foi cancelada; transferências posteriores realizadas normalmente continuam seguindo as regras habituais.</p>
 
-<h3>Foco do Mestre e ações dos adversários</h3>
-<p>Quando assume o Foco, o Mestre escolhe o adversário ou grupo de adversários cuja ação tenha maior relevância naquele momento. Uma ameaça pode se reposicionar e realizar uma ação coerente — como atacar, usar um poder, proteger um aliado, avançar ou alterar o ambiente — desde que esses movimentos façam parte de uma mesma sequência plausível.</p>
-<ul>
-  <li>O Mestre não precisa conceder uma ação individual a cada inimigo em sequência. Pode representar um grupo agindo de forma coordenada quando isso fizer sentido.</li>
-  <li>Adversários adicionais podem receber o Foco quando uma habilidade, a ficção ou uma nova oportunidade justificar sua participação. Evite transformar cada passagem pelo Mestre em uma sequência automática de ataques de todos os inimigos.</li>
-  <li>Depois de resolver a ação dos adversários, o Foco normalmente retorna aos personagens jogadores. O Mestre escolhe quem está em melhor posição para agir ou quem está há mais tempo sem destaque.</li>
-</ul>
-
-<h3>Emboscadas e aproximações ocultas</h3>
-<p>Uma emboscada é resolvida pela ficção e pelos testes comuns, sem uma fase especial ou uma condição universal para os alvos:</p>
+<h3>Fichas de Interrupção</h3>
+<p>As <strong>Fichas de Interrupção</strong> são um recurso exclusivo do Mestre. O Mestre começa cada conflito com <strong>0 fichas</strong> e pode guardar no máximo <strong>2 fichas</strong>. Sempre que receber uma ficha e já estiver no limite, a ficha excedente é descartada. Use moedas ou peças de uma cor diferente dos marcadores de participação dos jogadores.</p>
+<div class="interruption-panel">
+  <div class="interruption-token" aria-label="Uma Ficha de Interrupção">INTERRUPÇÃO</div>
+  <div>
+    <strong>1 ficha = 1 interrupção</strong>
+    <p class="small">O Mestre pode manter de 0 a 2 fichas disponíveis. Cada ficha gasta permite inserir uma ativação de ameaça antes que o participante interrompido comece sua ação.</p>
+  </div>
+</div>
 <ol>
-  <li>Quem tenta se aproximar sem ser percebido faz um teste apropriado, normalmente <strong>2d10 + Mod.(DES ou RAC) + Mod.(Furtividade)</strong>, conforme a abordagem.</li>
-  <li>O Mestre compara o resultado à percepção dos observadores. Quando a situação exigir uma oposição ativa, o observador realiza o teste pertinente; em outras situações, o Mestre pode usar uma referência passiva de <strong>10 + Mod.(RAC)</strong>.</li>
-  <li>Se a ameaça não for percebida, o Mestre concede o Foco ao lado que preparou a emboscada ou ao personagem que age primeiro na ficção. Um alvo que não percebeu a ameaça não pode reagir especificamente a ela antes de ter oportunidade de identificá-la.</li>
-  <li>Uma emboscada bem preparada pode justificar Vantagem no primeiro teste diretamente beneficiado pela ocultação. Esse benefício não é automático: depende das condições, da distância, da preparação e de o alvo realmente estar desprevenido.</li>
+  <li><strong>Momento de uso:</strong> o Mestre pode gastar 1 ficha no início da ativação de qualquer personagem ou ameaça, antes que esse participante comece sua ação.</li>
+  <li><strong>Ativação da ameaça:</strong> ao gastar a ficha, o Mestre assume imediatamente o Foco e escolhe uma ameaça para agir.</li>
+  <li><strong>Retorno do Foco:</strong> depois que a ameaça concluir sua ativação, o Foco retorna ao participante cuja ativação foi interrompida. A interrupção não cancela nem consome a ativação original.</li>
+  <li><strong>Participação:</strong> a ameaça que entrou em Foco conta como tendo recebido o Foco durante o ciclo. O participante interrompido só recebe seu marcador quando sua própria ativação começar.</li>
+  <li><strong>Ameaças consecutivas:</strong> o Mestre pode gastar fichas adicionais para colocar outras ameaças em Foco uma após a outra. Cada ficha permite uma ativação adicional. Se encadear várias ameaças dessa forma, o Foco só retorna ao participante originalmente interrompido depois que a última ameaça concluir sua ativação. Uma habilidade de ameaça também pode permitir uma sequência sem gasto de ficha, se disser isso expressamente.</li>
+  <li><strong>Limite da interrupção:</strong> uma ficha não permite interromper uma ação depois que ela começou, desfazer um resultado ou alterar retroativamente uma ativação concluída.</li>
 </ol>
-<p class="small">A emboscada não concede uma sequência extra nem impede o alvo de participar do confronto por um período fixo. Assim que a ameaça se torna perceptível, o Foco passa normalmente entre os envolvidos.</p>
+
+<div class="note-box">
+  <strong>Exemplo de transferência interrompida:</strong> Ana passa o Foco para Dmitri. Antes de Dmitri começar sua ação, o Mestre gasta 1 ficha e coloca Marcus em Foco. Depois da ativação de Marcus, o Foco retorna a Dmitri, que realiza sua ação normalmente. Como a transferência original foi interrompida antes do início da ativação, ela não gera ficha para o Mestre.
+</div>
+
+<h3>Ativações das ameaças</h3>
+<p>O Mestre pode colocar uma ameaça em Foco quando o recebe após uma falha ou quando um jogador lhe entrega o Foco por decisão narrativa. A primeira ativação de resposta não exige gasto de Ficha de Interrupção. Depois da ativação, o Mestre devolve o Foco a um personagem jogador que ainda não tenha recebido o Foco no ciclo.</p>
+<ul>
+  <li>Se ainda houver personagens jogadores sem marcador de participação, o Mestre escolhe um deles para receber o Foco.</li>
+  <li>Se todos os personagens jogadores já tiverem recebido o Foco, o ciclo se encerra depois da resolução da ativação de ameaça decorrente da falha; retire os marcadores e inicie um novo ciclo, escolhendo então um personagem jogador para receber o Foco.</li>
+  <li>O Mestre não pode colocar várias ameaças em sequência livremente. Para cada ativação consecutiva adicional, deve gastar 1 Ficha de Interrupção ou utilizar uma habilidade que permita expressamente essa sequência.</li>
+  <li>Uma ameaça pode receber o Foco novamente no mesmo ciclo. Isso não reinicia o ciclo, pois seu encerramento depende da participação de todos os personagens jogadores.</li>
+  <li>Vários adversários conduzidos como uma única unidade contam como uma única ameaça para fins de ativação. Se forem conduzidos separadamente, cada um realiza sua própria ativação.</li>
+</ul>
+
+<h3>Controle dos marcadores</h3>
+<ul>
+  <li><strong>Marcadores dos jogadores:</strong> coloque uma ficha ao lado de cada personagem jogador quando ele começar sua primeira ativação no ciclo. Mantenha o marcador mesmo que ele receba o Foco novamente.</li>
+  <li><strong>Marcadores das ameaças:</strong> são opcionais e servem apenas para ajudar o Mestre a acompanhar as ativações. As ameaças não precisam de marcador para que o ciclo termine e podem receber o Foco novamente.</li>
+  <li><strong>Fichas de Interrupção:</strong> mantenha-as em uma reserva separada, com cor ou formato diferente. Elas indicam quantas interrupções o Mestre ainda pode realizar, até o máximo de 2.</li>
+  <li><strong>Fim do ciclo:</strong> quando todos os personagens jogadores tiverem recebido o Foco, retire os marcadores de participação dos jogadores e inicie um novo ciclo. As Fichas de Interrupção não gastas permanecem com o Mestre.</li>
+  <li><strong>Reações:</strong> uma Reação realizada fora da ativação normal não conta como participação no ciclo, salvo quando seu efeito disser expressamente o contrário.</li>
+</ul>
 </section>
 
 <section id="acoes">
 <h2>3. Movimentos e Ações durante o Foco</h2>
 <p>Quando recebe o Foco, o personagem pode realizar uma <strong>Ação</strong> significativa e incluir o deslocamento e as interações simples que façam parte da mesma sequência. Algumas habilidades, poderes e itens também concedem uma <strong>Ação Bônus</strong>; ela só pode ser usada quando a própria descrição indicar expressamente essa possibilidade.</p>
-<p>O Foco não impõe uma lista universal de ações nem exige que cada gesto seja resolvido separadamente. Sacar uma arma, avançar até uma posição próxima e disparar podem compor uma sequência coerente. Já realizar vários ataques independentes, ativar diversos poderes ou perseguir objetivos diferentes normalmente exige novas oportunidades de Foco, salvo quando uma regra permitir combinar essas atividades.</p>
+<p>O Foco não impõe uma lista universal de ações nem exige que cada gesto seja resolvido separadamente. Sacar uma arma, avançar até uma posição próxima e disparar podem compor uma sequência coerente. Já realizar vários ataques independentes, ativar diversos poderes ou perseguir objetivos diferentes normalmente exige outra oportunidade de Foco. Um personagem ou ameaça pode receber o Foco mais de uma vez no mesmo ciclo; isso não reinicia o ciclo nem concede ações adicionais por si só. As Fichas de Interrupção são geradas somente nas situações de transferência entre jogadores descritas na seção anterior.</p>
 
 <div class="four-col">
   <div class="mini-card"><strong>Ação</strong><br>Atividade significativa, como atacar, ajudar, usar um item ou executar uma manobra. A tabela identifica quais opções exigem Ação.</div>
@@ -481,59 +530,68 @@
 
 <section id="exemplo">
 <h2>12. Exemplo de Combate</h2>
-<p>O exemplo demonstra como o Foco passa entre personagens e adversários, sem rolagem de ordem ou sequência fixa. Os valores e resultados são ilustrativos.</p>
+<p>O exemplo demonstra a contagem de ciclos, as transferências entre jogadores, o uso de Fichas de Interrupção e a passagem do Foco ao Mestre após uma falha. Os resultados são ilustrativos.</p>
 <div class="example-box">
   <div class="box-title">Participantes</div>
   <ul>
-    <li><strong>Ana:</strong> Sequência 8; Destreza 3 (Mod. +1), Raciocínio 2 (Mod. +0), Armas de Fogo 3 (Mod. +1), Esquiva 11, PV 5; revólver 2d6.</li>
-    <li><strong>Dmitri:</strong> Sequência 8; Força 4 (Mod. +2), Destreza 2 (Mod. +0), Vigor 3 (Mod. +1), Luta 3 (Mod. +1), Esquiva 10, PV 6; sabre 1d8.</li>
-    <li><strong>Celeste:</strong> Sequência 8; Destreza 3 (Mod. +1), Raciocínio 2 (Mod. +0), Armas de Fogo 2 (Mod. +0), Esquiva 11, PV 5; revólver 2d6.</li>
-    <li><strong>Marcus Vane:</strong> Sequência 8; Esquiva 11, PV 6; poder de intimidação sobrenatural.</li>
-    <li><strong>Cultista:</strong> Esquiva 10, PV 5; revólver 2d6.</li>
+    <li><strong>Ana:</strong> personagem jogador; Destreza 3 (Mod. +1), Armas de Fogo 3 (Mod. +1), Esquiva 11, PV 5; revólver 2d6.</li>
+    <li><strong>Dmitri:</strong> personagem jogador; Força 4 (Mod. +2), Luta 3 (Mod. +1), Esquiva 10, PV 6; sabre 1d8.</li>
+    <li><strong>Celeste:</strong> personagem jogador; Destreza 3 (Mod. +1), Armas de Fogo 2 (Mod. +0), Esquiva 11, PV 5; revólver 2d6.</li>
+    <li><strong>Marcus Vane:</strong> ameaça; Esquiva 11, PV 6; poder de intimidação sobrenatural.</li>
+    <li><strong>Cultista:</strong> ameaça; Esquiva 10, PV 5; revólver 2d6.</li>
   </ul>
-  <p>Os limiares de dano dos participantes na Sequência 8 são 4 (Menor → Maior) e 8 (Maior → Severo).</p>
+  <p>O Mestre começa o conflito com <strong>0 Fichas de Interrupção</strong> e pode guardar no máximo <strong>2</strong>. Para controlar o ciclo, serão colocados marcadores ao lado de Ana, Dmitri e Celeste; marcadores das ameaças são opcionais.</p>
 </div>
 
 <div class="example-box">
-  <div class="box-title">Foco inicial — Ana</div>
-  <p>O confronto começa quando Ana percebe Marcus no armazém e decide disparar antes que ele conclua um gesto ritualístico. O Mestre concede o Foco a Ana porque sua ação abre a cena; nenhum participante faz uma rolagem para ordenar o combate.</p>
+  <div class="box-title">Ciclo 1 — Ana transfere o Foco para Dmitri</div>
+  <p>O confronto começa quando Ana percebe Marcus no armazém e decide disparar antes que ele conclua um gesto ritualístico. O Mestre concede o Foco a Ana. Quando sua ativação começa, Ana recebe um marcador de participação no ciclo.</p>
   <p><strong>Ana:</strong> dispara contra Marcus. Rola 8 + 7 + Mod.(DES) +1 + Mod.(Armas de Fogo) +1 = <strong>17</strong>. Como o resultado supera a Esquiva 11 de Marcus, o ataque acerta.</p>
   <p>Dano: 2d6 = 4 + 3 = <strong>7</strong>. O resultado alcança o primeiro limiar de Marcus (4), mas não o segundo (8). O ataque causa Dano Maior e marca <strong>2 PV</strong>. Marcus cai de 6 para 4 PV.</p>
-  <p>Com o disparo resolvido, o Foco passa a Dmitri, que está mais próximo de Marcus e pode aproveitar a abertura criada por Ana.</p>
+  <p>Ana conclui sua ativação e transfere voluntariamente o Foco para Dmitri.</p>
 </div>
 
 <div class="example-box">
-  <div class="box-title">Foco de Dmitri — Sucesso Crítico</div>
-  <p><strong>Dmitri:</strong> avança até Marcus e ataca com o sabre. Os dois dados selecionados mostram 10 + 10: é um <strong>Sucesso Crítico automático</strong>, independentemente da Esquiva ou do bônus total.</p>
+  <div class="box-title">Ciclo 1 — Ativação de Dmitri</div>
+  <p>Dmitri começa sua ativação e recebe um marcador de participação. Ele avança até Marcus e ataca com o sabre. Os dois dados selecionados mostram 10 + 10: é um <strong>Sucesso Crítico automático</strong>, independentemente da Esquiva ou do bônus total.</p>
   <p>O sabre causa 1d8 + Mod.(FOR). Por ser crítico, os dados de dano são dobrados: <strong>2d8 +2</strong>. Dmitri obtém 3 + 4 + 2 = <strong>9 de dano</strong>. O resultado alcança o limiar Maior → Severo de Marcus (8), causando Dano Severo e marcando <strong>3 PV</strong>. Marcus cai de 4 para 1 PV.</p>
-  <p>O golpe deixa Marcus em uma posição desesperadora. O Mestre assume o Foco para mostrar a reação do adversário, em vez de conceder automaticamente a vez a todos os inimigos.</p>
+  <p>Dmitri recebeu o Foco por uma transferência voluntária de Ana e sua ativação começou sem ser interrompida. Ao final dela, o Mestre recebe <strong>1 Ficha de Interrupção</strong>, e Dmitri transfere o Foco para Celeste.</p>
 </div>
 
 <div class="example-box">
-  <div class="box-title">Foco do Mestre — Ameaça sobrenatural</div>
-  <p><strong>Marcus:</strong> usa um poder de intimidação sobrenatural contra Dmitri. O poder exige uma resistência de Autocontrole contra CD 11. Dmitri rola 3 + 4 + Mod.(ACO) +0 = <strong>7</strong> e falha. Ele fica Amedrontado pelo período indicado pelo poder e não pode aproximar-se voluntariamente da fonte do medo.</p>
-  <p>O Mestre conclui a ação de Marcus e devolve o Foco aos personagens jogadores. Como Celeste ainda não teve oportunidade de agir, ela recebe o Foco.</p>
+  <div class="box-title">Interrupção — Marcus entra em Foco</div>
+  <p>Antes que Celeste comece sua ativação, o Mestre gasta a Ficha de Interrupção que recebeu após a ativação de Dmitri. O Mestre assume o Foco e escolhe Marcus. Celeste ainda não recebe seu marcador de participação, pois sua ativação não começou.</p>
+  <p>Marcus realiza sua ativação e usa um poder de intimidação sobrenatural contra Dmitri. O poder exige uma resistência de Autocontrole contra CD 11. Dmitri rola 3 + 4 + Mod.(ACO) +0 = <strong>7</strong> e falha. Ele fica Amedrontado pelo período indicado pelo poder.</p>
+  <p>Após a ativação de Marcus, o Foco retorna a Celeste, cuja ativação havia sido interrompida. A transferência original de Dmitri para Celeste <strong>não gera uma Ficha de Interrupção</strong>, pois o Mestre a interrompeu antes de Celeste começar sua ação. Celeste continua apta a agir normalmente.</p>
 </div>
 
 <div class="example-box">
-  <div class="box-title">Foco de Celeste — Falha Crítica e consequência</div>
-  <p><strong>Celeste:</strong> dispara contra Marcus, mas os dados selecionados mostram 1 + 1. É uma <strong>Falha Crítica automática</strong>; o disparo erra independentemente dos modificadores. Não há penalidade mecânica adicional obrigatória.</p>
-  <p>A falha abre espaço para a resposta do outro lado. O Mestre assume o Foco e escolhe o cultista, que dispara contra Ana. O ataque e suas consequências são resolvidos normalmente. Depois, o Foco retorna aos personagens jogadores, priorizando quem ainda não teve oportunidade de agir ou está em maior risco.</p>
+  <div class="box-title">Ciclo 1 — Falha de Celeste e resposta do Mestre</div>
+  <p>Celeste começa sua ativação, recebe seu marcador de participação e dispara contra Marcus. Os dados selecionados mostram 1 + 1: é uma <strong>Falha Crítica automática</strong>.</p>
+  <p>Como Celeste falhou, o Foco passa imediatamente ao Mestre, sem gasto de Ficha de Interrupção e sem gerar uma ficha. O Mestre escolhe o cultista para responder à falha. O cultista realiza sua ativação e dispara contra Ana.</p>
+  <p>Ana, Dmitri e Celeste já receberam o Foco pelo menos uma vez. Como o ciclo acompanha apenas a participação dos personagens jogadores, o ciclo termina após a resolução da resposta do cultista. O Mestre remove os marcadores de participação dos três jogadores e inicia um novo ciclo. Os marcadores opcionais das ameaças não determinam o encerramento; as Fichas de Interrupção não gastas permanecem com o Mestre.</p>
 </div>
+
+<div class="note-box">
+  <strong>Exemplo de duas transferências para o mesmo personagem:</strong> em um ciclo com quatro jogadores, Ana transfere o Foco para Dmitri. Ao final da ativação de Dmitri, o Mestre recebe 1 ficha. Mais tarde, Celeste transfere o Foco para Dmitri novamente, antes de o quarto jogador receber o Foco. Ao concluir essa segunda ativação iniciada por transferência de outro jogador, o Mestre recebe mais 1 ficha. Assim, as duas ativações geram <strong>2 Fichas de Interrupção no total</strong>. Se o Mestre já tiver 2 fichas guardadas quando uma nova ficha for gerada, a excedente é descartada.</note>
 </section>
 
 <section id="resumo">
 <h2>13. Resumo de Referência</h2>
 <div class="summary-box quick-ref">
   <section>
-    <h3>Foco e fluxo do combate</h3>
+    <h3>Foco e ciclos de conflito</h3>
     <ul>
-      <li><strong>Entrada no combate:</strong> o Foco inicial decorre da ficção; emboscadas são resolvidas por testes comuns, sem fase ou sequência extra.</li>
-      <li><strong>Passagem do Foco:</strong> segue consequências de regras, continuidade da ficção e equilíbrio de participação.</li>
-      <li><strong>Foco do Mestre:</strong> o Mestre pode agir quando há falha, consequência, abertura ou oportunidade para uma ameaça.</li>
-      <li><strong>Ações:</strong> cada opção indica se exige Ação, Ação Bônus, Movimento ou Reação. A Ação Bônus só pode ser usada quando uma habilidade, poder ou item a conceder expressamente.</li>
-      <li><strong>Foco:</strong> não há ordem fixa nem rodada obrigatória; a sequência de ações é resolvida conforme a ficção e as regras específicas.</li>
-      <li><strong>Movimento básico:</strong> 9 metros como referência para um deslocamento curto em condições normais.</li>
+      <li><strong>Ciclo:</strong> termina quando todos os personagens jogadores envolvidos tiverem recebido o Foco ao menos uma vez. As ameaças não precisam agir para o ciclo terminar.</li>
+      <li><strong>Marcadores:</strong> coloque uma ficha ao lado de cada jogador quando seu personagem começar a primeira ativação do ciclo. Remova os marcadores dos jogadores quando todos tiverem participado. Marcadores de ameaça são opcionais.</li>
+      <li><strong>Transferência entre jogadores:</strong> gera 1 Ficha de Interrupção ao final da ativação do personagem que recebeu o Foco, desde que não tenha sido interrompida antes de começar.</li>
+      <li><strong>Mesmo personagem recebe Foco duas vezes:</strong> quando as duas ativações ocorrerem por transferência voluntária de outros jogadores no mesmo ciclo, cada uma gera 1 ficha: 2 fichas no total pelas duas ativações.</li>
+      <li><strong>Falha:</strong> o Foco passa imediatamente ao Mestre, que escolhe uma ameaça. A falha não gera ficha. Depois da ameaça agir, o Foco vai para um jogador ainda não marcado; se todos já estiverem marcados, encerre o ciclo e inicie outro.</li>
+      <li><strong>Interrupção:</strong> 1 ficha permite interromper o início de uma ativação e colocar uma ameaça em Foco. Depois da ameaça agir, o Foco retorna ao participante interrompido; sua ativação não é perdida.</li>
+      <li><strong>Transferência interrompida:</strong> se o Mestre interromper antes do destinatário começar sua ativação, a transferência não gera ficha, mesmo quando o Foco retornar a ele.</li>
+      <li><strong>Limite:</strong> o Mestre começa com 0 fichas e pode guardar no máximo 2. Fichas excedentes são descartadas.</li>
+      <li><strong>Ameaças em sequência:</strong> cada ameaça consecutiva adicional exige 1 ficha ou uma habilidade que permita a sequência. Ameaças podem receber o Foco mais de uma vez no ciclo.</li>
+      <li><strong>Reações:</strong> não contam como participação no ciclo, salvo indicação expressa.</li>
     </ul>
   </section>
   <section>
@@ -567,6 +625,7 @@
     </ul>
   </section>
 </div>
-</section></main>
+</section>
+</main>
 </body>
 </html>
