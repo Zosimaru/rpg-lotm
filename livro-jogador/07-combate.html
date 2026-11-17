@@ -153,7 +153,7 @@
 <p>Se o Mestre interromper uma transferência entre jogadores antes de o destinatário iniciar seu turno, a transferência não gera ficha. Depois da ameaça, o Foco retorna ao participante interrompido, que realiza sua ativação normalmente.</p>
 
 <h3>Fichas de Interrupção</h3>
-<p>O Mestre começa o conflito com <strong>0 Fichas de Interrupção</strong> e recebe automaticamente <strong>1 ficha no início de cada ciclo</strong>. Pode acumular no máximo <strong>2 fichas</strong>; qualquer excedente é descartado. As fichas devem ser mantidas separadas dos marcadores de participação.</p>
+<p>O Mestre começa cada conflito com <strong>0 Fichas de Interrupção</strong>. Ele recebe fichas apenas pelas transferências voluntárias entre personagens jogadores, conforme descrito acima, e pode acumular no máximo <strong>2 fichas</strong>; qualquer excedente é descartado. As fichas devem ser mantidas separadas dos marcadores de participação.</p>
 <div class="interruption-panel">
   <div class="interruption-token" aria-label="Ficha de Interrupção">INTERRUPÇÃO</div>
   <div>
@@ -179,7 +179,7 @@
   <li><strong>Se todas as ameaças já agiram:</strong> o Mestre só pode ativar uma delas novamente se gastar 2 Fichas de Interrupção ou se uma regra ou habilidade específica autorizar a segunda ativação.</li>
   <li><strong>Sem ameaça elegível ou recursos suficientes:</strong> o Mestre não pode realizar uma ativação. Se isso ocorrer no Foco final do Mestre, pule essa ativação, encerre o ciclo e comece outro, escolhendo um jogador para receber o Foco.</li>
   <li><strong>Interromper a última ameaça:</strong> durante o Foco final, o Mestre pode gastar 1 Ficha de Interrupção para inserir outra ameaça que ainda não tenha agido antes da ativação da ameaça inicialmente escolhida. A ameaça inserida age primeiro; em seguida, o Foco retorna à ameaça interrompida, que conclui sua ativação. Assim, o encerramento do ciclo pode conter duas ativações de ameaças diferentes. Se a ameaça inserida já tiver agido, aplica-se o custo de 2 fichas para sua segunda ativação.</li>
-  <li><strong>Início do novo ciclo:</strong> após a ativação final da ameaça — ou após pular o Foco final por falta de opção válida — remova os marcadores de participação, inicie o novo ciclo, conceda ao Mestre 1 Ficha de Interrupção respeitando o limite de 2 e passe o Foco a um jogador.</li>
+  <li><strong>Início do novo ciclo:</strong> após a ativação final da ameaça — ou após pular o Foco final por falta de opção válida — remova os marcadores de participação, inicie o novo ciclo e passe o Foco a um jogador. As Fichas de Interrupção não são renovadas automaticamente.</li>
 </ul>
 <p>Uma ameaça pode agir normalmente uma vez por ciclo. Sua segunda ativação só é permitida pelo gasto de 2 Fichas de Interrupção ou por uma regra ou habilidade específica; não há ativações repetidas livres. Adversários conduzidos como uma única unidade compartilham os mesmos marcadores e contam como uma única ameaça. Se forem conduzidos separadamente, cada um recebe seus próprios marcadores.</p>
 </section>
@@ -542,7 +542,7 @@
     <li><strong>Ameaça:</strong> ameaça; Esquiva 11, PV 6; poder de intimidação sobrenatural.</li>
     <li><strong>Cultista:</strong> ameaça; Esquiva 10, PV 5; revólver 2d6.</li>
   </ul>
-  <p>O Mestre começa o conflito com <strong>0 Fichas de Interrupção</strong>. No início do primeiro ciclo, recebe automaticamente <strong>1 ficha</strong>. Seu limite de acúmulo é 2. Para controlar o ciclo, serão colocados marcadores ao lado de Ana, Dmitri e Celeste; os marcadores das ameaças também são obrigatórios.</p>
+  <p>O Mestre começa o conflito com <strong>0 Fichas de Interrupção</strong> e pode acumular no máximo 2. Para controlar o ciclo, serão colocados marcadores ao lado de Ana, Dmitri e Celeste; os marcadores das ameaças também são obrigatórios.</p>
 </div>
 
 <div class="example-box">
@@ -571,7 +571,7 @@
   <div class="box-title">Ciclo 1 — Falha de Celeste e resposta do Mestre</div>
   <p>Celeste começa sua ativação, recebe seu marcador de participação e dispara contra a Ameaça. Os dados selecionados mostram 1 + 1: é uma <strong>Falha Crítica automática</strong>.</p>
   <p>Como Celeste falhou, ela conclui seu turno com as ações e o movimento que ainda puder realizar. Somente ao final do turno o Foco passa ao Mestre, sem gasto de Ficha de Interrupção e sem gerar uma ficha. O Mestre escolhe o Cultista, que ainda não agiu neste ciclo, para responder à falha. O Cultista recebe seu marcador obrigatório, realiza sua ativação e dispara contra Ana.</p>
-  <p>Ana, Dmitri e Celeste já receberam o Foco pelo menos uma vez. A ativação do Cultista é a ativação final de ameaça do ciclo. Depois que ele conclui seu turno, o Mestre remove todos os marcadores, inicia um novo ciclo, recebe automaticamente <strong>1 Ficha de Interrupção</strong> (respeitando o limite de 2) e escolhe um jogador para receber o Foco.</p>
+  <p>Ana, Dmitri e Celeste já receberam o Foco pelo menos uma vez. A ativação do Cultista é a ativação final de ameaça do ciclo. Depois que ele conclui seu turno, o Mestre remove todos os marcadores, inicia um novo ciclo e escolhe um jogador para receber o Foco. Sua reserva de Fichas de Interrupção permanece como estava; não há reposição automática pela mudança de ciclo.</p>
 </div>
 
 <div class="note-box">
@@ -595,7 +595,7 @@
       <li><strong>Falha:</strong> resultado da ação favorável às ameaças. O jogador conclui seu turno; o Foco passa ao Mestre somente ao final. Cada ativação gera no máximo uma passagem obrigatória ao Mestre por falha.</li>
       <li><strong>Múltiplos alvos:</strong> só há falha se mais da metade dos testes do jogador falhar ou se mais da metade das ameaças-alvo obtiver sucesso ao resistir.</li>
       <li><strong>Transferência entre jogadores:</strong> gera 1 ficha ao final da ativação do destinatário, se não for interrompida antes de começar. Se o mesmo personagem agir 2 vezes por escolha dos jogadores, o Mestre recebe 2 fichas no total.</li>
-      <li><strong>Fichas:</strong> o Mestre começa com 0, recebe 1 no início de cada ciclo e pode guardar até 2. Excedentes são descartados.</li>
+      <li><strong>Fichas:</strong> o Mestre começa com 0 e pode guardar até 2. Recebe fichas apenas pelas transferências voluntárias entre jogadores; não há ganho automático no início de um ciclo.</li>
       <li><strong>Interrupção:</strong> 1 ficha insere uma ameaça que ainda não agiu; 2 fichas permitem a segunda ativação de uma ameaça já ativada. Uma habilidade pode alterar esses custos.</li>
       <li><strong>Encerramento:</strong> normalmente, após todos os jogadores receberem Foco, o ciclo termina com uma ativação de ameaça. No fim, o Mestre escolhe um jogador para o próximo ciclo. Se não houver ameaça elegível nem recursos para ativar uma, pule o Foco final e inicie novo ciclo.</li>
       <li><strong>Última ameaça:</strong> no Foco final, 1 ficha pode inserir uma segunda ameaça ainda não ativada antes da primeira; depois da ativação da segunda, a primeira retoma e conclui seu turno.</li>
