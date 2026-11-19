@@ -132,10 +132,12 @@ body h6 {
 </p>
 
 <p>
-  Os valores registrados na ficha representam os pontos do personagem. Nos testes,
-  esses pontos são convertidos em modificadores. É importante distinguir o valor
-  de pontos do modificador: <strong>Pontos.(DES) = 3</strong>, por exemplo,
-  corresponde a <strong>Mod.(DES) = +1</strong>.
+  Os valores registrados na ficha são os <strong>Pontos</strong> de cada Atributo e
+  Proficiência. <strong>Todo teste utiliza os bônus derivados desses valores, nunca
+  os Pontos brutos</strong>, salvo quando uma regra solicitar expressamente o uso de
+  Pontos. Na notação das rolagens, <strong>Atributo</strong> e
+  <strong>Proficiência</strong> representam esses bônus de teste: por exemplo,
+  <strong>Pontos.(DES) = 3</strong> fornece <strong>Atributo (DES) = +1</strong>.
 </p>
 
 <div class="box box-note">
@@ -155,7 +157,7 @@ body h6 {
 <div class="box box-rule">
   <div class="box-title">Resumo das Seções</div>
   <ul>
-    <li><a href="#atributos"><strong>Atributos:</strong> escalas, categorias, dimensões e modificadores.</a></li>
+    <li><a href="#atributos"><strong>Atributos:</strong> escalas, categorias, dimensões e bônus.</a></li>
     <li><a href="#pericias"><strong>Proficiências:</strong> Talentos, Perícias e Conhecimentos, distribuição, aplicações e especializações.</a></li>
     <li><a href="#sistema-testes"><strong>Sistema de Testes:</strong> rolagens 2d10, Classes de Dificuldade, resultados críticos, Vantagem, Desvantagem e testes disputados.</a></li>
     <li>
@@ -187,7 +189,7 @@ body h6 {
 
 <h3 id="escala-atributos">Escala de Atributos</h3>
 <table>
-  <thead><tr><th>Pontos</th><th>Representação</th><th>Nível</th><th>Modificador</th><th>Referência</th></tr></thead>
+  <thead><tr><th>Pontos</th><th>Representação</th><th>Nível</th><th>Bônus para testes</th><th>Referência</th></tr></thead>
   <tbody>
     <tr><td>1</td><td><span class="dots"><span class="dot-filled"></span><span class="dot-empty"></span><span class="dot-empty"></span><span class="dot-empty"></span><span class="dot-empty"></span></span></td><td>Limitado</td><td>−1</td><td>Capacidade abaixo da média naquela área, sem significar incapacidade.</td></tr>
     <tr><td>2</td><td><span class="dots"><span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-empty"></span><span class="dot-empty"></span><span class="dot-empty"></span></span></td><td>Mediano</td><td>+0</td><td>Capacidade comum e funcional para uma pessoa adulta.</td></tr>
@@ -198,20 +200,17 @@ body h6 {
 </table>
 
 <div class="box box-rule">
-  <div class="box-title">Cálculo do Modificador de Atributo</div>
-  <p style="text-align:center; font-size:1.15em;"><strong>Mod.(Atributo) = Pontos.(Atributo) − 2</strong></p>
+  <div class="box-title">Cálculo do Bônus de Atributo</div>
+  <p style="text-align:center; font-size:1.15em;"><strong>Bônus de Atributo = Pontos.(Atributo) − 2</strong></p>
   <p>
-    A notação <strong>Pontos.(ATR)</strong> indica a quantidade de pontos registrada
-    no Atributo indicado. A notação <strong>Mod.(ATR)</strong> indica o modificador
-    utilizado nos testes. Assim, Pontos.(FOR) 1 resulta em Mod.(FOR) −1; Pontos.(FOR)
-    2 resulta em Mod.(FOR) +0; Pontos.(FOR) 3 resulta em Mod.(FOR) +1; Pontos.(FOR)
-    4 resulta em Mod.(FOR) +2; e Pontos.(FOR) 5 resulta em Mod.(FOR) +3.
+    A notação <strong>Pontos.(ATR)</strong> indica a quantidade registrada no
+    Atributo. O <strong>Bônus de Atributo</strong> é o valor utilizado nas rolagens:
+    Pontos.(FOR) 1 fornece −1; 2 fornece +0; 3 fornece +1; 4 fornece +2; e 5 fornece +3.
   </p>
   <p>
-    O modificador, e não a quantidade bruta de pontos, é somado à rolagem de teste.
-    Algumas estatísticas derivadas utilizam diretamente Pontos.(ATR); nesses casos,
-    o texto da regra indicará expressamente que devem ser usados os pontos, e não o
-    modificador.
+    Em testes, some o bônus derivado, não a quantidade bruta de Pontos. Uma regra que
+    utilizar diretamente os Pontos de um Atributo indicará isso expressamente; nesses
+    casos, use o valor registrado na ficha, sem convertê-lo em bônus de teste.
   </p>
 </div>
 
@@ -268,7 +267,7 @@ body h6 {
 <ul>
   <li><strong>Aplicações comuns:</strong> Empurrar uma porta emperrada, levantar alguém ferido, segurar uma criatura, realizar um golpe baseado em potência ou ameaçar alguém pela força física.</li>
   <li><strong>Abordagem:</strong> Quando a dificuldade está em vencer uma resistência física, romper algo ou dominar um oponente pela força.</li>
-  <li><strong>Exemplo:</strong> Um personagem tenta erguer uma viga caída para liberar a passagem. O Mestre pede um teste de Força (CD 13). Com Pontos.(FOR) = 3, seu Mod.(FOR) é +1; o teste será 2d10 + 1.</li>
+  <li><strong>Exemplo:</strong> Um personagem tenta erguer uma viga caída para liberar a passagem. O Mestre pede um teste de Força (CD 13). Com Pontos.(FOR) = 3, seu Atributo (FOR) é +1; o teste será <strong>2d10 + Atributo (FOR) (+1)</strong>.</li>
 </ul>
 
 <h4 id="destreza">Destreza <span class="attr-code">DES</span></h4>
@@ -385,7 +384,7 @@ body h6 {
 <h3 id="escala-pericias">Escala de Proficiências</h3>
 <table>
   <thead>
-    <tr><th>Pontos</th><th>Nível</th><th>Modificador</th><th>Descrição</th></tr>
+    <tr><th>Pontos</th><th>Nível</th><th>Bônus para testes</th><th>Descrição</th></tr>
   </thead>
   <tbody>
     <tr><td>0</td><td>Não treinado</td><td>−2</td><td>Não possui treinamento ou experiência relevante naquela área.</td></tr>
@@ -398,20 +397,19 @@ body h6 {
 </table>
 
 <div class="box box-rule">
-  <div class="box-title">Cálculo do Modificador de Proficiência</div>
-  <p style="text-align:center;"><strong>Mod.(Proficiência) = Valor da Proficiência − 2</strong></p>
+  <div class="box-title">Cálculo do Bônus de Proficiência</div>
+  <p style="text-align:center;"><strong>Bônus de Proficiência = Pontos da Proficiência − 2</strong></p>
   <p>
-    O valor registrado pelos círculos da ficha é convertido em modificador para os
-    testes: 0 ponto corresponde a −2; 1 a −1; 2 a +0; 3 a +1; 4 a +2; e 5 a +3.
-    A coluna Bônus da ficha registra esse modificador. O campo Total é utilizado
-    para somar o modificador da Proficiência ao modificador do Atributo escolhido
-    para a ação e a outros bônus aplicáveis. Como a abordagem pode variar, esse
-    total pode mudar conforme a ação realizada.
+    O valor registrado pelos círculos da ficha determina o bônus usado nos testes:
+    0 ponto corresponde a −2; 1 a −1; 2 a +0; 3 a +1; 4 a +2; e 5 a +3.
+    A coluna <strong>Bônus</strong> da ficha registra esse valor. O campo Total soma
+    o Bônus de Proficiência ao Bônus de Atributo escolhido para a ação e aos demais
+    bônus aplicáveis. Como a abordagem pode variar, esse total também pode mudar.
   </p>
   <p>
     Ter 0 ponto não significa que o personagem não possa tentar nenhuma ação:
-    significa que não possui treinamento e aplica o modificador −2 quando a tentativa
-    for possível. Em tarefas que exigem qualificação específica, o Mestre pode
+    significa que não possui treinamento e utiliza −2 como Bônus de Proficiência
+    quando a tentativa for possível. Em tarefas que exigem qualificação específica, o Mestre pode
     considerar a tentativa inviável ou aplicar uma penalidade adicional de −2,
     quando a falta de preparo justificar essa dificuldade. Essa penalidade adicional
     não é automática.
@@ -709,30 +707,32 @@ body h6 {
 
 <p>
   Um teste é realizado quando o resultado de uma ação é incerto e o fracasso pode
-  produzir consequências relevantes. O jogador rola <span class="dice">2d10</span>,
-  soma os resultados dos dois dados e acrescenta o bônus total do personagem.
-  O resultado é comparado à Classe de Dificuldade (CD) ou, em uma oposição direta,
-  ao total obtido por outro participante.
+  produzir consequências relevantes. A fórmula padrão é
+  <strong>2d10 + Atributo + Proficiência + Bônus aplicáveis</strong>. Os termos
+  Atributo e Proficiência representam seus respectivos bônus de teste, calculados
+  a partir dos Pontos registrados na ficha. O resultado é comparado à Classe de
+  Dificuldade (CD) ou, em uma oposição direta, ao total obtido por outro participante.
 </p>
 
 <h3 id="teste-basico">Teste básico</h3>
 <div class="box box-rule">
   <div class="box-title">Fórmula do Teste</div>
   <p style="text-align:center; font-size:1.2em;">
-    <strong>Resultado = dois dados selecionados + bônus total do personagem</strong>
+    <strong>Resultado = 2d10 + Atributo + Proficiência + Bônus aplicáveis</strong>
   </p>
   <p style="text-align:center;">
-    <strong>Exemplo:</strong> 2d10 (7 + 8) + bônus total (+2) = <strong>17</strong>.
+    <strong>Exemplo:</strong> 2d10 (7 + 8) + Atributo (+1) + Proficiência (+1) = <strong>17</strong>.
   </p>
   <p>
-    O bônus total reúne <strong>Mod.(Atributo)</strong>,
-    <strong>Mod.(Proficiência)</strong> e outros modificadores concedidos por regras,
-    equipamentos ou habilidades. Uma ou mais Especializações diretamente pertinentes
-    concedem um bônus único de <strong>+2</strong>; bônus de Especializações diferentes
-    não se acumulam.
+    A parcela <strong>Atributo</strong> corresponde ao Bônus de Atributo escolhido;
+    a parcela <strong>Proficiência</strong> corresponde ao Bônus de Proficiência
+    pertinente. Some também os bônus concedidos por regras, equipamentos ou habilidades.
+    Uma ou mais Especializações diretamente pertinentes podem conceder um bônus único
+    de <strong>+2</strong>, exceto em testes de ataque ou de Lucidez; bônus de
+    Especializações diferentes não se acumulam.
   </p>
   <p style="text-align:center; font-size:1.1em;">
-    <strong>Dois dados selecionados + Mod.(Atributo) + Mod.(Proficiência) + bônus aplicáveis ≥ CD</strong>
+    <strong>Dois dados selecionados + Atributo + Proficiência + Bônus aplicáveis ≥ CD</strong>
   </p>
   <p>
     O Mestre escolhe o Atributo e a Proficiência que melhor representam a abordagem do
@@ -756,7 +756,7 @@ body h6 {
   <li><strong>Declare a intenção:</strong> o jogador explica o que deseja alcançar e como pretende agir.</li>
   <li><strong>Defina a abordagem:</strong> o Mestre escolhe o Atributo e a Proficiência adequados à descrição.</li>
   <li><strong>Estabeleça a dificuldade:</strong> o Mestre determina uma CD ou define quem fará o teste oposto.</li>
-  <li><strong>Calcule o bônus total:</strong> some Mod.(Atributo), Mod.(Proficiência) e os bônus que realmente se aplicarem.</li>
+  <li><strong>Calcule o bônus total:</strong> some o Bônus de Atributo, o Bônus de Proficiência e os demais bônus que realmente se aplicarem.</li>
   <li><strong>Compare as fontes:</strong> cada fonte de Vantagem cancela uma fonte de Desvantagem. Depois dos cancelamentos, verifique qual tipo ainda predomina. Fontes excedentes do mesmo tipo não se acumulam.</li>
   <li><strong>Role os dados:</strong> sem predominância, role 2d10 normalmente. Se restar Vantagem, role 3d10 e mantenha os dois maiores; se restar Desvantagem, role 3d10 e mantenha os dois menores. Independentemente da quantidade de fontes excedentes, apenas um dado adicional é utilizado.</li>
   <li><strong>Verifique os críticos:</strong> em testes contra CD, depois de selecionar os dois dados, <strong>10 + 10</strong> gera Sucesso Crítico e <strong>1 + 1</strong> gera Falha Crítica, independentemente da soma, dos bônus ou da CD. Duplas de outros valores não geram críticos. Em testes disputados, aplica-se a regra própria de comparação de totais, sem críticos automáticos.</li>
@@ -769,12 +769,12 @@ body h6 {
   <p>
     Edmund Harker tenta identificar uma adulteração em um contrato. O Mestre escolhe
     Raciocínio + Investigação e determina CD 15. Edmund possui <strong>Pontos.(RAC) = 4</strong>,
-    portanto Mod.(RAC) é +2. Sua Proficiência Investigação tem 2 pontos, portanto
-    Mod.(Investigação) é +0. Seu bônus total é +2. Ele rola 2d10 e obtém
-    <strong>7 e 8</strong>, cuja soma é 15.
+    portanto seu Bônus de Atributo (RAC) é +2. Sua Proficiência Investigação tem
+    2 pontos, portanto seu Bônus de Proficiência (Investigação) é +0. Seu bônus total é +2. Ele rola 2d10 e obtém
+    <strong>7 e 8</strong>. A resolução fica: <strong>2d10 (7 + 8) + Atributo (RAC) (+2) + Proficiência (Investigação) (+0) = 17</strong>.
   </p>
   <p>
-    Total: 15 + 2 + 0 = <strong>17</strong>. Como 17 é igual ou superior à CD 15,
+    Como 17 é igual ou superior à CD 15,
     Edmund identifica a adulteração.
   </p>
 </div>
@@ -880,10 +880,10 @@ body h6 {
   <p>
     Edmund tenta sustentar uma história falsa diante de um investigador. Edmund rola
     2d10 e obtém 5 e 7, totalizando 12 nos dados. Como possui Pontos.(MAN) = 4,
-    seu Mod.(MAN) é +2; sua Proficiência Subterfúgio tem 1 ponto, portanto
-    Mod.(Subterfúgio) é −1. Seu resultado final é <strong>13</strong>. O investigador
+    seu Bônus de Atributo (MAN) é +2; sua Proficiência Subterfúgio tem 1 ponto,
+    portanto seu Bônus de Proficiência (Subterfúgio) é −1. Seu resultado final é <strong>13</strong>. O investigador
     tenta perceber a mentira com Empatia e Raciocínio: rola 2d10 e obtém 4 e 7,
-    totalizando 11 nos dados. Com Mod.(RAC) +1 e Mod.(Empatia) +0, seu resultado final
+    totalizando 11 nos dados. Com Bônus de Atributo (RAC) +1 e Bônus de Proficiência (Empatia) +0, seu resultado final
     é <strong>12</strong>. Edmund vence o teste disputado. Se os totais fossem iguais,
     o investigador, como defensor, prevaleceria.
   </p>
@@ -894,8 +894,8 @@ body h6 {
   O Mestre pode conceder fontes de Vantagem ou impor fontes de Desvantagem quando as
   circunstâncias favorecem ou prejudicam significativamente a tentativa. As fontes são
   consideradas para determinar se o teste será realizado com Vantagem, Desvantagem ou
-  sem nenhuma delas. Elas não modificam os bônus de Atributo, Proficiência ou outros
-  modificadores numéricos do personagem.
+  sem nenhuma delas. Elas não alteram os bônus de Atributo, Proficiência ou outros
+  valores numéricos do personagem.
 </p>
 <div class="box box-rule">
   <div class="box-title">Como resolver fontes de Vantagem e Desvantagem</div>
@@ -996,16 +996,16 @@ body h6 {
 <h4 id="pontos-vida">Pontos de Vida (PV)</h4>
 <p>
   Os Pontos de Vida representam a capacidade do personagem de suportar ferimentos
-  físicos e continuar agindo. A fórmula utiliza o modificador de Vigor e a Sequência
+  físicos e continuar agindo. A fórmula utiliza o bônus de Vigor e a Sequência
   atual do personagem. Quando os PV chegam a <strong>0 ou menos</strong>, o personagem
   fica <strong>Inconsciente</strong>. Os efeitos mecânicos dessa condição são descritos
   no capítulo de Conflitos.
 </p>
 <div class="box box-rule">
   <div class="box-title">Cálculo dos Pontos de Vida</div>
-  <p style="text-align:center; font-size:1.2em;"><strong>PV = 3 + Mod.(VIG) + (10 − Sequência)</strong></p>
+  <p style="text-align:center; font-size:1.2em;"><strong>PV = 3 + Bônus de Atributo (VIG) + (10 − Sequência)</strong></p>
   <p>
-    O modificador de Vigor é calculado por <strong>Mod.(VIG) = Pontos.(VIG) − 2</strong>.
+    O Bônus de Atributo (VIG) é calculado por <strong>Pontos.(VIG) − 2</strong>.
     O termo (10 − Sequência) representa o acréscimo correspondente à Sequência do personagem.
   </p>
   <table>
@@ -1022,7 +1022,7 @@ body h6 {
     Por isso, a tabela e os exemplos de progressão deste capítulo terminam na Sequência 5.
   </p>
   <p>
-    <strong>Exemplo:</strong> um personagem com Pontos.(VIG) = 2 possui Mod.(VIG) = +0.
+    <strong>Exemplo:</strong> um personagem com Pontos.(VIG) = 2 possui Bônus de Atributo (VIG) = +0.
     Na Sequência 8, terá 3 + 0 + (10 − 8) = <strong>5 PV</strong>. Na Sequência 9,
     terá 3 + 0 + (10 − 9) = <strong>4 PV</strong>. Ao alcançar a Sequência 5,
     mantendo o mesmo Vigor, terá 3 + 0 + (10 − 5) = <strong>8 PV</strong>.
@@ -1149,7 +1149,7 @@ body h6 {
   <p>
     O poder é manifestado e seus efeitos são resolvidos normalmente. <strong>Somente
     depois de resolver o poder</strong>, o personagem deve realizar um teste de Lucidez
-    para suportar o desgaste: role <strong>2d10 + bônus total das Âncoras ativas + modificador
+    para suportar o desgaste: role <strong>2d10 + bônus total das Âncoras ativas + bônus
     de circunstância</strong> contra uma Classe de Dificuldade igual a
     <strong>8 + o total acumulado de Espiritualidade
     excedente</strong>. Some ao excedente anterior a parcela não paga pelo poder recém
@@ -1227,7 +1227,7 @@ body h6 {
   <p style="text-align:center; font-size:1.15em;"><strong>2d10 + Âncoras + Bônus de Circunstância</strong></p>
   <p>
     Quando uma regra ou efeito exigir um teste de Lucidez, some os dois dados, o bônus de
-    todas as Âncoras ativas do personagem e o modificador de circunstância indicado pelo
+    todas as Âncoras ativas do personagem e o bônus de circunstância indicado pelo
     Mestre. Compare o resultado à CD definida pelo efeito ou pela situação. Na ausência de
     uma CD específica, utilize a tabela geral de Classes de Dificuldade deste capítulo.
     Nenhum Atributo ou Proficiência é somado ao teste. O bônus geral de +2 das
@@ -1279,11 +1279,11 @@ body h6 {
 <h5>Bônus de circunstância</h5>
 <p>
   A situação pode facilitar ou dificultar um teste de Lucidez. O Mestre escolhe um único
-  modificador final que represente o conjunto das circunstâncias relevantes; fatores que
+  bônus final que represente o conjunto das circunstâncias relevantes; fatores que
   descrevem a mesma vantagem ou ameaça não devem ser somados repetidamente.
 </p>
 <table>
-  <thead><tr><th>Modificador</th><th>Exemplos de circunstância</th></tr></thead>
+  <thead><tr><th>Bônus de circunstância</th><th>Exemplos de circunstância</th></tr></thead>
   <tbody>
     <tr><td><strong>+2</strong></td><td>Preparação cuidadosa para uma meditação ou consumo de poção, em local protegido, silencioso e livre de interrupções.</td></tr>
     <tr><td><strong>+1</strong></td><td>Ambiente familiar e seguro, rotina de concentração conhecida ou apoio tranquilizador que não esteja sendo contabilizado como uma Âncora adicional.</td></tr>
@@ -1294,7 +1294,7 @@ body h6 {
   </tbody>
 </table>
 <p class="box-note">
-  Os valores da tabela são referências para o Mestre, não modificadores automáticos por
+  Os valores da tabela são referências para o Mestre, não bônus automáticos por
   nome de situação. A preparação só concede bônus quando realmente ajuda o personagem a
   manter o controle; a presença de uma entidade só impõe penalidade quando ela interfere
   de maneira relevante no teste.
@@ -1392,20 +1392,20 @@ body h6 {
 <p>
   A Esquiva representa a dificuldade de atingir o personagem. Em um ataque, o
   atacante realiza o teste indicado pela ação; o ataque acerta quando o resultado
-  final iguala ou supera a Esquiva do alvo. A Esquiva Base utiliza os modificadores
+  final iguala ou supera a Esquiva do alvo. A Esquiva Base utiliza os bônus
   de Destreza e Raciocínio.
 </p>
 <div class="box box-rule">
   <div class="box-title">Cálculo da Esquiva Base</div>
-  <p style="text-align:center; font-size:1.15em;"><strong>Esquiva Base = 10 + Mod.(DES) + Mod.(RAC)</strong></p>
+  <p style="text-align:center; font-size:1.15em;"><strong>Esquiva Base = 10 + Bônus de Atributo (DES) + Bônus de Atributo (RAC)</strong></p>
   <p>
-    Os modificadores são calculados por <strong>Mod.(DES) = Pontos.(DES) − 2</strong> e
-    <strong>Mod.(RAC) = Pontos.(RAC) − 2</strong>. Some os dois modificadores ao valor
+    Os bônus são calculados por <strong>Pontos.(DES) − 2</strong> e
+    <strong>Pontos.(RAC) − 2</strong>. Some os dois bônus ao valor
     base de 10 para determinar a Esquiva Base do personagem.
   </p>
   <p>
     <strong>Exemplo:</strong> com Pontos.(DES) = 3 e Pontos.(RAC) = 3, o personagem
-    possui Mod.(DES) +1 e Mod.(RAC) +1, resultando em Esquiva Base 12.
+    possui Bônus de Atributo (DES) +1 e Bônus de Atributo (RAC) +1, resultando em Esquiva Base 12.
   </p>
 </div>
 
@@ -1548,9 +1548,9 @@ body h6 {
       <section class="quickref-group" aria-label="Fundamentos do teste">
         <h4>Fundamentos do teste</h4>
         <div class="quickref-rows">
-          <div class="quickref-row"><span class="quickref-label">Modificador de Atributo</span><span class="quickref-value">Mod.(ATR) = Pontos.(ATR) − 2</span></div>
-          <div class="quickref-row"><span class="quickref-label">Modificador de Proficiência</span><span class="quickref-value">Mod.(Proficiência) = Pontos da Proficiência − 2</span></div>
-          <div class="quickref-row"><span class="quickref-label">Teste</span><span class="quickref-value">soma dos dois dados selecionados + Mod.(Atributo) + Mod.(Proficiência) + bônus aplicáveis ≥ CD</span></div>
+          <div class="quickref-row"><span class="quickref-label">Bônus de Atributo</span><span class="quickref-value">Pontos.(ATR) − 2</span></div>
+          <div class="quickref-row"><span class="quickref-label">Bônus de Proficiência</span><span class="quickref-value">Pontos da Proficiência − 2</span></div>
+          <div class="quickref-row"><span class="quickref-label">Teste</span><span class="quickref-value">2d10 + Atributo + Proficiência + Bônus aplicáveis ≥ CD; com Vantagem/Desvantagem, role 3d10 e selecione dois</span></div>
           <div class="quickref-row"><span class="quickref-label">Especialização</span><span class="quickref-value">+2 em testes pertinentes, exceto ataques e Lucidez; na Lucidez, a primeira Especialização contribui apenas pela Âncora de Reconhecimento (+1)</span></div>
         </div>
       </section>
@@ -1571,9 +1571,9 @@ body h6 {
       <section class="quickref-group" aria-label="Recursos e recuperação">
         <h4>Recursos e recuperação</h4>
         <div class="quickref-rows">
-          <div class="quickref-row"><span class="quickref-label">PV</span><span class="quickref-value">3 + Mod.(VIG) + (10 − Sequência)</span></div>
+          <div class="quickref-row"><span class="quickref-label">PV</span><span class="quickref-value">3 + Bônus de Atributo (VIG) + (10 − Sequência)</span></div>
           <div class="quickref-row"><span class="quickref-label">Espiritualidade máxima</span><span class="quickref-value">Espiritualidade inicial + Bônus de Digestão de Poção (+2 permanente a cada 50% de uma poção) + outros bônus</span></div>
-          <div class="quickref-row"><span class="quickref-label">Teste de Lucidez</span><span class="quickref-value">2d10 + bônus total das Âncoras ativas + modificador de circunstância; uso excedente de Espiritualidade: CD 8 + excedente acumulado</span></div>
+          <div class="quickref-row"><span class="quickref-label">Teste de Lucidez</span><span class="quickref-value">2d10 + bônus das Âncoras ativas + bônus de circunstância; uso excedente de Espiritualidade: CD 8 + excedente acumulado</span></div>
           <div class="quickref-row"><span class="quickref-label">Recuperação da Espiritualidade</span><span class="quickref-value">Descanso Completo: recuperação total, 1 vez a cada intervalo de 24 horas; cada Descanso Completo renova duas utilizações de Descanso Breve, de 1 hora cada</span></div>
           <div class="quickref-row"><span class="quickref-label">Lucidez</span><span class="quickref-value">inicial 7, máximo 10, mínimo 0; cada Âncora ativa concede +1 em testes de Lucidez</span></div>
         </div>
@@ -1582,7 +1582,7 @@ body h6 {
       <section class="quickref-group" aria-label="Defesa, proteção e deslocamento">
         <h4>Defesa, proteção e deslocamento</h4>
         <div class="quickref-rows">
-          <div class="quickref-row"><span class="quickref-label">Esquiva Base</span><span class="quickref-value">10 + Mod.(DES) + Mod.(RAC)</span></div>
+          <div class="quickref-row"><span class="quickref-label">Esquiva Base</span><span class="quickref-value">10 + Bônus de Atributo (DES) + Bônus de Atributo (RAC)</span></div>
           <div class="quickref-row"><span class="quickref-label">Limiar Menor → Maior</span><span class="quickref-value">2 + (10 − Sequência), sem Vestimenta</span></div>
           <div class="quickref-row"><span class="quickref-label">Limiar Maior → Severo</span><span class="quickref-value">4 + 2 × (10 − Sequência), sem Vestimenta</span></div>
           <div class="quickref-row"><span class="quickref-label">Blindagem</span><span class="quickref-value">1 ponto reduz o dano em um nível; máximo de 1 ponto por ataque</span></div>
