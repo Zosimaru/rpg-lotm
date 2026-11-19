@@ -250,7 +250,7 @@
     Escolha uma segunda Proficiência, diferente da fixa, para receber mais
     <strong>+1 Ponto</strong>. Essa escolha pode ser de qualquer grupo.
     Aplique os dois pontos após concluir a distribuição inicial: eles aumentam
-    diretamente os valores das Proficiências e atualizam seus modificadores conforme
+    diretamente os valores das Proficiências e atualizam seus bônus de teste conforme
     o Capítulo 3.
   </p>
 </div>
@@ -372,9 +372,9 @@
   <div class="box-title">Como registrar as Proficiências na ficha</div>
   <p>
     Os cinco círculos de cada linha representam os pontos da Proficiência: marque um
-    círculo para cada ponto; nenhum círculo marcado significa valor 0. O modificador
-    segue a regra <strong>Mod.(Proficiência) = Valor − 2</strong>. Assim, 0 ponto gera
-    −2; 1 gera −1; 2 gera +0; 3 gera +1; 4 gera +2; e 5 gera +3.
+    círculo para cada ponto; nenhum círculo marcado significa valor 0. O bônus de teste
+    da Proficiência segue a regra <strong>Bônus de Proficiência = Pontos da Proficiência − 2</strong>.
+    Assim, 0 ponto gera −2; 1 gera −1; 2 gera +0; 3 gera +1; 4 gera +2; e 5 gera +3.
   </p>
   <p>
     O Atributo utilizado não é fixo para cada Proficiência: o Mestre o escolhe conforme
@@ -659,9 +659,9 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
 
 <div class="box box-rule">
   <div class="box-title">Fórmula de PV</div>
-  <p style="text-align:center; font-size:1.2em;"><strong>PV = 3 + Mod.(VIG) + (10 − Sequência)</strong></p>
+  <p style="text-align:center; font-size:1.2em;"><strong>PV = 3 + Bônus de Atributo (VIG) + (10 − Sequência)</strong></p>
   <p class="box-note">
-    Nesta fórmula, utiliza-se o <strong>modificador de Vigor</strong>, calculado por <strong>Mod.(VIG) = Pontos.(VIG) − 2</strong>. O acréscimo de progressão corresponde a 10 menos o número da Sequência. Neste livro, a tabela contempla apenas as Sequências 9 a 5.
+    Nesta fórmula, utiliza-se o <strong>Bônus de Atributo (VIG)</strong>, calculado por <strong>Pontos.(VIG) − 2</strong>. O acréscimo de progressão corresponde a 10 menos o número da Sequência. Neste livro, a tabela contempla apenas as Sequências 9 a 5.
   </p>
   <table>
     <thead><tr><th>Sequência</th><th>Bônus de PV</th></tr></thead>
@@ -679,7 +679,7 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
     Por isso, a tabela e os exemplos de progressão terminam na Sequência 5.
   </p>
   <p>
-    Exemplo: um personagem com <strong>Pontos.(VIG) = 2</strong> possui <strong>Mod.(VIG) = +0</strong>. Na <strong>Sequência 9</strong>, começa com <strong>3 + 0 + (10 − 9) = 4 PV</strong>. Ao alcançar a <strong>Sequência 5</strong>, mantendo o mesmo Vigor, terá <strong>3 + 0 + (10 − 5) = 8 PV</strong>.
+    Exemplo: um personagem com <strong>Pontos.(VIG) = 2</strong> possui <strong>Bônus de Atributo (VIG) = +0</strong>. Na <strong>Sequência 9</strong>, começa com <strong>3 + 0 + (10 − 9) = 4 PV</strong>. Ao alcançar a <strong>Sequência 5</strong>, mantendo o mesmo Vigor, terá <strong>3 + 0 + (10 − 5) = 8 PV</strong>.
   </p>
   <div class="box box-note">
     <div class="box-title">Registro dos Pontos de Vida na ficha</div>
@@ -859,10 +859,10 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
 </p>
 <div class="box box-rule">
   <div class="box-title">Cálculo da Esquiva Base</div>
-  <p style="text-align:center; font-size:1.15em;"><strong>Esquiva Base = 10 + Mod.(DES) + Mod.(RAC)</strong></p>
+  <p style="text-align:center; font-size:1.15em;"><strong>Esquiva Base = 10 + Bônus de Atributo (DES) + Bônus de Atributo (RAC)</strong></p>
   <p>
-    Os modificadores são calculados por <strong>Mod.(DES) = Pontos.(DES) − 2</strong> e
-    <strong>Mod.(RAC) = Pontos.(RAC) − 2</strong>. Some os dois modificadores ao valor-base de 10 para determinar a Esquiva Base do personagem.
+    Os bônus são calculados por <strong>Pontos.(DES) − 2</strong> e
+    <strong>Pontos.(RAC) − 2</strong>. Some os dois bônus ao valor-base de 10 para determinar a Esquiva Base do personagem.
   </p>
 </div>
 
@@ -1035,7 +1035,7 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
   </p>
 
   <h4>Passo 6 — Pontos de Vida</h4>
-  <p>Como Pontos.(VIG) = 2, Mod.(VIG) = +0. Portanto, PV = 3 + 0 + (10 − 9) = <strong>4 PV</strong>.</p>
+  <p>Como Pontos.(VIG) = 2, Bônus de Atributo (VIG) = +0. Portanto, PV = 3 + 0 + (10 − 9) = <strong>4 PV</strong>.</p>
 
   <h4>Passo 7 — Lucidez</h4>
   <p>Lucidez inicial: <strong>7 pontos</strong>. Todos os personagens começam com esse mesmo valor, sem necessidade de cálculo.</p>
@@ -1057,7 +1057,7 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
 
   <h4>Passo 9 — Esquiva, Blindagem e Limiares de Dano</h4>
   <ul>
-    <li><strong>Esquiva Base:</strong> como Pontos.(DES) = 2, Mod.(DES) = +0, e Pontos.(RAC) = 4, Mod.(RAC) = +2; portanto, Esquiva Base = 10 + 0 + 2 = <strong>12</strong>.</li>
+    <li><strong>Esquiva Base:</strong> como Pontos.(DES) = 2, Bônus de Atributo (DES) = +0, e Pontos.(RAC) = 4, Bônus de Atributo (RAC) = +2; portanto, Esquiva Base = 10 + 0 + 2 = <strong>12</strong>.</li>
     <li><strong>Vestimenta:</strong> nenhuma.</li>
     <li><strong>Blindagem:</strong> 0 pontos.</li>
     <li><strong>Limiar de Menor para Maior:</strong> 2 + (10 − 9) = <strong>3</strong>.</li>
