@@ -38,6 +38,22 @@
   .conflict-chapter table { width: 100%; border-collapse: collapse; margin: .7rem 0 1rem; font-size: .94rem; }
   .conflict-chapter th { padding: .55rem .6rem; background: #292824; color: #f7f1e5; text-align: left; }
   .conflict-chapter td { padding: .5rem .6rem; border-bottom: 1px solid #e1d8c8; vertical-align: top; }
+  /* Distribuição específica da tabela de manobras */
+  .conflict-chapter table.maneuver-table { table-layout: fixed; font-size: .91rem; }
+  .conflict-chapter .maneuver-table col:nth-child(1) { width: 14%; }
+  .conflict-chapter .maneuver-table col:nth-child(2) { width: 19%; }
+  .conflict-chapter .maneuver-table col:nth-child(3) { width: 24%; }
+  .conflict-chapter .maneuver-table col:nth-child(4) { width: 43%; }
+  .conflict-chapter .maneuver-table th,
+  .conflict-chapter .maneuver-table td { padding: .58rem .65rem; }
+  .conflict-chapter .maneuver-table th:nth-child(2),
+  .conflict-chapter .maneuver-table th:nth-child(3) { text-align: center; }
+  .conflict-chapter .maneuver-expression { display: block; white-space: nowrap; font-weight: 600; }
+  .conflict-chapter .maneuver-choice { display: grid; gap: .18rem; }
+  .conflict-chapter .maneuver-or { display: block; color: #766b59; font-size: .82rem; font-style: italic; line-height: 1.15; }
+  @media (max-width: 720px) {
+    .conflict-chapter table.maneuver-table { min-width: 780px; }
+  }
   .conflict-chapter tbody tr:nth-child(even) { background: #f4eddf; }
   .conflict-chapter ul, .conflict-chapter ol { padding-left: 1.35rem; }
   .conflict-chapter li { margin: .25rem 0; }
@@ -282,37 +298,38 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 
 <h3 id="executar-manobra">Executar uma manobra</h3>
 <p>Executar uma manobra consome uma <strong>Ação Principal</strong> e, salvo indicação diferente de um poder ou equipamento, exige que o alvo esteja ao alcance <strong>corpo a corpo (até 1,5 m)</strong>. O participante declara o resultado que pretende alcançar e realiza a disputa indicada para a manobra. O alvo escolhe a forma de resistência disponível em cada descrição. Em caso de empate, prevalece o defensor. Aplique Vantagem ou Desvantagem quando uma circunstância ou efeito justificar.</p>
-<table>
+<table class="maneuver-table">
+  <colgroup><col><col><col><col></colgroup>
   <thead><tr><th>Manobra</th><th>Ativo</th><th>Alvo</th><th>Em caso de sucesso</th></tr></thead>
   <tbody>
     <tr>
       <td><strong>Agarrar</strong></td>
-      <td>FOR + Luta.</td>
-      <td>FOR + Luta ou DES + Acrobacia.</td>
+      <td><span class="maneuver-expression">FOR + Luta</span></td>
+      <td><div class="maneuver-choice"><span class="maneuver-expression">FOR + Luta</span><span class="maneuver-or">ou</span><span class="maneuver-expression">DES + Acrobacia</span></div></td>
       <td>O alvo recebe a condição <strong>Agarrado</strong>. Sua Velocidade é reduzida a 0 e permanece sob contenção até escapar ou a condição terminar por outro efeito. Para escapar, usa uma Ação Principal e vence a mesma disputa contra quem o agarra. A contenção termina se o agarrador ficar Incapacitado ou se um efeito retirar o alvo do alcance.</td>
     </tr>
     <tr>
       <td><strong>Derrubar</strong></td>
-      <td>FOR + Luta.</td>
-      <td>FOR + Atletismo ou DES + Acrobacia.</td>
+      <td><span class="maneuver-expression">FOR + Luta</span></td>
+      <td><div class="maneuver-choice"><span class="maneuver-expression">FOR + Atletismo</span><span class="maneuver-or">ou</span><span class="maneuver-expression">DES + Acrobacia</span></div></td>
       <td>O alvo recebe a condição <strong>Derrubado</strong>.</td>
     </tr>
     <tr>
       <td><strong>Empurrar</strong></td>
-      <td>FOR + Luta.</td>
-      <td>FOR + Atletismo ou DES + Acrobacia.</td>
+      <td><span class="maneuver-expression">FOR + Luta</span></td>
+      <td><div class="maneuver-choice"><span class="maneuver-expression">FOR + Atletismo</span><span class="maneuver-or">ou</span><span class="maneuver-expression">DES + Acrobacia</span></div></td>
       <td>O alvo é deslocado até <strong>1,5 m</strong> diretamente para longe do atacante. O deslocamento termina antes de um obstáculo sólido ou de um espaço ocupado.</td>
     </tr>
     <tr>
       <td><strong>Desarmar</strong></td>
-      <td>DES + Luta.</td>
-      <td>FOR + Luta ou DES + Acrobacia.</td>
+      <td><span class="maneuver-expression">DES + Luta</span></td>
+      <td><div class="maneuver-choice"><span class="maneuver-expression">FOR + Luta</span><span class="maneuver-or">ou</span><span class="maneuver-expression">DES + Acrobacia</span></div></td>
       <td>O alvo solta um objeto que esteja segurando, escolhido pelo atacante. O objeto cai no espaço do alvo. Um objeto preso, integrado ao corpo ou protegido por um efeito não pode ser removido por esta manobra, salvo se a ficção ou uma regra específica permitir.</td>
     </tr>
     <tr>
       <td><strong>Conter</strong></td>
-      <td>FOR + Luta.</td>
-      <td>FOR + Luta ou DES + Acrobacia.</td>
+      <td><span class="maneuver-expression">FOR + Luta</span></td>
+      <td><div class="maneuver-choice"><span class="maneuver-expression">FOR + Luta</span><span class="maneuver-or">ou</span><span class="maneuver-expression">DES + Acrobacia</span></div></td>
       <td>O alvo recebe a condição <strong>Impedido</strong>. Para manter a contenção, o atacante precisa permanecer ao alcance corpo a corpo e não pode se deslocar; a condição termina se o atacante soltar o alvo, ficar Incapacitado ou for afastado. O alvo pode usar uma Ação Principal para tentar escapar, vencendo a mesma disputa.</td>
     </tr>
   </tbody>
