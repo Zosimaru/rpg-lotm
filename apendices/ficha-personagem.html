@@ -2426,23 +2426,86 @@
   margin-bottom: 10pt !important;
 }
 
-/* Método de Atuação: mais espaço no princípio e melhor área de marcação. */
+/* Digestão da Poção: trilha de pontos e resumo compacto das recompensas. */
 #page2 > .sheet-title + .s-box {
-  padding: 7pt 8pt 8pt;
-  margin-bottom: 7pt;
+  padding: 6pt 8pt 6pt;
+  margin-bottom: 6pt;
 }
 #page2 > .sheet-title + .s-box .field {
-  margin-bottom: 8pt;
+  margin-bottom: 7pt;
 }
 #page2 > .sheet-title + .s-box .field-line {
   min-height: 21pt;
 }
-#page2 .digest-bar {
-  gap: 2pt;
+#page2 .digest-principles {
+  margin-bottom: 5pt;
 }
-#page2 .digest-cell {
-  width: 10pt;
-  height: 14pt;
+#page2 .digest-principles .field {
+  margin-bottom: 1pt;
+}
+#page2 > .sheet-title + .s-box .digest-principles .field {
+  margin-bottom: 1pt;
+}
+#page2 > .sheet-title + .s-box .digest-principles .field-line {
+  min-height: 16pt;
+}
+#page2 .digest-principles .field-label {
+  min-width: 48pt;
+}
+#page2 .digest-points-row {
+  display: flex;
+  align-items: baseline;
+  gap: 5pt;
+  margin-top: 1pt;
+  white-space: nowrap;
+}
+#page2 .digest-points-label {
+  font-size: 7.5pt;
+  font-weight: 600;
+}
+#page2 .digest-points-line {
+  flex: 1;
+  height: 11pt;
+  border-bottom: 1px solid #999;
+}
+#page2 .digest-out-of {
+  font-size: 7pt;
+  color: #666;
+}
+#page2 .digest-sequence-row {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 3pt;
+  margin-left: 3pt;
+}
+#page2 .digest-sequence-cell {
+  width: 31pt;
+  height: 15pt;
+  border: 1px solid #777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-size: 7pt;
+  font-weight: 600;
+  white-space: nowrap;
+}
+#page2 .digest-rewards {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 5pt;
+  font-size: 6.8pt;
+  line-height: 1.2;
+}
+#page2 .digest-rewards td {
+  padding: 2pt 5pt 2pt 0;
+  border-top: 1px solid #ddd;
+  vertical-align: top;
+}
+#page2 .digest-rewards td:first-child {
+  width: 34pt;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 /* Lucidez e XP: mais respiro sem alterar a quantidade de marcas. */
@@ -2879,6 +2942,394 @@
   font-weight: 500;
   color: #999;
   white-space: nowrap;
+}
+
+
+/* Cabeçalho duplicado: mantém os números dentro das bolinhas e os repete acima. */
+#page1 .attr-values-heading,
+#page1 .skill-values-heading {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  gap: 6pt;
+  min-height: 13pt;
+  padding-top: 6pt;
+  box-sizing: border-box;
+}
+#page1 .scale-header {
+  position: absolute;
+  right: 44pt;
+  top: 0;
+  width: 50pt;
+  height: 6pt;
+  display: block;
+  color: #999;
+  font-size: 5pt;
+  font-weight: 500;
+  line-height: 6pt;
+  white-space: nowrap;
+}
+#page1 .scale-header span {
+  position: absolute;
+  width: 10pt;
+  text-align: center;
+  transform: translateX(-50%);
+}
+#page1 .scale-header span:nth-child(1) {
+  left: -1pt;
+  width: 6pt;
+  transform: translateX(-100%);
+}
+#page1 .scale-header span:nth-child(2) { left: 4.5pt; }
+#page1 .scale-header span:nth-child(3) { left: 14.3pt; }
+#page1 .scale-header span:nth-child(4) { left: 24.1pt; }
+#page1 .scale-header span:nth-child(5) { left: 33.9pt; }
+#page1 .scale-header span:nth-child(6) { left: 43.7pt; }
+
+
+/* Cabeçalhos Bônus/Total na faixa superior, sem alterar a escala sobre as bolinhas. */
+#page1 .attr-values-heading,
+#page1 .skill-values-heading {
+  align-items: flex-start;
+  padding-top: 0;
+}
+#page1 .attr-values-heading .bonus-label,
+#page1 .attr-values-heading .total-label,
+#page1 .skill-values-heading .bonus-label,
+#page1 .skill-values-heading .total-label {
+  align-self: flex-start;
+  line-height: 6pt;
+}
+
+
+/* Dinheiro dividido por denominação. */
+#page2 .currency-section {
+  margin-top: 7pt;
+  padding-top: 5pt;
+  border-top: 1px solid #d8d8d8;
+}
+#page2 .currency-title {
+  font-size: 7.5pt;
+  font-weight: 700;
+  margin-bottom: 2pt;
+  text-transform: uppercase;
+}
+#page2 .currency-conversion {
+  font-size: 6.2pt;
+  line-height: 1.25;
+  color: #666;
+  margin-bottom: 5pt;
+}
+#page2 .currency-types {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7pt;
+}
+#page2 .currency-type {
+  display: flex;
+  flex-direction: column;
+  gap: 3pt;
+  min-width: 0;
+}
+#page2 .currency-label {
+  font-size: 7pt;
+  font-weight: 600;
+  color: #555;
+}
+#page2 .currency-line {
+  display: block;
+  height: 15pt;
+  border-bottom: 1px solid #888;
+}
+
+
+
+/* ============================================================
+   REDESIGN — PÁGINA 2: HIERARQUIA VISUAL E UNIDADE GRÁFICA
+   ============================================================ */
+#page2 {
+  color: #26313a;
+}
+#page2 > .sheet-title {
+  color: #26313a !important;
+  font-size: 13pt !important;
+  letter-spacing: .085em;
+  padding: 0 0 7pt;
+  margin-bottom: 9pt !important;
+  border-bottom: 2pt solid #a9824b;
+  position: relative;
+}
+#page2 > .s-box,
+#page2 .progression-track-grid > .s-box,
+#page2 .equipment-details > .s-box {
+  border: .9pt solid #9c9a93 !important;
+  border-top: 2pt solid #a9824b !important;
+  border-radius: 3pt;
+  background: #fffefa;
+  box-shadow: none;
+}
+#page2 .s-box-title {
+  color: #35414a !important;
+  font-size: 8pt !important;
+  letter-spacing: .055em;
+  padding-bottom: 4pt;
+  border-bottom: .8pt solid #d6c7ae;
+  margin-bottom: 6pt !important;
+}
+#page2 .field-label,
+#page2 .digest-points-label,
+#page2 .armor-field-title,
+#page2 .currency-label {
+  color: #5b6265;
+}
+#page2 .field-line,
+#page2 .armor-field-line,
+#page2 .armor-threshold-line,
+#page2 .armor-value-line,
+#page2 .currency-line {
+  border-bottom-color: #9e9b93;
+}
+
+/* Digestão: princípios, progresso e marcos com leitura em camadas. */
+#page2 .potion-digestion-box {
+  background: #fcfaf5;
+  padding: 5pt 8pt 5pt !important;
+}
+#page2 .digest-principles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8pt;
+  margin-bottom: 4pt !important;
+}
+#page2 .digest-principles .field {
+  padding: 3pt 5pt 2pt;
+  margin: 0 !important;
+  background: #f4f0e7;
+  border-left: 2pt solid #b18a52;
+}
+#page2 .digest-principles .field-label {
+  min-width: 47pt;
+  font-size: 6.8pt;
+}
+#page2 .digest-principles .field-line {
+  min-height: 15pt !important;
+}
+#page2 .digest-points-row {
+  align-items: center;
+  padding: 3pt 5pt;
+  margin-top: 0;
+  background: #f4f0e7;
+  border: .6pt solid #ded4c3;
+  border-radius: 2pt;
+}
+#page2 .digest-points-label {
+  font-size: 7pt;
+  color: #35414a;
+}
+#page2 .digest-points-line {
+  border-bottom: 1pt solid #827d72;
+}
+#page2 .digest-sequence-row {
+  gap: 2pt;
+}
+#page2 .digest-sequence-cell {
+  width: 29pt;
+  height: 15pt;
+  color: #4a5052;
+  background: #fffefa;
+  border: .7pt solid #b8aa93;
+  border-radius: 2pt;
+  font-size: 6.5pt;
+}
+#page2 .digest-rewards {
+  margin-top: 4pt;
+  font-size: 6.5pt;
+}
+#page2 .digest-rewards td {
+  padding: 2pt 5pt;
+  border-top: .5pt solid #e0dbd1;
+}
+#page2 .digest-rewards tr:nth-child(odd) td {
+  background: #f7f4ed;
+}
+#page2 .digest-rewards td:first-child {
+  width: 35pt;
+  color: #8a6637;
+  font-weight: 800;
+}
+
+/* Lucidez e XP: painéis equivalentes e trilhas bem distribuídas. */
+#page2 .progression-track-grid {
+  gap: 6pt !important;
+  margin-bottom: 7pt !important;
+}
+#page2 .progression-track-grid > .s-box {
+  min-height: 48pt;
+  padding: 5pt 6pt 5pt !important;
+}
+#page2 .progression-track-grid .s-box-title {
+  margin-bottom: 5pt !important;
+}
+#page2 .lucidez-track {
+  justify-content: space-between;
+  gap: 2pt !important;
+  padding: 2pt 1pt;
+}
+#page2 .lucidez-cell {
+  flex: 1 1 0 !important;
+  width: auto !important;
+  max-width: 17pt;
+  height: 15pt !important;
+  border: .8pt solid #69747a !important;
+  border-radius: 2pt;
+  background: #fff;
+}
+#page2 .xp-track-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4pt;
+}
+#page2 .xp-track-row {
+  gap: 5pt;
+  min-height: 15pt;
+}
+#page2 .xp-track-label {
+  flex: 0 0 55pt;
+  font-size: 5.8pt;
+  color: #4b555a;
+}
+#page2 .xp-track {
+  gap: 1.2pt;
+}
+#page2 .xp-cell {
+  flex: 1 1 0;
+  height: 11pt;
+  min-width: 0;
+  border: .8pt solid #69747a;
+  border-radius: 1.5pt;
+  background: #fff;
+}
+
+/* Armas: cabeçalho destacado e linhas de registro contínuas. */
+#page2 .weapons-wide-box {
+  padding: 7pt 8pt 8pt !important;
+  margin-bottom: 5pt !important;
+}
+#page2 .weapon-entry { min-height: 34pt !important; padding-top: 1pt !important; }
+#page2 .weapon-entry-cell { min-height: 31pt !important; }
+#page2 .weapon-table-head {
+  color: #4c5356;
+  background: #f1ede4;
+  border-top: .6pt solid #d9cfbf;
+  border-bottom: 1pt solid #b8aa93;
+  border-radius: 2pt 2pt 0 0;
+  font-size: 6.8pt;
+  letter-spacing: .04em;
+}
+#page2 .weapon-entry {
+  border-bottom: .6pt solid #e0dbd1;
+}
+#page2 .weapon-entry-cell {
+  border-right: .5pt solid #eee9df;
+}
+#page2 .weapon-entry-cell:last-child {
+  border-right: 0;
+}
+
+/* Equipamento e inventário: separar os campos sem pesar visualmente. */
+#page2 .equipment-details {
+  gap: 6pt !important;
+  margin-bottom: 5pt !important;
+}
+#page2 .equipment-details > .s-box {
+  padding: 5pt 7pt 6pt !important;
+}
+#page2 .armor-equipment-field,
+#page2 .armor-properties-field,
+#page2 .armor-threshold-field,
+#page2 .armor-value-field {
+  padding-left: 4pt;
+  border-left: 1.5pt solid #d2c1a5;
+}
+#page2 .armor-field-title {
+  font-size: 6.5pt;
+  font-weight: 700;
+}
+#page2 .armor-properties-line,
+#page2 .item-line {
+  border-bottom-color: #d5d0c6;
+}
+#page2 .item-lines {
+  column-gap: 10pt;
+}
+#page2 .item-line {
+  position: relative;
+}
+#page2 .currency-section {
+  padding-top: 5pt;
+  margin-top: 4pt;
+  border-top: 1pt solid #cbbda7;
+}
+#page2 .currency-title {
+  color: #35414a;
+  letter-spacing: .05em;
+}
+#page2 .currency-conversion {
+  color: #77766f;
+}
+
+/* Artefatos: cartões individuais com cabeçalho próprio. */
+#page2 > .s-box:has(.artifact-block) {
+  padding: 7pt 8pt 8pt !important;
+  background: #fcfaf5;
+}
+#page2 .artifact-block {
+  border: .8pt solid #c8b99f !important;
+  border-top: 1.8pt solid #a9824b !important;
+  border-radius: 2pt;
+  background: #fffefa;
+  padding: 6pt 7pt 7pt !important;
+}
+#page2 .artifact-header {
+  color: #72572f;
+  font-size: 6.8pt !important;
+  letter-spacing: .025em;
+  border-bottom: .7pt solid #ded4c3;
+}
+#page2 .artifact-block .field-label {
+  color: #555d60;
+  font-size: 6.5pt;
+}
+#page2 .artifact-block .field-line {
+  border-bottom-color: #aaa397;
+}
+
+#page2 .progression-track-grid .xp-track {
+  display: flex !important;
+  flex: 1 1 0 !important;
+  width: auto !important;
+  min-width: 0 !important;
+  gap: 1.2pt !important;
+  justify-content: space-between !important;
+}
+#page2 .progression-track-grid .xp-cell,
+#page2 .progression-track-grid .xp-attribute-row .xp-cell,
+#page2 .progression-track-grid .xp-proficiency-row .xp-cell {
+  width: auto !important;
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+  max-width: 8pt !important;
+  height: 9.5pt !important;
+}
+
+@media screen {
+  #page2 > .s-box,
+  #page2 .progression-track-grid > .s-box,
+  #page2 .equipment-details > .s-box {
+    box-shadow: 0 1.5pt 4pt rgba(38,49,58,.07);
+  }
 }
 
 </style>
@@ -3320,23 +3771,39 @@
 
   <div class="sheet-title" style="font-size:12pt;margin-bottom:5pt;">Senhor dos Mistérios — Equipamento &amp; Notas</div>
 
-    <!-- ---- ACTING METHOD ---- -->
-  <div class="s-box">
-    <div class="s-box-title">Método de Atuação </div>
-    <div class="field">
-      <span class="field-label">Princípio</span>
-      <span class="field-line"></span>
+    <!-- ---- POTION DIGESTION ---- -->
+  <div class="s-box potion-digestion-box">
+    <div class="s-box-title">Digestão da Poção</div>
+    <div class="digest-principles">
+      <div class="field">
+        <span class="field-label">Essência</span>
+        <span class="field-line"></span>
+      </div>
+      <div class="field">
+        <span class="field-label">Expressão</span>
+        <span class="field-line"></span>
+      </div>
     </div>
-    <div style="display:flex;align-items:center;gap:8pt;margin-top:3pt;">
-      <span style="font-size:7.5pt;font-weight:600;">Pontos de Atuação:</span>
-      <span class="digest-bar">
-        <span class="digest-cell"></span><span class="digest-cell"></span><span class="digest-cell"></span>
-        <span class="digest-cell"></span><span class="digest-cell"></span><span class="digest-cell"></span>
-        <span class="digest-cell"></span><span class="digest-cell"></span><span class="digest-cell"></span>
-        <span class="digest-cell"></span>
-      </span>
-      <span style="font-size:6.5pt;color:#888;">/ 10 = +2 ao Teste de Digestão</span>
+    <div class="digest-points-row">
+      <span class="digest-points-label">Pontos de Digestão</span>
+      <span class="digest-points-line" aria-label="Linha para registrar os pontos de digestão"></span>
+      <span class="digest-out-of">/ 100</span>
+      <div class="digest-sequence-row" aria-label="Sequências de 9 a 5">
+      <span class="digest-sequence-cell">Seq 9</span>
+      <span class="digest-sequence-cell">Seq 8</span>
+      <span class="digest-sequence-cell">Seq 7</span>
+      <span class="digest-sequence-cell">Seq 6</span>
+      <span class="digest-sequence-cell">Seq 5</span>
+      </div>
     </div>
+    <table class="digest-rewards" aria-label="Recompensas por digestão da poção">
+      <tbody>
+        <tr><td>25%</td><td>Sintoniza 1 poder da Sequência atual.</td></tr>
+        <tr><td>50%</td><td>+2 pontos permanentes à Espiritualidade Máxima.</td></tr>
+        <tr><td>75%</td><td>Sintoniza um segundo poder da Sequência atual, diferente do primeiro.</td></tr>
+        <tr><td>100%</td><td>Recupera 1 ponto de Lucidez, até o máximo de 10.</td></tr>
+      </tbody>
+    </table>
   </div>
 
 
@@ -3441,10 +3908,14 @@
         <div class="item-line"></div><div class="item-line"></div>
         <div class="item-line"></div><div class="item-line"></div>
       </div>
-      <div class="field" style="margin-top:4pt;">
-        <span class="field-label" style="min-width:50pt;">Dinheiro</span>
-        <span class="field-line"></span>
-        <span style="font-size:7pt;color:#888;margin-left:3pt;">£ / s / p</span>
+      <div class="currency-section">
+        <div class="currency-title">Dinheiro</div>
+        <div class="currency-conversion">Conversão: 1 £ = 20 s · 1 s = 12 p · 1 £ = 240 p</div>
+        <div class="currency-types">
+          <div class="currency-type"><span class="currency-label">Libras (£)</span><span class="currency-line"></span></div>
+          <div class="currency-type"><span class="currency-label">Xelins (s)</span><span class="currency-line"></span></div>
+          <div class="currency-type"><span class="currency-label">Pence (p)</span><span class="currency-line"></span></div>
+        </div>
       </div>
     </div>
   </div>
@@ -4101,4 +4572,4 @@
 </nav>
 
 </body>
-</html>   
+</html>
