@@ -163,11 +163,11 @@ body h6 {
     <li>
   <a href="#estatisticas-derivadas">
     <strong>Estatísticas Derivadas:</strong>
-    recursos do personagem, Lucidez e Âncoras, Esquiva, Blindagem e Limiares de Dano.
+    recursos do personagem, Lucidez e Âncoras, Defesa, Blindagem e Limiares de Dano.
   </a>
   <ul>
     <li><a href="#recursos-personagem"><strong>Recursos e Integridade:</strong> Pontos de Vida, Espiritualidade, Lucidez, Âncoras e Perda de Controle.</a></li>
-    <li><a href="#defesa-protecao"><strong>Defesa e Proteção:</strong> Esquiva, Vestimentas, Blindagem e Limiares de Dano.</a></li>
+    <li><a href="#defesa-protecao"><strong>Defesa e Proteção:</strong> Defesa Base, fontes de Proteção, Blindagem e Limiares de Dano.</a></li>
   </ul>
 </li>
     <li><a href="#resumo"><strong>Resumo Rápido de Referência:</strong> consulta concentrada das principais fórmulas e regras.</a></li>
@@ -1383,42 +1383,43 @@ body h6 {
 <h3 id="defesa-protecao" class="stats-topic-heading">Defesa e Proteção</h3>
 <p>
   Este bloco reúne as regras para evitar ataques e reduzir ou classificar os ferimentos
-  recebidos: Esquiva, Blindagem, Vestimentas e Limiares de Dano.
+  recebidos: Defesa, Proteção, Blindagem e Limiares de Dano.
 </p>
 
-<h4 id="esquiva">Esquiva</h4>
+<h4 id="esquiva">Defesa</h4>
 <p>
-  A Esquiva representa a dificuldade de atingir o personagem. Em um ataque, o
+  A Defesa representa a dificuldade de atingir o personagem. Em um ataque, o
   atacante realiza o teste indicado pela ação; o ataque acerta quando o resultado
-  final iguala ou supera a Esquiva do alvo. A Esquiva Base utiliza os bônus
+  final iguala ou supera a Defesa do alvo. A Defesa Base utiliza os bônus
   de Destreza e Raciocínio.
 </p>
 <div class="box box-rule">
-  <div class="box-title">Cálculo da Esquiva Base</div>
-  <p style="text-align:center; font-size:1.15em;"><strong>Esquiva Base = 10 + DES + RAC</strong></p>
+  <div class="box-title">Cálculo da Defesa Base</div>
+  <p style="text-align:center; font-size:1.15em;"><strong>Defesa Base = 10 + DES + RAC</strong></p>
   <p>
     Nas fórmulas, <strong>DES</strong> e <strong>RAC</strong> representam os bônus derivados dos pontos registrados. Eles são calculados por <strong>Pontos.(DES) − 2</strong> e
     <strong>Pontos.(RAC) − 2</strong>. Some os dois bônus ao valor
-    base de 10 para determinar a Esquiva Base do personagem.
+    base de 10 para determinar a Defesa Base do personagem.
   </p>
   <p>
     <strong>Exemplo:</strong> com Pontos.(DES) = 3 e Pontos.(RAC) = 3, o personagem
-    possui bônus de DES +1 e bônus de RAC +1, resultando em Esquiva Base 12.
+    possui bônus de DES +1 e bônus de RAC +1, resultando em Defesa Base 12.
   </p>
 </div>
 
-<h4 id="blindagem-limiares">Blindagem, Vestimentas e Limiares de Dano</h4>
+<h4 id="blindagem-limiares">Proteção, Blindagem e Limiares de Dano</h4>
 <p>
-  <strong>Vestimenta</strong> é um equipamento. <strong>Blindagem</strong> é um recurso
-  de proteção que pode ser concedido por uma Vestimenta, por poderes Beyonder ou por
-  outras fontes. Uma Vestimenta pode conceder pontos de Blindagem e modificar os
-  Limiares de Dano; uma fonte diferente também pode conceder Blindagem sem ser
-  uma Vestimenta.
+  <strong>Proteção</strong> é a categoria que reúne recursos e efeitos capazes de
+  reduzir a exposição do participante a ferimentos ou alterar a forma como ele suporta
+  o dano. Pode ser concedida por equipamentos, poderes Beyonder, rituais ou outras
+  fontes; portanto, não se limita a uma peça de equipamento. <strong>Blindagem</strong>
+  é um recurso específico que uma fonte de Proteção pode conceder. Uma fonte também
+  pode modificar diretamente os Limiares de Dano, sem necessariamente conceder Blindagem.
 </p>
 <p>
-  A descrição de cada Vestimenta deve informar separadamente a quantidade de pontos
-  de Blindagem concedida e os valores ou a regra de alteração dos Limiares de Dano.
-  Não existe cálculo inicial de Blindagem: o personagem só recebe esse recurso
+  A descrição de cada fonte de Proteção deve informar se concede Blindagem, quantos
+  pontos concede, quais são seus requisitos ou limitações e se altera os Limiares de
+  Dano. Não existe cálculo inicial de Blindagem: o personagem só recebe esse recurso
   quando uma fonte o concede expressamente.
 </p>
 <div class="box box-note">
@@ -1448,15 +1449,15 @@ body h6 {
   <p>
     O primeiro limiar determina quando o dano passa de Menor para Maior; o segundo
     determina quando passa de Maior para Severo. Utilize sempre os limiares atuais
-    do personagem, considerando eventuais alterações fornecidas por Vestimentas ou
+    do personagem, considerando eventuais alterações fornecidas por fontes de Proteção ou
     outros efeitos.
   </p>
 </div>
 
 <div class="box box-rule">
-  <div class="box-title">Limiares naturais de Dano sem Vestimenta</div>
+  <div class="box-title">Limiares naturais de Dano sem Proteção</div>
   <p>
-    Na ausência de uma Vestimenta ou efeito que modifique os valores, utilize os
+    Na ausência de uma fonte de Proteção ou de outro efeito que modifique os valores, utilize os
     limiares naturais determinados pela Sequência. Neste livro, a progressão
     apresentada vai da Sequência 9 até a <strong>Sequência 5</strong>.
   </p>
@@ -1475,8 +1476,8 @@ body h6 {
     <strong>Maior para Severo:</strong> 4 + 2 × (10 − Sequência).
   </p>
   <p>
-    Quando uma Vestimenta modificar os Limiares de Dano, utilize os valores ou a
-    regra indicados em sua descrição. Não acrescente um bônus genérico de Vestimenta
+    Quando uma fonte de Proteção modificar os Limiares de Dano, utilize os valores ou a
+    regra indicados em sua descrição. Não acrescente um bônus genérico de Proteção
     aos limiares: o equipamento deve especificar como sua proteção altera os valores.
   </p>
 </div>
@@ -1520,7 +1521,7 @@ body h6 {
 <div class="box box-example">
   <div class="box-title">Exemplo — Sequência 8</div>
   <p>
-    Um personagem na Sequência 8, sem Vestimenta que modifique seus limiares, possui
+    Um personagem na Sequência 8, sem Proteção que modifique seus limiares, possui
     Menor → Maior igual a <strong>4</strong> e Maior → Severo igual a <strong>8</strong>.
     Assim, um ataque que cause 3 pontos de dano provoca Dano Menor; com 5 pontos,
     provoca Dano Maior; com 8 pontos, provoca Dano Severo.
@@ -1580,9 +1581,9 @@ body h6 {
       <section class="quickref-group" aria-label="Defesa, proteção e deslocamento">
         <h4>Defesa, proteção e deslocamento</h4>
         <div class="quickref-rows">
-          <div class="quickref-row"><span class="quickref-label">Esquiva Base</span><span class="quickref-value">10 + DES + RAC</span></div>
-          <div class="quickref-row"><span class="quickref-label">Limiar Menor → Maior</span><span class="quickref-value">2 + (10 − Sequência), sem Vestimenta</span></div>
-          <div class="quickref-row"><span class="quickref-label">Limiar Maior → Severo</span><span class="quickref-value">4 + 2 × (10 − Sequência), sem Vestimenta</span></div>
+          <div class="quickref-row"><span class="quickref-label">Defesa Base</span><span class="quickref-value">10 + DES + RAC</span></div>
+          <div class="quickref-row"><span class="quickref-label">Limiar Menor → Maior</span><span class="quickref-value">2 + (10 − Sequência), sem Proteção</span></div>
+          <div class="quickref-row"><span class="quickref-label">Limiar Maior → Severo</span><span class="quickref-value">4 + 2 × (10 − Sequência), sem Proteção</span></div>
           <div class="quickref-row"><span class="quickref-label">Blindagem</span><span class="quickref-value">1 ponto reduz o dano em um nível; máximo de 1 ponto por ataque</span></div>
           <div class="quickref-row"><span class="quickref-label">Deslocamento básico</span><span class="quickref-value">9 metros</span></div>
         </div>
