@@ -163,11 +163,11 @@ body h6 {
     <li>
   <a href="#estatisticas-derivadas">
     <strong>Estatísticas Derivadas:</strong>
-    recursos do personagem, Lucidez e Âncoras, Defesa, Blindagem e Limiares de Dano.
+    recursos do personagem, Lucidez e Âncoras, Defesa, Égide e Limiares de Dano.
   </a>
   <ul>
     <li><a href="#recursos-personagem"><strong>Recursos e Integridade:</strong> Pontos de Vida, Espiritualidade, Lucidez, Âncoras e Perda de Controle.</a></li>
-    <li><a href="#defesa-protecao"><strong>Defesa e Proteção:</strong> Defesa Base, fontes de Proteção, Blindagem e Limiares de Dano.</a></li>
+    <li><a href="#defesa-protecao"><strong>Defesa e Proteção:</strong> Defesa Base, fontes de Proteção, Égide e Limiares de Dano.</a></li>
   </ul>
 </li>
     <li><a href="#resumo"><strong>Resumo Rápido de Referência:</strong> consulta concentrada das principais fórmulas e regras.</a></li>
@@ -1383,7 +1383,7 @@ body h6 {
 <h3 id="defesa-protecao" class="stats-topic-heading">Defesa e Proteção</h3>
 <p>
   Este bloco reúne as regras para evitar ataques e reduzir ou classificar os ferimentos
-  recebidos: Defesa, Proteção, Blindagem e Limiares de Dano.
+  recebidos: Defesa, Proteção, Égide e Limiares de Dano.
 </p>
 
 <h4 id="esquiva">Defesa</h4>
@@ -1407,28 +1407,30 @@ body h6 {
   </p>
 </div>
 
-<h4 id="blindagem-limiares">Proteção, Blindagem e Limiares de Dano</h4>
+<h4 id="blindagem-limiares">Proteção, Égide e Limiares de Dano</h4>
 <p>
   <strong>Proteção</strong> é a categoria que reúne recursos e efeitos capazes de
   reduzir a exposição do participante a ferimentos ou alterar a forma como ele suporta
   o dano. Pode ser concedida por equipamentos, poderes Beyonder, rituais ou outras
-  fontes; portanto, não se limita a uma peça de equipamento. <strong>Blindagem</strong>
-  é um recurso específico que uma fonte de Proteção pode conceder. Uma fonte também
-  pode modificar diretamente os Limiares de Dano, sem necessariamente conceder Blindagem.
+  fontes; portanto, não se limita a uma peça de equipamento. <strong>Égide</strong>
+  é um recurso defensivo consumível que uma fonte de Proteção pode conceder. Cada ponto
+  de Égide permite reduzir em um nível a categoria de dano de um ataque, respeitando
+  o limite de uso por ataque. Uma fonte de Proteção também pode modificar diretamente
+  os Limiares de Dano, sem necessariamente conceder Égide.
 </p>
 <p>
-  A descrição de cada fonte de Proteção deve informar se concede Blindagem, quantos
+  A descrição de cada fonte de Proteção deve informar se concede Égide, quantos
   pontos concede, quais são seus requisitos ou limitações e se altera os Limiares de
-  Dano. Não existe cálculo inicial de Blindagem: o personagem só recebe esse recurso
+  Dano. Não existe quantidade inicial de Égide: o personagem só recebe esse recurso
   quando uma fonte o concede expressamente.
 </p>
 <div class="box box-note">
-  <div class="box-title">Registro da Blindagem na ficha</div>
+  <div class="box-title">Registro de Égide na ficha</div>
   <p>
-    Ao receber Blindagem, conte os quadrados destinados ao recurso e registre a
+    Ao receber pontos de Égide, conte os quadrados destinados ao recurso e registre a
     quantidade total seguida de uma barra (/). Por exemplo, uma fonte que conceda
     3 pontos deve ser registrada como <strong>3/</strong>. Marque os quadrados
-    gastos quando utilizar a Blindagem. A fonte que concede o recurso determina
+    gastos quando utilizar pontos de Égide. A fonte que concede o recurso determina
     eventuais condições especiais de obtenção ou recuperação.
   </p>
 </div>
@@ -1496,14 +1498,14 @@ body h6 {
 </div>
 
 <div class="box box-rule">
-  <div class="box-title">Como utilizar a Blindagem</div>
+  <div class="box-title">Uso de Égide</div>
   <p>
     Depois de identificar a categoria do dano recebido, o personagem pode gastar
-    <strong>1 ponto de Blindagem</strong> para reduzir essa categoria em um nível,
+    <strong>1 ponto de Égide</strong> para reduzir essa categoria em um nível,
     antes de marcar os PV. A redução segue esta ordem:
   </p>
   <table>
-    <thead><tr><th>Dano recebido</th><th>Após gastar 1 ponto de Blindagem</th></tr></thead>
+    <thead><tr><th>Dano recebido</th><th>Após gastar 1 ponto de Égide</th></tr></thead>
     <tbody>
       <tr><td>Dano Severo</td><td>Dano Maior</td></tr>
       <tr><td>Dano Maior</td><td>Dano Menor</td></tr>
@@ -1511,7 +1513,7 @@ body h6 {
     </tbody>
   </table>
   <p>
-    O limite é de <strong>1 ponto de Blindagem por ataque sofrido</strong>,
+    O limite é de <strong>1 ponto de Égide por ataque sofrido</strong>,
     independentemente da quantidade total que o personagem possua. Não é possível
     gastar vários pontos para reduzir o mesmo ataque em mais de um nível. Se o dano
     for reduzido a Nenhum dano, nenhum PV é marcado por aquele ataque.
@@ -1528,7 +1530,7 @@ body h6 {
   </p>
   <p>
     Se o personagem receber 5 pontos de dano, o resultado será Dano Maior, que
-    normalmente marcaria 2 PV. Caso gaste 1 ponto de Blindagem, o ferimento cai
+    normalmente marcaria 2 PV. Caso gaste 1 ponto de Égide, o ferimento cai
     para Dano Menor e ele marca apenas 1 PV. Se sofrer Dano Menor e gastar 1 ponto,
     o dano é reduzido a Nenhum dano e não marca PV.
   </p>
@@ -1584,7 +1586,7 @@ body h6 {
           <div class="quickref-row"><span class="quickref-label">Defesa Base</span><span class="quickref-value">10 + DES + RAC</span></div>
           <div class="quickref-row"><span class="quickref-label">Limiar Menor → Maior</span><span class="quickref-value">2 + (10 − Sequência), sem Proteção</span></div>
           <div class="quickref-row"><span class="quickref-label">Limiar Maior → Severo</span><span class="quickref-value">4 + 2 × (10 − Sequência), sem Proteção</span></div>
-          <div class="quickref-row"><span class="quickref-label">Blindagem</span><span class="quickref-value">1 ponto reduz o dano em um nível; máximo de 1 ponto por ataque</span></div>
+          <div class="quickref-row"><span class="quickref-label">Égide</span><span class="quickref-value">1 ponto reduz o dano em um nível; máximo de 1 ponto por ataque</span></div>
           <div class="quickref-row"><span class="quickref-label">Deslocamento básico</span><span class="quickref-value">9 metros</span></div>
         </div>
       </section>
