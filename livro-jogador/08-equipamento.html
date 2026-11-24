@@ -1,748 +1,962 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cap. 8 — Equipamento · Senhor dos Mistérios RPG</title>
-<link rel="stylesheet" href="../assets/css/common.css">
-<link rel="stylesheet" href="../assets/css/print.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Capítulo 8 — Equipamentos, Itens Beyonder, Artefatos Selados e Economia | Senhor dos Mistérios RPG</title>
+<link href="../assets/css/common.css" rel="stylesheet"/>
+<link href="../assets/css/print.css" rel="stylesheet"/>
+<style>
+  .equipment-chapter { max-width: 1080px; margin: 0 auto; padding: 1rem 1.25rem 2rem; color: #28241e; line-height: 1.62; }
+  .equipment-chapter h1 { margin: 0 0 1rem; padding-bottom: .65rem; border-bottom: 3px solid #9a742b; color: #765719; }
+  .equipment-chapter h2 { margin: 2.1rem 0 .8rem; padding: .45rem .7rem; border-left: 5px solid #9a742b; border-bottom: 1px solid #d6c7a8; background: #f3ecdf; color: #654b1c; font-size: 1.42rem; }
+  .equipment-chapter h3 { margin: 1.35rem 0 .5rem; color: #315f9f; font-size: 1.12rem; }
+  .equipment-chapter h4 { margin: .2rem 0 .45rem; color: #765719; font-size: 1rem; }
+  .equipment-chapter p { margin: .55rem 0 .8rem; }
+  .equipment-chapter blockquote { margin: 1rem 0 1.3rem; padding: .9rem 1.1rem; border-left: 4px solid #9a742b; background: #f4efe5; font-style: italic; }
+  .equipment-chapter .cite { display: block; margin-top: .35rem; font-size: .88rem; text-align: right; font-style: normal; color: #6c6252; }
+  .equipment-chapter .intro-panel, .equipment-chapter .rule-box, .equipment-chapter .note-box, .equipment-chapter .warning-box, .equipment-chapter .example-box, .equipment-chapter .formula-box, .equipment-chapter .summary-box, .equipment-chapter .lore-box { margin: .85rem 0 1rem; padding: .9rem 1rem; border: 1px solid #d8c9aa; border-radius: 6px; background: #fbf8f1; break-inside: avoid; page-break-inside: avoid; }
+  .equipment-chapter .rule-box { border-left: 4px solid #3c6c9e; background: #f1f5fa; }
+  .equipment-chapter .note-box, .equipment-chapter .lore-box { border-left: 4px solid #9a742b; background: #f8f1e2; }
+  .equipment-chapter .warning-box { border-left: 4px solid #a63f35; background: #fbf0ee; }
+  .equipment-chapter .example-box { border-left: 4px solid #6b8b67; background: #f2f7f0; }
+  .equipment-chapter .formula-box { text-align: center; border: 1px solid #b9c9dc; background: #edf3fa; }
+  .equipment-chapter .formula { display: block; margin: .3rem 0; font-size: 1.1rem; font-weight: 700; color: #254d7b; }
+  .equipment-chapter .box-title { margin-bottom: .45rem; color: #765719; font-weight: 800; text-transform: uppercase; letter-spacing: .025em; font-size: .88rem; }
+  .equipment-chapter .toc { margin: 1rem 0 1.5rem; padding: .9rem 1rem; border: 1px solid #c8d4e2; border-radius: 6px; background: #f4f7fb; }
+  .equipment-chapter .toc-title { margin: 0 0 .45rem; color: #315f9f; font-weight: 800; }
+  .equipment-chapter .toc ol { columns: 2; column-gap: 2rem; margin: .2rem 0 0; padding-left: 1.3rem; }
+  .equipment-chapter .toc li { margin: .18rem 0; break-inside: avoid; }
+  .equipment-chapter a { color: #315f9f; }
+  .equipment-chapter table { width: 100%; border-collapse: collapse; margin: .7rem 0 1rem; font-size: .93rem; }
+  .equipment-chapter th { padding: .55rem .6rem; background: #34312b; color: #f7f1e5; text-align: left; }
+  .equipment-chapter td { padding: .5rem .6rem; border-bottom: 1px solid #e1d8c8; vertical-align: top; }
+  .equipment-chapter table.resources-table { table-layout: fixed; }
+  .equipment-chapter .weapons-table { table-layout: fixed; font-size: .82rem; line-height: 1.42; border-collapse: separate; border-spacing: 0; }
+  .equipment-chapter .weapons-table th, .equipment-chapter .weapons-table td { padding: .55rem .68rem; overflow-wrap: anywhere; vertical-align: top; }
+  .equipment-chapter .improvised-table th:nth-child(1) { width: 20%; }
+  .equipment-chapter .improvised-table th:nth-child(2) { width: 9%; }
+  .equipment-chapter .improvised-table th:nth-child(3) { width: 25%; }
+  .equipment-chapter .improvised-table th:nth-child(4) { width: 12%; }
+  .equipment-chapter .improvised-table th:nth-child(5) { width: 14%; }
+  .equipment-chapter .improvised-table th:nth-child(6) { width: 20%; }
+  .equipment-chapter .ammunition-table { table-layout: fixed; border-collapse: separate; border-spacing: 0; }
+  .equipment-chapter .ammunition-table th, .equipment-chapter .ammunition-table td { padding: .62rem .78rem; vertical-align: top; }
+  .equipment-chapter .ammunition-table th:nth-child(1) { width: 27%; }
+  .equipment-chapter .ammunition-table th:nth-child(2) { width: 15%; }
+  .equipment-chapter .ammunition-table th:nth-child(3) { width: 58%; }
+  .equipment-chapter .firearms-table th:nth-child(1) { width: 15%; }
+  .equipment-chapter .firearms-table th:nth-child(2) { width: 7%; }
+  .equipment-chapter .firearms-table th:nth-child(3) { width: 22%; }
+  .equipment-chapter .firearms-table th:nth-child(4) { width: 10%; }
+  .equipment-chapter .firearms-table th:nth-child(5) { width: 9%; }
+  .equipment-chapter .firearms-table th:nth-child(6) { width: 37%; }
+  .equipment-chapter .melee-table th:nth-child(1) { width: 16%; }
+  .equipment-chapter .melee-table th:nth-child(2) { width: 7%; }
+  .equipment-chapter .melee-table th:nth-child(3) { width: 20%; }
+  .equipment-chapter .melee-table th:nth-child(4) { width: 10%; }
+  .equipment-chapter .melee-table th:nth-child(5) { width: 12%; }
+  .equipment-chapter .melee-table th:nth-child(6) { width: 35%; }
+  .equipment-chapter .ranged-table th:nth-child(1) { width: 16%; }
+  .equipment-chapter .ranged-table th:nth-child(2) { width: 7%; }
+  .equipment-chapter .ranged-table th:nth-child(3) { width: 20%; }
+  .equipment-chapter .ranged-table th:nth-child(4) { width: 10%; }
+  .equipment-chapter .ranged-table th:nth-child(5) { width: 9%; }
+  .equipment-chapter .ranged-table th:nth-child(6) { width: 38%; }
+  @media print { .equipment-chapter .weapons-table { font-size: .7rem; line-height: 1.28; } .equipment-chapter .weapons-table th, .equipment-chapter .weapons-table td { padding: .38rem .42rem; } .equipment-chapter .ammunition-table th, .equipment-chapter .ammunition-table td { padding: .42rem .5rem; } }
+  .equipment-chapter .resources-table th:nth-child(1) { width: 14%; }
+  .equipment-chapter .resources-table th:nth-child(2) { width: 18%; }
+  .equipment-chapter .resources-table th:nth-child(3) { width: 32%; }
+  .equipment-chapter .resources-table th:nth-child(4) { width: 36%; }
+  .equipment-chapter .resources-table td:nth-child(2) { white-space: nowrap; font-weight: 700; color: #254d7b; }
+  .equipment-chapter tbody tr:nth-child(even) { background: #f4eddf; }
+  .equipment-chapter ul, .equipment-chapter ol { padding-left: 1.35rem; }
+  .equipment-chapter li { margin: .25rem 0; }
+  .equipment-chapter .small { color: #665f53; font-size: .9rem; }
+  .equipment-chapter .tag { display: inline-block; padding: .08rem .4rem; border-radius: 3px; background: #e8edf3; color: #315f9f; font-size: .8rem; font-weight: 700; }
+  .equipment-chapter .stat-block { margin: .9rem 0 1.1rem; padding: .9rem 1rem; border: 1px solid #d5c8b2; border-left: 4px solid #9a742b; border-radius: 5px; background: #fffdf8; break-inside: avoid; page-break-inside: avoid; }
+  .equipment-chapter .stat-block h4 { margin: 0 0 .55rem; }
+  .equipment-chapter .resources-narrative { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .15rem .8rem; align-items: start; }
+  .equipment-chapter .resources-narrative .stat-block { margin: .45rem 0; }
+  @media (max-width: 720px) { .equipment-chapter .resources-narrative { grid-template-columns: 1fr; } }
+  .equipment-chapter .stat-line { display: flex; flex-wrap: wrap; gap: .35rem; margin: .25rem 0; }
+  .equipment-chapter .stat-label { min-width: 7.4rem; color: #655b4c; font-weight: 700; }
+  .equipment-chapter .power { margin: .65rem 0; padding: .55rem .7rem; border-radius: 4px; background: #f6f2e9; }
+  .equipment-chapter .power-name { color: #765719; font-weight: 800; }
+  .equipment-chapter .separator { height: 1px; margin: 1.5rem 0; background: #d8c9aa; }
+  .equipment-chapter .book-nav { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #d8c9aa; }
+  .equipment-chapter .book-nav a { font-weight: 700; text-decoration: none; }
+  @media (max-width: 720px) { .equipment-chapter .toc ol { columns: 1; } .equipment-chapter table { display: block; overflow-x: auto; } }
+  @media print { .equipment-chapter { max-width: none; padding: 0; } .equipment-chapter h2 { break-after: avoid; page-break-after: avoid; } .equipment-chapter .toc { break-inside: avoid; } .equipment-chapter a { color: inherit; text-decoration: none; } }
+</style>
 </head>
 <body>
-
-<h1>Capítulo 8 — Equipamento &amp; Artefatos <span class="en">(Equipment &amp; Artifacts)</span></h1>
-
+<main class="equipment-chapter" id="topo">
+<h1>Capítulo 8 — Equipamentos, Itens Beyonder, Artefatos Selados e Economia <span class="en">(Equipment, Beyonder Items, Sealed Artifacts &amp; Economy)</span></h1>
 <blockquote>
-  "Qualquer tolo pode disparar um revólver. Mas quando a bala é de prata abençoada e o
-  alvo é algo que não deveria existir — aí sim, o equipamento certo faz a diferença entre
-  sobreviver e virar mais um nome no obituário."
+  “Qualquer tolo pode disparar um revólver. Mas, quando a bala é de prata abençoada e o alvo é algo que não deveria existir, o equipamento certo pode fazer a diferença entre sobreviver e virar mais um nome no obituário.”
   <span class="cite">— Comerciante anônimo do Mercado Negro de Backlund</span>
 </blockquote>
-
-<p>
-  Neste capítulo você encontrará tudo o que seu personagem pode comprar, carregar e — com
-  sorte — usar sem consequências catastróficas. Desde armas mundanas e suprimentos de
-  investigação até os temidos <em>Sealed Artifacts</em>, cada item carrega não apenas um
-  preço em libras, mas, no caso dos itens místicos, um custo que nenhuma moeda pode pagar.
-</p>
-
-<!-- ================================================================= -->
-<h2>Moeda &amp; Economia <span class="en">(Currency &amp; Economy)</span></h2>
-
-<p>
-  O mundo usa um sistema monetário baseado em três unidades: <strong>libras</strong> (£),
-  <strong>sóli</strong> (s) e <strong>pence</strong> (p). As taxas de conversão são:
-</p>
-
-<div class="box box-rule">
-  <div class="box-title">Câmbio</div>
-  <ul>
-    <li><strong>1 libra (£)</strong> = 20 sóli (s)</li>
-    <li><strong>1 sóli (s)</strong> = 12 pence (p)</li>
-    <li>Portanto, <strong>1 libra = 240 pence</strong>.</li>
-  </ul>
+<div class="intro-panel">
+<p>Este capítulo reúne os equipamentos mundanos, as armas, as munições, os recursos defensivos, os serviços, os Itens Beyonder e os Artefatos Selados disponíveis no cenário. Também apresenta a classificação de Recursos e referências de valores para contextualizar compras, negociações, recompensas e acesso ao mercado místico.</p>
+<p>A economia do sistema é predominantemente narrativa. Os valores em libras, sólis e pence ajudam a contextualizar compras e negociações, sem exigir contabilidade constante. O capítulo também estabelece procedimentos para armas, propriedades, Proteção, primeiros socorros, Itens Beyonder e Artefatos Selados, em compatibilidade com o Capítulo 7.</p>
 </div>
-
-<h3>Referência de Renda</h3>
-
-<table>
-  <thead>
-    <tr><th>Classe Social</th><th>Renda Semanal Típica</th><th>Exemplo</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Operário / Trabalhador braçal</td><td>15 s – £1</td><td>Estivador, minerador, lavadeira</td></tr>
-    <tr><td>Trabalhador qualificado</td><td>£1 – £2</td><td>Mecânico, cozinheiro, costureira</td></tr>
-    <tr><td>Classe média baixa</td><td>£3 – £5</td><td>Escriturário, professor, jornalista</td></tr>
-    <tr><td>Classe média</td><td>£5 – £10</td><td>Advogado, médico, oficial militar</td></tr>
-    <tr><td>Classe alta / Aristocracia</td><td>£20+</td><td>Barão, magnata industrial</td></tr>
-  </tbody>
-</table>
-
-<p>
-  Ingredientes <em>Beyonder</em> podem custar centenas ou milhares de libras, dependendo
-  da Sequência. Uma poção de Sequência 9 pode custar entre £100 e £500; Sequência 7 pode
-  ultrapassar £5.000. Artefatos Selados são, literalmente, inestimáveis.
-</p>
-
-<div class="separator"></div>
-
-<!-- ================================================================= -->
-<h2>Armas <span class="en">(Weapons)</span></h2>
-
-<p>
-  A tabela abaixo lista as armas mais comuns disponíveis na Quinta Época, com seus
-  preços, dados de dano e propriedades relevantes. Os valores de dano repetem as
-  informações do capítulo de combate para referência rápida.
-</p>
-
-<h3>Armas de Fogo <span class="en">(Firearms)</span></h3>
-
-<table>
-  <thead>
-    <tr><th>Arma</th><th>Preço</th><th>Dano</th><th>Alcance</th><th>Propriedades</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Revólver leve</td><td>£3</td><td>1d8</td><td>18 m</td><td>6 tiros, uma mão</td></tr>
-    <tr><td>Revólver pesado</td><td>£5 – £8</td><td>1d10</td><td>24 m</td><td>6 tiros, uma mão, recuo</td></tr>
-    <tr><td>Pistola semiautomática</td><td>£7 – £10</td><td>1d8</td><td>18 m</td><td>8 tiros, uma mão</td></tr>
-    <tr><td>Rifle de repetição</td><td>£8 – £15</td><td>1d12</td><td>90 m</td><td>5 tiros, duas mãos, pesado</td></tr>
-    <tr><td>Espingarda (<em>shotgun</em>)</td><td>£4 – £10</td><td>2d6</td><td>12 m</td><td>2 tiros, duas mãos, dispersão</td></tr>
-    <tr><td>Mosquete antigo</td><td>£2</td><td>1d10</td><td>36 m</td><td>1 tiro, duas mãos, lento</td></tr>
-  </tbody>
-</table>
-
-<h3>Armas Brancas <span class="en">(Melee Weapons)</span></h3>
-
-<table>
-  <thead>
-    <tr><th>Arma</th><th>Preço</th><th>Dano</th><th>Propriedades</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Adaga / Faca</td><td>5 s – £1</td><td>1d4</td><td>Leve, arremessável (9 m), ocultável</td></tr>
-    <tr><td>Punhal cerimonial</td><td>£1 – £2</td><td>1d4</td><td>Leve, pode ser usado em rituais</td></tr>
-    <tr><td>Espada curta / Sabre</td><td>£2 – £4</td><td>1d6</td><td>Leve, finesse</td></tr>
-    <tr><td>Espada longa</td><td>£4 – £6</td><td>1d8</td><td>Versátil (1d10 com duas mãos)</td></tr>
-    <tr><td>Bengala-espada</td><td>£3 – £6</td><td>1d6</td><td>Finesse, ocultável (parece bengala comum)</td></tr>
-    <tr><td>Bengala reforçada</td><td>£1 – £3</td><td>1d4</td><td>Contundente, pode ser usada como foco</td></tr>
-    <tr><td>Machado de mão</td><td>£1</td><td>1d6</td><td>Arremessável (6 m)</td></tr>
-  </tbody>
-</table>
-
-<h3>Armas de Distância (outras) <span class="en">(Ranged Weapons)</span></h3>
-
-<table>
-  <thead>
-    <tr><th>Arma</th><th>Preço</th><th>Dano</th><th>Alcance</th><th>Propriedades</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Besta leve</td><td>£3 – £5</td><td>1d6</td><td>24 m</td><td>Silenciosa, duas mãos, recarga</td></tr>
-    <tr><td>Besta pesada</td><td>£5 – £7</td><td>1d10</td><td>36 m</td><td>Silenciosa, duas mãos, recarga, pesada</td></tr>
-    <tr><td>Arco curto</td><td>£2 – £4</td><td>1d6</td><td>24 m</td><td>Duas mãos</td></tr>
-  </tbody>
-</table>
-
-<div class="separator"></div>
-
-<!-- ================================================================= -->
-<h2>Munição <span class="en">(Ammunition)</span></h2>
-
-<table>
-  <thead>
-    <tr><th>Tipo</th><th>Preço</th><th>Notas</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Balas comuns (caixa c/ 12)</td><td>6 p</td><td>Servem para revólveres e rifles</td></tr>
-    <tr><td>Cartuchos de espingarda (caixa c/ 6)</td><td>8 p</td><td>Dispersão</td></tr>
-    <tr><td>Virotes de besta (pacote c/ 10)</td><td>4 p</td><td>—</td></tr>
-    <tr><td>Balas de prata</td><td>5 s cada</td><td>+2 dano contra licantropos e mortos-vivos</td></tr>
-    <tr><td>Balas abençoadas</td><td>10 s cada</td><td>Dano considerado sagrado; requer bênção prévia</td></tr>
-    <tr><td>Virotes de cinzas de sol</td><td>8 s cada</td><td>+1d4 dano radiante contra mortos-vivos</td></tr>
-  </tbody>
-</table>
-
-<div class="separator"></div>
-
-<!-- ================================================================= -->
-<h2>Proteção <span class="en">(Armor)</span></h2>
-
-<table>
-  <thead>
-    <tr><th>Proteção</th><th>Preço</th><th>Bônus de CA</th><th>Propriedades</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Jaqueta de couro reforçada</td><td>£2</td><td>+1</td><td>Sem penalidade de furtividade</td></tr>
-    <tr><td>Colete reforçado</td><td>£8</td><td>+2</td><td>Visível sob casacos leves</td></tr>
-    <tr><td>Colete oculto (<em>concealed vest</em>)</td><td>£15</td><td>+1</td><td>Invisível sob roupas; ideal para infiltração</td></tr>
-    <tr><td>Cota de malha (rara)</td><td>£25</td><td>+3</td><td>Pesada, -1 em Furtividade, anacrônica</td></tr>
-  </tbody>
-</table>
-
-<div class="separator"></div>
-
-<!-- ================================================================= -->
-<h2>Equipamento de Aventura <span class="en">(Adventuring Gear)</span></h2>
-
-<table>
-  <thead>
-    <tr><th>Item</th><th>Preço</th><th>Notas</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Lanterna a óleo</td><td>5 s</td><td>Ilumina 12 m por 6 horas</td></tr>
-    <tr><td>Lanternas de gás portátil</td><td>15 s</td><td>Ilumina 9 m; mais segura em ambientes fechados</td></tr>
-    <tr><td>Corda de cânhamo (15 m)</td><td>3 s</td><td>Suporta ~120 kg</td></tr>
-    <tr><td>Kit de arrombamento (<em>lockpicks</em>)</td><td>£1</td><td>Necessário para testes de Arrombamento</td></tr>
-    <tr><td>Kit de primeiros socorros</td><td>10 s</td><td>Restaura 1d4+1 PV; 3 usos</td></tr>
-    <tr><td>Pêndulo espiritual</td><td>£2</td><td>Usado em adivinhações de sim/não</td></tr>
-    <tr><td>Baralho de tarô</td><td>15 s – £3</td><td>Necessário para Leitura de Tarô; versões ornamentais custam mais</td></tr>
-    <tr><td>Velas rituais (pacote c/ 6)</td><td>8 s</td><td>Essenciais para rituais; queimam 4 horas cada</td></tr>
-    <tr><td>Água benta (frasco)</td><td>10 s</td><td>1d6 dano radiante contra mortos-vivos (arremesso)</td></tr>
-    <tr><td>Incenso purificador</td><td>5 s</td><td>Purifica área de 3 m por 1 hora</td></tr>
-    <tr><td>Sal negro ritualístico</td><td>12 s</td><td>Desenhar círculos de proteção; 3 usos por pacote</td></tr>
-    <tr><td>Lupa de investigador</td><td>8 s</td><td>+1 em testes de Investigação (visual)</td></tr>
-    <tr><td>Caderno de anotações + pena</td><td>3 s</td><td>Essencial para registrar pistas e fórmulas</td></tr>
-    <tr><td>Câmera portátil</td><td>£5</td><td>Fotografias em preto-e-branco; revela anomalias espirituais às vezes</td></tr>
-    <tr><td>Binóculo</td><td>£2</td><td>Visão detalhada a até 300 m</td></tr>
-    <tr><td>Giz ritual (pacote c/ 5)</td><td>2 s</td><td>Para desenhar símbolos e círculos mágicos</td></tr>
-    <tr><td>Espelho de bolso</td><td>4 s</td><td>Pode refletir certos ataques espirituais</td></tr>
-    <tr><td>Corrente de prata (1,5 m)</td><td>£1</td><td>Restringe certas criaturas sobrenaturais</td></tr>
-    <tr><td>Mala de viagem</td><td>10 s</td><td>Comporta roupas e equipamento leve</td></tr>
-  </tbody>
-</table>
-
-<div class="separator"></div>
-
-<!-- ================================================================= -->
-<h2>Serviços <span class="en">(Services)</span></h2>
-
-<table>
-  <thead>
-    <tr><th>Serviço</th><th>Custo</th><th>Notas</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Corrida de carruagem (dentro da cidade)</td><td>2 – 6 p</td><td>Depende da distância e bairro</td></tr>
-    <tr><td>Carruagem alugada (dia inteiro)</td><td>5 – 10 s</td><td>Inclui cocheiro</td></tr>
-    <tr><td>Hospedagem (pensão simples, por noite)</td><td>4 – 8 p</td><td>East Borough, quartos compartilhados</td></tr>
-    <tr><td>Hospedagem (hotel mediano, por noite)</td><td>3 – 8 s</td><td>Cherwood Borough e similares</td></tr>
-    <tr><td>Hospedagem (hotel de luxo, por noite)</td><td>£1 – £5</td><td>Empress Borough</td></tr>
-    <tr><td>Refeição simples</td><td>2 – 4 p</td><td>Pão, ensopado, chá</td></tr>
-    <tr><td>Refeição fina</td><td>5 – 15 s</td><td>Restaurante de classe média-alta</td></tr>
-    <tr><td>Telegrama (até 20 palavras)</td><td>6 p</td><td>Entrega em horas dentro da mesma cidade</td></tr>
-    <tr><td>Telegrama (longa distância)</td><td>2 – 5 s</td><td>Entre cidades ou países</td></tr>
-    <tr><td>Passagem de trem (2ª classe)</td><td>5 – 15 s</td><td>Depende da distância</td></tr>
-    <tr><td>Passagem de trem (1ª classe)</td><td>£1 – £4</td><td>Luxo, vagões privativos</td></tr>
-    <tr><td>Passagem de navio (cabine comum)</td><td>£2 – £5</td><td>Travessia entre portos do Continente Norte</td></tr>
-    <tr><td>Passagem de navio (1ª classe)</td><td>£10 – £30</td><td>Com refeições e entretenimento</td></tr>
-    <tr><td>Médico particular (consulta)</td><td>5 – 15 s</td><td>Tratamento não-<em>Beyonder</em></td></tr>
-    <tr><td>Informante (suborno)</td><td>5 s – £5</td><td>Depende do risco e do valor da informação</td></tr>
-  </tbody>
-</table>
-
-<div class="separator"></div>
-
-<!-- ================================================================= -->
-<h2>Itens <em>Beyonder</em> <span class="en">(Beyonder Items)</span></h2>
-
-<p>
-  Itens <em>Beyonder</em> são criados por artesãos extraordinários — normalmente do Caminho do
-  Paragon (<em>Paragon Pathway</em>), Sequência 7 ou superior. Diferentemente dos Artefatos
-  Selados, esses itens são relativamente seguros de usar, embora ainda carreguem vestígios de
-  poder sobrenatural. Podem ser adquiridos em Encontros <em>Beyonder</em> ou encomendados —
-  sempre a preços exorbitantes.
-</p>
-
-<div class="box box-lore">
-  <div class="box-title">Nota sobre Disponibilidade</div>
-  <p>
-    Itens <em>Beyonder</em> não estão em lojas comuns. Sua obtenção exige contatos no
-    submundo místico, participação em leilões secretos ou favores a organizações poderosas.
-    O Narrador determina a disponibilidade em cada cenário.
-  </p>
-</div>
-
-<h3>Exemplos de Itens <em>Beyonder</em></h3>
-
-<div class="stat-block">
-  <h4>Amuleto de Barreira Espiritual <span class="en">(Spiritual Barrier Charm)</span></h4>
-  <div class="stat-line">
-    <span class="stat-label">Preço:</span> <span>£80 – £150</span>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Aparência:</span> <span>Pingente de cobre com um olho gravado.</span>
-  </div>
-  <p>Ao ativar (ação bônus, 1 Espiritualidade), gera um escudo espiritual que concede +2 na CA contra ataques espirituais por 10 minutos. Pode ser usado 3 vezes antes de precisar ser recarregado sob luar cheio.</p>
-</div>
-
-<div class="stat-block">
-  <h4>Munição Encantada <span class="en">(Enchanted Ammunition)</span></h4>
-  <div class="stat-line">
-    <span class="stat-label">Preço:</span> <span>£5 – £15 por bala (varia com o encantamento)</span>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Aparência:</span> <span>Balas com runas gravadas em prata e bronze.</span>
-  </div>
-  <p>Cada bala pode carregar um entre diversos efeitos: <strong>Incendiária</strong> (+1d6 dano de fogo), <strong>Perturbadora</strong> (+1d4 dano psíquico, alvo faz salvaguarda de Mente CD 12 ou fica Atordoado por 1 rodada) ou <strong>Perfurante</strong> (ignora +2 de CA de armadura). Consumida ao disparar.</p>
-</div>
-
-<div class="stat-block">
-  <h4>Talismã de Proteção contra Pesadelos <span class="en">(Nightmare Ward Talisman)</span></h4>
-  <div class="stat-line">
-    <span class="stat-label">Preço:</span> <span>£60 – £100</span>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Aparência:</span> <span>Pequeno saco de tecido bordado com fios de prata, contendo ervas secas.</span>
-  </div>
-  <p>Enquanto carregado, o portador ganha Vantagem em salvaguardas contra efeitos de sonho, pesadelo e invasão mental durante o sono. Dura 30 dias antes de perder a eficácia.</p>
-</div>
-
-<div class="stat-block">
-  <h4>Tinta de Hermes <span class="en">(Hermes Ink)</span></h4>
-  <div class="stat-line">
-    <span class="stat-label">Preço:</span> <span>£30 por frasco</span>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Aparência:</span> <span>Frasco opaco contendo tinta púrpura-escura que brilha levemente.</span>
-  </div>
-  <p>Usada para escrever fórmulas rituais e círculos mágicos. Reduz a CD de rituais em 1 quando utilizada no desenho do círculo. Cada frasco tem tinta suficiente para 3 rituais.</p>
-</div>
-
-<div class="stat-block">
-  <h4>Pó de Cemitério Purificado <span class="en">(Purified Graveyard Dust)</span></h4>
-  <div class="stat-line">
-    <span class="stat-label">Preço:</span> <span>£20 por dose</span>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Aparência:</span> <span>Pó cinza-azulado em frasco lacrado com cera negra.</span>
-  </div>
-  <p>Quando espalhado em uma área de 3 m, impede que espíritos de nível inferior (Seq 9–8) entrem por 1 hora. Se lançado diretamente contra um morto-vivo, causa 2d6 de dano radiante.</p>
-</div>
-
-<div class="stat-block">
-  <h4>Lente da Verdade <span class="en">(Lens of Truth)</span></h4>
-  <div class="stat-line">
-    <span class="stat-label">Preço:</span> <span>£200 – £400</span>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Aparência:</span> <span>Monóculo com lente levemente azulada e armação de ouro.</span>
-  </div>
-  <p>Ao olhar através da lente (ação bônus), o portador enxerga ilusões e disfarces mágicos de Sequência 7 ou inferior por 5 minutos. Pode ser usado 1 vez por dia. Não revela entidades invisíveis naturalmente — apenas enganos artificiais.</p>
-</div>
-
-<div class="stat-block">
-  <h4>Anel de Comunicação Espiritual <span class="en">(Spirit Communication Ring)</span></h4>
-  <div class="stat-line">
-    <span class="stat-label">Preço:</span> <span>£150 – £250 (par)</span>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Aparência:</span> <span>Par de anéis de ferro negro com glifos internos.</span>
-  </div>
-  <p>Dois anéis vinculados. Os portadores podem enviar mensagens mentais curtas (até 20 palavras) um ao outro a até 1 km de distância. Custo: 1 Espiritualidade por mensagem. Não funciona através de barreiras de selamento.</p>
-</div>
-
-<div class="stat-block">
-  <h4>Luva de Exorcismo <span class="en">(Exorcism Gauntlet)</span></h4>
-  <div class="stat-line">
-    <span class="stat-label">Preço:</span> <span>£120 – £180</span>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Aparência:</span> <span>Luva de couro branco com símbolos sagrados costurados em fio dourado.</span>
-  </div>
-  <p>Ataques desarmados com esta luva causam 1d6 de dano radiante contra criaturas espirituais e mortos-vivos (em vez do dano normal). Contra alvos vivos mundanos, funciona como um soco comum. Usável 10 vezes por dia antes de precisar ser purificada em uma igreja.</p>
-</div>
-
-<div class="separator"></div>
-
-<!-- ================================================================= -->
-<h2>Artefatos Selados <span class="en">(Sealed Artifacts)</span></h2>
-
-<p>
-  <em>Sealed Artifacts</em> são itens de poder extraordinário, catalogados e classificados
-  pelas Igrejas Ortodoxas e organizações secretas. Cada artefato é designado por um
-  código: o primeiro número indica o <strong>Grau</strong> (de 0 a 4, sendo 0 o mais
-  perigoso) e o segundo é seu número de registro. Todos possuem <strong>efeitos
-  negativos</strong> — é impossível criar um artefato selado sem consequências, pois isso
-  violaria as Três Leis das características <em>Beyonder</em>.
-</p>
-
-<div class="box box-warning">
-  <div class="box-title">Aviso aos Jogadores</div>
-  <p>
-    Artefatos Selados são ferramentas desesperadas. Seus efeitos colaterais podem matar,
-    enlouquecer ou transformar o portador. Usá-los sem precaução adequada é uma sentença —
-    não uma ferramenta. O Narrador deve garantir que cada uso tenha peso narrativo e
-    consequências reais.
-  </p>
-</div>
-
-<h3>Grau 3 <span class="en">(Grade 3)</span></h3>
-<p>
-  Artefatos de Grau 3 são os mais acessíveis para <em>Beyonders</em> de Sequência média.
-  Mesmo assim, todos exigem protocolos de selamento e uso cuidadoso.
-</p>
-
-<!-- Grau 3 — Item 1 -->
-<div class="stat-block">
-  <h4>Olho de Cristal <span class="en">(Eye of Crystal)</span> — 3-1328</h4>
-  <div class="stat-line">
-    <span class="stat-label">Aparência:</span> <span>Monóculo de cristal com armação de prata enegrecida.</span>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Grau:</span> <span>3</span>
-  </div>
-  <div class="power">
-    <p><span class="power-name">Poderes</span></p>
-    <ul>
-      <li>Permite enxergar corpos espirituais, fantasmas, resíduos de energia <em>Beyonder</em> e entidades invisíveis no plano espiritual.</li>
-      <li>Concede Vantagem em testes de Percepção Espiritual enquanto equipado.</li>
-      <li>Pode identificar a Sequência aproximada de um <em>Beyonder</em> (teste de Percepção CD 12).</li>
-    </ul>
-  </div>
-  <div class="power">
-    <p><span class="power-name">Efeitos Negativos</span></p>
-    <ul>
-      <li><strong>Atração de Espectros:</strong> Enquanto equipado, espectros e almas penadas num raio de 500 m são atraídos lentamente em direção ao portador.</li>
-      <li><strong>Deterioração Visual:</strong> A cada hora de uso contínuo, o portador sofre 1 ponto de dano temporário em Percepção. Se Percepção chegar a 0, fica permanentemente cego do olho usado.</li>
-    </ul>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Selamento:</span> <span>Guardado em caixa de chumbo forrada com lã negra. Não deve ser exposto à luz da lua.</span>
-  </div>
-</div>
-
-<!-- Grau 3 — Item 2 -->
-<div class="stat-block">
-  <h4>Emblema Solar Mutado <span class="en">(Mutated Sun Sacred Emblem)</span> — 3-0782</h4>
-  <div class="stat-line">
-    <span class="stat-label">Aparência:</span> <span>Insígnia dourada em forma de sol com raios irregulares, quente ao toque.</span>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Grau:</span> <span>3</span>
-  </div>
-  <div class="power">
-    <p><span class="power-name">Poderes</span></p>
-    <ul>
-      <li>Emite uma aura de purificação num raio de 15 m que causa 1d6 de dano radiante por rodada a mortos-vivos e entidades sombrias.</li>
-      <li>Concede ao portador Resistência a dano necrótico.</li>
-      <li>Pode ser ativado para um pulso de luz que dissipa ilusões e revela criaturas ocultas num raio de 30 m (1 uso por dia).</li>
-    </ul>
-  </div>
-  <div class="power">
-    <p><span class="power-name">Efeitos Negativos</span></p>
-    <ul>
-      <li><strong>Conversão Compulsiva:</strong> Após 30 minutos de uso contínuo, o portador começa a sentir devoção fanática ao Sol Eterno Ardente. Deve fazer salvaguarda de Mente CD 14 a cada 10 minutos subsequentes ou passar a agir como um devoto radical (atacando "hereges", recitando preces, etc.).</li>
-      <li><strong>Queimadura Sagrada:</strong> Ao retirar o emblema após uso prolongado, o portador sofre 1d4 de dano radiante e sente dor intensa na área de contato.</li>
-    </ul>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Selamento:</span> <span>Guardado em relicário de ferro revestido de escuridão alquímica. A caixa deve permanecer no escuro absoluto.</span>
-  </div>
-</div>
-
-<!-- Grau 3 — Item 3 -->
-<div class="stat-block">
-  <h4>Boneca do Infortúnio <span class="en">(Misfortune Cloth Puppet)</span> — 3-0625</h4>
-  <div class="stat-line">
-    <span class="stat-label">Aparência:</span> <span>Boneca de pano suja e desgastada, sem rosto, costurada com fio vermelho.</span>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Grau:</span> <span>3</span>
-  </div>
-  <div class="power">
-    <p><span class="power-name">Poderes</span></p>
-    <ul>
-      <li>Todas as criaturas hostis num raio de 9 m sofrem Desvantagem em testes de ataque e salvaguardas enquanto a boneca estiver ativada.</li>
-      <li>Uma vez por dia, pode ser direcionada a um alvo visível: o alvo automaticamente falha em seu próximo teste (sem salvaguarda).</li>
-    </ul>
-  </div>
-  <div class="power">
-    <p><span class="power-name">Efeitos Negativos</span></p>
-    <ul>
-      <li><strong>Infortúnio Compartilhado:</strong> O portador também sofre Desvantagem em todos os testes enquanto a boneca estiver ativada. O efeito afeta aliados próximos igualmente.</li>
-      <li><strong>Azar Residual:</strong> Mesmo selada, o portador da boneca tem -1 em todas as salvaguardas enquanto estiver dentro de 3 m dela.</li>
-    </ul>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Selamento:</span> <span>Envolvida em tecido de seda branca e guardada em caixa de madeira de cinza. Trocar a seda semanalmente.</span>
-  </div>
-</div>
-
-<!-- Grau 3 — Item 4 -->
-<div class="stat-block">
-  <h4>Espelho do Médium <span class="en">(Spirit Medium's Mirror)</span> — 3-0217</h4>
-  <div class="stat-line">
-    <span class="stat-label">Aparência:</span> <span>Espelho oval rachado com moldura de prata oxidada. O reflexo sempre parece ligeiramente desfocado.</span>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Grau:</span> <span>3</span>
-  </div>
-  <div class="power">
-    <p><span class="power-name">Poderes</span></p>
-    <ul>
-      <li>Ao olhar no espelho, o portador vê reflexos de perigos iminentes nas próximas 6 horas (teste de Percepção + Adivinhação CD 10). Sucesso revela a natureza geral do perigo.</li>
-      <li>Pode ser usado para se comunicar com espíritos aprisionados em locais assombrados (1 vez por dia, 10 minutos de duração).</li>
-    </ul>
-  </div>
-  <div class="power">
-    <p><span class="power-name">Efeitos Negativos</span></p>
-    <ul>
-      <li><strong>Visões Intrusivas:</strong> O portador ocasionalmente vê imagens perturbadoras no espelho mesmo quando não está ativado. A cada uso, fazer salvaguarda de Mente CD 12 ou perder 1d4 de Lucidez.</li>
-      <li><strong>Porta Espiritual:</strong> Se usado mais de 3 vezes em 24 horas, o espelho pode permitir que entidades espirituais cruzem para o mundo material. O Narrador faz uma rolagem secreta.</li>
-    </ul>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Selamento:</span> <span>Envolto em tecido negro e virado para baixo. Nunca deve refletir luar diretamente.</span>
-  </div>
-</div>
-
-<!-- Grau 3 — Item 5 -->
-<div class="stat-block">
-  <h4>Óculos Perscrutadores <span class="en">(Mystery Prying Glasses)</span></h4>
-  <div class="stat-line">
-    <span class="stat-label">Aparência:</span> <span>Óculos de armação dourada com lentes levemente âmbar. Parecem elegantes e antiquados.</span>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Grau:</span> <span>3</span>
-  </div>
-  <div class="power">
-    <p><span class="power-name">Poderes</span></p>
-    <ul>
-      <li><strong>Visão da Verdade:</strong> Enquanto vestidos, revelam mensagens ocultas, tinta invisível, ilusões de Sequência 7 ou inferior e a verdadeira aparência de objetos encantados.</li>
-      <li><strong>Disfarce Aprimorado:</strong> +3 em testes de Dissimulação para se passar por outra pessoa; o portador pode alterar ligeiramente suas feições aos olhos dos outros.</li>
-      <li><strong>Pintura Mística:</strong> Se o portador tiver materiais de pintura, pode criar uma obra que captura a essência espiritual de uma cena, preservando-a como evidência mística.</li>
-    </ul>
-  </div>
-  <div class="power">
-    <p><span class="power-name">Efeitos Negativos</span></p>
-    <ul>
-      <li><strong>Verdades Indesejadas:</strong> Os óculos revelam coisas que o portador preferiria não ver — segredos pessoais de aliados, horrores ocultos, verdades dolorosas. Cada hora de uso, salvaguarda de Mente CD 11 ou perder 1d4 de Lucidez.</li>
-      <li><strong>Compulsão Artística:</strong> Após usar a habilidade de pintura, o portador sente necessidade irresistível de pintar novamente nas próximas 24 h. Salvaguarda de Mente CD 13 ou gasta todo tempo livre pintando obsessivamente.</li>
-      <li><strong>Confusão de Identidade:</strong> Uso prolongado do disfarce (mais de 1 hora) exige salvaguarda de Mente CD 14 ou o portador começa a acreditar que <em>é</em> a pessoa que está imitando.</li>
-    </ul>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Selamento:</span> <span>Guardados em estojo de veludo forrado com folhas de salgueiro secas. Não devem ser usados durante o crepúsculo.</span>
-  </div>
-</div>
-
-<!-- Grau 3 — Item 6 -->
-<div class="stat-block">
-  <h4>Chave-Mestra <span class="en">(Master Key)</span></h4>
-  <div class="stat-line">
-    <span class="stat-label">Aparência:</span> <span>Chave de latão antigo com dentes que mudam de formato sutilmente a cada vez que se olha.</span>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Grau:</span> <span>3</span>
-  </div>
-  <div class="power">
-    <p><span class="power-name">Poderes</span></p>
-    <ul>
-      <li><strong>Abrir Qualquer Fechadura:</strong> Abre automaticamente qualquer fechadura não-mística. Contra fechaduras mágicas, concede +5 no teste de Arrombamento.</li>
-      <li><strong>Passagem Dimensional:</strong> Ao inserir a chave em qualquer superfície sólida (parede, chão, teto), o portador pode criar uma passagem temporária de 1,5 m de diâmetro que dura 1 rodada. 3 usos por dia.</li>
-    </ul>
-  </div>
-  <div class="power">
-    <p><span class="power-name">Efeitos Negativos</span></p>
-    <ul>
-      <li><strong>Desorientação Espacial:</strong> Após cada uso da Passagem Dimensional, o portador deve fazer salvaguarda de Mente CD 13 ou ficar Desorientado por 1d4 rodadas (Desvantagem em testes de navegação e direção, não pode usar reações).</li>
-      <li><strong>Portas que se Abrem Sozinhas:</strong> Enquanto carregada, portas e janelas ao redor do portador tendem a se abrir espontaneamente, revelando sua posição e eliminando cobertura.</li>
-    </ul>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Selamento:</span> <span>Trancada dentro de uma caixa sem fechadura (irônico, mas necessário). A caixa é soldada e só pode ser aberta quebrando-a.</span>
-  </div>
-</div>
-
-<!-- Grau 3 — Item 7 -->
-<div class="stat-block">
-  <h4>Circo <span class="en">(Circus)</span></h4>
-  <div class="stat-line">
-    <span class="stat-label">Aparência:</span> <span>Luva branca de algodão, aparentemente inofensiva. Sempre limpa, independentemente das circunstâncias.</span>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Grau:</span> <span>3</span>
-  </div>
-  <div class="power">
-    <p><span class="power-name">Poderes</span></p>
-    <ul>
-      <li><strong>Rajada de Vento:</strong> Ação principal — cria uma rajada de vento que empurra criaturas num cone de 9 m. Alvos fazem salvaguarda de Força CD 14 ou são empurrados 6 m e caem.</li>
-      <li><strong>Névoa:</strong> Ação bônus — gera uma névoa densa num raio de 15 m centrado no portador. Dura 5 minutos ou até ser dispersada.</li>
-      <li><strong>Toque Congelante:</strong> Ataque corpo-a-corpo — o alvo tocado sofre 2d8 de dano de gelo e deve fazer salvaguarda de Corpo CD 14 ou ficar Lentificado por 1 rodada.</li>
-      <li><strong>Atravessar Paredes:</strong> Como a Chave-Mestra, pode atravessar superfícies sólidas (1 vez por dia).</li>
-    </ul>
-  </div>
-  <div class="power">
-    <p><span class="power-name">Efeitos Negativos</span></p>
-    <ul>
-      <li><strong>Desorientação:</strong> Após usar Atravessar Paredes, salvaguarda de Mente CD 14 ou o portador fica completamente perdido por 1d6 × 10 minutos, incapaz de reconhecer onde está.</li>
-      <li><strong>Atração de Infortúnio:</strong> Enquanto equipada, a luva atrai eventos de má sorte ao portador e aliados próximos. Uma vez por sessão, o Narrador pode forçar uma re-rolagem de um teste bem-sucedido do grupo.</li>
-    </ul>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Selamento:</span> <span>Guardada em pote de vidro preenchido com água salgada abençoada. A água deve ser trocada a cada 3 dias.</span>
-  </div>
-</div>
-
-<!-- Grau 3 — Item 8 -->
-<div class="stat-block">
-  <h4>Essência Verde <span class="en">(Green Essence)</span></h4>
-  <div class="stat-line">
-    <span class="stat-label">Aparência:</span> <span>Anel de ouro com uma esmeralda vibrante que pulsa com luz verde suave.</span>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Grau:</span> <span>3</span>
-  </div>
-  <div class="power">
-    <p><span class="power-name">Poderes</span></p>
-    <ul>
-      <li><strong>Cura Menor:</strong> Ação principal — toque cura 2d6+2 PV de um alvo vivo. Pode ser usado 3 vezes por dia.</li>
-      <li><strong>Purificação de Veneno:</strong> Neutraliza venenos naturais e doenças não-mágicas ao toque (1 vez por dia).</li>
-      <li><strong>Vitalidade:</strong> Enquanto equipado, o portador ganha +1 em salvaguardas de Corpo contra doenças.</li>
-    </ul>
-  </div>
-  <div class="power">
-    <p><span class="power-name">Efeitos Negativos</span></p>
-    <ul>
-      <li><strong>Enxame de Insetos:</strong> Enquanto vestido, o portador atrai mosquitos, moscas e outros insetos num raio de 30 m. Em ambientes externos, o enxame impõe Desvantagem em testes de Furtividade e Concentração.</li>
-      <li><strong>Vínculo Vegetal:</strong> Após 24 horas de uso contínuo, o portador percebe pequenas raízes crescendo em sua pele na área de contato com o anel. Remover o anel nesse ponto causa 1d6 de dano.</li>
-    </ul>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Selamento:</span> <span>Guardado em caixa de mogno cheia de serragem de carvalho. Manter longe de plantas vivas ou água corrente.</span>
-  </div>
-</div>
-
-<div class="separator"></div>
-
-<h3>Grau 2 <span class="en">(Grade 2)</span></h3>
-<p>
-  Artefatos de Grau 2 possuem poder comparável a <em>Beyonders</em> de Sequências altas
-  (4–3). São extremamente perigosos tanto para os inimigos quanto para o portador. Apenas
-  organizações poderosas os possuem, e seu uso requer autorização especial. Os efeitos
-  colaterais são severos e, muitas vezes, irreversíveis.
-</p>
-
-<!-- Grau 2 — Item 1 -->
-<div class="stat-block">
-  <h4>Sonho da Eternidade <span class="en">(Dream of Eternity)</span> — 2-037</h4>
-  <div class="stat-line">
-    <span class="stat-label">Aparência:</span> <span>Coração escuro e ressequido, do tamanho de um punho, que pulsa levemente quando segurado.</span>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Grau:</span> <span>2</span>
-  </div>
-  <div class="power">
-    <p><span class="power-name">Poderes</span></p>
-    <ul>
-      <li><strong>Sonho Compartilhado:</strong> Ação principal (1 minuto de concentração) — puxa até 6 pessoas num raio de 30 m para um sonho compartilhado controlado pelo portador. No sonho, o tempo passa mais devagar (1 hora real = 8 horas no sonho). Alvos resistentes fazem salvaguarda de Mente CD 16.</li>
-      <li><strong>Manipulação Onírica:</strong> Dentro do sonho, o portador pode alterar o ambiente, criar ilusões e extrair informações das mentes dos alvos (teste resistido: Manipulação + Dissimulação do portador vs. Mente + Resistência Mental do alvo).</li>
-      <li><strong>Sono Forçado:</strong> Pode forçar um alvo a dormir instantaneamente. Salvaguarda de Mente CD 18 ou cai inconsciente por 1d4 horas.</li>
-    </ul>
-  </div>
-  <div class="power">
-    <p><span class="power-name">Efeitos Negativos</span></p>
-    <ul>
-      <li><strong>Trauma Mental Severo:</strong> Ao usar o Sonho Compartilhado no alcance máximo (6 pessoas, 30 m), o portador sofre 2d6 de dano psíquico e perde 1d6+2 pontos de Lucidez. Se a Lucidez chegar a 0 durante o uso, o portador fica preso permanentemente no mundo dos sonhos.</li>
-      <li><strong>Erosão da Realidade:</strong> Após cada uso, o portador tem dificuldade em distinguir sonho de realidade por 1d4 horas. Desvantagem em todos os testes de Percepção.</li>
-      <li><strong>Chamado do Sonho:</strong> O artefato "sussurra" para o portador durante o sono, tentando-o a usá-lo. Salvaguarda de Mente CD 14 a cada descanso longo ou o portador o usa inconscientemente durante a noite.</li>
-    </ul>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Selamento:</span> <span>Imerso em solução de formol e lágrimas purificadas. O recipiente deve ser mantido sob vigília constante e trocado mensalmente. Dois guardas sempre presentes.</span>
-  </div>
-</div>
-
-<!-- Grau 2 — Item 2 -->
-<div class="stat-block">
-  <h4>Ladrão de Vasos Sanguíneos <span class="en">(Blood Vessel Thief)</span> — 2-105</h4>
-  <div class="stat-line">
-    <span class="stat-label">Aparência:</span> <span>Vaso sanguíneo grosso e pulsante, do tamanho de uma cobra pequena, que se enrola no braço do portador quando ativado.</span>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Grau:</span> <span>2</span>
-  </div>
-  <div class="power">
-    <p><span class="power-name">Poderes</span></p>
-    <ul>
-      <li><strong>Roubo de Habilidade:</strong> Ao tocar um <em>Beyonder</em> (ataque corpo-a-corpo especial), o portador pode copiar uma de suas habilidades <em>Beyonder</em> por 10 minutos. O alvo perde acesso àquela habilidade durante esse período. Salvaguarda de Corpo CD 17 para resistir.</li>
-      <li><strong>Absorção Vital:</strong> Ao tocar um alvo vivo, drena 2d10 PV e transfere metade para o portador (ataque corpo-a-corpo, salvaguarda de Corpo CD 16).</li>
-    </ul>
-  </div>
-  <div class="power">
-    <p><span class="power-name">Efeitos Negativos</span></p>
-    <ul>
-      <li><strong>Drenagem Vital:</strong> Cada uso do Roubo de Habilidade drena 1d4 anos de vida do portador. Isso é visível: envelhecimento acelerado, cabelos embranquecendo, pele ressecando. Efeito cumulativo e irreversível.</li>
-      <li><strong>Dependência Sanguínea:</strong> Após 3 usos em uma semana, o portador precisa usar o artefato novamente dentro de 48 horas ou sofre Exaustão crescente (1 nível por dia).</li>
-      <li><strong>Fusão Parasitária:</strong> Se usado mais de 5 vezes em um dia, o vaso começa a se fundir permanentemente com o braço do portador. Remoção cirúrgica causa 4d10 de dano.</li>
-    </ul>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Selamento:</span> <span>Mantido em cilindro de vidro preenchido com sangue de porco. O sangue deve ser renovado a cada 3 dias ou o artefato tenta escapar.</span>
-  </div>
-</div>
-
-<!-- Grau 2 — Item 3 -->
-<div class="stat-block">
-  <h4>Fome Rastejante <span class="en">(Creeping Hunger)</span></h4>
-  <div class="stat-line">
-    <span class="stat-label">Aparência:</span> <span>Luva feita de pele humana costurada com fios negros. Quente ao toque. Ocasionalmente se contorce sozinha.</span>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Grau:</span> <span>2</span>
-  </div>
-  <div class="power">
-    <p><span class="power-name">Poderes</span></p>
-    <ul>
-      <li><strong>Almas Armazenadas:</strong> A luva pode conter até 5 almas de <em>Beyonders</em> derrotados. O portador pode usar uma habilidade <em>Beyonder</em> de qualquer alma armazenada como se fosse sua própria (ação principal; 3 Espiritualidade por uso).</li>
-      <li><strong>Manto de Sombras:</strong> O portador pode se esconder nas sombras, tornando-se efetivamente invisível em áreas de escuridão ou penumbra. Testes de Furtividade feitos em sombras têm Vantagem.</li>
-      <li><strong>Transformação Parcial:</strong> Pode assumir temporariamente a aparência de uma alma armazenada (1 hora de duração, 2 Espiritualidade).</li>
-    </ul>
-  </div>
-  <div class="power">
-    <p><span class="power-name">Efeitos Negativos</span></p>
-    <ul>
-      <li><strong>Fome Insaciável:</strong> A luva consome uma alma humana ou quantidade equivalente de carne humana a cada 24 horas. Se não alimentada, começa a drenar a alma do portador — 1d6 de dano psíquico por hora e 1d4 de Lucidez perdida.</li>
-      <li><strong>Louvor ao Verdadeiro Criador:</strong> A cada uso, o portador é compelido a murmurar preces ao Verdadeiro Criador (<em>True Creator</em>). Salvaguarda de Mente CD 15 ou grita a oração em voz alta, revelando sua posição e natureza.</li>
-      <li><strong>Corrupção Gradual:</strong> A cada semana de posse, o portador deve fazer salvaguarda de Mente CD 16 ou ganhar uma tendência canibalística temporária.</li>
-    </ul>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Selamento:</span> <span>Mantida em sarcófago de pedra consagrada, com três selos da Igreja da Deusa da Noite Eterna. Deve ser alimentada com carne animal para evitar que destrua o sarcófago. Dois <em>Beyonders</em> Seq 5+ de guarda permanente.</span>
-  </div>
-</div>
-
-<!-- Grau 2 — Item 4 -->
-<div class="stat-block">
-  <h4>Lâmina Invernal <span class="en">(Wintry Blade)</span></h4>
-  <div class="stat-line">
-    <span class="stat-label">Aparência:</span> <span>Lâmina translúcida feita de gelo eterno. Não derrete, não reflete luz — absorve-a. A empunhadura é envolta em couro pálido, frio como um cadáver.</span>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Grau:</span> <span>2</span>
-  </div>
-  <div class="power">
-    <p><span class="power-name">Poderes</span></p>
-    <ul>
-      <li><strong>Corte Congelante:</strong> Ataques com a lâmina causam 2d8 + Mod. Força de dano cortante + 2d6 de dano de gelo. Alvos atingidos devem fazer salvaguarda de Corpo CD 16 ou ficam Lentificados por 2 rodadas.</li>
-      <li><strong>Congelamento Mental:</strong> Uma vez por combate, o portador pode focar a lâmina contra um alvo a até 18 m — o alvo faz salvaguarda de Mente CD 17 ou fica Paralisado por 1 rodada enquanto seus pensamentos literalmente congelam.</li>
-      <li><strong>Aura Gélida:</strong> Passivo — criaturas que comecem seu turno a 3 m do portador sofrem 1d4 de dano de gelo.</li>
-    </ul>
-  </div>
-  <div class="power">
-    <p><span class="power-name">Efeitos Negativos</span></p>
-    <ul>
-      <li><strong>Hipotermia Progressiva:</strong> Enquanto empunhada, a temperatura corporal do portador cai constantemente. Após 1 hora: -2 em testes de Destreza. Após 2 horas: Desvantagem em todas as ações físicas. Após 3–4 horas: o portador começa a se transformar em morto-vivo (<em>undead</em>), perdendo emoções e sensações físicas.</li>
-      <li><strong>Sede de Calor:</strong> O portador sente uma compulsão crescente de drenar calor de seres vivos. Salvaguarda de Mente CD 15 a cada hora ou ataca o ser vivo mais próximo para "se aquecer" (causando dano de gelo ao toque).</li>
-      <li><strong>Transformação Irreversível:</strong> Se o portador se transformar em morto-vivo, a mudança é permanente. Apenas intervenção divina ou ritual de Sequência 3+ pode reverter.</li>
-    </ul>
-  </div>
-  <div class="stat-line">
-    <span class="stat-label">Selamento:</span> <span>Mantida em fornalha mágica constantemente aquecida por chamas abençoadas pelo Sol Eterno Ardente. A fornalha consome £50 em materiais por mês. Se as chamas se apagarem, a lâmina congela tudo num raio de 30 m em 1d4 horas.</span>
-  </div>
-</div>
-
-<div class="separator"></div>
-
-<div class="box box-rule">
-  <div class="box-title">Regra: Usando Artefatos Selados</div>
-  <p>
-    Um personagem que deseje usar um Artefato Selado deve primeiro <strong>quebrar o
-    selamento</strong> — geralmente uma ação completa que requer saber o método correto.
-    O Narrador pode exigir um teste de Ocultismo ou Conhecimento Arcano. Uma vez
-    ativo, o artefato funciona conforme descrito. Para <strong>selar novamente</strong>
-    o artefato, é necessário seguir o protocolo de selamento listado — isso pode levar
-    minutos ou horas, dependendo do Grau.
-  </p>
-  <p>
-    Artefatos de <strong>Grau 3</strong> podem ser usados por <em>Beyonders</em> de
-    Sequência 7+. Artefatos de <strong>Grau 2</strong> requerem Sequência 5+ para
-    uso seguro (Sequências inferiores podem tentar, mas todos os efeitos negativos
-    têm suas CDs aumentadas em +3).
-  </p>
-</div>
-
-<!-- ===== NAVEGAÇÃO ===== -->
-<nav class="book-nav">
-  <a href="07-combate.html">← Capítulo 7 — Combate</a>
-  <a href="09-misticismo.html">Capítulo 9 — Misticismo →</a>
+<nav aria-label="Sumário do capítulo" class="toc">
+<div class="toc-title">Neste capítulo</div>
+<ol>
+<li><a href="#economia">Moeda e Economia</a></li>
+<li><a href="#armas">Armas</a></li>
+<li><a href="#propriedades">Propriedades das Armas</a></li>
+<li><a href="#municao">Munição</a></li>
+<li><a href="#protecao">Proteção</a></li>
+<li><a href="#aventura">Equipamento de Aventura</a></li>
+<li><a href="#servicos">Serviços</a></li>
+<li><a href="#itens-beyonder">Itens Beyonder</a></li>
+<li><a href="#artefatos-selados">Artefatos Selados</a></li>
+<li><a href="#uso-artefatos">Utilização e Selamento</a></li>
+<li><a href="#referencia">Resumo de Referência</a></li>
+</ol>
 </nav>
-
+<section id="economia">
+<h2>1. Moeda e Economia <span class="en">(Currency &amp; Economy)</span></h2>
+<p>Na referência monetária utilizada neste capítulo, as transações são expressas em libras (£), sólis (s) e pence (p). A conversão é a seguinte:</p>
+<div class="formula-box">
+<div class="box-title">Câmbio</div>
+<span class="formula">1 libra (£) = 20 sólis (s)</span>
+<span class="formula">1 sóli (s) = 12 pence (p)</span>
+<span class="formula">1 libra (£) = 240 pence (p)</span>
+</div>
+<h3>Recursos <span class="en">(Resources)</span></h3>
+<p><strong>Recursos</strong> representa a capacidade econômica que o personagem controla: renda, patrimônio, propriedades, investimentos, negócios, bens valiosos e acesso a capital. A classificação descreve o padrão de vida e o poder de compra geral do personagem; não representa uma quantia exata de dinheiro disponível.</p>
+<p>Em conjunto com o Mestre, escolha o nível que melhor representa a situação econômica do personagem. Considere sua ocupação, origem familiar, patrimônio, despesas, dependentes, dívidas, moradia e posição social. O nível não é determinado exclusivamente pela profissão ou pela renda declarada.</p>
+<p>Quando for útil estimar a renda mensal do personagem, utilize a rolagem indicada na tabela. O resultado representa uma <strong>referência variável de renda mensal</strong>, não um salário garantido nem dinheiro necessariamente disponível em mãos. O Mestre pode dispensar a rolagem quando a situação for resolvida narrativamente; não é necessário rolar novamente a cada mês se a renda não for relevante para a cena.</p>
+<table class="resources-table">
+<thead>
+<tr>
+<th>Nível</th>
+<th>Classificação</th>
+<th>Renda Mensal (rolagem de referência)</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><strong>Sem Recursos</strong></td>
+<td><strong>1d4 £</strong></td>
+<td>Sobrevive de trabalhos ocasionais, favores e pequenas quantias. Não possui renda confiável.</td>
+</tr>
+<tr>
+<td>1</td>
+<td><strong>Precário</strong></td>
+<td><strong>1d6 + 3 £</strong></td>
+<td>Consegue sustentar necessidades básicas, mas qualquer despesa extraordinária compromete suas finanças.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Modesto</strong></td>
+<td><strong>2d6 + 8 £</strong></td>
+<td>Possui renda relativamente estável, consegue manter uma moradia simples e adquirir equipamentos comuns.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Confortável</strong></td>
+<td><strong>3d6 + 20 £</strong></td>
+<td>Possui estabilidade financeira, boa moradia e capacidade de realizar compras relevantes sem comprometer seu sustento.</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Abastado</strong></td>
+<td><strong>4d10 + 40 £</strong></td>
+<td>Mantém padrão de vida elevado, possui propriedades, contatos comerciais e acesso a serviços exclusivos.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Rico</strong></td>
+<td><strong>5d20 + 80 £</strong></td>
+<td>Possui grande patrimônio, influência econômica e capacidade de financiar operações, negócios e expedições.</td>
+</tr>
+</tbody>
+</table>
+<p class="small"><strong>Como interpretar a rolagem:</strong> role a fórmula correspondente apenas quando for útil estimar os recursos que podem circular ou ser mobilizados durante aquele mês. No nível 0, o resultado representa quantias ocasionais obtidas por trabalhos, favores ou oportunidades, e não uma renda regular. Nos demais níveis, representa uma estimativa mensal de renda e capacidade econômica. O resultado não é um saldo acumulado, não desconta despesas e não determina quanto o personagem pode gastar livremente. Patrimônio, dívidas, dependentes, custos de manutenção e acesso ao dinheiro continuam sendo considerados pela ficção.</p>
+<h4>Expressão narrativa dos níveis de Recursos</h4>
+<p>A classificação também ajuda a orientar as ambições, preocupações e oportunidades do personagem. Ela não determina sua personalidade, mas oferece um contexto para compreender como sua condição econômica influencia suas decisões e sua relação com o mundo.</p>
+<div class="resources-narrative">
+<div class="stat-block">
+<h4>Nível 0 — Sem Recursos</h4>
+<p>O personagem depende de trabalhos ocasionais, favores e oportunidades para atravessar o cotidiano. Para um Beyonder, seus poderes podem representar uma chance de escapar da precariedade, conquistar reconhecimento e ascender socialmente; essa ambição, porém, também pode torná-lo vulnerável a organizações e indivíduos dispostos a explorar suas necessidades.</p>
+</div>
+<div class="stat-block">
+<h4>Nível 1 — Precário</h4>
+<p>O personagem consegue manter o básico, mas vive próximo de perder a estabilidade que conquistou. Uma recompensa sobrenatural pode representar um alívio importante, embora aceitar trabalhos perigosos coloque em risco sua segurança e sua rotina. Sua trajetória pode girar em torno da busca por independência e de uma vida em que imprevistos não comprometam tudo.</p>
+</div>
+<div class="stat-block">
+<h4>Nível 2 — Modesto</h4>
+<p>O personagem possui alguma estabilidade e consegue fazer planos, manter uma moradia simples e adquirir equipamentos comuns. Seus recursos permitem agir com certa autonomia, mas grandes projetos ainda exigem escolhas e sacrifícios. Pode buscar ascensão para proteger pessoas próximas, financiar investigações ou deixar de depender de terceiros em momentos decisivos.</p>
+</div>
+<div class="stat-block">
+<h4>Nível 3 — Confortável</h4>
+<p>O personagem dispõe de tempo, autonomia e condições para investir em projetos pessoais, contatos e atividades Beyonder. Pode pagar por serviços e informações, mas logo percebe que dinheiro não garante confiança, conhecimento verdadeiro ou segurança. Sua condição facilita a escolha das próprias batalhas, sem lhe permitir controlar os riscos que enfrenta.</p>
+</div>
+<div class="stat-block">
+<h4>Nível 4 — Abastado</h4>
+<p>O personagem possui patrimônio, negócios e relações que lhe permitem financiar operações, contratar especialistas e circular entre grupos influentes. Essa posição amplia seu alcance, mas também cria obrigações, concorrentes e alvos para chantagens. Mesmo com influência no mundo comum, ele não pode presumir que organizações secretas ou forças sobrenaturais obedecerão aos seus interesses.</p>
+</div>
+<div class="stat-block">
+<h4>Nível 5 — Rico</h4>
+<p>O personagem pode mobilizar grandes fortunas, sustentar expedições e financiar projetos de longo prazo. Sua riqueza oferece influência e meios para transformar o mundo ao seu redor, mas não compra lealdade genuína, segredos ocultos, domínio sobre Artefatos Selados ou proteção contra entidades poderosas. Em algum momento, precisará reconhecer que nem tudo pode ser resolvido com dinheiro.</p>
+</div>
+</div>
+<p class="small">A trajetória econômica pode mudar durante a campanha. Uma ascensão pode vir do trabalho, de negócios, heranças, alianças ou do uso dos poderes Beyonder; uma queda pode resultar de dívidas, perdas, conspirações ou sacrifícios pessoais. O nível de Recursos deve acompanhar essas mudanças quando forem relevantes para a história.</p>
+<div class="box note-box">
+<div class="box-title">Origem e forma dos Recursos</div>
+<p>O jogador deve definir, em linhas gerais, <strong>de onde vêm seus Recursos</strong> e <strong>em que forma eles existem</strong>. A origem pode ser um emprego, atividade profissional, negócio familiar, herança, renda de propriedades, investimentos, comércio, atividade clandestina, patrocínio ou apoio de uma organização. Os ativos podem estar em dinheiro, imóveis, terras, estoques comerciais, joias, títulos, equipamentos ou participações em negócios.</p>
+<p>Recursos não precisam estar integralmente disponíveis em moeda. Um personagem pode controlar propriedades valiosas e, ainda assim, ter pouco dinheiro em mãos. Transformar bens em dinheiro pode exigir tempo, compradores, intermediários e exposição pública. A fonte de renda também pode secar, ser roubada, bloqueada, confiscada ou comprometida durante a campanha. Nesses casos, a faixa mensal continua descrevendo sua escala econômica habitual, mas não significa que o valor esteja disponível em espécie naquele momento.</p>
+</div>
+<div class="box rule-box">
+<div class="box-title">Como os Recursos funcionam durante o jogo</div>
+<ul>
+<li><strong>Despesas habituais:</strong> compras rotineiras compatíveis com o padrão de vida do personagem não exigem controle de cada moeda. O Mestre pode presumir que alimentação comum, vestuário, manutenção e pequenas despesas estão cobertos pela rotina descrita.</li>
+<li><strong>Compras relevantes:</strong> quando o personagem pretende adquirir algo caro ou fora de seu padrão habitual, o Mestre avalia a compra narrativamente. Ela pode exigir planejamento, espera, venda de um bem, empréstimo, crédito, favor, negociação ou alguma consequência para o patrimônio.</li>
+<li><strong>Fora da capacidade econômica:</strong> uma aquisição muito além dos Recursos do personagem não é automaticamente impossível, mas normalmente exige uma solução na história — como reunir investidores, contrair uma dívida, encontrar um patrono ou oferecer algo valioso em troca.</li>
+<li><strong>Bens raros ou restritos:</strong> ter Recursos elevados não garante acesso a armas controladas, Componentes Beyonder, Itens Beyonder ou Artefatos Selados. Disponibilidade, contatos, autorização, procedência, sigilo e risco continuam determinantes.</li>
+<li><strong>Como interpretar a renda mensal:</strong> a rolagem representa uma estimativa narrativa dos recursos que podem ser obtidos ou mobilizados no período. No nível 0, são quantias ocasionais; nos demais, refletem a escala econômica habitual. Não é um pagamento automático, dinheiro necessariamente recebido em mãos, saldo bancário nem orçamento livre para gastar.</li>
+<li><strong>Sem contabilidade obrigatória:</strong> o Mestre não precisa acompanhar cada libra recebida ou gasta. A faixa mensal orienta a escala econômica do personagem, mas não estabelece um limite rígido de compras nem concede bônus em testes. Negociações e consequências relevantes continuam sendo resolvidas pela narrativa.</li>
+</ul>
+</div>
+<p class="small">O nível de Recursos pode mudar quando acontecimentos importantes alterarem permanentemente o patrimônio, as fontes de renda ou o acesso econômico do personagem. O Mestre e o jogador devem ajustar a classificação de acordo com o que ocorreu na história, e não por uma contagem automática de despesas.</p>
+<h3>Disponibilidade e mercados</h3>
+<table>
+<thead><tr><th>Categoria</th><th>Onde costuma ser encontrada</th><th>Restrições usuais</th></tr></thead>
+<tbody>
+<tr><td>Suprimentos comuns</td><td>Comércios, mercados, lojas de ferramentas e armazéns.</td><td>Disponibilidade depende do local e da estação.</td></tr>
+<tr><td>Armas e munições comuns</td><td>Armeiros, comerciantes autorizados, lojas especializadas e fornecedores militares.</td><td>Legislação, licenças, reputação e posição social podem limitar a compra.</td></tr>
+<tr><td>Itens restritos ou raros</td><td>Contatos, mercados clandestinos, colecionadores e intermediários.</td><td>Preço elevado, risco de fraude, rastreamento ou investigação pelas autoridades.</td></tr>
+<tr><td>Componentes Beyonder</td><td>Organizações, comerciantes místicos, expedições, leilões secretos e redes clandestinas.</td><td>Raridade, Sequência, procedência, conservação e perigo de transporte.</td></tr>
+<tr><td>Itens Beyonder</td><td>Artesãos, reuniões Beyonder, leilões e organizações que controlam o mercado místico.</td><td>Podem exigir indicação, encomenda, favor ou vínculo com uma organização.</td></tr>
+<tr><td>Artefatos Selados</td><td>Igrejas Ortodoxas, organizações secretas e coleções sob contenção.</td><td>Normalmente não estão à venda; acesso costuma depender de autorização, missão, empréstimo ou negociação excepcional.</td></tr>
+</tbody>
+</table>
+<div class="box note-box">
+<div class="box-title">Componentes e avanço de Sequência</div>
+<p>Os Componentes Principais e Suplementares exigidos para preparar poções não são mercadorias comuns. O valor de uma Característica Beyonder depende de sua Sequência, do Caminho, da procedência, da integridade e da dificuldade de obtenção. Componentes Suplementares também variam bastante: alguns são relativamente acessíveis, enquanto outros podem ser tão raros quanto o próprio Componente Principal.</p>
+<p>O Capítulo 6 determina quais componentes são necessários para o avanço. Este capítulo não substitui essa lista nem estabelece que pagar o preço de mercado seja suficiente para obter um ingrediente. O Mestre determina disponibilidade, procedência, condição e preço em cada cenário.</p>
+</div>
+<div class="box warning-box">
+<div class="box-title">Valor de poções e ingredientes</div>
+<p>Poções, Características Beyonder e ingredientes de Sequências superiores representam bens extraordinariamente valiosos. Seu valor deve ser estabelecido conforme a raridade, a procedência, a conservação, o Caminho, a Sequência, o risco de transporte e o interesse de compradores específicos. Não existe uma tabela universal de preços nem a garantia de que um comprador ou vendedor esteja disponível. O Mestre pode expressar o valor em libras para dar contexto à negociação, mas a aquisição deve ser resolvida principalmente pela narrativa e pelos Recursos dos envolvidos.</p>
+</div>
+</section>
+<div class="separator"></div>
+<section id="armas">
+<h2>2. Armas <span class="en">(Weapons)</span></h2>
+<p>Cada arma possui uma combinação fixa de Atributo e Proficiência, indicada em sua linha da tabela. Essa combinação determina o teste de ataque e, em caso de acerto, é acrescentada aos Dados da arma para calcular o dano. As armas representam modelos comuns da Quinta Época; qualidade, procedência e fabricação podem alterar sua disponibilidade e seu preço.</p>
+<div class="box rule-box">
+<div class="box-title">Como interpretar as armas</div>
+<ul>
+<li><strong>Dados:</strong> rolagem base de dano da arma quando o ataque acerta.</li>
+<li><strong>Teste de ataque e bônus de dano (Atributo + Proficiência):</strong> a combinação apresentada na tabela é utilizada para resolver o ataque e, em caso de acerto, é somada aos Dados da arma. Por exemplo, DES (+2) + Armas de Fogo (+3) concede +5; um revólver de bolso que cause 1d6 causa, portanto, 1d6+5. A mesma combinação é usada para acertar e calcular o dano.</li>
+<li><strong>Alcance:</strong> distância máxima de referência, não uma garantia de acerto. Cobertura, visibilidade, obstáculos, movimento e condições da cena continuam relevantes.</li>
+</ul>
+<p><strong>Dados:</strong> rolagem base de dano da arma quando o ataque acerta. <strong>Teste de ataque e bônus de dano (Atributo + Proficiência):</strong> a combinação fixa apresentada na tabela é utilizada para resolver o ataque e, em caso de acerto, é somada aos Dados da arma. Por exemplo, DES (+2) + Armas de Fogo (+3) concede +5; um revólver de bolso que cause 1d6 causa, portanto, 1d6+5. Não escolha outro Atributo ou Proficiência para a mesma arma. <strong>Alcance:</strong> distância máxima de referência; cobertura, visibilidade, obstáculos, movimento e condições da cena continuam relevantes.</p>
+</div>
+<div class="box rule-box">
+<div class="box-title">Procedimento de ataque com armas</div>
+<ol>
+<li><strong>Declare o ataque:</strong> escolha o alvo, a arma e descreva a abordagem. Utilize a combinação fixa de Atributo e Proficiência indicada na tabela.</li>
+<li><strong>Verifique o alcance:</strong> o alvo precisa estar dentro do alcance máximo da arma e em uma linha de ataque possível. Cobertura total, obstáculos sólidos ou falta de visibilidade podem impedir o ataque; cobertura parcial e condições adversas podem impor Desvantagem.</li>
+<li><strong>Resolva o teste:</strong> compare o teste à Defesa do alvo, salvo se uma regra específica indicar CD ou disputa.</li>
+<li><strong>Determine o dano:</strong> em caso de acerto, role os Dados da arma e acrescente o valor da mesma combinação de Atributo e Proficiência indicada na tabela para o teste de ataque.</li>
+<li><strong>Aplique Égide:</strong> antes dos ajustes, compare o dano bruto aos Limiares do alvo para determinar a categoria inicial. O defensor pode gastar 1 ponto de Égide para reduzir essa categoria em um nível, conforme o Capítulo 7.</li>
+<li><strong>Aplique os ajustes:</strong> resolva efeitos específicos, Resistência, Vulnerabilidade e Imunidade aplicáveis ao tipo de dano. Recalcule o valor final e confira a categoria correspondente aos Limiares do alvo; não aplique Égide novamente.</li>
+<li><strong>Marque o ferimento:</strong> marque os PV correspondentes à categoria final, depois da aplicação de Égide.</li>
+</ol>
+<p class="small">Um ataque com arma normalmente utiliza uma Ação Principal. Usos especiais, manobras, Reações e poderes que alterem essa regra precisam declarar isso expressamente.</p>
+</div>
+<div class="box note-box">
+<div class="box-title">Alcance e pressão em combate</div>
+<p>O alcance máximo indicado na tabela é a distância de referência para um ataque em condições normais; não significa que o disparo seja automático ou que obstáculos possam ser ignorados. Dentro desse limite, o Mestre considera linha de visão, cobertura, iluminação, movimento do alvo e estabilidade do atirador.</p>
+<p><strong>Alcance estendido:</strong> armas de fogo, armas de disparo e armas arremessáveis quando lançadas também podem atingir um alvo além do alcance indicado, desde que a distância não ultrapasse o <strong>dobro do alcance máximo</strong>. No intervalo adicional, o ataque é realizado com <strong>Desvantagem</strong>. Por exemplo, uma arma com alcance <strong>Longo (18 m)</strong> pode atingir um alvo a até 36 m; entre mais de 18 m e 36 m, o ataque tem Desvantagem. Para uma arma arremessável com alcance de 6 m, o limite estendido é 12 m. Acima do dobro do alcance, o ataque à distância ou arremesso não é possível. O alcance estendido não ignora cobertura, obstáculos, falta de visibilidade ou outras limitações físicas da arma. A Desvantagem é uma fonte normal e segue as regras de cancelamento do Capítulo 3.</p>
+<p>Conforme o Capítulo 7, realizar um ataque à distância enquanto uma ameaça hostil capaz de alcançar o atirador estiver a até <strong>1,5 m</strong> impõe Desvantagem. Essa regra se aplica a armas de fogo, armas de disparo e ataques com armas arremessáveis.</p>
+</div>
+<h3>Armas de fogo <span class="en">(Firearms)</span></h3>
+<p>Armas de fogo oferecem grande capacidade de causar ferimentos à distância, mas dependem de munição, manutenção e espaço para manuseio. O estampido de um disparo normalmente denuncia a posição do atirador; armas compactas podem ser ocultadas, mas não eliminam o ruído nem as consequências legais e sociais de seu porte.</p>
+<table class="weapons-table firearms-table">
+<thead><tr><th>Arma / valor indicativo</th><th>Dados</th><th>Teste de ataque e bônus de dano (Atributo + Proficiência)</th><th>Tipo de dano</th><th>Alcance</th><th>Capacidade e propriedades</th></tr></thead>
+<tbody>
+<tr><td><strong>Derringer</strong><br/><span class="small">£4–£7</span></td><td>1d6</td><td>DES + Armas de Fogo</td><td>Perfurante</td><td>Médio (9 m)</td><td>2 disparos; uma mão; Leve; Ocultável; Recarga</td></tr>
+<tr><td><strong>Revólver de bolso</strong><br/><span class="small">£3–£5</span></td><td>1d6</td><td>DES + Armas de Fogo</td><td>Perfurante</td><td>Longo (12 m)</td><td>5 ou 6 tiros; uma mão; Leve; Ocultável; Recarga</td></tr>
+<tr><td><strong>Revólver comum</strong><br/><span class="small">£5–£8</span></td><td>1d8</td><td>DES + Armas de Fogo</td><td>Perfurante</td><td>Longo (18 m)</td><td>6 tiros; uma mão; Recarga</td></tr>
+<tr><td><strong>Revólver pesado</strong><br/><span class="small">£7–£10</span></td><td>1d10</td><td>DES + Armas de Fogo</td><td>Perfurante</td><td>Longo (24 m)</td><td>6 tiros; uma mão; Recuo; Recarga</td></tr>
+<tr><td><strong>Pistola semiautomática</strong><br/><span class="small">£7–£12</span></td><td>1d8</td><td>DES + Armas de Fogo</td><td>Perfurante</td><td>Longo (18 m)</td><td>8 tiros; uma mão; Recarga</td></tr>
+<tr><td><strong>Carabina</strong><br/><span class="small">£6–£12</span></td><td>1d8</td><td>DES + Armas de Fogo</td><td>Perfurante</td><td>Extremo (54 m)</td><td>5 ou 6 tiros; Duas mãos; Recarga</td></tr>
+<tr><td><strong>Espingarda de cano duplo</strong><br/><span class="small">£5–£10</span></td><td>2d6</td><td>DES + Armas de Fogo</td><td>Perfurante</td><td>Longo (12 m)</td><td>2 cartuchos; Duas mãos; Dispersão; Recuo; Recarga</td></tr>
+<tr><td><strong>Rifle de repetição</strong><br/><span class="small">£10–£18</span></td><td>1d10</td><td>DES + Armas de Fogo</td><td>Perfurante</td><td>Extremo (90 m)</td><td>5 tiros; Pesada; Duas mãos; Recuo; Recarga</td></tr>
+<tr><td><strong>Rifle de precisão</strong><br/><span class="small">£15–£25</span></td><td>1d12</td><td>DES + Armas de Fogo</td><td>Perfurante</td><td>Extremo (90 m)</td><td>1 disparo; Pesada; Duas mãos; Recuo; Lenta; Recarga</td></tr>
+<tr><td><strong>Mosquete ou rifle antigo</strong><br/><span class="small">£2–£4</span></td><td>1d10</td><td>DES + Armas de Fogo</td><td>Perfurante</td><td>Extremo (36 m)</td><td>1 disparo; Pesada; Duas mãos; Recuo; Lenta; Recarga</td></tr>
+</tbody>
+</table>
+<h3>Armas brancas <span class="en">(Melee Weapons)</span></h3>
+<p>Armas brancas variam de ferramentas discretas a instrumentos de guerra. O comprimento, o equilíbrio, o peso e a forma de empunhadura influenciam a maneira de utilizá-las. Uma arma pode favorecer força e impacto, enquanto outra depende de precisão, ritmo, leitura do adversário ou movimentos enganosos.</p>
+<table class="weapons-table melee-table">
+<thead><tr><th>Arma / valor indicativo</th><th>Dados</th><th>Teste de ataque e bônus de dano (Atributo + Proficiência)</th><th>Tipo de dano</th><th>Alcance</th><th>Propriedades</th></tr></thead>
+<tbody>
+<tr><td><strong>Faca comum</strong><br/><span class="small">5 s–£1</span></td><td>1d4</td><td>FOR + Armas Brancas</td><td>Perfurante ou Cortante</td><td>Corpo a Corpo (1,5 m)</td><td>Leve; Ocultável; Arremessável — Médio (6 m)</td></tr>
+<tr><td><strong>Adaga</strong><br/><span class="small">£1–£2</span></td><td>1d4</td><td>FOR ou DES + Armas Brancas</td><td>Perfurante</td><td>Corpo a Corpo (1,5 m)</td><td>Leve; Ocultável; Arremessável — Médio (6 m)</td></tr>
+<tr><td><strong>Baioneta</strong><br/><span class="small">£1–£3</span></td><td>1d6</td><td>FOR + Armas Brancas</td><td>Perfurante</td><td>Corpo a Corpo (1,5 m)</td><td>Acoplável a rifle compatível</td></tr>
+<tr><td><strong>Espada curta</strong><br/><span class="small">£2–£4</span></td><td>1d6</td><td>FOR ou DES + Armas Brancas</td><td>Cortante ou Perfurante</td><td>Corpo a Corpo (1,5 m)</td><td>Leve</td></tr>
+<tr><td><strong>Rapieira</strong><br/><span class="small">£3–£6</span></td><td>1d6</td><td>DES + Armas Brancas</td><td>Perfurante</td><td>Corpo a Corpo (1,5 m)</td><td>Leve; favorece estocadas e ataques de precisão</td></tr>
+<tr><td><strong>Sabre</strong><br/><span class="small">£3–£6</span></td><td>1d8</td><td>FOR + Armas Brancas</td><td>Cortante</td><td>Corpo a Corpo (1,5 m)</td><td>Lâmina de corte; uso com uma mão</td></tr>
+<tr><td><strong>Espada longa</strong><br/><span class="small">£4–£7</span></td><td>1d8/1d10</td><td>FOR + Armas Brancas</td><td>Cortante</td><td>Corpo a Corpo (1,5 m)</td><td>Versátil</td></tr>
+<tr><td><strong>Espadão</strong><br/><span class="small">£5–£9</span></td><td>2d6</td><td>FOR + Armas Brancas</td><td>Cortante</td><td>Corpo a Corpo (1,5 m)</td><td>Pesada; Duas mãos</td></tr>
+<tr><td><strong>Machadinha</strong><br/><span class="small">£1–£2</span></td><td>1d6</td><td>FOR + Armas Brancas</td><td>Cortante</td><td>Corpo a Corpo (1,5 m)</td><td>Leve; Arremessável — Médio (6 m)</td></tr>
+<tr><td><strong>Machado de batalha</strong><br/><span class="small">£3–£5</span></td><td>1d8/1d10</td><td>FOR + Armas Brancas</td><td>Cortante</td><td>Corpo a Corpo (1,5 m)</td><td>Versátil; Pesada</td></tr>
+<tr><td><strong>Maça ou martelo de guerra</strong><br/><span class="small">£2–£4</span></td><td>1d8</td><td>FOR + Armas Brancas</td><td>Contundente</td><td>Corpo a Corpo (1,5 m)</td><td>Pesada; uso com uma mão</td></tr>
+<tr><td><strong>Bastão ou cassetete</strong><br/><span class="small">5 s–£2</span></td><td>1d6</td><td>FOR + Armas Brancas</td><td>Contundente</td><td>Corpo a Corpo (1,5 m)</td><td>Leve; pode ser usado para golpear sem intenção letal</td></tr>
+<tr><td><strong>Bastão longo</strong><br/><span class="small">5 s–£2</span></td><td>1d6/1d8</td><td>FOR + Armas Brancas</td><td>Contundente</td><td>Curto (3 m)</td><td>Versátil; Alcance ampliado — Curto (3 m), quando empunhado com duas mãos</td></tr>
+<tr><td><strong>Lança</strong><br/><span class="small">£1–£3</span></td><td>1d6/1d8</td><td>FOR + Armas Brancas</td><td>Perfurante</td><td>Corpo a Corpo (1,5 m)</td><td>Versátil; Arremessável — Médio (9 m)</td></tr>
+<tr><td><strong>Alabarda</strong><br/><span class="small">£3–£6</span></td><td>1d10</td><td>FOR + Armas Brancas</td><td>Cortante ou Perfurante</td><td>Curto (3 m)</td><td>Pesada; Duas mãos; Alcance ampliado — Curto (3 m)</td></tr>
+<tr><td><strong>Chicote</strong><br/><span class="small">5 s–£2</span></td><td>1d4</td><td>DES + Armas Brancas</td><td>Cortante</td><td>Curto (3 m)</td><td>Alcance ampliado — Curto (3 m)</td></tr>
+<tr><td><strong>Soqueira</strong><br/><span class="small">8 s–£1</span></td><td>1d4</td><td>FOR + Luta</td><td>Contundente</td><td>Corpo a Corpo (1,5 m)</td><td>Leve; Ocultável</td></tr>
+<tr><td><strong>Bengala-espada</strong><br/><span class="small">£3–£6</span></td><td>1d6</td><td>FOR + Armas Brancas</td><td>Cortante</td><td>Corpo a Corpo (1,5 m)</td><td>Ocultável como bengala comum</td></tr>
+</tbody>
+</table>
+<h3>Armas de disparo e arremesso <span class="en">(Missile and Thrown Weapons)</span></h3>
+<p>Estas armas lançam projéteis sem utilizar pólvora. Arcos dependem da tensão da corda e da força necessária para armá-los; bestas armazenam essa tensão em um mecanismo e costumam exigir recarga; fundas e armas arremessáveis dependem de coordenação, cálculo e espaço para executar o movimento.</p>
+<table class="weapons-table ranged-table">
+<thead><tr><th>Arma / valor indicativo</th><th>Dados</th><th>Teste de ataque e bônus de dano (Atributo + Proficiência)</th><th>Tipo de dano</th><th>Alcance</th><th>Propriedades</th></tr></thead>
+<tbody>
+<tr><td><strong>Funda</strong><br/><span class="small">2 s–8 s</span></td><td>1d4</td><td>DES + Armas Brancas</td><td>Contundente</td><td>Longo (18 m)</td><td>Leve; Baixo ruído; exige munição adequada</td></tr>
+<tr><td><strong>Arco curto</strong><br/><span class="small">£2–£4</span></td><td>1d6</td><td>DES + Armas Brancas</td><td>Perfurante</td><td>Extremo (36 m)</td><td>Duas mãos; Baixo ruído</td></tr>
+<tr><td><strong>Arco longo</strong><br/><span class="small">£4–£7</span></td><td>1d8</td><td>DES + Armas Brancas</td><td>Perfurante</td><td>Extremo (72 m)</td><td>Pesada; Duas mãos; Baixo ruído</td></tr>
+<tr><td><strong>Besta de mão</strong><br/><span class="small">£4–£7</span></td><td>1d6</td><td>DES + Armas Brancas</td><td>Perfurante</td><td>Longo (12 m)</td><td>Leve; Recarga; Baixo ruído; Ocultável</td></tr>
+<tr><td><strong>Besta leve</strong><br/><span class="small">£3–£6</span></td><td>1d8</td><td>DES + Armas Brancas</td><td>Perfurante</td><td>Longo (24 m)</td><td>Duas mãos; Recarga; Baixo ruído</td></tr>
+<tr><td><strong>Besta pesada</strong><br/><span class="small">£5–£9</span></td><td>1d10</td><td>DES + Armas Brancas</td><td>Perfurante</td><td>Extremo (36 m)</td><td>Pesada; Duas mãos; Recarga; Baixo ruído</td></tr>
+<tr><td><strong>Faca de arremesso</strong><br/><span class="small">1 s–5 s</span></td><td>1d4</td><td>DES + Armas Brancas</td><td>Perfurante</td><td>Médio (6 m)</td><td>Leve; Ocultável; Arremessável — Médio (6 m)</td></tr>
+<tr><td><strong>Dardo</strong><br/><span class="small">5 s–£1</span></td><td>1d4</td><td>DES + Armas Brancas</td><td>Perfurante</td><td>Médio (6 m)</td><td>Leve; Arremessável — Médio (6 m)</td></tr><tr><td><strong>Azagaia</strong><br/><span class="small">5 s–£1</span></td><td>1d6</td><td>FOR + Armas Brancas</td><td>Perfurante</td><td>Longo (18 m)</td><td>Arremessável — Longo (18 m)</td></tr>
+</tbody>
+</table>
+<h3>Armas improvisadas e ataques desarmados</h3>
+<p>Um objeto que não foi projetado como arma pode ser utilizado de maneira improvisada quando a situação permitir. Garrafas, ferramentas, pedras, cadeiras e tábuas podem causar dano, mas sua forma, resistência e equilíbrio influenciam o resultado. Utilize a combinação indicada na tabela: golpes desarmados usam FOR + Luta; objetos manejados como armas usam FOR + Armas Brancas; objetos pequenos arremessados com precisão usam DES + Armas Brancas. O Mestre define os Dados e o tipo de dano de acordo com o objeto. Itens frágeis podem quebrar após o impacto, enquanto objetos volumosos podem ser difíceis de manejar. Objetos improvisados não recebem propriedades automaticamente.</p>
+<table class="weapons-table improvised-table">
+<thead><tr><th>Objeto ou ataque</th><th>Dados de referência</th><th>Teste de ataque e bônus de dano (Atributo + Proficiência)</th><th>Tipo de dano</th><th>Alcance</th><th>Observações</th></tr></thead>
+<tbody><tr><td><strong>Golpe desarmado</strong></td><td>1d4</td><td>FOR + Luta</td><td>Contundente</td><td>Corpo a Corpo (1,5 m)</td><td>Ataque desarmado; o bônus de FOR e Luta indicado nesta linha também é somado aos Dados.</td></tr><tr><td><strong>Garrafa ou ferramenta pequena (golpe)</strong></td><td>1d4</td><td>FOR + Armas Brancas</td><td>Contundente</td><td>Corpo a Corpo (1,5 m)</td><td>Use para golpear com o objeto na mão. Itens frágeis podem quebrar após o impacto.</td></tr><tr><td><strong>Pedra ou objeto pequeno arremessado</strong></td><td>1d4</td><td>DES + Armas Brancas</td><td>Contundente</td><td>Médio (6 m)</td><td>Pode ser lançado contra um alvo; a distância e a linha de ataque continuam relevantes.</td></tr><tr><td><strong>Cadeira, tábua ou ferramenta pesada</strong></td><td>1d6</td><td>FOR + Armas Brancas</td><td>Contundente</td><td>Corpo a Corpo (1,5 m)</td><td>Golpe com objeto pesado. Seu volume pode impor Desvantagem em espaço restrito ou tornar o ataque impossível se não houver espaço para manejá-lo.</td></tr></tbody>
+</table>
+<p class="small"><strong>Arremesso:</strong> quando uma arma possuir a propriedade Arremessável, utilize o teste fixo indicado na linha daquela arma; não escolha outro Atributo para obter um bônus maior. O mesmo par de Atributo e Proficiência usado no teste é somado aos Dados de dano. Para objetos improvisados, utilize a combinação da linha correspondente ou a abordagem determinada pelo Mestre quando não houver uma linha equivalente.</p>
+<p>Armas improvisadas não recebem automaticamente as propriedades de armas semelhantes. Uma cadeira não é necessariamente Versátil, uma garrafa não é necessariamente Arremessável e uma ferramenta não concede o treinamento de uma arma militar. O Mestre utiliza as combinações da tabela e define uma combinação fixa para situações não listadas, escolhendo FOR quando a ação depende de força e impacto ou DES quando depende de mira e precisão.</p>
+<div class="box note-box">
+<div class="box-title">Alcance e situação de combate</div>
+<p><strong>Faixas de distância:</strong> as categorias seguem o Capítulo 7: <strong>Corpo a Corpo</strong> (até 1,5 m), <strong>Curto</strong> (até 3 m), <strong>Médio</strong> (até 9 m), <strong>Longo</strong> (até 30 m) e <strong>Extremo</strong> (até 90 m). Nas tabelas, o nome indica a categoria em que o alcance da arma se enquadra, e o valor entre parênteses informa o alcance máximo próprio daquele equipamento. Por exemplo, uma arma com alcance de 18 m é classificada como <strong>Longo (18 m)</strong>. Para ataques à distância e arremessáveis, consulte a regra de Alcance estendido na caixa anterior. <strong>Armas corpo a corpo não ultrapassam o alcance indicado na tabela</strong>, mesmo quando possuem Alcance ampliado.</p>
+<p>Se houver um inimigo hostil a até 1,5 m que possa ameaçar o atirador, o ataque à distância é realizado com <strong>Desvantagem</strong>, conforme o Capítulo 7. Armas de disparo e arremessáveis não ignoram obstáculos, cobertura ou a necessidade de localizar o alvo.</p>
+</div>
+</section>
+<section id="propriedades">
+<h2>3. Propriedades das Armas <span class="en">(Weapon Properties)</span></h2>
+<p>As propriedades descrevem exigências e características específicas de manuseio. Uma propriedade só produz os efeitos escritos em sua descrição; não se presume que uma arma possua propriedades por ser semelhante a outra. Quando uma arma possuir várias propriedades, aplique todas as que forem pertinentes à situação.</p>
+<table>
+<thead><tr><th>Propriedade</th><th>Descrição e aplicação</th></tr></thead>
+<tbody>
+<tr><td><strong>Leve</strong></td><td>Arma de baixo peso e manejo simples, normalmente utilizada com uma mão. É fácil de transportar e exige menos espaço para ser sacada ou movimentada. A propriedade não concede ataques adicionais, Ação Bônus, Vantagem ou bônus automático. Ser Leve não significa ser Ocultável; isso precisa constar separadamente.</td></tr>
+<tr><td><strong>Versátil</strong></td><td>Pode ser usada com uma ou duas mãos. Na coluna Dados, o formato <strong>1d6/1d8</strong> indica o dano com uma mão e com duas mãos, respectivamente. Para usar o segundo valor, o personagem precisa empunhar a arma com ambas as mãos. O par de Atributo e Proficiência indicado na tabela não muda entre as empunhaduras.</td></tr>
+<tr><td><strong>Pesada</strong></td><td>Possui massa, volume ou inércia que exige espaço e controle para ser manejada. Não significa, por si só, que a arma exija duas mãos; isso depende da propriedade Duas mãos. Em corredores estreitos, locais lotados, montarias ou posições instáveis, o Mestre pode impor Desvantagem quando a limitação prejudicar de fato o golpe. Se não houver espaço físico para movimentá-la, o ataque é impossível.</td></tr>
+<tr><td><strong>Duas mãos</strong></td><td>A arma precisa ser empunhada com as duas mãos no momento do ataque. Enquanto a utiliza, o personagem não pode empunhar outro objeto que também exija uma mão, como um escudo ou outra arma. Soltar uma das mãos permite uma interação simples, mas a arma precisa ser empunhada corretamente novamente antes de atacar.</td></tr>
+<tr><td><strong>Recuo</strong></td><td>O disparo produz uma reação que pode desestabilizar a arma e o atirador. Se disparar enquanto corre, estiver sendo empurrado, estiver montado sem apoio ou não tiver uma posição firme, o ataque é realizado com Desvantagem. Um apoio estável ou uma posição preparada elimina essa penalidade. Recuo não aumenta o dano e não impõe penalidade quando o atirador está estável.</td></tr>
+<tr><td><strong>Dispersão</strong></td><td>A munição se divide em vários projéteis e perde eficiência conforme a distância aumenta. Na espingarda de cano duplo da tabela, o disparo causa <strong>2d6</strong> contra um alvo a até 3 m e <strong>1d6</strong> contra um alvo a mais de 3 m, até o alcance máximo de 12 m. O ataque continua escolhendo um único alvo; os projéteis não atingem criaturas próximas automaticamente.</td></tr>
+<tr><td><strong>Lenta</strong></td><td>Exige preparação antes de poder ser disparada. Se não estiver preparada quando o conflito começar, o usuário precisa gastar uma Ação Principal para armá-la, posicioná-la e estabilizá-la; só poderá realizar o disparo em uma ação posterior. Se for deslocado, perder o apoio ou tiver a preparação interrompida, o Mestre pode exigir que prepare a arma novamente. Preparar não substitui recarregar: quando ambas as propriedades existirem, são etapas distintas. Uma arma preparada antes do conflito pode disparar normalmente.</td></tr>
+<tr><td><strong>Recarga</strong></td><td>Quando a munição disponível se esgota, o usuário precisa gastar uma Ação Principal para recarregar, desde que tenha munição compatível acessível. A recarga restaura a capacidade indicada na tabela. Se a arma utilizar carregamento individual, cada Ação Principal insere apenas um projétil. A propriedade não permite recarregar sem munição nem dispensa a preparação exigida por Lenta.</td></tr>
+<tr><td><strong>Baixo ruído</strong></td><td>Não produz o estampido característico de uma arma de fogo. O disparo ainda pode ser percebido pelo movimento, pelo som do mecanismo, pelo impacto do projétil ou pela reação do alvo. A propriedade não torna o ataque inaudível nem oculta automaticamente a posição do usuário.</td></tr>
+<tr><td><strong>Ocultável</strong></td><td>Seu tamanho e formato permitem escondê-la em roupas, botas, mangas ou compartimentos adequados. O Mestre considera o tamanho do objeto, a vestimenta, a qualidade do esconderijo e o rigor da busca. Uma revista superficial pode não encontrá-la; uma busca minuciosa ainda pode revelá-la. A propriedade não concede invisibilidade nem impede inspeção.</td></tr>
+<tr><td><strong>Arremessável</strong></td><td>Pode ser lançada contra um alvo, utilizando o alcance indicado na tabela ou junto à propriedade. O teste utiliza exatamente a combinação de Atributo e Proficiência listada para aquela arma; não se escolhe outro par ao arremessá-la. O mesmo bônus é somado aos Dados de dano. Ao ser lançada, a arma deixa a mão do usuário e precisa ser recuperada antes de ser utilizada novamente. A regra de Alcance estendido aplica-se ao arremesso, mas não ao uso corpo a corpo da mesma arma.</td></tr>
+<tr><td><strong>Alcance ampliado</strong></td><td>O comprimento da arma permite realizar ataques corpo a corpo contra alvos a até <strong>Curto (3 m)</strong>, em vez de limitar o ataque a <strong>Corpo a Corpo (1,5 m)</strong>. O alcance máximo precisa estar indicado na tabela. O ataque continua sendo corpo a corpo: não recebe a regra de Alcance estendido, não concede Reação nem ataque automático e não impede o alvo de se aproximar.</td></tr>
+<tr><td><strong>Acoplável</strong></td><td>Pode ser fixada a uma arma compatível, como uma baioneta em um rifle. Durante o conflito, fixar ou remover exige uma Ação Principal; fora dele, pode ser feito durante a preparação do equipamento. Acoplada, a baioneta continua sendo usada como arma corpo a corpo, com o teste indicado em sua linha, e não recebe automaticamente alcance ampliado nem bônus de dano do rifle.</td></tr></tbody>
+</table>
+<div class="box note-box">
+<div class="box-title">Interações com as regras de conflito</div>
+<p><strong>Sacar e guardar:</strong> sacar ou guardar uma arma acessível pode acompanhar o Movimento ou a Ação Principal, desde que não exija uma manipulação complexa. Se a arma estiver presa, escondida ou guardada em um recipiente, o Mestre pode exigir uma Ação Principal ou um teste adequado. Recarregar e preparar uma arma seguem as propriedades descritas acima.</p>
+<p><strong>Limites das propriedades:</strong> nenhuma propriedade altera por conta própria a Defesa, a Proteção, a Égide ou os Limiares de Dano. Também não concede ataques adicionais, Reações ou bônus de Especialização. Qualquer exceção precisa constar expressamente na descrição da arma.</p>
+</div>
+</section>
+<div class="separator"></div>
+<section id="municao">
+<h2>4. Munição <span class="en">(Ammunition)</span></h2>
+<p>As munições especiais desta seção — balas de prata, balas abençoadas e virotes de cinzas do Sol — são <strong>Itens Beyonder consumíveis</strong>. Cada projétil contém uma propriedade sobrenatural e é consumido no disparo. Sua aquisição depende de contatos, comerciantes especializados ou do mercado místico; não são munições comuns disponíveis em qualquer estabelecimento.</p>
+<table class="ammunition-table">
+<thead><tr><th>Tipo</th><th>Valor indicativo</th><th>Efeito</th></tr></thead>
+<tbody>
+<tr><td>Balas comuns (caixa com 12)</td><td>6 p</td><td>Servem para revólveres e rifles compatíveis.</td></tr>
+<tr><td>Cartuchos de espingarda (caixa com 6)</td><td>8 p</td><td>Munição com dispersão; utiliza o dano indicado para a espingarda.</td></tr>
+<tr><td>Virotes de besta (pacote com 10)</td><td>4 p</td><td>Munição comum para bestas compatíveis.</td></tr><tr><td>Flechas (pacote com 12)</td><td>6 p</td><td>Munição para arcos compatíveis. Podem ser recuperadas após o conflito se estiverem acessíveis e em condições de uso.</td></tr><tr><td>Munição de funda (bolsa com 20)</td><td>2 p</td><td>Pedras lisas ou projéteis de chumbo adequados a fundas. Cada disparo consome uma unidade.</td></tr>
+<tr><td><strong>Balas de prata</strong><br/><span class="tag">Item Beyonder</span></td><td>5 s cada</td><td>Contra criaturas cuja descrição indique vulnerabilidade à prata, trate o impacto como Vulnerabilidade: +1 no dano final, conforme o Capítulo 7. Esse ajuste não se acumula com outra fonte de Vulnerabilidade à prata.</td></tr>
+<tr><td><strong>Balas abençoadas</strong><br/><span class="tag">Item Beyonder</span></td><td>10 s cada</td><td>O dano causado pelo projétil passa a ser Radiante, em vez de Perfurante. Exige bênção prévia por meio de procedimento religioso ou místico apropriado. A bênção não aumenta os Dados de dano.</td></tr>
+<tr><td><strong>Virotes de cinzas do Sol</strong><br/><span class="tag">Item Beyonder</span></td><td>8 s cada</td><td>Acrescentam 1d4 de dano Radiante contra mortos-vivos suscetíveis. Role essa parcela separadamente e aplique Resistência, Vulnerabilidade ou Imunidade a Radiante antes de somá-la ao dano final.</td></tr>
+</tbody>
+</table>
+<div class="box rule-box">
+<div class="box-title">Consumo e recuperação de munição</div>
+<ul>
+<li>Cada ataque com arma de fogo consome <strong>1 bala ou cartucho</strong>, mesmo se o ataque errar, desde que o disparo tenha sido efetivamente realizado.</li>
+<li>Cada disparo de arco, besta ou funda consome <strong>1 projétil</strong> compatível. Facas, machadinhas, lanças e outros objetos arremessáveis também ficam fora de mão após o arremesso.</li>
+<li>Depois do conflito, flechas, virotes e armas arremessadas podem ser recuperados se estiverem acessíveis e em condições de uso. Projéteis quebrados, perdidos ou deformados não podem ser reutilizados.</li>
+<li>Sem munição compatível, a arma não pode realizar ataques à distância. Munições especiais devem ser compatíveis com o mecanismo da arma.</li>
+</ul>
+</div>
+<p class="small">Os bônus de dano são valores de adaptação do RPG. A Resistência, a Vulnerabilidade e a Imunidade continuam seguindo a ordem de resolução do Capítulo 7; efeitos de munição não substituem essas regras.</p>
+</section>
+<div class="separator"></div>
+<section id="protecao">
+<h2>5. Proteção <span class="en">(Protective Equipment)</span></h2>
+<p><strong>Proteção</strong> é o termo abrangente para equipamentos e outras fontes que ajudam o personagem a suportar ou evitar ferimentos. Proteção não substitui a Defesa nem concede um bônus genérico a essa estatística. Uma fonte só modifica a Defesa, os Limiares de Dano ou concede pontos de <strong>Égide</strong> quando isso estiver expressamente indicado em sua descrição.</p>
+<p><strong>Égide</strong> é um recurso defensivo consumível. Depois de determinar a categoria de dano, o participante pode gastar 1 ponto de Égide para reduzi-la em um nível, respeitando o limite de 1 ponto por ataque. A redução segue a ordem Severo → Maior → Menor → Nenhum dano. A regra completa está no Capítulo 7.</p>
+<table>
+<thead><tr><th>Equipamento</th><th>Valor indicativo</th><th>Perfil</th><th>Efeito sobre os Limiares</th></tr></thead>
+<tbody>
+<tr><td>Jaqueta de couro reforçada</td><td>£2</td><td>Proteção leve e discreta, compatível com roupas comuns.</td><td><strong>+1 / +1</strong> contra dano Contundente ou Cortante causado por armas mundanas que atinjam o tronco.</td></tr>
+<tr><td>Colete reforçado</td><td>£8</td><td>Proteção corporal visível sob casacos leves; pode restringir movimentos dependendo do modelo.</td><td><strong>+1 / +1</strong> contra dano Contundente ou Perfurante de ataques mundanos que atinjam o tronco.</td></tr>
+<tr><td>Colete oculto</td><td>£15</td><td>Proteção discreta, feita para ser usada sob roupas.</td><td><strong>+1 / +1</strong> contra dano Perfurante de ataques mundanos que atinjam o tronco. Não protege contra golpes dirigidos a outras regiões.</td></tr>
+<tr><td>Cota de malha</td><td>£25</td><td>Proteção metálica pesada, rara e pouco discreta para a Quinta Época. Dificulta movimentos silenciosos e manobras que exijam flexibilidade.</td><td><strong>+2 / +2</strong> contra dano Cortante e <strong>+1 / +1</strong> contra dano Perfurante mundano. Não oferece proteção adicional contra dano Contundente.</td></tr>
+</tbody>
+</table>
+<div class="box rule-box">
+<div class="box-title">Como aplicar Proteções</div>
+<ul>
+<li>Use os Limiares naturais do personagem e aplique o ajuste da peça apenas quando o tipo de dano e a região atingida estiverem cobertos por ela.</li>
+<li>Não se somam duas peças de proteção corporal mundana. Se o personagem usar camadas, aplique apenas o maior ajuste que cubra aquele dano; não some os valores das peças.</li>
+<li>Uma fonte sobrenatural só se acumula com equipamento mundano quando sua própria descrição disser que os efeitos são cumulativos. Na ausência dessa indicação, aplique apenas o maior ajuste de limiar pertinente.</li>
+<li>Depois de determinar a categoria de dano, o personagem ainda pode gastar 1 ponto de Égide, respeitando o limite de 1 ponto por ataque do Capítulo 7.</li>
+<li>A proteção não cobre automaticamente a cabeça, mãos, pernas ou objetos carregados. O Mestre determina a região atingida quando isso for relevante para a descrição do ataque.</li>
+</ul><p>Quando uma peça modificar os dois limiares em +1 / +1, some 1 ao valor natural de Menor → Maior e 1 ao valor natural de Maior → Severo. Para +2 / +2, some 2 a cada limiar. Anote os valores finais na ficha enquanto a peça estiver vestida.</p>
+</div>
+<div class="box warning-box">
+<div class="box-title">Regra provisória para equipamentos de proteção</div>
+<p>Os valores <strong>+1 / +1</strong> e <strong>+2 / +2</strong> representam o aumento, respectivamente, do limiar Menor → Maior e do limiar Maior → Severo. Aumentar os limiares torna mais difícil que um ataque alcance uma categoria de dano superior. Esses ajustes se aplicam apenas aos tipos de dano e às regiões corporais descritas na tabela.</p>
+</div>
+<p>Equipamentos mundanos desta tabela <strong>não aumentam a Defesa e não concedem Égide</strong>. Eles modificam apenas os Limiares nas situações descritas. Poderes, rituais e outras fontes de Proteção podem fornecer benefícios diferentes, mas devem declarar expressamente quais danos afetam, se modificam a Defesa ou os Limiares, se concedem Égide, como ela é recuperada e quais são suas limitações. A Cota de malha também impõe Desvantagem em testes de DES + Furtividade e DES + Acrobacia quando o ruído, o peso ou a rigidez do equipamento interferirem diretamente. Um personagem usa apenas uma peça principal de proteção corporal por vez; roupas comuns podem ser usadas por cima ou por baixo, mas não concedem outro ajuste de limiar.</p>
+</section>
+<div class="separator"></div>
+<section id="aventura">
+<h2>6. Equipamento de Aventura <span class="en">(Adventuring Gear)</span></h2>
+<table>
+<thead><tr><th>Item</th><th>Valor indicativo</th><th>Utilização e limites</th></tr></thead>
+<tbody>
+<tr><td>Lanterna a óleo</td><td>5 s</td><td>Ilumina até 12 m por aproximadamente 6 horas, enquanto houver combustível.</td></tr>
+<tr><td>Lanterna portátil a gás</td><td>15 s</td><td>Ilumina até 9 m. A segurança depende da ventilação e das condições do ambiente.</td></tr>
+<tr><td>Corda de cânhamo (15 m)</td><td>3 s</td><td>Suporta aproximadamente 120 kg em condições adequadas. Desgaste, nós e pontos de ancoragem podem reduzir sua capacidade.</td></tr>
+<tr><td>Kit de arrombamento</td><td>£1</td><td>Fornece ferramentas para manipular fechaduras comuns. O uso normalmente exige DES + Prestidigitação. Fechaduras incomuns, mecanismos de segurança ou armadilhas podem exigir outro teste ou mais tempo.</td></tr>
+<tr><td>Kit de primeiros socorros</td><td>10 s</td><td>Contém ataduras, antissépticos e instrumentos básicos. Possui 3 utilizações. Permite tentar estabilizar um personagem em Agonia conforme a regra abaixo; não restaura PV.</td></tr>
+<tr><td>Pêndulo espiritual</td><td>£2</td><td>Instrumento de apoio a práticas de adivinhação. O pêndulo não responde por conta própria nem garante a verdade; sua interpretação depende de um procedimento místico apropriado e das regras de Misticismo.</td></tr>
+<tr><td>Baralho de tarô</td><td>15 s – £3</td><td>Utilizado em leituras de tarô e práticas místicas. A qualidade e a ornamentação explicam a variação de preço.</td></tr>
+<tr><td>Velas rituais (pacote com 6)</td><td>8 s</td><td>Material de apoio para rituais; cada vela queima por aproximadamente 4 horas.</td></tr>
+<tr><td>Água benta (frasco)</td><td>10 s</td><td>Um frasco permite uma aplicação. Pode ser arremessado contra um alvo a até 3 m como parte de uma Ação Principal. O ataque utiliza FOR ou DES + Armas Brancas contra a Defesa. Em caso de acerto, causa 1d6 + o bônus de Atributo + o bônus de Armas Brancas de dano Radiante a criaturas suscetíveis; contra outros alvos, não causa dano sobrenatural.</td></tr>
+<tr><td>Incenso purificador</td><td>5 s</td><td>Material de apoio a rituais de purificação. Não remove automaticamente condições, maldições ou influências sobrenaturais; seu efeito depende do ritual ou procedimento que o consuma.</td></tr>
+<tr><td>Sal negro ritualístico</td><td>12 s</td><td>Um pacote permite preparar até 3 círculos ou marcas ritualísticas. A área, duração e efeito dependem do ritual utilizado; o sal, isoladamente, não impede a entrada de entidades nem cria uma barreira sobrenatural.</td></tr>
+<tr><td>Lupa de investigador</td><td>8 s</td><td>Concede +1 como bônus circunstancial em testes de RAC + Investigação quando a análise visual minuciosa for decisiva e houver iluminação adequada. Não se acumula com outra lupa ou ferramenta que forneça o mesmo benefício.</td></tr>
+<tr><td>Caderno de anotações e pena</td><td>3 s</td><td>Permite registrar pistas, símbolos, fórmulas e observações.</td></tr>
+<tr><td>Câmera portátil</td><td>£5</td><td>Registra fotografias em preto e branco. Não revela fenômenos espirituais por conta própria; qualquer manifestação anômala na imagem depende do fenômeno ou de um efeito específico.</td></tr>
+<tr><td>Binóculo</td><td>£2</td><td>Permite observar detalhes a grandes distâncias, em condições adequadas, até aproximadamente 300 m.</td></tr>
+<tr><td>Giz ritual (pacote com 5)</td><td>2 s</td><td>Usado para desenhar símbolos, marcas e círculos mágicos.</td></tr>
+<tr><td>Espelho de bolso</td><td>4 s</td><td>Útil para observar ângulos indiretos e a própria aparência. Não reflete nem bloqueia ataques espirituais sem uma propriedade sobrenatural específica.</td></tr>
+<tr><td>Corrente de prata (1,5 m)</td><td>£1</td><td>Pode ser usada para prender uma criatura vulnerável à prata, desde que seu corpo e força permitam. O alvo precisa estar Incapacitado ou receber a condição Impedido por uma manobra Conter do Capítulo 7. Fixar a corrente a um ponto sólido exige uma Ação Principal; se ela não estiver ancorada nem for segurada por alguém, não mantém o alvo preso. Para escapar, o alvo usa uma Ação Principal e vence a mesma disputa de Conter do Capítulo 7. A corrente não concede sucesso automático contra criaturas sobrenaturais.</td></tr>
+<tr><td>Mala de viagem</td><td>10 s</td><td>Comporta roupas e equipamento leve. Itens grandes, frágeis ou perigosos podem exigir transporte separado.</td></tr>
+</tbody>
+</table>
+<div class="box note-box">
+<div class="box-title">Transporte e carga</div>
+<p>Este capítulo não utiliza uma tabela fixa de peso ou capacidade de carga. O personagem pode transportar os pertences compatíveis com sua aparência, vestimenta e meios de deslocamento. Volumes grandes, numerosos, frágeis, ruidosos ou difíceis de acessar podem exigir bolsas, malas, animais de carga, carruagens ou ajuda de terceiros. O Mestre pode impedir o transporte de um objeto quando ele comprometer claramente a mobilidade, a discrição ou a segurança; isso não concede penalidade numérica automática sem uma consequência concreta na cena.</p>
+</div>
+<div class="box rule-box">
+<div class="box-title">Primeiros socorros e estabilização da Agonia</div>
+<p>Um personagem adjacente a alguém com <strong>0 PV ou menos</strong>, que ainda não tenha alcançado seu limite de Agonia, pode usar um kit de primeiros socorros e gastar uma <strong>Ação Principal</strong> para tentar estabilizá-lo. Fora de um conflito, o procedimento exige aproximadamente 1 minuto. O kit possui <strong>3 utilizações</strong>; cada tentativa consome uma utilização, seja bem-sucedida ou não.</p>
+<ol>
+<li>Realize um teste de <strong>INT + Medicina</strong> ou <strong>RAC + Medicina</strong>, conforme a abordagem, contra <strong>CD 14</strong>.</li>
+<li><strong>Sucesso:</strong> o alvo fica Estabilizado. Encerre o Relógio de Agonia e remova os marcadores acumulados. O alvo continua com os PV atuais, permanece Inconsciente se ainda estiver com 0 PV ou menos e não recupera consciência apenas por ter sido estabilizado.</li>
+<li><strong>Falha:</strong> a tentativa não estabiliza o alvo. Cada falha aumenta cumulativamente em +2 a CD das tentativas seguintes realizadas durante o mesmo episódio de Agonia; cada tentativa adicional consome outra utilização de um kit.</li>
+<li><strong>Sem kit:</strong> é possível improvisar com materiais limpos e adequados, mas o teste é feito com Desvantagem e CD 16. O Mestre pode negar a tentativa se não houver materiais minimamente apropriados.</li>
+</ol>
+<p>A estabilização segue a consequência do Capítulo 7: quando o personagem sobrevive à Agonia, seu limite de morte é reduzido permanentemente em 1. Se voltar a sofrer dano enquanto ainda estiver com 0 PV ou menos, perde a estabilização e inicia um novo Relógio de Agonia com o limite já reduzido, recebendo imediatamente 1 marcador pelo dano sofrido. Primeiros socorros não restauram PV, não recuperam Lucidez e não removem Perda de Controle ou efeitos sobrenaturais.</p>
+</div>
+</section>
+<div class="separator"></div>
+<section id="servicos">
+<h2>7. Serviços <span class="en">(Services)</span></h2>
+<table>
+<thead><tr><th>Serviço</th><th>Custo</th><th>Notas</th></tr></thead>
+<tbody>
+<tr><td>Corrida de carruagem dentro da cidade</td><td>2 – 6 p</td><td>Depende da distância, do bairro e do horário.</td></tr>
+<tr><td>Carruagem alugada (dia inteiro)</td><td>5 – 10 s</td><td>Inclui cocheiro; percurso e disponibilidade devem ser combinados.</td></tr>
+<tr><td>Hospedagem em pensão simples (por noite)</td><td>4 – 8 p</td><td>Quartos compartilhados e instalações modestas; referência para bairros operários.</td></tr>
+<tr><td>Hospedagem em hotel mediano (por noite)</td><td>3 – 8 s</td><td>Quartos privados e serviços regulares; referência para bairros de classe média.</td></tr>
+<tr><td>Hospedagem em hotel de luxo (por noite)</td><td>£1 – £5</td><td>Serviço de alto padrão e localização privilegiada.</td></tr>
+<tr><td>Refeição simples</td><td>2 – 4 p</td><td>Pão, ensopado, chá ou refeição equivalente.</td></tr>
+<tr><td>Refeição fina</td><td>5 – 15 s</td><td>Restaurante de classe média-alta ou estabelecimento equivalente.</td></tr>
+<tr><td>Telegrama (até 20 palavras)</td><td>6 p</td><td>Entrega em algumas horas dentro da mesma cidade, conforme a rede disponível.</td></tr>
+<tr><td>Telegrama de longa distância</td><td>2 – 5 s</td><td>Entre cidades ou países; custo e prazo dependem do trajeto.</td></tr>
+<tr><td>Passagem de trem (2ª classe)</td><td>5 – 15 s</td><td>Varia conforme a distância e a linha ferroviária.</td></tr>
+<tr><td>Passagem de trem (1ª classe)</td><td>£1 – £4</td><td>Conforto superior e serviços adicionais.</td></tr>
+<tr><td>Passagem de navio (cabine comum)</td><td>£2 – £5</td><td>Referência para travessias entre portos do Continente Norte.</td></tr>
+<tr><td>Passagem de navio (1ª classe)</td><td>£10 – £30</td><td>Pode incluir refeições, cabine privativa e entretenimento.</td></tr>
+<tr><td>Médico particular (consulta)</td><td>5 – 15 s</td><td>Atendimento mundano; não garante tratamento de efeitos Beyonder.</td></tr>
+<tr><td>Informante (suborno ou pagamento)</td><td>5 s – £5</td><td>Depende do risco, da relevância e da confiabilidade da informação.</td></tr>
+</tbody>
+</table>
+<p class="small">Os custos são referências para contextualizar negociações. Serviços comuns podem ser presumidos como parte das despesas habituais quando compatíveis com o padrão de vida do personagem. Transporte, hospedagem ou atendimento fora do comum são resolvidos conforme disponibilidade, urgência, localidade, reputação e Recursos; pagar o valor indicado não garante atendimento quando não houver prestador, vaga ou acesso.</p>
+</section>
+<div class="separator"></div>
+<section id="itens-beyonder">
+<h2>8. Itens <em>Beyonder</em> <span class="en">(Beyonder Items)</span></h2>
+<p>Itens Beyonder são objetos que possuem propriedades sobrenaturais associadas a Características Beyonder, ingredientes, encantamentos ou processos místicos. Podem ser relativamente estáveis, mas isso não significa que sejam completamente inofensivos: alguns exigem Espiritualidade, condições de ativação, recarga, manutenção ou cuidados específicos.</p>
+<p>Na referência canônica, Artesãos do Caminho do Paragon podem fabricar itens Beyonder. O Artesão é a <strong>Sequência 6</strong>; a Sequência 7 é o Avaliador. Artesãos podem produzir objetos Beyonder de poder relativamente limitado e também fabricar Artefatos Selados a partir de Características Beyonder ou ingredientes principais, com efeitos negativos geralmente menos severos do que os de itens formados naturalmente.</p>
+<div class="box lore-box">
+<div class="box-title">Itens Beyonder e Artefatos Selados</div>
+<p>O critério central não é apenas a força do efeito, mas o grau de perigo, instabilidade e necessidade de contenção. Um objeto com propriedades sobrenaturais pode ser tratado como Item Beyonder quando seu uso é suficientemente controlável. Quando a influência e os efeitos colaterais tornam o objeto perigoso e exigem contenção, ele pode ser classificado como Artefato Selado.</p>
+</div>
+<h3>Regras gerais de utilização</h3>
+<ul>
+<li><strong>Ativação:</strong> a descrição deve indicar o tipo de ação necessário. Quando não houver indicação, ativar deliberadamente um item durante um conflito exige uma Ação Principal.</li>
+<li><strong>Espiritualidade:</strong> se houver custo, a descrição informa a quantidade por ativação ou por período.</li>
+<li><strong>Cargas e usos:</strong> a descrição determina quantas utilizações estão disponíveis e como são recuperadas.</li>
+<li><strong>Duração:</strong> efeitos temporários indicam seu tempo de permanência e o que pode encerrá-los.</li>
+<li><strong>Resistência:</strong> quando um efeito puder ser resistido, a descrição indica o teste com Atributo e, quando pertinente, Proficiência, ou uma CD. Utilize a estrutura de resistência do Capítulo 7.</li>
+<li><strong>Acúmulo:</strong> efeitos idênticos de itens diferentes não se acumulam automaticamente. O Mestre verifica se são fontes distintas e compatíveis.</li>
+<li><strong>Manutenção:</strong> a descrição deve indicar se o item precisa ser recarregado, purificado, reparado ou submetido a um procedimento periódico.</li>
+</ul>
+<div class="box rule-box">
+<div class="box-title">Parâmetros padrão dos Itens Beyonder</div>
+<ul>
+<li><strong>Ação:</strong> quando uma habilidade ativa não indicar o tipo de ação, sua ativação exige uma Ação Principal durante um conflito. Uma habilidade passiva não exige ação. Ação Bônus ou Reação só são permitidas quando constarem expressamente na descrição.</li>
+<li><strong>Custo de Espiritualidade:</strong> se uma habilidade sobrenatural ativa não indicar custo, sua ativação custa <strong>1 ponto de Espiritualidade</strong>. Efeitos passivos não consomem Espiritualidade, salvo indicação contrária. Consumíveis físicos — como munições especiais, pós, tintas e componentes rituais — são gastos conforme suas cargas ou quantidades e não exigem Espiritualidade adicional, a menos que a descrição indique expressamente.</li>
+<li><strong>Cargas:</strong> se o item possuir usos limitados, a ficha deve informar a quantidade e a forma de recuperação. Quando o item não declarar recuperação automática, as cargas só retornam após o procedimento de recarga descrito pelo Mestre ou pelo fabricante; descanso, por si só, não recarrega o item.</li>
+<li><strong>Duração:</strong> quando a descrição indicar duração, ela começa no momento em que o efeito é ativado. Se não houver duração, um efeito ativo produz apenas o resultado imediato descrito e não permanece concedendo benefícios depois da resolução.</li>
+<li><strong>Resistência:</strong> testes de resistência utilizam a notação e a resolução do Capítulo 7. Use as CDs indicadas; se um item não indicar CD, o Mestre define uma antes da rolagem, considerando o alcance do efeito e a Sequência do item.</li>
+<li><strong>Acúmulo:</strong> efeitos idênticos não se acumulam. Se duas fontes concederem o mesmo bônus, utilize apenas o maior; uma nova ativação do mesmo item renova a duração, mas não duplica o efeito.</li>
+<li><strong>Identificação:</strong> reconhecer a função de um item desconhecido pode exigir INT + Ocultismo. O Mestre define a CD conforme a raridade, a complexidade e o conhecimento disponível; falhar significa não obter uma identificação confiável, não descobrir automaticamente todos os efeitos negativos.</li>
+</ul>
+</div><p class="small" id="consumiveis-sem-espiritualidade">Munições encantadas, pó ritualístico, tinta e outros consumíveis físicos gastam a unidade indicada na ficha. Não pagam o custo padrão de 1 ponto de Espiritualidade dos Itens Beyonder, salvo quando o próprio item declarar que exige Espiritualidade.</p>
+<div class="box note-box">
+<div class="box-title">Disponibilidade</div>
+<p>Itens Beyonder não costumam ser vendidos em lojas comuns. A obtenção exige contatos no submundo místico, participação em leilões secretos, encomenda a um Artesão, favor a uma organização ou recompensa por uma missão. O Mestre determina a disponibilidade, a procedência, o prazo e o preço. Pagar o preço pedido não garante que o item esteja disponível ou que o vendedor seja confiável.</p>
+</div>
+<h3>Exemplos de Itens Beyonder</h3>
+<div class="stat-block">
+<h4>Amuleto de Barreira Espiritual <span class="en">(Spiritual Barrier Charm)</span></h4>
+<div class="stat-line"><span class="stat-label">Origem:</span><span>Original do RPG.</span></div>
+<div class="stat-line"><span class="stat-label">Valor indicativo:</span><span>£80 – £150.</span></div>
+<div class="stat-line"><span class="stat-label">Aparência:</span><span>Pingente de cobre com um olho gravado.</span></div>
+<div class="power"><p><span class="power-name">Efeito:</span> ao ativar, cria uma barreira espiritual que concede +2 à Defesa exclusivamente contra ataques espirituais por 10 minutos.</p></div>
+<div class="stat-line"><span class="stat-label">Ativação:</span><span>Ação Bônus; o portador precisa estar usando ou segurando o amuleto e deve ativá-lo conscientemente.</span></div>
+<div class="stat-line"><span class="stat-label">Custo e usos:</span><span>1 ponto de Espiritualidade por ativação; 3 ativações antes de precisar ser recarregado.</span></div>
+<div class="stat-line"><span class="stat-label">Recarga:</span><span>Deve permanecer sob luz de lua cheia durante uma noite completa. O Mestre pode exigir um procedimento místico para confirmar a recarga.</span></div>
+<div class="stat-line"><span class="stat-label">Observação:</span><span>O bônus é específico deste item e não representa um bônus geral de Proteção.</span></div>
+</div>
+<div class="stat-block">
+<h4>Munição Encantada <span class="en">(Enchanted Ammunition)</span></h4>
+<div class="stat-line"><span class="stat-label">Origem:</span><span>Original do RPG.</span></div>
+<div class="stat-line"><span class="stat-label">Valor indicativo:</span><span>£5 – £15 por projétil, conforme o encantamento.</span></div>
+<div class="stat-line"><span class="stat-label">Aparência:</span><span>Balas com runas gravadas em prata e bronze.</span></div>
+<div class="power">
+<p><span class="power-name">Variantes:</span></p>
+<ul>
+<li><strong>Incendiária:</strong> acrescenta 1d6 de dano de Fogo ao dano do disparo.</li>
+<li><strong>Perturbadora:</strong> acrescenta 1d4 de dano Psíquico. O alvo realiza um teste de resistência de DET contra CD 12; em caso de falha, fica Atordoado até o final do próximo turno.</li>
+<li><strong>Perfurante:</strong> reduz em 1 ponto cada ajuste positivo de Limiares concedido por equipamento mundano de Proteção, até o mínimo de 0. Não altera os Limiares naturais nem ignora ajustes concedidos por poderes, rituais ou outras fontes sobrenaturais.</li>
+</ul>
+</div>
+<div class="stat-line"><span class="stat-label">Uso:</span><span>Consumida ao disparar. Cada projétil contém apenas um encantamento.</span></div>
+<div class="stat-line"><span class="stat-label">Limite:</span><span>Os efeitos são adaptações mecânicas do RPG; não se acumulam com outro encantamento no mesmo projétil.</span></div>
+</div>
+<div class="stat-block">
+<h4>Talismã de Proteção contra Pesadelos <span class="en">(Nightmare Ward Talisman)</span></h4>
+<div class="stat-line"><span class="stat-label">Origem:</span><span>Original do RPG.</span></div>
+<div class="stat-line"><span class="stat-label">Valor indicativo:</span><span>£60 – £100.</span></div>
+<div class="stat-line"><span class="stat-label">Aparência:</span><span>Pequeno saco de tecido bordado com fios de prata, contendo ervas secas.</span></div>
+<div class="power"><p><span class="power-name">Efeito:</span> enquanto carregado, concede Vantagem em testes de resistência que utilizem DET ou ACO contra efeitos de sonho, pesadelo e invasão mental que ocorram durante o sono. Não impede automaticamente a manifestação de entidades ou a influência de um Artefato Selado.</p></div>
+<div class="stat-line"><span class="stat-label">Duração:</span><span>30 dias a partir da preparação; depois disso, perde a eficácia.</span></div><div class="stat-line"><span class="stat-label">Ativação:</span><span>Passiva enquanto estiver sendo carregado; não consome Espiritualidade. Dura 30 dias após sua preparação.</span></div>
+</div>
+<div class="stat-block">
+<h4>Tinta de Hermes <span class="en">(Hermes Ink)</span></h4>
+<div class="stat-line"><span class="stat-label">Origem:</span><span>Original do RPG.</span></div>
+<div class="stat-line"><span class="stat-label">Valor indicativo:</span><span>£30 por frasco.</span></div>
+<div class="stat-line"><span class="stat-label">Aparência:</span><span>Frasco opaco contendo tinta púrpura-escura que brilha levemente.</span></div>
+<div class="power"><p><span class="power-name">Efeito:</span> quando a tinta for usada para desenhar um círculo ritualístico, reduz em 1 a CD de um teste de ritual. O efeito só se aplica quando o procedimento do ritual utilizar uma CD e não reduz CDs de testes que não façam parte dele.</p></div>
+<div class="stat-line"><span class="stat-label">Usos:</span><span>Cada frasco contém tinta suficiente para 3 rituais. O bônus não se acumula com outra aplicação da mesma tinta.</span></div>
+</div>
+<div class="stat-block">
+<h4>Pó de Cemitério Purificado <span class="en">(Purified Graveyard Dust)</span></h4>
+<div class="stat-line"><span class="stat-label">Origem:</span><span>Original do RPG.</span></div>
+<div class="stat-line"><span class="stat-label">Valor indicativo:</span><span>£20 por dose.</span></div>
+<div class="stat-line"><span class="stat-label">Aparência:</span><span>Pó cinza-azulado em frasco lacrado com cera negra.</span></div>
+<div class="power"><p><span class="power-name">Efeito:</span> quando espalhado, forma uma área ritualística de 3 m que dificulta a entrada de espíritos de Sequência 9 ou 8 por até 1 hora. O pó não impede a passagem de entidades de Sequência superior nem substitui um selo formal.</p><p>Se lançado diretamente contra um morto-vivo, causa 2d6 de dano Radiante quando o alvo for suscetível a esse tipo de efeito.</p></div>
+<div class="stat-line"><span class="stat-label">Preparação:</span><span>Desenhar o círculo exige 1 minuto e consome uma dose; a área protegida tem até 3 m de diâmetro e dura 1 hora. Um espírito de Sequência 9 ou 8 que tente atravessar deve vencer um teste de DET contra CD 14; em caso de falha, não consegue cruzar naquele turno.</span></div>
+<div class="stat-line"><span class="stat-label">Arremesso:</span><span>Aplicar diretamente contra uma criatura exige Ação Principal e teste FOR ou DES + Armas Brancas contra a Defesa, a até 3 m. O mesmo Atributo escolhido no teste é somado aos Dados: o acerto causa 2d6 + esse Atributo de dano Radiante se o alvo for suscetível.</span></div>
+<div class="stat-line"><span class="stat-label">Usos:</span><span>Uma dose cria uma única área ou pode ser usada em um único ataque.</span></div>
+</div>
+<div class="stat-block">
+<h4>Lente da Verdade <span class="en">(Lens of Truth)</span></h4>
+<div class="stat-line"><span class="stat-label">Origem:</span><span>Original do RPG; não confundir com outros artefatos de percepção da verdade do cânone.</span></div>
+<div class="stat-line"><span class="stat-label">Valor indicativo:</span><span>£200 – £400.</span></div>
+<div class="stat-line"><span class="stat-label">Aparência:</span><span>Monóculo com lente levemente azulada e armação de ouro.</span></div>
+<div class="power"><p><span class="power-name">Efeito:</span> ao olhar através da lente, o portador pode perceber ilusões e disfarces místicos de Sequência 7 ou inferior durante 5 minutos. Não revela entidades invisíveis por natureza nem supera automaticamente ocultações de Sequência superior.</p></div>
+<div class="stat-line"><span class="stat-label">Ativação:</span><span>Ação Bônus.</span></div>
+<div class="stat-line"><span class="stat-label">Usos:</span><span>1 vez por dia.</span></div><div class="stat-line"><span class="stat-label">Custo:</span><span>1 ponto de Espiritualidade por ativação; o uso diário é recuperado após 24 horas.</span></div>
+</div>
+<div class="stat-block">
+<h4>Anel de Comunicação Espiritual <span class="en">(Spirit Communication Ring)</span></h4>
+<div class="stat-line"><span class="stat-label">Origem:</span><span>Original do RPG.</span></div>
+<div class="stat-line"><span class="stat-label">Valor indicativo:</span><span>£150 – £250 pelo par.</span></div>
+<div class="stat-line"><span class="stat-label">Aparência:</span><span>Par de anéis de ferro negro com glifos internos.</span></div>
+<div class="power"><p><span class="power-name">Efeito:</span> os dois anéis são vinculados. Seus portadores podem enviar mensagens mentais curtas, com até 20 palavras, a uma distância de até 1 km.</p></div>
+<div class="stat-line"><span class="stat-label">Ativação:</span><span>Enviar uma mensagem exige Ação Principal durante um conflito; fora dele, basta um breve momento de concentração.</span></div>
+<div class="stat-line"><span class="stat-label">Custo:</span><span>1 ponto de Espiritualidade por mensagem enviada.</span></div>
+<div class="stat-line"><span class="stat-label">Limitação:</span><span>Não funciona através de barreiras de selamento que bloqueiem comunicação espiritual.</span></div>
+</div>
+<div class="stat-block">
+<h4>Luva de Exorcismo <span class="en">(Exorcism Gauntlet)</span></h4>
+<div class="stat-line"><span class="stat-label">Origem:</span><span>Original do RPG.</span></div>
+<div class="stat-line"><span class="stat-label">Valor indicativo:</span><span>£120 – £180.</span></div>
+<div class="stat-line"><span class="stat-label">Aparência:</span><span>Luva de couro branco com símbolos sagrados costurados em fio dourado.</span></div>
+<div class="power"><p><span class="power-name">Efeito:</span> ataques desarmados realizados com a luva causam 1d6 + o bônus de Atributo + o bônus de Luta de dano Radiante contra criaturas espirituais e mortos-vivos suscetíveis, em vez dos Dados de dano desarmado normais. Contra alvos não suscetíveis, utiliza-se o dano desarmado normal. O ataque utiliza FOR + Luta; os mesmos bônus do teste são somados ao dano.</p></div>
+<div class="stat-line"><span class="stat-label">Ativação:</span><span>Passiva enquanto vestida; não consome Espiritualidade.</span></div><div class="stat-line"><span class="stat-label">Usos:</span><span>Cada ataque contra um alvo suscetível consome 1 uso. A luva suporta até 10 usos antes de precisar ser purificada em uma igreja ou por procedimento equivalente. A purificação restaura todos os usos.</span></div>
+</div>
+</section>
+<div class="separator"></div>
+<section id="artefatos-selados">
+<h2>9. Artefatos Selados <span class="en">(Sealed Artifacts)</span></h2>
+<p>Artefatos Selados são objetos sobrenaturais perigosos, normalmente identificados, classificados e contidos por Igrejas Ortodoxas ou organizações que possuem conhecimento e recursos para lidar com eles. Eles podem surgir quando Características Beyonder ou outros elementos místicos se fundem a objetos e ambientes, ou ser produzidos deliberadamente por Artesãos e outros agentes capazes de realizar esse processo.</p>
+<p>Um objeto que contém uma Característica Beyonder não é automaticamente um Artefato Selado. A distinção depende do resultado: objetos relativamente controláveis podem ser tratados como Itens Beyonder; objetos perigosos, instáveis ou que exigem contenção são classificados como Artefatos Selados.</p>
+<div class="box note-box" id="efeito-lentidao"><div class="box-title">Efeito específico: Lentidão</div><p>Quando um artefato impuser Lentidão, a Velocidade do alvo é reduzida à metade e ele não pode realizar Reações. O efeito dura pelo período indicado na ficha do artefato. Aplicações repetidas não somam penalidades; uma nova aplicação apenas reinicia a duração. Lentidão é um efeito particular desses itens, não uma condição geral do Capítulo 7; não impede Ações Principais ou Ações Bônus.</p></div><h3>Classificação dos Artefatos Selados</h3>
+<p>As Igrejas Ortodoxas utilizam quatro graus, do <strong>Grau 0 ao Grau 3</strong>. A classificação considera o perigo, o poder e os métodos de selamento. Em termos gerais, graus numericamente menores representam artefatos mais perigosos e poderosos. A equivalência com Sequências é apenas uma referência aproximada, não uma regra fixa para determinar quem pode utilizá-los.</p>
+<table>
+<thead><tr><th>Grau</th><th>Referência aproximada</th><th>Caracterização</th></tr></thead>
+<tbody>
+<tr><td><strong>Grau 3</strong></td><td>Baixa Sequência (aproximadamente Sequências 9 e 8)</td><td>Perigosos, mas relativamente mais acessíveis às organizações e equipes Beyonder. Ainda exigem procedimentos de contenção.</td></tr>
+<tr><td><strong>Grau 2</strong></td><td>Sequência Média (aproximadamente Sequências 7, 6 e 5)</td><td>Possuem efeitos mais poderosos e consequências potencialmente graves. Seu uso costuma exigir autorização e preparação.</td></tr>
+<tr><td><strong>Grau 1</strong></td><td>Alta Sequência (aproximadamente Sequências 4 e 3)</td><td>Extremamente perigosos e normalmente restritos a autoridades ou organizações de alto nível. Informações sobre eles podem ser confidenciais.</td></tr>
+<tr><td><strong>Grau 0</strong></td><td>Nível de Anjo (aproximadamente Sequências 2 e 1)</td><td>Excepcionalmente perigosos, raros e sujeitos às restrições mais severas de informação, acesso e contenção.</td></tr>
+</tbody>
+</table>
+<div class="box rule-box">
+<div class="box-title">Parâmetros padrão dos Artefatos Selados</div>
+<p>As fichas do catálogo prevalecem quando descrevem um custo, uma ação, uma duração ou uma limitação específica. Para os campos que não estiverem definidos, aplique os padrões abaixo até que a ficha do artefato seja detalhada.</p>
+<ul>
+<li><strong>Ação de ativação:</strong> um poder ativo exige uma Ação Principal. Ação Bônus ou Reação só podem ser usadas quando a ficha declarar isso. Efeitos passivos não exigem ação.</li>
+<li><strong>Custo padrão por uso ativo:</strong> Grau 3 custa 1 ponto de Espiritualidade; Grau 2 custa 2 pontos; Grau 1 custa 3 pontos; Grau 0 custa 4 pontos. Se a ficha estabelecer outro custo, prevalece o valor específico. Efeitos passivos não consomem Espiritualidade, salvo indicação contrária.</li>
+<li><strong>Uma ativação:</strong> o custo é pago quando o poder começa. Efeitos contínuos não cobram novamente a cada turno, a menos que a ficha diga expressamente. Efeitos diferentes ativados separadamente pagam seus próprios custos.</li>
+<li><strong>Limites de uso:</strong> “uma vez por dia” significa uma utilização em qualquer período de 24 horas; “uma vez por conflito” significa uma utilização até o encerramento daquele conflito. Descansos não restauram usos limitados, salvo indicação expressa.</li>
+<li><strong>Efeitos negativos:</strong> são aplicados no momento indicado pela ficha, independentemente do sucesso do poder principal. Se o efeito negativo exigir teste, utilize o Atributo, a CD e a consequência descritos; se não indicar o momento, ele ocorre imediatamente após a ativação.</li>
+<li><strong>Dano e resistências:</strong> cada tipo de dano é ajustado separadamente conforme o Capítulo 7. Depois de aplicar os ajustes, some as parcelas finais e consulte os Limiares de Dano do alvo.</li>
+</ul>
+<p class="small">Esses custos e padrões são regras de adaptação para o RPG, não estatísticas oficiais do universo de Lord of the Mysteries. Eles estabelecem uma base de uso; os números poderão ser balanceados posteriormente.</p>
+</div>
+<p class="small">As faixas de Sequência são referências para comunicar a escala de poder descrita no cenário. Não significam que todo artefato de determinado Grau possua exatamente o poder de uma Sequência específica, nem estabelecem um requisito automático de Sequência para manuseá-lo.</p>
+<div class="box warning-box">
+<div class="box-title">Aviso aos jogadores</div>
+<p>Artefatos Selados são ferramentas de alto risco. Seus efeitos colaterais podem ferir, enlouquecer, corromper, atrair entidades ou transformar o portador. O fato de um personagem conseguir ativar um artefato não significa que consiga controlar suas consequências. O Mestre deve tratar o acesso, o transporte, a ativação e o selamento como decisões relevantes para a história.</p>
+</div>
+<h3>Consequências negativas e Características Beyonder</h3>
+<p>Artefatos Selados apresentam efeitos negativos associados à sua natureza mística, à Característica Beyonder envolvida, às influências residuais e à forma como o objeto se manifesta. Um Artesão pode reduzir os efeitos negativos ao fabricar um Artefato Selado a partir de uma Característica Beyonder ou de um ingrediente principal, mas isso não significa que seja possível eliminar todo risco.</p>
+<p>As Três Leis das Características Beyonder tratam das propriedades e do comportamento dessas Características; não devem ser utilizadas como explicação direta de que todo Artefato Selado precisa possuir efeitos negativos. A presença de efeitos colaterais decorre da natureza do próprio artefato e de sua instabilidade, não de uma formulação simplificada das Três Leis.</p>
+<h3>Catálogo de Grau 3</h3>
+<p>Os exemplos a seguir incluem artefatos canônicos com efeitos mecânicos adaptados ao RPG. A ficha de cada um separa o que corresponde à referência do cenário da tradução mecânica utilizada na campanha.</p>
+<div class="stat-block">
+<h4>Olho de Cristal <span class="en">(Eye of Crystal)</span> — 3-1328</h4>
+<div class="stat-line"><span class="stat-label">Origem:</span><span>Canônico, adaptado para o sistema.</span></div>
+<div class="stat-line"><span class="stat-label">Grau:</span><span>3.</span></div>
+<div class="stat-line"><span class="stat-label">Aparência:</span><span>Monóculo de cristal com armação de prata escurecida.</span></div>
+<div class="power"><p><span class="power-name">Poderes:</span></p><ul>
+<li>Permite perceber diretamente corpos espirituais, fantasmas, sombras e manifestações espirituais que normalmente não seriam visíveis.</li>
+<li>Concede Vantagem em testes de DET + Ocultismo quando a finalidade for perceber ou identificar uma manifestação espiritual dentro do campo de visão.</li>
+<li>Com um teste de INT + Ocultismo contra CD 12, pode indicar a faixa aproximada de Sequência de um Beyonder percebido. O resultado não revela Caminho, identidade ou poderes específicos.</li>
+</ul></div>
+<div class="power"><p><span class="power-name">Efeitos negativos:</span></p><ul>
+<li>Atração de Espectros: enquanto o monóculo estiver fora do recipiente de selamento, manifestações espirituais e espectros em um raio aproximado de 500 m podem perceber sua presença e ser atraídos gradualmente. O Mestre determina quais entidades recebem o chamado e quanto tempo levam para se aproximar.</li>
+<li>Deterioração Visual: a cada hora contínua de uso, o portador sofre −1 cumulativo em testes que dependam diretamente da visão, até o máximo de −3. Cada hora completa sem usar o monóculo remove 1 ponto dessa penalidade. Depois de alcançar −3, cada hora adicional de uso exige teste de VIG contra CD 14; uma falha provoca dano visual permanente no olho utilizado, definido pelo Mestre.</li>
+</ul></div>
+<div class="stat-line"><span class="stat-label">Ativação:</span><span>Percepção espiritual é passiva enquanto o monóculo estiver sendo usado; identificar a faixa de Sequência exige observar o alvo e realizar INT + Ocultismo contra CD 12. Não consome Espiritualidade.</span></div><div class="stat-line"><span class="stat-label">Selamento:</span><span>Guardar em caixa de chumbo forrada com lã negra. Evitar exposição direta à luz da lua.</span></div>
+<p class="small">A capacidade de enxergar corpos espirituais e a atração de espectros correspondem à referência canônica. A Vantagem, o teste de Sequência e a penalidade numérica são adaptações mecânicas do RPG.</p>
+</div>
+<div class="stat-block">
+<h4>Emblema Solar Mutado <span class="en">(Mutated Sun Sacred Emblem)</span> — 3-0782</h4>
+<div class="stat-line"><span class="stat-label">Origem:</span><span>Canônico, adaptado para o sistema.</span></div>
+<div class="stat-line"><span class="stat-label">Grau:</span><span>3.</span></div>
+<div class="stat-line"><span class="stat-label">Aparência:</span><span>Insígnia dourada em forma de sol, com brilho escuro e raios irregulares. A peça é quente ao toque.</span></div>
+<div class="power"><p><span class="power-name">Poderes:</span></p><ul>
+<li>Aura Solar: enquanto estiver fora do recipiente de selamento, emite uma aura de purificação em um raio de 15 m. Mortos-vivos e entidades sombrias suscetíveis que comecem seu turno na área sofrem 1d6 de dano Radiante. A aura afeta todas as criaturas suscetíveis, inclusive o portador e seus aliados; a Resistência, Vulnerabilidade e Imunidade são aplicadas normalmente. É um efeito passivo e não consome Espiritualidade.</li>
+<li>O portador recebe Resistência a dano Necrótico, reduzindo em 1 o dano desse tipo conforme as regras do Capítulo 7.</li>
+<li>Pulso Solar: uma vez a cada 24 horas, pode emitir um pulso de luz como Ação Principal, gastando 1 ponto de Espiritualidade. O pulso dissipa ilusões e revela criaturas ocultas em um raio de 30 m quando o efeito puder alcançá-las.</li>
+</ul></div>
+<div class="power"><p><span class="power-name">Efeitos negativos:</span></p><ul>
+<li>Devoção Compulsiva: após 30 minutos de uso contínuo, o portador realiza teste de ACO contra CD 14 a cada 10 minutos. Em caso de falha, passa a agir como devoto fanático do Sol Eterno Ardente até o próximo teste; se falhar novamente, a compulsão continua por mais 10 minutos. Retirar o emblema interrompe novas verificações, mas não encerra uma compulsão já instalada antes de transcorrer o intervalo atual.</li>
+<li>Queimadura Sagrada: se o portador retirar o emblema depois de pelo menos 30 minutos de uso contínuo, sofre 1d4 de dano Radiante.</li>
+</ul></div>
+<div class="stat-line"><span class="stat-label">Custo:</span><span>Aura Solar é passiva e não consome Espiritualidade. O Pulso Solar exige Ação Principal, 1 ponto de Espiritualidade e só pode ser usado uma vez a cada 24 horas.</span></div><div class="stat-line"><span class="stat-label">Selamento:</span><span>Manter em relicário de ferro revestido com material de escuridão alquímica, em ambiente sem luz.</span></div>
+<p class="small">A purificação em área e a devoção compulsiva correspondem à referência canônica. Os valores de dano, Resistência, CD, duração e pulso de luz são adaptações do RPG.</p>
+</div>
+<div class="stat-block">
+<h4>Boneca do Infortúnio <span class="en">(Misfortune Cloth Puppet)</span> — 3-0625</h4>
+<div class="stat-line"><span class="stat-label">Origem:</span><span>Canônico, adaptado para o sistema.</span></div>
+<div class="stat-line"><span class="stat-label">Grau:</span><span>3.</span></div>
+<div class="stat-line"><span class="stat-label">Aparência:</span><span>Boneca de pano usando um vestido antigo e ornamentado, com uma mancha difícil de remover.</span></div>
+<div class="power"><p><span class="power-name">Poderes:</span></p><ul>
+<li>Depois de permanecer ativada por um turno completo, a boneca espalha infortúnio em um raio de 9 m. Todas as criaturas na área, incluindo o portador e seus aliados, sofrem Desvantagem no próximo teste relevante que realizarem antes do início do próximo turno do portador. Cada criatura só pode sofrer esse efeito uma vez por ciclo.</li>
+<li>Uma vez por dia, pode direcionar o efeito a uma criatura visível. O alvo realiza um teste de DET contra CD 13; em caso de falha, sofre Desvantagem no próximo teste que realizar antes do fim do próximo ciclo.</li>
+</ul></div>
+<div class="power"><p><span class="power-name">Efeitos negativos:</span></p><ul>
+<li><strong>Infortúnio Compartilhado:</strong> a boneca não distingue aliados de inimigos. Portador e aliados dentro da área são afetados pelo mesmo infortúnio; deixar a boneca ativa em uma posição segura não protege o grupo.</li>
+<li><strong>Azar Residual:</strong> mesmo selada, a presença da boneca pode provocar pequenos acidentes e contratempos em quem permanecer próximo por muito tempo.</li>
+</ul></div>
+<div class="stat-line"><span class="stat-label">Selamento:</span><span>Envolver em tecido de seda branca e guardar em caixa de madeira. Trocar o tecido semanalmente.</span></div><div class="stat-line"><span class="stat-label">Ativação em área:</span><span>Ação Principal e 1 ponto de Espiritualidade. Depois de permanecer ativada por um turno completo, a aura começa a produzir seus efeitos e permanece até o fim do conflito ou até ser desativada.</span></div><div class="stat-line"><span class="stat-label">Efeito direcionado:</span><span>Ação Principal e 1 ponto de Espiritualidade; pode ser usado uma vez a cada 24 horas. Cada criatura sofre no máximo uma Desvantagem da aura por ciclo.</span></div>
+<p class="small">A capacidade de provocar infortúnio e o fato de o efeito também atingir o usuário correspondem à referência canônica. O raio, os testes e a duração são adaptações do RPG.</p>
+</div>
+<div class="stat-block">
+<h4>Espelho do Médium <span class="en">(Spirit Medium's Mirror)</span> — 3-0217</h4>
+<div class="stat-line"><span class="stat-label">Origem:</span><span>Canônico, adaptado para o sistema.</span></div>
+<div class="stat-line"><span class="stat-label">Grau:</span><span>3.</span></div>
+<div class="stat-line"><span class="stat-label">Aparência:</span><span>Espelho oval com três pequenas rachaduras na superfície e parte traseira revestida de mercúrio.</span></div>
+<div class="power"><p><span class="power-name">Visão do Perigo:</span> o portador observa o espelho por até 1 minuto e recebe uma impressão incompleta de um perigo que possa alcançá-lo nas próximas 6 horas. O Mestre fornece uma pista sobre a natureza geral da ameaça, sem garantir a identidade, o momento exato ou a causa do perigo.</p><p><span class="power-name">Comunicação Espiritual:</span> em um local assombrado ou onde haja um espírito presente, o portador pode tentar estabelecer comunicação com uma entidade espiritual por até 10 minutos. O espelho não obriga o espírito a responder, dizer a verdade ou permanecer no local.</p></div>
+<div class="power"><p><span class="power-name">Efeitos negativos:</span></p><ul>
+<li>Perigo Refletido: cada consulta pode provocar uma manifestação perigosa dirigida ao próprio observador. O Mestre escolhe uma consequência proporcional à cena; o portador não está protegido por ser o usuário do espelho.</li>
+<li><strong>Visões Intrusivas:</strong> a cada consulta deliberada, o portador realiza um teste de DET contra CD 12. Em caso de falha, perde 1d4 pontos de Lucidez.</li>
+<li><strong>Manifestação Autônoma:</strong> quando deixado sob luz e sem observação, o espelho pode produzir imagens espontâneas. O Mestre determina quando isso acontece.</li>
+</ul></div>
+<div class="stat-line"><span class="stat-label">Limites:</span><span>Visão do Perigo e Comunicação Espiritual podem ser usadas uma vez cada a cada 24 horas. Cada consulta provoca o teste de Lucidez indicado nos efeitos negativos.</span></div><div class="stat-line"><span class="stat-label">Selamento:</span><span>Envolver em tecido negro e manter virado para baixo, em escuridão absoluta.</span></div><div class="stat-line"><span class="stat-label">Ativação:</span><span>Cada consulta exige Ação Principal e 1 ponto de Espiritualidade. A Visão do Perigo leva até 1 minuto; a Comunicação Espiritual pode durar até 10 minutos.</span></div>
+<p class="small">O espelho provoca perigo a quem olha e também afeta o usuário. A impressão divinatória e o teste de Lucidez são adaptações do RPG.</p>
+</div>
+<div class="stat-block">
+<h4>Óculos Perscrutadores <span class="en">(Mystery Prying Glasses)</span></h4>
+<div class="stat-line"><span class="stat-label">Origem:</span><span>Canônico, adaptado para o sistema. Sem código numérico confirmado.</span></div>
+<div class="stat-line"><span class="stat-label">Grau:</span><span>3.</span></div>
+<div class="stat-line"><span class="stat-label">Aparência:</span><span>Óculos de armação dourada e lentes em tom âmbar ou chá.</span></div>
+<div class="power"><p><span class="power-name">Poderes:</span></p><ul>
+<li>Visão da Verdade: enquanto os óculos estiverem vestidos, revelam mensagens ocultas, tinta invisível, ilusões e disfarces místicos de Sequência 7 ou inferior, além de aspectos escondidos de objetos encantados que estejam no campo de visão. Não revelam automaticamente poderes, identidade ou origem do objeto.</li>
+<li><strong>Disfarce Aprimorado:</strong> concedem +3 como bônus circunstancial em testes de MAN + Subterfúgio para sustentar um disfarce visual preparado com maquiagem e materiais adequados.</li>
+<li><strong>Pintura Mística:</strong> permitem que uma pintura capture a impressão espiritual de uma cena. O efeito e a utilidade da obra são definidos pelo Mestre de acordo com o tempo, os materiais e a cena representada.</li>
+</ul></div>
+<div class="power"><p><span class="power-name">Efeitos negativos:</span></p><ul>
+<li><strong>Verdades Indesejadas:</strong> os óculos podem revelar algo que deveria permanecer oculto. Cada hora de uso exige um teste de DET contra CD 11; em caso de falha, o portador perde 1d4 pontos de Lucidez.</li>
+<li>Compulsão Artística: depois de utilizar Pintura Mística, o portador realiza ACO contra CD 13. Em caso de falha, sente necessidade de pintar novamente durante o próximo período de descanso; não pode usar o descanso para outra atividade voluntária até cumprir a compulsão ou receber ajuda para resistir.</li>
+<li>Confusão de Identidade: depois de mais de 1 hora mantendo o mesmo disfarce com os óculos, o portador realiza DET contra CD 14. Em caso de falha, confunde a identidade assumida com a própria até o fim da cena ou até alguém ajudá-lo a recuperar a noção de si.</li>
+</ul></div>
+<div class="stat-line"><span class="stat-label">Selamento:</span><span>Guardar em estojo de veludo. Não utilizar durante o crepúsculo, salvo necessidade.</span></div><div class="stat-line"><span class="stat-label">Ativação:</span><span>Visão da Verdade e Disfarce Aprimorado são passivos enquanto os óculos estiverem vestidos. Pintura Mística exige materiais adequados, 10 minutos de trabalho ininterrupto e 1 ponto de Espiritualidade; não pode ser concluída durante um conflito ativo.</span></div>
+<p class="small">A percepção de verdades ocultas, a pintura mística, o disfarce e as compulsões correspondem à referência canônica. Bônus, CDs e duração são adaptações do RPG.</p>
+</div>
+<div class="stat-block">
+<h4>Chave-Mestra <span class="en">(Master Key)</span></h4>
+<div class="stat-line"><span class="stat-label">Origem:</span><span>Canônico, adaptado para o sistema. O cânone não apresenta código numérico confirmado.</span></div>
+<div class="stat-line"><span class="stat-label">Grau:</span><span>3.</span></div>
+<div class="stat-line"><span class="stat-label">Aparência:</span><span>Chave simples de latão antigo, cujos dentes parecem mudar sutilmente quando observados.</span></div>
+<div class="power"><p><span class="power-name">Poderes:</span></p><ul>
+<li><strong>Abrir Fechaduras:</strong> abre fechaduras não protegidas por poderes místicos. Contra fechaduras sobrenaturalmente protegidas, não concede sucesso automático.</li>
+<li><strong>Passagem por Superfícies:</strong> uma vez por dia, permite atravessar uma parede ou superfície sólida adequada, abrindo uma passagem temporária de aproximadamente 1,5 m de diâmetro. A passagem dura até o final do próximo turno do portador.</li>
+</ul></div>
+<div class="power"><p><span class="power-name">Efeitos negativos:</span></p><ul>
+<li><strong>Desorientação Espacial:</strong> após utilizar a passagem, o portador realiza um teste de DET contra CD 13. Em caso de falha, perde a orientação espacial por 1d4 turnos: não consegue identificar a direção correta sem ajuda e sofre Desvantagem em testes para navegar, localizar uma rota ou reconhecer o caminho de volta. Esse é um efeito específico da Chave-Mestra, não uma condição geral do sistema.</li>
+<li><strong>Chamado de Mr. Door:</strong> sob a lua cheia, o portador pode ouvir gritos ou chamados associados a uma entidade distante. O Mestre determina a intensidade e as consequências narrativas.</li>
+</ul></div>
+<div class="stat-line"><span class="stat-label">Selamento:</span><span>Trancar dentro de uma caixa sem fechadura, soldada ou lacrada para impedir o uso casual.</span></div><div class="stat-line"><span class="stat-label">Ativação:</span><span>Abrir uma fechadura mundana exige uma Ação Principal e 1 ponto de Espiritualidade. Criar uma passagem exige uma Ação Principal, 1 ponto de Espiritualidade e respeita o limite de uma vez a cada 24 horas.</span></div>
+<p class="small">Abrir fechaduras mundanas, atravessar paredes e a tendência a se perder correspondem à referência canônica. Alcance, duração, CD e limite de uso são adaptações do RPG.</p>
+</div>
+<div class="stat-block">
+<h4>Circo <span class="en">(Circus)</span></h4>
+<div class="stat-line"><span class="stat-label">Origem:</span><span>Canônico, adaptado para o sistema. Sem código numérico confirmado.</span></div>
+<div class="stat-line"><span class="stat-label">Grau:</span><span>3.</span></div>
+<div class="stat-line"><span class="stat-label">Aparência:</span><span>Luva branca, aparentemente comum e sempre limpa, mesmo em condições adversas.</span></div>
+<div class="power"><p><span class="power-name">Poderes:</span></p><ul>
+<li><strong>Rajada de Vento:</strong> Ação Principal — cria uma rajada em cone de 9 m. Alvos realizam teste de FOR contra CD 14; em caso de falha, são empurrados 6 m e ficam Derrubados.</li>
+<li>Névoa: Ação Bônus e 1 ponto de Espiritualidade — cria névoa densa em um raio de 15 m. Dura até 5 minutos ou até ser dispersada por vento ou efeito equivalente. A névoa obscurece a visão, mas não bloqueia automaticamente sentidos sobrenaturais.</li>
+<li><strong>Clarão:</strong> Ação Bônus e 1 ponto de Espiritualidade — emite uma explosão de luz que afeta criaturas capazes de vê-la em um raio de 9 m. Cada alvo realiza DET contra CD 14; em caso de falha, sofre Desvantagem em testes que dependam da visão até o final do seu próximo turno. Criaturas que não dependam da visão ou que estejam protegidas da luz não são afetadas.</li>
+<li>Toque Congelante: Ação Principal e 1 ponto de Espiritualidade — ataque corpo a corpo utilizando FOR ou DES + Luta, conforme a abordagem. Em caso de acerto, causa 2d8 + o bônus de Atributo + o bônus de Luta de dano Gélido. O alvo realiza teste de VIG contra CD 14; em caso de falha, sofre Lentidão até o fim do seu próximo turno.</li>
+<li>Atravessar Paredes: uma vez a cada 24 horas, como Ação Principal e gastando 1 ponto de Espiritualidade, permite atravessar uma parede ou superfície sólida adequada, abrindo uma passagem de até 1,5 m de diâmetro. A superfície não pode estar protegida por um selo ou efeito que impeça travessia; o Mestre determina se espessura e composição permitem a passagem.</li>
+</ul></div>
+<div class="power"><p><span class="power-name">Efeitos negativos:</span></p><ul>
+<li><strong>Desorientação:</strong> após utilizar Atravessar Paredes, o portador realiza um teste de DET contra CD 14. Em caso de falha, perde a orientação espacial por 1d6 × 10 minutos.</li>
+<li><strong>Infortúnio ao se Perder:</strong> o portador tem maior probabilidade de se perder. O Mestre pode introduzir uma complicação quando o desvio de rota tiver consequências relevantes.</li>
+</ul></div>
+<div class="stat-line"><span class="stat-label">Selamento:</span><span>Guardar em recipiente de vidro preenchido com água salgada consagrada. Renovar a água a cada 3 dias.</span></div><div class="stat-line"><span class="stat-label">Custo:</span><span>1 ponto de Espiritualidade por poder ativo utilizado. Rajada de Vento, Toque Congelante e Atravessar Paredes exigem Ação Principal; Névoa mantém a Ação Bônus indicada. Clarão exige Ação Bônus.</span></div><div class="stat-line"><span class="stat-label">Limite:</span><span>Atravessar Paredes pode ser usado uma vez a cada 24 horas. Os demais poderes não possuem limite diário, mas cada ativação consome Espiritualidade.</span></div>
+<p class="small">Vento, névoa, clarões, congelamento por contato, abertura de passagens e tendência a se perder correspondem à referência canônica. Alcances, dados, CDs e frequência são adaptações do RPG.</p>
+</div>
+<div class="stat-block">
+<h4>Essência Verde <span class="en">(Green Essence)</span></h4>
+<div class="stat-line"><span class="stat-label">Origem:</span><span>Canônico, adaptado para o sistema. Sem código numérico confirmado.</span></div>
+<div class="stat-line"><span class="stat-label">Grau:</span><span>3.</span></div>
+<div class="stat-line"><span class="stat-label">Aparência:</span><span>Anel de ouro com uma esmeralda verde intensa.</span></div>
+<div class="power"><p><span class="power-name">Poderes:</span></p><ul>
+<li>Tratamento de Ferimentos Menores: Ação Principal e 1 ponto de Espiritualidade — ao tocar um alvo vivo, remove 1 marca de dano de seus PV. Pode ser usado até 3 vezes a cada 24 horas. Não ultrapassa o máximo de PV. Se a recuperação elevar os PV do alvo acima de 0, encerra a Agonia e permite que ele recupere a consciência conforme o Capítulo 7; se o alvo permanecer com 0 PV ou menos, o efeito não estabiliza nem encerra o Relógio de Agonia.</li>
+<li>Tratamento de Doenças Menores: Ação Principal e 1 ponto de Espiritualidade — pode auxiliar no tratamento de uma doença mundana leve. Não cura automaticamente doenças Beyonder, maldições, venenos sobrenaturais ou condições de origem mística. O Mestre determina se o efeito é suficiente e quanto tempo a recuperação exige.</li>
+</ul></div>
+<div class="power"><p><span class="power-name">Efeitos negativos:</span></p><ul>
+<li><strong>Atração de Insetos:</strong> enquanto estiver vestido, o portador atrai mosquitos, moscas e outros insetos num raio de até 30 m. Em ambientes externos, o enxame pode impor Desvantagem em testes de Furtividade e em testes de Concentração quando os insetos interferirem diretamente.</li>
+</ul></div>
+<div class="stat-line"><span class="stat-label">Selamento:</span><span>Guardar em caixa de madeira preenchida com serragem de carvalho. Manter longe de plantas vivas e água corrente.</span></div><div class="stat-line"><span class="stat-label">Custo:</span><span>1 ponto de Espiritualidade por tratamento. Cada tratamento consome uma das 3 utilizações disponíveis no período de 24 horas.</span></div>
+<p class="small">A cura de ferimentos menores e a atração de mosquitos correspondem à referência canônica. A quantidade de PV e os limites diários são adaptações do RPG.</p>
+</div>
+<h3>Catálogo de Grau 2</h3>
+<p>Artefatos de Grau 2 apresentam efeitos de escala superior e riscos severos. As referências de Sequência não constituem autorização automática para utilizá-los; o Mestre deve considerar o conhecimento do personagem, o protocolo de selamento, a natureza do poder e as consequências negativas.</p>
+<div class="stat-block">
+<h4>Sonho da Eternidade <span class="en">(Dream of Eternity)</span> — 2-37</h4>
+<div class="stat-line"><span class="stat-label">Origem:</span><span>Canônico, adaptado para o sistema.</span></div>
+<div class="stat-line"><span class="stat-label">Grau:</span><span>2.</span></div>
+<div class="stat-line"><span class="stat-label">Aparência:</span><span>Coração escuro, ressequido e frio ao toque, do tamanho de um punho. Possui cavidades e pode produzir um som semelhante ao de uma flauta.</span></div>
+<div class="power"><p><span class="power-name">Poderes:</span></p><ul>
+<li>Sonho Compartilhado: Ação Principal e 2 pontos de Espiritualidade, com 1 minuto de concentração — pode atrair até 6 pessoas em um raio de 30 m para um sonho compartilhado controlado pelo portador. O custo é pago ao iniciar a preparação; se a concentração for interrompida antes de completar o minuto, o efeito falha e o custo não é recuperado. Se sofrer dano durante a preparação, resolva o teste de Concentração conforme o Capítulo 7. Alvos resistentes realizam DET contra CD 16 para evitar o efeito.</li>
+<li>Manipulação Onírica: dentro do sonho, o portador pode alterar o ambiente e criar ilusões. Para extrair informações de um alvo, realiza teste disputado de MAN + Subterfúgio contra DET do alvo; o Mestre pode permitir ACO no lugar de DET quando a resistência for principalmente emocional, definindo a abordagem antes da rolagem. Empates favorecem o defensor, conforme o Capítulo 3.</li>
+<li>Sono Forçado: Ação Principal e 2 pontos de Espiritualidade — pode tentar fazer adormecer um alvo visível a até 30 m. O alvo realiza DET contra CD 18; em caso de falha, cai Inconsciente por 1d4 horas. O efeito termina antes se for despertado por uma intervenção adequada.</li>
+</ul></div>
+<div class="power"><p><span class="power-name">Efeitos negativos:</span></p><ul>
+<li><strong>Trauma Mental Severo:</strong> ao utilizar o Sonho Compartilhado no alcance máximo e afetar o número máximo de alvos, o portador sofre 2d6 de dano Psíquico e perde 1d6+2 pontos de Lucidez.</li>
+<li><strong>Erosão da Realidade:</strong> após cada uso, o portador tem dificuldade em distinguir sonho e realidade por 1d4 horas; pode sofrer Desvantagem em testes de RAC e DET quando a distinção entre sonho e realidade for central.</li>
+<li><strong>Chamado do Sonho:</strong> o artefato sussurra ao portador durante o sono. Ao final de um descanso, o portador realiza teste de ACO contra CD 14; em caso de falha, tenta ativá-lo enquanto dorme, caso tenha acesso físico ao objeto.</li>
+</ul></div>
+<div class="stat-line"><span class="stat-label">Selamento:</span><span>Manter imerso em solução conservante e lágrimas purificadas, dentro de recipiente fechado. O recipiente deve ser vigiado e a solução renovada mensalmente.</span></div><div class="stat-line"><span class="stat-label">Custo:</span><span>2 pontos de Espiritualidade para iniciar o Sonho Compartilhado ou utilizar Sono Forçado. Manipulação Onírica não tem custo adicional enquanto o Sonho Compartilhado permanecer ativo.</span></div><div class="stat-line"><span class="stat-label">Duração:</span><span>O Sonho Compartilhado termina após 10 minutos, quando o portador o encerra ou quando a Concentração é interrompida.</span></div>
+<p class="small">A capacidade de conduzir várias pessoas ao mesmo sonho e o trauma mental no uso máximo correspondem à referência canônica. Alcances, CDs, manipulação de informações e efeitos de sono são adaptações do RPG.</p>
+</div>
+<div class="stat-block">
+<h4>Ladrão de Vasos Sanguíneos <span class="en">(Blood Vessel Thief)</span> — 2-105</h4>
+<div class="stat-line"><span class="stat-label">Origem:</span><span>Canônico, adaptado para o sistema.</span></div>
+<div class="stat-line"><span class="stat-label">Grau:</span><span>2.</span></div>
+<div class="stat-line"><span class="stat-label">Aparência:</span><span>Vaso sanguíneo grosso e endurecido, do tamanho de uma cobra pequena. Quando ativado, enrola-se no braço do portador.</span></div>
+<div class="power"><p><span class="power-name">Poderes:</span></p><ul>
+<li>Roubo de Habilidade: Ação Principal e contato físico — o portador tenta roubar uma habilidade Beyonder que o alvo conheça e esteja apto a utilizar. O alvo realiza DET contra CD 17. Em caso de falha, a habilidade fica indisponível para o alvo e pode ser utilizada pelo portador por até 10 minutos, respeitando os requisitos, custos e limitações originais; o Mestre determina se a habilidade é compatível com o artefato e seu portador. O alvo pode levar vários dias para recuperar plenamente a habilidade roubada.</li>
+<li>Absorção Vital: como adaptação do RPG, o artefato causa 2d10 de dano Necrótico a um alvo vivo tocado. O alvo realiza teste de VIG contra CD 16; em caso de sucesso, o valor de dano é reduzido à metade, arredondando para baixo, antes da aplicação dos Limiares. Aplique Limiares, Resistência, Vulnerabilidade, Imunidade e Égide normalmente. Depois da resolução, o portador recupera metade dos PV efetivamente marcados no alvo, arredondada para cima, sem ultrapassar seu máximo. Se o alvo não marcar PV, o portador não recupera PV.</li>
+</ul></div>
+<div class="power"><p><span class="power-name">Efeitos negativos:</span></p><ul>
+<li><strong>Drenagem de Vida:</strong> cada utilização do Roubo de Habilidade reduz a expectativa de vida do portador. Para a adaptação do RPG, o Mestre pode registrar uma perda de 1d4 anos por uso; o efeito é cumulativo e não pode ser revertido por cura comum.</li>
+<li><strong>Dependência Sanguínea:</strong> depois de 3 usos em uma semana, o portador sente necessidade crescente de ativar novamente o artefato. O Mestre pode impor consequências narrativas e testes de ACO para resistir.</li>
+<li><strong>Fusão Parasitária:</strong> se utilizado mais de 5 vezes em um dia, o vaso começa a se fundir ao braço do portador. Remoção invasiva causa 4d10 de dano e pode deixar sequelas.</li>
+</ul></div>
+<div class="stat-line"><span class="stat-label">Selamento:</span><span>Manter em cilindro de vidro preenchido com sangue animal, renovado a cada 3 dias, dentro de uma câmara de contenção.</span></div><div class="stat-line"><span class="stat-label">Custo:</span><span>2 pontos de Espiritualidade por uso de Roubo de Habilidade ou Absorção Vital. Cada poder exige Ação Principal e contato físico bem-sucedido.</span></div>
+<p class="small">O roubo de habilidades por 10 minutos e a drenagem da expectativa de vida correspondem à referência canônica. A absorção vital e os valores numéricos são adaptações do RPG.</p>
+</div>
+<div class="stat-block">
+<h4>Fome Rastejante <span class="en">(Creeping Hunger)</span></h4>
+<div class="stat-line"><span class="stat-label">Origem:</span><span>Canônico, adaptado para o sistema. Código numérico não confirmado.</span></div>
+<div class="stat-line"><span class="stat-label">Grau:</span><span>2.</span></div>
+<div class="stat-line"><span class="stat-label">Aparência:</span><span>Luva fina feita de pele humana costurada com fios negros. Pode alterar sua aparência e se tornar difícil de perceber.</span></div>
+<div class="power"><p><span class="power-name">Poderes:</span></p><ul>
+<li>Almas Armazenadas: a luva pode armazenar até 5 almas de Beyonders mortos. Para capturar uma alma, o portador precisa tocar o corpo antes que a alma se disperse e gastar uma Ação Principal e 2 pontos de Espiritualidade; uma alma ocupa um espaço. O Mestre determina se a alma ainda está presente e pode ser armazenada. O portador pode utilizar uma habilidade pertencente a uma alma armazenada, desde que a conheça e consiga cumprir seus requisitos; cada ativação exige Ação Principal e 2 pontos de Espiritualidade, ou o custo maior da própria habilidade. Usar uma habilidade não consome a alma, salvo se a descrição disser o contrário.</li>
+<li><strong>Manto de Sombras:</strong> permite ocultar-se em sombras e penumbra. Testes de Furtividade realizados nessas condições recebem Vantagem quando houver cobertura visual adequada.</li>
+<li>Explosão de Carne: pode provocar a detonação sobrenatural de um cadáver que esteja ao alcance do portador. Preparar o corpo exige uma Ação Principal durante um conflito ou 1 minuto fora dele; não exige custo adicional. A ativação exige outra Ação Principal, 2 pontos de Espiritualidade e consome uma alma armazenada. A explosão afeta uma área de 3 m de raio e causa 2d6 de dano Contundente e 1d6 de dano Psíquico. Cada criatura na área pode realizar DES contra CD 14; em caso de sucesso, reduz à metade apenas o dano Contundente. O efeito exige um cadáver preparado e não pode ser usado sem uma alma armazenada.</li>
+</ul></div>
+<div class="power"><p><span class="power-name">Efeitos negativos:</span></p><ul>
+<li>Fome Insaciável: a cada 24 horas, a luva exige ser alimentada com uma alma humana ou uma quantidade de carne humana suficiente para satisfazê-la, a critério do Mestre. Se não for alimentada, começa a drenar a alma do portador, causando 1d6 de dano Psíquico e perda de 1 ponto de Lucidez por hora.</li>
+<li><strong>Louvor ao Verdadeiro Criador:</strong> a cada utilização, o portador pode ser compelido a murmurar preces ao Verdadeiro Criador. Um teste de ACO contra CD 15 permite conter o impulso; em caso de falha, a oração é pronunciada em voz alta.</li>
+<li><strong>Corrupção Gradual:</strong> a cada semana de posse, o portador realiza um teste de DET contra CD 16. Em caso de falha, desenvolve uma tendência canibalística temporária, definida pelo Mestre.</li>
+</ul></div>
+<div class="stat-line"><span class="stat-label">Selamento:</span><span>Manter em sarcófago de pedra com selos de contenção. A alimentação e a vigília devem seguir o protocolo determinado pela organização responsável.</span></div><div class="stat-line"><span class="stat-label">Custo:</span><span>Capturar uma alma exige Ação Principal e 2 pontos de Espiritualidade. Ativar uma habilidade armazenada exige Ação Principal e 2 pontos de Espiritualidade, ou o custo maior exigido pela própria habilidade. O Manto de Sombras é passivo e não exige custo por turno. A Explosão de Carne exige Ação Principal, 2 pontos de Espiritualidade e consome uma alma armazenada.</span></div>
+<p class="small">O armazenamento e uso de habilidades das almas, o Manto de Sombras, a necessidade de consumir almas e carne e os louvores ao Verdadeiro Criador correspondem à referência canônica. Quantidade de almas, dados, CDs e uso da Explosão de Carne são adaptações do RPG.</p>
+</div>
+<div class="stat-block">
+<h4>Lâmina Invernal <span class="en">(Wintry Blade)</span></h4>
+<div class="stat-line"><span class="stat-label">Origem:</span><span>Canônico, adaptado para o sistema. Código numérico não confirmado.</span></div>
+<div class="stat-line"><span class="stat-label">Grau:</span><span>2.</span></div>
+<div class="stat-line"><span class="stat-label">Aparência:</span><span>Lâmina triangular, translúcida e quase invisível. Sua empunhadura é fria como um cadáver.</span></div>
+<div class="power"><p><span class="power-name">Poderes:</span></p><ul>
+<li>Corte Congelante: ataques bem-sucedidos com a lâmina causam 2d8 + o bônus de Atributo + o bônus de Armas Brancas de dano Cortante, além de 2d6 de dano Gélido. O teste utiliza FOR + Armas Brancas; os mesmos bônus do teste são somados à parcela Cortante. A parcela Gélida adicional não recebe esse bônus. Depois do dano, o alvo realiza teste de VIG contra CD 16; em caso de falha, sofre Lentidão até o fim do seu próximo turno.</li>
+<li>Congelamento Mental: uma vez por conflito, como Ação Principal e gastando 2 pontos de Espiritualidade, o portador pode direcionar a lâmina a um alvo visível a até 18 m. O alvo realiza teste de DET contra CD 17; em caso de falha, fica Paralisado até o fim do próximo turno.</li>
+<li>Aura Gélida: criaturas que não sejam o portador e iniciem seu turno a até 3 m dele sofrem 1d4 de dano Gélido. A aura afeta aliados e inimigos; Resistência, Vulnerabilidade e Imunidade são aplicadas normalmente.</li>
+</ul></div>
+<div class="power"><p><span class="power-name">Efeitos negativos:</span></p><ul>
+<li>Hipotermia Progressiva: enquanto empunhada, a lâmina reduz gradualmente a temperatura corporal. Após 1 hora contínua, o portador sofre −2 em testes de DES; após 2 horas, recebe Desvantagem em testes físicos quando a rigidez corporal interferir. Após 3 horas, começa a transformação em morto-vivo: a cada 10 minutos adicionais, realiza teste de ACO contra CD 15. Três falhas acumuladas completam a transformação; sucessos não removem falhas anteriores. Guardar ou largar a lâmina interrompe a contagem e a sequência de testes, mas não apaga falhas já acumuladas. Calor intenso ou tratamento sobrenatural pode remover uma falha ou retardar o processo, conforme decisão do Mestre.</li>
+<li>Sede de Calor: a cada hora contínua de uso, o portador realiza teste de ACO contra CD 15. Em caso de falha, durante os 10 minutos seguintes sente compulsão de aproximar-se da criatura viva mais próxima e tocar nela para absorver calor. O portador pode evitar isso se estiver fisicamente impedido; não é obrigado a atacar ou matar a criatura.</li>
+<li><strong>Transformação Irreversível:</strong> se a transformação em morto-vivo for concluída, ela é permanente. Ações que gerem calor podem interromper ou retardar o processo antes de sua conclusão, conforme a decisão do Mestre.</li>
+</ul></div>
+<div class="stat-line"><span class="stat-label">Selamento:</span><span>Manter em fornalha mística aquecida por chamas consagradas. A manutenção da fornalha exige materiais raros e despesas recorrentes, definidas pelo Mestre conforme o local e a disponibilidade. Se as chamas se apagarem, a lâmina começa a congelar a área em torno dela.</span></div><div class="stat-line"><span class="stat-label">Custo:</span><span>Corte Congelante e Aura Gélida são propriedades da lâmina e não consomem Espiritualidade. Congelamento Mental exige Ação Principal, 2 pontos de Espiritualidade e só pode ser usado uma vez por conflito.</span></div>
+<p class="small">O congelamento do corpo e dos pensamentos e a perda gradual de temperatura do portador correspondem à referência canônica. Os dados, testes, CDs, alcance e efeitos adicionais são adaptações do RPG.</p>
+</div>
+</section>
+<section id="uso-artefatos">
+<h2>10. Utilização e Selamento de Artefatos <span class="en">(Using &amp; Sealing Artifacts)</span></h2>
+<h3>Antes de utilizar</h3>
+<ol>
+<li><strong>Identifique o artefato:</strong> confirme sua classificação, seus efeitos conhecidos, suas consequências negativas e o protocolo de contenção.</li>
+<li><strong>Verifique o método de abertura:</strong> alguns artefatos exigem apenas ser retirados de um recipiente; outros dependem de procedimentos específicos para liberar sua influência.</li>
+<li><strong>Prepare o ambiente:</strong> considere distância de aliados, rotas de fuga, proteções, materiais de contenção e a possibilidade de o efeito atingir o portador.</li>
+<li><strong>Ative conforme a descrição:</strong> utilize a ação, o custo, o alcance, os alvos e os limites indicados na ficha do artefato.</li>
+<li><strong>Resolva os efeitos negativos:</strong> aplique as consequências no momento especificado pela descrição. Não adie um efeito negativo apenas porque o poder principal foi bem-sucedido.</li>
+<li><strong>Reestabeleça o selamento:</strong> siga o protocolo próprio do artefato. Guardá-lo em um recipiente genérico não significa que esteja devidamente contido.</li>
+</ol>
+<div class="box rule-box">
+<div class="box-title">Não existe um procedimento universal de abertura</div>
+<p>O personagem não precisa necessariamente “quebrar o selamento” como uma ação padrão. Alguns protocolos consistem em retirar o objeto de uma caixa, afastá-lo de pessoas, mantê-lo submerso, expô-lo a uma condição específica ou cumprir outra exigência. Cada Artefato Selado deve indicar o que libera seu efeito e como pode ser contido novamente. O Mestre pode exigir teste de INT + Ocultismo ou outra abordagem adequada quando o personagem tentar interpretar um protocolo desconhecido.</p>
+</div>
+<div class="box note-box">
+<div class="box-title">Investigar um artefato desconhecido</div>
+<p>Quando o personagem não conhecer o protocolo de uso ou contenção, pode dedicar pelo menos 10 minutos à observação e realizar <strong>INT + Ocultismo</strong>. O Mestre define a CD entre 11 e 16 conforme a complexidade, a qualidade das pistas e o conhecimento disponível.</p>
+<ul>
+<li><strong>Sucesso:</strong> identifica uma forma segura de manuseio ou uma das principais restrições do artefato. O Mestre fornece uma informação útil, mas não necessariamente revela todos os poderes e efeitos negativos.</li>
+<li><strong>Sucesso crítico:</strong> além da informação principal, identifica uma consequência negativa ou um procedimento de contenção relevante, se houver pistas disponíveis.</li>
+<li><strong>Falha:</strong> não obtém uma conclusão confiável. O personagem pode pesquisar outras fontes ou tentar uma abordagem diferente; não recebe automaticamente uma informação falsa.</li>
+<li><strong>Falha crítica:</strong> interpreta incorretamente um sinal relevante ou provoca uma manifestação menor, definida pelo Mestre. Isso não precisa ativar automaticamente o poder mais perigoso do artefato.</li>
+</ul>
+<p>O teste não é obrigatório quando o personagem já conhece o procedimento por treinamento, instruções confiáveis ou experiência anterior.</p>
+</div>
+<h3>Acesso e utilização por Sequência</h3>
+<p>A classificação do Artefato Selado não estabelece, por si só, uma exigência universal de Sequência para que alguém o utilize. Um personagem de Sequência inferior pode conseguir ativar um artefato e ainda assim ser incapaz de resistir aos efeitos negativos. O Mestre deve considerar a natureza do poder, o conhecimento do usuário, a compatibilidade com o Caminho, o protocolo de contenção e a gravidade das consequências.</p>
+<p>Organizações podem impor requisitos próprios para autorizar o manuseio, como treinamento, acompanhamento, juramento, supervisão, autorização de um superior ou presença de uma equipe de contenção. Esses requisitos são institucionais e narrativos, não um bônus ou uma penalidade automática por Grau.</p>
+<h3>Registro de um novo Artefato Selado</h3>
+<p>Todo artefato criado para a campanha deve apresentar, no mínimo, os seguintes dados:</p>
+<table>
+<thead><tr><th>Campo</th><th>O que registrar</th></tr></thead>
+<tbody>
+<tr><td>Nome e código</td><td>Nome conhecido e código oficial, se houver. Não invente um código canônico quando ele não estiver confirmado.</td></tr>
+<tr><td>Grau</td><td>Classificação de perigo atribuída pela organização responsável ou pelo Mestre.</td></tr>
+<tr><td>Origem</td><td>Canônico, adaptação de elemento canônico ou original do RPG.</td></tr>
+<tr><td>Aparência</td><td>Forma, materiais, marcas, sons, temperatura e outros sinais perceptíveis.</td></tr>
+<tr><td>Poderes</td><td>Efeitos, alvos, alcance, duração, alcance de Sequência e limitações.</td></tr>
+<tr><td>Ativação e custos</td><td>Ação necessária, Espiritualidade, cargas, preparação ou condição de ativação.</td></tr>
+<tr><td>Resistência</td><td>Atributo, Proficiência, CD ou disputa necessários para resistir, quando aplicável.</td></tr>
+<tr><td>Efeitos negativos</td><td>Consequências durante a ativação, após o uso, enquanto carregado e durante o selamento.</td></tr>
+<tr><td>Selamento</td><td>Recipiente, ambiente, material, periodicidade e procedimentos necessários para conter o artefato.</td></tr>
+</tbody>
+</table>
+<div class="box note-box">
+<div class="box-title">Cânone e adaptação mecânica</div>
+<p>Os nomes, aparências, classificações e poderes gerais dos Artefatos Selados identificados como canônicos têm como referência o universo de <em>Lord of the Mysteries</em>. Dados de dano, CDs, duração em turnos, custos de Espiritualidade, usos por dia e demais números deste capítulo são adaptações para o RPG, não estatísticas oficiais do romance.</p>
+</div>
+</section>
+<section class="quick-ref" id="referencia"><h2>11. Resumo de Referência</h2>
+<h3>Recursos e Economia</h3>
+<ul>
+<li>Recursos varia de 0 a 5 e representa padrão de vida, patrimônio, renda e poder de compra geral. As rolagens mensais são referências narrativas, não salário automático nem saldo disponível.</li>
+<li>Despesas habituais são presumidas quando compatíveis com o padrão de vida. Compras relevantes ou extraordinárias exigem planejamento, liquidez, crédito, venda de ativos, favores ou outra solução narrativa.</li>
+<li>Bens raros e restritos dependem de disponibilidade, contatos e autorização, mesmo para personagens ricos.</li>
+<li>1 libra (£) = 20 sólis (s) = 240 pence (p); 1 sóli (s) = 12 pence (p).</li>
+</ul>
+<h3>Armas</h3>
+<ul>
+<li>O teste de ataque é definido pela arma e pela abordagem. Use o Atributo e a Proficiência indicados na tabela; alternativas exigem justificativa e aprovação do Mestre.</li>
+<li>Cada arma indica uma combinação fixa de Atributo e Proficiência. Em caso de acerto, some aos Dados da arma os mesmos bônus utilizados no teste de ataque. Exemplo: DES (+2) + Armas de Fogo (+3) = +5; um revólver de bolso causa 1d6+5 de dano.</li>
+<li>Um ataque à distância consome uma unidade de munição mesmo se errar. Recarregar uma arma com Recarga exige Ação Principal.</li>
+<li>Uma arma Lenta exige uma Ação Principal de preparação. Se também possuir Recarga, recarregar e preparar são etapas separadas.</li>
+<li>Ataques à distância sofrem Desvantagem quando uma ameaça hostil capaz de alcançar o atirador estiver a até 1,5 m, conforme o Capítulo 7.</li>
+</ul>
+<h3>Propriedades e munições</h3>
+<ul>
+<li>Dispersão: espingarda listada causa 2d6 a até 3 m e 1d6 acima de 3 m, até 12 m; não atinge alvos adicionais automaticamente.</li>
+<li>Arremessável: o alcance e a combinação fixa de Atributo + Proficiência constam na linha da arma; o mesmo bônus utilizado no teste é somado aos Dados de dano.</li>
+<li>Munições especiais substituem ou acrescentam apenas os efeitos descritos e seguem os tipos de dano do Capítulo 7.</li>
+</ul>
+<h3>Proteção e primeiros socorros</h3>
+<ul>
+<li>Proteção não concede bônus genérico à Defesa. As peças mundanas modificam os Limiares apenas para os tipos de dano e regiões indicados em suas descrições.</li>
+<li>Não some duas peças mundanas de proteção corporal; aplique apenas o maior ajuste pertinente. Fontes sobrenaturais só se acumulam quando sua descrição permitir.</li>
+<li>1 ponto de Égide reduz em um nível a categoria de dano; máximo de 1 ponto por ataque.</li>
+<li>Kit de primeiros socorros possui 3 usos. Estabilizar alguém em Agonia exige Ação Principal e teste INT ou RAC + Medicina contra CD 14; sucesso encerra o Relógio, mas não restaura PV nem consciência.</li>
+</ul>
+<h3>Itens Beyonder e Artefatos Selados</h3>
+<ul>
+<li>Item Beyonder: habilidade sobrenatural ativa sem ação específica exige Ação Principal; sem custo definido, custa 1 ponto de Espiritualidade. Efeitos passivos não custam, salvo indicação contrária. Consumíveis físicos não pagam Espiritualidade além de sua própria carga, salvo descrição expressa.</li>
+<li>Artefatos Selados: custo padrão por poder ativo — Grau 3: 1 SP; Grau 2: 2 SP; Grau 1: 3 SP; Grau 0: 4 SP. A ficha específica prevalece.</li>
+<li>Habilidades ativas de Artefatos Selados sem ação específica exigem Ação Principal; efeitos passivos não exigem ação. Usos diários reiniciam após 24 horas, não após qualquer descanso.</li>
+<li>Artesão é Sequência 6 do Caminho do Paragon; Avaliador é Sequência 7.</li>
+<li>Artefatos Selados são classificados em Graus 0, 1, 2 e 3. A equivalência entre Grau e Sequência é aproximada e não determina automaticamente quem pode ativá-los.</li>
+<li>Todo Artefato Selado possui protocolo próprio de utilização e contenção. Para investigar um protocolo desconhecido, pode ser necessário INT + Ocultismo, com CD definida pelo Mestre.</li>
+</ul>
+</section>
+<nav aria-label="Navegação entre capítulos" class="book-nav">
+<a href="07-combate.html">← Capítulo 7 — Conflitos</a>
+<a href="09-misticismo.html">Capítulo 9 — Misticismo →</a>
+</nav>
+</main>
 </body>
 </html>
+  
