@@ -266,7 +266,7 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 <p>A Ação Bônus não é uma opção livre. Só pode ser utilizada quando uma habilidade, poder, item ou outra regra disser expressamente que determinada atividade pode ser realizada como Ação Bônus. O participante pode usar no máximo uma Ação Bônus por turno; se possuir mais de uma opção, deve escolher qual utilizar.</p>
 
 <h3>Movimento</h3>
-<p>A <strong>Velocidade do Personagem</strong> determina a distância máxima que ele pode percorrer com seu Movimento durante o turno, salvo alteração concedida por Atributo, poder, condição ou equipamento. Esse deslocamento pode ser dividido antes e depois de sua Ação Principal.</p>
+<p>A <strong>Velocidade inicial</strong> do personagem é de <strong>9 metros</strong>, conforme o Capítulo 2. A <strong>Velocidade do Personagem</strong> determina a distância máxima que ele pode percorrer com seu Movimento durante o turno, salvo alteração concedida por Atributo, poder, condição ou equipamento. Esse deslocamento pode ser dividido antes e depois de sua Ação Principal.</p>
 
 <h3>Categorias de distância</h3>
 <p>As categorias abaixo padronizam a descrição de distâncias durante os conflitos e servem como referência para o alcance de ataques, poderes, interações e outros efeitos. Cada categoria indica uma distância máxima; quando uma arma, poder ou regra apresentar um alcance numérico específico, prevalece o valor indicado em sua descrição.</p>
@@ -350,16 +350,16 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
   <thead><tr><th>Fonte do ataque</th><th>Teste de exemplo</th><th>Critério</th></tr></thead>
   <tbody>
     <tr><td><strong>Machado</strong></td><td>FOR + Armas Brancas</td><td>A força aplicada ao golpe e o manejo da arma determinam a combinação de Atributo e Proficiência.</td></tr>
-    <tr><td><strong>Pistola</strong></td><td>(DES ou RAC) + Armas de Fogo</td><td>DES pode representar manejo e pontaria; RAC pode ser usado quando o disparo depender de cálculo, leitura de trajetória ou precisão planejada.</td></tr>
+    <tr><td><strong>Pistola</strong></td><td>DES + Armas de Fogo</td><td>Armas de fogo utilizam a combinação fixa indicada no Capítulo 8; a mira, a coordenação e o controle do disparo são representados por DES.</td></tr>
     <tr><td><strong>Poder Beyonder</strong></td><td>MAN + Luta, por exemplo</td><td>A combinação de Atributo e Proficiência depende da natureza e da forma de manifestação do poder. Outra combinação pode ser indicada na própria descrição.</td></tr>
   </tbody>
 </table>
-<p class="small">Os exemplos demonstram como a fonte determina o teste; não estabelecem combinações obrigatórias para todos os ataques do mesmo tipo. Mesmo duas armas semelhantes ou dois poderes ofensivos podem utilizar testes diferentes, conforme suas características e descrições.</p>
+<p class="small">A tabela apresenta exemplos gerais. Para armas listadas, as combinações fixas do Capítulo 8 são obrigatórias e prevalecem sobre qualquer exemplo genérico. Poderes Beyonder e outras fontes especiais continuam indicando seus próprios testes, conforme suas características e descrições.</p>
 
 <h3>Ataques corpo a corpo e à distância</h3>
 <p>As expressões <strong>corpo a corpo</strong> e <strong>à distância</strong> indicam a forma e o alcance do ataque, não uma fórmula fixa de teste. O Atributo e a Proficiência continuam sendo aqueles definidos pela arma, técnica ou poder que origina a ação.</p>
-<p>Em um acerto, role os dados de dano da arma e aplique os bônus indicados por suas regras. Como referência geral, armas corpo a corpo acrescentam FOR ao dano; se a arma possuir a propriedade <strong>Finesse</strong>, poderá utilizar DES em seu lugar. Armas de fogo e armas de disparo não recebem bônus de Atributo ao dano, salvo indicação expressa da própria fonte.</p>
-<p>Se houver um inimigo hostil a até 1,5 metro que possa ameaçar o atirador, o ataque à distância é realizado com <strong>Desvantagem</strong>. O ataque desarmado causa 1d4 de dano Contundente, acrescido do bônus de FOR; seu teste utiliza o Atributo e a Proficiência adequados à abordagem descrita, normalmente envolvendo Luta.</p>
+<p>Em ataques com armas listadas no Capítulo 8, utilize exatamente a combinação fixa de Atributo e Proficiência indicada para aquela arma. Essa mesma combinação resolve o teste de ataque e, em caso de acerto, é somada aos Dados da arma para determinar o dano: <strong>Dados da arma + bônus do Atributo + bônus da Proficiência</strong>. Não acrescente apenas o Atributo nem escolha outra combinação fora das opções expressamente permitidas na linha da arma. O Capítulo 8 é a referência para os testes e danos de armas de fogo, armas brancas, armas de disparo, armas arremessáveis e armas improvisadas. Ataques desarmados utilizam normalmente <strong>FOR + Luta</strong>; em caso de acerto, os mesmos bônus são somados aos Dados de dano desarmado.</p>
+<p>Se houver um inimigo hostil a até 1,5 metro que possa ameaçar o atirador, o ataque à distância é realizado com <strong>Desvantagem</strong>. Essa regra não substitui a combinação fixa de Atributo e Proficiência da arma nem altera a fórmula de dano.</p>
 
 <h3>Ataques com poderes Beyonder</h3>
 <p>O texto de cada poder deve indicar o teste utilizado e como seu efeito é resolvido:</p>
@@ -391,7 +391,7 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 
 <section id="dano">
 <h2>6. Dano e Limiares</h2>
-<p>O valor de dano é o resultado dos dados e bônus indicados pela arma ou pelo poder. Depois de aplicar os bônus e as resistências pertinentes, compare o valor final aos Limiares de Dano do alvo.</p>
+<p>O dano bruto é o resultado dos dados e bônus indicados pela arma ou pelo poder. Primeiro, compare esse valor aos Limiares de Dano do alvo para determinar a categoria inicial. Em seguida, aplique a Égide, quando utilizada, <strong>antes</strong> de Resistência, Vulnerabilidade, Imunidade e outros ajustes por tipo de dano. Depois desses ajustes, recalcule o valor final e sua categoria.</p>
 
 <h3>Tipos de dano</h3>
 <p>Os treze tipos de dano são organizados em três grupos: <strong>Físicos</strong>, <strong>Elementais</strong> e <strong>Sobrenaturais</strong>. Essa divisão facilita a consulta e não altera os efeitos de cada tipo. Resistências, Vulnerabilidades e Imunidades se aplicam ao tipo específico indicado, não ao grupo inteiro, salvo quando uma regra disser expressamente o contrário.</p>
@@ -461,12 +461,12 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 
 <h3>Ordem de resolução do dano</h3>
 <ol>
-  <li>Role os dados de dano da arma ou do poder e acrescente os bônus fixos previstos.</li>
-  <li>Aplique outros bônus ou ajustes indicados pelo efeito.</li>
-  <li>Aplique Resistência, Vulnerabilidade ou Imunidade ao tipo de dano.</li>
-  <li>Compare o valor final aos Limiares de Dano do alvo e determine a categoria: Menor, Maior ou Severo.</li>
-  <li>O alvo pode gastar 1 ponto de Égide para reduzir a categoria de dano em um nível.</li>
-  <li>Marque os PV correspondentes à categoria final.</li>
+  <li>Role os dados de dano da arma ou do poder e acrescente os bônus fixos previstos. Para armas, some os mesmos bônus de Atributo e Proficiência utilizados no teste de ataque, conforme a linha da arma no Capítulo 8.</li>
+  <li>Compare o dano bruto aos Limiares de Dano do alvo e determine a categoria inicial: Menor, Maior ou Severo. Se o dano bruto já for 0, não gaste Égide e nenhum PV será marcado.</li>
+  <li><strong>Antes dos ajustes por tipo de dano</strong>, se o dano bruto for maior que 0, o alvo pode gastar 1 ponto de Égide para reduzir a categoria inicial em um nível. O limite é de 1 ponto por ataque.</li>
+  <li>Aplique os ajustes específicos do efeito, incluindo Resistência, Vulnerabilidade e Imunidade. Recalcule o valor final e confira a categoria correspondente aos Limiares do alvo; não aplique Égide novamente. A Égide gasta não é recuperada caso algum ajuste posterior reduza o dano a 0.</li>
+  <li>Se o dano final for igual a <strong>0</strong>, o alvo não perde PV, mesmo que o valor esteja abaixo do primeiro limiar e normalmente fosse classificado como Dano Menor.</li>
+  <li>Marque os PV correspondentes à categoria final, após a aplicação dos ajustes.</li>
 </ol>
 <div class="example-box">
   <div class="box-title">Exemplo — participante na Sequência 8</div>
@@ -476,18 +476,18 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 
 <section id="vestimentas">
 <h2>7. Proteção e Égide</h2>
-<p><strong>Proteção</strong> abrange recursos e efeitos que reduzem a exposição do participante a ferimentos ou alteram a forma como ele suporta o dano. Pode vir de equipamentos, poderes Beyonder, rituais ou outras fontes; não está restrita a equipamentos. <strong>Égide</strong> é um recurso defensivo consumível que uma fonte de Proteção pode conceder. Um participante pode gastar 1 ponto de Égide por ataque para reduzir em um nível a categoria de dano recebida. Uma fonte também pode modificar diretamente os Limiares de Dano sem necessariamente conceder Égide. Não existe bônus genérico de Proteção à Defesa: qualquer alteração na Defesa precisa estar expressamente indicada na descrição da fonte.</p>
+<p><strong>Proteção</strong> abrange recursos e efeitos que reduzem a exposição do participante a ferimentos ou alteram a forma como ele suporta o dano. Pode vir de equipamentos, poderes Beyonder, rituais ou outras fontes; não está restrita a equipamentos. <strong>Égide</strong> é um recurso defensivo consumível que uma fonte de Proteção pode conceder. Na resolução de um ataque, primeiro se determina a categoria inicial pelo dano bruto; antes de aplicar Resistência, Vulnerabilidade, Imunidade ou outros ajustes por tipo de dano, o alvo pode gastar 1 ponto de Égide para reduzir essa categoria em um nível. Depois, aplicam-se os ajustes e recalcula-se a categoria final, sem reaplicar Égide. O limite é de um ponto por ataque. Uma fonte também pode modificar diretamente os Limiares de Dano sem necessariamente conceder Égide. Não existe bônus genérico de Proteção à Defesa: qualquer alteração na Defesa precisa estar expressamente indicada na descrição da fonte.</p>
 <div class="rule-box">
   <div class="box-title">Uso de Égide</div>
   <ul>
-    <li>Depois de determinar a categoria do dano, o participante pode gastar <strong>1 ponto de Égide</strong> para reduzi-la em um nível.</li>
+    <li>Depois de determinar a categoria inicial pelo dano bruto e <strong>antes de aplicar Resistência, Vulnerabilidade, Imunidade ou outros ajustes por tipo</strong>, o participante pode gastar <strong>1 ponto de Égide</strong> para reduzi-la em um nível. Após os ajustes, recalcule a categoria final; não aplique Égide novamente. A Égide gasta não é recuperada se os ajustes posteriores reduzirem o dano a 0.</li>
     <li>A redução segue a ordem: Severo → Maior → Menor → Nenhum dano.</li>
     <li>O limite é de <strong>1 ponto de Égide por ataque sofrido</strong>, independentemente da quantidade total disponível.</li>
     <li>Se a categoria for reduzida a Nenhum dano, nenhum PV é marcado por aquele ataque.</li>
   </ul>
 </div>
 <p>A descrição de cada fonte de Proteção deve informar se concede Égide, quantos pontos concede, quais são seus requisitos ou limitações e se altera os Limiares de Dano. Utilize os valores indicados pela própria fonte; não some um bônus genérico aos limiares.</p>
-<p class="small">Os efeitos de Proteção concedidos por equipamentos serão detalhados no capítulo de Equipamentos; outras fontes são descritas em suas próprias regras. Esta seção estabelece como a Proteção interage com Defesa, Égide e Limiares de Dano.</p>
+<p class="small">Os efeitos de Proteção concedidos por equipamentos são detalhados no Capítulo 8; outras fontes são descritas em suas próprias regras. Se, após todos os ajustes, o dano final for igual a 0, nenhum PV é marcado, mesmo que o valor esteja abaixo do primeiro limiar. Esta seção estabelece como a Proteção interage com Defesa, Égide e Limiares de Dano.</p>
 </section>
 
 <section id="condicoes">
@@ -541,7 +541,7 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 <ol>
   <li><strong>Início:</strong> quando o participante chega a 0 PV ou menos, fica Inconsciente e inicia o Relógio de Agonia. Seu limite inicial é de <strong>6 marcadores</strong>.</li>
   <li><strong>Passagem dos ciclos:</strong> ao final de cada ciclo de conflito, se continuar com 0 PV ou menos e não estiver estabilizado, recebe <strong>1 marcador de Agonia</strong>.</li>
-  <li><strong>Dano adicional:</strong> sempre que receber dano enquanto estiver Incapacitado por estar com 0 PV ou menos, recebe imediatamente <strong>1 marcador de Agonia</strong>.</li>
+  <li><strong>Dano adicional:</strong> sempre que receber dano enquanto estiver <strong>Inconsciente por estar com 0 PV ou menos</strong>, recebe imediatamente <strong>1 marcador de Agonia</strong>.</li>
   <li><strong>Morte:</strong> ao alcançar seu limite atual de marcadores, o participante morre.</li>
   <li><strong>Interrupção:</strong> receber qualquer cura ou ser estabilizado encerra o Relógio de Agonia. Remova os marcadores acumulados. A estabilização interrompe a Agonia, mas não restaura PV nem consciência.</li>
   <li><strong>Consequência permanente:</strong> cada vez que sobreviver a um Relógio de Agonia — por cura ou estabilização antes de alcançar o limite —, seu limite de morte é reduzido permanentemente em <strong>1 marcador</strong>, até o mínimo de 0.</li>
@@ -550,7 +550,7 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
   <div class="box-title">O limite de Agonia diminui permanentemente</div>
   <p>O limite começa em 6 marcadores e é reduzido em 1 a cada Agonia que o participante sobreviver. Se chegar a <strong>0</strong>, ele morrerá imediatamente na próxima vez que seus PV chegarem a 0 ou menos. A redução é permanente e não pode ser recuperada por cura, descanso ou estabilização.</p>
 </div>
-<p>Um participante estabilizado que ainda esteja com 0 PV ou menos permanece Inconsciente. Se receber dano novamente, perde a estabilização e inicia um novo Relógio de Agonia, aplicando-se o limite de morte reduzido que já possuir.</p>
+<p>Um participante estabilizado que ainda esteja com 0 PV ou menos permanece Inconsciente. Se receber dano novamente, perde a estabilização e inicia um novo Relógio de Agonia, aplicando-se o limite de morte reduzido que já possuir. O dano recebido enquanto estiver nessa situação concede imediatamente 1 marcador de Agonia.</p>
 
 <h3>Outras formas de recuperação</h3>
 <ul>
@@ -616,11 +616,11 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 <div class="example-box">
   <div class="box-title">Participantes</div>
   <ul>
-    <li><strong>Ana:</strong> jogador; DES 3 (bônus +1), Armas de Fogo 3 (bônus +1), Defesa 11, PV 5; revólver 2d6.</li>
-    <li><strong>Dmitri:</strong> jogador; FOR 4 (bônus +2), Luta 3 (bônus +1), Defesa 10, PV 6; sabre 1d8.</li>
-    <li><strong>Celeste:</strong> jogador; DES 3 (bônus +1), Armas de Fogo 2 (bônus +0), Defesa 11, PV 5; revólver 2d6.</li>
-    <li><strong>Ameaça:</strong> ameaça; Defesa 11, PV 6; poder de intimidação sobrenatural.</li>
-    <li><strong>Cultista:</strong> ameaça; Defesa 10, PV 5; revólver 2d6.</li>
+    <li><strong>Ana:</strong> jogador; DES 3 (bônus +1), Armas de Fogo 3 (bônus +1), Defesa 11, PV 5; revólver de bolso 1d6, com bônus de dano +2.</li>
+    <li><strong>Dmitri:</strong> jogador; FOR 4 (bônus +2), Armas Brancas 3 (bônus +1), Defesa 10, PV 6; sabre 1d8, com bônus de dano +3.</li>
+    <li><strong>Celeste:</strong> jogador; DES 3 (bônus +1), Armas de Fogo 2 (bônus +0), Defesa 11, PV 5; revólver de bolso 1d6, com bônus de dano +1.</li>
+    <li><strong>Ameaça:</strong> ameaça; Defesa 11, PV 10; limiares 4 e 8; poder de intimidação sobrenatural.</li>
+    <li><strong>Cultista:</strong> ameaça; DES 2 (bônus +0), Armas de Fogo 2 (bônus +0), Defesa 10, PV 5; revólver de bolso 1d6, com bônus de dano +0.</li>
   </ul>
   <p>O Mestre começa o conflito com <strong>0 Fichas de Interrupção</strong> e pode acumular no máximo 2. Para controlar o ciclo, serão colocados marcadores ao lado de Ana, Dmitri e Celeste; os marcadores das ameaças também são obrigatórios.</p>
 </div>
@@ -629,14 +629,14 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
   <div class="box-title">Ciclo 1 — Ana transfere o Foco para Dmitri</div>
   <p>O conflito começa quando Ana percebe a Ameaça no armazém e decide disparar antes que ela conclua um gesto ritualístico. O Mestre concede o Foco a Ana. Quando seu turno começa, Ana recebe um marcador de turno no ciclo.</p>
   <p><strong>Ana:</strong> dispara contra Ameaça. Rola 8 + 7 + DES (+1) + Armas de Fogo (+1) = <strong>17</strong>. Como o resultado supera a Defesa 11 da Ameaça, o ataque acerta.</p>
-  <p>Dano: 2d6 = 4 + 3 = <strong>7</strong>. O resultado alcança o primeiro limiar da Ameaça (4), mas não o segundo (8). O ataque causa Dano Maior e marca <strong>2 PV</strong>. A Ameaça cai de 6 para 4 PV.</p>
+  <p>Dano: 1d6 + DES (+1) + Armas de Fogo (+1) = 6 + 1 + 1 = <strong>8</strong>. O resultado alcança o segundo limiar da Ameaça (8), causando Dano Severo e marcando <strong>3 PV</strong>. A Ameaça cai de 10 para 7 PV.</p>
   <p>Ana conclui seu turno e transfere voluntariamente o Foco para Dmitri.</p>
 </div>
 
 <div class="example-box">
   <div class="box-title">Ciclo 1 — turno de Dmitri</div>
   <p>Dmitri começa seu turno e recebe um marcador de turno. Ele avança até a Ameaça e ataca com o sabre. Os dois dados selecionados mostram 10 + 10: é um <strong>Sucesso Crítico automático</strong>, independentemente da Defesa ou do bônus total.</p>
-  <p>O sabre causa 1d8 + FOR. Por ser crítico, os dados de dano são dobrados: <strong>2d8 +2</strong>. Dmitri obtém 3 + 4 + 2 = <strong>9 de dano</strong>. O resultado alcança o limiar Maior → Severo da Ameaça (8), causando Dano Severo e marcando <strong>3 PV</strong>. A Ameaça cai de 4 para 1 PV.</p>
+  <p>O sabre utiliza FOR + Armas Brancas e causa 1d8 + FOR (+2) + Armas Brancas (+1). Por ser crítico, os dados de dano são dobrados, mas os bônus da combinação são acrescentados uma única vez: <strong>2d8 + 3</strong>. Dmitri obtém 3 + 4 + 2 + 1 = <strong>10 de dano</strong>. O resultado alcança o limiar Maior → Severo da Ameaça (8), causando Dano Severo e marcando <strong>3 PV</strong>. A Ameaça cai de 7 para 4 PV.</p>
   <p>Dmitri recebeu o Foco por uma transferência voluntária de Ana e seu turno começou sem ser interrompida. Ao final dela, o Mestre recebe <strong>1 Ficha de Interrupção</strong>, e Dmitri transfere o Foco para Celeste.</p>
 </div>
 
@@ -685,7 +685,7 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
   <section>
     <h3>Ataques e testes</h3>
     <ul>
-      <li><strong>Testes de ataque:</strong> Atributo e Proficiência são definidos pela fonte do ataque; não há fórmula universal. Especializações não concedem bônus a testes de ataque.</li>
+      <li><strong>Testes de ataque:</strong> armas usam a combinação fixa de Atributo + Proficiência indicada no Capítulo 8. Essa mesma combinação é somada aos Dados da arma para determinar o dano. Poderes e outras fontes especificam seus próprios testes; Especializações não concedem bônus a testes de ataque.</li>
       <li><strong>Resolução:</strong> a fonte determina se o ataque é comparado à Defesa, a uma CD ou resolvido por disputa.</li>
     </ul>
   </section>
@@ -694,7 +694,7 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
     <ul>
       <li><strong>Menor:</strong> 1 PV; <strong>Maior:</strong> 2 PV; <strong>Severo:</strong> 3 PV.</li>
       <li><strong>Resistência:</strong> −1 dano; <strong>Vulnerabilidade:</strong> +1 dano; <strong>Imunidade:</strong> nenhum dano do tipo.</li>
-      <li><strong>Égide:</strong> 1 ponto reduz uma categoria; máximo de 1 ponto por ataque.</li>
+      <li><strong>Égide:</strong> depois de determinar a categoria inicial pelo dano bruto e antes de Resistência, Vulnerabilidade, Imunidade e outros ajustes por tipo, 1 ponto reduz a categoria em um nível; máximo de 1 ponto por ataque. Se o dano final for 0, nenhum PV é perdido.</li>
       <li><strong>Defesa Base:</strong> 10 + DES + RAC.</li>
       <li>Use os Limiares de Dano naturais da Sequência, salvo alteração expressa de uma fonte de Proteção ou de outro efeito.</li>
     </ul>
@@ -703,7 +703,7 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
     <h3>Incapacitação e poderes</h3>
     <ul>
       <li><strong>0 PV ou menos:</strong> fica Inconsciente e inicia o Relógio de Agonia.</li>
-      <li><strong>Relógio de Agonia:</strong> +1 marcador ao final de cada ciclo de conflito e +1 ao sofrer dano enquanto estiver Incapacitado; morre ao alcançar o limite atual (inicialmente 6).</li>
+      <li><strong>Relógio de Agonia:</strong> +1 marcador ao final de cada ciclo sem cura ou estabilização e +1 ao sofrer dano enquanto estiver Inconsciente por estar com 0 PV ou menos; morre ao alcançar o limite atual (inicialmente 6).</li>
       <li><strong>Sobreviver à Agonia:</strong> cura ou estabilização encerra o relógio e reduz permanentemente em 1 o limite de morte, até 0; no limite 0, a próxima queda a 0 PV ou menos é fatal.</li>
       <li><strong>Espiritualidade:</strong> custos e recuperação seguem os poderes e os Descansos dos Capítulos 3 e 6.</li>
       <li><strong>Lucidez 0:</strong> o jogador perde permanentemente o direito de conduzir esse participante, conforme o Capítulo 3.</li>
@@ -718,4 +718,4 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 </nav>
 </main>
 </body>
-</html>
+</html>  
