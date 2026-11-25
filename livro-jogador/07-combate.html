@@ -537,20 +537,27 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 </ul>
 
 <h3>Relógio de Agonia</h3>
-<p>O Relógio de Agonia representa a deterioração dos ferimentos de um participante que chegou a 0 PV ou menos. Em vez de realizar testes repetidos de sobrevivência, acompanhe a situação por meio de marcadores de Agonia.</p>
+<p>O Relógio de Agonia representa a deterioração dos ferimentos de um participante que chegou a 0 PV ou menos. Em vez de realizar testes repetidos de sobrevivência, acompanhe a situação por meio de marcadores de Agonia. O Relógio possui um limite fixo de <strong>4 marcadores</strong>.</p>
 <ol>
-  <li><strong>Início:</strong> quando o participante chega a 0 PV ou menos, fica Inconsciente e inicia o Relógio de Agonia. Seu limite inicial é de <strong>6 marcadores</strong>.</li>
-  <li><strong>Passagem dos ciclos:</strong> ao final de cada ciclo de conflito, se continuar com 0 PV ou menos e não estiver estabilizado, recebe <strong>1 marcador de Agonia</strong>.</li>
+  <li><strong>Início:</strong> quando o participante chega a 0 PV ou menos, fica Inconsciente e inicia o Relógio de Agonia com 4 marcadores como limite. Antes de preencher os marcadores, coloque marcadores iniciais conforme seu nível de <strong>Ferido</strong> (0 a 3).</li>
+  <li><strong>Passagem dos ciclos:</strong> ao final de cada Ciclo de Conflito, se continuar com 0 PV ou menos e não estiver estabilizado, recebe <strong>1 marcador de Agonia</strong>.</li>
   <li><strong>Dano adicional:</strong> sempre que receber dano enquanto estiver <strong>Inconsciente por estar com 0 PV ou menos</strong>, recebe imediatamente <strong>1 marcador de Agonia</strong>.</li>
-  <li><strong>Morte:</strong> ao alcançar seu limite atual de marcadores, o participante morre.</li>
-  <li><strong>Interrupção:</strong> receber qualquer cura ou ser estabilizado encerra o Relógio de Agonia. Remova os marcadores acumulados. A estabilização interrompe a Agonia, mas não restaura PV nem consciência.</li>
-  <li><strong>Consequência permanente:</strong> cada vez que sobreviver a um Relógio de Agonia — por cura ou estabilização antes de alcançar o limite —, seu limite de morte é reduzido permanentemente em <strong>1 marcador</strong>, até o mínimo de 0.</li>
+  <li><strong>Morte:</strong> ao alcançar <strong>4 marcadores de Agonia</strong>, o participante morre.</li>
+  <li><strong>Interrupção:</strong> receber cura que eleve os PV acima de 0 ou ser estabilizado encerra o Relógio de Agonia. Remova os marcadores acumulados. A estabilização interrompe a Agonia, mas não restaura PV nem consciência.</li>
+  <li><strong>Ferido:</strong> sempre que sobreviver a um Relógio de Agonia — por estabilização ou por recuperar PV acima de 0 —, recebe <strong>1 nível de Ferido</strong>, até o máximo de 3.</li>
 </ol>
-<div class="warning-box">
-  <div class="box-title">O limite de Agonia diminui permanentemente</div>
-  <p>O limite começa em 6 marcadores e é reduzido em 1 a cada Agonia que o participante sobreviver. Se chegar a <strong>0</strong>, ele morrerá imediatamente na próxima vez que seus PV chegarem a 0 ou menos. A redução é permanente e não pode ser recuperada por cura, descanso ou estabilização.</p>
+<div class="rule-box">
+  <div class="box-title">Condição: Ferido</div>
+  <p>Ferido representa sequelas persistentes de ferimentos graves e experiências próximas da morte. Cada nível acrescenta marcadores iniciais ao próximo Relógio de Agonia que o participante iniciar. O limite permanece fixo em 4 marcadores.</p>
+  <table>
+    <thead><tr><th>Nível de Ferido</th><th>Marcadores iniciais</th></tr></thead>
+    <tbody><tr><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td></tr><tr><td>2</td><td>2</td></tr><tr><td>3</td><td>3</td></tr></tbody>
+  </table>
+  <p>A condição possui máximo de 3 níveis. Mesmo gravemente Ferido, o participante ainda pode iniciar um novo Relógio de Agonia, embora esteja extremamente próximo da morte.</p>
+  <p><strong>Exemplo:</strong> um participante com Ferido 2 chega a 0 PV ou menos e inicia seu Relógio com 2 dos 4 marcadores preenchidos. Ele precisa receber apenas mais 2 marcadores para morrer. Se sofrer dano enquanto Inconsciente, recebe imediatamente mais 1 marcador; se permanecer sem estabilização ao final do Ciclo de Conflito, recebe outro.</p>
+  <p><strong>Remoção:</strong> Ferido não é permanente. Para remover 1 nível, o participante precisa receber tratamento médico especializado bem-sucedido e realizar um Descanso Completo. Cada Descanso Completo acompanhado de tratamento bem-sucedido remove apenas 1 nível. O tratamento utiliza o teste de Medicina já existente (INT + Medicina ou RAC + Medicina, CD 14), com acesso a profissional e recursos médicos adequados; não é criado um novo teste ou CD.</p>
 </div>
-<p>Um participante estabilizado que ainda esteja com 0 PV ou menos permanece Inconsciente. Se receber dano novamente, perde a estabilização e inicia um novo Relógio de Agonia, aplicando-se o limite de morte reduzido que já possuir. O dano recebido enquanto estiver nessa situação concede imediatamente 1 marcador de Agonia.</p>
+<p>Um participante estabilizado que ainda esteja com 0 PV ou menos permanece Inconsciente. Se receber dano novamente, perde a estabilização e inicia um novo Relógio de Agonia com os marcadores iniciais de seu nível atual de Ferido. O dano recebido nessa situação concede imediatamente 1 marcador de Agonia, além dos marcadores iniciais.</p>
 
 <h3>Outras formas de recuperação</h3>
 <ul>
@@ -703,8 +710,8 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
     <h3>Incapacitação e poderes</h3>
     <ul>
       <li><strong>0 PV ou menos:</strong> fica Inconsciente e inicia o Relógio de Agonia.</li>
-      <li><strong>Relógio de Agonia:</strong> +1 marcador ao final de cada ciclo sem cura ou estabilização e +1 ao sofrer dano enquanto estiver Inconsciente por estar com 0 PV ou menos; morre ao alcançar o limite atual (inicialmente 6).</li>
-      <li><strong>Sobreviver à Agonia:</strong> cura ou estabilização encerra o relógio e reduz permanentemente em 1 o limite de morte, até 0; no limite 0, a próxima queda a 0 PV ou menos é fatal.</li>
+      <li><strong>Relógio de Agonia:</strong> limite fixo de 4 marcadores; começa com marcadores iniciais iguais ao nível de Ferido (0 a 3). Recebe +1 ao final de cada ciclo se continuar com 0 PV ou menos e não estiver estabilizado, e +1 ao sofrer dano enquanto estiver Inconsciente nessa condição. Morre ao atingir 4 marcadores.</li>
+      <li><strong>Sobreviver à Agonia:</strong> estabilização ou cura que eleve os PV acima de 0 encerra o relógio e remove seus marcadores; a sobrevivência concede 1 nível de Ferido, até 3. Ferido acrescenta marcadores iniciais ao próximo Relógio e é removido em 1 nível por Descanso Completo acompanhado de tratamento médico especializado bem-sucedido.</li>
       <li><strong>Espiritualidade:</strong> custos e recuperação seguem os poderes e os Descansos dos Capítulos 3 e 6.</li>
       <li><strong>Lucidez 0:</strong> o jogador perde permanentemente o direito de conduzir esse participante, conforme o Capítulo 3.</li>
     </ul>
@@ -718,4 +725,4 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 </nav>
 </main>
 </body>
-</html>  
+</html>
