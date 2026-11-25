@@ -479,8 +479,8 @@ body h6 {
 <p>Representa o combate desarmado e técnicas corporais de confronto, incluindo socos, chutes, agarramentos, quedas e imobilizações.</p>
 <ul>
   <li><strong>Aplicações:</strong> Atacar sem armas, agarrar, derrubar, imobilizar, escapar de uma contenção física ou dominar alguém em combate corporal.</li>
-  <li><strong>Abordagem recomendada:</strong> FOR ou Destreza. Força representa potência; Destreza, precisão e técnica.</li>
-  <li><strong>Exemplo:</strong> Um personagem tenta derrubar um agressor e imobilizá-lo no chão. O Mestre escolhe FOR ou Destreza conforme a técnica utilizada.</li>
+  <li><strong>Abordagem recomendada:</strong> FOR. Ataques desarmados utilizam normalmente FOR + Luta; manobras, poderes ou técnicas específicas podem indicar outra combinação expressamente.</li>
+  <li><strong>Exemplo:</strong> um personagem tenta derrubar um agressor e imobilizá-lo no chão. O Mestre pede FOR + Luta, salvo se a manobra ou uma regra específica indicar outro teste.</li>
 </ul>
 
 <h4 id="performance">Performance</h4>
@@ -510,8 +510,8 @@ body h6 {
 <p>Abrange o manejo de armas de combate próximo e de armas tradicionais de disparo manual que não utilizam mecanismos de fogo, como espadas, facas, lanças, bastões, arcos e bestas.</p>
 <ul>
   <li><strong>Aplicações:</strong> Atacar com armas brancas, aparar um golpe quando a regra permitir, desarmar um oponente, manejar uma arma em espaço apertado ou preparar, mirar e disparar com arco ou besta.</li>
-  <li><strong>Abordagem recomendada:</strong> FOR ou Destreza. Força representa golpes potentes e armas que exigem esforço; Destreza representa precisão, técnica, coordenação e mira.</li>
-  <li><strong>Exemplo:</strong> Um personagem tenta atingir um adversário com uma espada ou disparar uma flecha contra um alvo distante. O Mestre escolhe FOR ou Destreza conforme a abordagem.</li>
+  <li><strong>Abordagem recomendada:</strong> em ataques com armas listadas, utilize exatamente a combinação de Atributo e Proficiência indicada para aquela arma no Capítulo 8. A maioria das armas brancas utiliza FOR + Armas Brancas; apenas as armas cuja linha permite expressamente DES admitem essa opção. Arcos, bestas, fundas e armas arremessáveis também seguem as combinações fixadas em suas linhas.</li>
+  <li><strong>Exemplo:</strong> uma espada longa utiliza FOR + Armas Brancas; uma Adaga ou Espada Curta permite FOR ou DES + Armas Brancas, enquanto um arco utiliza DES + Armas Brancas. A tabela do Capítulo 8 prevalece sobre esta orientação geral.</li>
 </ul>
 
 <h4 id="armas-de-fogo">Armas de Fogo</h4>
@@ -1454,6 +1454,12 @@ body h6 {
     do personagem, considerando eventuais alterações fornecidas por fontes de Proteção ou
     outros efeitos.
   </p>
+  <p>
+    <strong>Dano final igual a 0:</strong> se, depois de todos os ajustes aplicáveis, o dano
+    final for igual a 0, o alvo não perde PV. Isso vale mesmo quando o valor seria inferior
+    ao primeiro limiar e, portanto, normalmente seria classificado como Dano Menor. Dano zero
+    não é convertido em Dano Menor.
+  </p>
 </div>
 
 <div class="box box-rule">
@@ -1500,9 +1506,11 @@ body h6 {
 <div class="box box-rule">
   <div class="box-title">Uso de Égide</div>
   <p>
-    Depois de identificar a categoria do dano recebido, o personagem pode gastar
-    <strong>1 ponto de Égide</strong> para reduzir essa categoria em um nível,
-    antes de marcar os PV. A redução segue esta ordem:
+    Primeiro, compare o dano bruto aos Limiares do alvo e determine a categoria inicial. Se o dano bruto já for 0, não gaste Égide e nenhum PV será perdido.
+    <strong>Antes de aplicar Resistência, Vulnerabilidade, Imunidade ou outros ajustes por tipo
+    de dano</strong>, o defensor pode gastar <strong>1 ponto de Égide</strong> para reduzir a
+    categoria inicial em um nível. Em seguida, aplique os ajustes pertinentes e recalcule o
+    valor e a categoria finais; não aplique Égide novamente. A redução segue esta ordem:
   </p>
   <table>
     <thead><tr><th>Dano recebido</th><th>Após gastar 1 ponto de Égide</th></tr></thead>
@@ -1515,8 +1523,10 @@ body h6 {
   <p>
     O limite é de <strong>1 ponto de Égide por ataque sofrido</strong>,
     independentemente da quantidade total que o personagem possua. Não é possível
-    gastar vários pontos para reduzir o mesmo ataque em mais de um nível. Se o dano
-    for reduzido a Nenhum dano, nenhum PV é marcado por aquele ataque.
+    gastar vários pontos para reduzir o mesmo ataque em mais de um nível. Se, após todos
+    os ajustes, o dano final for igual a 0, nenhum PV é marcado, mesmo que o valor esteja
+    abaixo do primeiro limiar. A Égide gasta não é recuperada caso Resistência, Imunidade
+    ou outro ajuste reduza posteriormente o dano a 0.
   </p>
 </div>
 
@@ -1537,8 +1547,7 @@ body h6 {
 </div>
 
 <p>
-  O deslocamento básico de um personagem é de <strong>9 metros</strong>, salvo quando
-  uma habilidade, condição ou equipamento alterar esse valor.
+  A <strong>Velocidade inicial</strong> de um personagem é de <strong>9 metros</strong>, salvo quando uma habilidade, condição ou equipamento alterar esse valor.
 </p>
 <div class="separator"></div>
 
@@ -1586,8 +1595,8 @@ body h6 {
           <div class="quickref-row"><span class="quickref-label">Defesa Base</span><span class="quickref-value">10 + DES + RAC</span></div>
           <div class="quickref-row"><span class="quickref-label">Limiar Menor → Maior</span><span class="quickref-value">2 + (10 − Sequência), sem Proteção</span></div>
           <div class="quickref-row"><span class="quickref-label">Limiar Maior → Severo</span><span class="quickref-value">4 + 2 × (10 − Sequência), sem Proteção</span></div>
-          <div class="quickref-row"><span class="quickref-label">Égide</span><span class="quickref-value">1 ponto reduz o dano em um nível; máximo de 1 ponto por ataque</span></div>
-          <div class="quickref-row"><span class="quickref-label">Deslocamento básico</span><span class="quickref-value">9 metros</span></div>
+          <div class="quickref-row"><span class="quickref-label">Égide</span><span class="quickref-value">reduz a categoria inicial em um nível antes dos ajustes de Resistência, Vulnerabilidade e Imunidade; máximo de 1 ponto por ataque. Dano final 0 não marca PV.</span></div>
+          <div class="quickref-row"><span class="quickref-label">Velocidade inicial</span><span class="quickref-value">9 metros</span></div>
         </div>
       </section>
     </div>
@@ -1611,4 +1620,4 @@ body h6 {
 </nav>
 
 </body>
-</html>
+</html>  
