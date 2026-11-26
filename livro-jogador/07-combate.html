@@ -92,8 +92,8 @@
 </blockquote>
 
 <div class="intro-panel">
-  <p>Em <strong>Senhor dos Mistérios RPG</strong>, um conflito não se limita à violência: uma negociação, um interrogatório ou uma disputa de vontades podem ser tão decisivos quanto enfrentar um monstro. Este capítulo apresenta a estrutura de Foco e resolução de ações usada nesses confrontos, além das regras específicas para ataques, ferimentos, proteção, condições e poderes Beyonder quando a situação envolver violência física ou sobrenatural, com a resolução dos testes conforme as regras do Capítulo 3.</p>
-  </div>
+  <p>Em <strong>Senhor dos Mistérios RPG</strong>, um conflito não se limita à violência: uma negociação, um interrogatório ou uma disputa de vontades podem ser tão decisivos quanto enfrentar um monstro. Este capítulo apresenta a estrutura de Foco e resolução de ações usada nesses confrontos, além das regras específicas para ataques, ferimentos, proteção, condições e poderes Beyonder. <strong>Testes de ataque que exigem acertar diretamente um alvo usam 1d20; resistências, manobras e os demais testes continuam utilizando 2d10</strong>, conforme o Capítulo 3.</p>
+</div>
 
 <nav class="toc" aria-label="Sumário do capítulo">
   <div class="toc-title">Neste capítulo</div>
@@ -338,12 +338,19 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 
 <section id="ataques">
 <h2>4. Ataques</h2>
-<p>Os testes de ataque não seguem uma combinação universal de Atributo e Proficiência. Eles são definidos pela <strong>fonte que realiza o ataque</strong>, como uma arma, uma técnica ou um poder Beyonder. A descrição da fonte determina quais Atributos e Proficiências compõem o teste e como o efeito é resolvido. Nas fórmulas, os Atributos são indicados por suas siglas em maiúsculas (FOR, DES, VIG, CAR, MAN, ACO, INT, RAC e DET), e as Proficiências por seus nomes completos. Esses termos representam bônus derivados dos Pontos registrados na ficha, não os Pontos brutos.</p>
+<p>Os testes de ataque não seguem uma combinação universal de Atributo e Proficiência. Eles são definidos pela <strong>fonte que realiza o ataque</strong>, como uma arma, uma técnica ou um poder Beyonder. A descrição da fonte determina quais Atributos e Proficiências compõem o teste; quando a finalidade for acertar diretamente o alvo, a resolução é sempre <strong>1d20 contra a Defesa</strong>. Efeitos que peçam uma resistência, uma disputa ou outro teste próprio não são testes de ataque e conservam a resolução em 2d10. Nas fórmulas, os Atributos são indicados por suas siglas em maiúsculas (FOR, DES, VIG, CAR, MAN, ACO, INT, RAC e DET), e as Proficiências por seus nomes completos. Esses termos representam bônus derivados dos Pontos registrados na ficha, não os Pontos brutos.</p>
 <div class="rule-box">
-  <div class="box-title">Regra dos testes de ataque</div>
-  <p>Quando a fonte exigir um teste de ataque, utilize a combinação de <strong>Atributo + Proficiência</strong> indicada por ela. A fonte também deve especificar se o resultado é comparado à Defesa do alvo, a uma Classe de Dificuldade ou ao resultado de uma disputa. A resolução da rolagem segue o Capítulo 3.</p>
+  <div class="box-title">Regra dos testes de ataque — 1d20</div>
+  <p>Quando uma arma, técnica ou poder exigir que o usuário acerte diretamente um alvo, realize um teste de ataque: <strong>1d20 + Atributo + Proficiência + Bônus aplicáveis ≥ Defesa do alvo</strong>. A fonte do ataque determina a combinação de Atributo e Proficiência. A mesma regra vale para personagens jogadores e ameaças controladas pelo Mestre.</p>
+  <ul>
+    <li><strong>20 natural:</strong> acerto crítico automático, independentemente da Defesa. Dobre a quantidade de dados de dano rolados pelo ataque; acrescente bônus fixos apenas uma vez.</li>
+    <li><strong>1 natural:</strong> falha automática, independentemente dos bônus, sem consequência catastrófica adicional por si só.</li>
+    <li>Vantagem: 2d20, mantenha o maior. Desvantagem: 2d20, mantenha o menor. Fontes opostas cancelam-se uma a uma; fontes restantes do mesmo tipo aplicam apenas uma condição.</li>
+  </ul>
+  <p>A seleção do d20 ocorre antes de verificar 1 ou 20 natural. Apenas o dado mantido determina o resultado crítico.</p>
   <p><strong>Especializações não concedem bônus a testes de ataque</strong>, mesmo quando forem diretamente relacionadas à arma, à técnica ou ao poder utilizado.</p>
 </div>
+<p>Considere ataque a ação ofensiva cuja finalidade seja acertar diretamente um alvo, causando dano ou aplicando um efeito que dependa desse acerto. Um poder que imponha ao alvo um teste de resistência, ou que resolva uma disputa, não exige por isso um teste de ataque: o alvo continua utilizando 2d10. Agarrar, empurrar, derrubar, desarmar, imobilizar e outras manobras conservam suas regras próprias e não se tornam ataques automaticamente.</p>
 
 <h3>Exemplos de testes definidos pela fonte</h3>
 <table>
@@ -364,9 +371,9 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 <h3>Ataques com poderes Beyonder</h3>
 <p>O texto de cada poder deve indicar o teste utilizado e como seu efeito é resolvido:</p>
 <ul>
-  <li><strong>Ataque contra Defesa:</strong> o usuário realiza o teste de ataque definido pelo poder; se igualar ou superar a Defesa do alvo, acerta.</li>
-  <li><strong>Resistência contra CD:</strong> o alvo faz um teste de resistência, utilizando o Atributo e, quando pertinente, a Proficiência indicados pelo poder. Se igualar ou superar a CD, resiste ao efeito.</li>
-  <li><strong>Teste disputado:</strong> quando o poder opuser diretamente o usuário e o alvo, ambos rolam os testes indicados e comparam os resultados. Não há críticos automáticos em testes disputados.</li>
+  <li><strong>Ataque direto contra Defesa:</strong> quando o poder precisar acertar diretamente o alvo, o usuário rola <strong>1d20 + Atributo + Proficiência + Bônus aplicáveis</strong>. Se o total igualar ou superar a Defesa, o ataque acerta. 20 natural é acerto crítico automático e dobra os dados de dano; 1 natural é falha automática.</li>
+  <li><strong>Resistência contra CD:</strong> quando o poder permitir que o alvo resista ao efeito, o alvo faz um teste com <strong>2d10</strong>, utilizando o Atributo e, quando pertinente, a Proficiência indicados pelo poder. Se igualar ou superar a CD, resiste ao efeito. Isso não é uma rolagem de ataque.</li>
+  <li><strong>Teste disputado:</strong> quando o poder opuser diretamente o usuário e o alvo por uma disputa de capacidades ou manobra, ambos rolam os testes indicados com <strong>2d10</strong> e comparam os resultados. Não há críticos automáticos em testes disputados.</li>
 </ul>
 <p>O poder deve indicar seu dano, tipo de dano, alcance, alvos, duração, custo e consequências de sucesso ou falha. Não se presume que todo poder seja um ataque ou que todo efeito possa ser evitado com Defesa. <strong>Testes de ataque de poderes Beyonder também não recebem bônus de Especialização.</strong></p>
 </section>
@@ -376,7 +383,7 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 <p>Os efeitos podem ser classificados como corporais, mentais ou espirituais. Essas categorias descrevem a natureza do poder; não são estatísticas separadas nem possuem bônus universais próprios.</p>
 <div class="rule-box">
   <div class="box-title">Teste de resistência</div>
-  <span class="formula">Atributo + Proficiência (quando pertinente) ≥ CD</span>
+  <span class="formula">2d10 + Atributo + Proficiência (quando pertinente) + Bônus aplicáveis ≥ CD</span>
 </div>
 <table>
   <thead><tr><th>Natureza do efeito</th><th>Abordagens possíveis</th><th>Exemplos</th></tr></thead>
@@ -579,7 +586,7 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 
 <h3>Concentração</h3>
 <p>Um participante pode manter apenas <strong>um poder que exija Concentração</strong> por vez. Ativar outro poder que também exija Concentração encerra o anterior, salvo se um dos poderes disser expressamente o contrário.</p>
-<p>Quando sofrer dano enquanto mantém Concentração, o participante realiza um teste com <strong>ACO + DET</strong>. A Classe de Dificuldade depende da quantidade de Pontos de Vida perdidos pelo dano:</p>
+<p>Quando sofrer dano enquanto mantém Concentração, o participante realiza um teste de 2d10 com <strong>ACO + DET</strong>: <strong>2d10 + ACO + DET ≥ CD</strong>. A Classe de Dificuldade depende da quantidade de Pontos de Vida perdidos pelo dano:</p>
 <table>
   <thead><tr><th>PV perdidos</th><th>CD</th></tr></thead>
   <tbody>
@@ -591,7 +598,7 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 </table>
 <ul>
   <li>Se o teste falhar, o poder é encerrado.</li>
-  <li>Se obtiver 10 + 10, mantém a Concentração automaticamente. Se obtiver 1 + 1, perde a Concentração automaticamente.</li>
+  <li>Depois de comparar o total à CD, 10 + 10 é Sucesso Crítico somente se o teste for bem-sucedido; 1 + 1 é Falha Crítica somente se o teste for malsucedido. Uma falha encerra a Concentração; uma dupla natural, por si só, não substitui a comparação com a CD.</li>
   <li>Receber a condição <strong>Incapacitado, Atordoado, Paralisado, Petrificado ou Inconsciente</strong> encerra a Concentração automaticamente.</li>
 </ul>
 
@@ -635,14 +642,14 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 <div class="example-box">
   <div class="box-title">Ciclo 1 — Ana transfere o Foco para Dmitri</div>
   <p>O conflito começa quando Ana percebe a Ameaça no armazém e decide disparar antes que ela conclua um gesto ritualístico. O Mestre concede o Foco a Ana. Quando seu turno começa, Ana recebe um marcador de turno no ciclo.</p>
-  <p><strong>Ana:</strong> dispara contra Ameaça. Rola 8 + 7 + DES (+1) + Armas de Fogo (+1) = <strong>17</strong>. Como o resultado supera a Defesa 11 da Ameaça, o ataque acerta.</p>
+  <p><strong>Ana:</strong> dispara contra Ameaça. Rola 1d20 e obtém 15; soma DES (+1) + Armas de Fogo (+1), totalizando <strong>17</strong>. Como o resultado supera a Defesa 11 da Ameaça, o ataque acerta.</p>
   <p>Dano: 1d6 + DES (+1) + Armas de Fogo (+1) = 6 + 1 + 1 = <strong>8</strong>. O resultado alcança o primeiro limiar da Ameaça (6), mas fica abaixo do segundo (14), causando Dano Maior e marcando <strong>2 PV</strong>. A Ameaça cai de 10 para 8 PV.</p>
   <p>Ana conclui seu turno e transfere voluntariamente o Foco para Dmitri.</p>
 </div>
 
 <div class="example-box">
   <div class="box-title">Ciclo 1 — turno de Dmitri</div>
-  <p>Dmitri começa seu turno e recebe um marcador de turno. Ele avança até a Ameaça e ataca com o sabre. Os dois dados selecionados mostram 10 + 10: é um <strong>Sucesso Crítico automático</strong>, independentemente da Defesa ou do bônus total.</p>
+  <p>Dmitri começa seu turno e recebe um marcador de turno. Ele avança até a Ameaça e ataca com o sabre. O d20 mostra <strong>20 natural</strong>: o ataque acerta automaticamente e é um acerto crítico, independentemente da Defesa ou do bônus total.</p>
   <p>O sabre utiliza FOR + Armas Brancas e causa 1d8 + FOR (+2) + Armas Brancas (+1). Por ser crítico, os dados de dano são dobrados, mas os bônus da combinação são acrescentados uma única vez: <strong>2d8 + 3</strong>. Dmitri obtém 3 + 4 + 2 + 1 = <strong>10 de dano</strong>. O resultado supera o primeiro limiar da Ameaça (6), mas permanece abaixo do segundo (14), causando Dano Maior e marcando <strong>2 PV</strong>. A Ameaça cai de 8 para 6 PV.</p>
   <p>Dmitri recebeu o Foco por uma transferência voluntária de Ana e seu turno começou sem ser interrompida. Ao final dela, o Mestre recebe <strong>1 Ficha de Interrupção</strong>, e Dmitri transfere o Foco para Celeste.</p>
 </div>
@@ -650,14 +657,14 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 <div class="example-box">
   <div class="box-title">Interrupção — Ameaça entra em Foco</div>
   <p>Antes que Celeste comece seu turno, o Mestre gasta a Ficha de Interrupção que recebeu após o turno de Dmitri. O Mestre assume o Foco e escolhe a Ameaça, que ainda não havia recebido o Foco no ciclo. Ela recebe seu marcador obrigatório de turno. Celeste ainda não recebe seu marcador, pois seu turno não começou.</p>
-  <p>A Ameaça realiza seu turno e usa um poder de intimidação sobrenatural contra Dmitri. O poder exige uma resistência de Autocontrole contra CD 11. Dmitri rola 3 + 4 + 0 (bônus de Autocontrole) = <strong>7</strong> e falha. Ele fica Amedrontado pelo período indicado pelo poder.</p>
+  <p>A Ameaça realiza seu turno e usa um poder de intimidação sobrenatural contra Dmitri. O poder exige uma resistência de Autocontrole contra CD 11. Dmitri rola <strong>2d10 (3 + 4) + ACO (+0) = 7</strong> e falha. Ele fica Amedrontado pelo período indicado pelo poder.</p>
   <p>Após o turno da Ameaça, o Foco retorna a Celeste, cujo turno havia sido interrompida. A transferência original de Dmitri para Celeste <strong>não gera uma Ficha de Interrupção</strong>, pois o Mestre a interrompeu antes de Celeste começar sua ação. Celeste continua apta a agir normalmente.</p>
 </div>
 
 <div class="example-box">
   <div class="box-title">Ciclo 1 — Falha de Celeste e resposta do Mestre</div>
-  <p>Celeste começa seu turno, recebe seu marcador de turno e dispara contra a Ameaça. Os dados selecionados mostram 1 + 1: é uma <strong>Falha Crítica automática</strong>.</p>
-  <p>Como Celeste falhou, ela conclui seu turno com as ações e o movimento que ainda puder realizar. Somente ao final do turno o Foco passa ao Mestre, sem gasto de Ficha de Interrupção e sem gerar uma ficha. O Mestre escolhe o Cultista, que ainda não havia recebido o Foco neste ciclo, para responder à falha. O Cultista recebe seu marcador obrigatório, realiza seu turno e dispara contra Ana.</p>
+  <p>Celeste começa seu turno, recebe seu marcador de turno e dispara contra a Ameaça. O d20 mostra <strong>1 natural</strong>: o ataque erra automaticamente. Esse resultado não provoca uma consequência catastrófica adicional; é apenas uma falha no ataque.</p>
+  <p>Como Celeste falhou, ela conclui seu turno com as ações e o movimento que ainda puder realizar. Somente ao final do turno o Foco passa ao Mestre, sem gasto de Ficha de Interrupção e sem gerar uma ficha. Essa transferência decorre da regra normal de Foco após uma falha; não é uma consequência catastrófica adicional do 1 natural. O Mestre escolhe o Cultista, que ainda não havia recebido o Foco neste ciclo, para responder à falha. O Cultista recebe seu marcador obrigatório e realiza seu turno. Como ameaça controlada pelo Mestre, também usa 1d20 para atacar: obtém 9 + DES (+0) + Armas de Fogo (+0) = 9 contra a Defesa 11 de Ana e erra.</p>
   <p>Ana, Dmitri e Celeste já receberam o Foco pelo menos uma vez. O turno do Cultista é o turno final da ameaça do ciclo. Depois que ele conclui seu turno, o Mestre remove todos os marcadores, inicia um novo ciclo e escolhe um jogador para receber o Foco. Sua reserva de Fichas de Interrupção permanece como estava; não há reposição automática pela mudança de ciclo.</p>
 </div>
 
@@ -692,8 +699,8 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
   <section>
     <h3>Ataques e testes</h3>
     <ul>
-      <li><strong>Testes de ataque:</strong> armas usam a combinação fixa de Atributo + Proficiência indicada no Capítulo 8. Essa mesma combinação é somada aos Dados da arma para determinar o dano. Poderes e outras fontes especificam seus próprios testes; Especializações não concedem bônus a testes de ataque.</li>
-      <li><strong>Resolução:</strong> a fonte determina se o ataque é comparado à Defesa, a uma CD ou resolvido por disputa.</li>
+      <li><strong>Testes de ataque:</strong> toda ação ofensiva que precise acertar diretamente o alvo usa 1d20 + Atributo + Proficiência + Bônus aplicáveis contra a Defesa. Armas usam a combinação fixa indicada no Capítulo 8; essa mesma combinação é somada aos Dados da arma para determinar o dano. Poderes e outras fontes indicam o Atributo e a Proficiência aplicáveis. Especializações não concedem bônus a testes de ataque.</li>
+      <li><strong>Outros efeitos:</strong> quando a fonte exigir resistência contra CD, disputa ou manobra, não se trata de teste de ataque; mantenha a resolução própria em 2d10. Testes gerais de resistência usam 2d10 + Atributo + Proficiência (quando pertinente) + Bônus aplicáveis contra a CD.</li>
     </ul>
   </section>
   <section>
