@@ -128,7 +128,7 @@ body h6 {
   estatísticas derivadas do personagem. As regras seguem a estrutura de criação
   apresentada no Capítulo 2: nove Atributos e <strong>24 Proficiências</strong>,
   divididas em oito Talentos, oito Perícias e oito Conhecimentos, além de testes com
-  <span class="dice">2d10</span>, bônus totais e Classe de Dificuldade (CD).
+  <span class="dice">1d20 para ataques e 2d10 para os demais testes</span>, bônus totais e Classe de Dificuldade (CD).
 </p>
 
 <p>
@@ -159,7 +159,7 @@ body h6 {
   <ul>
     <li><a href="#atributos"><strong>Atributos:</strong> escalas, categorias, dimensões e bônus.</a></li>
     <li><a href="#pericias"><strong>Proficiências:</strong> Talentos, Perícias e Conhecimentos, distribuição, aplicações e especializações.</a></li>
-    <li><a href="#sistema-testes"><strong>Sistema de Testes:</strong> rolagens 2d10, Classes de Dificuldade, resultados críticos, Vantagem, Desvantagem e testes disputados.</a></li>
+    <li><a href="#sistema-testes"><strong>Sistema de Testes:</strong> ataques com 1d20; demais testes com 2d10; Classes de Dificuldade, resultados críticos, Vantagem, Desvantagem e testes disputados.</a></li>
     <li>
   <a href="#estatisticas-derivadas">
     <strong>Estatísticas Derivadas:</strong>
@@ -707,17 +707,18 @@ body h6 {
 
 <p>
   Um teste é realizado quando o resultado de uma ação é incerto e o fracasso pode
-  produzir consequências relevantes. A fórmula padrão é
-  <strong>2d10 + Atributo + Proficiência + Bônus aplicáveis</strong>. Nessa fórmula,
-  Atributo e Proficiência são espaços para os bônus específicos do teste. Quando a
+  produzir consequências relevantes. O sistema utiliza dois métodos: <strong>1d20
+  exclusivamente para testes de ataque</strong>, quando o personagem precisa acertar
+  diretamente um alvo, e <strong>2d10 para todos os demais testes</strong>. Nos testes
+  gerais, Atributo e Proficiência representam os bônus específicos da ação. Quando a
   fórmula for apresentada para um caso concreto, use a sigla do Atributo, como RAC,
-  e o nome completo da Proficiência, como Investigação. O resultado é comparado à
-  Classe de Dificuldade (CD) ou, em uma oposição direta, ao total obtido por outro participante.
+  e o nome completo da Proficiência, como Investigação. Os testes gerais são comparados
+  à Classe de Dificuldade (CD) ou, quando houver oposição direta, ao total do outro participante.
 </p>
 
 <h3 id="teste-basico">Teste básico</h3>
 <div class="box box-rule">
-  <div class="box-title">Fórmula do Teste</div>
+  <div class="box-title">Fórmula dos testes não ofensivos (2d10)</div>
   <p style="text-align:center; font-size:1.2em;">
     <strong>Resultado = 2d10 + Atributo + Proficiência + Bônus aplicáveis</strong>
   </p>
@@ -750,16 +751,48 @@ body h6 {
   </p>
 </div>
 
-<h3 id="resolucao-teste">Como resolver um teste</h3>
+
+<h3 id="testes-ataque">Testes de Ataque (1d20)</h3>
+<div class="box box-rule">
+  <div class="box-title">Fórmula do Teste de Ataque</div>
+  <p style="text-align:center; font-size:1.2em;">
+    <strong>Resultado = 1d20 + Atributo + Proficiência + Bônus aplicáveis</strong>
+  </p>
+  <p style="text-align:center;">
+    <strong>O ataque acerta quando o resultado iguala ou supera a Defesa do alvo.</strong>
+  </p>
+  <ul>
+    <li><strong>20 natural:</strong> acerto crítico automático, independentemente da Defesa. Dobre a quantidade de dados de dano rolados pelo ataque; bônus fixos, como Atributo e Proficiência, são acrescentados apenas uma vez.</li>
+    <li><strong>1 natural:</strong> falha automática, independentemente dos bônus. Não provoca, por si só, uma consequência catastrófica adicional.</li>
+    <li>Com Vantagem, role <strong>2d20</strong> e mantenha o maior; com Desvantagem, role <strong>2d20</strong> e mantenha o menor. Sem ambas, role <strong>1d20</strong>.</li>
+    <li>Depois de cancelar fontes opostas uma a uma, qualquer quantidade restante de fontes do mesmo tipo concede apenas uma condição de Vantagem ou Desvantagem. A verificação de 1 ou 20 natural considera somente o dado mantido.</li>
+  </ul>
+</div>
+<p>
+  Considere ataque a ação ofensiva cuja finalidade seja acertar diretamente um alvo,
+  causando dano ou aplicando um efeito ofensivo que dependa desse acerto. A regra vale
+  para personagens jogadores e ameaças controladas pelo Mestre. O Atributo e a
+  Proficiência são determinados pela arma, técnica ou poder que origina o ataque.
+</p>
+<p>
+  Testes para agarrar, empurrar, derrubar, desarmar, imobilizar, escapar de contenção
+  ou executar outras manobras não se tornam testes de ataque apenas por ocorrerem em
+  combate: preservam a resolução já prevista para a manobra, normalmente em 2d10,
+  salvo indicação expressa em contrário. Testes de resistência contra poderes ou
+  efeitos, testes disputados e poderes que não exijam uma rolagem de ataque também
+  mantêm seus procedimentos próprios com 2d10.
+</p>
+
+<h3 id="resolucao-teste">Como resolver um teste geral (2d10)</h3>
 <ol>
   <li><strong>Declare a intenção:</strong> o jogador explica o que deseja alcançar e como pretende agir.</li>
   <li><strong>Defina a abordagem:</strong> o Mestre escolhe o Atributo e a Proficiência adequados à descrição.</li>
   <li><strong>Estabeleça a dificuldade:</strong> o Mestre determina uma CD ou define quem fará o teste oposto.</li>
   <li><strong>Calcule o bônus total:</strong> some o Bônus de Atributo, o Bônus de Proficiência e os demais bônus que realmente se aplicarem.</li>
-  <li><strong>Compare as fontes:</strong> cada fonte de Vantagem cancela uma fonte de Desvantagem. Depois dos cancelamentos, verifique qual tipo ainda predomina. Fontes excedentes do mesmo tipo não se acumulam.</li>
-  <li><strong>Role os dados:</strong> sem predominância, role 2d10 normalmente. Se restar Vantagem, role 3d10 e mantenha os dois maiores; se restar Desvantagem, role 3d10 e mantenha os dois menores. Independentemente da quantidade de fontes excedentes, apenas um dado adicional é utilizado.</li>
-  <li><strong>Verifique os críticos:</strong> em testes contra CD, depois de selecionar os dois dados, <strong>10 + 10</strong> gera Sucesso Crítico e <strong>1 + 1</strong> gera Falha Crítica, independentemente da soma, dos bônus ou da CD. Duplas de outros valores não geram críticos. Em testes disputados, aplica-se a regra própria de comparação de totais, sem críticos automáticos.</li>
-  <li><strong>Some e compare:</strong> quando não houver um resultado crítico, some os dois dados utilizados, acrescente o bônus total e compare o resultado à CD ou ao total do oponente.</li>
+  <li><strong>Compare as fontes:</strong> cada fonte de Vantagem cancela uma fonte de Desvantagem, uma a uma. Se restarem fontes de apenas um tipo, aplique uma única condição; fontes excedentes do mesmo tipo não acumulam dados adicionais.</li>
+  <li><strong>Role os dados:</strong> para estes testes gerais, role 2d10 sem Vantagem ou Desvantagem; com Vantagem, role 3d10 e mantenha os dois maiores; com Desvantagem, role 3d10 e mantenha os dois menores.</li>
+  <li><strong>Some e compare:</strong> some os dois dados selecionados, acrescente o bônus total e compare o resultado à CD ou, em um teste disputado, ao total do oponente.</li>
+  <li><strong>Verifique os críticos:</strong> apenas em testes contra CD, <strong>10 + 10</strong> é Sucesso Crítico quando o total obtido for bem-sucedido; <strong>1 + 1</strong> é Falha Crítica quando o total for malsucedido. Se a soma e os bônus produzirem o resultado oposto, o teste mantém seu resultado normal, sem crítico. Em testes disputados, não há críticos automáticos.</li>
   <li><strong>Interprete o resultado:</strong> descreva o sucesso, a falha e, quando houver, o efeito crítico ou a complicação adicional.</li>
 </ol>
 
@@ -792,34 +825,31 @@ body h6 {
   </tbody>
 </table>
 
-<h3 id="criticos">Resultados críticos</h3>
+<h3 id="criticos">Resultados críticos nos testes com 2d10</h3>
 <p>
-  Depois de selecionar os dois dados que compõem o resultado, verifique seus valores naturais.
-  O <strong>Sucesso Crítico</strong> ocorre quando os dois dados selecionados mostram
-  <strong>10 + 10</strong>; a <strong>Falha Crítica</strong> ocorre quando mostram
-  <strong>1 + 1</strong>. Essa classificação é independente da soma dos dados, dos bônus e do
-  resultado em relação à CD: 10 + 10 é sempre Sucesso Crítico, mesmo que o total fique abaixo
-  da CD, e 1 + 1 é sempre Falha Crítica, mesmo que o total alcance ou supere a CD. Duplas de
-  outros valores não geram críticos. Em testes disputados, permanece a regra própria de
-  comparação dos totais, sem aplicação automática de críticos.
+  Em testes gerais contra CD, primeiro some os dois dados selecionados aos bônus e
+  determine se o teste foi bem-sucedido ou malsucedido. Só então classifique um possível
+  crítico: <strong>10 + 10</strong> produz Sucesso Crítico se o teste tiver sido bem-sucedido;
+  <strong>1 + 1</strong> produz Falha Crítica se o teste tiver sido malsucedido. Uma dupla
+  10 + 10 que não alcance a CD é uma falha normal; uma dupla 1 + 1 cujo total alcance a CD
+  é um sucesso normal. Duplas de outros valores não geram críticos. Em testes disputados,
+  permanece a regra própria de comparação dos totais, sem aplicação automática de críticos.
 </p>
 
 <h4 id="acerto-critico">Sucesso Crítico</h4>
 <p>
-  O Sucesso Crítico ocorre sempre que os dois dados selecionados mostram
-  <strong>10 + 10</strong>, independentemente do resultado final ou da CD. O teste é
-  considerado bem-sucedido mesmo que a soma dos dados com os bônus não alcance a CD.
-  Além do sucesso, o personagem obtém um benefício adicional significativo, proporcional
-  à ação e às circunstâncias. O benefício pode ser dano adicional, uma abertura para um
-  ataque, uma descoberta extra ou uma oportunidade social relevante, conforme o pilar
-  envolvido.
+  O Sucesso Crítico ocorre quando os dois dados selecionados mostram <strong>10 + 10</strong>
+  e o resultado final alcança ou supera a CD. Além do sucesso, o personagem obtém um
+  benefício adicional significativo, proporcional à ação e às circunstâncias. O benefício
+  pode ser uma abertura tática, uma descoberta extra ou uma oportunidade social relevante,
+  conforme o pilar envolvido.
 </p>
 <div class="box box-example">
   <div class="box-title">Exemplo: Sucesso Crítico</div>
   <p>
     Uma personagem tenta convencer um comerciante a revelar quem comprou um ingrediente
-    raro. Ela possui bônus total +3, rola 10 e 10 e alcança 23 contra CD 25. Embora o total
-    fique abaixo da CD, os dois dados selecionados mostram 10 + 10, portanto ela obtém um
+    raro. Ela possui bônus total +3, rola 10 e 10 e alcança 23 contra CD 23. Como o total
+    alcança a CD e os dois dados selecionados mostram 10 + 10, ela obtém um
     <strong>Sucesso Crítico</strong>: o comerciante revela a informação e ainda recorda
     um detalhe útil sobre o comprador, oferecendo uma nova pista à investigação.
   </p>
@@ -827,20 +857,19 @@ body h6 {
 
 <h4 id="falha-critica">Falha Crítica</h4>
 <p>
-  A Falha Crítica ocorre sempre que os dois dados selecionados mostram
-  <strong>1 + 1</strong>, independentemente do resultado final ou da CD. O teste é
-  considerado malsucedido mesmo que a soma dos dados com os bônus alcance ou supere a CD.
-  Além de não alcançar o objetivo, o personagem sofre uma complicação adicional relevante,
-  proporcional à ação. A complicação pode envolver exposição, perda de recursos, dano a uma
-  ferramenta, desequilíbrio ou agravamento da situação.
+  A Falha Crítica ocorre quando os dois dados selecionados mostram <strong>1 + 1</strong>
+  e o resultado final fica abaixo da CD. Além de não alcançar o objetivo, o personagem
+  sofre uma complicação adicional relevante, proporcional à ação. A complicação pode
+  envolver exposição, perda de recursos, dano a uma ferramenta, desequilíbrio ou agravamento
+  da situação.
 </p>
 <div class="box box-example">
   <div class="box-title">Exemplo: Falha Crítica</div>
   <p>
-    Um personagem tenta abrir discretamente uma fechadura, possui bônus total +8 e rola
-    1 e 1. Seu resultado final é 10 contra CD 9. Embora o total alcance a CD, os dois dados
-    selecionados mostram 1 + 1, portanto ocorre uma <strong>Falha Crítica</strong>:
-    a gazua se quebra dentro do mecanismo e o ruído alerta uma pessoa no cômodo ao lado.
+    Um personagem tenta abrir discretamente uma fechadura, possui bônus total +5 e rola
+    1 e 1. Seu resultado final é 7 contra CD 9. Como o total fica abaixo da CD e os dois
+    dados selecionados mostram 1 + 1, ocorre uma <strong>Falha Crítica</strong>: a gazua
+    se quebra dentro do mecanismo e o ruído alerta uma pessoa no cômodo ao lado.
   </p>
 </div>
 
@@ -859,10 +888,10 @@ body h6 {
   contexto e para o impacto que o resultado pode produzir na história.
 </p>
 <p>
-  Nos testes contra CD, os resultados críticos são definidos exclusivamente pelos dois dados
-  selecionados e não dependem do total final. Em testes disputados, permanece a regra própria:
-  compare os totais normalmente, e o maior resultado vence; em caso de empate, prevalece o
-  defensor.
+  Nos testes gerais contra CD, a dupla natural só se torna crítica quando o total final
+  corresponde ao resultado da rolagem: 10 + 10 exige sucesso; 1 + 1 exige falha.
+  Em testes disputados, permanece a regra própria: compare os totais normalmente, e o maior
+  resultado vence; em caso de empate, prevalece o defensor.
 </p>
 
 <h3 id="testes-disputados">Testes disputados</h3>
@@ -898,20 +927,20 @@ body h6 {
 <div class="box box-rule">
   <div class="box-title">Como resolver fontes de Vantagem e Desvantagem</div>
   <p>
-    Cada fonte de Vantagem cancela uma fonte de Desvantagem. Depois de cancelar os pares,
-    observe qual tipo ainda possui fontes restantes. Independentemente de quantas fontes
-    excedentes existam, <strong>apenas uma condição é aplicada</strong>: Vantagem ou Desvantagem.
-    Fontes do mesmo tipo não concedem dados adicionais cumulativos.
+    Cada fonte de Vantagem cancela uma fonte de Desvantagem, uma a uma. Depois de cancelar
+    todos os pares, se restarem fontes de apenas um tipo, aplica-se uma única condição:
+    Vantagem ou Desvantagem. Fontes excedentes do mesmo tipo não concedem dados adicionais.
+    Por exemplo, três fontes de Vantagem e uma de Desvantagem deixam uma Vantagem efetiva.
   </p>
   <ul>
-    <li><strong>Vantagem predominante:</strong> role <strong>3d10</strong> e selecione os dois maiores resultados; some apenas esses dois dados.</li>
-    <li><strong>Desvantagem predominante:</strong> role <strong>3d10</strong> e selecione os dois menores resultados; some apenas esses dois dados.</li>
-    <li><strong>Fontes equilibradas ou ausentes:</strong> role normalmente <strong>2d10</strong> e utilize os dois resultados.</li>
+    <li><strong>Testes de Ataque (1d20):</strong> sem predominância, role 1d20; com Vantagem, role 2d20 e mantenha o maior; com Desvantagem, role 2d20 e mantenha o menor.</li>
+    <li><strong>Demais testes (2d10):</strong> sem predominância, role 2d10; com Vantagem, role 3d10 e some os dois maiores; com Desvantagem, role 3d10 e some os dois menores.</li>
   </ul>
   <p>
-    A seleção dos dois dados acontece <strong>antes</strong> da verificação de um possível crítico.
-    Portanto, apenas os valores do par selecionado são comparados: não basta que dois dados
-    quaisquer entre os três apresentem números iguais.
+    A seleção do resultado acontece antes de verificar um possível crítico. Em ataques,
+    apenas o d20 mantido é verificado para 1 ou 20 natural; nos testes gerais, os dois d10
+    selecionados são verificados para 10 + 10 ou 1 + 1, sempre respeitando se o teste passou
+    ou falhou contra a CD.
   </p>
 </div>
 <div class="box box-example">
@@ -919,8 +948,9 @@ body h6 {
   <p>
     Com Vantagem, uma rolagem de <strong>8, 8 e 10</strong> mantém os dois maiores resultados:
     10 e 8; não há crítico. Com Desvantagem, uma rolagem de <strong>1, 1 e 8</strong> mantém
-    1 + 1; ocorre Falha Crítica independentemente do total final ou da CD. A verificação
-    considera apenas os dois dados selecionados após aplicar Vantagem ou Desvantagem.
+    1 + 1. Se o bônus total for +0 e a CD 9, o resultado será 2 e ocorrerá Falha Crítica;
+    se os bônus fizerem o total alcançar a CD, será um sucesso normal, sem crítico. A
+    verificação considera apenas os dois dados selecionados após aplicar Vantagem ou Desvantagem.
   </p>
 </div>
 <div class="box box-example">
@@ -929,9 +959,11 @@ body h6 {
     Uma personagem possui três fontes de Vantagem — preparação prévia, auxílio eficaz
     e uma posição favorável —, mas sofre uma fonte de Desvantagem por estar ferida.
     Uma fonte de cada tipo se cancela. Embora ainda restem duas fontes de Vantagem,
-    elas não se acumulam: a personagem recebe apenas <strong>Vantagem</strong>, rola
-    <strong>3d10</strong> e mantém os dois maiores resultados. Se obtiver 2, 7 e 9,
+    elas não se acumulam: em um teste geral, a personagem recebe apenas <strong>Vantagem</strong>,
+    rola <strong>3d10</strong> e mantém os dois maiores resultados. Se obtiver 2, 7 e 9,
     utiliza 7 + 9 = 16. Com bônus total +2, alcança <strong>18</strong> contra CD 13.
+    Se a mesma contagem de fontes fosse aplicada a um ataque, ela rolaria apenas
+    <strong>2d20</strong> e manteria o maior resultado.
   </p>
 </div>
 <div class="box box-example">
@@ -1550,7 +1582,9 @@ body h6 {
         <div class="quickref-rows">
           <div class="quickref-row"><span class="quickref-label">Bônus de Atributo</span><span class="quickref-value">Pontos.(ATR) − 2</span></div>
           <div class="quickref-row"><span class="quickref-label">Bônus de Proficiência</span><span class="quickref-value">Pontos da Proficiência − 2</span></div>
-          <div class="quickref-row"><span class="quickref-label">Teste</span><span class="quickref-value">2d10 + Atributo + Proficiência + Bônus aplicáveis ≥ CD; com Vantagem/Desvantagem, role 3d10 e selecione dois</span></div>
+          <div class="quickref-row"><span class="quickref-label">Teste de Ataque</span><span class="quickref-value">1d20 + Atributo + Proficiência + Bônus ≥ Defesa; 20 natural: acerto crítico e dados de dano dobrados; 1 natural: falha automática</span></div>
+          <div class="quickref-row"><span class="quickref-label">Teste de Proficiência</span><span class="quickref-value">2d10 + Atributo + Proficiência + Bônus aplicáveis ≥ CD</span></div>
+          <div class="quickref-row"><span class="quickref-label">Teste puro de Atributo</span><span class="quickref-value">2d10 + Atributo + Bônus aplicáveis ≥ CD</span></div>
           <div class="quickref-row"><span class="quickref-label">Especialização</span><span class="quickref-value">+2 em testes pertinentes, exceto ataques e Lucidez; na Lucidez, a primeira Especialização contribui apenas pela Âncora de Reconhecimento (+1)</span></div>
         </div>
       </section>
@@ -1558,11 +1592,12 @@ body h6 {
       <section class="quickref-group" aria-label="Vantagem, desvantagem e críticos">
         <h4>Vantagem, desvantagem e críticos</h4>
         <div class="quickref-rows">
-          <div class="quickref-row"><span class="quickref-label">Vantagem</span><span class="quickref-value">após cancelar fontes opostas, role 3d10 e selecione/some os dois maiores; fontes excedentes não se acumulam</span></div>
-          <div class="quickref-row"><span class="quickref-label">Desvantagem</span><span class="quickref-value">após cancelar fontes opostas, role 3d10 e selecione/some os dois menores; fontes excedentes não se acumulam</span></div>
-          <div class="quickref-row"><span class="quickref-label">Sem Vantagem ou Desvantagem</span><span class="quickref-value">fontes equilibradas ou ausentes: role 2d10 normalmente</span></div>
-          <div class="quickref-row"><span class="quickref-label">Sucesso Crítico</span><span class="quickref-value">10 + 10 nos dados selecionados; independe do total final e da CD</span></div>
-          <div class="quickref-row"><span class="quickref-label">Falha Crítica</span><span class="quickref-value">1 + 1 nos dados selecionados; independe do total final e da CD</span></div>
+          <div class="quickref-row"><span class="quickref-label">Vantagem</span><span class="quickref-value">fontes cancelam 1 a 1; ataques: 2d20, mantenha o maior; demais testes: 3d10, some os dois maiores</span></div>
+          <div class="quickref-row"><span class="quickref-label">Desvantagem</span><span class="quickref-value">fontes cancelam 1 a 1; ataques: 2d20, mantenha o menor; demais testes: 3d10, some os dois menores</span></div>
+          <div class="quickref-row"><span class="quickref-label">Sem Vantagem ou Desvantagem</span><span class="quickref-value">ataques: 1d20; demais testes: 2d10</span></div>
+          <div class="quickref-row"><span class="quickref-label">Sucesso Crítico (2d10)</span><span class="quickref-value">10 + 10 nos dados selecionados e resultado final bem-sucedido</span></div>
+          <div class="quickref-row"><span class="quickref-label">Falha Crítica (2d10)</span><span class="quickref-value">1 + 1 nos dados selecionados e resultado final malsucedido</span></div>
+          <div class="quickref-row"><span class="quickref-label">Crítico de Ataque</span><span class="quickref-value">20 natural: acerto automático e dobra os dados de dano; 1 natural: falha automática sem catástrofe adicional</span></div>
         </div>
       </section>
     </div>
