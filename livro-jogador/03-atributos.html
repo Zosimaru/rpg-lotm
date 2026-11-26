@@ -146,7 +146,7 @@ body h6 {
     A ficha atual possui nove Atributos e 24 Proficiências: Acrobacia, Atletismo,
     Empatia, Furtividade, Intimidação, Luta, Performance, Persuasão, Armas Brancas,
     Armas de Fogo, Condução, Etiqueta, Investigação, Prestidigitação, Sobrevivência,
-    Subterfúgio, Ciências, História, Medicina, Natureza, Navegação, Ocultismo,
+    Subterfúgio, Ciências, História, Medicina, Natureza, Navegação, Misticismo,
     Submundo e Teologia. Elas estão divididas nos grupos Talentos, Perícias e
     Conhecimentos. Quando uma ação não corresponder diretamente a uma descrição,
     o Mestre escolhe a Proficiência mais próxima da abordagem apresentada pelo jogador;
@@ -338,7 +338,7 @@ body h6 {
 <ul>
   <li><strong>Aplicações comuns:</strong> Recordar fatos, compreender textos técnicos, conhecer doutrinas, reconhecer informações estudadas, aprender idiomas ou aplicar conhecimento acadêmico.</li>
   <li><strong>Abordagem:</strong> Quando o desafio depende principalmente de lembrar, compreender ou aplicar informações e conhecimentos adquiridos.</li>
-  <li><strong>Exemplo:</strong> Diante de um tratado antigo, o personagem tenta recordar o significado de um símbolo que estudou. O Mestre pode pedir INT + Ocultismo.</li>
+  <li><strong>Exemplo:</strong> Diante de um tratado antigo, o personagem tenta recordar o significado de um símbolo que estudou. O Mestre pode pedir INT + Misticismo.</li>
 </ul>
 
 <h4 id="raciocinio">Raciocínio <span class="attr-code">RAC</span></h4>
@@ -619,12 +619,12 @@ body h6 {
   <li><strong>Exemplo:</strong> Durante uma viagem pelos Cinco Mares, a tripulação perde de vista a costa em meio à neblina. O personagem consulta a carta náutica, a bússola e a posição das estrelas para determinar o rumo. O Mestre pede INT ou RAC + Navegação.</li>
 </ul>
 
-<h4 id="ocultismo">Ocultismo</h4>
+<h4 id="ocultismo">Misticismo</h4>
 <p>Representa o conhecimento teórico sobre tradições esotéricas, símbolos, entidades, fenômenos sobrenaturais, artefatos e conceitos ocultos. Não concede, por si só, a capacidade de executar poderes ou rituais.</p>
 <ul>
   <li><strong>Aplicações:</strong> Reconhecer símbolos, recordar relatos sobre entidades, identificar conceitos Beyonder conhecidos ou compreender a origem provável de um fenômeno oculto.</li>
-  <li><strong>Abordagem recomendada:</strong> Inteligência, para recordar e interpretar conhecimento ocultista.</li>
-  <li><strong>Exemplo:</strong> O personagem encontra um símbolo ritualístico e tenta reconhecer sua tradição e significado. O Mestre pede INT + Ocultismo.</li>
+  <li><strong>Abordagem recomendada:</strong> Inteligência, para recordar e interpretar conhecimento místico.</li>
+  <li><strong>Exemplo:</strong> O personagem encontra um símbolo ritualístico e tenta reconhecer sua tradição e significado. O Mestre pede INT + Misticismo.</li>
 </ul>
 
 <h4 id="submundo">Submundo</h4>
@@ -1409,20 +1409,10 @@ body h6 {
 
 <h4 id="blindagem-limiares">Proteção, Égide e Limiares de Dano</h4>
 <p>
-  <strong>Proteção</strong> é a categoria que reúne recursos e efeitos capazes de
-  reduzir a exposição do participante a ferimentos ou alterar a forma como ele suporta
-  o dano. Pode ser concedida por equipamentos, poderes Beyonder, rituais ou outras
-  fontes; portanto, não se limita a uma peça de equipamento. <strong>Égide</strong>
-  é um recurso defensivo consumível que uma fonte de Proteção pode conceder. Cada ponto
-  de Égide permite reduzir em um nível a categoria de dano de um ataque, respeitando
-  o limite de uso por ataque. Uma fonte de Proteção também pode modificar diretamente
-  os Limiares de Dano, sem necessariamente conceder Égide.
+  <strong>Proteção</strong> é a categoria que reúne recursos e efeitos capazes de reduzir a exposição do participante a ferimentos ou alterar a forma como ele suporta o dano. Pode ser concedida por equipamentos, poderes Beyonder, rituais ou outras fontes; portanto, não se limita a uma peça de equipamento. <strong>Égide</strong> é um recurso defensivo consumível que uma fonte de Proteção pode conceder. Cada ponto de Égide permite reduzir em um nível a categoria de dano de um ataque, respeitando o limite de uso por ataque.
 </p>
 <p>
-  A descrição de cada fonte de Proteção deve informar se concede Égide, quantos
-  pontos concede, quais são seus requisitos ou limitações e se altera os Limiares de
-  Dano. Não existe quantidade inicial de Égide: o personagem só recebe esse recurso
-  quando uma fonte o concede expressamente.
+  Nenhuma vestimenta, armadura, equipamento, poder, ritual ou outra fonte de Proteção concede ou modifica Limiares de Dano. Os limiares são definidos exclusivamente pelo Caminho e pela Sequência atual do personagem. As fontes de Proteção devem informar seus efeitos, requisitos, limitações e se concedem Égide. Não existe quantidade inicial de Égide: o personagem só recebe esse recurso quando uma fonte o concede expressamente.
 </p>
 <div class="box box-note">
   <div class="box-title">Registro de Égide na ficha</div>
@@ -1450,9 +1440,9 @@ body h6 {
   </ul>
   <p>
     O primeiro limiar determina quando o dano passa de Menor para Maior; o segundo
-    determina quando passa de Maior para Severo. Utilize sempre os limiares atuais
-    do personagem, considerando eventuais alterações fornecidas por fontes de Proteção ou
-    outros efeitos.
+    determina quando passa de Maior para Severo. Utilize sempre o par definido pelo
+    Caminho e atualizado conforme a Sequência atual do personagem. Nenhuma fonte de
+    Proteção ou outro efeito modifica esses valores.
   </p>
   <p>
     <strong>Dano final igual a 0:</strong> se, depois de todos os ajustes aplicáveis, o dano
@@ -1463,30 +1453,30 @@ body h6 {
 </div>
 
 <div class="box box-rule">
-  <div class="box-title">Limiares naturais de Dano sem Proteção</div>
+  <div class="box-title">Limiares definidos pelo Caminho e pela Sequência</div>
   <p>
-    Na ausência de uma fonte de Proteção ou de outro efeito que modifique os valores, utilize os
-    limiares naturais determinados pela Sequência. Neste livro, a progressão
-    apresentada vai da Sequência 9 até a <strong>Sequência 5</strong>.
+    Os valores iniciais de cada Caminho estão na tabela do Capítulo 2 e correspondem
+    à Sequência 9. O par é apresentado como <strong>primeiro limiar / segundo limiar</strong>:
+    o primeiro separa Dano Menor de Dano Maior; o segundo separa Dano Maior de Dano Severo.
+  </p>
+  <p>
+    Sempre que o personagem avançar efetivamente para a próxima Sequência, atualize os
+    limiares conforme os acréscimos acumulados abaixo:
   </p>
   <table>
-    <thead><tr><th>Sequência</th><th>Menor → Maior</th><th>Maior → Severo</th></tr></thead>
+    <thead><tr><th>Sequência atual</th><th>Acréscimo ao primeiro limiar</th><th>Acréscimo ao segundo limiar</th></tr></thead>
     <tbody>
-      <tr><td>9</td><td>3</td><td>6</td></tr>
-      <tr><td>8</td><td>4</td><td>8</td></tr>
-      <tr><td>7</td><td>5</td><td>10</td></tr>
-      <tr><td>6</td><td>6</td><td>12</td></tr>
-      <tr><td>5</td><td>7</td><td>14</td></tr>
+      <tr><td>9</td><td>+0</td><td>+0</td></tr>
+      <tr><td>8</td><td>+1</td><td>+2</td></tr>
+      <tr><td>7</td><td>+2</td><td>+4</td></tr>
+      <tr><td>6</td><td>+3</td><td>+6</td></tr>
+      <tr><td>5</td><td>+4</td><td>+8</td></tr>
     </tbody>
   </table>
   <p>
-    <strong>Menor para Maior:</strong> 2 + (10 − Sequência).<br/>
-    <strong>Maior para Severo:</strong> 4 + 2 × (10 − Sequência).
-  </p>
-  <p>
-    Quando uma fonte de Proteção modificar os Limiares de Dano, utilize os valores ou a
-    regra indicados em sua descrição. Não acrescente um bônus genérico de Proteção
-    aos limiares: o equipamento deve especificar como sua proteção altera os valores.
+    Apenas o Caminho e a Sequência atual determinam os Limiares de Dano. Vestimentas,
+    armaduras, equipamentos, poderes, rituais e outras fontes de Proteção não concedem
+    nem modificam esses valores.
   </p>
 </div>
 
@@ -1531,15 +1521,15 @@ body h6 {
 </div>
 
 <div class="box box-example">
-  <div class="box-title">Exemplo — Sequência 8</div>
+  <div class="box-title">Exemplo — Vidente na Sequência 8</div>
   <p>
-    Um personagem na Sequência 8, sem Proteção que modifique seus limiares, possui
-    Menor → Maior igual a <strong>4</strong> e Maior → Severo igual a <strong>8</strong>.
-    Assim, um ataque que cause 3 pontos de dano provoca Dano Menor; com 5 pontos,
-    provoca Dano Maior; com 8 pontos, provoca Dano Severo.
+    Um Vidente começa na Sequência 9 com Limiares de Dano <strong>5/12</strong>.
+    Ao avançar para a Sequência 8, o primeiro limiar aumenta +1 e o segundo +2,
+    passando a <strong>6/14</strong>. Assim, um ataque que cause 5 pontos de dano
+    provoca Dano Menor; com 6 pontos, provoca Dano Maior; com 14 pontos, provoca Dano Severo.
   </p>
   <p>
-    Se o personagem receber 5 pontos de dano, o resultado será Dano Maior, que
+    Se o personagem receber 6 pontos de dano, o resultado será Dano Maior, que
     normalmente marcaria 2 PV. Caso gaste 1 ponto de Égide, o ferimento cai
     para Dano Menor e ele marca apenas 1 PV. Se sofrer Dano Menor e gastar 1 ponto,
     o dano é reduzido a Nenhum dano e não marca PV.
@@ -1593,8 +1583,7 @@ body h6 {
         <h4>Defesa, proteção e deslocamento</h4>
         <div class="quickref-rows">
           <div class="quickref-row"><span class="quickref-label">Defesa Base</span><span class="quickref-value">10 + DES + RAC</span></div>
-          <div class="quickref-row"><span class="quickref-label">Limiar Menor → Maior</span><span class="quickref-value">2 + (10 − Sequência), sem Proteção</span></div>
-          <div class="quickref-row"><span class="quickref-label">Limiar Maior → Severo</span><span class="quickref-value">4 + 2 × (10 − Sequência), sem Proteção</span></div>
+          <div class="quickref-row"><span class="quickref-label">Limiares de Dano</span><span class="quickref-value">Definidos pelo Caminho; a cada avanço, primeiro limiar +1 e segundo +2. Proteções não alteram os valores.</span></div>
           <div class="quickref-row"><span class="quickref-label">Égide</span><span class="quickref-value">reduz a categoria inicial em um nível antes dos ajustes de Resistência, Vulnerabilidade e Imunidade; máximo de 1 ponto por ataque. Dano final 0 não marca PV.</span></div>
           <div class="quickref-row"><span class="quickref-label">Velocidade inicial</span><span class="quickref-value">9 metros</span></div>
         </div>
