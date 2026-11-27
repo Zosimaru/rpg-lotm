@@ -6,6 +6,148 @@
 <title>Capítulo 2 — Criação de Personagem · Senhor dos Mistérios RPG</title>
 <link rel="stylesheet" href="../assets/css/common.css">
 <link rel="stylesheet" href="../assets/css/print.css">
+
+<style id="pathway-table-design">
+  .pathway-table-wrap {
+    width: 100%;
+    max-width: 100%;
+    margin: 1.15rem 0 1.45rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border: 1px solid #d8ccb4;
+    border-radius: 8px;
+    background: #fbf7ef;
+    box-shadow: 0 2px 8px rgba(55, 43, 24, 0.07);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .pathway-table-wrap:focus-visible {
+    outline: 3px solid #b58a3a;
+    outline-offset: 3px;
+  }
+
+  .pathway-table {
+    width: 100%;
+    min-width: 960px;
+    margin: 0;
+    table-layout: fixed;
+    border: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.91em;
+    line-height: 1.45;
+  }
+
+  .pathway-table caption {
+    padding: 10px 13px;
+    background: #eee5d4;
+    color: #5b4a2e;
+    font-size: 0.92em;
+    font-weight: 600;
+    text-align: left;
+    caption-side: top;
+  }
+
+  .pathway-table col.col-number { width: 4%; }
+  .pathway-table col.col-pathway { width: 17%; }
+  .pathway-table col.col-sequence { width: 16%; }
+  .pathway-table col.col-spirituality { width: 13%; }
+  .pathway-table col.col-pv { width: 7%; }
+  .pathway-table col.col-thresholds { width: 12%; }
+  .pathway-table col.col-domains { width: 31%; }
+
+  .pathway-table thead th {
+    padding: 12px 10px;
+    background: #292824;
+    color: #f3d99f;
+    border: 0;
+    border-bottom: 2px solid #b58a3a;
+    font-size: 0.9em;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: left;
+    vertical-align: middle;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: none;
+  }
+
+  .pathway-table thead th:first-child,
+  .pathway-table thead th:nth-child(4),
+  .pathway-table thead th:nth-child(5),
+  .pathway-table thead th:nth-child(6) {
+    text-align: center;
+  }
+
+  .pathway-table tbody td {
+    padding: 11px 10px;
+    border: 0;
+    border-bottom: 1px solid #e3d8c5;
+    color: #27231d;
+    text-align: left;
+    vertical-align: top;
+    overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: none;
+  }
+
+  .pathway-table tbody tr:nth-child(even) td { background: #f1e8d7; }
+  .pathway-table tbody tr:nth-child(odd) td { background: #fbf7ef; }
+  .pathway-table tbody tr:last-child td { border-bottom: 0; }
+
+  .pathway-table tbody td:first-child,
+  .pathway-table tbody td:nth-child(4),
+  .pathway-table tbody td:nth-child(5),
+  .pathway-table tbody td:nth-child(6) {
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .pathway-table tbody td:nth-child(2),
+  .pathway-table tbody td:nth-child(3) {
+    font-weight: 500;
+  }
+
+  .pathway-table tbody td:last-child { line-height: 1.55; }
+
+  @media (max-width: 700px) {
+    .pathway-table { min-width: 960px; }
+    .pathway-table thead th,
+    .pathway-table tbody td { padding: 10px 9px; }
+  }
+
+  @media print {
+    .pathway-table-wrap {
+      overflow: visible;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+    .pathway-table {
+      width: 100%;
+      min-width: 0;
+      table-layout: fixed;
+      font-size: 7.2pt;
+      line-height: 1.25;
+    }
+    .pathway-table col.col-number { width: 3%; }
+    .pathway-table col.col-pathway { width: 18%; }
+    .pathway-table col.col-sequence { width: 17%; }
+    .pathway-table col.col-spirituality { width: 12%; }
+    .pathway-table col.col-pv { width: 6%; }
+    .pathway-table col.col-thresholds { width: 11%; }
+    .pathway-table col.col-domains { width: 33%; }
+    .pathway-table thead { display: table-header-group; }
+    .pathway-table thead th { padding: 6px 4px; font-size: 6.8pt; }
+    .pathway-table tbody td { padding: 5px 4px; }
+    .pathway-table tbody tr { break-inside: avoid; page-break-inside: avoid; }
+    .pathway-table caption { padding: 5px 4px; font-size: 7pt; }
+  }
+</style>
+
 </head>
 <body>
 
@@ -33,7 +175,7 @@
 </p>
 
 <p>
-  Siga os dez passos na ordem apresentada. Ao final, há um exemplo completo de criação.
+  Siga os nove passos na ordem apresentada. Ao final, há um exemplo completo de criação.
   Para consultar cálculos, tabelas e um checklist de preenchimento, utilize o
   <a href="../apendices/guia-criacao-ficha.html">Guia de Criação de Ficha</a>.
 </p>
@@ -46,7 +188,6 @@
     <li><a href="#passo-3-atributos">Distribua os <strong>Atributos</strong>.</a></li>
     <li><a href="#passo-4-pericias">Distribua as <strong>Proficiências</strong>.</a></li>
     <li><a href="#passo-5-caminho">Escolha um <strong>Caminho</strong>, registre sua Sequência e anote a Espiritualidade e os PV concedidos por ele.</a></li>
-    <li><a href="#passo-6-pontos-de-vida">Registre os <strong>Pontos de Vida</strong> (PV) concedidos pelo Caminho.</a></li>
     <li>
       <a href="#passo-8-lucidez">Determine a <strong>Lucidez</strong>.</a>
       <ul><li><a href="#ancoras-iniciais">Estabeleça as <strong>Âncoras e Conexões Iniciais</strong>.</a></li></ul>
@@ -571,8 +712,29 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
   que o personagem avança de Sequência, conforme a regra de progressão.
 </p>
 
-<table style="width:100%; table-layout:fixed; font-size:0.88em;">
-  <thead><tr><th style="width:3%;">#</th><th style="width:17%;">Caminho</th><th style="width:15%;">Sequência 9</th><th style="width:13%;">Espiritualidade inicial</th><th style="width:7%; white-space:nowrap;">PV máximo</th><th style="width:10%;">Limiares de Dano</th><th style="width:35%;">Principais autoridades / domínios</th></tr></thead>
+<div class="pathway-table-wrap" role="region" aria-label="Tabela comparativa dos 22 Caminhos" tabindex="0">
+<table class="pathway-table">
+  <caption>Valores iniciais e características dos 22 Caminhos na Sequência 9</caption>
+  <colgroup>
+    <col class="col-number">
+    <col class="col-pathway">
+    <col class="col-sequence">
+    <col class="col-spirituality">
+    <col class="col-pv">
+    <col class="col-thresholds">
+    <col class="col-domains">
+  </colgroup>
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Caminho</th>
+      <th scope="col">Sequência 9</th>
+      <th scope="col">Espiritualidade inicial</th>
+      <th scope="col">PV máximo</th>
+      <th scope="col">Limiares de Dano</th>
+      <th scope="col">Principais autoridades / domínios</th>
+    </tr>
+  </thead>
   <tbody>
     <tr><td>1</td><td>O Louco (The Fool)</td><td>Vidente (Seer)</td><td>11</td><td>5</td><td>5/12</td><td>Enganação, Mudança, História, Destino, Milagres, Marionetes</td></tr>
     <tr><td>2</td><td>A Porta (The Door)</td><td>Aprendiz (Apprentice)</td><td>10</td><td>5</td><td>5/11</td><td>Espaço, Selamento, Viagens, Portais, Mundo Espiritual</td></tr>
@@ -601,6 +763,7 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
   
   </tbody>
 </table>
+</div><!-- /.pathway-table-wrap -->
 
 <div class="box box-rule" id="limiares-iniciais">
   <div class="box-title">Limiares de Dano iniciais</div>
@@ -665,45 +828,7 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
 
 <div class="separator"></div>
 
-<h2 id="passo-6-pontos-de-vida">Passo 6 — Pontos de Vida (PV)</h2>
-
-<p>
-  Os Pontos de Vida representam a capacidade do personagem de suportar ferimentos
-  físicos antes de ficar incapacitado. Eles não representam apenas resistência
-  corporal: também funcionam como uma medida abstrata da capacidade de continuar
-  agindo apesar de ferimentos e exaustão.
-</p>
-
-<div class="box box-rule">
-  <div class="box-title">PV concedidos pelo Caminho</div>
-  <p>
-    O Caminho concede ao personagem uma quantidade fixa de <strong>Pontos de Vida</strong>,
-    indicada na coluna <strong>PV</strong> da tabela do Passo 5. Esse valor representa o
-    PV máximo do personagem e substitui integralmente a antiga fórmula.
-  </p>
-  <ul>
-    <li><strong>Vigor não acrescenta PV:</strong> o valor de VIG continua sendo usado nos testes correspondentes, mas não altera os Pontos de Vida.</li>
-    <li><strong>Avanço de Sequência não aumenta PV:</strong> o total concedido pelo Caminho permanece igual ao longo da progressão, salvo efeito específico que declare expressamente outra alteração.</li>
-    <li><strong>Sem recálculo:</strong> não some bônus de Atributo, níveis de Sequência ou qualquer parcela de fórmula ao valor indicado na tabela.</li>
-  </ul>
-  <p><strong>Exemplo:</strong> um personagem do Caminho do Louco, cuja Sequência 9 é Vidente, recebe <strong>5 PV</strong>. Ao avançar para as Sequências 8, 7, 6 ou 5, continua com 5 PV máximos, salvo efeito específico que altere esse valor.
-  </p>
-  <div class="box box-note">
-    <div class="box-title">Registro dos Pontos de Vida na ficha</div>
-    <p>
-      Registre o total de PV concedido pelo Caminho no campo de Vida máxima da ficha.
-      Para marcar os ferimentos, use os quadrados destinados aos Pontos de Vida. O
-      total seguido de uma barra (/) pode ser anotado no formato <strong>5/</strong>,
-      <strong>6/</strong> ou <strong>7/</strong>, conforme o Caminho.
-    </p>
-  </div>
-</div>
-
-<div class="separator"></div>
-
-<div class="separator"></div>
-
-<h2 id="passo-8-lucidez">Passo 7 — Lucidez</h2>
+<h2 id="passo-8-lucidez">Passo 6 — Lucidez</h2>
 
 <p>
   A Lucidez representa a estabilidade mental e a capacidade do personagem de
@@ -792,7 +917,7 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
 
 <div class="separator"></div>
 
-<h2 id="passo-9-equipamento-inicial">Passo 8 — Equipamento Inicial e Recursos</h2>
+<h2 id="passo-9-equipamento-inicial">Passo 7 — Equipamento Inicial e Recursos</h2>
 
 <p>
   Todo personagem começa com um conjunto básico de pertences. O Antecedente
@@ -871,7 +996,7 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
 
 <div class="separator"></div>
 
-<h2 id="passo-9-defesa-egide">Passo 9 — Defesa e Égide</h2>
+<h2 id="passo-9-defesa-egide">Passo 8 — Defesa e Égide</h2>
 <p>
   Neste passo, calcule e registre a Defesa e a Égide inicial. Os Limiares de Dano
   já foram definidos pelo Caminho e registrados no Passo 5. A criação não concede
@@ -928,7 +1053,7 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
   A <strong>Velocidade inicial</strong> de um personagem é de <strong>9 metros</strong>. Habilidades, condições e equipamentos podem alterar esse valor durante a campanha.
 </p>
 <div class="separator"></div>
-<h2 id="passo-11-detalhes-finais">Passo 10 — Detalhes Finais</h2>
+<h2 id="passo-11-detalhes-finais">Passo 9 — Detalhes Finais</h2>
 
 <p>
   Com as escolhas mecânicas concluídas, defina os elementos que darão identidade
@@ -1041,15 +1166,11 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
     bônus de outra fonte é somado durante a criação.
     <strong>Limiares de Dano iniciais:</strong> <strong>5/12</strong>, conforme o Caminho do Louco.
   </p>
-
-  <h4>Passo 6 — Pontos de Vida</h4>
-  <p>Como Edmund segue o Caminho do Louco e é da Sequência 9: Vidente, recebe <strong>5 PV</strong>, conforme a tabela do Passo 5. Esse total não depende de VIG e não aumenta ao avançar de Sequência.</p>
-
-  <h4>Passo 7 — Lucidez</h4>
+<h4>Passo 6 — Lucidez</h4>
   <p>Lucidez inicial: <strong>7 pontos</strong>. Todos os personagens começam com esse mesmo valor, sem necessidade de cálculo.</p>
   <p><strong>Âncoras iniciais:</strong> Edmund começa com três Âncoras mecânicas: uma Âncora de Relacionamento (Sra. Adelaide Finn), uma Âncora de Identidade (seu Conceito de detetive particular) e uma Âncora de Reconhecimento (sua Especialização em Documentoscopia). Cada uma concede +1 nos testes de Lucidez enquanto estiver ativa, totalizando +3. O Inspetor Davies e o Homem do Sobretudo Preto são suas duas Conexões iniciais.</p>
 
-  <h4>Passo 8 — Equipamento</h4>
+  <h4>Passo 7 — Equipamento</h4>
   <ul>
     <li><strong>Recursos:</strong> Nível 2 — Modesto. Edmund possui renda relativamente estável, aluga um quarto em uma pensão e consegue manter equipamentos comuns. Sua renda mensal de referência é 2d6 + 8 £; esse valor não representa saldo livre em mãos.</li>
     <li>Sobretudo cinza gasto e chapéu de feltro.</li>
@@ -1063,7 +1184,7 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
     esse equipamento, deverá justificar sua aquisição e obter a aprovação do Mestre.
   </p>
 
-  <h4>Passo 9 — Defesa e Égide</h4>
+  <h4>Passo 8 — Defesa e Égide</h4>
   <ul>
     <li><strong>Defesa Base:</strong> como Pontos.(DES) = 2, bônus de DES = +0, e Pontos.(RAC) = 4, bônus de RAC = +2; portanto, Defesa Base = 10 + 0 + 2 = <strong>12</strong>.</li>
     <li><strong>Proteção:</strong> nenhuma.</li>
@@ -1072,7 +1193,7 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
     <li><strong>Velocidade inicial:</strong> 9 metros.</li>
   </ul>
 
-  <h4>Passo 10 — Detalhes Finais</h4>
+  <h4>Passo 9 — Detalhes Finais</h4>
   <ul>
     <li><strong>Nome:</strong> Edmund Harker.</li>
     <li><strong>Idade:</strong> 34 anos.</li>
