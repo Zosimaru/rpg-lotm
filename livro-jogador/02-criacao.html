@@ -1,171 +1,163 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Capítulo 2 — Criação de Personagem · Senhor dos Mistérios RPG</title>
-<link rel="stylesheet" href="../assets/css/common.css">
-<link rel="stylesheet" href="../assets/css/print.css">
-
-<style id="pathway-table-design">
-  .pathway-table-wrap {
+<link href="../assets/css/common.css" rel="stylesheet"/>
+<link href="../assets/css/print.css" rel="stylesheet"/>
+<style id="pathway-card-design">
+  .pathway-cards {
     width: 100%;
     max-width: 100%;
     margin: 1.15rem 0 1.45rem;
-    overflow-x: auto;
-    overflow-y: hidden;
-    border: 1px solid #d8ccb4;
-    border-radius: 8px;
-    background: #fbf7ef;
-    box-shadow: 0 2px 8px rgba(55, 43, 24, 0.07);
-    -webkit-overflow-scrolling: touch;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
   }
 
-  .pathway-table-wrap:focus-visible {
-    outline: 3px solid #b58a3a;
-    outline-offset: 3px;
-  }
-
-  .pathway-table {
-    width: 100%;
-    min-width: 960px;
-    margin: 0;
-    table-layout: fixed;
-    border: 0;
-    border-collapse: separate;
-    border-spacing: 0;
-    font-size: 0.91em;
-    line-height: 1.45;
-  }
-
-  .pathway-table caption {
-    padding: 10px 13px;
+  .pathway-cards-caption {
+    grid-column: 1 / -1;
+    margin: 0 0 2px;
+    padding: 11px 14px;
+    border-left: 3px solid #b58a3a;
     background: #eee5d4;
     color: #5b4a2e;
     font-size: 0.92em;
-    font-weight: 600;
-    text-align: left;
-    caption-side: top;
+    line-height: 1.5;
   }
 
-  .pathway-table col.col-number { width: 4%; }
-  .pathway-table col.col-pathway { width: 17%; }
-  .pathway-table col.col-sequence { width: 16%; }
-  .pathway-table col.col-spirituality { width: 13%; }
-  .pathway-table col.col-pv { width: 7%; }
-  .pathway-table col.col-thresholds { width: 12%; }
-  .pathway-table col.col-domains { width: 31%; }
+  .pathway-card {
+    min-width: 0;
+    padding: 15px 16px 13px;
+    border: 1px solid #d8ccb4;
+    border-radius: 8px;
+    background: #fbf7ef;
+    box-shadow: 0 2px 7px rgba(55, 43, 24, 0.055);
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
 
-  .pathway-table thead th {
-    padding: 12px 10px;
+  .pathway-card:nth-of-type(even) { background: #f3ecdf; }
+
+  .pathway-card-head {
+    display: grid;
+    grid-template-columns: 34px minmax(0, 1fr);
+    align-items: start;
+    gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dfd2bc;
+  }
+
+  .pathway-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
     background: #292824;
     color: #f3d99f;
-    border: 0;
-    border-bottom: 2px solid #b58a3a;
-    font-size: 0.9em;
+    font-size: 0.82em;
     font-weight: 700;
-    line-height: 1.3;
-    text-align: left;
-    vertical-align: middle;
-    white-space: normal;
-    overflow-wrap: break-word;
-    word-break: normal;
-    hyphens: none;
-  }
-
-  .pathway-table thead th:first-child,
-  .pathway-table thead th:nth-child(4),
-  .pathway-table thead th:nth-child(5),
-  .pathway-table thead th:nth-child(6) {
-    text-align: center;
-  }
-
-  .pathway-table tbody td {
-    padding: 11px 10px;
-    border: 0;
-    border-bottom: 1px solid #e3d8c5;
-    color: #27231d;
-    text-align: left;
-    vertical-align: top;
-    overflow-wrap: break-word;
-    word-break: normal;
-    hyphens: none;
-  }
-
-  .pathway-table tbody tr:nth-child(even) td { background: #f1e8d7; }
-  .pathway-table tbody tr:nth-child(odd) td { background: #fbf7ef; }
-  .pathway-table tbody tr:last-child td { border-bottom: 0; }
-
-  .pathway-table tbody td:first-child,
-  .pathway-table tbody td:nth-child(4),
-  .pathway-table tbody td:nth-child(5),
-  .pathway-table tbody td:nth-child(6) {
-    text-align: center;
-    vertical-align: middle;
-    white-space: nowrap;
     font-variant-numeric: tabular-nums;
   }
 
-  .pathway-table tbody td:nth-child(2),
-  .pathway-table tbody td:nth-child(3) {
-    font-weight: 500;
+  .pathway-titlebox { min-width: 0; }
+  .pathway-name {
+    margin: 0 0 3px;
+    color: #352f25;
+    font-size: 1.02em;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+  }
+  .pathway-sequence {
+    margin: 0;
+    color: #6c5630;
+    font-size: 0.91em;
+    line-height: 1.4;
   }
 
-  .pathway-table tbody td:last-child { line-height: 1.55; }
+  .pathway-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    padding: 11px 0 10px;
+  }
 
-  @media (max-width: 700px) {
-    .pathway-table { min-width: 960px; }
-    .pathway-table thead th,
-    .pathway-table tbody td { padding: 10px 9px; }
+  .pathway-stat {
+    min-width: 0;
+    padding: 8px 7px;
+    border: 1px solid #e1d5c2;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.48);
+    text-align: center;
+  }
+
+  .pathway-stat-label {
+    display: block;
+    min-height: 2.4em;
+    color: #695a43;
+    font-size: 0.72em;
+    font-weight: 650;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+  }
+
+  .pathway-stat-value {
+    display: block;
+    margin-top: 3px;
+    color: #292824;
+    font-size: 1.12em;
+    line-height: 1.15;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .pathway-stat-thresholds .pathway-stat-value { color: #76551c; }
+
+  .pathway-domains {
+    margin: 0;
+    padding-top: 9px;
+    border-top: 1px solid #e5dac8;
+    color: #393329;
+    font-size: 0.88em;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+  .pathway-domains strong {
+    color: #5b4a2e;
+    font-size: 0.9em;
+  }
+
+  @media (max-width: 760px) {
+    .pathway-cards { grid-template-columns: minmax(0, 1fr); gap: 11px; }
+    .pathway-card { padding: 13px 13px 12px; }
   }
 
   @media print {
-    .pathway-table-wrap {
-      overflow: visible;
-      border: 0;
-      border-radius: 0;
-      box-shadow: none;
-    }
-    .pathway-table {
-      width: 100%;
-      min-width: 0;
-      table-layout: fixed;
-      font-size: 7.2pt;
-      line-height: 1.25;
-    }
-    .pathway-table col.col-number { width: 3%; }
-    .pathway-table col.col-pathway { width: 18%; }
-    .pathway-table col.col-sequence { width: 17%; }
-    .pathway-table col.col-spirituality { width: 12%; }
-    .pathway-table col.col-pv { width: 6%; }
-    .pathway-table col.col-thresholds { width: 11%; }
-    .pathway-table col.col-domains { width: 33%; }
-    .pathway-table thead { display: table-header-group; }
-    .pathway-table thead th { padding: 6px 4px; font-size: 6.8pt; }
-    .pathway-table tbody td { padding: 5px 4px; }
-    .pathway-table tbody tr { break-inside: avoid; page-break-inside: avoid; }
-    .pathway-table caption { padding: 5px 4px; font-size: 7pt; }
+    .pathway-cards { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; }
+    .pathway-card { padding: 10px 12px; box-shadow: none; }
+    .pathway-card-head { padding-bottom: 7px; }
+    .pathway-stats { padding: 7px 0; }
+    .pathway-stat { padding: 5px 6px; }
+    .pathway-domains { padding-top: 6px; }
   }
 </style>
-
 </head>
 <body>
-
 <h1>Capítulo 2 — Criação de Personagem</h1>
-
 <blockquote>
   “Antes da poção, antes do Caminho, antes dos poderes — existe a pessoa. Quem você
   era antes de conhecer o extraordinário ajudará a definir quem você se tornará depois.”
   <span class="cite">— Anotação atribuída a um mentor da Psicologia Alquímica</span>
 </blockquote>
-
 <p>
   Criar um personagem em <strong>Senhor dos Mistérios</strong> combina escolhas
   mecânicas com uma história pessoal. Você definirá quem ele era antes de se tornar
   um Beyonder, quais vínculos e experiências o aproximaram do oculto, que preço
   pagou por esse contato e qual Caminho seguirá.
 </p>
-
 <p>
   Neste capítulo, todos os personagens jogadores começam como Beyonders que já
   consumiram uma poção da <strong>Sequência 9</strong>. A obtenção dessa poção pode
@@ -173,65 +165,55 @@
   proibidas ou um acontecimento inexplicável. O Antecedente ajuda a estabelecer
   esse passado; os detalhes e as consequências devem ser definidos com o Mestre.
 </p>
-
 <p>
   Siga os nove passos na ordem apresentada. Ao final, há um exemplo completo de criação.
   Para consultar cálculos, tabelas e um checklist de preenchimento, utilize o
   <a href="../apendices/guia-criacao-ficha.html">Guia de Criação de Ficha</a>.
 </p>
-
 <div class="box box-rule">
-  <div class="box-title">Resumo dos Passos</div>
-  <ol>
-    <li><a href="#passo-1-conceito">Escolha um <strong>Conceito</strong>.</a></li>
-    <li><a href="#passo-2-antecedente">Escolha um <strong>Antecedente</strong>.</a></li>
-    <li><a href="#passo-3-atributos">Distribua os <strong>Atributos</strong>.</a></li>
-    <li><a href="#passo-4-pericias">Distribua as <strong>Proficiências</strong>.</a></li>
-    <li><a href="#passo-5-caminho">Escolha um <strong>Caminho</strong>, registre sua Sequência e anote a Espiritualidade e os PV concedidos por ele.</a></li>
-    <li>
-      <a href="#passo-8-lucidez">Determine a <strong>Lucidez</strong>.</a>
-      <ul><li><a href="#ancoras-iniciais">Estabeleça as <strong>Âncoras e Conexões Iniciais</strong>.</a></li></ul>
-    </li>
-    <li><a href="#passo-9-equipamento-inicial">Anote o <strong>Equipamento Inicial</strong> e escolha seu nível de <strong>Recursos</strong>.</a></li>
-    <li><a href="#passo-9-defesa-egide">Calcule a <strong>Defesa</strong> e registre a <strong>Égide</strong> inicial.</a></li>
-    <li><a href="#passo-11-detalhes-finais">Defina os <strong>Detalhes Finais</strong>.</a></li>
-  </ol>
+<div class="box-title">Resumo dos Passos</div>
+<ol>
+<li><a href="#passo-1-conceito">Escolha um <strong>Conceito</strong>.</a></li>
+<li><a href="#passo-2-antecedente">Escolha um <strong>Antecedente</strong>.</a></li>
+<li><a href="#passo-3-atributos">Distribua os <strong>Atributos</strong>.</a></li>
+<li><a href="#passo-4-pericias">Distribua as <strong>Proficiências</strong>.</a></li>
+<li><a href="#passo-5-caminho">Escolha um <strong>Caminho</strong>, registre sua Sequência e anote a Espiritualidade e os PV concedidos por ele.</a></li>
+<li>
+<a href="#passo-8-lucidez">Determine a <strong>Lucidez</strong>.</a>
+<ul><li><a href="#ancoras-iniciais">Estabeleça as <strong>Âncoras e Conexões Iniciais</strong>.</a></li></ul>
+</li>
+<li><a href="#passo-9-equipamento-inicial">Anote o <strong>Equipamento Inicial</strong> e escolha seu nível de <strong>Recursos</strong>.</a></li>
+<li><a href="#passo-9-defesa-egide">Calcule a <strong>Defesa</strong> e registre a <strong>Égide</strong> inicial.</a></li>
+<li><a href="#passo-11-detalhes-finais">Defina os <strong>Detalhes Finais</strong>.</a></li>
+</ol>
 </div>
-
 <div class="separator"></div>
-
 <h2 id="passo-1-conceito">Passo 1 — Conceito</h2>
-
 <p>
   Antes de distribuir pontos, pense em <em>quem</em> é seu personagem. O conceito
   é uma frase curta que resume sua identidade, sua ocupação ou o conflito que o
   define. Ele funciona como uma referência para as escolhas narrativas e mecânicas
   feitas durante a criação.
 </p>
-
 <p>Alguns exemplos de conceito:</p>
 <ul>
-  <li>Detetive de Backlund que investiga casos que a polícia prefere ignorar.</li>
-  <li>Pesquisadora universitária obcecada por manuscritos e símbolos antigos.</li>
-  <li>Marinheiro mercante que sobreviveu a um acontecimento inexplicável nos Cinco Mares.</li>
-  <li>Aristocrata de uma família endividada, cercada por segredos.</li>
-  <li>Jovem criado nas ruas do East Borough, habituado a sobreviver com pouco.</li>
-  <li>Clérigo que começou a receber sonhos perturbadores depois de um ritual.</li>
-  <li>Médica que abandonou o serviço militar e agora atende em bairros pobres.</li>
-  <li>Jornalista que descobriu uma ligação entre desaparecimentos aparentemente isolados.</li>
+<li>Detetive de Backlund que investiga casos que a polícia prefere ignorar.</li>
+<li>Pesquisadora universitária obcecada por manuscritos e símbolos antigos.</li>
+<li>Marinheiro mercante que sobreviveu a um acontecimento inexplicável nos Cinco Mares.</li>
+<li>Aristocrata de uma família endividada, cercada por segredos.</li>
+<li>Jovem criado nas ruas do East Borough, habituado a sobreviver com pouco.</li>
+<li>Clérigo que começou a receber sonhos perturbadores depois de um ritual.</li>
+<li>Médica que abandonou o serviço militar e agora atende em bairros pobres.</li>
+<li>Jornalista que descobriu uma ligação entre desaparecimentos aparentemente isolados.</li>
 </ul>
-
 <p>
   O conceito não concede bônus aos testes comuns nem altera Atributos ou Proficiências.
   Ele também estabelece a <strong>Âncora de Identidade</strong>, que concede +1 nos testes
   de Lucidez enquanto o personagem mantiver coerência com quem definiu ser. O conceito
   orienta as escolhas seguintes e deve combinar com o período, o local e o tom da campanha.
 </p>
-
 <div class="separator"></div>
-
 <h2 id="passo-2-antecedente">Passo 2 — Antecedente</h2>
-
 <p>
   O Antecedente representa a origem social, a ocupação e as experiências que
   moldaram o personagem antes de sua entrada no mundo Beyonder. Cada opção concede
@@ -240,7 +222,6 @@
   O Antecedente também apresenta uma sugestão de item, um gancho narrativo e uma
   complicação que podem conectar o personagem à campanha.
 </p>
-
 <p>
   Como todos os personagens começam na <strong>Sequência 9</strong>, o Antecedente
   também ajuda a explicar como cada um teve acesso à poção. A origem pode variar:
@@ -248,9 +229,7 @@
   encontrada ou obtida por intermédio de outra pessoa. Combine os detalhes dessa
   história com o Mestre.
 </p>
-
 <p>Escolha um dos Antecedentes a seguir.</p>
-
 <h3>Membro de Igreja</h3>
 <p>
   Você cresceu ou trabalhou dentro de uma das Igrejas Ortodoxas. Pode ter sido
@@ -261,12 +240,11 @@
   garanta que você seja um agente oficial ou plenamente autorizado.
 </p>
 <ul>
-  <li><strong>Pontos de Proficiência:</strong> +1 Ponto em Teologia e +1 Ponto em outra Proficiência à escolha do jogador.</li>
-  <li><strong>Item de Antecedente:</strong> símbolo religioso, carta de apresentação eclesiástica ou vestimentas que expressem sua ligação com a Igreja.</li>
-  <li><strong>Gancho narrativo:</strong> você pode conhecer membros, instalações e costumes da Igreja escolhida, ou manter uma relação importante com alguém de sua comunidade religiosa.</li>
-  <li><strong>Complicação narrativa:</strong> a instituição pode exigir discrição, obediência ou prestação de contas sobre suas atividades Beyonder.</li>
+<li><strong>Pontos de Proficiência:</strong> +1 Ponto em Teologia e +1 Ponto em outra Proficiência à escolha do jogador.</li>
+<li><strong>Item de Antecedente:</strong> símbolo religioso, carta de apresentação eclesiástica ou vestimentas que expressem sua ligação com a Igreja.</li>
+<li><strong>Gancho narrativo:</strong> você pode conhecer membros, instalações e costumes da Igreja escolhida, ou manter uma relação importante com alguém de sua comunidade religiosa.</li>
+<li><strong>Complicação narrativa:</strong> a instituição pode exigir discrição, obediência ou prestação de contas sobre suas atividades Beyonder.</li>
 </ul>
-
 <h3>Beyonder Irregular</h3>
 <p>
   Você obteve sua poção fora de um procedimento institucional reconhecido. Talvez
@@ -275,12 +253,11 @@
   com proteção, orientação ou reconhecimento de uma facção poderosa.
 </p>
 <ul>
-  <li><strong>Pontos de Proficiência:</strong> +1 Ponto em Furtividade e +1 Ponto em outra Proficiência à escolha do jogador.</li>
-  <li><strong>Item de Antecedente:</strong> um objeto discreto ligado à obtenção da poção, como um bilhete cifrado, um símbolo desconhecido ou uma lembrança de quem lhe apresentou ao mundo Beyonder.</li>
-  <li><strong>Gancho narrativo:</strong> você conhece caminhos informais e pode ter contato com alguém que negocia informações ou mercadorias difíceis de encontrar.</li>
-  <li><strong>Complicação narrativa:</strong> uma pessoa ou facção pode querer descobrir como você conseguiu a poção — ou tomar de você aquilo que acredita que lhe pertence.</li>
+<li><strong>Pontos de Proficiência:</strong> +1 Ponto em Furtividade e +1 Ponto em outra Proficiência à escolha do jogador.</li>
+<li><strong>Item de Antecedente:</strong> um objeto discreto ligado à obtenção da poção, como um bilhete cifrado, um símbolo desconhecido ou uma lembrança de quem lhe apresentou ao mundo Beyonder.</li>
+<li><strong>Gancho narrativo:</strong> você conhece caminhos informais e pode ter contato com alguém que negocia informações ou mercadorias difíceis de encontrar.</li>
+<li><strong>Complicação narrativa:</strong> uma pessoa ou facção pode querer descobrir como você conseguiu a poção — ou tomar de você aquilo que acredita que lhe pertence.</li>
 </ul>
-
 <h3>Aristocrata</h3>
 <p>
   Você pertence à nobreza, seja por nascimento, casamento ou reconhecimento
@@ -290,12 +267,11 @@
   prefere manter em segredo.
 </p>
 <ul>
-  <li><strong>Pontos de Proficiência:</strong> +1 Ponto em Etiqueta e +1 Ponto em outra Proficiência à escolha do jogador.</li>
-  <li><strong>Item de Antecedente:</strong> roupas finas, um broche familiar, um convite antigo ou outro objeto que represente sua posição social.</li>
-  <li><strong>Gancho narrativo:</strong> você possui relações familiares ou conhece pessoas de círculos aristocráticos, podendo ser reconhecido em determinados ambientes da alta sociedade.</li>
-  <li><strong>Complicação narrativa:</strong> sua família possui expectativas, rivalidades e uma reputação que pode ser comprometida por seus atos.</li>
+<li><strong>Pontos de Proficiência:</strong> +1 Ponto em Etiqueta e +1 Ponto em outra Proficiência à escolha do jogador.</li>
+<li><strong>Item de Antecedente:</strong> roupas finas, um broche familiar, um convite antigo ou outro objeto que represente sua posição social.</li>
+<li><strong>Gancho narrativo:</strong> você possui relações familiares ou conhece pessoas de círculos aristocráticos, podendo ser reconhecido em determinados ambientes da alta sociedade.</li>
+<li><strong>Complicação narrativa:</strong> sua família possui expectativas, rivalidades e uma reputação que pode ser comprometida por seus atos.</li>
 </ul>
-
 <h3>Trabalhador Urbano</h3>
 <p>
   Você construiu sua vida em uma cidade, trabalhando como operário, comerciante,
@@ -305,12 +281,11 @@
   cotidiano e a encontrar oportunidades nos ambientes que frequenta.
 </p>
 <ul>
-  <li><strong>Pontos de Proficiência:</strong> +1 Ponto em Sobrevivência e +1 Ponto em outra Proficiência à escolha do jogador.</li>
-  <li><strong>Item de Antecedente:</strong> um objeto ligado à sua antiga ocupação ou à comunidade em que viveu, como uma lembrança de família, um distintivo de trabalho ou uma peça artesanal.</li>
-  <li><strong>Gancho narrativo:</strong> você conhece pessoas e rotinas da comunidade em que viveu, mantendo vínculos com antigos colegas, vizinhos ou conhecidos.</li>
-  <li><strong>Complicação narrativa:</strong> familiares, vizinhos ou colegas podem se tornar vulneráveis aos perigos que acompanham sua vida Beyonder.</li>
+<li><strong>Pontos de Proficiência:</strong> +1 Ponto em Sobrevivência e +1 Ponto em outra Proficiência à escolha do jogador.</li>
+<li><strong>Item de Antecedente:</strong> um objeto ligado à sua antiga ocupação ou à comunidade em que viveu, como uma lembrança de família, um distintivo de trabalho ou uma peça artesanal.</li>
+<li><strong>Gancho narrativo:</strong> você conhece pessoas e rotinas da comunidade em que viveu, mantendo vínculos com antigos colegas, vizinhos ou conhecidos.</li>
+<li><strong>Complicação narrativa:</strong> familiares, vizinhos ou colegas podem se tornar vulneráveis aos perigos que acompanham sua vida Beyonder.</li>
 </ul>
-
 <h3>Marinheiro / Pirata</h3>
 <p>
   Os Cinco Mares são parte de sua vida. Você pode ter trabalhado em um navio
@@ -319,12 +294,11 @@
   importância de confiar — ou desconfiar — das pessoas ao seu redor.
 </p>
 <ul>
-  <li><strong>Pontos de Proficiência:</strong> +1 Ponto em Navegação e +1 Ponto em outra Proficiência à escolha do jogador.</li>
-  <li><strong>Item de Antecedente:</strong> uma lembrança de viagem, como um mapa antigo anotado, um distintivo de tripulação ou um objeto trazido de um porto distante.</li>
-  <li><strong>Gancho narrativo:</strong> você conhece rotas, portos, costumes marítimos e pessoas ligadas à vida no mar.</li>
-  <li><strong>Complicação narrativa:</strong> antigos companheiros, credores, autoridades ou rivais podem procurá-lo.</li>
+<li><strong>Pontos de Proficiência:</strong> +1 Ponto em Navegação e +1 Ponto em outra Proficiência à escolha do jogador.</li>
+<li><strong>Item de Antecedente:</strong> uma lembrança de viagem, como um mapa antigo anotado, um distintivo de tripulação ou um objeto trazido de um porto distante.</li>
+<li><strong>Gancho narrativo:</strong> você conhece rotas, portos, costumes marítimos e pessoas ligadas à vida no mar.</li>
+<li><strong>Complicação narrativa:</strong> antigos companheiros, credores, autoridades ou rivais podem procurá-lo.</li>
 </ul>
-
 <h3>Acadêmico</h3>
 <p>
   Universidades, bibliotecas e laboratórios fazem parte de sua trajetória. Você
@@ -334,12 +308,11 @@
   intelectuais.
 </p>
 <ul>
-  <li><strong>Pontos de Proficiência:</strong> +1 Ponto em História e +1 Ponto em outra Proficiência à escolha do jogador.</li>
-  <li><strong>Item de Antecedente:</strong> um caderno de pesquisa antigo, uma correspondência acadêmica ou um objeto relacionado ao seu campo de estudo.</li>
-  <li><strong>Gancho narrativo:</strong> você possui formação e contatos em um campo de estudo escolhido, podendo conhecer pesquisadores, professores ou instituições relevantes.</li>
-  <li><strong>Complicação narrativa:</strong> uma pesquisa, descoberta ou publicação pode atrair a atenção de pessoas interessadas em ocultar determinado conhecimento.</li>
+<li><strong>Pontos de Proficiência:</strong> +1 Ponto em História e +1 Ponto em outra Proficiência à escolha do jogador.</li>
+<li><strong>Item de Antecedente:</strong> um caderno de pesquisa antigo, uma correspondência acadêmica ou um objeto relacionado ao seu campo de estudo.</li>
+<li><strong>Gancho narrativo:</strong> você possui formação e contatos em um campo de estudo escolhido, podendo conhecer pesquisadores, professores ou instituições relevantes.</li>
+<li><strong>Complicação narrativa:</strong> uma pesquisa, descoberta ou publicação pode atrair a atenção de pessoas interessadas em ocultar determinado conhecimento.</li>
 </ul>
-
 <h3>Criminoso</h3>
 <p>
   Você viveu à margem da lei. Pode ter sido ladrão, falsificador, contrabandista,
@@ -348,12 +321,11 @@
   por meios violentos.
 </p>
 <ul>
-  <li><strong>Pontos de Proficiência:</strong> +1 Ponto em Subterfúgio e +1 Ponto em outra Proficiência à escolha do jogador.</li>
-  <li><strong>Item de Antecedente:</strong> um objeto ligado ao seu passado criminal, como uma ficha de jogo, um símbolo de antiga associação ou uma lembrança de um golpe marcante.</li>
-  <li><strong>Gancho narrativo:</strong> você conhece indivíduos e locais associados ao submundo criminal.</li>
-  <li><strong>Complicação narrativa:</strong> você pode dever favores, ser procurado por autoridades ou ter antigos cúmplices que não desejam deixar seu passado para trás.</li>
+<li><strong>Pontos de Proficiência:</strong> +1 Ponto em Subterfúgio e +1 Ponto em outra Proficiência à escolha do jogador.</li>
+<li><strong>Item de Antecedente:</strong> um objeto ligado ao seu passado criminal, como uma ficha de jogo, um símbolo de antiga associação ou uma lembrança de um golpe marcante.</li>
+<li><strong>Gancho narrativo:</strong> você conhece indivíduos e locais associados ao submundo criminal.</li>
+<li><strong>Complicação narrativa:</strong> você pode dever favores, ser procurado por autoridades ou ter antigos cúmplices que não desejam deixar seu passado para trás.</li>
 </ul>
-
 <h3>Militar / Agente</h3>
 <p>
   Você serviu no Exército, na polícia, em uma guarda, em um serviço de segurança
@@ -363,12 +335,11 @@
   limites impostos por uma organização — mesmo que já não faça parte dela.
 </p>
 <ul>
-  <li><strong>Pontos de Proficiência:</strong> +1 Ponto em Submundo e +1 Ponto em outra Proficiência à escolha do jogador.</li>
-  <li><strong>Item de Antecedente:</strong> uma identificação antiga, um distintivo, um caderno de serviço ou uma peça do uniforme de sua instituição.</li>
-  <li><strong>Gancho narrativo:</strong> você mantém contatos entre antigos colegas, conhece procedimentos oficiais ou tem acesso a informações que circulam em sua antiga instituição.</li>
-  <li><strong>Complicação narrativa:</strong> uma ordem mal resolvida, um superior desconfiado ou uma ocorrência encoberta pode voltar a envolver você — e sua vida Beyonder pode comprometer pessoas que ainda servem à instituição.</li>
+<li><strong>Pontos de Proficiência:</strong> +1 Ponto em Submundo e +1 Ponto em outra Proficiência à escolha do jogador.</li>
+<li><strong>Item de Antecedente:</strong> uma identificação antiga, um distintivo, um caderno de serviço ou uma peça do uniforme de sua instituição.</li>
+<li><strong>Gancho narrativo:</strong> você mantém contatos entre antigos colegas, conhece procedimentos oficiais ou tem acesso a informações que circulam em sua antiga instituição.</li>
+<li><strong>Complicação narrativa:</strong> uma ordem mal resolvida, um superior desconfiado ou uma ocorrência encoberta pode voltar a envolver você — e sua vida Beyonder pode comprometer pessoas que ainda servem à instituição.</li>
 </ul>
-
 <h3>Sobrevivente do Oculto</h3>
 <p>
   Antes de compreender o mundo Beyonder, você sobreviveu a um acontecimento que
@@ -378,15 +349,14 @@
   maneira de enxergar o mundo, mas não significa que você compreenda o que encontrou.
 </p>
 <ul>
-  <li><strong>Pontos de Proficiência:</strong> +1 Ponto em Misticismo e +1 Ponto em outra Proficiência à escolha do jogador.</li>
-  <li><strong>Item de Antecedente:</strong> um fragmento, anotação, símbolo, lembrança ou objeto comum que permaneceu ligado ao acontecimento.</li>
-  <li><strong>Gancho narrativo:</strong> você pode reconhecer sinais associados ao episódio ou conhecer outra pessoa que também teve contato com o fenômeno.</li>
-  <li><strong>Complicação narrativa:</strong> o acontecimento talvez não tenha terminado. Alguém pode estar procurando o objeto, tentando silenciar testemunhas ou observando as consequências que ficaram em você.</li>
+<li><strong>Pontos de Proficiência:</strong> +1 Ponto em Misticismo e +1 Ponto em outra Proficiência à escolha do jogador.</li>
+<li><strong>Item de Antecedente:</strong> um fragmento, anotação, símbolo, lembrança ou objeto comum que permaneceu ligado ao acontecimento.</li>
+<li><strong>Gancho narrativo:</strong> você pode reconhecer sinais associados ao episódio ou conhecer outra pessoa que também teve contato com o fenômeno.</li>
+<li><strong>Complicação narrativa:</strong> o acontecimento talvez não tenha terminado. Alguém pode estar procurando o objeto, tentando silenciar testemunhas ou observando as consequências que ficaram em você.</li>
 </ul>
-
 <div class="box box-rule">
-  <div class="box-title">Como aplicar os dois pontos do Antecedente</div>
-  <p>
+<div class="box-title">Como aplicar os dois pontos do Antecedente</div>
+<p>
     Seu Antecedente concede <strong>+1 Ponto</strong> na Proficiência indicada.
     Escolha uma segunda Proficiência, diferente da fixa, para receber mais
     <strong>+1 Ponto</strong>. Essa escolha pode ser de qualquer grupo.
@@ -395,66 +365,60 @@
     o Capítulo 3.
   </p>
 </div>
-
 <p class="box-note">
-  <strong>Observação:</strong> os Antecedentes não determinam a personalidade,
+<strong>Observação:</strong> os Antecedentes não determinam a personalidade,
   a moralidade ou o destino do personagem. Eles representam oportunidades e
   dificuldades iniciais. O jogador deve conversar com o Mestre para adaptar
   qualquer elemento que não combine com a história da campanha.
 </p>
-
 <div class="separator"></div>
-
 <h2 id="passo-3-atributos">Passo 3 — Atributos</h2>
-
 <p>
   Os Atributos representam as capacidades fundamentais do personagem. A ficha utiliza nove Atributos oficiais — Força, Destreza, Vigor, Carisma, Manipulação, Autocontrole, Inteligência, Raciocínio e Determinação — organizados em três categorias. Cada Atributo
   começa com <strong>1 ponto</strong>, que representa uma capacidade humana
   funcional, e pode chegar a <strong>4 pontos</strong> durante a criação.
 </p>
-
 <h3>Categorias de Atributos</h3>
 <div class="box box-note">
-  <div class="box-title">As três dimensões dos Atributos</div>
-  <p>
+<div class="box-title">As três dimensões dos Atributos</div>
+<p>
     Os Atributos também são organizados pelas dimensões <strong>Potência</strong>,
     <strong>Refinamento</strong> e <strong>Resistência</strong>. Elas indicam,
     respectivamente, impacto, precisão e capacidade de sustentar uma ação em cada
     categoria.
   </p>
-  <table>
-    <thead><tr><th>Dimensão</th><th>Físicos</th><th>Sociais</th><th>Mentais</th></tr></thead>
-    <tbody>
-      <tr><td><strong>Potência</strong></td><td>Força (FOR)</td><td>Carisma (CAR)</td><td>Inteligência (INT)</td></tr>
-      <tr><td><strong>Refinamento</strong></td><td>Destreza (DES)</td><td>Manipulação (MAN)</td><td>Raciocínio (RAC)</td></tr>
-      <tr><td><strong>Resistência</strong></td><td>Vigor (VIG)</td><td>Autocontrole (ACO)</td><td>Determinação (DET)</td></tr>
-    </tbody>
-  </table>
-  <ul>
-    <li><strong>Potência:</strong> o impacto que o personagem consegue produzir — força física, influência social ou capacidade intelectual.</li>
-    <li><strong>Refinamento:</strong> a precisão e o controle com que age — coordenação, técnica social ou análise.</li>
-    <li><strong>Resistência:</strong> sua capacidade de manter o desempenho sob esforço, pressão ou influência.</li>
-  </ul>
-  <p>
+<table>
+<thead><tr><th>Dimensão</th><th>Físicos</th><th>Sociais</th><th>Mentais</th></tr></thead>
+<tbody>
+<tr><td><strong>Potência</strong></td><td>Força (FOR)</td><td>Carisma (CAR)</td><td>Inteligência (INT)</td></tr>
+<tr><td><strong>Refinamento</strong></td><td>Destreza (DES)</td><td>Manipulação (MAN)</td><td>Raciocínio (RAC)</td></tr>
+<tr><td><strong>Resistência</strong></td><td>Vigor (VIG)</td><td>Autocontrole (ACO)</td><td>Determinação (DET)</td></tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Potência:</strong> o impacto que o personagem consegue produzir — força física, influência social ou capacidade intelectual.</li>
+<li><strong>Refinamento:</strong> a precisão e o controle com que age — coordenação, técnica social ou análise.</li>
+<li><strong>Resistência:</strong> sua capacidade de manter o desempenho sob esforço, pressão ou influência.</li>
+</ul>
+<p>
     Nenhuma dimensão é superior às demais. O Atributo utilizado depende da forma
     como o personagem descreve a ação.
   </p>
 </div>
 <table>
-  <thead><tr><th>Categoria</th><th>Atributo</th><th>Sigla</th><th>Descrição</th></tr></thead>
-  <tbody>
-    <tr><td rowspan="3"><strong>Físicos</strong></td><td><strong>Força</strong></td><td>FOR</td><td>Potência muscular, capacidade de carga e força aplicada em ações físicas.</td></tr>
-    <tr><td><strong>Destreza</strong></td><td>DES</td><td>Agilidade, coordenação motora, reflexos e precisão dos movimentos.</td></tr>
-    <tr><td><strong>Vigor</strong></td><td>VIG</td><td>Resistência física, saúde, tolerância à dor e capacidade de suportar esforço.</td></tr>
-    <tr><td rowspan="3"><strong>Sociais</strong></td><td><strong>Carisma</strong></td><td>CAR</td><td>Simpatia, liderança, capacidade de inspirar e estabelecer vínculos.</td></tr>
-    <tr><td><strong>Manipulação</strong></td><td>MAN</td><td>Astúcia, dissimulação e capacidade de conduzir conversas e influenciar decisões.</td></tr>
-    <tr><td><strong>Autocontrole</strong></td><td>ACO</td><td>Capacidade de regular impulsos, emoções e reações, mantendo a compostura e agindo com equilíbrio sob pressão.</td></tr>
-    <tr><td rowspan="3"><strong>Mentais</strong></td><td><strong>Inteligência</strong></td><td>INT</td><td>Memória, conhecimento, aprendizagem e compreensão de informações.</td></tr>
-    <tr><td><strong>Raciocínio</strong></td><td>RAC</td><td>Capacidade de analisar situações, estabelecer conexões, resolver problemas e chegar a conclusões.</td></tr>
-    <tr><td><strong>Determinação</strong></td><td>DET</td><td>Força de vontade, concentração, disciplina e resistência a influências mentais.</td></tr>
-  </tbody>
+<thead><tr><th>Categoria</th><th>Atributo</th><th>Sigla</th><th>Descrição</th></tr></thead>
+<tbody>
+<tr><td rowspan="3"><strong>Físicos</strong></td><td><strong>Força</strong></td><td>FOR</td><td>Potência muscular, capacidade de carga e força aplicada em ações físicas.</td></tr>
+<tr><td><strong>Destreza</strong></td><td>DES</td><td>Agilidade, coordenação motora, reflexos e precisão dos movimentos.</td></tr>
+<tr><td><strong>Vigor</strong></td><td>VIG</td><td>Resistência física, saúde, tolerância à dor e capacidade de suportar esforço.</td></tr>
+<tr><td rowspan="3"><strong>Sociais</strong></td><td><strong>Carisma</strong></td><td>CAR</td><td>Simpatia, liderança, capacidade de inspirar e estabelecer vínculos.</td></tr>
+<tr><td><strong>Manipulação</strong></td><td>MAN</td><td>Astúcia, dissimulação e capacidade de conduzir conversas e influenciar decisões.</td></tr>
+<tr><td><strong>Autocontrole</strong></td><td>ACO</td><td>Capacidade de regular impulsos, emoções e reações, mantendo a compostura e agindo com equilíbrio sob pressão.</td></tr>
+<tr><td rowspan="3"><strong>Mentais</strong></td><td><strong>Inteligência</strong></td><td>INT</td><td>Memória, conhecimento, aprendizagem e compreensão de informações.</td></tr>
+<tr><td><strong>Raciocínio</strong></td><td>RAC</td><td>Capacidade de analisar situações, estabelecer conexões, resolver problemas e chegar a conclusões.</td></tr>
+<tr><td><strong>Determinação</strong></td><td>DET</td><td>Força de vontade, concentração, disciplina e resistência a influências mentais.</td></tr>
+</tbody>
 </table>
-
 <h3>Distribuição de Pontos</h3>
 <p>
   Distribua os pontos adicionais entre as três categorias usando o modelo
@@ -462,36 +426,31 @@
   de 1 em cada Atributo.
 </p>
 <ol>
-  <li>Escolha a categoria <strong>primária</strong>: distribua 7 pontos adicionais entre seus três Atributos.</li>
-  <li>Escolha a categoria <strong>secundária</strong>: distribua 5 pontos adicionais entre seus três Atributos.</li>
-  <li>A categoria <strong>terciária</strong> recebe 3 pontos adicionais.</li>
+<li>Escolha a categoria <strong>primária</strong>: distribua 7 pontos adicionais entre seus três Atributos.</li>
+<li>Escolha a categoria <strong>secundária</strong>: distribua 5 pontos adicionais entre seus três Atributos.</li>
+<li>A categoria <strong>terciária</strong> recebe 3 pontos adicionais.</li>
 </ol>
-
 <div class="box box-rule">
-  <div class="box-title">Regras de Distribuição</div>
-  <ul>
-    <li>Todos os nove Atributos começam em 1. Portanto, a ficha possui 9 pontos básicos e recebe mais 15 pontos durante a distribuição.</li>
-    <li>O total dos valores finais dos nove Atributos será sempre 24.</li>
-    <li>Nenhum Atributo pode exceder <strong>4</strong> durante a criação.</li>
-    <li>Nenhum Atributo pode ser reduzido abaixo de 1.</li>
-    <li>O valor 5 só pode ser alcançado por meio da progressão, conforme as regras de evolução.</li>
-  </ul>
+<div class="box-title">Regras de Distribuição</div>
+<ul>
+<li>Todos os nove Atributos começam em 1. Portanto, a ficha possui 9 pontos básicos e recebe mais 15 pontos durante a distribuição.</li>
+<li>O total dos valores finais dos nove Atributos será sempre 24.</li>
+<li>Nenhum Atributo pode exceder <strong>4</strong> durante a criação.</li>
+<li>Nenhum Atributo pode ser reduzido abaixo de 1.</li>
+<li>O valor 5 só pode ser alcançado por meio da progressão, conforme as regras de evolução.</li>
+</ul>
 </div>
-
 <div class="box box-example">
-  <div class="box-title">Exemplo de Distribuição</div>
-  <p>
+<div class="box-title">Exemplo de Distribuição</div>
+<p>
     Edmund Harker escolhe <strong>Mentais</strong> como categoria primária,
     <strong>Sociais</strong> como secundária e <strong>Físicos</strong> como terciária.
     Assim, distribui 7, 5 e 3 pontos adicionais, respectivamente. A distribuição
     completa de seus Atributos aparece no exemplo de criação ao final do capítulo.
   </p>
 </div>
-
 <div class="separator"></div>
-
 <h2 id="passo-4-pericias">Passo 4 — Proficiências</h2>
-
 <p>
   As <strong>Proficiências</strong> representam aptidões, treinamento e conhecimentos
   desenvolvidos pelo personagem. Elas indicam o domínio que ele possui sobre atividades
@@ -499,7 +458,6 @@
   organizadas em três grupos: <strong>Talentos</strong>, <strong>Perícias</strong> e
   <strong>Conhecimentos</strong>, com oito opções em cada grupo.
 </p>
-
 <p>
   Cada Proficiência varia de <strong>0 a 5 pontos</strong>. Durante a criação, distribua
   <strong>27 pontos</strong> no modelo <strong>13 / 9 / 5</strong>: 13 pontos no grupo
@@ -508,28 +466,25 @@
   Antecedente: +1 na Proficiência fixa e +1 em outra Proficiência diferente, escolhida
   pelo jogador.
 </p>
-
 <div class="box box-note">
-  <div class="box-title">Como registrar as Proficiências na ficha</div>
-  <p>
+<div class="box-title">Como registrar as Proficiências na ficha</div>
+<p>
     Os cinco círculos de cada linha representam os pontos da Proficiência: marque um
     círculo para cada ponto; nenhum círculo marcado significa valor 0. O bônus de teste
     da Proficiência segue a regra <strong>Bônus de Proficiência = Pontos da Proficiência − 2</strong>.
     Assim, 0 ponto gera −2; 1 gera −1; 2 gera +0; 3 gera +1; 4 gera +2; e 5 gera +3.
   </p>
-  <p>
+<p>
     O Atributo utilizado não é fixo para cada Proficiência: o Mestre o escolhe conforme
     a abordagem descrita pelo jogador. Por isso, o total combinado pode variar entre
     diferentes ações realizadas com a mesma Proficiência.
   </p>
 </div>
-
 <p>
   As abordagens sugeridas nas tabelas ajudam a orientar a escolha do Atributo, mas não
   são associações obrigatórias. Uma mesma Proficiência pode ser utilizada com Atributos
   diferentes quando a abordagem justificar essa escolha.
 </p>
-
 <h3>Grupo de Talentos</h3>
 <p>
   Talentos representam aptidões e capacidades demonstradas na ação, no corpo e na
@@ -537,19 +492,18 @@
   expressão e influência.
 </p>
 <table>
-  <thead><tr><th>Proficiência</th><th>Abordagem recomendada</th><th>Descrição</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Acrobacia</strong></td><td>Destreza</td><td>Equilíbrio, cambalhotas, saltos controlados e manobras corporais em superfícies ou espaços difíceis.</td></tr>
-    <tr><td><strong>Atletismo</strong></td><td>Força ou Vigor</td><td>Corrida, escalada, natação, saltos, travessias e esforço físico prolongado.</td></tr>
-    <tr><td><strong>Empatia</strong></td><td>Raciocínio ou Autocontrole</td><td>Interpretar emoções, perceber mudanças de comportamento e compreender motivações, sem ler pensamentos ou descobrir automaticamente a verdade.</td></tr>
-    <tr><td><strong>Furtividade</strong></td><td>Destreza</td><td>Ocultar a própria presença, mover-se silenciosamente, aproveitar cobertura e evitar ser percebido.</td></tr>
-    <tr><td><strong>Intimidação</strong></td><td>Autocontrole ou Força</td><td>Ameaçar, coagir e impor respeito por meio de pressão, postura, autoridade ou demonstração de força.</td></tr>
-    <tr><td><strong>Luta</strong></td><td>Força ou Destreza</td><td>Combate desarmado, golpes, agarramentos, quedas, imobilizações e técnicas corporais de confronto.</td></tr>
-    <tr><td><strong>Performance</strong></td><td>Carisma ou Autocontrole</td><td>Atuação, música, dança, oratória, entretenimento e apresentações que buscam envolver ou prender a atenção de uma plateia.</td></tr>
-    <tr><td><strong>Persuasão</strong></td><td>Carisma ou Manipulação</td><td>Convencer, negociar, argumentar e influenciar decisões por meio da conversa, de apelos ou de argumentos estratégicos.</td></tr>
-  </tbody>
+<thead><tr><th>Proficiência</th><th>Abordagem recomendada</th><th>Descrição</th></tr></thead>
+<tbody>
+<tr><td><strong>Acrobacia</strong></td><td>Destreza</td><td>Equilíbrio, cambalhotas, saltos controlados e manobras corporais em superfícies ou espaços difíceis.</td></tr>
+<tr><td><strong>Atletismo</strong></td><td>Força ou Vigor</td><td>Corrida, escalada, natação, saltos, travessias e esforço físico prolongado.</td></tr>
+<tr><td><strong>Empatia</strong></td><td>Raciocínio ou Autocontrole</td><td>Interpretar emoções, perceber mudanças de comportamento e compreender motivações, sem ler pensamentos ou descobrir automaticamente a verdade.</td></tr>
+<tr><td><strong>Furtividade</strong></td><td>Destreza</td><td>Ocultar a própria presença, mover-se silenciosamente, aproveitar cobertura e evitar ser percebido.</td></tr>
+<tr><td><strong>Intimidação</strong></td><td>Autocontrole ou Força</td><td>Ameaçar, coagir e impor respeito por meio de pressão, postura, autoridade ou demonstração de força.</td></tr>
+<tr><td><strong>Luta</strong></td><td>Força ou Destreza</td><td>Combate desarmado, golpes, agarramentos, quedas, imobilizações e técnicas corporais de confronto.</td></tr>
+<tr><td><strong>Performance</strong></td><td>Carisma ou Autocontrole</td><td>Atuação, música, dança, oratória, entretenimento e apresentações que buscam envolver ou prender a atenção de uma plateia.</td></tr>
+<tr><td><strong>Persuasão</strong></td><td>Carisma ou Manipulação</td><td>Convencer, negociar, argumentar e influenciar decisões por meio da conversa, de apelos ou de argumentos estratégicos.</td></tr>
+</tbody>
 </table>
-
 <h3>Grupo de Perícias</h3>
 <p>
   Perícias representam treinamento aplicado a técnicas e atividades específicas. Seu uso
@@ -557,19 +511,18 @@
   concretas.
 </p>
 <table>
-  <thead><tr><th>Proficiência</th><th>Abordagem recomendada</th><th>Descrição</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Armas Brancas</strong></td><td>Força ou Destreza</td><td>Uso de armas de combate próximo, como facas, espadas, lanças e bastões, além de armas tradicionais de disparo manual, como arcos e bestas.</td></tr>
-    <tr><td><strong>Armas de Fogo</strong></td><td>Destreza</td><td>Uso, manuseio, recarga, mira e disparo de pistolas, rifles e outras armas de fogo.</td></tr>
-    <tr><td><strong>Condução</strong></td><td>Destreza ou Raciocínio</td><td>Conduzir e manobrar meios de transporte, como carruagens, carroças, bicicletas e automóveis; inclui controlar o veículo em condições difíceis.</td></tr>
-    <tr><td><strong>Etiqueta</strong></td><td>Inteligência ou Autocontrole</td><td>Conhecer e aplicar protocolos, costumes, hierarquias e códigos de conduta em ambientes sociais e institucionais.</td></tr>
-    <tr><td><strong>Investigação</strong></td><td>Raciocínio ou Inteligência</td><td>Buscar e analisar pistas, examinar locais, comparar depoimentos, pesquisar registros e reconstruir acontecimentos.</td></tr>
-    <tr><td><strong>Prestidigitação</strong></td><td>Destreza</td><td>Realizar movimentos manuais discretos e precisos, manipular ou ocultar pequenos objetos, executar truques de mãos e praticar carteirismo ou furtos discretos; não se limita à magia de palco.</td></tr>
-    <tr><td><strong>Sobrevivência</strong></td><td>Raciocínio ou Vigor</td><td>Orientar-se e permanecer vivo em ambientes hostis, obter alimento e água, rastrear, preparar abrigo e reconhecer riscos ambientais.</td></tr>
-    <tr><td><strong>Subterfúgio</strong></td><td>Manipulação</td><td>Mentir, dissimular intenções, blefar, sustentar álibis e manter identidades ou histórias falsas sob questionamento.</td></tr>
-  </tbody>
+<thead><tr><th>Proficiência</th><th>Abordagem recomendada</th><th>Descrição</th></tr></thead>
+<tbody>
+<tr><td><strong>Armas Brancas</strong></td><td>Força ou Destreza</td><td>Uso de armas de combate próximo, como facas, espadas, lanças e bastões, além de armas tradicionais de disparo manual, como arcos e bestas.</td></tr>
+<tr><td><strong>Armas de Fogo</strong></td><td>Destreza</td><td>Uso, manuseio, recarga, mira e disparo de pistolas, rifles e outras armas de fogo.</td></tr>
+<tr><td><strong>Condução</strong></td><td>Destreza ou Raciocínio</td><td>Conduzir e manobrar meios de transporte, como carruagens, carroças, bicicletas e automóveis; inclui controlar o veículo em condições difíceis.</td></tr>
+<tr><td><strong>Etiqueta</strong></td><td>Inteligência ou Autocontrole</td><td>Conhecer e aplicar protocolos, costumes, hierarquias e códigos de conduta em ambientes sociais e institucionais.</td></tr>
+<tr><td><strong>Investigação</strong></td><td>Raciocínio ou Inteligência</td><td>Buscar e analisar pistas, examinar locais, comparar depoimentos, pesquisar registros e reconstruir acontecimentos.</td></tr>
+<tr><td><strong>Prestidigitação</strong></td><td>Destreza</td><td>Realizar movimentos manuais discretos e precisos, manipular ou ocultar pequenos objetos, executar truques de mãos e praticar carteirismo ou furtos discretos; não se limita à magia de palco.</td></tr>
+<tr><td><strong>Sobrevivência</strong></td><td>Raciocínio ou Vigor</td><td>Orientar-se e permanecer vivo em ambientes hostis, obter alimento e água, rastrear, preparar abrigo e reconhecer riscos ambientais.</td></tr>
+<tr><td><strong>Subterfúgio</strong></td><td>Manipulação</td><td>Mentir, dissimular intenções, blefar, sustentar álibis e manter identidades ou histórias falsas sob questionamento.</td></tr>
+</tbody>
 </table>
-
 <h3>Grupo de Conhecimentos</h3>
 <p>
   Conhecimentos representam formação, saberes técnicos e compreensão de assuntos
@@ -578,19 +531,18 @@
   ainda não tenha obtido.
 </p>
 <table>
-  <thead><tr><th>Proficiência</th><th>Abordagem recomendada</th><th>Descrição</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Ciências</strong></td><td>Inteligência ou Raciocínio</td><td>Química, física, biologia, matemática, engenharia e conhecimentos científicos aplicados ao mundo industrial do cenário.</td></tr>
-    <tr><td><strong>História</strong></td><td>Inteligência</td><td>Épocas, povos, reinos, dinastias, guerras, personagens, tradições e transformações políticas e sociais.</td></tr>
-    <tr><td><strong>Medicina</strong></td><td>Inteligência ou Raciocínio</td><td>Anatomia, doenças, ferimentos, diagnósticos, tratamentos, envenenamentos e procedimentos médicos.</td></tr>
-    <tr><td><strong>Natureza</strong></td><td>Inteligência ou Raciocínio</td><td>Fauna, flora, ecossistemas, clima, habitats, recursos e perigos naturais, com foco na identificação e compreensão do ambiente.</td></tr>
-    <tr><td><strong>Navegação</strong></td><td>Inteligência ou Raciocínio</td><td>Orientação terrestre e marítima, leitura de mapas e cartas náuticas, uso de bússolas e identificação de rotas por astros e referências geográficas.</td></tr>
-    <tr><td><strong>Misticismo</strong></td><td>Inteligência</td><td>Tradições esotéricas, símbolos, fórmulas ritualísticas, entidades, artefatos selados e fenômenos sobrenaturais conhecidos pelo personagem.</td></tr>
-    <tr><td><strong>Submundo</strong></td><td>Raciocínio ou Manipulação</td><td>Redes criminosas e clandestinas, gangues, contrabandistas, informantes, mercados ilegais, códigos de rua e relações entre facções marginais.</td></tr>
-    <tr><td><strong>Teologia</strong></td><td>Inteligência</td><td>Religiões e instituições religiosas: doutrinas, textos sagrados, símbolos, ritos, hierarquias clericais, ordens, jurisdições e influência social e política das Igrejas.</td></tr>
-  </tbody>
+<thead><tr><th>Proficiência</th><th>Abordagem recomendada</th><th>Descrição</th></tr></thead>
+<tbody>
+<tr><td><strong>Ciências</strong></td><td>Inteligência ou Raciocínio</td><td>Química, física, biologia, matemática, engenharia e conhecimentos científicos aplicados ao mundo industrial do cenário.</td></tr>
+<tr><td><strong>História</strong></td><td>Inteligência</td><td>Épocas, povos, reinos, dinastias, guerras, personagens, tradições e transformações políticas e sociais.</td></tr>
+<tr><td><strong>Medicina</strong></td><td>Inteligência ou Raciocínio</td><td>Anatomia, doenças, ferimentos, diagnósticos, tratamentos, envenenamentos e procedimentos médicos.</td></tr>
+<tr><td><strong>Natureza</strong></td><td>Inteligência ou Raciocínio</td><td>Fauna, flora, ecossistemas, clima, habitats, recursos e perigos naturais, com foco na identificação e compreensão do ambiente.</td></tr>
+<tr><td><strong>Navegação</strong></td><td>Inteligência ou Raciocínio</td><td>Orientação terrestre e marítima, leitura de mapas e cartas náuticas, uso de bússolas e identificação de rotas por astros e referências geográficas.</td></tr>
+<tr><td><strong>Misticismo</strong></td><td>Inteligência</td><td>Tradições esotéricas, símbolos, fórmulas ritualísticas, entidades, artefatos selados e fenômenos sobrenaturais conhecidos pelo personagem.</td></tr>
+<tr><td><strong>Submundo</strong></td><td>Raciocínio ou Manipulação</td><td>Redes criminosas e clandestinas, gangues, contrabandistas, informantes, mercados ilegais, códigos de rua e relações entre facções marginais.</td></tr>
+<tr><td><strong>Teologia</strong></td><td>Inteligência</td><td>Religiões e instituições religiosas: doutrinas, textos sagrados, símbolos, ritos, hierarquias clericais, ordens, jurisdições e influência social e política das Igrejas.</td></tr>
+</tbody>
 </table>
-
 <h3>Especializações</h3>
 <p>
   Uma especialização representa um <strong>campo específico de conhecimento, técnica,
@@ -609,8 +561,8 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
   memoráveis da campanha, mas não se tornam Âncoras automaticamente.
 </p>
 <div class="box box-note">
-  <div class="box-title">A especialização deve ser específica</div>
-  <p>
+<div class="box-title">A especialização deve ser específica</div>
+<p>
     A especialização precisa identificar uma área delimitada de conhecimento,
     técnica ou prática. Termos amplos como <strong>Medicina</strong>,
     <strong>Investigação</strong>, <strong>Conhecimento Oculto</strong> ou
@@ -620,7 +572,7 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
     <strong>Falsificação de Documentos</strong>, <strong>História da Nobreza</strong>
     ou <strong>Rituais de Proteção</strong>.
   </p>
-  <p>
+<p>
     Uma especialização concede <strong>+2 ao resultado do teste</strong> quando
     seu conhecimento ou técnica contribuir de maneira direta para a ação. Esse bônus
     não se aplica a <strong>testes de ataque</strong> nem a <strong>testes de Lucidez</strong>.
@@ -632,8 +584,8 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
   </p>
 </div>
 <div class="box box-example">
-  <div class="box-title">Exemplo de aplicação de especializações</div>
-  <p>
+<div class="box-title">Exemplo de aplicação de especializações</div>
+<p>
     Um personagem que investiga uma substância venenosa encontrada em uma planta
     desconhecida pode utilizar <strong>Botânica Medicinal</strong> para identificar
     a espécie e <strong>Toxicologia</strong> para compreender os efeitos da substância.
@@ -644,38 +596,36 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
     cancelamento entre fontes de Vantagem e Desvantagem apresentada no Capítulo 3. O
     teste utiliza o Atributo e a Proficiência adequados à abordagem.
   </p>
-  <p>
+<p>
     A concessão dos bônus não é automática: o jogador deve demonstrar a contribuição
     concreta de cada especialização, e o Mestre decide se ambas se aplicam à ação.
     Uma relação apenas temática ou vagamente relacionada não é suficiente.
   </p>
 </div>
 <ul>
-  <li><strong>Outros exemplos:</strong> Caligrafia de Arquivos Oficiais, Anatomia Forense, Herbologia Medicinal, Rastreamento Urbano, Identificação de Selos e Lacres, Astrologia Natal, Liturgia das Igrejas Ortodoxas, Manutenção de Autômatos e Criptografia de Correspondências.</li>
-  <li>Quando uma ou mais especializações contribuírem de maneira clara e direta para a ação, o personagem recebe um bônus único de <strong>+2 ao resultado do teste</strong>, independentemente da Proficiência utilizada. Os bônus de especializações não se acumulam: mesmo que várias sejam pertinentes, o bônus total permanece +2.</li>
-  <li>O jogador deve demonstrar como a especialização participa da ação; uma relação apenas temática ou vagamente relacionada não é suficiente. Uma mesma especialização concede no máximo um bônus de +2 por teste.</li>
-  <li>O Mestre tem a decisão final sobre a pertinência da aplicação. A especialização não altera a natureza fundamental da ação nem substitui requisitos necessários para realizá-la.</li>
-  <li>Uma especialização não substitui a Proficiência ou o Atributo exigido, não garante sucesso e não permite realizar uma atividade que o personagem não teria condições de executar normalmente.</li>
+<li><strong>Outros exemplos:</strong> Caligrafia de Arquivos Oficiais, Anatomia Forense, Herbologia Medicinal, Rastreamento Urbano, Identificação de Selos e Lacres, Astrologia Natal, Liturgia das Igrejas Ortodoxas, Manutenção de Autômatos e Criptografia de Correspondências.</li>
+<li>Quando uma ou mais especializações contribuírem de maneira clara e direta para a ação, o personagem recebe um bônus único de <strong>+2 ao resultado do teste</strong>, independentemente da Proficiência utilizada. Os bônus de especializações não se acumulam: mesmo que várias sejam pertinentes, o bônus total permanece +2.</li>
+<li>O jogador deve demonstrar como a especialização participa da ação; uma relação apenas temática ou vagamente relacionada não é suficiente. Uma mesma especialização concede no máximo um bônus de +2 por teste.</li>
+<li>O Mestre tem a decisão final sobre a pertinência da aplicação. A especialização não altera a natureza fundamental da ação nem substitui requisitos necessários para realizá-la.</li>
+<li>Uma especialização não substitui a Proficiência ou o Atributo exigido, não garante sucesso e não permite realizar uma atividade que o personagem não teria condições de executar normalmente.</li>
 </ul>
-
 <div class="box box-rule">
-  <div class="box-title">Regras de Distribuição de Proficiências</div>
-  <ul>
-    <li>Nenhuma Proficiência pode exceder <strong>3</strong> durante a distribuição inicial.</li>
-    <li>Os dois pontos concedidos pelo Antecedente são aplicados depois da distribuição inicial. Cada Proficiência pode chegar a 4 por meio desses pontos, mas nenhum deles pode elevá-la acima de 4.</li>
-    <li>O Mestre escolhe o Atributo de acordo com a abordagem descrita pelo jogador. Quando a tabela apresenta duas opções, utiliza-se aquela que melhor representa a forma como a ação é realizada.</li>
-  </ul>
+<div class="box-title">Regras de Distribuição de Proficiências</div>
+<ul>
+<li>Nenhuma Proficiência pode exceder <strong>3</strong> durante a distribuição inicial.</li>
+<li>Os dois pontos concedidos pelo Antecedente são aplicados depois da distribuição inicial. Cada Proficiência pode chegar a 4 por meio desses pontos, mas nenhum deles pode elevá-la acima de 4.</li>
+<li>O Mestre escolhe o Atributo de acordo com a abordagem descrita pelo jogador. Quando a tabela apresenta duas opções, utiliza-se aquela que melhor representa a forma como a ação é realizada.</li>
+</ul>
 </div>
-
 <div class="box box-example">
-  <div class="box-title">Exemplo de Distribuição e Especialização</div>
-  <p>
+<div class="box-title">Exemplo de Distribuição e Especialização</div>
+<p>
     Edmund escolhe <strong>Conhecimentos</strong> como grupo primário,
     <strong>Talentos</strong> como secundário e <strong>Perícias</strong> como
     terciário, distribuindo 13, 9 e 5 pontos. Como Trabalhador Urbano, recebe
     +1 em Sobrevivência e escolhe Investigação para receber o segundo +1.
   </p>
-  <p>
+<p>
     Sua especialização inicial é <strong>Documentoscopia</strong>. Ela pode
     contribuir para comparar assinaturas, identificar alterações em registros
     ou avaliar a autenticidade de documentos. Quando esse conhecimento participar
@@ -684,11 +634,8 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
     criação ao final do capítulo.
   </p>
 </div>
-
 <div class="separator"></div>
-
 <h2 id="passo-5-caminho">Passo 5 — Caminho</h2>
-
 <p>
   O Caminho define a natureza da poção consumida pelo personagem, suas capacidades
   sobrenaturais e a direção de sua progressão. Existem <strong>22 Caminhos
@@ -697,7 +644,6 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
   <strong>Sequência 5</strong>; as Sequências superiores não fazem parte do escopo
   deste volume.
 </p>
-
 <p>
   Na criação, o personagem começa na <strong>Sequência 9</strong>. O nome dessa
   Sequência identifica a poção consumida e fornece a referência inicial para o
@@ -705,142 +651,80 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
   Limiares de Dano iniciais do personagem. A escolha do Caminho deve ser aprovada
   pelo Mestre, sobretudo quando a campanha possuir restrições de cenário ou de facções.
 </p>
-
 <p>
-  A tabela apresenta os nomes de Sequência 9, a Espiritualidade inicial, os PV concedidos
+  Os cartões apresentam os nomes de Sequência 9, a Espiritualidade inicial, os PV concedidos
   pelo Caminho, os Limiares de Dano iniciais e uma referência breve à fantasia narrativa de cada Caminho. Os limiares informados correspondem à Sequência 9; eles mudam sempre
   que o personagem avança de Sequência, conforme a regra de progressão.
 </p>
-
-<div class="pathway-table-wrap" role="region" aria-label="Tabela comparativa dos 22 Caminhos" tabindex="0">
-<table class="pathway-table">
-  <caption>Valores iniciais e características dos 22 Caminhos na Sequência 9</caption>
-  <colgroup>
-    <col class="col-number">
-    <col class="col-pathway">
-    <col class="col-sequence">
-    <col class="col-spirituality">
-    <col class="col-pv">
-    <col class="col-thresholds">
-    <col class="col-domains">
-  </colgroup>
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Caminho</th>
-      <th scope="col">Sequência 9</th>
-      <th scope="col">Espiritualidade inicial</th>
-      <th scope="col">PV máximo</th>
-      <th scope="col">Limiares de Dano</th>
-      <th scope="col">Principais autoridades / domínios</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>1</td><td>O Louco (The Fool)</td><td>Vidente (Seer)</td><td>11</td><td>5</td><td>5/12</td><td>Enganação, Mudança, História, Destino, Milagres, Marionetes</td></tr>
-    <tr><td>2</td><td>A Porta (The Door)</td><td>Aprendiz (Apprentice)</td><td>10</td><td>5</td><td>5/11</td><td>Espaço, Selamento, Viagens, Portais, Mundo Espiritual</td></tr>
-    <tr><td>3</td><td>O Erro (Error)</td><td>Saqueador (Marauder)</td><td>9</td><td>6</td><td>6/12</td><td>Roubo, Engano, Tempo, Destino, Erros, Parasitismo</td></tr>
-    <tr><td>4</td><td>O Visionário (Visionary)</td><td>Espectador (Spectator)</td><td>9</td><td>5</td><td>5/11</td><td>Mente, Consciência, Sonhos, Psicologia, Imaginação</td></tr>
-    <tr><td>5</td><td>O Tirano (Tyrant)</td><td>Marinheiro (Sailor)</td><td>7</td><td>7</td><td>8/16</td><td>Oceanos, Tempestades, Raios, Vento, Autoridade e Fúria</td></tr>
-    <tr><td>6</td><td>O Sol (Sun)</td><td>Bardo (Bard)</td><td>8</td><td>6</td><td>6/13</td><td>Luz, Purificação, Vida, Santidade, Fogo Solar</td></tr>
-    <tr><td>7</td><td>A Torre Branca (White Tower)</td><td>Leitor (Reader)</td><td>10</td><td>5</td><td>5/12</td><td>Conhecimento, Sabedoria, Análise, Dedução, Compreensão</td></tr>
-    <tr><td>8</td><td>O Enforcado (Hanged Man)</td><td>Suplicante dos Segredos (Secrets Suppliant)</td><td>11</td><td>6</td><td>6/14</td><td>Sacrifício, Degeneração, Carne, Corrupção, Segredos</td></tr>
-    <tr><td>9</td><td>A Escuridão (Darkness)</td><td>Insone (Sleepless)</td><td>11</td><td>5</td><td>5/13</td><td>Noite, Sono, Ocultação, Medo, Segredos</td></tr>
-    <tr><td>10</td><td>A Morte (Death)</td><td>Coletor de Cadáveres (Corpse Collector)</td><td>10</td><td>7</td><td>7/15</td><td>Morte, Mortos-Vivos, Mundo Espiritual, Submundo</td></tr>
-    <tr><td>11</td><td>O Gigante do Crepúsculo (Twilight Giant)</td><td>Guerreiro (Warrior)</td><td>6</td><td>7</td><td>9/18</td><td>Crepúsculo, Força, Guerra, Proteção, Declínio</td></tr>
-  
-
-    <tr><td>12</td><td>O Sacerdote Vermelho (Red Priest)</td><td>Caçador (Hunter)</td><td>6</td><td>7</td><td>7/15</td><td>Guerra, Conflito, Fogo, Provocação, Exércitos</td></tr>
-    <tr><td>13</td><td>A Demônia (Demoness)</td><td>Assassina (Assassin)</td><td>8</td><td>5</td><td>5/11</td><td>Calamidade, Desastre, Doenças, Maldições, Sedução</td></tr>
-    <tr><td>14</td><td>A Roda da Fortuna (Wheel of Fortune)</td><td>Monstro (Monster)</td><td>11</td><td>6</td><td>6/14</td><td>Destino, Sorte, Probabilidade, Ciclos e Reencarnação</td></tr>
-    <tr><td>15</td><td>A Lua (Moon)</td><td>Boticário (Apothecary)</td><td>9</td><td>6</td><td>6/13</td><td>Lua, Sangue, Vampiros, Cura, Criaturas Noturnas</td></tr>
-    <tr><td>16</td><td>A Mãe (Mother)</td><td>Plantador (Planter)</td><td>8</td><td>6</td><td>6/14</td><td>Vida, Natureza, Fertilidade, Crescimento, Biologia</td></tr>
-    <tr><td>17</td><td>O Imperador Negro (Black Emperor)</td><td>Advogado (Lawyer)</td><td>7</td><td>5</td><td>5/12</td><td>Distorção, Ordem, Regras, Caos, Exploração de Brechas</td></tr>
-    <tr><td>18</td><td>O Justiciar (Justiciar)</td><td>Árbitro (Arbiter)</td><td>7</td><td>6</td><td>7/14</td><td>Leis, Ordem, Proibição, Julgamento, Punição</td></tr>
-    <tr><td>19</td><td>O Abismo (Abyss)</td><td>Criminoso (Criminal)</td><td>6</td><td>6</td><td>7/14</td><td>Desejo, Corrupção, Pecado, Demônios, Profanação</td></tr>
-    <tr><td>20</td><td>O Acorrentado (Chained)</td><td>Prisioneiro (Prisoner)</td><td>10</td><td>7</td><td>8/17</td><td>Maldições, Aprisionamento, Espírito, Transformação</td></tr>
-    <tr><td>21</td><td>O Eremita (Hermit)</td><td>Investigador de Mistérios (Mystery Pryer)</td><td>13</td><td>5</td><td>5/13</td><td>Conhecimento Oculto, Magia, Mistérios, Segredos</td></tr>
-    <tr><td>22</td><td>O Paragon (Paragon)</td><td>Erudito (Savant)</td><td>9</td><td>5</td><td>5/12</td><td>Tecnologia, Máquinas, Alquimia, Criação e Civilização</td></tr>
-  
-  </tbody>
-</table>
-</div><!-- /.pathway-table-wrap -->
-
+<section aria-label="Lista dos 22 Caminhos e seus valores iniciais" class="pathway-cards"><p class="pathway-cards-caption">Valores iniciais dos 22 Caminhos na Sequência 9. Cada cartão apresenta o nome do Caminho, sua Sequência 9, os valores iniciais e seus principais domínios.</p><article class="pathway-card"><div class="pathway-card-head"><span class="pathway-number">01</span><div class="pathway-titlebox"><h3 class="pathway-name">O Louco (The Fool)</h3><p class="pathway-sequence"><strong>Sequência 9: </strong>Vidente (Seer)</p></div></div><div class="pathway-stats"><div class="pathway-stat pathway-stat-spirituality"><span class="pathway-stat-label">Espiritualidade inicial</span><strong class="pathway-stat-value">11</strong></div><div class="pathway-stat pathway-stat-pv"><span class="pathway-stat-label">PV máximo</span><strong class="pathway-stat-value">5</strong></div><div class="pathway-stat pathway-stat-thresholds"><span class="pathway-stat-label">Limiares de Dano</span><strong class="pathway-stat-value">5/12</strong></div></div><p class="pathway-domains"><strong>Principais autoridades / domínios</strong><br/>Enganação, Mudança, História, Destino, Milagres, Marionetes</p></article><article class="pathway-card"><div class="pathway-card-head"><span class="pathway-number">02</span><div class="pathway-titlebox"><h3 class="pathway-name">A Porta (The Door)</h3><p class="pathway-sequence"><strong>Sequência 9: </strong>Aprendiz (Apprentice)</p></div></div><div class="pathway-stats"><div class="pathway-stat pathway-stat-spirituality"><span class="pathway-stat-label">Espiritualidade inicial</span><strong class="pathway-stat-value">10</strong></div><div class="pathway-stat pathway-stat-pv"><span class="pathway-stat-label">PV máximo</span><strong class="pathway-stat-value">5</strong></div><div class="pathway-stat pathway-stat-thresholds"><span class="pathway-stat-label">Limiares de Dano</span><strong class="pathway-stat-value">5/11</strong></div></div><p class="pathway-domains"><strong>Principais autoridades / domínios</strong><br/>Espaço, Selamento, Viagens, Portais, Mundo Espiritual</p></article><article class="pathway-card"><div class="pathway-card-head"><span class="pathway-number">03</span><div class="pathway-titlebox"><h3 class="pathway-name">O Erro (Error)</h3><p class="pathway-sequence"><strong>Sequência 9: </strong>Saqueador (Marauder)</p></div></div><div class="pathway-stats"><div class="pathway-stat pathway-stat-spirituality"><span class="pathway-stat-label">Espiritualidade inicial</span><strong class="pathway-stat-value">9</strong></div><div class="pathway-stat pathway-stat-pv"><span class="pathway-stat-label">PV máximo</span><strong class="pathway-stat-value">6</strong></div><div class="pathway-stat pathway-stat-thresholds"><span class="pathway-stat-label">Limiares de Dano</span><strong class="pathway-stat-value">6/12</strong></div></div><p class="pathway-domains"><strong>Principais autoridades / domínios</strong><br/>Roubo, Engano, Tempo, Destino, Erros, Parasitismo</p></article><article class="pathway-card"><div class="pathway-card-head"><span class="pathway-number">04</span><div class="pathway-titlebox"><h3 class="pathway-name">O Visionário (Visionary)</h3><p class="pathway-sequence"><strong>Sequência 9: </strong>Espectador (Spectator)</p></div></div><div class="pathway-stats"><div class="pathway-stat pathway-stat-spirituality"><span class="pathway-stat-label">Espiritualidade inicial</span><strong class="pathway-stat-value">9</strong></div><div class="pathway-stat pathway-stat-pv"><span class="pathway-stat-label">PV máximo</span><strong class="pathway-stat-value">5</strong></div><div class="pathway-stat pathway-stat-thresholds"><span class="pathway-stat-label">Limiares de Dano</span><strong class="pathway-stat-value">5/11</strong></div></div><p class="pathway-domains"><strong>Principais autoridades / domínios</strong><br/>Mente, Consciência, Sonhos, Psicologia, Imaginação</p></article><article class="pathway-card"><div class="pathway-card-head"><span class="pathway-number">05</span><div class="pathway-titlebox"><h3 class="pathway-name">O Tirano (Tyrant)</h3><p class="pathway-sequence"><strong>Sequência 9: </strong>Marinheiro (Sailor)</p></div></div><div class="pathway-stats"><div class="pathway-stat pathway-stat-spirituality"><span class="pathway-stat-label">Espiritualidade inicial</span><strong class="pathway-stat-value">7</strong></div><div class="pathway-stat pathway-stat-pv"><span class="pathway-stat-label">PV máximo</span><strong class="pathway-stat-value">7</strong></div><div class="pathway-stat pathway-stat-thresholds"><span class="pathway-stat-label">Limiares de Dano</span><strong class="pathway-stat-value">8/16</strong></div></div><p class="pathway-domains"><strong>Principais autoridades / domínios</strong><br/>Oceanos, Tempestades, Raios, Vento, Autoridade e Fúria</p></article><article class="pathway-card"><div class="pathway-card-head"><span class="pathway-number">06</span><div class="pathway-titlebox"><h3 class="pathway-name">O Sol (Sun)</h3><p class="pathway-sequence"><strong>Sequência 9: </strong>Bardo (Bard)</p></div></div><div class="pathway-stats"><div class="pathway-stat pathway-stat-spirituality"><span class="pathway-stat-label">Espiritualidade inicial</span><strong class="pathway-stat-value">8</strong></div><div class="pathway-stat pathway-stat-pv"><span class="pathway-stat-label">PV máximo</span><strong class="pathway-stat-value">6</strong></div><div class="pathway-stat pathway-stat-thresholds"><span class="pathway-stat-label">Limiares de Dano</span><strong class="pathway-stat-value">6/13</strong></div></div><p class="pathway-domains"><strong>Principais autoridades / domínios</strong><br/>Luz, Purificação, Vida, Santidade, Fogo Solar</p></article><article class="pathway-card"><div class="pathway-card-head"><span class="pathway-number">07</span><div class="pathway-titlebox"><h3 class="pathway-name">A Torre Branca (White Tower)</h3><p class="pathway-sequence"><strong>Sequência 9: </strong>Leitor (Reader)</p></div></div><div class="pathway-stats"><div class="pathway-stat pathway-stat-spirituality"><span class="pathway-stat-label">Espiritualidade inicial</span><strong class="pathway-stat-value">10</strong></div><div class="pathway-stat pathway-stat-pv"><span class="pathway-stat-label">PV máximo</span><strong class="pathway-stat-value">5</strong></div><div class="pathway-stat pathway-stat-thresholds"><span class="pathway-stat-label">Limiares de Dano</span><strong class="pathway-stat-value">5/12</strong></div></div><p class="pathway-domains"><strong>Principais autoridades / domínios</strong><br/>Conhecimento, Sabedoria, Análise, Dedução, Compreensão</p></article><article class="pathway-card"><div class="pathway-card-head"><span class="pathway-number">08</span><div class="pathway-titlebox"><h3 class="pathway-name">O Enforcado (Hanged Man)</h3><p class="pathway-sequence"><strong>Sequência 9: </strong>Suplicante dos Segredos (Secrets Suppliant)</p></div></div><div class="pathway-stats"><div class="pathway-stat pathway-stat-spirituality"><span class="pathway-stat-label">Espiritualidade inicial</span><strong class="pathway-stat-value">11</strong></div><div class="pathway-stat pathway-stat-pv"><span class="pathway-stat-label">PV máximo</span><strong class="pathway-stat-value">6</strong></div><div class="pathway-stat pathway-stat-thresholds"><span class="pathway-stat-label">Limiares de Dano</span><strong class="pathway-stat-value">6/14</strong></div></div><p class="pathway-domains"><strong>Principais autoridades / domínios</strong><br/>Sacrifício, Degeneração, Carne, Corrupção, Segredos</p></article><article class="pathway-card"><div class="pathway-card-head"><span class="pathway-number">09</span><div class="pathway-titlebox"><h3 class="pathway-name">A Escuridão (Darkness)</h3><p class="pathway-sequence"><strong>Sequência 9: </strong>Insone (Sleepless)</p></div></div><div class="pathway-stats"><div class="pathway-stat pathway-stat-spirituality"><span class="pathway-stat-label">Espiritualidade inicial</span><strong class="pathway-stat-value">11</strong></div><div class="pathway-stat pathway-stat-pv"><span class="pathway-stat-label">PV máximo</span><strong class="pathway-stat-value">5</strong></div><div class="pathway-stat pathway-stat-thresholds"><span class="pathway-stat-label">Limiares de Dano</span><strong class="pathway-stat-value">5/13</strong></div></div><p class="pathway-domains"><strong>Principais autoridades / domínios</strong><br/>Noite, Sono, Ocultação, Medo, Segredos</p></article><article class="pathway-card"><div class="pathway-card-head"><span class="pathway-number">10</span><div class="pathway-titlebox"><h3 class="pathway-name">A Morte (Death)</h3><p class="pathway-sequence"><strong>Sequência 9: </strong>Coletor de Cadáveres (Corpse Collector)</p></div></div><div class="pathway-stats"><div class="pathway-stat pathway-stat-spirituality"><span class="pathway-stat-label">Espiritualidade inicial</span><strong class="pathway-stat-value">10</strong></div><div class="pathway-stat pathway-stat-pv"><span class="pathway-stat-label">PV máximo</span><strong class="pathway-stat-value">7</strong></div><div class="pathway-stat pathway-stat-thresholds"><span class="pathway-stat-label">Limiares de Dano</span><strong class="pathway-stat-value">7/15</strong></div></div><p class="pathway-domains"><strong>Principais autoridades / domínios</strong><br/>Morte, Mortos-Vivos, Mundo Espiritual, Submundo</p></article><article class="pathway-card"><div class="pathway-card-head"><span class="pathway-number">11</span><div class="pathway-titlebox"><h3 class="pathway-name">O Gigante do Crepúsculo (Twilight Giant)</h3><p class="pathway-sequence"><strong>Sequência 9: </strong>Guerreiro (Warrior)</p></div></div><div class="pathway-stats"><div class="pathway-stat pathway-stat-spirituality"><span class="pathway-stat-label">Espiritualidade inicial</span><strong class="pathway-stat-value">6</strong></div><div class="pathway-stat pathway-stat-pv"><span class="pathway-stat-label">PV máximo</span><strong class="pathway-stat-value">7</strong></div><div class="pathway-stat pathway-stat-thresholds"><span class="pathway-stat-label">Limiares de Dano</span><strong class="pathway-stat-value">9/18</strong></div></div><p class="pathway-domains"><strong>Principais autoridades / domínios</strong><br/>Crepúsculo, Força, Guerra, Proteção, Declínio</p></article><article class="pathway-card"><div class="pathway-card-head"><span class="pathway-number">12</span><div class="pathway-titlebox"><h3 class="pathway-name">O Sacerdote Vermelho (Red Priest)</h3><p class="pathway-sequence"><strong>Sequência 9: </strong>Caçador (Hunter)</p></div></div><div class="pathway-stats"><div class="pathway-stat pathway-stat-spirituality"><span class="pathway-stat-label">Espiritualidade inicial</span><strong class="pathway-stat-value">6</strong></div><div class="pathway-stat pathway-stat-pv"><span class="pathway-stat-label">PV máximo</span><strong class="pathway-stat-value">7</strong></div><div class="pathway-stat pathway-stat-thresholds"><span class="pathway-stat-label">Limiares de Dano</span><strong class="pathway-stat-value">7/15</strong></div></div><p class="pathway-domains"><strong>Principais autoridades / domínios</strong><br/>Guerra, Conflito, Fogo, Provocação, Exércitos</p></article><article class="pathway-card"><div class="pathway-card-head"><span class="pathway-number">13</span><div class="pathway-titlebox"><h3 class="pathway-name">A Demônia (Demoness)</h3><p class="pathway-sequence"><strong>Sequência 9: </strong>Assassina (Assassin)</p></div></div><div class="pathway-stats"><div class="pathway-stat pathway-stat-spirituality"><span class="pathway-stat-label">Espiritualidade inicial</span><strong class="pathway-stat-value">8</strong></div><div class="pathway-stat pathway-stat-pv"><span class="pathway-stat-label">PV máximo</span><strong class="pathway-stat-value">5</strong></div><div class="pathway-stat pathway-stat-thresholds"><span class="pathway-stat-label">Limiares de Dano</span><strong class="pathway-stat-value">5/11</strong></div></div><p class="pathway-domains"><strong>Principais autoridades / domínios</strong><br/>Calamidade, Desastre, Doenças, Maldições, Sedução</p></article><article class="pathway-card"><div class="pathway-card-head"><span class="pathway-number">14</span><div class="pathway-titlebox"><h3 class="pathway-name">A Roda da Fortuna (Wheel of Fortune)</h3><p class="pathway-sequence"><strong>Sequência 9: </strong>Monstro (Monster)</p></div></div><div class="pathway-stats"><div class="pathway-stat pathway-stat-spirituality"><span class="pathway-stat-label">Espiritualidade inicial</span><strong class="pathway-stat-value">11</strong></div><div class="pathway-stat pathway-stat-pv"><span class="pathway-stat-label">PV máximo</span><strong class="pathway-stat-value">6</strong></div><div class="pathway-stat pathway-stat-thresholds"><span class="pathway-stat-label">Limiares de Dano</span><strong class="pathway-stat-value">6/14</strong></div></div><p class="pathway-domains"><strong>Principais autoridades / domínios</strong><br/>Destino, Sorte, Probabilidade, Ciclos e Reencarnação</p></article><article class="pathway-card"><div class="pathway-card-head"><span class="pathway-number">15</span><div class="pathway-titlebox"><h3 class="pathway-name">A Lua (Moon)</h3><p class="pathway-sequence"><strong>Sequência 9: </strong>Boticário (Apothecary)</p></div></div><div class="pathway-stats"><div class="pathway-stat pathway-stat-spirituality"><span class="pathway-stat-label">Espiritualidade inicial</span><strong class="pathway-stat-value">9</strong></div><div class="pathway-stat pathway-stat-pv"><span class="pathway-stat-label">PV máximo</span><strong class="pathway-stat-value">6</strong></div><div class="pathway-stat pathway-stat-thresholds"><span class="pathway-stat-label">Limiares de Dano</span><strong class="pathway-stat-value">6/13</strong></div></div><p class="pathway-domains"><strong>Principais autoridades / domínios</strong><br/>Lua, Sangue, Vampiros, Cura, Criaturas Noturnas</p></article><article class="pathway-card"><div class="pathway-card-head"><span class="pathway-number">16</span><div class="pathway-titlebox"><h3 class="pathway-name">A Mãe (Mother)</h3><p class="pathway-sequence"><strong>Sequência 9: </strong>Plantador (Planter)</p></div></div><div class="pathway-stats"><div class="pathway-stat pathway-stat-spirituality"><span class="pathway-stat-label">Espiritualidade inicial</span><strong class="pathway-stat-value">8</strong></div><div class="pathway-stat pathway-stat-pv"><span class="pathway-stat-label">PV máximo</span><strong class="pathway-stat-value">6</strong></div><div class="pathway-stat pathway-stat-thresholds"><span class="pathway-stat-label">Limiares de Dano</span><strong class="pathway-stat-value">6/14</strong></div></div><p class="pathway-domains"><strong>Principais autoridades / domínios</strong><br/>Vida, Natureza, Fertilidade, Crescimento, Biologia</p></article><article class="pathway-card"><div class="pathway-card-head"><span class="pathway-number">17</span><div class="pathway-titlebox"><h3 class="pathway-name">O Imperador Negro (Black Emperor)</h3><p class="pathway-sequence"><strong>Sequência 9: </strong>Advogado (Lawyer)</p></div></div><div class="pathway-stats"><div class="pathway-stat pathway-stat-spirituality"><span class="pathway-stat-label">Espiritualidade inicial</span><strong class="pathway-stat-value">7</strong></div><div class="pathway-stat pathway-stat-pv"><span class="pathway-stat-label">PV máximo</span><strong class="pathway-stat-value">5</strong></div><div class="pathway-stat pathway-stat-thresholds"><span class="pathway-stat-label">Limiares de Dano</span><strong class="pathway-stat-value">5/12</strong></div></div><p class="pathway-domains"><strong>Principais autoridades / domínios</strong><br/>Distorção, Ordem, Regras, Caos, Exploração de Brechas</p></article><article class="pathway-card"><div class="pathway-card-head"><span class="pathway-number">18</span><div class="pathway-titlebox"><h3 class="pathway-name">O Justiciar (Justiciar)</h3><p class="pathway-sequence"><strong>Sequência 9: </strong>Árbitro (Arbiter)</p></div></div><div class="pathway-stats"><div class="pathway-stat pathway-stat-spirituality"><span class="pathway-stat-label">Espiritualidade inicial</span><strong class="pathway-stat-value">7</strong></div><div class="pathway-stat pathway-stat-pv"><span class="pathway-stat-label">PV máximo</span><strong class="pathway-stat-value">6</strong></div><div class="pathway-stat pathway-stat-thresholds"><span class="pathway-stat-label">Limiares de Dano</span><strong class="pathway-stat-value">7/14</strong></div></div><p class="pathway-domains"><strong>Principais autoridades / domínios</strong><br/>Leis, Ordem, Proibição, Julgamento, Punição</p></article><article class="pathway-card"><div class="pathway-card-head"><span class="pathway-number">19</span><div class="pathway-titlebox"><h3 class="pathway-name">O Abismo (Abyss)</h3><p class="pathway-sequence"><strong>Sequência 9: </strong>Criminoso (Criminal)</p></div></div><div class="pathway-stats"><div class="pathway-stat pathway-stat-spirituality"><span class="pathway-stat-label">Espiritualidade inicial</span><strong class="pathway-stat-value">6</strong></div><div class="pathway-stat pathway-stat-pv"><span class="pathway-stat-label">PV máximo</span><strong class="pathway-stat-value">6</strong></div><div class="pathway-stat pathway-stat-thresholds"><span class="pathway-stat-label">Limiares de Dano</span><strong class="pathway-stat-value">7/14</strong></div></div><p class="pathway-domains"><strong>Principais autoridades / domínios</strong><br/>Desejo, Corrupção, Pecado, Demônios, Profanação</p></article><article class="pathway-card"><div class="pathway-card-head"><span class="pathway-number">20</span><div class="pathway-titlebox"><h3 class="pathway-name">O Acorrentado (Chained)</h3><p class="pathway-sequence"><strong>Sequência 9: </strong>Prisioneiro (Prisoner)</p></div></div><div class="pathway-stats"><div class="pathway-stat pathway-stat-spirituality"><span class="pathway-stat-label">Espiritualidade inicial</span><strong class="pathway-stat-value">10</strong></div><div class="pathway-stat pathway-stat-pv"><span class="pathway-stat-label">PV máximo</span><strong class="pathway-stat-value">7</strong></div><div class="pathway-stat pathway-stat-thresholds"><span class="pathway-stat-label">Limiares de Dano</span><strong class="pathway-stat-value">8/17</strong></div></div><p class="pathway-domains"><strong>Principais autoridades / domínios</strong><br/>Maldições, Aprisionamento, Espírito, Transformação</p></article><article class="pathway-card"><div class="pathway-card-head"><span class="pathway-number">21</span><div class="pathway-titlebox"><h3 class="pathway-name">O Eremita (Hermit)</h3><p class="pathway-sequence"><strong>Sequência 9: </strong>Investigador de Mistérios (Mystery Pryer)</p></div></div><div class="pathway-stats"><div class="pathway-stat pathway-stat-spirituality"><span class="pathway-stat-label">Espiritualidade inicial</span><strong class="pathway-stat-value">13</strong></div><div class="pathway-stat pathway-stat-pv"><span class="pathway-stat-label">PV máximo</span><strong class="pathway-stat-value">5</strong></div><div class="pathway-stat pathway-stat-thresholds"><span class="pathway-stat-label">Limiares de Dano</span><strong class="pathway-stat-value">5/13</strong></div></div><p class="pathway-domains"><strong>Principais autoridades / domínios</strong><br/>Conhecimento Oculto, Magia, Mistérios, Segredos</p></article><article class="pathway-card"><div class="pathway-card-head"><span class="pathway-number">22</span><div class="pathway-titlebox"><h3 class="pathway-name">O Paragon (Paragon)</h3><p class="pathway-sequence"><strong>Sequência 9: </strong>Erudito (Savant)</p></div></div><div class="pathway-stats"><div class="pathway-stat pathway-stat-spirituality"><span class="pathway-stat-label">Espiritualidade inicial</span><strong class="pathway-stat-value">9</strong></div><div class="pathway-stat pathway-stat-pv"><span class="pathway-stat-label">PV máximo</span><strong class="pathway-stat-value">5</strong></div><div class="pathway-stat pathway-stat-thresholds"><span class="pathway-stat-label">Limiares de Dano</span><strong class="pathway-stat-value">5/12</strong></div></div><p class="pathway-domains"><strong>Principais autoridades / domínios</strong><br/>Tecnologia, Máquinas, Alquimia, Criação e Civilização</p></article></div>
 <div class="box box-rule" id="limiares-iniciais">
-  <div class="box-title">Limiares de Dano iniciais</div>
-  <p>
+<div class="box-title">Limiares de Dano iniciais</div>
+<p>
     Os valores aparecem no formato <strong>primeiro limiar / segundo limiar</strong>.
     O primeiro define quando o dano passa de Menor para Maior; o segundo define
-    quando passa de Maior para Severo. Os pares da tabela são os valores iniciais
+    quando passa de Maior para Severo. Os pares exibidos nos cartões são os valores iniciais
     da Sequência 9 e são determinados exclusivamente pelo Caminho.
   </p>
-  <p>
+<p>
     A cada avanço efetivo de Sequência, aumente o primeiro limiar em
     <strong>+1</strong> e o segundo em <strong>+2</strong>. Vestimentas, armaduras,
     equipamentos, poderes, rituais e outras fontes de Proteção não concedem nem
     modificam Limiares de Dano.
   </p>
 </div>
-
 <p>
   Ao escolher seu Caminho, registre na ficha o nome do Caminho, o nome da Sequência 9,
-  a Espiritualidade inicial, os PV concedidos pelo Caminho e o par de Limiares de Dano indicado na tabela. O personagem
+  a Espiritualidade inicial, os PV concedidos pelo Caminho e o par de Limiares de Dano indicado no cartão do Caminho. O personagem
   acabou de consumir essa poção e, portanto, começa com
   <strong>0/100 Pontos de Digestão</strong> na Sequência 9. O Método de Atuação não consiste apenas em repetir uma profissão
   ou imitar um estereótipo: ele exige compreender e expressar o princípio que
   caracteriza a poção. Consulte o Capítulo 6, dedicado ao avanço e ao Método de Atuação, para
   conhecer as regras de digestão e progressão.
 </p>
-
 <div class="box box-note">
-  <div class="box-title">Seu Caminho não é sua personalidade</div>
-  <p>
+<div class="box-title">Seu Caminho não é sua personalidade</div>
+<p>
     O Caminho não determina automaticamente a personalidade, a moralidade ou os
     objetivos do personagem. O nome de uma Sequência também não é uma ordem para
     agir literalmente como sua designação sugere: um Caçador, um Criminoso ou um
     Assassino não precisa reduzir toda a interpretação a esse rótulo.
   </p>
-  <p>
+<p>
     O Método de Atuação exige compreender o princípio por trás da poção e expressá-lo
     de maneira coerente, não repetir uma profissão ou um estereótipo. Dois personagens
     do mesmo Caminho podem ter temperamentos, motivações e métodos muito diferentes.
   </p>
 </div>
-
 <div class="box box-rule" id="espiritualidade-inicial">
-  <div class="box-title">Espiritualidade Inicial</div>
-  <p>
+<div class="box-title">Espiritualidade Inicial</div>
+<p>
     A Espiritualidade Inicial é a quantidade de pontos com que o personagem começa
     na <strong>Sequência 9</strong>. Esse valor é definido exclusivamente pelo Caminho
-    escolhido, conforme indicado na tabela do Passo 5; na criação, a Espiritualidade
+    escolhido, conforme indicado no cartão do Caminho no Passo 5; na criação, a Espiritualidade
     atual e a máxima começam iguais.
   </p>
 </div>
-
 <div class="box box-warning">
-  <div class="box-title">Atenção: compatibilidade com o grupo</div>
-  <p>
+<div class="box-title">Atenção: compatibilidade com o grupo</div>
+<p>
     Os personagens não precisam pertencer a Caminhos semelhantes, mas suas
     motivações e objetivos devem permitir que trabalhem juntos. Diferenças de
     crença, origem ou interesses podem gerar conflitos dramáticos, desde que
     todos os jogadores concordem em explorá-los e que isso não impeça a campanha.
   </p>
 </div>
-
 <div class="separator"></div>
-
 <h2 id="passo-8-lucidez">Passo 6 — Lucidez</h2>
-
 <p>
   A Lucidez representa a estabilidade mental e a capacidade do personagem de
   manter sua percepção da realidade diante de experiências sobrenaturais. Ela
   pode ser afetada por horrores incompreensíveis, traumas, influências mentais e
   outras situações definidas pelas regras do cenário.
 </p>
-
 <div class="box box-rule">
-  <div class="box-title">Lucidez Inicial</div>
-  <p style="text-align:center; font-size:1.15em;"><strong>Lucidez inicial = 7 pontos (máximo de 10)</strong></p>
-  <p>
+<div class="box-title">Lucidez Inicial</div>
+<p style="text-align:center; font-size:1.15em;"><strong>Lucidez inicial = 7 pontos (máximo de 10)</strong></p>
+<p>
     Todos os personagens começam com <strong>7 pontos de Lucidez</strong>,
     independentemente dos valores de seus Atributos. Registre esse valor na ficha.
   </p>
@@ -851,7 +735,6 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
   <em>Senhor dos Mistérios</em>. Ela não deve ser interpretada como uma medida
   literal ou universal da sanidade de todos os personagens do cânone.
 </p>
-
 <h3 id="ancoras-iniciais">Âncoras e Conexões Iniciais</h3>
 <p>
   Todo personagem começa com <strong>três Âncoras mecânicas</strong>, cada uma concedendo
@@ -860,31 +743,29 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
   <strong>três NPCs de relacionamento</strong>: um será marcado como Âncora e os outros dois
   serão registrados como Conexões, que poderão se desenvolver durante a campanha.
 </p>
-
 <div class="box box-rule">
-  <div class="box-title">Âncoras e Conexões da criação</div>
-  <table>
-    <thead><tr><th>Fonte</th><th>Quantidade</th><th>Como definir</th></tr></thead>
-    <tbody>
-      <tr>
-        <td><strong>Relacionamentos</strong></td>
-        <td>1 Âncora + 2 Conexões</td>
-        <td>Crie três NPCs específicos que tenham importância na vida do personagem. Escolha um deles para ser sua Âncora de Relacionamento (+1 nos testes de Lucidez); os outros dois serão Conexões e não concedem esse bônus inicialmente.</td>
-      </tr>
-      <tr>
-        <td><strong>Identidade</strong></td>
-        <td>1 Âncora</td>
-        <td>O Conceito do personagem representa a noção que ele tem de si mesmo e estabelece sua Âncora de Identidade (+1).</td>
-      </tr>
-      <tr>
-        <td><strong>Reconhecimento</strong></td>
-        <td>1 Âncora</td>
-        <td>A primeira Especialização do personagem representa uma competência pela qual ele se reconhece e é reconhecido, estabelecendo sua Âncora de Reconhecimento (+1).</td>
-      </tr>
-    </tbody>
-  </table>
+<div class="box-title">Âncoras e Conexões da criação</div>
+<table>
+<thead><tr><th>Fonte</th><th>Quantidade</th><th>Como definir</th></tr></thead>
+<tbody>
+<tr>
+<td><strong>Relacionamentos</strong></td>
+<td>1 Âncora + 2 Conexões</td>
+<td>Crie três NPCs específicos que tenham importância na vida do personagem. Escolha um deles para ser sua Âncora de Relacionamento (+1 nos testes de Lucidez); os outros dois serão Conexões e não concedem esse bônus inicialmente.</td>
+</tr>
+<tr>
+<td><strong>Identidade</strong></td>
+<td>1 Âncora</td>
+<td>O Conceito do personagem representa a noção que ele tem de si mesmo e estabelece sua Âncora de Identidade (+1).</td>
+</tr>
+<tr>
+<td><strong>Reconhecimento</strong></td>
+<td>1 Âncora</td>
+<td>A primeira Especialização do personagem representa uma competência pela qual ele se reconhece e é reconhecido, estabelecendo sua Âncora de Reconhecimento (+1).</td>
+</tr>
+</tbody>
+</table>
 </div>
-
 <h4>Criação dos três NPCs de Relacionamento</h4>
 <p>
   Crie <strong>três NPCs específicos e identificáveis</strong> que façam parte da vida do
@@ -900,12 +781,12 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
   bônus de Âncora no início da campanha.</p>
 <p>Algumas possibilidades para esses NPCs:</p>
 <ul>
-  <li><strong>Parentes:</strong> mãe, pai, irmão, irmã, avó, tio, primo ou outro familiar próximo.</li>
-  <li><strong>Amigos:</strong> um amigo de infância, uma pessoa em quem confia profundamente ou alguém que permaneceu ao seu lado em uma situação difícil.</li>
-  <li><strong>Professores e mentores:</strong> alguém que o ensinou, orientou ou teve influência decisiva em sua formação.</li>
-  <li><strong>Companheiros:</strong> antigo colega de trabalho, parceiro de viagem, membro de uma antiga equipe ou companheiro de serviço.</li>
-  <li><strong>Vínculos afetivos:</strong> cônjuge, parceiro ou antiga relação amorosa que ainda tenha importância na vida do personagem.</li>
-  <li><strong>Outras pessoas marcantes:</strong> alguém que o protegeu, alguém a quem protege, um benfeitor ou até um rival com quem mantenha uma ligação profunda.</li>
+<li><strong>Parentes:</strong> mãe, pai, irmão, irmã, avó, tio, primo ou outro familiar próximo.</li>
+<li><strong>Amigos:</strong> um amigo de infância, uma pessoa em quem confia profundamente ou alguém que permaneceu ao seu lado em uma situação difícil.</li>
+<li><strong>Professores e mentores:</strong> alguém que o ensinou, orientou ou teve influência decisiva em sua formação.</li>
+<li><strong>Companheiros:</strong> antigo colega de trabalho, parceiro de viagem, membro de uma antiga equipe ou companheiro de serviço.</li>
+<li><strong>Vínculos afetivos:</strong> cônjuge, parceiro ou antiga relação amorosa que ainda tenha importância na vida do personagem.</li>
+<li><strong>Outras pessoas marcantes:</strong> alguém que o protegeu, alguém a quem protege, um benfeitor ou até um rival com quem mantenha uma ligação profunda.</li>
 </ul>
 <p>
   Os vínculos não precisam ser necessariamente positivos: uma relação difícil, uma rivalidade
@@ -914,35 +795,29 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
   que o vínculo adquiriu importância suficiente. O Capítulo 3 apresenta as regras completas
   de funcionamento das Âncoras e dos testes de Lucidez.
 </p>
-
 <div class="separator"></div>
-
 <h2 id="passo-9-equipamento-inicial">Passo 7 — Equipamento Inicial e Recursos</h2>
-
 <p>
   Todo personagem começa com um conjunto básico de pertences. O Antecedente
   escolhido também apresenta uma sugestão de item que pode integrar a história
   e a descrição do personagem.
 </p>
-
 <ul>
-  <li>Roupas adequadas à estação, à ocupação e à posição social do personagem.</li>
-  <li>Um item pessoal de valor sentimental, definido pelo jogador.</li>
-  <li>Uma bolsa, pasta ou pequena maleta.</li>
-  <li>Fósforos e uma vela.</li>
-  <li>Material simples de escrita, quando fizer sentido para o conceito do personagem.</li>
+<li>Roupas adequadas à estação, à ocupação e à posição social do personagem.</li>
+<li>Um item pessoal de valor sentimental, definido pelo jogador.</li>
+<li>Uma bolsa, pasta ou pequena maleta.</li>
+<li>Fósforos e uma vela.</li>
+<li>Material simples de escrita, quando fizer sentido para o conceito do personagem.</li>
 </ul>
-
 <p>
   Armas, ferramentas especializadas, artefatos selados e ingredientes Beyonder
   dependem da história do personagem e da aprovação do Mestre. Consulte o capítulo
   de Equipamentos e Artefatos para conhecer as regras, os preços e as descrições
   desses itens.
 </p>
-
 <div class="box box-note">
-  <div class="box-title">Recursos</div>
-  <p>
+<div class="box-title">Recursos</div>
+<p>
     Escolha, em conjunto com o Mestre, o nível de <strong>Recursos</strong> que melhor
     representa a capacidade econômica do personagem: sua renda, patrimônio, bens,
     propriedades e acesso a capital. Considere sua ocupação, origem familiar, despesas,
@@ -952,18 +827,18 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
     separada. A origem social e a trajetória financeira continuam sendo descritas pelo
     Antecedente e pela narrativa.
   </p>
-  <table>
-    <thead><tr><th>Nível</th><th>Classificação</th><th>Renda mensal de referência</th><th>Resumo</th></tr></thead>
-    <tbody>
-      <tr><td>0</td><td><strong>Sem Recursos</strong></td><td>1d4 £</td><td>Sobrevive de trabalhos ocasionais, favores e pequenas quantias. Não possui renda confiável.</td></tr>
-      <tr><td>1</td><td><strong>Precário</strong></td><td>1d6 + 3 £</td><td>Consegue sustentar necessidades básicas, mas qualquer despesa extraordinária compromete suas finanças.</td></tr>
-      <tr><td>2</td><td><strong>Modesto</strong></td><td>2d6 + 8 £</td><td>Possui renda relativamente estável, consegue manter uma moradia simples e adquirir equipamentos comuns.</td></tr>
-      <tr><td>3</td><td><strong>Confortável</strong></td><td>3d6 + 20 £</td><td>Possui estabilidade financeira, boa moradia e capacidade de realizar compras relevantes sem comprometer seu sustento.</td></tr>
-      <tr><td>4</td><td><strong>Abastado</strong></td><td>4d10 + 40 £</td><td>Mantém padrão de vida elevado, possui propriedades, contatos comerciais e acesso a serviços exclusivos.</td></tr>
-      <tr><td>5</td><td><strong>Rico</strong></td><td>5d20 + 80 £</td><td>Possui grande patrimônio, influência econômica e capacidade de financiar operações, negócios e expedições.</td></tr>
-    </tbody>
-  </table>
-  <p>
+<table>
+<thead><tr><th>Nível</th><th>Classificação</th><th>Renda mensal de referência</th><th>Resumo</th></tr></thead>
+<tbody>
+<tr><td>0</td><td><strong>Sem Recursos</strong></td><td>1d4 £</td><td>Sobrevive de trabalhos ocasionais, favores e pequenas quantias. Não possui renda confiável.</td></tr>
+<tr><td>1</td><td><strong>Precário</strong></td><td>1d6 + 3 £</td><td>Consegue sustentar necessidades básicas, mas qualquer despesa extraordinária compromete suas finanças.</td></tr>
+<tr><td>2</td><td><strong>Modesto</strong></td><td>2d6 + 8 £</td><td>Possui renda relativamente estável, consegue manter uma moradia simples e adquirir equipamentos comuns.</td></tr>
+<tr><td>3</td><td><strong>Confortável</strong></td><td>3d6 + 20 £</td><td>Possui estabilidade financeira, boa moradia e capacidade de realizar compras relevantes sem comprometer seu sustento.</td></tr>
+<tr><td>4</td><td><strong>Abastado</strong></td><td>4d10 + 40 £</td><td>Mantém padrão de vida elevado, possui propriedades, contatos comerciais e acesso a serviços exclusivos.</td></tr>
+<tr><td>5</td><td><strong>Rico</strong></td><td>5d20 + 80 £</td><td>Possui grande patrimônio, influência econômica e capacidade de financiar operações, negócios e expedições.</td></tr>
+</tbody>
+</table>
+<p>
     A rolagem mensal é uma <strong>referência narrativa variável</strong>, não um salário
     garantido nem um saldo disponível em mãos. Role apenas quando for útil estimar os
     recursos que podem circular ou ser mobilizados no período; o Mestre pode resolver a
@@ -971,31 +846,27 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
     Componentes Beyonder, Itens Beyonder ou Artefatos Selados, cuja disponibilidade depende
     de contatos, autorização, procedência e mercado.
   </p>
-  <p>
+<p>
     A origem dos Recursos deve fazer sentido na história: emprego, atividade profissional,
     negócios, herança, propriedades, investimentos, comércio clandestino, patrocínio ou apoio
     de uma organização. O nível pode subir ou cair quando acontecimentos importantes alterarem
     permanentemente o patrimônio, as fontes de renda ou o acesso econômico do personagem.
   </p>
-  <p class="small">
+<p class="small">
     As descrições narrativas completas dos seis níveis e as regras de disponibilidade e mercado
     estão no <strong>Capítulo 8 — Equipamentos, Itens Beyonder, Artefatos Selados e Economia</strong>.
   </p>
 </div>
-
 <div class="box box-warning">
-  <div class="box-title">Armas e itens restritos</div>
-  <p>
+<div class="box-title">Armas e itens restritos</div>
+<p>
     O fato de um personagem possuir um Antecedente militar, criminoso ou marítimo
     não significa que ele possa começar com qualquer arma. O Mestre deve considerar
     a legislação local, a posição social do personagem, a disponibilidade do item
     e o equilíbrio da campanha.
   </p>
 </div>
-
-
 <div class="separator"></div>
-
 <h2 id="passo-9-defesa-egide">Passo 8 — Defesa e Égide</h2>
 <p>
   Neste passo, calcule e registre a Defesa e a Égide inicial. Os Limiares de Dano
@@ -1003,21 +874,19 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
   pontos de Égide; registre 0/ no campo correspondente, salvo se o Mestre determinar
   outra condição inicial.
 </p>
-
 <h3>Defesa</h3>
 <p>
   A Defesa indica o valor que um adversário precisa alcançar em um teste de ataque
   para atingir o personagem. O cálculo da Defesa Base é apresentado a seguir.
 </p>
 <div class="box box-rule">
-  <div class="box-title">Cálculo da Defesa Base</div>
-  <p style="text-align:center; font-size:1.15em;"><strong>Defesa Base = 10 + DES + RAC</strong></p>
-  <p>
+<div class="box-title">Cálculo da Defesa Base</div>
+<p style="text-align:center; font-size:1.15em;"><strong>Defesa Base = 10 + DES + RAC</strong></p>
+<p>
     Nas fórmulas, <strong>DES</strong> e <strong>RAC</strong> representam os bônus derivados dos pontos registrados. Eles são calculados por <strong>Pontos.(DES) − 2</strong> e
     <strong>Pontos.(RAC) − 2</strong>. Some os dois bônus ao valor-base de 10 para determinar a Defesa Base do personagem.
   </p>
 </div>
-
 <h3>Égide</h3>
 <p>
   Não existe quantidade inicial de Égide na criação. Registre <strong>0/</strong>
@@ -1026,10 +895,9 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
   a concede. As regras de aplicação da Égide durante os conflitos estão no
   <strong>Capítulo 7 — Conflitos</strong>.
 </p>
-
 <div class="box box-note">
-  <div class="box-title">Limiares já definidos pelo Caminho</div>
-  <p>
+<div class="box-title">Limiares já definidos pelo Caminho</div>
+<p>
     Não calcule os Limiares de Dano neste passo. Utilize o par registrado no Passo 5;
     ele já considera o Caminho e a Sequência atual. A cada avanço efetivo de Sequência,
     o primeiro limiar aumenta +1 e o segundo aumenta +2, conforme explicado no Capítulo 6.
@@ -1037,44 +905,42 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
   </p>
 </div>
 <div class="box box-example">
-  <div class="box-title">Exemplo de preenchimento</div>
-  <p>
+<div class="box-title">Exemplo de preenchimento</div>
+<p>
     Um personagem na Sequência 9 possui Pontos.(DES) = 2, Pontos.(RAC) = 2,
     Pontos.(FOR) = 2, Pontos.(VIG) = 2, Pontos.(INT) = 4, Pontos.(ACO) = 2 e
     Pontos.(DET) = 2. Sem uma fonte de Égide, registra:
   </p>
-  <ul>
-    <li><strong>Defesa Base:</strong> 10 + (2 − 2) + (2 − 2) = <strong>10</strong>.</li>
-    <li><strong>Proteção:</strong> nenhuma.</li>
-    <li><strong>Égide:</strong> <strong>0/</strong>.</li>
-  </ul>
+<ul>
+<li><strong>Defesa Base:</strong> 10 + (2 − 2) + (2 − 2) = <strong>10</strong>.</li>
+<li><strong>Proteção:</strong> nenhuma.</li>
+<li><strong>Égide:</strong> <strong>0/</strong>.</li>
+</ul>
 </div>
 <p>
   A <strong>Velocidade inicial</strong> de um personagem é de <strong>9 metros</strong>. Habilidades, condições e equipamentos podem alterar esse valor durante a campanha.
 </p>
 <div class="separator"></div>
 <h2 id="passo-11-detalhes-finais">Passo 9 — Detalhes Finais</h2>
-
 <p>
   Com as escolhas mecânicas concluídas, defina os elementos que darão identidade
   ao personagem. Esses detalhes ajudam o Mestre a construir situações relevantes
   e oferecem aos demais jogadores motivos para se envolverem com sua história.
 </p>
-
 <ul>
-  <li><strong>Nome completo:</strong> escolha um nome compatível com a origem e a cultura do personagem.</li>
-  <li><strong>Idade e aparência:</strong> defina a idade, a compleição, os traços marcantes e o estilo de vestimenta.</li>
-  <li><strong>Personalidade:</strong> escolha dois ou três traços dominantes, como cauteloso, impulsivo, compassivo, cínico ou curioso.</li>
-  <li><strong>Motivação:</strong> explique o que o personagem busca e por que continua avançando como Beyonder.</li>
-  <li><strong>Conexões e vínculos:</strong> desenvolva os três NPCs de relacionamento definidos na seção <a href="#ancoras-iniciais">Âncoras iniciais</a>, identificando qual deles é a Âncora e quais dois são Conexões. Outros contatos, grupos e instituições podem ser acrescentados livremente.</li>
-  <li><strong>O que você deixou para trás?</strong> Uma pessoa, um lugar, uma profissão ou uma vida que foi afetada por sua entrada no mundo Beyonder.</li>
-  <li><strong>Quem sabe que você é um Beyonder?</strong> Indique quem conhece sua condição e como essa pessoa descobriu.</li>
-  <li><strong>Quem não deveria descobrir?</strong> Pense em familiares, colegas, autoridades ou facções para quem essa informação poderia trazer perigo.</li>
-  <li><strong>Que segredo você descobriu ou carrega?</strong> Pode ser uma informação incompleta, uma participação em um acontecimento ou algo que prefere esconder.</li>
-  <li><strong>O que você teme encontrar novamente?</strong> Uma pessoa, entidade, lugar, símbolo ou situação ligada a uma experiência anterior.</li>
-  <li><strong>A quem você deve algo?</strong> Considere dívidas financeiras, favores, promessas, proteção recebida ou obrigações com uma instituição.</li>
-  <li><strong>Relação com a poção:</strong> explique como conseguiu a poção da Sequência 9, quem sabe disso e quais consequências surgiram.</li>
-  <li><strong>Relação com facções:</strong> indique se possui vínculos, dívidas, suspeitas ou conflitos com uma Igreja, organização oficial, sociedade secreta ou grupo do submundo.</li>
+<li><strong>Nome completo:</strong> escolha um nome compatível com a origem e a cultura do personagem.</li>
+<li><strong>Idade e aparência:</strong> defina a idade, a compleição, os traços marcantes e o estilo de vestimenta.</li>
+<li><strong>Personalidade:</strong> escolha dois ou três traços dominantes, como cauteloso, impulsivo, compassivo, cínico ou curioso.</li>
+<li><strong>Motivação:</strong> explique o que o personagem busca e por que continua avançando como Beyonder.</li>
+<li><strong>Conexões e vínculos:</strong> desenvolva os três NPCs de relacionamento definidos na seção <a href="#ancoras-iniciais">Âncoras iniciais</a>, identificando qual deles é a Âncora e quais dois são Conexões. Outros contatos, grupos e instituições podem ser acrescentados livremente.</li>
+<li><strong>O que você deixou para trás?</strong> Uma pessoa, um lugar, uma profissão ou uma vida que foi afetada por sua entrada no mundo Beyonder.</li>
+<li><strong>Quem sabe que você é um Beyonder?</strong> Indique quem conhece sua condição e como essa pessoa descobriu.</li>
+<li><strong>Quem não deveria descobrir?</strong> Pense em familiares, colegas, autoridades ou facções para quem essa informação poderia trazer perigo.</li>
+<li><strong>Que segredo você descobriu ou carrega?</strong> Pode ser uma informação incompleta, uma participação em um acontecimento ou algo que prefere esconder.</li>
+<li><strong>O que você teme encontrar novamente?</strong> Uma pessoa, entidade, lugar, símbolo ou situação ligada a uma experiência anterior.</li>
+<li><strong>A quem você deve algo?</strong> Considere dívidas financeiras, favores, promessas, proteção recebida ou obrigações com uma instituição.</li>
+<li><strong>Relação com a poção:</strong> explique como conseguiu a poção da Sequência 9, quem sabe disso e quais consequências surgiram.</li>
+<li><strong>Relação com facções:</strong> indique se possui vínculos, dívidas, suspeitas ou conflitos com uma Igreja, organização oficial, sociedade secreta ou grupo do submundo.</li>
 </ul>
 <p class="box-note">
   Não é necessário responder tudo em detalhes. Escolha as perguntas que ajudam a
@@ -1083,20 +949,15 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
   criados, apenas aquele marcado como Âncora concede inicialmente +1 nos testes de Lucidez.
   As duas Conexões não concedem esse bônus, mas podem se tornar Âncoras no decorrer da campanha.
 </p>
-
 <div class="separator"></div>
-
 <h2>Exemplo Completo de Criação</h2>
-
 <div class="box box-example">
-  <div class="box-title">Criação de Personagem: Edmund Harker</div>
-
-  <h4>Passo 1 — Conceito</h4>
-  <p><em>Detetive particular em Backlund que investiga casos que a polícia oficial se recusa a tocar.</em></p>
-
-  <h4>Passo 2 — Antecedente</h4>
-  <p>
-    <strong>Trabalhador Urbano.</strong> Edmund trabalhou como auxiliar de um escritório
+<div class="box-title">Criação de Personagem: Edmund Harker</div>
+<h4>Passo 1 — Conceito</h4>
+<p><em>Detetive particular em Backlund que investiga casos que a polícia oficial se recusa a tocar.</em></p>
+<h4>Passo 2 — Antecedente</h4>
+<p>
+<strong>Trabalhador Urbano.</strong> Edmund trabalhou como auxiliar de um escritório
     de investigação, examinando documentos e acompanhando casos menores em Backlund.
     Ao investigar o desaparecimento de um funcionário de uma casa comercial, encontrou
     registros alterados e um símbolo que aparecia em documentos de pessoas sem ligação
@@ -1105,35 +966,33 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
     a poção sem compreender sua origem; o cliente desapareceu antes que pudesse explicar
     o que estava acontecendo.
   </p>
-  <ul>
-    <li><strong>Pontos de Proficiência:</strong> +1 Ponto em Sobrevivência e +1 Ponto em Investigação, escolhida por Edmund como sua segunda Proficiência.</li>
-    <li><strong>Item de Antecedente:</strong> um caderno antigo com anotações de casos e uma lembrança de seu antigo trabalho.</li>
-    <li><strong>Gancho narrativo:</strong> Edmund mantém contatos entre antigos colegas, clientes e o inspetor Davies, que pode ajudá-lo a consultar registros de ocorrências.</li>
-    <li><strong>Complicação narrativa:</strong> os documentos ligados ao desaparecimento podem atrair a atenção de pessoas que desejam manter o caso encerrado — e alguém pode saber que Edmund ficou com uma pista.</li>
-  </ul>
-
-  <h4>Passo 3 — Atributos</h4>
-  <p>Edmund é observador e analítico, sabe lidar com pessoas, mas não possui grande força física.</p>
-  <ul>
-    <li><strong>Primária — Mentais (7 pontos adicionais):</strong> Pontos.(INT) 4 (+3 adicionais), Pontos.(RAC) 4 (+3 adicionais) e Pontos.(DET) 2 (+1 adicional).</li>
-    <li><strong>Secundária — Sociais (5 pontos adicionais):</strong> Pontos.(CAR) 2 (+1 adicional), Pontos.(MAN) 4 (+3 adicionais) e Pontos.(ACO) 2 (+1 adicional).</li>
-    <li><strong>Terciária — Físicos (3 pontos adicionais):</strong> Pontos.(FOR) 2 (+1 adicional), Pontos.(DES) 2 (+1 adicional) e Pontos.(VIG) 2 (+1 adicional).</li>
-  </ul>
-  <p>Os valores antes dos parênteses são os totais finais de cada Atributo; os valores entre parênteses mostram quantos pontos adicionais foram distribuídos além do ponto inicial. Ao todo, Edmund distribuiu 15 pontos adicionais e termina com 24 pontos de Atributo.</p>
-
-  <h4>Passo 4 — Proficiências</h4>
-  <ul>
-    <li><strong>Primário — Conhecimentos (13 pontos):</strong> Ciências 1, História 2, Medicina 2, Natureza 1, Navegação 1, Misticismo 2, Submundo 2, Teologia 2.</li>
-    <li><strong>Secundário — Talentos (9 pontos):</strong> Acrobacia 0, Atletismo 1, Empatia 2, Furtividade 1, Intimidação 1, Luta 1, Performance 1, Persuasão 2.</li>
-    <li><strong>Terciário — Perícias (5 pontos):</strong> Armas Brancas 1, Armas de Fogo 1, Condução 0, Etiqueta 1, Investigação 1, Prestidigitação 0, Sobrevivência 0, Subterfúgio 1.</li>
-  </ul>
-  <p>
+<ul>
+<li><strong>Pontos de Proficiência:</strong> +1 Ponto em Sobrevivência e +1 Ponto em Investigação, escolhida por Edmund como sua segunda Proficiência.</li>
+<li><strong>Item de Antecedente:</strong> um caderno antigo com anotações de casos e uma lembrança de seu antigo trabalho.</li>
+<li><strong>Gancho narrativo:</strong> Edmund mantém contatos entre antigos colegas, clientes e o inspetor Davies, que pode ajudá-lo a consultar registros de ocorrências.</li>
+<li><strong>Complicação narrativa:</strong> os documentos ligados ao desaparecimento podem atrair a atenção de pessoas que desejam manter o caso encerrado — e alguém pode saber que Edmund ficou com uma pista.</li>
+</ul>
+<h4>Passo 3 — Atributos</h4>
+<p>Edmund é observador e analítico, sabe lidar com pessoas, mas não possui grande força física.</p>
+<ul>
+<li><strong>Primária — Mentais (7 pontos adicionais):</strong> Pontos.(INT) 4 (+3 adicionais), Pontos.(RAC) 4 (+3 adicionais) e Pontos.(DET) 2 (+1 adicional).</li>
+<li><strong>Secundária — Sociais (5 pontos adicionais):</strong> Pontos.(CAR) 2 (+1 adicional), Pontos.(MAN) 4 (+3 adicionais) e Pontos.(ACO) 2 (+1 adicional).</li>
+<li><strong>Terciária — Físicos (3 pontos adicionais):</strong> Pontos.(FOR) 2 (+1 adicional), Pontos.(DES) 2 (+1 adicional) e Pontos.(VIG) 2 (+1 adicional).</li>
+</ul>
+<p>Os valores antes dos parênteses são os totais finais de cada Atributo; os valores entre parênteses mostram quantos pontos adicionais foram distribuídos além do ponto inicial. Ao todo, Edmund distribuiu 15 pontos adicionais e termina com 24 pontos de Atributo.</p>
+<h4>Passo 4 — Proficiências</h4>
+<ul>
+<li><strong>Primário — Conhecimentos (13 pontos):</strong> Ciências 1, História 2, Medicina 2, Natureza 1, Navegação 1, Misticismo 2, Submundo 2, Teologia 2.</li>
+<li><strong>Secundário — Talentos (9 pontos):</strong> Acrobacia 0, Atletismo 1, Empatia 2, Furtividade 1, Intimidação 1, Luta 1, Performance 1, Persuasão 2.</li>
+<li><strong>Terciário — Perícias (5 pontos):</strong> Armas Brancas 1, Armas de Fogo 1, Condução 0, Etiqueta 1, Investigação 1, Prestidigitação 0, Sobrevivência 0, Subterfúgio 1.</li>
+</ul>
+<p>
     A distribuição utiliza <strong>27 pontos</strong>: 13 em Conhecimentos, 9 em
     Talentos e 5 em Perícias. Todas as Proficiências começam em 0, e nenhuma ultrapassa
     o limite inicial de 3.
   </p>
-  <p>
-    <strong>Pontos do Antecedente — Trabalhador Urbano:</strong> Edmund recebe +1 Ponto em
+<p>
+<strong>Pontos do Antecedente — Trabalhador Urbano:</strong> Edmund recebe +1 Ponto em
     Sobrevivência e escolhe Investigação para receber o segundo +1, por sua experiência
     no escritório. Esses pontos são acrescentados diretamente aos valores das Proficiências
     depois da distribuição dos 27 pontos. Sobrevivência passa de 0 para 1 e Investigação
@@ -1144,98 +1003,89 @@ Especializações adicionais podem ser concedidas pelo Mestre após grandes feit
     envolvido: Edmund deve demonstrar como a análise documental participa diretamente
     da ação, e o Mestre decide se a aplicação é pertinente.
   </p>
-
-  <h4>Passo 5 — Caminho</h4>
-  <p>
-    <strong>Caminho do Louco (The Fool) — Sequência 9: Vidente (Seer).</strong> A poção entregue pelo
+<h4>Passo 5 — Caminho</h4>
+<p>
+<strong>Caminho do Louco (The Fool) — Sequência 9: Vidente (Seer).</strong> A poção entregue pelo
     cliente transformou Edmund em um Beyonder do Caminho do Louco. Desde então, ele
     passou a suspeitar que certas coincidências e padrões observados durante seus
     casos não eram casuais. Ainda não sabe quem forneceu a poção, por que foi escolhido
     ou o que o símbolo encontrado nos documentos representa.
   </p>
-  <p>
-    <strong>Método de Atuação:</strong> Edmund ainda precisa compreender o princípio
+<p>
+<strong>Método de Atuação:</strong> Edmund ainda precisa compreender o princípio
     associado à Sequência de Vidente e aprender a agir de acordo com ele. Seu trabalho
     investigativo pode ajudá-lo a observar padrões e interpretar sinais, mas isso não
     substitui as orientações e os requisitos descritos no capítulo de Método de Atuação.
   </p>
-  <p>
-    <strong>Espiritualidade inicial:</strong> conforme a tabela do Passo 5, Edmund começa
+<p>
+<strong>Espiritualidade inicial:</strong> conforme o cartão do Caminho no Passo 5, Edmund começa
     com <strong>11/11 pontos de Espiritualidade</strong> e 0/100 Pontos de Digestão. O valor
     é fornecido exclusivamente pelo Caminho do Louco na Sequência 9; nenhum Atributo ou
     bônus de outra fonte é somado durante a criação.
     <strong>Limiares de Dano iniciais:</strong> <strong>5/12</strong>, conforme o Caminho do Louco.
   </p>
 <h4>Passo 6 — Lucidez</h4>
-  <p>Lucidez inicial: <strong>7 pontos</strong>. Todos os personagens começam com esse mesmo valor, sem necessidade de cálculo.</p>
-  <p><strong>Âncoras iniciais:</strong> Edmund começa com três Âncoras mecânicas: uma Âncora de Relacionamento (Sra. Adelaide Finn), uma Âncora de Identidade (seu Conceito de detetive particular) e uma Âncora de Reconhecimento (sua Especialização em Documentoscopia). Cada uma concede +1 nos testes de Lucidez enquanto estiver ativa, totalizando +3. O Inspetor Davies e o Homem do Sobretudo Preto são suas duas Conexões iniciais.</p>
-
-  <h4>Passo 7 — Equipamento</h4>
-  <ul>
-    <li><strong>Recursos:</strong> Nível 2 — Modesto. Edmund possui renda relativamente estável, aluga um quarto em uma pensão e consegue manter equipamentos comuns. Sua renda mensal de referência é 2d6 + 8 £; esse valor não representa saldo livre em mãos.</li>
-    <li>Sobretudo cinza gasto e chapéu de feltro.</li>
-    <li>Caderno de anotações e lápis.</li>
-    <li>Lupa simples.</li>
-    <li>Relógio de bolso, herança de seu pai.</li>
-    <li>Bolsa pequena, fósforos e vela.</li>
-  </ul>
-  <p>
+<p>Lucidez inicial: <strong>7 pontos</strong>. Todos os personagens começam com esse mesmo valor, sem necessidade de cálculo.</p>
+<p><strong>Âncoras iniciais:</strong> Edmund começa com três Âncoras mecânicas: uma Âncora de Relacionamento (Sra. Adelaide Finn), uma Âncora de Identidade (seu Conceito de detetive particular) e uma Âncora de Reconhecimento (sua Especialização em Documentoscopia). Cada uma concede +1 nos testes de Lucidez enquanto estiver ativa, totalizando +3. O Inspetor Davies e o Homem do Sobretudo Preto são suas duas Conexões iniciais.</p>
+<h4>Passo 7 — Equipamento</h4>
+<ul>
+<li><strong>Recursos:</strong> Nível 2 — Modesto. Edmund possui renda relativamente estável, aluga um quarto em uma pensão e consegue manter equipamentos comuns. Sua renda mensal de referência é 2d6 + 8 £; esse valor não representa saldo livre em mãos.</li>
+<li>Sobretudo cinza gasto e chapéu de feltro.</li>
+<li>Caderno de anotações e lápis.</li>
+<li>Lupa simples.</li>
+<li>Relógio de bolso, herança de seu pai.</li>
+<li>Bolsa pequena, fósforos e vela.</li>
+</ul>
+<p>
     Edmund não começa automaticamente com um revólver. Caso o jogador queira
     esse equipamento, deverá justificar sua aquisição e obter a aprovação do Mestre.
   </p>
-
-  <h4>Passo 8 — Defesa e Égide</h4>
-  <ul>
-    <li><strong>Defesa Base:</strong> como Pontos.(DES) = 2, bônus de DES = +0, e Pontos.(RAC) = 4, bônus de RAC = +2; portanto, Defesa Base = 10 + 0 + 2 = <strong>12</strong>.</li>
-    <li><strong>Proteção:</strong> nenhuma.</li>
-    <li><strong>Égide:</strong> 0 pontos.</li>
-    <li><strong>Limiares de Dano:</strong> <strong>5/12</strong>, definidos pelo Caminho do Louco (Vidente) na Sequência 9.</li>
-    <li><strong>Velocidade inicial:</strong> 9 metros.</li>
-  </ul>
-
-  <h4>Passo 9 — Detalhes Finais</h4>
-  <ul>
-    <li><strong>Nome:</strong> Edmund Harker.</li>
-    <li><strong>Idade:</strong> 34 anos.</li>
-    <li><strong>Descrição física:</strong> homem magro, de estatura mediana, cabelos castanhos despenteados, olheiras profundas e olhos cinzentos atentos. Veste-se de maneira discreta.</li>
-    <li><strong>Personalidade:</strong> cauteloso, metódico e compassivo, apesar de um cinismo superficial.</li>
-    <li><strong>Motivação:</strong> descobrir o que aconteceu com o cliente, identificar a origem da poção e compreender por que o símbolo aparece nos documentos que investigou.</li>
-    <li><strong>O que deixou para trás:</strong> a rotina relativamente previsível do escritório e a confiança de que todo caso possui uma explicação comum.</li>
-    <li><strong>Conexões:</strong>
-      <ul>
-        <li><em>Sra. Adelaide Finn</em> — dona da pensão onde Edmund mora; preocupa-se com ele como se fosse da família.</li>
-        <li><em>Inspetor Davies</em> — contato na polícia que ocasionalmente lhe passa informações e casos incomuns.</li>
-        <li><em>O Homem do Sobretudo Preto</em> — o cliente misterioso que lhe entregou a poção e desapareceu. Personagem controlado pelo Mestre.</li>
-      </ul>
-      <p>Edmund escolheu a Sra. Adelaide Finn como sua Âncora de Relacionamento. O Inspetor Davies e o Homem do Sobretudo Preto são suas duas Conexões iniciais. A descrição da Âncora de Identidade e da Âncora de Reconhecimento foi apresentada no Passo 7 — Lucidez.</p>
-    </li>
-    <li><strong>Segredo:</strong> Edmund guardou uma cópia de um dos documentos alterados e não contou ao inspetor Davies que o mesmo símbolo apareceu em um sonho após consumir a poção. Teme que revelar a ligação entre o caso e sua nova condição coloque outras pessoas em risco.</li>
-    <li><strong>Quem sabe que é Beyonder:</strong> ninguém de seus antigos contatos recebeu essa confirmação. O cliente que lhe entregou a poção talvez soubesse, mas está desaparecido.</li>
-    <li><strong>Quem não deveria descobrir:</strong> Edmund não quer que o inspetor Davies saiba da poção ou do símbolo enquanto não entender o risco que isso representa.</li>
-    <li><strong>O que teme encontrar novamente:</strong> o símbolo associado aos documentos e ao sonho que teve após consumir a poção.</li>
-    <li><strong>A quem deve algo:</strong> Edmund deve favores ao inspetor Davies, que já o protegeu de problemas profissionais, e teme envolvê-lo em assuntos que não compreende.</li>
-  </ul>
+<h4>Passo 8 — Defesa e Égide</h4>
+<ul>
+<li><strong>Defesa Base:</strong> como Pontos.(DES) = 2, bônus de DES = +0, e Pontos.(RAC) = 4, bônus de RAC = +2; portanto, Defesa Base = 10 + 0 + 2 = <strong>12</strong>.</li>
+<li><strong>Proteção:</strong> nenhuma.</li>
+<li><strong>Égide:</strong> 0 pontos.</li>
+<li><strong>Limiares de Dano:</strong> <strong>5/12</strong>, definidos pelo Caminho do Louco (Vidente) na Sequência 9.</li>
+<li><strong>Velocidade inicial:</strong> 9 metros.</li>
+</ul>
+<h4>Passo 9 — Detalhes Finais</h4>
+<ul>
+<li><strong>Nome:</strong> Edmund Harker.</li>
+<li><strong>Idade:</strong> 34 anos.</li>
+<li><strong>Descrição física:</strong> homem magro, de estatura mediana, cabelos castanhos despenteados, olheiras profundas e olhos cinzentos atentos. Veste-se de maneira discreta.</li>
+<li><strong>Personalidade:</strong> cauteloso, metódico e compassivo, apesar de um cinismo superficial.</li>
+<li><strong>Motivação:</strong> descobrir o que aconteceu com o cliente, identificar a origem da poção e compreender por que o símbolo aparece nos documentos que investigou.</li>
+<li><strong>O que deixou para trás:</strong> a rotina relativamente previsível do escritório e a confiança de que todo caso possui uma explicação comum.</li>
+<li><strong>Conexões:</strong>
+<ul>
+<li><em>Sra. Adelaide Finn</em> — dona da pensão onde Edmund mora; preocupa-se com ele como se fosse da família.</li>
+<li><em>Inspetor Davies</em> — contato na polícia que ocasionalmente lhe passa informações e casos incomuns.</li>
+<li><em>O Homem do Sobretudo Preto</em> — o cliente misterioso que lhe entregou a poção e desapareceu. Personagem controlado pelo Mestre.</li>
+</ul>
+<p>Edmund escolheu a Sra. Adelaide Finn como sua Âncora de Relacionamento. O Inspetor Davies e o Homem do Sobretudo Preto são suas duas Conexões iniciais. A descrição da Âncora de Identidade e da Âncora de Reconhecimento foi apresentada no Passo 7 — Lucidez.</p>
+</li>
+<li><strong>Segredo:</strong> Edmund guardou uma cópia de um dos documentos alterados e não contou ao inspetor Davies que o mesmo símbolo apareceu em um sonho após consumir a poção. Teme que revelar a ligação entre o caso e sua nova condição coloque outras pessoas em risco.</li>
+<li><strong>Quem sabe que é Beyonder:</strong> ninguém de seus antigos contatos recebeu essa confirmação. O cliente que lhe entregou a poção talvez soubesse, mas está desaparecido.</li>
+<li><strong>Quem não deveria descobrir:</strong> Edmund não quer que o inspetor Davies saiba da poção ou do símbolo enquanto não entender o risco que isso representa.</li>
+<li><strong>O que teme encontrar novamente:</strong> o símbolo associado aos documentos e ao sonho que teve após consumir a poção.</li>
+<li><strong>A quem deve algo:</strong> Edmund deve favores ao inspetor Davies, que já o protegeu de problemas profissionais, e teme envolvê-lo em assuntos que não compreende.</li>
+</ul>
 </div>
-
 <div class="separator"></div>
-
 <p>
   Com todos os passos concluídos, seu personagem está pronto para entrar no
   mundo dos mistérios. A criação estabelece suas capacidades iniciais, mas não
   determina tudo o que ele poderá se tornar. Suas escolhas, experiências, relações
   e decisões diante do sobrenatural definirão o caminho que seguirá.
 </p>
-
 <p>
   No <strong>Capítulo 3 — Atributos, Proficiências e Sistema de Testes</strong>, você
   encontrará as regras para utilizar essas capacidades em jogo, resolver testes,
   aplicar especializações e compreender suas interações com poderes Beyonder.
 </p>
-
 <nav class="book-nav">
-  <a href="01-introducao.html">← Capítulo 1 — Introdução</a>
-  <a href="03-atributos.html">Capítulo 3 — Atributos &amp; Proficiências →</a>
+<a href="01-introducao.html">← Capítulo 1 — Introdução</a>
+<a href="03-atributos.html">Capítulo 3 — Atributos &amp; Proficiências →</a>
 </nav>
-
 </body>
 </html>
