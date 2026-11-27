@@ -536,7 +536,7 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 <section id="pv-morte">
 <h2>9. Incapacitação, Morte e Cura</h2>
 <h3>Pontos de Vida e Incapacitação</h3>
-<p>Os Pontos de Vida são calculados conforme o Capítulo 3: <strong>PV = 3 + VIG + (10 − Sequência)</strong>. Os PV representam a capacidade de suportar ferimentos e continuar agindo.</p>
+<p>O PV máximo de um participante que possui Caminho é concedido por esse Caminho, conforme a tabela do Capítulo 2. O valor é fixo: não depende de VIG e não aumenta ao avançar de Sequência. Ameaças sem Caminho utilizam o PV definido em seu próprio perfil, sem aplicar uma fórmula geral.</p>
 <ul>
   <li>Quando os PV chegam a <strong>0 ou menos</strong>, o participante fica <strong>Inconsciente</strong>, não pode realizar Ações Principais, Ações Bônus ou Reações, não pode se deslocar e não percebe o ambiente. Nesse momento, inicia-se seu <strong>Relógio da Morte</strong>.</li>
   <li>Valores de PV abaixo de 0 são mantidos até que o participante receba cura ou seja estabilizado.</li>
@@ -633,9 +633,10 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
     <li><strong>Ana:</strong> jogador; DES 3 (bônus +1), Armas de Fogo 3 (bônus +1), Defesa 11, PV 5; revólver de bolso 1d6, com bônus de dano +2.</li>
     <li><strong>Dmitri:</strong> jogador; FOR 4 (bônus +2), Armas Brancas 3 (bônus +1), Defesa 10, PV 6; sabre 1d8, com bônus de dano +3.</li>
     <li><strong>Celeste:</strong> jogador; DES 3 (bônus +1), Armas de Fogo 2 (bônus +0), Defesa 11, PV 5; revólver de bolso 1d6, com bônus de dano +1.</li>
-    <li><strong>Ameaça:</strong> Beyonder do Caminho do Louco (Vidente), Sequência 8; Defesa 11, PV 10, Limiares de Dano 6/14; poder de intimidação sobrenatural.</li>
+    <li><strong>Ameaça:</strong> Beyonder do Caminho do Louco (Vidente), Sequência 8; Defesa 11, PV 5, Limiares de Dano 6/14; poder de intimidação sobrenatural.</li>
     <li><strong>Cultista:</strong> ameaça; DES 2 (bônus +0), Armas de Fogo 2 (bônus +0), Defesa 10, PV 5; revólver de bolso 1d6, com bônus de dano +0.</li>
   </ul>
+  <p class="small">Os PV de Ana, Dmitri e Celeste já correspondem aos valores fixos concedidos pelos respectivos Caminhos. O Beyonder Vidente da Ameaça utiliza 5 PV, conforme o valor de seu Caminho; o Cultista, que não possui Caminho Beyonder, utiliza o PV indicado em seu perfil de ameaça.</p>
   <p>O Mestre começa o conflito com <strong>0 Fichas de Interrupção</strong> e pode acumular no máximo 2. Para controlar o ciclo, serão colocados marcadores ao lado de Ana, Dmitri e Celeste; os marcadores das ameaças também são obrigatórios.</p>
 </div>
 
@@ -643,14 +644,14 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
   <div class="box-title">Ciclo 1 — Ana transfere o Foco para Dmitri</div>
   <p>O conflito começa quando Ana percebe a Ameaça no armazém e decide disparar antes que ela conclua um gesto ritualístico. O Mestre concede o Foco a Ana. Quando seu turno começa, Ana recebe um marcador de turno no ciclo.</p>
   <p><strong>Ana:</strong> dispara contra Ameaça. Rola 1d20 e obtém 15; soma DES (+1) + Armas de Fogo (+1), totalizando <strong>17</strong>. Como o resultado supera a Defesa 11 da Ameaça, o ataque acerta.</p>
-  <p>Dano: 1d6 + DES (+1) + Armas de Fogo (+1) = 6 + 1 + 1 = <strong>8</strong>. O resultado alcança o primeiro limiar da Ameaça (6), mas fica abaixo do segundo (14), causando Dano Maior e marcando <strong>2 PV</strong>. A Ameaça cai de 10 para 8 PV.</p>
+  <p>Dano: 1d6 + DES (+1) + Armas de Fogo (+1) = 6 + 1 + 1 = <strong>8</strong>. O resultado alcança o primeiro limiar da Ameaça (6), mas fica abaixo do segundo (14), causando Dano Maior e marcando <strong>2 PV</strong>. A Ameaça cai de 5 para 3 PV.</p>
   <p>Ana conclui seu turno e transfere voluntariamente o Foco para Dmitri.</p>
 </div>
 
 <div class="example-box">
   <div class="box-title">Ciclo 1 — turno de Dmitri</div>
   <p>Dmitri começa seu turno e recebe um marcador de turno. Ele avança até a Ameaça e ataca com o sabre. O d20 mostra <strong>20 natural</strong>: o ataque acerta automaticamente e é um acerto crítico, independentemente da Defesa ou do bônus total.</p>
-  <p>O sabre utiliza FOR + Armas Brancas e causa 1d8 + FOR (+2) + Armas Brancas (+1). Por ser crítico, os dados de dano são dobrados, mas os bônus da combinação são acrescentados uma única vez: <strong>2d8 + 3</strong>. Dmitri obtém 3 + 4 + 2 + 1 = <strong>10 de dano</strong>. O resultado supera o primeiro limiar da Ameaça (6), mas permanece abaixo do segundo (14), causando Dano Maior e marcando <strong>2 PV</strong>. A Ameaça cai de 8 para 6 PV.</p>
+  <p>O sabre utiliza FOR + Armas Brancas e causa 1d8 + FOR (+2) + Armas Brancas (+1). Por ser crítico, os dados de dano são dobrados, mas os bônus da combinação são acrescentados uma única vez: <strong>2d8 + 3</strong>. Dmitri obtém 3 + 4 + 2 + 1 = <strong>10 de dano</strong>. O resultado supera o primeiro limiar da Ameaça (6), mas permanece abaixo do segundo (14), causando Dano Maior e marcando <strong>2 PV</strong>. A Ameaça cai de 3 para 1 PV.</p>
   <p>Dmitri recebeu o Foco por uma transferência voluntária de Ana e seu turno começou sem ser interrompida. Ao final dela, o Mestre recebe <strong>1 Ficha de Interrupção</strong>, e Dmitri transfere o Foco para Celeste.</p>
 </div>
 
@@ -716,6 +717,7 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
   <section>
     <h3>Incapacitação e poderes</h3>
     <ul>
+      <li><strong>PV máximo:</strong> valor fixo concedido pelo Caminho (Capítulo 2), sem acréscimo por VIG ou avanço de Sequência. Ameaças sem Caminho usam o valor definido em seu perfil.</li>
       <li><strong>0 PV ou menos:</strong> fica Inconsciente e inicia o Relógio da Morte.</li>
       <li><strong>Relógio da Morte:</strong> limite fixo de 4 marcadores; começa com marcadores iniciais iguais ao nível de Ferido (0 a 3). Recebe +1 ao final de cada ciclo se continuar com 0 PV ou menos e não estiver estabilizado, e +1 ao sofrer dano enquanto estiver Inconsciente nessa condição. Morre ao atingir 4 marcadores.</li>
       <li><strong>Sobreviver ao Relógio da Morte:</strong> estabilização ou cura que eleve os PV acima de 0 encerra o relógio e remove seus marcadores; a sobrevivência concede 1 nível de Ferido, até 3. Ferido acrescenta marcadores iniciais ao próximo Relógio e é removido em 1 nível por Descanso Completo acompanhado de tratamento médico especializado bem-sucedido.</li>
