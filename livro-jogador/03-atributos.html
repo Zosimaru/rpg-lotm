@@ -732,23 +732,11 @@ body h6 {
     de <strong>+2</strong>, exceto em testes de ataque ou de Lucidez; bônus de
     Especializações diferentes não se acumulam.
   </p>
-  <p style="text-align:center; font-size:1.1em;">
-    <strong>Dois dados selecionados + Atributo + Proficiência + Bônus aplicáveis ≥ CD</strong>
-  </p>
   <p>
     O Mestre escolhe o Atributo e a Proficiência que melhor representam a abordagem do
     jogador. Quando a ação depender apenas de uma capacidade geral, pode solicitar um
     teste puro de Atributo. Salvo regra específica, utiliza-se apenas um Atributo e uma
     Proficiência por teste.
-  </p>
-  <p>
-    Bônus de Especialização são aplicados depois da rolagem e não contam como fontes de
-    Vantagem ou Desvantagem. Essas fontes são avaliadas separadamente, conforme as regras
-    desta seção.
-  </p>
-  <p>
-    Na rolagem normal, 2d10 produzem resultados de 2 a 20. Os valores centrais ocorrem
-    com maior frequência do que os extremos.
   </p>
 </div>
 
@@ -1042,16 +1030,6 @@ body h6 {
   <p><strong>Exemplo:</strong> um Vidente recebe <strong>5 PV</strong> e continua com
     esse máximo mesmo ao avançar para a Sequência 8, 7, 6 ou 5.</p>
 </div>
-<div class="box box-note">
-  <div class="box-title">Registro dos PV na ficha</div>
-  <p>
-    Registre no campo de Vida máxima o valor indicado para o Caminho no Capítulo 2.
-    Marque os quadrados destinados à Vida conforme receber dano. A cura não pode
-    elevar os PV acima desse máximo, salvo quando um efeito modificar expressamente
-    o limite.
-  </p>
-</div>
-
 <h4 id="espiritualidade">Espiritualidade</h4>
 <p>
   A Espiritualidade representa a capacidade do personagem de canalizar sua própria
@@ -1118,18 +1096,6 @@ body h6 {
     </tbody>
   </table>
 </div>
-<div class="box box-note">
-  <div class="box-title">Registro na ficha</div>
-  <p>
-    Registre a Espiritualidade no formato <strong>Atual/Máxima</strong>. O valor máximo
-    corresponde à capacidade total do personagem; o valor atual diminui quando ele
-    utiliza efeitos que consomem Espiritualidade. Na criação, os valores atual e máximo começam iguais à Espiritualidade inicial
-    indicada para o Caminho na Sequência 9. Após a criação, bônus de Digestão e outras
-    fontes específicas podem aumentar a Espiritualidade máxima. A tabela acima reúne os
-    valores iniciais de criação; ela não define, por si só, valores para Sequências superiores.
-  </p>
-</div>
-
 <h5>Utilização da Espiritualidade</h5>
 <p>
   A Espiritualidade é consumida quando uma habilidade, feitiço ou ritual indicar
@@ -1191,21 +1157,23 @@ body h6 {
   </p>
 </div>
 
-<h5>Recuperação da Espiritualidade</h5>
+<h5>Recuperação de PV, Espiritualidade e Ferido</h5>
 <p>
-  A Espiritualidade pode ser recuperada por meio de Descanso Completo e Descanso Breve.
-  O Descanso Completo pode ser realizado uma vez a cada intervalo de 24 horas e também
-  renova as duas utilizações de Descanso Breve disponíveis para o personagem:
+  Os PV e a Espiritualidade podem ser recuperados por meio de Descanso Completo e
+  Descanso Breve. O Descanso Completo pode ser realizado uma vez a cada intervalo de
+  24 horas e também renova as duas utilizações de Descanso Breve disponíveis para o
+  personagem. A condição Ferido possui uma regra de recuperação própria:
 </p>
 <ul>
-  <li><strong>Descanso Completo:</strong> após 8 horas de descanso, o personagem recupera toda a Espiritualidade, até seu valor máximo. Pode ser realizado <strong>uma vez a cada intervalo de 24 horas</strong>. Cada Descanso Completo renova o direito a duas utilizações de Descanso Breve.</li>
-  <li><strong>Descanso Breve:</strong> após 1 hora de descanso, o personagem recupera <strong>1d10 + (10 − Sequência)</strong> pontos de Espiritualidade, sem ultrapassar seu valor máximo. O personagem pode realizar <strong>duas utilizações de Descanso Breve entre um Descanso Completo e o próximo</strong>. As utilizações não se acumulam: ao realizar um novo Descanso Completo, a quantidade disponível é renovada para duas.</li>
+  <li><strong>Descanso Completo:</strong> após 8 horas de descanso, o personagem recupera todos os PV e toda a Espiritualidade, até seus respectivos valores máximos. Pode ser realizado <strong>uma vez a cada intervalo de 24 horas</strong>. Cada Descanso Completo renova o direito a duas utilizações de Descanso Breve.</li>
+  <li><strong>Descanso Breve:</strong> após 1 hora de descanso, o personagem recupera <strong>1d4 + (10 − Sequência)</strong> pontos de cada recurso (PV e Espiritualidade), sem ultrapassar seus respectivos valores máximos. O personagem pode realizar <strong>duas utilizações de Descanso Breve entre um Descanso Completo e o próximo</strong>. As utilizações não se acumulam: ao realizar um novo Descanso Completo, a quantidade disponível é renovada para duas.</li>
+  <li><strong>Recuperação de Ferido:</strong> ao concluir um Descanso Completo, o personagem reduz sua condição <strong>Ferido em 1 ponto</strong>, desde que, durante esse período, tenha recebido auxílio médico adequado ou passado por uma intervenção Beyonder que favoreça sua recuperação. O descanso, por si só, não remove pontos de Ferido.</li>
 </ul>
 <p>
-  Os pontos recuperados não podem elevar a reserva acima da Espiritualidade máxima
-  do personagem. A recuperação também encerra o excedente acumulado por uso forçado;
-  caso volte a utilizar um poder sem possuir pontos suficientes, uma nova contagem
-  será iniciada.
+  A recuperação não pode elevar os PV ou a Espiritualidade acima de seus respectivos
+  valores máximos. A recuperação de Espiritualidade também encerra o excedente
+  acumulado por uso forçado; caso o personagem volte a utilizar um poder sem possuir
+  pontos suficientes, uma nova contagem será iniciada.
 </p>
 
 <div class="box box-lore">
@@ -1252,8 +1220,9 @@ body h6 {
 <h5>Âncoras</h5>
 <p>
   Âncoras são vínculos, referências e convicções que ajudam o personagem a preservar sua
-  identidade diante do sobrenatural. <strong>Cada Âncora ativa concede +1 nos testes de
-  Lucidez.</strong> Elas podem vir de quatro fontes:
+  identidade diante do sobrenatural. A Âncora de Identidade estabelecida pelo Conceito
+  concede <strong>+2 nos testes de Lucidez</strong>; as demais Âncoras com valor definido
+  concedem +1 cada. Elas podem vir de quatro fontes:
 </p>
 <table>
   <thead><tr><th>Fonte</th><th>Como funciona</th><th>Bônus</th></tr></thead>
@@ -1264,9 +1233,9 @@ body h6 {
       <td>+1 pela Âncora de Relacionamento ativa</td>
     </tr>
     <tr>
-      <td><strong>Identidade</strong></td>
+      <td><strong>Identidade (Conceito)</strong></td>
       <td>O Conceito do personagem representa a noção que ele tem de si mesmo. A Âncora permanece ativa enquanto suas escolhas e sua conduta mantiverem coerência com esse Conceito.</td>
-      <td>+1</td>
+      <td>+2</td>
     </tr>
     <tr>
       <td><strong>Reconhecimento</strong></td>
@@ -1282,8 +1251,9 @@ body h6 {
 </table>
 <p>
   Na criação, a Âncora de Relacionamento fornece +1, o Conceito estabelece a Âncora de
-  Identidade (+1) e a primeira Especialização estabelece a Âncora de Reconhecimento (+1).
-  O personagem começa, portanto, com <strong>três bônus de Âncora</strong>. As duas Conexões
+  Identidade (+2) e a primeira Especialização estabelece a Âncora de Reconhecimento (+1).
+  O personagem começa, portanto, com três Âncoras mecânicas que somam <strong>+4 nos testes
+  de Lucidez</strong>. As duas Conexões
   iniciais não concedem bônus, mas podem se tornar Âncoras durante a campanha quando
   adquirirem importância suficiente. Uma relação casual ou uma referência sem significado
   pessoal não concede bônus automaticamente.
@@ -1408,23 +1378,6 @@ body h6 {
   final iguala ou supera a Evasão do alvo. Na criação, o valor inicial é concedido
   pelo Caminho e deve ser copiado do cartão correspondente no Capítulo 2.
 </p>
-<div class="box box-rule">
-  <div class="box-title">Evasão Inicial definida pelo Caminho</div>
-  <p style="text-align:center; font-size:1.15em;"><strong>Evasão Inicial = valor indicado para o Caminho no Capítulo 2</strong></p>
-  <p>
-    A Evasão não é calculada a partir de DES ou RAC. Esses Atributos continuam
-    sendo utilizados nos testes e resistências que os indiquem, mas não compõem
-    nem alteram automaticamente a Evasão. Os valores apresentados no Capítulo 2
-    são iniciais para a Sequência 9; não há aumento automático de Evasão por avanço
-    de Sequência.
-  </p>
-  <p>
-    Uma habilidade, condição, item, artefato ou outra fonte pode modificar a Evasão
-    quando declarar expressamente o valor, a duração, o tipo de ataque afetado e
-    quaisquer limites da alteração. Não existe bônus genérico de Evasão concedido
-    por Proteção.
-  </p>
-</div>
 
 <h4 id="blindagem-limiares">Proteção, Égide e Limiares de Dano</h4>
 <p>
@@ -1584,8 +1537,9 @@ body h6 {
           <div class="quickref-row"><span class="quickref-label">PV máximo</span><span class="quickref-value">valor fixo concedido pelo Caminho (Cap. 2); não depende de VIG ou Sequência</span></div>
           <div class="quickref-row"><span class="quickref-label">Espiritualidade máxima</span><span class="quickref-value">Espiritualidade inicial + Bônus de Digestão de Poção (+2 permanente a cada 50% de uma poção) + outros bônus</span></div>
           <div class="quickref-row"><span class="quickref-label">Teste de Lucidez</span><span class="quickref-value">2d10 + bônus das Âncoras ativas + bônus de circunstância; uso excedente de Espiritualidade: CD 8 + excedente acumulado</span></div>
-          <div class="quickref-row"><span class="quickref-label">Recuperação da Espiritualidade</span><span class="quickref-value">Descanso Completo: recuperação total, 1 vez a cada intervalo de 24 horas; cada Descanso Completo renova duas utilizações de Descanso Breve, de 1 hora cada</span></div>
-          <div class="quickref-row"><span class="quickref-label">Lucidez</span><span class="quickref-value">inicial 7, máximo 10, mínimo 0; cada Âncora ativa concede +1 em testes de Lucidez</span></div>
+          <div class="quickref-row"><span class="quickref-label">Recuperação de PV e Espiritualidade</span><span class="quickref-value">Descanso Completo: recupera ambos integralmente, 1 vez a cada intervalo de 24 horas; Descanso Breve: após 1 hora, recupera 1d4 + (10 − Sequência) pontos de cada recurso; duas utilizações entre Descansos Completos</span></div>
+          <div class="quickref-row"><span class="quickref-label">Recuperação de Ferido</span><span class="quickref-value">Reduz 1 ponto ao concluir um Descanso Completo, desde que tenha recebido auxílio médico adequado ou intervenção Beyonder durante esse período</span></div>
+          <div class="quickref-row"><span class="quickref-label">Lucidez</span><span class="quickref-value">inicial 7, máximo 10, mínimo 0; Âncora de Identidade (Conceito) concede +2, demais Âncoras com valor definido concedem +1 em testes de Lucidez</span></div>
         </div>
       </section>
 
