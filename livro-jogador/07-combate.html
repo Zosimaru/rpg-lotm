@@ -77,7 +77,17 @@
   .conflict-chapter .book-nav { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #d8c9aa; }
   .conflict-chapter .book-nav a { font-weight: 700; text-decoration: none; }
   @media (max-width: 900px) { .conflict-chapter .four-col { grid-template-columns: repeat(2, minmax(0,1fr)); } }
-  @media (max-width: 720px) { .conflict-chapter .two-col, .conflict-chapter .three-col, .conflict-chapter .four-col { grid-template-columns: 1fr; } .conflict-chapter .toc ol { columns: 1; } .conflict-chapter table { display: block; overflow-x: auto; } }
+  @media (max-width: 720px) {
+    .conflict-chapter .two-col, .conflict-chapter .three-col, .conflict-chapter .four-col { grid-template-columns: 1fr; }
+    .conflict-chapter .toc ol { columns: 1; }
+    .conflict-chapter table { display: block; width: 100%; max-width: 100%; overflow: visible; border-collapse: separate; }
+    .conflict-chapter table thead { display: none; }
+    .conflict-chapter table tbody { display: block; width: 100%; }
+    .conflict-chapter table tbody tr { display: block; width: 100%; margin: 0 0 .9rem; padding: .35rem .65rem; border: 1px solid #d8c9aa; border-radius: .45rem; background: rgba(255,255,255,.28); }
+    .conflict-chapter table tbody td { display: block; width: 100%; min-width: 0; padding: .5rem 0; border: 0; border-bottom: 1px solid #e3d8c5; overflow-wrap: anywhere; }
+    .conflict-chapter table tbody td:last-child { border-bottom: 0; }
+    .conflict-chapter table tbody td::before { content: attr(data-label); display: block; margin-bottom: .18rem; color: #78613b; font-size: .76rem; font-weight: 700; line-height: 1.3; }
+  }
   @media print { .conflict-chapter { max-width: none; padding: 0; } .conflict-chapter h2 { break-after: avoid; page-break-after: avoid; } .conflict-chapter .toc { break-inside: avoid; } .conflict-chapter a { color: inherit; text-decoration: none; } }
 </style>
 </head>
@@ -140,7 +150,7 @@
   <div class="box-title">Resolução básica</div>
   <p>Quando uma ação durante um conflito tiver resultado incerto e consequências relevantes, identifique a combinação de Atributo e Proficiência adequada à abordagem ou à fonte. A rolagem e a aplicação de Vantagem e Desvantagem seguem as regras do Capítulo 3:</p>
   <span class="formula">Atributo + Proficiência</span>
-  <p>Compare o resultado à Defesa do alvo ou à Classe de Dificuldade (CD) indicada pelo poder ou pela situação. O Mestre escolhe o Atributo conforme a abordagem descrita pelo jogador e acrescenta uma Proficiência quando houver treinamento diretamente pertinente.</p>
+  <p>Compare o resultado à Evasão do alvo ou à Classe de Dificuldade (CD) indicada pelo poder ou pela situação. O Mestre escolhe o Atributo conforme a abordagem descrita pelo jogador e acrescenta uma Proficiência quando houver treinamento diretamente pertinente.</p>
   <p><strong>Como interpretar a fórmula:</strong> nas rolagens, os termos Atributo e Proficiência representam os respectivos bônus derivados dos valores registrados na ficha, e não os Pontos brutos. Os Pontos só são utilizados quando uma regra os mencionar expressamente.</p>
 </div>
 
@@ -247,18 +257,18 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 <table>
   <thead><tr><th>Ação Principal</th><th>Como funciona</th></tr></thead>
   <tbody>
-    <tr><td><strong>Atacar</strong></td><td>Realizar um ataque corpo a corpo ou à distância. O teste e o dano seguem as seções correspondentes.</td></tr>
-    <tr><td><strong>Correr</strong></td><td>Receber deslocamento adicional igual à sua Velocidade neste turno. Some-o ao deslocamento normal e distribua a distância antes e/ou depois de usar Correr.</td></tr>
-    <tr><td><strong>Esquivar</strong></td><td>Adotar uma postura defensiva. Até o início do seu próximo turno, ataques contra você recebem Desvantagem; testes de Destreza para evitar perigos físicos também podem receber Vantagem quando a esquiva for pertinente.</td></tr>
-    <tr><td><strong>Ajudar</strong></td><td>Auxiliar um aliado em uma tarefa específica. Quando a ajuda for viável e relevante, ele recebe Vantagem no próximo teste diretamente beneficiado. Fontes excedentes não acumulam.</td></tr>
-    <tr><td><strong>Esconder-se</strong></td><td>Usar cobertura, sombras ou distração para ocultar sua presença. Quando houver risco de ser descoberto, faça um teste de Furtividade contra a percepção dos observadores.</td></tr>
-    <tr><td><strong>Influenciar</strong></td><td>Tentar alterar a atitude de alguém por persuasão, intimidação, empatia ou performance. O Mestre define o teste conforme a abordagem e a situação.</td></tr>
-    <tr><td><strong>Usar Poder</strong></td><td>Ativar um poder Beyonder. A descrição informa custo de Espiritualidade, alcance, alvos, duração, preparação, concentração e tipo de ação. Se indicar Ação Bônus ou Reação, essa indicação prevalece.</td></tr>
-    <tr><td><strong>Preparar-se</strong></td><td>Declarar uma ação e um gatilho claro e perceptível. Quando o gatilho ocorrer, você pode executar a ação preparada como uma Reação, se ainda for possível. A preparação termina se o gatilho não ocorrer antes do início do seu próximo turno.</td></tr>
-    <tr><td><strong>Procurar</strong></td><td>Examinar uma área, criatura ou objeto em busca de pistas, rastros, perigos ou elementos ocultos. O Mestre define o teste adequado à abordagem, como Investigação ou Sobrevivência.</td></tr>
-    <tr><td><strong>Estudar</strong></td><td>Analisar ou recordar informações, documentos, símbolos, criaturas ou fenômenos. Utilize o Conhecimento pertinente, como História, Ciências, Misticismo ou Teologia.</td></tr>
-    <tr><td><strong>Utilizar Item</strong></td><td>Manipular um objeto ou equipamento de forma significativa, como operar uma ferramenta, abrir uma fechadura ou usar um item que não possa ser ativado por uma interação simples. Itens especiais seguem suas próprias descrições.</td></tr>
-    <tr><td><strong>Executar uma manobra</strong></td><td>Agarrar, derrubar, empurrar, desarmar ou conter fisicamente um adversário. Cada opção é resolvida pela disputa indicada na seção <em>Executar uma manobra</em>.</td></tr>
+    <tr><td data-label="Ação Principal"><strong>Atacar</strong></td><td data-label="Como funciona">Realizar um ataque corpo a corpo ou à distância. O teste e o dano seguem as seções correspondentes.</td></tr>
+    <tr><td data-label="Ação Principal"><strong>Correr</strong></td><td data-label="Como funciona">Receber deslocamento adicional igual à sua Velocidade neste turno. Some-o ao deslocamento normal e distribua a distância antes e/ou depois de usar Correr.</td></tr>
+    <tr><td data-label="Ação Principal"><strong>Esquivar</strong></td><td data-label="Como funciona">Adotar uma postura defensiva. Até o início do seu próximo turno, ataques contra você recebem Desvantagem; testes de Destreza para evitar perigos físicos também podem receber Vantagem quando a esquiva for pertinente.</td></tr>
+    <tr><td data-label="Ação Principal"><strong>Ajudar</strong></td><td data-label="Como funciona">Auxiliar um aliado em uma tarefa específica. Quando a ajuda for viável e relevante, ele recebe Vantagem no próximo teste diretamente beneficiado. Fontes excedentes não acumulam.</td></tr>
+    <tr><td data-label="Ação Principal"><strong>Esconder-se</strong></td><td data-label="Como funciona">Usar cobertura, sombras ou distração para ocultar sua presença. Quando houver risco de ser descoberto, faça um teste de Furtividade contra a percepção dos observadores.</td></tr>
+    <tr><td data-label="Ação Principal"><strong>Influenciar</strong></td><td data-label="Como funciona">Tentar alterar a atitude de alguém por persuasão, intimidação, empatia ou performance. O Mestre define o teste conforme a abordagem e a situação.</td></tr>
+    <tr><td data-label="Ação Principal"><strong>Usar Poder</strong></td><td data-label="Como funciona">Ativar um poder Beyonder. A descrição informa custo de Espiritualidade, alcance, alvos, duração, preparação, concentração e tipo de ação. Se indicar Ação Bônus ou Reação, essa indicação prevalece.</td></tr>
+    <tr><td data-label="Ação Principal"><strong>Preparar-se</strong></td><td data-label="Como funciona">Declarar uma ação e um gatilho claro e perceptível. Quando o gatilho ocorrer, você pode executar a ação preparada como uma Reação, se ainda for possível. A preparação termina se o gatilho não ocorrer antes do início do seu próximo turno.</td></tr>
+    <tr><td data-label="Ação Principal"><strong>Procurar</strong></td><td data-label="Como funciona">Examinar uma área, criatura ou objeto em busca de pistas, rastros, perigos ou elementos ocultos. O Mestre define o teste adequado à abordagem, como Investigação ou Sobrevivência.</td></tr>
+    <tr><td data-label="Ação Principal"><strong>Estudar</strong></td><td data-label="Como funciona">Analisar ou recordar informações, documentos, símbolos, criaturas ou fenômenos. Utilize o Conhecimento pertinente, como História, Ciências, Misticismo ou Teologia.</td></tr>
+    <tr><td data-label="Ação Principal"><strong>Utilizar Item</strong></td><td data-label="Como funciona">Manipular um objeto ou equipamento de forma significativa, como operar uma ferramenta, abrir uma fechadura ou usar um item que não possa ser ativado por uma interação simples. Itens especiais seguem suas próprias descrições.</td></tr>
+    <tr><td data-label="Ação Principal"><strong>Executar uma manobra</strong></td><td data-label="Como funciona">Agarrar, derrubar, empurrar, desarmar ou conter fisicamente um adversário. Cada opção é resolvida pela disputa indicada na seção <em>Executar uma manobra</em>.</td></tr>
   </tbody>
 </table>
 
@@ -273,11 +283,11 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 <table>
   <thead><tr><th>Categoria</th><th>Distância máxima</th></tr></thead>
   <tbody>
-    <tr><td><strong>Corpo a corpo</strong></td><td>Até 1,5 m</td></tr>
-    <tr><td><strong>Curto</strong></td><td>Até 3 m</td></tr>
-    <tr><td><strong>Médio</strong></td><td>Até 9 m</td></tr>
-    <tr><td><strong>Longo</strong></td><td>Até 30 m</td></tr>
-    <tr><td><strong>Extremo</strong></td><td>Até 90 m</td></tr>
+    <tr><td data-label="Categoria"><strong>Corpo a corpo</strong></td><td data-label="Distância máxima">Até 1,5 m</td></tr>
+    <tr><td data-label="Categoria"><strong>Curto</strong></td><td data-label="Distância máxima">Até 3 m</td></tr>
+    <tr><td data-label="Categoria"><strong>Médio</strong></td><td data-label="Distância máxima">Até 9 m</td></tr>
+    <tr><td data-label="Categoria"><strong>Longo</strong></td><td data-label="Distância máxima">Até 30 m</td></tr>
+    <tr><td data-label="Categoria"><strong>Extremo</strong></td><td data-label="Distância máxima">Até 90 m</td></tr>
   </tbody>
 </table>
 
@@ -302,34 +312,34 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
   <thead><tr><th>Manobra</th><th>Ativo</th><th>Alvo</th><th>Em caso de sucesso</th></tr></thead>
   <tbody>
     <tr>
-      <td><strong>Agarrar</strong></td>
-      <td><span class="maneuver-expression">FOR + Luta</span></td>
-      <td><div class="maneuver-choice"><span class="maneuver-expression">FOR + Luta</span><span class="maneuver-or">ou</span><span class="maneuver-expression">DES + Acrobacia</span></div></td>
-      <td>O alvo recebe a condição <strong>Agarrado</strong>. Sua Velocidade é reduzida a 0 e permanece sob contenção até escapar ou a condição terminar por outro efeito. Para escapar, usa uma Ação Principal e vence a mesma disputa contra quem o agarra. A contenção termina se o agarrador ficar Incapacitado ou se um efeito retirar o alvo do alcance.</td>
+      <td data-label="Manobra"><strong>Agarrar</strong></td>
+      <td data-label="Ativo"><span class="maneuver-expression">FOR + Combate</span></td>
+      <td data-label="Alvo"><div class="maneuver-choice"><span class="maneuver-expression">FOR + Combate</span><span class="maneuver-or">ou</span><span class="maneuver-expression">DES + Acrobacia</span></div></td>
+      <td data-label="Em caso de sucesso">O alvo recebe a condição <strong>Agarrado</strong>. Sua Velocidade é reduzida a 0 e permanece sob contenção até escapar ou a condição terminar por outro efeito. Para escapar, usa uma Ação Principal e vence a mesma disputa contra quem o agarra. A contenção termina se o agarrador ficar Incapacitado ou se um efeito retirar o alvo do alcance.</td>
     </tr>
     <tr>
-      <td><strong>Derrubar</strong></td>
-      <td><span class="maneuver-expression">FOR + Luta</span></td>
-      <td><div class="maneuver-choice"><span class="maneuver-expression">FOR + Atletismo</span><span class="maneuver-or">ou</span><span class="maneuver-expression">DES + Acrobacia</span></div></td>
-      <td>O alvo recebe a condição <strong>Derrubado</strong>.</td>
+      <td data-label="Manobra"><strong>Derrubar</strong></td>
+      <td data-label="Ativo"><span class="maneuver-expression">FOR + Combate</span></td>
+      <td data-label="Alvo"><div class="maneuver-choice"><span class="maneuver-expression">FOR + Atletismo</span><span class="maneuver-or">ou</span><span class="maneuver-expression">DES + Acrobacia</span></div></td>
+      <td data-label="Em caso de sucesso">O alvo recebe a condição <strong>Derrubado</strong>.</td>
     </tr>
     <tr>
-      <td><strong>Empurrar</strong></td>
-      <td><span class="maneuver-expression">FOR + Luta</span></td>
-      <td><div class="maneuver-choice"><span class="maneuver-expression">FOR + Atletismo</span><span class="maneuver-or">ou</span><span class="maneuver-expression">DES + Acrobacia</span></div></td>
-      <td>O alvo é deslocado até <strong>1,5 m</strong> diretamente para longe do atacante. O deslocamento termina antes de um obstáculo sólido ou de um espaço ocupado.</td>
+      <td data-label="Manobra"><strong>Empurrar</strong></td>
+      <td data-label="Ativo"><span class="maneuver-expression">FOR + Combate</span></td>
+      <td data-label="Alvo"><div class="maneuver-choice"><span class="maneuver-expression">FOR + Atletismo</span><span class="maneuver-or">ou</span><span class="maneuver-expression">DES + Acrobacia</span></div></td>
+      <td data-label="Em caso de sucesso">O alvo é deslocado até <strong>1,5 m</strong> diretamente para longe do atacante. O deslocamento termina antes de um obstáculo sólido ou de um espaço ocupado.</td>
     </tr>
     <tr>
-      <td><strong>Desarmar</strong></td>
-      <td><span class="maneuver-expression">DES + Luta</span></td>
-      <td><div class="maneuver-choice"><span class="maneuver-expression">FOR + Luta</span><span class="maneuver-or">ou</span><span class="maneuver-expression">DES + Acrobacia</span></div></td>
-      <td>O alvo solta um objeto que esteja segurando, escolhido pelo atacante. O objeto cai no espaço do alvo. Um objeto preso, integrado ao corpo ou protegido por um efeito não pode ser removido por esta manobra, salvo se a ficção ou uma regra específica permitir.</td>
+      <td data-label="Manobra"><strong>Desarmar</strong></td>
+      <td data-label="Ativo"><span class="maneuver-expression">DES + Combate</span></td>
+      <td data-label="Alvo"><div class="maneuver-choice"><span class="maneuver-expression">FOR + Combate</span><span class="maneuver-or">ou</span><span class="maneuver-expression">DES + Acrobacia</span></div></td>
+      <td data-label="Em caso de sucesso">O alvo solta um objeto que esteja segurando, escolhido pelo atacante. O objeto cai no espaço do alvo. Um objeto preso, integrado ao corpo ou protegido por um efeito não pode ser removido por esta manobra, salvo se a ficção ou uma regra específica permitir.</td>
     </tr>
     <tr>
-      <td><strong>Conter</strong></td>
-      <td><span class="maneuver-expression">FOR + Luta</span></td>
-      <td><div class="maneuver-choice"><span class="maneuver-expression">FOR + Luta</span><span class="maneuver-or">ou</span><span class="maneuver-expression">DES + Acrobacia</span></div></td>
-      <td>O alvo recebe a condição <strong>Impedido</strong>. Para manter a contenção, o atacante precisa permanecer ao alcance corpo a corpo e não pode se deslocar; a condição termina se o atacante soltar o alvo, ficar Incapacitado ou for afastado. O alvo pode usar uma Ação Principal para tentar escapar, vencendo a mesma disputa.</td>
+      <td data-label="Manobra"><strong>Conter</strong></td>
+      <td data-label="Ativo"><span class="maneuver-expression">FOR + Combate</span></td>
+      <td data-label="Alvo"><div class="maneuver-choice"><span class="maneuver-expression">FOR + Combate</span><span class="maneuver-or">ou</span><span class="maneuver-expression">DES + Acrobacia</span></div></td>
+      <td data-label="Em caso de sucesso">O alvo recebe a condição <strong>Impedido</strong>. Para manter a contenção, o atacante precisa permanecer ao alcance corpo a corpo e não pode se deslocar; a condição termina se o atacante soltar o alvo, ficar Incapacitado ou for afastado. O alvo pode usar uma Ação Principal para tentar escapar, vencendo a mesma disputa.</td>
     </tr>
   </tbody>
 </table>
@@ -338,12 +348,12 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 
 <section id="ataques">
 <h2>4. Ataques</h2>
-<p>Os testes de ataque não seguem uma combinação universal de Atributo e Proficiência. Eles são definidos pela <strong>fonte que realiza o ataque</strong>, como uma arma, uma técnica ou um poder Beyonder. A descrição da fonte determina quais Atributos e Proficiências compõem o teste; quando a finalidade for acertar diretamente o alvo, a resolução é sempre <strong>1d20 contra a Defesa</strong>. Efeitos que peçam uma resistência, uma disputa ou outro teste próprio não são testes de ataque e conservam a resolução em 2d10. Nas fórmulas, os Atributos são indicados por suas siglas em maiúsculas (FOR, DES, VIG, CAR, MAN, ACO, INT, RAC e DET), e as Proficiências por seus nomes completos. Esses termos representam bônus derivados dos Pontos registrados na ficha, não os Pontos brutos.</p>
+<p>Os testes de ataque não seguem uma combinação universal de Atributo e Proficiência. Eles são definidos pela <strong>fonte que realiza o ataque</strong>, como uma arma, uma técnica ou um poder Beyonder. A descrição da fonte determina quais Atributos e Proficiências compõem o teste; quando a finalidade for acertar diretamente o alvo, a resolução é sempre <strong>1d20 contra a Evasão</strong>. Efeitos que peçam uma resistência, uma disputa ou outro teste próprio não são testes de ataque e conservam a resolução em 2d10. Nas fórmulas, os Atributos são indicados por suas siglas em maiúsculas (FOR, DES, VIG, CAR, MAN, ACO, INT, RAC e DET), e as Proficiências por seus nomes completos. Esses termos representam bônus derivados dos Pontos registrados na ficha, não os Pontos brutos.</p>
 <div class="rule-box">
   <div class="box-title">Regra dos testes de ataque — 1d20</div>
-  <p>Quando uma arma, técnica ou poder exigir que o usuário acerte diretamente um alvo, realize um teste de ataque: <strong>1d20 + Atributo + Proficiência + Bônus aplicáveis ≥ Defesa do alvo</strong>. A fonte do ataque determina a combinação de Atributo e Proficiência. A mesma regra vale para personagens jogadores e ameaças controladas pelo Mestre.</p>
+  <p>Quando uma arma, técnica ou poder exigir que o usuário acerte diretamente um alvo, realize um teste de ataque: <strong>1d20 + Atributo + Proficiência + Bônus aplicáveis ≥ Evasão do alvo</strong>. A fonte do ataque determina a combinação de Atributo e Proficiência. A mesma regra vale para personagens jogadores e ameaças controladas pelo Mestre.</p>
   <ul>
-    <li><strong>20 natural:</strong> acerto crítico automático, independentemente da Defesa. Dobre a quantidade de dados de dano rolados pelo ataque; acrescente bônus fixos apenas uma vez.</li>
+    <li><strong>20 natural:</strong> acerto crítico automático, independentemente da Evasão. Dobre a quantidade de dados de dano rolados pelo ataque; acrescente bônus fixos apenas uma vez.</li>
     <li><strong>1 natural:</strong> falha automática, independentemente dos bônus, sem consequência catastrófica adicional por si só.</li>
     <li>Vantagem: 2d20, mantenha o maior. Desvantagem: 2d20, mantenha o menor. Fontes opostas cancelam-se uma a uma; fontes restantes do mesmo tipo aplicam apenas uma condição.</li>
   </ul>
@@ -356,26 +366,28 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 <table>
   <thead><tr><th>Fonte do ataque</th><th>Teste de exemplo</th><th>Critério</th></tr></thead>
   <tbody>
-    <tr><td><strong>Machado</strong></td><td>FOR + Armas Brancas</td><td>A força aplicada ao golpe e o manejo da arma determinam a combinação de Atributo e Proficiência.</td></tr>
-    <tr><td><strong>Pistola</strong></td><td>DES + Armas de Fogo</td><td>Armas de fogo utilizam a combinação fixa indicada no Capítulo 8; a mira, a coordenação e o controle do disparo são representados por DES.</td></tr>
-    <tr><td><strong>Poder Beyonder</strong></td><td>MAN + Luta, por exemplo</td><td>A combinação de Atributo e Proficiência depende da natureza e da forma de manifestação do poder. Outra combinação pode ser indicada na própria descrição.</td></tr>
+    <tr><td data-label="Fonte do ataque"><strong>Machado</strong></td><td data-label="Teste de exemplo">FOR + Combate</td><td data-label="Critério">A força aplicada ao golpe e o manejo da arma determinam a combinação de Atributo e Proficiência.</td></tr>
+    <tr><td data-label="Fonte do ataque"><strong>Pistola</strong></td><td data-label="Teste de exemplo">DES + Pontaria</td><td data-label="Critério">Armas de fogo utilizam a combinação fixa indicada no Capítulo 8; a mira, a coordenação e o controle do disparo são representados por DES.</td></tr>
+    <tr><td data-label="Fonte do ataque"><strong>Arco curto</strong></td><td data-label="Teste de exemplo">DES + Pontaria</td><td data-label="Critério">Arcos, bestas e fundas são armas de longo alcance que disparam projéteis e utilizam Pontaria.</td></tr>
+    <tr><td data-label="Fonte do ataque"><strong>Faca de arremesso</strong></td><td data-label="Teste de exemplo">DES + Combate</td><td data-label="Critério">Armas arremessáveis manualmente utilizam Combate, mesmo quando o ataque é realizado à distância.</td></tr>
+    <tr><td data-label="Fonte do ataque"><strong>Poder Beyonder</strong></td><td data-label="Teste de exemplo">MAN + Combate, por exemplo</td><td data-label="Critério">A combinação de Atributo e Proficiência depende da natureza e da forma de manifestação do poder. Outra combinação pode ser indicada na própria descrição.</td></tr>
   </tbody>
 </table>
 <p class="small">A tabela apresenta exemplos gerais. Para armas listadas, as combinações fixas do Capítulo 8 são obrigatórias e prevalecem sobre qualquer exemplo genérico. Poderes Beyonder e outras fontes especiais continuam indicando seus próprios testes, conforme suas características e descrições.</p>
 
 <h3>Ataques corpo a corpo e à distância</h3>
 <p>As expressões <strong>corpo a corpo</strong> e <strong>à distância</strong> indicam a forma e o alcance do ataque, não uma fórmula fixa de teste. O Atributo e a Proficiência continuam sendo aqueles definidos pela arma, técnica ou poder que origina a ação.</p>
-<p>Em ataques com armas listadas no Capítulo 8, utilize exatamente a combinação fixa de Atributo e Proficiência indicada para aquela arma. Essa mesma combinação resolve o teste de ataque e, em caso de acerto, é somada aos Dados da arma para determinar o dano: <strong>Dados da arma + bônus do Atributo + bônus da Proficiência</strong>. Não acrescente apenas o Atributo nem escolha outra combinação fora das opções expressamente permitidas na linha da arma. O Capítulo 8 é a referência para os testes e danos de armas de fogo, armas brancas, armas de disparo, armas arremessáveis e armas improvisadas. Ataques desarmados utilizam normalmente <strong>FOR + Luta</strong>; em caso de acerto, os mesmos bônus são somados aos Dados de dano desarmado.</p>
+<p>Em ataques com armas listadas no Capítulo 8, utilize exatamente a combinação fixa de Atributo e Proficiência indicada para aquela arma. Essa mesma combinação resolve o teste de ataque e, em caso de acerto, é somada aos Dados da arma para determinar o dano: <strong>Dados da arma + bônus do Atributo + bônus da Proficiência</strong>. Não acrescente apenas o Atributo nem escolha outra combinação fora das opções expressamente permitidas na linha da arma. Armas de longo alcance que disparam projéteis — armas de fogo, arcos, bestas e fundas — utilizam <strong>Pontaria</strong>. Armas arremessáveis manualmente utilizam <strong>Combate</strong>, mesmo quando lançadas contra alvos à distância. Armas de contato, ataques desarmados e manobras de combate próximo também utilizam Combate, conforme suas regras. O Capítulo 8 é a referência para os testes e danos de cada arma. Ataques desarmados utilizam normalmente <strong>FOR + Combate</strong>; em caso de acerto, os mesmos bônus são somados aos Dados de dano desarmado.</p>
 <p>Se houver um inimigo hostil a até 1,5 metro que possa ameaçar o atirador, o ataque à distância é realizado com <strong>Desvantagem</strong>. Essa regra não substitui a combinação fixa de Atributo e Proficiência da arma nem altera a fórmula de dano.</p>
 
 <h3>Ataques com poderes Beyonder</h3>
 <p>O texto de cada poder deve indicar o teste utilizado e como seu efeito é resolvido:</p>
 <ul>
-  <li><strong>Ataque direto contra Defesa:</strong> quando o poder precisar acertar diretamente o alvo, o usuário rola <strong>1d20 + Atributo + Proficiência + Bônus aplicáveis</strong>. Se o total igualar ou superar a Defesa, o ataque acerta. 20 natural é acerto crítico automático e dobra os dados de dano; 1 natural é falha automática.</li>
+  <li><strong>Ataque direto contra Evasão:</strong> quando o poder precisar acertar diretamente o alvo, o usuário rola <strong>1d20 + Atributo + Proficiência + Bônus aplicáveis</strong>. Se o total igualar ou superar a Evasão, o ataque acerta. 20 natural é acerto crítico automático e dobra os dados de dano; 1 natural é falha automática.</li>
   <li><strong>Resistência contra CD:</strong> quando o poder permitir que o alvo resista ao efeito, o alvo faz um teste com <strong>2d10</strong>, utilizando o Atributo e, quando pertinente, a Proficiência indicados pelo poder. Se igualar ou superar a CD, resiste ao efeito. Isso não é uma rolagem de ataque.</li>
   <li><strong>Teste disputado:</strong> quando o poder opuser diretamente o usuário e o alvo por uma disputa de capacidades ou manobra, ambos rolam os testes indicados com <strong>2d10</strong> e comparam os resultados. Não há críticos automáticos em testes disputados.</li>
 </ul>
-<p>O poder deve indicar seu dano, tipo de dano, alcance, alvos, duração, custo e consequências de sucesso ou falha. Não se presume que todo poder seja um ataque ou que todo efeito possa ser evitado com Defesa. <strong>Testes de ataque de poderes Beyonder também não recebem bônus de Especialização.</strong></p>
+<p>O poder deve indicar seu dano, tipo de dano, alcance, alvos, duração, custo e consequências de sucesso ou falha. Não se presume que todo poder seja um ataque ou que todo efeito possa ser evitado com Evasão. <strong>Testes de ataque de poderes Beyonder também não recebem bônus de Especialização.</strong></p>
 </section>
 
 <section id="resistencia">
@@ -388,9 +400,9 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 <table>
   <thead><tr><th>Natureza do efeito</th><th>Abordagens possíveis</th><th>Exemplos</th></tr></thead>
   <tbody>
-    <tr><td><strong>Corporal</strong></td><td>VIG para suportar; DES para evitar ou controlar o movimento; FOR para romper uma restrição física.</td><td>Venenos, doenças, transmutações, contenção e controle corporal.</td></tr>
-    <tr><td><strong>Mental</strong></td><td>ACO para regular reações; DET para resistir a imposições; RAC para identificar inconsistências.</td><td>Medo, hipnose, ilusões, compulsões e controle mental.</td></tr>
-    <tr><td><strong>Espiritual</strong></td><td>ACO ou DET para preservar a própria vontade; Misticismo quando o conhecimento ritualístico permitir compreender ou contrariar o efeito.</td><td>Maldições, possessão, drenagem espiritual e ataques à alma.</td></tr>
+    <tr><td data-label="Natureza do efeito"><strong>Corporal</strong></td><td data-label="Abordagens possíveis">VIG para suportar; DES para evitar ou controlar o movimento; FOR para romper uma restrição física.</td><td data-label="Exemplos">Venenos, doenças, transmutações, contenção e controle corporal.</td></tr>
+    <tr><td data-label="Natureza do efeito"><strong>Mental</strong></td><td data-label="Abordagens possíveis">ACO para regular reações; DET para resistir a imposições; RAC para identificar inconsistências.</td><td data-label="Exemplos">Medo, hipnose, ilusões, compulsões e controle mental.</td></tr>
+    <tr><td data-label="Natureza do efeito"><strong>Espiritual</strong></td><td data-label="Abordagens possíveis">ACO ou DET para preservar a própria vontade; Misticismo quando o conhecimento ritualístico permitir compreender ou contrariar o efeito.</td><td data-label="Exemplos">Maldições, possessão, drenagem espiritual e ataques à alma.</td></tr>
   </tbody>
 </table>
 <p class="note-box">A fórmula representa a estrutura usual da resistência. Quando a fonte indicar apenas um Atributo, não se acrescenta Proficiência. O poder deve especificar o teste sempre que sua resistência exigir um procedimento próprio. A rolagem segue as regras gerais do Capítulo 3.</p>
@@ -407,9 +419,9 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 <table>
   <thead><tr><th>Tipo de dano</th><th>Exemplos</th></tr></thead>
   <tbody>
-    <tr><td><strong>Contundente</strong></td><td>Socos, martelos, bastões, impactos, quedas e constrição.</td></tr>
-    <tr><td><strong>Perfurante</strong></td><td>Balas, flechas, lanças, adagas, presas e outros ataques que perfuram.</td></tr>
-    <tr><td><strong>Cortante</strong></td><td>Espadas, sabres, machados, garras e lâminas.</td></tr>
+    <tr><td data-label="Tipo de dano"><strong>Contundente</strong></td><td data-label="Exemplos">Socos, martelos, bastões, impactos, quedas e constrição.</td></tr>
+    <tr><td data-label="Tipo de dano"><strong>Perfurante</strong></td><td data-label="Exemplos">Balas, flechas, lanças, adagas, presas e outros ataques que perfuram.</td></tr>
+    <tr><td data-label="Tipo de dano"><strong>Cortante</strong></td><td data-label="Exemplos">Espadas, sabres, machados, garras e lâminas.</td></tr>
   </tbody>
 </table>
 
@@ -417,12 +429,12 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 <table>
   <thead><tr><th>Tipo de dano</th><th>Exemplos</th></tr></thead>
   <tbody>
-    <tr><td><strong>Ácido</strong></td><td>Líquidos corrosivos, enzimas e substâncias que dissolvem ou corroem materiais.</td></tr>
-    <tr><td><strong>Gélido</strong></td><td>Frio sobrenatural, congelamento e descargas de energia gélida.</td></tr>
-    <tr><td><strong>Fogo</strong></td><td>Chamas, combustão, explosões incendiárias e calor intenso.</td></tr>
-    <tr><td><strong>Elétrico</strong></td><td>Raios, eletricidade, descargas e tempestades canalizadas.</td></tr>
-    <tr><td><strong>Venenoso</strong></td><td>Toxinas, venenos, gases tóxicos e substâncias nocivas.</td></tr>
-    <tr><td><strong>Trovejante</strong></td><td>Ondas de choque, explosões sonoras e impactos de pressão acústica.</td></tr>
+    <tr><td data-label="Tipo de dano"><strong>Ácido</strong></td><td data-label="Exemplos">Líquidos corrosivos, enzimas e substâncias que dissolvem ou corroem materiais.</td></tr>
+    <tr><td data-label="Tipo de dano"><strong>Gélido</strong></td><td data-label="Exemplos">Frio sobrenatural, congelamento e descargas de energia gélida.</td></tr>
+    <tr><td data-label="Tipo de dano"><strong>Fogo</strong></td><td data-label="Exemplos">Chamas, combustão, explosões incendiárias e calor intenso.</td></tr>
+    <tr><td data-label="Tipo de dano"><strong>Elétrico</strong></td><td data-label="Exemplos">Raios, eletricidade, descargas e tempestades canalizadas.</td></tr>
+    <tr><td data-label="Tipo de dano"><strong>Venenoso</strong></td><td data-label="Exemplos">Toxinas, venenos, gases tóxicos e substâncias nocivas.</td></tr>
+    <tr><td data-label="Tipo de dano"><strong>Trovejante</strong></td><td data-label="Exemplos">Ondas de choque, explosões sonoras e impactos de pressão acústica.</td></tr>
   </tbody>
 </table>
 
@@ -430,10 +442,10 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 <table>
   <thead><tr><th>Tipo de dano</th><th>Exemplos</th></tr></thead>
   <tbody>
-    <tr><td><strong>Energia</strong></td><td>Energia sobrenatural concentrada, impacto mágico puro e descargas de força.</td></tr>
-    <tr><td><strong>Necrótico</strong></td><td>Drenagem vital, putrefação, energia de morte e deterioração espiritual.</td></tr>
-    <tr><td><strong>Psíquico</strong></td><td>Ataques mentais, sobrecarga cognitiva e agressões diretas à consciência.</td></tr>
-    <tr><td><strong>Radiante</strong></td><td>Luz sobrenatural, purificação, energia solar e manifestações luminosas.</td></tr>
+    <tr><td data-label="Tipo de dano"><strong>Energia</strong></td><td data-label="Exemplos">Energia sobrenatural concentrada, impacto mágico puro e descargas de força.</td></tr>
+    <tr><td data-label="Tipo de dano"><strong>Necrótico</strong></td><td data-label="Exemplos">Drenagem vital, putrefação, energia de morte e deterioração espiritual.</td></tr>
+    <tr><td data-label="Tipo de dano"><strong>Psíquico</strong></td><td data-label="Exemplos">Ataques mentais, sobrecarga cognitiva e agressões diretas à consciência.</td></tr>
+    <tr><td data-label="Tipo de dano"><strong>Radiante</strong></td><td data-label="Exemplos">Luz sobrenatural, purificação, energia solar e manifestações luminosas.</td></tr>
   </tbody>
 </table>
 
@@ -446,23 +458,13 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 </ul>
 
 <h3>Limiares definidos pelo Caminho</h3>
-<p>Os Limiares de Dano iniciais são definidos pelo Caminho e estão listados no Capítulo 2. Cada par apresenta o primeiro limiar (Menor → Maior) e o segundo limiar (Maior → Severo), nesta ordem. Os valores são atualizados quando o personagem avança efetivamente de Sequência: o primeiro limiar aumenta <strong>+1</strong> e o segundo aumenta <strong>+2</strong> a cada avanço, conforme os Capítulos 2, 3 e 6. Nenhuma vestimenta, armadura, equipamento, poder, ritual ou outra fonte de Proteção concede ou modifica esses valores.</p>
-<table>
-  <thead><tr><th>Sequência atual</th><th>Acréscimo ao primeiro limiar</th><th>Acréscimo ao segundo limiar</th></tr></thead>
-  <tbody>
-    <tr><td>9</td><td>+0</td><td>+0</td></tr>
-    <tr><td>8</td><td>+1</td><td>+2</td></tr>
-    <tr><td>7</td><td>+2</td><td>+4</td></tr>
-    <tr><td>6</td><td>+3</td><td>+6</td></tr>
-    <tr><td>5</td><td>+4</td><td>+8</td></tr>
-  </tbody>
-</table>
+<p>Os Limiares de Dano iniciais são definidos pelo Caminho e estão listados no Capítulo 2. Cada par apresenta o primeiro limiar (Menor → Maior) e o segundo limiar (Maior → Severo), nesta ordem. Ao avançar de Sequência, utilize os valores definidos para a nova etapa do Caminho. Não há um acréscimo numérico universal aplicado automaticamente a todos os Caminhos; qualquer alteração deve estar indicada na regra específica correspondente.</p>
 <table>
   <thead><tr><th>Categoria de dano</th><th>Condição</th><th>PV marcados</th></tr></thead>
   <tbody>
-    <tr><td><strong>Menor</strong></td><td>Valor abaixo do primeiro limiar</td><td>1 PV</td></tr>
-    <tr><td><strong>Maior</strong></td><td>Valor igual ou superior ao primeiro limiar, mas abaixo do segundo</td><td>2 PV</td></tr>
-    <tr><td><strong>Severo</strong></td><td>Valor igual ou superior ao segundo limiar</td><td>3 PV</td></tr>
+    <tr><td data-label="Categoria de dano"><strong>Menor</strong></td><td data-label="Condição">Valor abaixo do primeiro limiar</td><td data-label="PV marcados">1 PV</td></tr>
+    <tr><td data-label="Categoria de dano"><strong>Maior</strong></td><td data-label="Condição">Valor igual ou superior ao primeiro limiar, mas abaixo do segundo</td><td data-label="PV marcados">2 PV</td></tr>
+    <tr><td data-label="Categoria de dano"><strong>Severo</strong></td><td data-label="Condição">Valor igual ou superior ao segundo limiar</td><td data-label="PV marcados">3 PV</td></tr>
   </tbody>
 </table>
 
@@ -476,14 +478,14 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
   <li>Marque os PV correspondentes à categoria final, após a aplicação dos ajustes.</li>
 </ol>
 <div class="example-box">
-  <div class="box-title">Exemplo — Vidente na Sequência 8</div>
-  <p>Um Vidente começa na Sequência 9 com Limiares de Dano 5/12. Ao avançar para a Sequência 8, passa a ter limiares 6/14. Um ataque que cause 5 pontos de dano é Menor e marca 1 PV; com 8 pontos, é Maior e marca 2 PV; com 14 pontos, é Severo e marca 3 PV. Se o Vidente gastar 1 ponto de Égide contra o dano Maior, a categoria cai para Menor e ele marca apenas 1 PV.</p>
+  <div class="box-title">Exemplo — Vidente na Sequência 9</div>
+  <p>Um Vidente na Sequência 9 possui Limiares de Dano <strong>5/12</strong>. Um ataque que cause 5 pontos de dano é Menor e marca 1 PV; com 8 pontos, é Maior e marca 2 PV; com 12 pontos, é Severo e marca 3 PV. Se o Vidente gastar 1 ponto de Égide contra o dano Maior, a categoria cai para Menor e ele marca apenas 1 PV.</p>
 </div>
 </section>
 
 <section id="vestimentas">
 <h2>7. Proteção e Égide</h2>
-<p><strong>Proteção</strong> abrange recursos e efeitos que reduzem a exposição do participante a ferimentos ou alteram a forma como ele suporta o dano. Pode vir de equipamentos, poderes Beyonder, rituais ou outras fontes; não está restrita a equipamentos. <strong>Égide</strong> é um recurso defensivo consumível que uma fonte de Proteção pode conceder. Na resolução de um ataque, primeiro se determina a categoria inicial pelo dano bruto; antes de aplicar Resistência, Vulnerabilidade, Imunidade ou outros ajustes por tipo de dano, o alvo pode gastar 1 ponto de Égide para reduzir essa categoria em um nível. Depois, aplicam-se os ajustes e recalcula-se a categoria final, sem reaplicar Égide. O limite é de um ponto por ataque. <strong>Proteção nunca concede nem modifica os Limiares de Dano</strong>, que dependem exclusivamente do Caminho e da Sequência atual. Não existe bônus genérico de Proteção à Defesa: qualquer alteração na Defesa precisa estar expressamente indicada na descrição da fonte.</p>
+<p><strong>Proteção</strong> abrange recursos e efeitos que reduzem a exposição do participante a ferimentos ou alteram a forma como ele suporta o dano. Pode vir de equipamentos, poderes Beyonder, rituais ou outras fontes; não está restrita a equipamentos. <strong>Égide</strong> é um recurso defensivo consumível que uma fonte de Proteção pode conceder. Na resolução de um ataque, primeiro se determina a categoria inicial pelo dano bruto; antes de aplicar Resistência, Vulnerabilidade, Imunidade ou outros ajustes por tipo de dano, o alvo pode gastar 1 ponto de Égide para reduzir essa categoria em um nível. Depois, aplicam-se os ajustes e recalcula-se a categoria final, sem reaplicar Égide. O limite é de um ponto por ataque. Uma fonte de Proteção pode modificar os Limiares de Dano ou a Evasão quando seu efeito indicar isso expressamente. Não existe bônus genérico de Proteção à Evasão: qualquer alteração precisa estar indicada na descrição da fonte.</p>
 <div class="rule-box">
   <div class="box-title">Uso de Égide</div>
   <ul>
@@ -493,8 +495,8 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
     <li>Se a categoria for reduzida a Nenhum dano, nenhum PV é marcado por aquele ataque.</li>
   </ul>
 </div>
-<p>A descrição de cada fonte de Proteção deve informar se concede Égide, quantos pontos concede, quais são seus requisitos e limitações e se altera a Defesa. Nenhuma fonte de Proteção altera os Limiares de Dano: utilize sempre o par definido pelo Caminho e atualizado pela Sequência atual.</p>
-<p class="small">Os efeitos de Proteção concedidos por equipamentos são detalhados no Capítulo 8; outras fontes são descritas em suas próprias regras. Se, após todos os ajustes, o dano final for igual a 0, nenhum PV é marcado, mesmo que o valor esteja abaixo do primeiro limiar. Esta seção estabelece como a Proteção interage com Defesa e Égide; os Limiares são determinados pelo Caminho e pela Sequência atual.</p>
+<p>A descrição de cada fonte de Proteção deve informar se concede Égide, quantos pontos concede, quais são seus requisitos e limitações e se altera a Evasão ou os Limiares de Dano. Utilize sempre os valores correspondentes ao Caminho e à Sequência atual, aplicando modificações específicas somente conforme os termos da fonte.</p>
+<p class="small">Os efeitos de Proteção concedidos por equipamentos são detalhados no Capítulo 8; outras fontes são descritas em suas próprias regras. Se, após todos os ajustes, o dano final for igual a 0, nenhum PV é marcado, mesmo que o valor esteja abaixo do primeiro limiar. Esta seção estabelece como a Proteção interage com Evasão e Égide; os Limiares são determinados pelo Caminho e pela Sequência atual.</p>
 </section>
 
 <section id="condicoes">
@@ -505,21 +507,21 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 <table>
   <thead><tr><th>Condição</th><th>Impacto mecânico</th></tr></thead>
   <tbody>
-    <tr><td><strong>Agarrado</strong></td><td>Sua <strong>Velocidade é reduzida a 0</strong> e não pode ser aumentada enquanto durar a condição. Tem <strong>Desvantagem</strong> nos ataques contra qualquer alvo que não seja a criatura que o está agarrando. Para escapar, usa uma Ação Principal e vence a disputa descrita em <a href="#executar-manobra">Executar uma manobra</a>. A condição termina se quem o agarra ficar Incapacitado ou se um efeito retirar o alvo do alcance do agarrão.</td></tr>
-    <tr><td><strong>Amedrontado</strong></td><td>Enquanto puder ver a fonte do medo, tem <strong>Desvantagem</strong> em testes e ataques. Não pode se aproximar voluntariamente da fonte do medo.</td></tr>
-    <tr><td><strong>Atordoado</strong></td><td>Não pode realizar <strong>Ações Principais, Ações Bônus ou Reações</strong>; sua Concentração é encerrada e ele não pode falar. Falha automaticamente em testes de resistência baseados em Força ou Destreza. Ataques contra o participante recebem <strong>Vantagem</strong>.</td></tr>
-    <tr><td><strong>Cego</strong></td><td>Não pode ver e falha automaticamente em testes que dependam exclusivamente da visão. Seus ataques recebem <strong>Desvantagem</strong>, e ataques contra ele recebem <strong>Vantagem</strong>.</td></tr>
-    <tr><td><strong>Derrubado</strong></td><td>Seus ataques recebem <strong>Desvantagem</strong>. Ataques corpo a corpo contra ele recebem <strong>Vantagem</strong> quando o atacante está a até 1,5 m; a distâncias maiores, recebem <strong>Desvantagem</strong>. Pode rastejar, gastando o dobro do deslocamento, ou gastar metade da Velocidade para se levantar. Se sua Velocidade for 0, não pode se levantar.</td></tr>
-    <tr><td><strong>Enfeitiçado</strong></td><td>Não pode atacar a fonte do encantamento nem escolhê-la como alvo de poderes ou efeitos que causem dano diretamente. A fonte recebe <strong>Vantagem</strong> em testes de interação social dirigidos ao participante enfeitiçado.</td></tr>
-    <tr><td><strong>Envenenado</strong></td><td>Tem <strong>Desvantagem</strong> em testes de Atributo e Proficiência e em testes de ataque. Dano contínuo, agravamento e duração dependem da substância, criatura ou poder responsável.</td></tr>
-    <tr><td><strong>Exaustão</strong></td><td>Acumula até <strong>6 níveis</strong>. Cada nível reduz em 2 o resultado final de todos os testes e em 1,5 m a <strong>Velocidade do Personagem</strong>, até o mínimo de 0. Ao atingir 6 níveis, o participante morre. Um Descanso Completo remove 1 nível, salvo indicação diferente da fonte.</td></tr>
-    <tr><td><strong>Impedido</strong></td><td>Sua <strong>Velocidade é reduzida a 0</strong> e não pode ser aumentada. Seus ataques recebem <strong>Desvantagem</strong>, ataques contra ele recebem <strong>Vantagem</strong> e seus testes de resistência baseados em Destreza recebem <strong>Desvantagem</strong>.</td></tr>
-    <tr><td><strong>Incapacitado</strong></td><td>Não pode realizar <strong>Ações Principais, Ações Bônus ou Reações</strong>. Sua Concentração é encerrada e ele não pode falar. A condição, por si só, não reduz sua Velocidade nem impede o deslocamento.</td></tr>
-    <tr><td><strong>Inconsciente</strong></td><td>Não pode realizar <strong>Ações Principais, Ações Bônus ou Reações</strong>; sua Concentração é encerrada e ele não pode falar. Sua <strong>Velocidade é reduzida a 0</strong>, larga o que estiver segurando e não percebe o ambiente. Ataques contra ele recebem <strong>Vantagem</strong>, e ele falha automaticamente em testes de resistência baseados em Força ou Destreza. Um acerto não se torna automaticamente crítico; aplicam-se as regras de crítico deste sistema.</td></tr>
-    <tr><td><strong>Invisível</strong></td><td>Não pode ser visto sem sentidos ou efeitos especiais. Efeitos que exijam que o alvo seja visto não podem escolhê-lo como alvo, salvo se a fonte conseguir percebê-lo. Seus ataques recebem <strong>Vantagem</strong>, e ataques contra ele recebem <strong>Desvantagem</strong>. Uma criatura que consiga vê-lo ignora esses benefícios contra ele.</td></tr>
-    <tr><td><strong>Paralisado</strong></td><td>Não pode realizar <strong>Ações Principais, Ações Bônus ou Reações</strong>; sua Concentração é encerrada e ele não pode falar. Sua <strong>Velocidade é reduzida a 0</strong> e falha automaticamente em testes de resistência baseados em Força ou Destreza. Ataques contra ele recebem <strong>Vantagem</strong>. Um acerto não se torna automaticamente crítico; aplicam-se as regras de crítico deste sistema.</td></tr>
-    <tr><td><strong>Petrificado</strong></td><td>Não pode realizar <strong>Ações Principais, Ações Bônus ou Reações</strong>; sua Concentração é encerrada e ele não pode falar. Seu corpo e os objetos não mágicos que carrega transformam-se em uma substância sólida e inerte, e sua <strong>Velocidade é reduzida a 0</strong>. Ataques contra ele recebem <strong>Vantagem</strong>, e ele falha automaticamente em testes de resistência baseados em Força ou Destreza. Recebe Resistência a todos os tipos de dano, reduzindo em 1 o dano sofrido, conforme as regras deste sistema, e é imune à condição Envenenado.</td></tr>
-    <tr><td><strong>Surdo</strong></td><td>Não pode ouvir e falha automaticamente em testes que dependam exclusivamente da audição.</td></tr>
+    <tr><td data-label="Condição"><strong>Agarrado</strong></td><td data-label="Impacto mecânico">Sua <strong>Velocidade é reduzida a 0</strong> e não pode ser aumentada enquanto durar a condição. Tem <strong>Desvantagem</strong> nos ataques contra qualquer alvo que não seja a criatura que o está agarrando. Para escapar, usa uma Ação Principal e vence a disputa descrita em <a href="#executar-manobra">Executar uma manobra</a>. A condição termina se quem o agarra ficar Incapacitado ou se um efeito retirar o alvo do alcance do agarrão.</td></tr>
+    <tr><td data-label="Condição"><strong>Amedrontado</strong></td><td data-label="Impacto mecânico">Enquanto puder ver a fonte do medo, tem <strong>Desvantagem</strong> em testes e ataques. Não pode se aproximar voluntariamente da fonte do medo.</td></tr>
+    <tr><td data-label="Condição"><strong>Atordoado</strong></td><td data-label="Impacto mecânico">Não pode realizar <strong>Ações Principais, Ações Bônus ou Reações</strong>; sua Concentração é encerrada e ele não pode falar. Falha automaticamente em testes de resistência baseados em Força ou Destreza. Ataques contra o participante recebem <strong>Vantagem</strong>.</td></tr>
+    <tr><td data-label="Condição"><strong>Cego</strong></td><td data-label="Impacto mecânico">Não pode ver e falha automaticamente em testes que dependam exclusivamente da visão. Seus ataques recebem <strong>Desvantagem</strong>, e ataques contra ele recebem <strong>Vantagem</strong>.</td></tr>
+    <tr><td data-label="Condição"><strong>Derrubado</strong></td><td data-label="Impacto mecânico">Seus ataques recebem <strong>Desvantagem</strong>. Ataques corpo a corpo contra ele recebem <strong>Vantagem</strong> quando o atacante está a até 1,5 m; a distâncias maiores, recebem <strong>Desvantagem</strong>. Pode rastejar, gastando o dobro do deslocamento, ou gastar metade da Velocidade para se levantar. Se sua Velocidade for 0, não pode se levantar.</td></tr>
+    <tr><td data-label="Condição"><strong>Enfeitiçado</strong></td><td data-label="Impacto mecânico">Não pode atacar a fonte do encantamento nem escolhê-la como alvo de poderes ou efeitos que causem dano diretamente. A fonte recebe <strong>Vantagem</strong> em testes de interação social dirigidos ao participante enfeitiçado.</td></tr>
+    <tr><td data-label="Condição"><strong>Envenenado</strong></td><td data-label="Impacto mecânico">Tem <strong>Desvantagem</strong> em testes de Atributo e Proficiência e em testes de ataque. Dano contínuo, agravamento e duração dependem da substância, criatura ou poder responsável.</td></tr>
+    <tr><td data-label="Condição"><strong>Exaustão</strong></td><td data-label="Impacto mecânico">Acumula até <strong>6 níveis</strong>. Cada nível reduz em 2 o resultado final de todos os testes e em 1,5 m a <strong>Velocidade do Personagem</strong>, até o mínimo de 0. Ao atingir 6 níveis, o participante morre. Um Descanso Completo remove 1 nível, salvo indicação diferente da fonte.</td></tr>
+    <tr><td data-label="Condição"><strong>Impedido</strong></td><td data-label="Impacto mecânico">Sua <strong>Velocidade é reduzida a 0</strong> e não pode ser aumentada. Seus ataques recebem <strong>Desvantagem</strong>, ataques contra ele recebem <strong>Vantagem</strong> e seus testes de resistência baseados em Destreza recebem <strong>Desvantagem</strong>.</td></tr>
+    <tr><td data-label="Condição"><strong>Incapacitado</strong></td><td data-label="Impacto mecânico">Não pode realizar <strong>Ações Principais, Ações Bônus ou Reações</strong>. Sua Concentração é encerrada e ele não pode falar. A condição, por si só, não reduz sua Velocidade nem impede o deslocamento.</td></tr>
+    <tr><td data-label="Condição"><strong>Inconsciente</strong></td><td data-label="Impacto mecânico">Não pode realizar <strong>Ações Principais, Ações Bônus ou Reações</strong>; sua Concentração é encerrada e ele não pode falar. Sua <strong>Velocidade é reduzida a 0</strong>, larga o que estiver segurando e não percebe o ambiente. Ataques contra ele recebem <strong>Vantagem</strong>, e ele falha automaticamente em testes de resistência baseados em Força ou Destreza. Um acerto não se torna automaticamente crítico; aplicam-se as regras de crítico deste sistema.</td></tr>
+    <tr><td data-label="Condição"><strong>Invisível</strong></td><td data-label="Impacto mecânico">Não pode ser visto sem sentidos ou efeitos especiais. Efeitos que exijam que o alvo seja visto não podem escolhê-lo como alvo, salvo se a fonte conseguir percebê-lo. Seus ataques recebem <strong>Vantagem</strong>, e ataques contra ele recebem <strong>Desvantagem</strong>. Uma criatura que consiga vê-lo ignora esses benefícios contra ele.</td></tr>
+    <tr><td data-label="Condição"><strong>Paralisado</strong></td><td data-label="Impacto mecânico">Não pode realizar <strong>Ações Principais, Ações Bônus ou Reações</strong>; sua Concentração é encerrada e ele não pode falar. Sua <strong>Velocidade é reduzida a 0</strong> e falha automaticamente em testes de resistência baseados em Força ou Destreza. Ataques contra ele recebem <strong>Vantagem</strong>. Um acerto não se torna automaticamente crítico; aplicam-se as regras de crítico deste sistema.</td></tr>
+    <tr><td data-label="Condição"><strong>Petrificado</strong></td><td data-label="Impacto mecânico">Não pode realizar <strong>Ações Principais, Ações Bônus ou Reações</strong>; sua Concentração é encerrada e ele não pode falar. Seu corpo e os objetos não mágicos que carrega transformam-se em uma substância sólida e inerte, e sua <strong>Velocidade é reduzida a 0</strong>. Ataques contra ele recebem <strong>Vantagem</strong>, e ele falha automaticamente em testes de resistência baseados em Força ou Destreza. Recebe Resistência a todos os tipos de dano, reduzindo em 1 o dano sofrido, conforme as regras deste sistema, e é imune à condição Envenenado.</td></tr>
+    <tr><td data-label="Condição"><strong>Surdo</strong></td><td data-label="Impacto mecânico">Não pode ouvir e falha automaticamente em testes que dependam exclusivamente da audição.</td></tr>
   </tbody>
 </table>
 
@@ -558,7 +560,7 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
   <p>Ferido representa sequelas persistentes de ferimentos graves e experiências próximas da morte. Cada nível acrescenta marcadores iniciais ao próximo Relógio da Morte que o participante iniciar. O limite permanece fixo em 4 marcadores.</p>
   <table>
     <thead><tr><th>Nível de Ferido</th><th>Marcadores iniciais</th></tr></thead>
-    <tbody><tr><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td></tr><tr><td>2</td><td>2</td></tr><tr><td>3</td><td>3</td></tr></tbody>
+    <tbody><tr><td data-label="Nível de Ferido">0</td><td data-label="Marcadores iniciais">0</td></tr><tr><td data-label="Nível de Ferido">1</td><td data-label="Marcadores iniciais">1</td></tr><tr><td data-label="Nível de Ferido">2</td><td data-label="Marcadores iniciais">2</td></tr><tr><td data-label="Nível de Ferido">3</td><td data-label="Marcadores iniciais">3</td></tr></tbody>
   </table>
   <p>A condição possui máximo de 3 níveis. Mesmo gravemente Ferido, o participante ainda pode iniciar um novo Relógio da Morte, embora esteja extremamente próximo da morte.</p>
   <p><strong>Exemplo:</strong> um participante com Ferido 2 chega a 0 PV ou menos e inicia seu Relógio com 2 dos 4 marcadores preenchidos. Ele precisa receber apenas mais 2 marcadores para morrer. Se sofrer dano enquanto Inconsciente, recebe imediatamente mais 1 marcador; se permanecer sem estabilização ao final do Ciclo de Conflito, recebe outro.</p>
@@ -590,10 +592,10 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 <table>
   <thead><tr><th>PV perdidos</th><th>CD</th></tr></thead>
   <tbody>
-    <tr><td>1 PV</td><td><strong>9</strong></td></tr>
-    <tr><td>2 PV</td><td><strong>11</strong></td></tr>
-    <tr><td>3 PV</td><td><strong>14</strong></td></tr>
-    <tr><td>4 PV ou mais</td><td><strong>16</strong></td></tr>
+    <tr><td data-label="PV perdidos">1 PV</td><td data-label="CD"><strong>9</strong></td></tr>
+    <tr><td data-label="PV perdidos">2 PV</td><td data-label="CD"><strong>11</strong></td></tr>
+    <tr><td data-label="PV perdidos">3 PV</td><td data-label="CD"><strong>14</strong></td></tr>
+    <tr><td data-label="PV perdidos">4 PV ou mais</td><td data-label="CD"><strong>16</strong></td></tr>
   </tbody>
 </table>
 <ul>
@@ -616,7 +618,7 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 <ul>
   <li>Custo de Espiritualidade e tipo de ação necessário para usar o poder.</li>
   <li>Alcance, área e quantidade de alvos.</li>
-  <li>Tipo de resolução: ataque contra Defesa, teste de resistência contra CD ou disputa.</li>
+  <li>Tipo de resolução: ataque contra Evasão, teste de resistência contra CD ou disputa.</li>
   <li>Dano e tipo de dano, quando houver.</li>
   <li>Duração, necessidade de Concentração e formas de encerramento.</li>
   <li>Condição aplicada e oportunidade de resistência, quando existir.</li>
@@ -630,28 +632,28 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 <div class="example-box">
   <div class="box-title">Participantes</div>
   <ul>
-    <li><strong>Ana:</strong> jogador; DES 3 (bônus +1), Armas de Fogo 3 (bônus +1), Defesa 11, PV 5; revólver de bolso 1d6, com bônus de dano +2.</li>
-    <li><strong>Dmitri:</strong> jogador; FOR 4 (bônus +2), Armas Brancas 3 (bônus +1), Defesa 10, PV 6; sabre 1d8, com bônus de dano +3.</li>
-    <li><strong>Celeste:</strong> jogador; DES 3 (bônus +1), Armas de Fogo 2 (bônus +0), Defesa 11, PV 5; revólver de bolso 1d6, com bônus de dano +1.</li>
-    <li><strong>Ameaça:</strong> Beyonder do Caminho do Louco (Vidente), Sequência 8; Defesa 11, PV 5, Limiares de Dano 6/14; poder de intimidação sobrenatural.</li>
-    <li><strong>Cultista:</strong> ameaça; DES 2 (bônus +0), Armas de Fogo 2 (bônus +0), Defesa 10, PV 5; revólver de bolso 1d6, com bônus de dano +0.</li>
+    <li><strong>Ana:</strong> jogadora; Caminho do Eremita (Investigador de Mistérios), DES 3 (bônus +1), Pontaria 3 (bônus +1), Evasão Inicial 14, PV 5; revólver de bolso 1d6, com bônus de dano +2.</li>
+    <li><strong>Dmitri:</strong> jogador; Caminho do Gigante do Crepúsculo (Guerreiro), FOR 4 (bônus +2), Combate 3 (bônus +1), Evasão Inicial 16, PV 7; sabre 1d8, com bônus de dano +3.</li>
+    <li><strong>Celeste:</strong> jogadora; Caminho da Torre Branca (Leitor), DES 3 (bônus +1), Pontaria 2 (bônus +0), Evasão Inicial 13, PV 5; revólver de bolso 1d6, com bônus de dano +1.</li>
+    <li><strong>Ameaça:</strong> Beyonder do Caminho do Louco (Vidente), Sequência 9; Evasão Inicial 14, PV 5, Limiares de Dano 5/12; poder de intimidação sobrenatural.</li>
+    <li><strong>Cultista:</strong> ameaça; DES 2 (bônus +0), Pontaria 2 (bônus +0), Evasão 10, PV 5; revólver de bolso 1d6, com bônus de dano +0.</li>
   </ul>
-  <p class="small">Os PV de Ana, Dmitri e Celeste já correspondem aos valores fixos concedidos pelos respectivos Caminhos. O Beyonder Vidente da Ameaça utiliza 5 PV, conforme o valor de seu Caminho; o Cultista, que não possui Caminho Beyonder, utiliza o PV indicado em seu perfil de ameaça.</p>
+  <p class="small">A Evasão e os PV de Ana, Dmitri e Celeste correspondem aos valores iniciais concedidos pelos respectivos Caminhos. O Beyonder Vidente da Ameaça utiliza Evasão 14 e 5 PV, conforme o Caminho do Louco; o Cultista, que não possui Caminho Beyonder, utiliza Evasão e PV indicados em seu próprio perfil de ameaça.</p>
   <p>O Mestre começa o conflito com <strong>0 Fichas de Interrupção</strong> e pode acumular no máximo 2. Para controlar o ciclo, serão colocados marcadores ao lado de Ana, Dmitri e Celeste; os marcadores das ameaças também são obrigatórios.</p>
 </div>
 
 <div class="example-box">
   <div class="box-title">Ciclo 1 — Ana transfere o Foco para Dmitri</div>
   <p>O conflito começa quando Ana percebe a Ameaça no armazém e decide disparar antes que ela conclua um gesto ritualístico. O Mestre concede o Foco a Ana. Quando seu turno começa, Ana recebe um marcador de turno no ciclo.</p>
-  <p><strong>Ana:</strong> dispara contra Ameaça. Rola 1d20 e obtém 15; soma DES (+1) + Armas de Fogo (+1), totalizando <strong>17</strong>. Como o resultado supera a Defesa 11 da Ameaça, o ataque acerta.</p>
-  <p>Dano: 1d6 + DES (+1) + Armas de Fogo (+1) = 6 + 1 + 1 = <strong>8</strong>. O resultado alcança o primeiro limiar da Ameaça (6), mas fica abaixo do segundo (14), causando Dano Maior e marcando <strong>2 PV</strong>. A Ameaça cai de 5 para 3 PV.</p>
+  <p><strong>Ana:</strong> dispara contra Ameaça. Rola 1d20 e obtém 15; soma DES (+1) + Pontaria (+1), totalizando <strong>17</strong>. Como o resultado supera a Evasão 14 da Ameaça, o ataque acerta.</p>
+  <p>Dano: 1d6 + DES (+1) + Pontaria (+1) = 6 + 1 + 1 = <strong>8</strong>. O resultado alcança o primeiro limiar da Ameaça (5), mas fica abaixo do segundo (12), causando Dano Maior e marcando <strong>2 PV</strong>. A Ameaça cai de 5 para 3 PV.</p>
   <p>Ana conclui seu turno e transfere voluntariamente o Foco para Dmitri.</p>
 </div>
 
 <div class="example-box">
   <div class="box-title">Ciclo 1 — turno de Dmitri</div>
-  <p>Dmitri começa seu turno e recebe um marcador de turno. Ele avança até a Ameaça e ataca com o sabre. O d20 mostra <strong>20 natural</strong>: o ataque acerta automaticamente e é um acerto crítico, independentemente da Defesa ou do bônus total.</p>
-  <p>O sabre utiliza FOR + Armas Brancas e causa 1d8 + FOR (+2) + Armas Brancas (+1). Por ser crítico, os dados de dano são dobrados, mas os bônus da combinação são acrescentados uma única vez: <strong>2d8 + 3</strong>. Dmitri obtém 3 + 4 + 2 + 1 = <strong>10 de dano</strong>. O resultado supera o primeiro limiar da Ameaça (6), mas permanece abaixo do segundo (14), causando Dano Maior e marcando <strong>2 PV</strong>. A Ameaça cai de 3 para 1 PV.</p>
+  <p>Dmitri começa seu turno e recebe um marcador de turno. Ele avança até a Ameaça e ataca com o sabre. O d20 mostra <strong>20 natural</strong>: o ataque acerta automaticamente e é um acerto crítico, independentemente da Evasão ou do bônus total.</p>
+  <p>O sabre utiliza FOR + Combate e causa 1d8 + FOR (+2) + Combate (+1). Por ser crítico, os dados de dano são dobrados, mas os bônus da combinação são acrescentados uma única vez: <strong>2d8 + 3</strong>. Dmitri obtém 3 + 4 + 2 + 1 = <strong>10 de dano</strong>. O resultado supera o primeiro limiar da Ameaça (5), mas permanece abaixo do segundo (12), causando Dano Maior e marcando <strong>2 PV</strong>. A Ameaça cai de 3 para 1 PV.</p>
   <p>Dmitri recebeu o Foco por uma transferência voluntária de Ana e seu turno começou sem ser interrompida. Ao final dela, o Mestre recebe <strong>1 Ficha de Interrupção</strong>, e Dmitri transfere o Foco para Celeste.</p>
 </div>
 
@@ -665,7 +667,7 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
 <div class="example-box">
   <div class="box-title">Ciclo 1 — Falha de Celeste e resposta do Mestre</div>
   <p>Celeste começa seu turno, recebe seu marcador de turno e dispara contra a Ameaça. O d20 mostra <strong>1 natural</strong>: o ataque erra automaticamente. Esse resultado não provoca uma consequência catastrófica adicional; é apenas uma falha no ataque.</p>
-  <p>Como Celeste falhou, ela conclui seu turno com as ações e o movimento que ainda puder realizar. Somente ao final do turno o Foco passa ao Mestre, sem gasto de Ficha de Interrupção e sem gerar uma ficha. Essa transferência decorre da regra normal de Foco após uma falha; não é uma consequência catastrófica adicional do 1 natural. O Mestre escolhe o Cultista, que ainda não havia recebido o Foco neste ciclo, para responder à falha. O Cultista recebe seu marcador obrigatório e realiza seu turno. Como ameaça controlada pelo Mestre, também usa 1d20 para atacar: obtém 9 + DES (+0) + Armas de Fogo (+0) = 9 contra a Defesa 11 de Ana e erra.</p>
+  <p>Como Celeste falhou, ela conclui seu turno com as ações e o movimento que ainda puder realizar. Somente ao final do turno o Foco passa ao Mestre, sem gasto de Ficha de Interrupção e sem gerar uma ficha. Essa transferência decorre da regra normal de Foco após uma falha; não é uma consequência catastrófica adicional do 1 natural. O Mestre escolhe o Cultista, que ainda não havia recebido o Foco neste ciclo, para responder à falha. O Cultista recebe seu marcador obrigatório e realiza seu turno. Como ameaça controlada pelo Mestre, também usa 1d20 para atacar: obtém 9 + DES (+0) + Pontaria (+0) = 9 contra a Evasão 14 de Ana e erra.</p>
   <p>Ana, Dmitri e Celeste já receberam o Foco pelo menos uma vez. O turno do Cultista é o turno final da ameaça do ciclo. Depois que ele conclui seu turno, o Mestre remove todos os marcadores, inicia um novo ciclo e escolhe um jogador para receber o Foco. Sua reserva de Fichas de Interrupção permanece como estava; não há reposição automática pela mudança de ciclo.</p>
 </div>
 
@@ -700,7 +702,7 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
   <section>
     <h3>Ataques e testes</h3>
     <ul>
-      <li><strong>Testes de ataque:</strong> toda ação ofensiva que precise acertar diretamente o alvo usa 1d20 + Atributo + Proficiência + Bônus aplicáveis contra a Defesa. Armas usam a combinação fixa indicada no Capítulo 8; essa mesma combinação é somada aos Dados da arma para determinar o dano. Poderes e outras fontes indicam o Atributo e a Proficiência aplicáveis. Especializações não concedem bônus a testes de ataque.</li>
+      <li><strong>Testes de ataque:</strong> toda ação ofensiva que precise acertar diretamente o alvo usa 1d20 + Atributo + Proficiência + Bônus aplicáveis contra a Evasão. Armas usam a combinação fixa indicada no Capítulo 8; essa mesma combinação é somada aos Dados da arma para determinar o dano. Poderes e outras fontes indicam o Atributo e a Proficiência aplicáveis. Especializações não concedem bônus a testes de ataque.</li>
       <li><strong>Outros efeitos:</strong> quando a fonte exigir resistência contra CD, disputa ou manobra, não se trata de teste de ataque; mantenha a resolução própria em 2d10. Testes gerais de resistência usam 2d10 + Atributo + Proficiência (quando pertinente) + Bônus aplicáveis contra a CD.</li>
     </ul>
   </section>
@@ -710,8 +712,8 @@ interromper a transferência e Dmitri passar o Foco para Celeste, o fluxo contin
       <li><strong>Menor:</strong> 1 PV; <strong>Maior:</strong> 2 PV; <strong>Severo:</strong> 3 PV.</li>
       <li><strong>Resistência:</strong> −1 dano; <strong>Vulnerabilidade:</strong> +1 dano; <strong>Imunidade:</strong> nenhum dano do tipo.</li>
       <li><strong>Égide:</strong> depois de determinar a categoria inicial pelo dano bruto e antes de Resistência, Vulnerabilidade, Imunidade e outros ajustes por tipo, 1 ponto reduz a categoria em um nível; máximo de 1 ponto por ataque. Se o dano final for 0, nenhum PV é perdido.</li>
-      <li><strong>Defesa Base:</strong> 10 + DES + RAC.</li>
-      <li>Use os Limiares de Dano definidos pelo Caminho e atualizados pela Sequência atual. A cada avanço, o primeiro limiar aumenta +1 e o segundo +2; Proteções não alteram esses valores.</li>
+      <li><strong>Evasão Inicial:</strong> valor concedido pelo Caminho no Capítulo 2. Fontes específicas podem modificá-lo quando o efeito declarar expressamente.</li>
+      <li>Use os Limiares de Dano correspondentes ao Caminho e à Sequência atual; aplique modificações específicas quando estiverem expressamente indicadas.</li>
     </ul>
   </section>
   <section>
