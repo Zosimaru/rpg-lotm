@@ -144,8 +144,8 @@ body h6 {
   <div class="box-title">Compatibilidade com a ficha</div>
   <p>
     A ficha atual possui nove Atributos e 24 Proficiências: Acrobacia, Atletismo,
-    Empatia, Furtividade, Intimidação, Luta, Performance, Persuasão, Armas Brancas,
-    Armas de Fogo, Condução, Etiqueta, Investigação, Prestidigitação, Sobrevivência,
+    Empatia, Furtividade, Intimidação, Percepção, Performance, Persuasão, Combate,
+    Pontaria, Ofícios, Etiqueta, Investigação, Prestidigitação, Sobrevivência,
     Subterfúgio, Ciências, História, Medicina, Natureza, Navegação, Misticismo,
     Submundo e Teologia. Elas estão divididas nos grupos Talentos, Perícias e
     Conhecimentos. Quando uma ação não corresponder diretamente a uma descrição,
@@ -163,11 +163,11 @@ body h6 {
     <li>
   <a href="#estatisticas-derivadas">
     <strong>Estatísticas Derivadas:</strong>
-    recursos do personagem, Lucidez e Âncoras, Defesa, Égide e Limiares de Dano.
+    recursos do personagem, Lucidez e Âncoras, Evasão, Égide e Limiares de Dano.
   </a>
   <ul>
     <li><a href="#recursos-personagem"><strong>Recursos e Integridade:</strong> Pontos de Vida, Espiritualidade, Lucidez, Âncoras e Perda de Controle.</a></li>
-    <li><a href="#defesa-protecao"><strong>Defesa e Proteção:</strong> Defesa Base, fontes de Proteção, Égide e Limiares de Dano.</a></li>
+    <li><a href="#evasao-protecao"><strong>Evasão e Proteção:</strong> Evasão Inicial definida pelo Caminho, fontes de Proteção, Égide e Limiares de Dano.</a></li>
   </ul>
 </li>
     <li><a href="#resumo"><strong>Resumo Rápido de Referência:</strong> consulta concentrada das principais fórmulas e regras.</a></li>
@@ -431,7 +431,7 @@ body h6 {
 <h3 id="pericias-talentos">Grupo de Talentos</h3>
 <p>
   Talentos representam aptidões e capacidades demonstradas na ação, no corpo e na
-  interação com outras pessoas. Incluem coordenação, esforço físico, percepção social,
+  interação com outras pessoas. Incluem coordenação, esforço físico, percepção do ambiente,
   expressão e influência.
 </p>
 
@@ -475,12 +475,12 @@ body h6 {
   <li><strong>Exemplo:</strong> Um personagem encurrala um informante e exige respostas. O Mestre escolhe ACO ou Força conforme a abordagem.</li>
 </ul>
 
-<h4 id="luta">Luta</h4>
-<p>Representa o combate desarmado e técnicas corporais de confronto, incluindo socos, chutes, agarramentos, quedas e imobilizações.</p>
+<h4 id="luta">Percepção</h4>
+<p>É a capacidade de notar detalhes sensoriais, acompanhar o que acontece ao redor e identificar sinais que poderiam passar despercebidos. Percepção envolve atenção imediata ao ambiente; não substitui Investigação, que analisa evidências e reconstrói acontecimentos, nem Empatia, que interpreta emoções e comportamentos.</p>
 <ul>
-  <li><strong>Aplicações:</strong> Atacar sem armas, agarrar, derrubar, imobilizar, escapar de uma contenção física ou dominar alguém em combate corporal.</li>
-  <li><strong>Abordagem recomendada:</strong> FOR. Ataques desarmados utilizam normalmente FOR + Luta; manobras, poderes ou técnicas específicas podem indicar outra combinação expressamente.</li>
-  <li><strong>Exemplo:</strong> um personagem tenta derrubar um agressor e imobilizá-lo no chão. O Mestre pede FOR + Luta, salvo se a manobra ou uma regra específica indicar outro teste.</li>
+  <li><strong>Aplicações:</strong> notar movimentos discretos, ouvir passos, identificar alterações no ambiente, perceber sinais de perigo, vigiar uma área ou localizar algo fora do lugar.</li>
+  <li><strong>Abordagem recomendada:</strong> RAC ou DET. Raciocínio interpreta os sinais e relaciona detalhes; Determinação sustenta a atenção e a vigilância sob pressão.</li>
+  <li><strong>Exemplo:</strong> durante uma conversa, o personagem percebe um movimento atrás da cortina antes que alguém entre na sala. O Mestre pede RAC ou DET + Percepção.</li>
 </ul>
 
 <h4 id="performance">Performance</h4>
@@ -506,29 +506,30 @@ body h6 {
   concretas.
 </p>
 
-<h4 id="armas-brancas">Armas Brancas</h4>
-<p>Abrange o manejo de armas de combate próximo e de armas tradicionais de disparo manual que não utilizam mecanismos de fogo, como espadas, facas, lanças, bastões, arcos e bestas.</p>
+<h4 id="armas-brancas">Combate</h4>
+<p>Abrange o combate desarmado, as técnicas corporais de confronto e o manejo de armas de combate próximo. Também é utilizada em ataques com armas arremessáveis, mesmo quando a arma é lançada contra um alvo à distância. Armas arremessáveis não utilizam Pontaria.</p>
 <ul>
-  <li><strong>Aplicações:</strong> Atacar com armas brancas, aparar um golpe quando a regra permitir, desarmar um oponente, manejar uma arma em espaço apertado ou preparar, mirar e disparar com arco ou besta.</li>
-  <li><strong>Abordagem recomendada:</strong> em ataques com armas listadas, utilize exatamente a combinação de Atributo e Proficiência indicada para aquela arma no Capítulo 8. A maioria das armas brancas utiliza FOR + Armas Brancas; apenas as armas cuja linha permite expressamente DES admitem essa opção. Arcos, bestas, fundas e armas arremessáveis também seguem as combinações fixadas em suas linhas.</li>
-  <li><strong>Exemplo:</strong> uma espada longa utiliza FOR + Armas Brancas; uma Adaga ou Espada Curta permite FOR ou DES + Armas Brancas, enquanto um arco utiliza DES + Armas Brancas. A tabela do Capítulo 8 prevalece sobre esta orientação geral.</li>
+  <li><strong>Aplicações:</strong> atacar desarmado, manejar armas de combate próximo, executar técnicas marciais, aparar um golpe quando a regra permitir e lançar armas ou objetos arremessáveis, como facas de arremesso, dardos, machadinhas, lanças e azagaias.</li>
+  <li><strong>Abordagem recomendada:</strong> em ataques com armas listadas, utilize exatamente a combinação de Atributo e Proficiência indicada para aquela arma no Capítulo 8. Ataques desarmados utilizam normalmente FOR + Combate. A maioria das armas de combate próximo utiliza FOR + Combate; apenas as armas cuja linha permite expressamente DES admitem essa opção. Armas arremessáveis utilizam Combate mesmo quando lançadas à distância.</li>
+  <li><strong>Exemplo:</strong> uma espada longa utiliza FOR + Combate; uma Adaga ou Espada Curta permite FOR ou DES + Combate; uma faca de arremesso utiliza DES + Combate mesmo quando lançada; um arco utiliza DES + Pontaria. A tabela do Capítulo 8 prevalece sobre esta orientação geral.</li>
 </ul>
 
-<h4 id="armas-de-fogo">Armas de Fogo</h4>
-<p>Representa o treinamento no uso de pistolas, rifles e outras armas de fogo, incluindo segurança, recarga, mira e disparo.</p>
+<h4 id="armas-de-fogo">Pontaria</h4>
+<p>Representa o treinamento em mira e no uso de armas de longo alcance que disparam projéteis, incluindo armas de fogo, arcos, bestas e fundas. Abrange precisão, segurança, recarga e conhecimento dos procedimentos de manuseio. Armas arremessáveis manualmente utilizam Combate, não Pontaria.</p>
 <ul>
-  <li><strong>Aplicações:</strong> Carregar, recarregar, manter, apontar e disparar uma arma de fogo, além de reconhecer seus procedimentos básicos de manuseio.</li>
+  <li><strong>Aplicações:</strong> apontar e disparar pistolas, rifles, arcos, bestas e fundas; estimar alinhamento e distância, recarregar e reconhecer procedimentos básicos de segurança.</li>
   <li><strong>Abordagem recomendada:</strong> Destreza, pela coordenação e precisão necessárias.</li>
-  <li><strong>Exemplo:</strong> Um investigador dispara contra um cultista que tenta escapar por um corredor. O Mestre pede DES + Armas de Fogo.</li>
+  <li><strong>Exemplos:</strong> um investigador dispara um revólver ou utiliza um arco contra um alvo distante: DES + Pontaria. Ao lançar uma faca de arremesso contra o mesmo alvo, utiliza DES + Combate.</li>
 </ul>
 
-<h4 id="conducao">Condução</h4>
-<p>É a capacidade de conduzir e manobrar meios de transporte, controlando velocidade, direção e resposta do veículo às condições do percurso.</p>
+<h4 id="conducao">Ofícios</h4>
+<p>Representa a prática de atividades técnicas, artesanais e profissionais que exigem método, familiaridade com ferramentas e domínio de procedimentos específicos. Abrange a fabricação, manutenção, adaptação e reparação de objetos, mecanismos e produtos.</p>
 <ul>
-  <li><strong>Aplicações:</strong> Guiar carruagens, carroças, bicicletas e automóveis, realizar manobras, controlar um veículo em terreno difícil ou conduzir sob pressão.</li>
-  <li><strong>Abordagem recomendada:</strong> DES ou Raciocínio. Destreza controla movimentos e manobras; Raciocínio avalia o percurso, o funcionamento do veículo e as decisões de condução.</li>
-  <li><strong>Exemplo:</strong> Um personagem tenta conduzir uma carruagem em alta velocidade por ruas estreitas de Backlund sem perder o controle. O Mestre pede DES + Condução.</li>
+  <li><strong>Aplicações:</strong> consertar ferramentas e equipamentos, fabricar objetos, trabalhar madeira ou metal, ajustar mecanismos, produzir peças e executar tarefas especializadas de um ofício.</li>
+  <li><strong>Abordagem recomendada:</strong> MAN ou INT. Manipulação representa a precisão manual e o uso de ferramentas; Inteligência representa o conhecimento técnico e a compreensão dos procedimentos.</li>
+  <li><strong>Exemplo:</strong> um personagem tenta reparar o mecanismo de uma fechadura danificada. O Mestre pede MAN ou INT + Ofícios.</li>
 </ul>
+<p class="note-box"><strong>Ofícios de veículos:</strong> dirigir ou manobrar carruagens, automóveis e outros meios de transporte não é mais uma aplicação de Ofícios. Quando a situação depender apenas do controle do veículo, o Mestre pode pedir um teste de Destreza; outra Proficiência só deve ser acrescentada quando corresponder diretamente à abordagem utilizada.</p>
 
 <h4 id="etiqueta">Etiqueta</h4>
 <p>Abrange o conhecimento e a aplicação de normas sociais, protocolos, costumes e códigos de conduta de diferentes grupos e instituições.</p>
@@ -759,10 +760,10 @@ body h6 {
     <strong>Resultado = 1d20 + Atributo + Proficiência + Bônus aplicáveis</strong>
   </p>
   <p style="text-align:center;">
-    <strong>O ataque acerta quando o resultado iguala ou supera a Defesa do alvo.</strong>
+    <strong>O ataque acerta quando o resultado iguala ou supera a Evasão do alvo.</strong>
   </p>
   <ul>
-    <li><strong>20 natural:</strong> acerto crítico automático, independentemente da Defesa. Dobre a quantidade de dados de dano rolados pelo ataque; bônus fixos, como Atributo e Proficiência, são acrescentados apenas uma vez.</li>
+    <li><strong>20 natural:</strong> acerto crítico automático, independentemente da Evasão. Dobre a quantidade de dados de dano rolados pelo ataque; bônus fixos, como Atributo e Proficiência, são acrescentados apenas uma vez.</li>
     <li><strong>1 natural:</strong> falha automática, independentemente dos bônus. Não provoca, por si só, uma consequência catastrófica adicional.</li>
     <li>Com Vantagem, role <strong>2d20</strong> e mantenha o maior; com Desvantagem, role <strong>2d20</strong> e mantenha o menor. Sem ambas, role <strong>1d20</strong>.</li>
     <li>Depois de cancelar fontes opostas uma a uma, qualquer quantidade restante de fontes do mesmo tipo concede apenas uma condição de Vantagem ou Desvantagem. A verificação de 1 ou 20 natural considera somente o dado mantido.</li>
@@ -1011,9 +1012,7 @@ body h6 {
 
 <h2 id="estatisticas-derivadas">Estatísticas Derivadas</h2>
 <p>
-  Estatísticas derivadas são valores calculados a partir dos Atributos, da Sequência
-  ou de regras específicas. Elas devem ser registradas nos campos correspondentes da
-  ficha e atualizadas quando uma regra alterar os valores utilizados no cálculo.
+  Esta seção reúne valores derivados de Atributos, valores iniciais concedidos pelo Caminho e recursos definidos por regras específicas. Registre cada valor no campo correspondente da ficha e atualize-o quando uma regra ou fonte expressamente o modificar.
 </p>
 
 <h3 id="recursos-personagem" class="stats-topic-heading">Recursos e Integridade do Personagem</h3>
@@ -1396,30 +1395,34 @@ body h6 {
 
 <div class="separator"></div>
 
-<h3 id="defesa-protecao" class="stats-topic-heading">Defesa e Proteção</h3>
+<h3 id="evasao-protecao" class="stats-topic-heading">Evasão e Proteção</h3>
 <p>
   Este bloco reúne as regras para evitar ataques e reduzir ou classificar os ferimentos
-  recebidos: Defesa, Proteção, Égide e Limiares de Dano.
+  recebidos: Evasão, Proteção, Égide e Limiares de Dano.
 </p>
 
-<h4 id="esquiva">Defesa</h4>
+<h4 id="esquiva">Evasão</h4>
 <p>
-  A Defesa representa a dificuldade de atingir o personagem. Em um ataque, o
+  A Evasão representa a dificuldade de atingir o personagem. Em um ataque, o
   atacante realiza o teste indicado pela ação; o ataque acerta quando o resultado
-  final iguala ou supera a Defesa do alvo. A Defesa Base utiliza os bônus
-  de Destreza e Raciocínio.
+  final iguala ou supera a Evasão do alvo. Na criação, o valor inicial é concedido
+  pelo Caminho e deve ser copiado do cartão correspondente no Capítulo 2.
 </p>
 <div class="box box-rule">
-  <div class="box-title">Cálculo da Defesa Base</div>
-  <p style="text-align:center; font-size:1.15em;"><strong>Defesa Base = 10 + DES + RAC</strong></p>
+  <div class="box-title">Evasão Inicial definida pelo Caminho</div>
+  <p style="text-align:center; font-size:1.15em;"><strong>Evasão Inicial = valor indicado para o Caminho no Capítulo 2</strong></p>
   <p>
-    Nas fórmulas, <strong>DES</strong> e <strong>RAC</strong> representam os bônus derivados dos pontos registrados. Eles são calculados por <strong>Pontos.(DES) − 2</strong> e
-    <strong>Pontos.(RAC) − 2</strong>. Some os dois bônus ao valor
-    base de 10 para determinar a Defesa Base do personagem.
+    A Evasão não é calculada a partir de DES ou RAC. Esses Atributos continuam
+    sendo utilizados nos testes e resistências que os indiquem, mas não compõem
+    nem alteram automaticamente a Evasão. Os valores apresentados no Capítulo 2
+    são iniciais para a Sequência 9; não há aumento automático de Evasão por avanço
+    de Sequência.
   </p>
   <p>
-    <strong>Exemplo:</strong> com Pontos.(DES) = 3 e Pontos.(RAC) = 3, o personagem
-    possui bônus de DES +1 e bônus de RAC +1, resultando em Defesa Base 12.
+    Uma habilidade, condição, item, artefato ou outra fonte pode modificar a Evasão
+    quando declarar expressamente o valor, a duração, o tipo de ataque afetado e
+    quaisquer limites da alteração. Não existe bônus genérico de Evasão concedido
+    por Proteção.
   </p>
 </div>
 
@@ -1428,7 +1431,7 @@ body h6 {
   <strong>Proteção</strong> é a categoria que reúne recursos e efeitos capazes de reduzir a exposição do participante a ferimentos ou alterar a forma como ele suporta o dano. Pode ser concedida por equipamentos, poderes Beyonder, rituais ou outras fontes; portanto, não se limita a uma peça de equipamento. <strong>Égide</strong> é um recurso defensivo consumível que uma fonte de Proteção pode conceder. Cada ponto de Égide permite reduzir em um nível a categoria de dano de um ataque, respeitando o limite de uso por ataque.
 </p>
 <p>
-  Nenhuma vestimenta, armadura, equipamento, poder, ritual ou outra fonte de Proteção concede ou modifica Limiares de Dano. Os limiares são definidos exclusivamente pelo Caminho e pela Sequência atual do personagem. As fontes de Proteção devem informar seus efeitos, requisitos, limitações e se concedem Égide. Não existe quantidade inicial de Égide: o personagem só recebe esse recurso quando uma fonte o concede expressamente.
+  Os Limiares de Dano são definidos pelo Caminho e pela Sequência atual do personagem. Cada fonte de Proteção deve indicar seus efeitos, requisitos e limitações, inclusive se concede Égide, altera a Evasão ou modifica os Limiares de Dano. Não existe quantidade inicial de Égide: o personagem só recebe esse recurso quando uma fonte o concede expressamente.
 </p>
 <div class="box box-note">
   <div class="box-title">Registro de Égide na ficha</div>
@@ -1456,9 +1459,9 @@ body h6 {
   </ul>
   <p>
     O primeiro limiar determina quando o dano passa de Menor para Maior; o segundo
-    determina quando passa de Maior para Severo. Utilize sempre o par definido pelo
-    Caminho e atualizado conforme a Sequência atual do personagem. Nenhuma fonte de
-    Proteção ou outro efeito modifica esses valores.
+    determina quando passa de Maior para Severo. Utilize o par correspondente ao
+    Caminho e à Sequência atual do personagem. Qualquer efeito que altere esses valores
+    deve indicar expressamente a modificação e suas condições.
   </p>
   <p>
     <strong>Dano final igual a 0:</strong> se, depois de todos os ajustes aplicáveis, o dano
@@ -1476,23 +1479,10 @@ body h6 {
     o primeiro separa Dano Menor de Dano Maior; o segundo separa Dano Maior de Dano Severo.
   </p>
   <p>
-    Sempre que o personagem avançar efetivamente para a próxima Sequência, atualize os
-    limiares conforme os acréscimos acumulados abaixo:
-  </p>
-  <table>
-    <thead><tr><th>Sequência atual</th><th>Acréscimo ao primeiro limiar</th><th>Acréscimo ao segundo limiar</th></tr></thead>
-    <tbody>
-      <tr><td>9</td><td>+0</td><td>+0</td></tr>
-      <tr><td>8</td><td>+1</td><td>+2</td></tr>
-      <tr><td>7</td><td>+2</td><td>+4</td></tr>
-      <tr><td>6</td><td>+3</td><td>+6</td></tr>
-      <tr><td>5</td><td>+4</td><td>+8</td></tr>
-    </tbody>
-  </table>
-  <p>
-    Apenas o Caminho e a Sequência atual determinam os Limiares de Dano. Vestimentas,
-    armaduras, equipamentos, poderes, rituais e outras fontes de Proteção não concedem
-    nem modificam esses valores.
+    Os valores apresentados no Capítulo 2 correspondem à Sequência 9. Ao avançar de
+    Sequência, utilize os Limiares de Dano definidos para a nova Sequência do Caminho.
+    Não há um acréscimo numérico universal aplicado automaticamente a todos os Caminhos;
+    qualquer alteração deve estar indicada na regra específica correspondente.
   </p>
 </div>
 
@@ -1537,12 +1527,12 @@ body h6 {
 </div>
 
 <div class="box box-example">
-  <div class="box-title">Exemplo — Vidente na Sequência 8</div>
+  <div class="box-title">Exemplo — Vidente na Sequência 9</div>
   <p>
-    Um Vidente começa na Sequência 9 com Limiares de Dano <strong>5/12</strong>.
-    Ao avançar para a Sequência 8, o primeiro limiar aumenta +1 e o segundo +2,
-    passando a <strong>6/14</strong>. Assim, um ataque que cause 5 pontos de dano
-    provoca Dano Menor; com 6 pontos, provoca Dano Maior; com 14 pontos, provoca Dano Severo.
+    Um Vidente na Sequência 9 possui Limiares de Dano <strong>5/12</strong>. Assim,
+    um ataque que cause 5 pontos de dano provoca Dano Menor; com 6 pontos, provoca
+    Dano Maior; com 12 pontos, provoca Dano Severo. Para outra Sequência, utilize
+    os valores específicos definidos para o Caminho naquela etapa.
   </p>
   <p>
     Se o personagem receber 6 pontos de dano, o resultado será Dano Maior, que
@@ -1566,7 +1556,7 @@ body h6 {
         <div class="quickref-rows">
           <div class="quickref-row"><span class="quickref-label">Bônus de Atributo</span><span class="quickref-value">Pontos.(ATR) − 2</span></div>
           <div class="quickref-row"><span class="quickref-label">Bônus de Proficiência</span><span class="quickref-value">Pontos da Proficiência − 2</span></div>
-          <div class="quickref-row"><span class="quickref-label">Teste de Ataque</span><span class="quickref-value">1d20 + Atributo + Proficiência + Bônus ≥ Defesa; 20 natural: acerto crítico e dados de dano dobrados; 1 natural: falha automática</span></div>
+          <div class="quickref-row"><span class="quickref-label">Teste de Ataque</span><span class="quickref-value">1d20 + Atributo + Proficiência + Bônus ≥ Evasão; 20 natural: acerto crítico e dados de dano dobrados; 1 natural: falha automática</span></div>
           <div class="quickref-row"><span class="quickref-label">Teste de Proficiência</span><span class="quickref-value">2d10 + Atributo + Proficiência + Bônus aplicáveis ≥ CD</span></div>
           <div class="quickref-row"><span class="quickref-label">Teste puro de Atributo</span><span class="quickref-value">2d10 + Atributo + Bônus aplicáveis ≥ CD</span></div>
           <div class="quickref-row"><span class="quickref-label">Especialização</span><span class="quickref-value">+2 em testes pertinentes, exceto ataques e Lucidez; na Lucidez, a primeira Especialização contribui apenas pela Âncora de Reconhecimento (+1)</span></div>
@@ -1598,11 +1588,11 @@ body h6 {
         </div>
       </section>
 
-      <section class="quickref-group" aria-label="Defesa, proteção e deslocamento">
-        <h4>Defesa, proteção e deslocamento</h4>
+      <section class="quickref-group" aria-label="Evasão, proteção e deslocamento">
+        <h4>Evasão, proteção e deslocamento</h4>
         <div class="quickref-rows">
-          <div class="quickref-row"><span class="quickref-label">Defesa Base</span><span class="quickref-value">10 + DES + RAC</span></div>
-          <div class="quickref-row"><span class="quickref-label">Limiares de Dano</span><span class="quickref-value">Definidos pelo Caminho; a cada avanço, primeiro limiar +1 e segundo +2. Proteções não alteram os valores.</span></div>
+          <div class="quickref-row"><span class="quickref-label">Evasão Inicial</span><span class="quickref-value">Valor definido pelo Caminho no Capítulo 2; fontes específicas podem modificá-lo quando indicarem expressamente.</span></div>
+          <div class="quickref-row"><span class="quickref-label">Limiares de Dano</span><span class="quickref-value">Utilize os valores correspondentes ao Caminho e à Sequência atual; efeitos específicos podem modificá-los quando indicados.</span></div>
           <div class="quickref-row"><span class="quickref-label">Égide</span><span class="quickref-value">reduz a categoria inicial em um nível antes dos ajustes de Resistência, Vulnerabilidade e Imunidade; máximo de 1 ponto por ataque. Dano final 0 não marca PV.</span></div>
           <div class="quickref-row"><span class="quickref-label">Velocidade inicial</span><span class="quickref-value">9 metros</span></div>
         </div>
