@@ -671,11 +671,7 @@ body h6 {
     ou <strong>Rituais de Proteção</strong>.
   </p>
   <p>
-    O bônus de <strong>+2 da Especialização não se aplica a testes de ataque nem a
-    testes de Lucidez</strong>. Nos testes de Lucidez, a primeira Especialização
-    contribui exclusivamente por meio da <strong>Âncora de Reconhecimento (+1)</strong>,
-    enquanto estiver ativa; esse valor é um bônus de Âncora, não o bônus de +2 da
-    Especialização. Nos demais testes, a especialização só concede seu bônus quando
+    O bônus de <strong>+2 da Especialização não se aplica a testes de ataque nem a testes de Lucidez</strong>. Nos testes de Lucidez, cada Especialização contribui exclusivamente por meio de sua respectiva <strong>Âncora de Reconhecimento (+1)</strong>, enquanto ela estiver ativa; esse valor é um bônus de Âncora, não o bônus de +2 da Especialização. Nos demais testes, a especialização só concede seu bônus quando
     o conhecimento ou a técnica contribuir diretamente para a ação. Uma associação
     vaga não basta, e o bônus não muda a natureza fundamental da ação. O jogador deve
     explicar sua aplicação, e o Mestre decide se a justificativa é suficiente.
@@ -1098,17 +1094,24 @@ body h6 {
 </div>
 <h5>Utilização da Espiritualidade</h5>
 <p>
-  A Espiritualidade é consumida quando uma habilidade, feitiço ou ritual indicar
-  expressamente um custo. O custo deve constar na descrição do efeito ou nas regras
-  específicas que o apresentam. Nem toda capacidade sobrenatural precisa consumir
-  Espiritualidade: efeitos passivos ou habilidades sem custo indicado não gastam
-  pontos por padrão.
+  A Espiritualidade é consumida quando uma habilidade, feitiço, ritual, Item Beyonder
+  ou Artefato Selado indicar expressamente um custo. O custo deve constar na descrição
+  do efeito ou nas regras específicas que o apresentam. Nem toda capacidade
+  sobrenatural precisa consumir Espiritualidade: efeitos passivos ou habilidades sem
+  custo indicado não gastam pontos por padrão.
 </p>
 <ul>
   <li><strong>Poderes Beyonder:</strong> representam as capacidades concedidas pela poção e pelo Caminho. Quando um poder exigir Espiritualidade, sua descrição informa o custo e as condições de ativação.</li>
   <li><strong>Feitiços:</strong> são efeitos místicos que o personagem aprendeu a executar por meio de conhecimento, instrução ou fórmulas específicas. Possuir Espiritualidade não concede, por si só, conhecimento de feitiços.</li>
   <li><strong>Magia ritualística:</strong> pode exigir Espiritualidade para conduzir, sustentar ou completar o procedimento, mas também pode depender de preparação, símbolos, fórmulas, ingredientes, local apropriado ou auxílio de uma entidade. Gastar pontos não substitui esses requisitos.</li>
+  <li><strong>Itens Beyonder:</strong> são objetos com propriedades sobrenaturais que podem conceder efeitos ou capacidades específicas. Quando o uso ou a ativação exigir Espiritualidade, o custo e as condições devem estar indicados na descrição do item.</li>
+  <li><strong>Artefatos Selados:</strong> são objetos sobrenaturais cujos efeitos, condições de uso e limitações são definidos individualmente. Quando um artefato exigir Espiritualidade, o custo deve estar indicado em sua descrição; pagar esse custo não elimina outras condições, restrições ou riscos associados ao objeto.</li>
 </ul>
+<p>
+  A utilização de Poderes Beyonder durante conflitos, incluindo seus custos de
+  Espiritualidade e condições de uso, está detalhada no
+  <strong>Capítulo 7 — Conflitos</strong>, na seção <strong>“Poderes Beyonder em Conflitos”</strong>.
+</p>
 <p>
   Normalmente, o personagem não pode ativar um efeito cujo custo seja superior à
   Espiritualidade atual. Entretanto, é possível forçar a manifestação de um poder
@@ -1211,9 +1214,7 @@ body h6 {
     todas as Âncoras ativas do personagem e o bônus de circunstância indicado pelo
     Mestre. Compare o resultado à CD definida pelo efeito ou pela situação. Na ausência de
     uma CD específica, utilize a tabela geral de Classes de Dificuldade deste capítulo.
-    Nenhum Atributo ou Proficiência é somado ao teste. O bônus geral de +2 das
-    Especializações também não se aplica: a primeira Especialização contribui apenas
-    por meio da Âncora de Reconhecimento (+1), enquanto estiver ativa.
+    Nenhum Atributo ou Proficiência é somado ao teste. O bônus geral de +2 das Especializações também não se aplica: cada Especialização contribui apenas por meio de sua respectiva Âncora de Reconhecimento (+1), enquanto ela estiver ativa.
   </p>
 </div>
 
@@ -1239,8 +1240,8 @@ body h6 {
     </tr>
     <tr>
       <td><strong>Reconhecimento</strong></td>
-      <td>A primeira Especialização representa uma competência pela qual o personagem se reconhece e é reconhecido. A Âncora permanece ativa enquanto ele mantiver uma relação coerente com essa experiência.</td>
-      <td>+1</td>
+      <td>Cada Especialização representa uma competência pela qual o personagem se reconhece e é reconhecido, estabelecendo uma Âncora de Reconhecimento própria (+1). Cada Âncora permanece ativa enquanto o personagem mantiver uma relação coerente com a experiência que ela representa.</td>
+      <td>+1 por Especialização</td>
     </tr>
     <tr>
       <td><strong>Fé</strong></td>
@@ -1251,7 +1252,7 @@ body h6 {
 </table>
 <p>
   Na criação, a Âncora de Relacionamento fornece +1, o Conceito estabelece a Âncora de
-  Identidade (+2) e a primeira Especialização estabelece a Âncora de Reconhecimento (+1).
+  Identidade (+2) e a Especialização inicial estabelece sua primeira Âncora de Reconhecimento (+1).
   O personagem começa, portanto, com três Âncoras mecânicas que somam <strong>+4 nos testes
   de Lucidez</strong>. As duas Conexões
   iniciais não concedem bônus, mas podem se tornar Âncoras durante a campanha quando
@@ -1513,7 +1514,7 @@ body h6 {
           <div class="quickref-row"><span class="quickref-label">Teste de Ataque</span><span class="quickref-value">1d20 + Atributo + Proficiência + Bônus ≥ Evasão; 20 natural: acerto crítico e dados de dano dobrados; 1 natural: falha automática</span></div>
           <div class="quickref-row"><span class="quickref-label">Teste de Proficiência</span><span class="quickref-value">2d10 + Atributo + Proficiência + Bônus aplicáveis ≥ CD</span></div>
           <div class="quickref-row"><span class="quickref-label">Teste puro de Atributo</span><span class="quickref-value">2d10 + Atributo + Bônus aplicáveis ≥ CD</span></div>
-          <div class="quickref-row"><span class="quickref-label">Especialização</span><span class="quickref-value">+2 em testes pertinentes, exceto ataques e Lucidez; na Lucidez, a primeira Especialização contribui apenas pela Âncora de Reconhecimento (+1)</span></div>
+          <div class="quickref-row"><span class="quickref-label">Especialização</span><span class="quickref-value">+2 em testes pertinentes, exceto ataques e Lucidez; na Lucidez, cada Especialização contribui por meio de sua Âncora de Reconhecimento própria (+1), enquanto ativa</span></div>
         </div>
       </section>
 
