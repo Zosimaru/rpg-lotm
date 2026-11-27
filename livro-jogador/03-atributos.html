@@ -279,7 +279,7 @@ body h6 {
 </ul>
 
 <h4 id="vigor">Vigor <span class="attr-code">VIG</span></h4>
-<p>Vigor representa resistência orgânica, saúde, fôlego e capacidade de suportar esforço, dor, doença, venenos e condições físicas adversas. Também é utilizado no cálculo dos Pontos de Vida.</p>
+<p>Vigor representa resistência orgânica, saúde, fôlego e capacidade de suportar esforço, dor, doença, venenos e condições físicas adversas. Ele não altera os Pontos de Vida, que são concedidos exclusivamente pelo Caminho.</p>
 <ul>
   <li><strong>Aplicações comuns:</strong> Resistir a venenos e doenças, suportar longas marchas, permanecer ativo apesar da exaustão, atravessar condições climáticas extremas ou suportar esforço físico prolongado.</li>
   <li><strong>Abordagem:</strong> Quando o desafio consiste em resistir, aguentar ou continuar agindo apesar do desgaste corporal.</li>
@@ -1026,46 +1026,30 @@ body h6 {
 <h4 id="pontos-vida">Pontos de Vida (PV)</h4>
 <p>
   Os Pontos de Vida representam a capacidade do personagem de suportar ferimentos
-  físicos e continuar agindo. A fórmula utiliza o bônus de Vigor e a Sequência
-  atual do personagem. Quando os PV chegam a <strong>0 ou menos</strong>, o personagem
-  fica <strong>Inconsciente</strong>. Os efeitos mecânicos dessa condição são descritos
-  no capítulo de Conflitos.
+  físicos e continuar agindo. O PV máximo é concedido pelo <strong>Caminho</strong>,
+  conforme a tabela de criação do Capítulo 2. Quando os PV chegam a
+  <strong>0 ou menos</strong>, o personagem fica <strong>Inconsciente</strong>. Os
+  efeitos mecânicos dessa condição são descritos no capítulo de Conflitos.
 </p>
 <div class="box box-rule">
-  <div class="box-title">Cálculo dos Pontos de Vida</div>
-  <p style="text-align:center; font-size:1.2em;"><strong>PV = 3 + VIG + (10 − Sequência)</strong></p>
+  <div class="box-title">PV máximo por Caminho</div>
+  <p style="text-align:center; font-size:1.15em;"><strong>PV máximo = valor concedido pelo Caminho (Capítulo 2)</strong></p>
   <p>
-    Nesta fórmula, <strong>VIG</strong> representa o bônus do Atributo, calculado por <strong>Pontos.(VIG) − 2</strong>.
-    O termo (10 − Sequência) representa o acréscimo correspondente à Sequência do personagem.
+    Cada Caminho concede um valor fixo de PV. Esse valor não é calculado a partir de
+    VIG ou da Sequência e permanece igual quando o personagem avança de Sequência.
+    Não existe acréscimo automático de PV por progressão. Somente um efeito específico
+    que declare expressamente uma alteração pode modificar o máximo concedido.
   </p>
-  <table>
-    <thead><tr><th>Sequência</th><th>Acréscimo</th></tr></thead>
-    <tbody>
-      <tr><td>9</td><td>+1</td></tr><tr><td>8</td><td>+2</td></tr>
-      <tr><td>7</td><td>+3</td></tr><tr><td>6</td><td>+4</td></tr>
-      <tr><td>5</td><td>+5</td></tr>
-    </tbody>
-  </table>
-  <p class="box-note">
-    Este livro apresenta a progressão dos personagens da Sequência 9 até a
-    <strong>Sequência 5</strong>, que é o estágio mais alto abordado neste volume.
-    Por isso, a tabela e os exemplos de progressão deste capítulo terminam na Sequência 5.
-  </p>
-  <p>
-    <strong>Exemplo:</strong> um personagem com Pontos.(VIG) = 2 possui bônus de VIG = +0.
-    Na Sequência 8, terá 3 + 0 + (10 − 8) = <strong>5 PV</strong>. Na Sequência 9,
-    terá 3 + 0 + (10 − 9) = <strong>4 PV</strong>. Ao alcançar a Sequência 5,
-    mantendo o mesmo Vigor, terá 3 + 0 + (10 − 5) = <strong>8 PV</strong>.
-  </p>
+  <p><strong>Exemplo:</strong> um Vidente recebe <strong>5 PV</strong> e continua com
+    esse máximo mesmo ao avançar para a Sequência 8, 7, 6 ou 5.</p>
 </div>
 <div class="box box-note">
   <div class="box-title">Registro dos PV na ficha</div>
   <p>
-    Depois de calcular seus PV, conte os quadrados destinados à Vida na ficha e registre
-    a quantidade total seguida de uma barra (/). Por exemplo, se o personagem possui
-    7 quadrados, escreva <strong>7/</strong> imediatamente após o espaço ou número
-    indicado. Os quadrados representam a capacidade total; marque-os conforme receber
-    dano, de acordo com as regras de combate.
+    Registre no campo de Vida máxima o valor indicado para o Caminho no Capítulo 2.
+    Marque os quadrados destinados à Vida conforme receber dano. A cura não pode
+    elevar os PV acima desse máximo, salvo quando um efeito modificar expressamente
+    o limite.
   </p>
 </div>
 
@@ -1606,7 +1590,7 @@ body h6 {
       <section class="quickref-group" aria-label="Recursos e recuperação">
         <h4>Recursos e recuperação</h4>
         <div class="quickref-rows">
-          <div class="quickref-row"><span class="quickref-label">PV</span><span class="quickref-value">3 + VIG + (10 − Sequência)</span></div>
+          <div class="quickref-row"><span class="quickref-label">PV máximo</span><span class="quickref-value">valor fixo concedido pelo Caminho (Cap. 2); não depende de VIG ou Sequência</span></div>
           <div class="quickref-row"><span class="quickref-label">Espiritualidade máxima</span><span class="quickref-value">Espiritualidade inicial + Bônus de Digestão de Poção (+2 permanente a cada 50% de uma poção) + outros bônus</span></div>
           <div class="quickref-row"><span class="quickref-label">Teste de Lucidez</span><span class="quickref-value">2d10 + bônus das Âncoras ativas + bônus de circunstância; uso excedente de Espiritualidade: CD 8 + excedente acumulado</span></div>
           <div class="quickref-row"><span class="quickref-label">Recuperação da Espiritualidade</span><span class="quickref-value">Descanso Completo: recuperação total, 1 vez a cada intervalo de 24 horas; cada Descanso Completo renova duas utilizações de Descanso Breve, de 1 hora cada</span></div>
